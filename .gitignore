@@ -1,0 +1,16 @@
+*.m4
+*.in
+Makefile
+configure
+autom4te.cache/*
+config.*
+depcomp
+install-sh
+missing
+stamp-h1
+
+src/yaaes
+src/yaaes.o
+src/*.in
+src/Makefile
+src/.deps/*
