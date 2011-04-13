@@ -14,3 +14,4 @@ src/yaaes.o
 src/*.in
 src/Makefile
 src/.deps/*
+src/*.o
