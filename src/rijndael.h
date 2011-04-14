@@ -55,13 +55,20 @@ static const int _rcon[255] =
  ,0xc6, 0x97, 0x35, 0x6a, 0xd4, 0xb3, 0x7d, 0xfa, 0xef, 0xc5, 0x91, 0x39, 0x72, 0xe4, 0xd3, 0xbd
  ,0x61, 0xc2, 0x9f, 0x25, 0x4a, 0x94, 0x33, 0x66, 0xcc, 0x83, 0x1d, 0x3a, 0x74, 0xe8, 0xcb};
 
+static const int _mix[4][4] = {
+ {0x02, 0x03, 0x01, 0x01},
+ {0x01, 0x02, 0x03, 0x01},
+ {0x01, 0x01, 0x02, 0x03},
+ {0x03, 0x01, 0x01, 0x02}
+};
+
 class Rijndael {
 	public:
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
 		enum BlockSize { B128 = 128 };
-		Rijndael(){};
-
+		Rijndael();
+		~Rijndael();
 		//KEY
 		void makeKey(unsigned char** key, KeySize ks, BlockSize bs);
 		void rotWord(unsigned char* column);
@@ -69,7 +76,12 @@ class Rijndael {
 
 		unsigned char** _exp_key;	//expanded key
 		//CIPHER
-		void encrypt();
+		void subBytes(unsigned char** block);
+		void shiftRows(unsigned char** block);
+		void mixColumns(unsigned char** block);
+		void addRoundKey(unsigned char** block);
+
+		void encrypt(unsigned char** block);
 		void decrypt();
 	protected:
 	private:
