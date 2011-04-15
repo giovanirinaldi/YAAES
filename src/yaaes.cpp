@@ -38,18 +38,38 @@ int main (int argc, char *argv[]){
 	printf("%ld microseconds\n", mtime);
 	printf("%ld %ld\n", t2.tv_sec - t1.tv_sec, t2.tv_usec - t1.tv_usec);*/
 //	printf("%d\n", _sbox[0]);
-	unsigned char bk [4][4] = {
+	unsigned char bk_round1 [4][4] = {
 		{ 0x19, 0xa0, 0x9a, 0xe9 },
 		{ 0x3d, 0xf4, 0xc6, 0xf8 },
 		{ 0xe3, 0xe2, 0x8d, 0x48 },
 		{ 0xbe, 0x2b, 0x2a, 0x08 }
 	};
-	unsigned char ck [4][4] = {
+	unsigned char bk_round0 [4][4] = {
+		{ 0x32, 0x88, 0x31, 0xe0 },
+		{ 0x43, 0x5a, 0x31, 0x37 },
+		{ 0xf6, 0x30, 0x98, 0x07 },
+		{ 0xa8, 0x8d, 0xa2, 0x34 }
+	};
+	unsigned char ck_demo [4][4] = {
 		{ 0x2b, 0x7e, 0x15, 0x16 },
 		{ 0x28, 0xae, 0xd2, 0xa6 },
 		{ 0xab, 0xf7, 0x15, 0x88 },
 		{ 0x09, 0xcf, 0x4f, 0x3c }
 	};
+	unsigned char bk [4][4] = {
+		{ 0x00, 0x44, 0x88, 0xcc },
+		{ 0x11, 0x55, 0x99, 0xdd },
+		{ 0x22, 0x66, 0xaa, 0xee },
+		{ 0x33, 0x77, 0xbb, 0xff }
+	};
+	unsigned char ck [4][4] = {
+		{ 0x00, 0x01, 0x02, 0x03 },
+		{ 0x04, 0x05, 0x06, 0x07 },
+		{ 0x08, 0x09, 0x0a, 0x0b },
+		{ 0x0c, 0x0d, 0x0e, 0x0f }
+	};
+	// vector to block -> by column and by line
+	// vector to key -> by line and by column
 	unsigned char** ck1 = new unsigned char* [4];
 	unsigned char** bk1 = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){	ck1[i] = new unsigned char[4];	bk1[i] = new unsigned char[4];}
@@ -61,18 +81,16 @@ int main (int argc, char *argv[]){
 	}
 	gettimeofday(&t1, 0);
 	r.makeKey(ck1, Rijndael::K128, Rijndael::B128);	
-	r.subBytes(bk1);
-	r.shiftRows(bk1);
-	r.mixColumns(bk1);
-	r.addRoundKey(bk1);
+	r.encrypt(bk1);
+	r.decrypt(bk1);
 	gettimeofday(&t2, 0);
 	printf("%ld %ld\n", t2.tv_sec - t1.tv_sec, t2.tv_usec - t1.tv_usec);
-	/*for (int i = 0; i < 4; i++){
+	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			printf("%x ", bk1[i][j]);
 		}
 		printf("\n");
-	}*/
+	}
 	for (int i = 0; i < 4; i++){
 		delete[] bk1[i];
 		delete[] ck1[i];

@@ -62,6 +62,13 @@ static const int _mix[4][4] = {
  {0x03, 0x01, 0x01, 0x02}
 };
 
+static const int _inv_mix[4][4] = {
+ {0x0e, 0x0b, 0x0d, 0x09},
+ {0x09, 0x0e, 0x0b, 0x0d},
+ {0x0d, 0x09, 0x0e, 0x0b},
+ {0x0b, 0x0d, 0x09, 0x0e}
+};
+
 class Rijndael {
 	public:
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
@@ -77,12 +84,17 @@ class Rijndael {
 		unsigned char** _exp_key;	//expanded key
 		//CIPHER
 		void subBytes(unsigned char** block);
+		void invSubBytes(unsigned char** block);
 		void shiftRows(unsigned char** block);
+		void invShiftRows(unsigned char** block);
 		void mixColumns(unsigned char** block);
+		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
 
+		int _round;
+
 		void encrypt(unsigned char** block);
-		void decrypt();
+		void decrypt(unsigned char** block);
 	protected:
 	private:
 		
