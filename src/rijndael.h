@@ -1,6 +1,8 @@
 #ifndef __RIJNDAEL_H__
 #define __RIJNDAEL_H__
 
+#include <cstdlib>
+
 static const int _sbox[256] = 
  {0x63 ,0x7c ,0x77 ,0x7b ,0xf2 ,0x6b ,0x6f ,0xc5 ,0x30 ,0x01 ,0x67 ,0x2b ,0xfe ,0xd7 ,0xab ,0x76
  ,0xca ,0x82 ,0xc9 ,0x7d ,0xfa ,0x59 ,0x47 ,0xf0 ,0xad ,0xd4 ,0xa2 ,0xaf ,0x9c ,0xa4 ,0x72 ,0xc0
@@ -74,15 +76,29 @@ class Rijndael {
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
 		enum BlockSize { B128 = 128 };
-		Rijndael();
+
+		//CONSTRUCTORS
+		//Rijndael();
+		Rijndael(KeySize ks = K128, BlockSize bs = B128);
+		
+		//DESTRUCTOR
 		~Rijndael();
+
 		//KEY
-		void makeKey(unsigned char** key, KeySize ks, BlockSize bs);
+		void makeKey(unsigned char** key);	// 2d array of 4 rows and nk columns
+		void makeKey(unsigned char* key);	// 1d array of 4 * nk positions
+
+		//CIPHER
+		void encrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
+		void encrypt(unsigned char* block);	// 1d array of 4 * nb columns
+		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
+		void decrypt(unsigned char* block);	// 1d array of 4 * nb columns
+	protected:
+		//KEY
 		void rotWord(unsigned char* column);
 		void subWord(unsigned char* column);
 
-		unsigned char** _exp_key;	//expanded key
-		//CIPHER
+		//BLOCK
 		void subBytes(unsigned char** block);
 		void invSubBytes(unsigned char** block);
 		void shiftRows(unsigned char** block);
@@ -90,13 +106,17 @@ class Rijndael {
 		void mixColumns(unsigned char** block);
 		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
-
-		int _round;
-
-		void encrypt(unsigned char** block);
-		void decrypt(unsigned char** block);
-	protected:
 	private:
+		int _round;
+		unsigned char** _exp_key;	//expanded key
+		int _nek;	// # of byte columns of expanded key
+		Mode _mode;
+		KeySize _key_size;
+		BlockSize _block_size;
+		int _nk;	// # of byte columns of key
+		int _nb;	// # of byte columns of block state;
+		int _nr;	// # of rounds; (fixed)
+		
 		
 };
 

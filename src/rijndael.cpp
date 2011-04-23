@@ -1,40 +1,72 @@
 #include "rijndael.h"
 #include <cstring>
-
 #include <cstdio>
 
-Rijndael::Rijndael(){
+Rijndael::Rijndael(KeySize ks, BlockSize bs){
 	_exp_key = NULL;
 	_round = 0;
+	_key_size = ks;
+	_block_size = bs;
+	_nb = bs/32;
+	_nk = ks/32;
+	switch (_nk){
+		case 4:	_nr = 10;	break;
+		case 6:	_nr = 12;	break;
+		case 8:	_nr = 14;	break;
+	}
+	_nek = bs/32 * (_nr + 1);	// # of byte columns of expanded key
 }
 
 Rijndael::~Rijndael(){
 	if (_exp_key){
-		for (int i = 0; i < 44; i++){
+		for (int i = 0; i < _nek; i++){
 			delete[] _exp_key[i];	
 		}
 		delete[] _exp_key;
+		_exp_key = NULL;
 	}
 }
 
-void Rijndael::makeKey(unsigned char** key, KeySize ks, BlockSize bs){
-	_exp_key = new unsigned char* [44];	
-	for (int i = 0; i < 44; i++){
+void Rijndael::makeKey(unsigned char* key){
+	if (key == NULL){
+		return;
+	}
+	unsigned char** _temp_key = new unsigned char* [_nk];
+	for (int i = 0; i < _nk; i++){
+		_temp_key[i] = &key[i*4];
+	}
+	/*for (int i = 0; i < _nk; i++){
+		for (int j = 0; j < 4; j++){
+			printf("%x ", _temp_key[i][j]);
+		}
+		printf("\n");
+	}*/
+	makeKey(_temp_key);
+	delete[] _temp_key;
+}
+
+void Rijndael::makeKey(unsigned char** key){
+	if (key == NULL){
+		return;
+	}
+	_exp_key = new unsigned char* [_nek];	
+	for (int i = 0; i < _nek; i++){
 		_exp_key[i] = new unsigned char [4];
 	}
-	for (int i = 0; i < 4; i++){
+	for (int i = 0; i < _nk; i++){
 		memcpy(_exp_key[i], key[i], 4);
 	}
-	for (int i = 4; i < 44; i++){
+	for (int i = _nk; i < _nek; i++){
 		memcpy(_exp_key[i], _exp_key[i-1], 4);
-		if (i % 4 == 0){
+		if (i % _nk == 0){
 			rotWord(_exp_key[i]);
 			subWord(_exp_key[i]);
-			_exp_key[i][0] ^= _rcon[i/4];	//xor Rcon
+			_exp_key[i][0] ^= _rcon[i/_nk];	//xor Rcon
 		}
 		for (int j = 0; j < 4; j++){
-			_exp_key[i][j] ^= _exp_key[i-4][j];
+			_exp_key[i][j] ^= _exp_key[i-_nk][j];
 		}
+	//	printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
 	}
 }
 		
@@ -144,21 +176,6 @@ void Rijndael::invMixColumns(unsigned char** block){
 			block[i][j] = 0x00;
 			for (int m = 0; m < 4; m ++){
 					block[i][j] ^= gmul(temp[m], _inv_mix[i][m]);
-/*				if (temp[m] & 0x80){	// antes, primeiro bit mais signficativo era 1
-					block[i][j] ^= 0x1b;
-				}	*/
-				/*if (_mix[i][m] >= 2){
-					block[i][j] ^= temp[m] << 1;
-					if (_mix[i][m] == 3){
-						block[i][j] ^= temp[m];
-					}
-					if (temp[m] & 0x80){	// antes, primeiro bit mais signficativo era 1
-						block[i][j] ^= 0x1b;
-					}	
-				}		
-				else{
-					block[i][j] ^= temp[m];
-				}*/
 			}
 		}
 	}
@@ -173,10 +190,28 @@ void Rijndael::addRoundKey(unsigned char** block){
 	}
 }
 
+void Rijndael::encrypt(unsigned char* block){
+	if (block == NULL){
+		return;
+	}
+	unsigned char** _temp_block = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		_temp_block[i] = &block[i*4];
+	}
+	/*for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			printf("%c ", _temp_key[i][j]);
+		}
+		printf("\n");
+	}*/
+	encrypt(_temp_block);
+	delete[] _temp_block;
+}
+
 void Rijndael::encrypt(unsigned char** block){
 	addRoundKey(block);		
 	_round++;
-	for (; _round < 10; _round++){
+	for (; _round < _nr; _round++){
 		subBytes(block);
 		shiftRows(block);
 		mixColumns(block);
@@ -187,7 +222,27 @@ void Rijndael::encrypt(unsigned char** block){
 	addRoundKey(block);		
 }
 
+
+void Rijndael::decrypt(unsigned char* block){
+	if (block == NULL){
+		return;
+	}
+	unsigned char** _temp_block = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		_temp_block[i] = &block[i*4];
+	}
+	/*for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			printf("%c ", _temp_key[i][j]);
+		}
+		printf("\n");
+	}*/
+	decrypt(_temp_block);
+	delete[] _temp_block;
+}
+
 void Rijndael::decrypt(unsigned char** block){
+	_round = _nr;
 	addRoundKey(block);
 	_round--;
 	for (; _round > 0; _round--){
@@ -195,7 +250,6 @@ void Rijndael::decrypt(unsigned char** block){
 		invSubBytes(block);
 		addRoundKey(block);
 		invMixColumns(block);
-//	for (int i = 0; i < 4; i++){ for (int j = 0; j < 4; j++){ printf("%x ", block[i][j]); } printf("\n"); }
 	}		
 	invShiftRows(block);
 	invSubBytes(block);
