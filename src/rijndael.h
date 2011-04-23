@@ -85,10 +85,16 @@ class Rijndael {
 		~Rijndael();
 
 		//KEY
-		void makeKey(unsigned char** key);	// 2d array of 4 rows and nk columns
+		// do not use this unless you know what you're doing
+		// input data defined as line by column
+		void makeKey(unsigned char** key);	// 2d array of 4 rows and nk columns (inverse matrix of key)
+		
+		// use this makeKey (FIPS197 standard)
+		// input data defined as column by line
 		void makeKey(unsigned char* key);	// 1d array of 4 * nk positions
 
 		//CIPHER
+		// input data defined as column by line
 		void encrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
 		void encrypt(unsigned char* block);	// 1d array of 4 * nb columns
 		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
