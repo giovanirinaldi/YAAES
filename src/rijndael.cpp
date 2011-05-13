@@ -1,20 +1,38 @@
 #include "rijndael.h"
 #include <cstring>
 #include <cstdio>
+#include <ctime>
 
-Rijndael::Rijndael(KeySize ks, BlockSize bs){
+Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
 	_exp_key = NULL;
 	_round = 0;
 	_key_size = ks;
 	_block_size = bs;
 	_nb = bs/32;
 	_nk = ks/32;
+	_mode = mode;
+	if (_mode != ECB){
+		srand(time(NULL));	
+		_iv = new unsigned char* [4];
+		for (int i = 0; i < 4; i++){
+			_iv[i] = new unsigned char [4];
+		}
+		for (int i = 0; i < 4; i++){
+			for (int j = 0; j < 4; j++){
+				_iv[i][j] = rand()%256;
+			}
+		}
+	}
+	else{
+		_iv = NULL;
+	}
 	switch (_nk){
 		case 4:	_nr = 10;	break;
 		case 6:	_nr = 12;	break;
 		case 8:	_nr = 14;	break;
 	}
-	_nek = bs/32 * (_nr + 1);	// # of byte columns of expanded key
+	_nek = _nb * (_nr + 1);	// # of byte columns of expanded key
+	_initd = false;
 }
 
 Rijndael::~Rijndael(){
@@ -24,6 +42,13 @@ Rijndael::~Rijndael(){
 		}
 		delete[] _exp_key;
 		_exp_key = NULL;
+	}
+	if (_mode != ECB){
+		for (int i = 0; i < 4; i++){
+			delete[] _iv[i];
+		}	
+		delete[] _iv;
+		_iv = NULL;
 	}
 }
 
@@ -43,6 +68,7 @@ void Rijndael::makeKey(unsigned char* key){
 	}*/
 	makeKey(_temp_key);
 	delete[] _temp_key;
+	_initd = true;
 }
 
 void Rijndael::makeKey(unsigned char** key){
@@ -180,7 +206,7 @@ void Rijndael::invMixColumns(unsigned char** block){
 		for (int i = 0; i < 4; i++){
 			block[i][j] = 0x00;
 			for (int m = 0; m < 4; m ++){
-					block[i][j] ^= gmul(temp[m], _inv_mix[i][m]);
+					block[i][j] ^= gmul(temp[m], _inv_mix[i][m]);	// this gmul totally sucks at performance. thinking about static pre-calculated tables.
 			}
 		}
 	}
@@ -190,7 +216,15 @@ void Rijndael::invMixColumns(unsigned char** block){
 void Rijndael::addRoundKey(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			block[i][j] ^= _exp_key[j+_round*4][i];
+			block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
+		}
+	}
+}
+
+void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			a[i][j] ^= b[i][j];
 		}
 	}
 }
@@ -228,6 +262,9 @@ void Rijndael::encrypt(unsigned char* block){
 }
 
 void Rijndael::encrypt(unsigned char** block){
+	if (!_initd){
+		return;
+	}
 	addRoundKey(block);		
 	_round++;
 	for (; _round < _nr; _round++){
@@ -269,6 +306,9 @@ void Rijndael::decrypt(unsigned char* block){
 }
 
 void Rijndael::decrypt(unsigned char** block){
+	if (!_initd){
+		return;
+	}
 	_round = _nr;
 	addRoundKey(block);
 	_round--;

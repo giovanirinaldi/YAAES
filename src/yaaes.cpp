@@ -63,7 +63,7 @@ void on_menu_help_about(){
 }
 
 int main (int argc, char *argv[]){
-	Gtk::Main kit(argc, argv);
+	/*Gtk::Main kit(argc, argv);
 
 	//Load the GtkBuilder file and instantiate its widgets:
   	Glib::RefPtr<Gtk::Builder> refBuilder = Gtk::Builder::create();
@@ -100,10 +100,28 @@ int main (int argc, char *argv[]){
       			pMenuHelpAbout->signal_activate().connect(sigc::ptr_fun(on_menu_help_about));
     		}
     		kit.run(*pWindow);
-  	}	
+  	}*/
 
 
-//	Rijndael r(Rijndael::K128, Rijndael::B128);
+
+
+	Rijndael r(Rijndael::K128, Rijndael::B128);
+	std::string key = "essasenhaehfraca";
+	std::string hBlock = "546578746F2070617261207465737465";
+	char chBlock[33] = "546578746F2070617261207465737465";
+	char cBlock[17];
+//	std::string block = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+	//printf("%d\n", block.length());
+	//hexStringToCharString(chBlock, 32, cBlock);	
+	//hexStringToCharString((unsigned char*)hBlock.c_str(), hBlock.length(), (unsigned char*)block.c_str());
+	//r.makeKey(key.c_str());
+	//printf("%d\n", block.length());
+	//r.encrypt((unsigned char*)block.c_str());
+	/*printf("%d\n", block.length());
+	for (int i = 0; i < block.length(); i++){
+		printf("%c ", block[i]);
+	}*/
+	printf("\n");
 //	timeval t1, t2;
 /*	char input[1024];
 	char ch[Rijndael::K128/8];

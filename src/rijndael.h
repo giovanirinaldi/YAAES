@@ -79,10 +79,10 @@ class Rijndael {
 
 		//CONSTRUCTORS
 		//Rijndael();
-		Rijndael(KeySize ks = K128, BlockSize bs = B128);
+		Rijndael(KeySize ks = K128, BlockSize bs = B128, Mode mode = ECB);
 		
 		//DESTRUCTOR
-		~Rijndael();
+		virtual ~Rijndael();
 
 		//KEY
 		// do not use this unless you know what you're doing
@@ -112,9 +112,14 @@ class Rijndael {
 		void mixColumns(unsigned char** block);
 		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
+
+		//MODE
+		void xorBlock(unsigned char** a, unsigned char** b);
+		void generateIV();
 	private:
 		int _round;
 		unsigned char** _exp_key;	//expanded key
+		unsigned char** _iv;		//initialization vector (when mode != ECB)
 		int _nek;	// # of byte columns of expanded key
 		Mode _mode;
 		KeySize _key_size;
@@ -122,6 +127,7 @@ class Rijndael {
 		int _nk;	// # of byte columns of key
 		int _nb;	// # of byte columns of block state;
 		int _nr;	// # of rounds; (fixed)
+		bool _initd;	// indicates if class object was properly initialized (with key by makeKey)
 		
 		
 };
