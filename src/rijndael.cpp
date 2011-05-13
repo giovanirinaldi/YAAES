@@ -53,9 +53,9 @@ Rijndael::~Rijndael(){
 }
 
 void Rijndael::makeKey(unsigned char* key){
-	if (key == NULL){
-		return;
-	}
+//	if (key == NULL){
+//		return;
+//	}
 	unsigned char** _temp_key = new unsigned char* [_nk];
 	for (int i = 0; i < _nk; i++){
 		_temp_key[i] = &key[i*4];
@@ -72,9 +72,9 @@ void Rijndael::makeKey(unsigned char* key){
 }
 
 void Rijndael::makeKey(unsigned char** key){
-	if (key == NULL){
-		return;
-	}
+//	if (key == NULL){
+//		return;
+//	}
 	_exp_key = new unsigned char* [_nek];	
 	for (int i = 0; i < _nek; i++){
 		_exp_key[i] = new unsigned char [4];
@@ -229,33 +229,47 @@ void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
 	}
 }
 
-void Rijndael::encrypt(unsigned char* block){
+void Rijndael::encrypt(unsigned char* block, int length){
 	if (block == NULL){
+		printf("block null\n");
 		return;
 	}
-	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointes for char** are in position
-	for (int i = 0; i < 4; i++){
-		memcpy(_temp_shifted_block+i*4, block+i+0, 1);
-		memcpy(_temp_shifted_block+i*4+1, block+i+4, 1);
-		memcpy(_temp_shifted_block+i*4+2, block+i+8, 1);
-		memcpy(_temp_shifted_block+i*4+3, block+i+12, 1);
-	}
+	int blocks = length / (_block_size/8);
+	//printf("blocks: %d\n", blocks);
+	if (length % (_block_size/8) != 0){
+		
+	}	
+	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
-	for (int i = 0; i < 4; i++){
-		_temp_block[i] = &_temp_shifted_block[i*4];
-	}
-	/*for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			printf("%c ", _temp_key[i][j]);
+	for (int b = 0; b < blocks; b++){
+		for (int i = 0; i < 4; i++){
+			memcpy(_temp_shifted_block+i*4, block+i+0+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+1, block+i+4+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+2, block+i+8+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+3, block+i+12+b*16, 1);
 		}
-		printf("\n");
-	}*/
-	encrypt(_temp_block);
-	for (int i = 0; i < 4; i++){					// redo inverse, to original format position
-		memcpy(block+i*4, _temp_shifted_block+i+0, 1);
-		memcpy(block+i*4+1, _temp_shifted_block+i+4, 1);
-		memcpy(block+i*4+2, _temp_shifted_block+i+8, 1);
-		memcpy(block+i*4+3, _temp_shifted_block+i+12, 1);
+		for (int i = 0; i < 4; i++){
+			_temp_block[i] = &_temp_shifted_block[i*4];	// tempblock points to tempshiftedblock
+		}
+		/*for (int i = 0; i < 4; i++){
+			for (int j = 0; j < 4; j++){
+				printf("%x", _temp_block[i][j]);fflush(stdout);
+			}
+			printf("\n");
+		}*/
+		encrypt(_temp_block);
+/*		for (int i = 0; i < 4; i++){
+			for (int j = 0; j < 4; j++){
+				printf("%x", _temp_block[i][j]);fflush(stdout);
+			}
+			printf("\n");
+		}*/
+		for (int i = 0; i < 4; i++){					// redo inverse, to original format position
+			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
+			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
+			memcpy(block+i*4+2+b*16, _temp_shifted_block+i+8, 1);
+			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
+		}
 	}
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;
@@ -265,6 +279,7 @@ void Rijndael::encrypt(unsigned char** block){
 	if (!_initd){
 		return;
 	}
+	_round = 0;
 	addRoundKey(block);		
 	_round++;
 	for (; _round < _nr; _round++){
@@ -279,27 +294,33 @@ void Rijndael::encrypt(unsigned char** block){
 }
 
 
-void Rijndael::decrypt(unsigned char* block){
+void Rijndael::decrypt(unsigned char* block, int length){
 	if (block == NULL){
 		return;
 	}
-	unsigned char* _temp_shifted_block = new unsigned char [16];
-	for (int i = 0; i < 4; i++){
-		memcpy(_temp_shifted_block+i*4, block+i+0, 1);
-		memcpy(_temp_shifted_block+i*4+1, block+i+4, 1);
-		memcpy(_temp_shifted_block+i*4+2, block+i+8, 1);
-		memcpy(_temp_shifted_block+i*4+3, block+i+12, 1);
-	}
+	int blocks = length / (_block_size/8);
+	if (length % (_block_size/8) != 0){
+		
+	}	
+	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
-	for (int i = 0; i < 4; i++){
-		_temp_block[i] = &_temp_shifted_block[i*4];
-	}
-	decrypt(_temp_block);
-	for (int i = 0; i < 4; i++){
-		memcpy(block+i*4, _temp_shifted_block+i+0, 1);
-		memcpy(block+i*4+1, _temp_shifted_block+i+4, 1);
-		memcpy(block+i*4+2, _temp_shifted_block+i+8, 1);
-		memcpy(block+i*4+3, _temp_shifted_block+i+12, 1);
+	for (int b = 0; b < blocks; b++){
+		for (int i = 0; i < 4; i++){
+			memcpy(_temp_shifted_block+i*4, block+i+0+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+1, block+i+4+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+2, block+i+8+b*16, 1);
+			memcpy(_temp_shifted_block+i*4+3, block+i+12+b*16, 1);
+		}
+		for (int i = 0; i < 4; i++){
+			_temp_block[i] = &_temp_shifted_block[i*4];
+		}
+		decrypt(_temp_block);
+		for (int i = 0; i < 4; i++){
+			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
+			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
+			memcpy(block+i*4+2+b*16, _temp_shifted_block+i+8, 1);
+			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
+		}
 	}
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;

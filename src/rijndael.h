@@ -96,9 +96,9 @@ class Rijndael {
 		//CIPHER
 		// input data defined as column by line
 		void encrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
-		void encrypt(unsigned char* block);	// 1d array of 4 * nb columns
+		void encrypt(unsigned char* block, int length = 16);	// 1d array of 4 * nb columns
 		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
-		void decrypt(unsigned char* block);	// 1d array of 4 * nb columns
+		void decrypt(unsigned char* block, int length = 16);	// 1d array of 4 * nb columns
 	protected:
 		//KEY
 		void rotWord(unsigned char* column);

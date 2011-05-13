@@ -106,10 +106,26 @@ int main (int argc, char *argv[]){
 
 
 	Rijndael r(Rijndael::K128, Rijndael::B128);
-	std::string key = "essasenhaehfraca";
-	std::string hBlock = "546578746F2070617261207465737465";
-	char chBlock[33] = "546578746F2070617261207465737465";
-	char cBlock[17];
+	//std::string key = "essasenhaehfraca";
+	//std::string hBlock = "00112233445566778899aabbccddeeff";
+	//546578746F2070617261207465737465";
+	char chBlock[65] = "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff";
+	unsigned char cBlock[33];
+	hexStringToCharString((unsigned char*)chBlock, 64, cBlock);
+	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
+	unsigned char cKey[17];
+	hexStringToCharString((unsigned char*)chKey, 32, cKey);
+	r.makeKey(cKey);	
+	r.encrypt(cBlock, 32);
+	for (int i = 0; i < 32; i++){
+		printf("%x", cBlock[i]);
+	}
+	printf("\n");
+	r.decrypt(cBlock, 32);
+	for (int i = 0; i < 32; i++){
+		printf("%x", cBlock[i]);
+	}
+	printf("\n");
 //	std::string block = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 	//printf("%d\n", block.length());
 	//hexStringToCharString(chBlock, 32, cBlock);	
@@ -121,7 +137,7 @@ int main (int argc, char *argv[]){
 	for (int i = 0; i < block.length(); i++){
 		printf("%c ", block[i]);
 	}*/
-	printf("\n");
+//	printf("\n");
 //	timeval t1, t2;
 /*	char input[1024];
 	char ch[Rijndael::K128/8];
