@@ -109,21 +109,37 @@ int main (int argc, char *argv[]){
 	//std::string key = "essasenhaehfraca";
 	//std::string hBlock = "00112233445566778899aabbccddeeff";
 	//546578746F2070617261207465737465";
-	char chBlock[65] = "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff";
-	unsigned char cBlock[33];
-	hexStringToCharString((unsigned char*)chBlock, 64, cBlock);
+	//char chBlock[65] = "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff";
+	char notABlock[37] = "001122334455667788990a0b0c0d0e0f0011";
+	unsigned char cnotABlock[32];
+	//hexStringToCharString((unsigned char*)notABlock, 20, cnotABlock);
 	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
-	unsigned char cKey[17];
+	unsigned char cKey[16];
 	hexStringToCharString((unsigned char*)chKey, 32, cKey);
 	r.makeKey(cKey);	
-	r.encrypt(cBlock, 32);
-	for (int i = 0; i < 32; i++){
-		printf("%x", cBlock[i]);
+	hexStringToCharString((unsigned char*)notABlock, 36, cnotABlock);
+
+//	unsigned char* paddBlock = new unsigned char [16];		//pad pos hextochar
+//	int length = 14;
+//	char pad = 16 - length;	//16 == blocksize;
+//	memcpy(paddBlock, cnotABlock, length);
+	//char pad = padnum;
+/*	for (int l = length; l < 16; l++){
+		cnotABlock[l] = pad;
 	}
-	printf("\n");
-	r.decrypt(cBlock, 32);
+	for (int i = 0; i < 16; i++){
+		printf("%x ", cnotABlock[i]);
+	}*/
+		
+	
+	r.encrypt(cnotABlock, 18);
 	for (int i = 0; i < 32; i++){
-		printf("%x", cBlock[i]);
+		printf("%x", cnotABlock[i]);
+	}
+	printf("\nout:");
+	r.decrypt(cnotABlock, 32);
+	for (int i = 0; i < 32; i++){
+		printf("%x", cnotABlock[i]);
 	}
 	printf("\n");
 //	std::string block = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";

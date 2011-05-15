@@ -229,16 +229,29 @@ void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
 	}
 }
 
+void makePadding(unsigned char* block, int length, int blocks){
+	int _last_block_length = blocks*128/8 - length;
+	char pad = _last_block_length;
+	for (int i = length; i < (blocks)*128/8; i++){
+		block[i] = pad;
+	}
+}
+
 void Rijndael::encrypt(unsigned char* block, int length){
 	if (block == NULL){
 		printf("block null\n");
 		return;
 	}
-	int blocks = length / (_block_size/8);
-	//printf("blocks: %d\n", blocks);
-	if (length % (_block_size/8) != 0){
-		
-	}	
+	int blocks = (length / (_block_size/8)) + 1;
+//	printf("blocks: %d\n", blocks);
+	//if (length % (_block_size/8) != 0){
+	/*printf("%d\n", block);
+		makePadding(block, length, blocks);	
+	printf("%d\n", block);
+	fflush(stdout);
+	return;*/
+	//}	
+	makePadding(block, length, blocks);
 	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
 	for (int b = 0; b < blocks; b++){
@@ -251,12 +264,12 @@ void Rijndael::encrypt(unsigned char* block, int length){
 		for (int i = 0; i < 4; i++){
 			_temp_block[i] = &_temp_shifted_block[i*4];	// tempblock points to tempshiftedblock
 		}
-		/*for (int i = 0; i < 4; i++){
+		for (int i = 0; i < 4; i++){
 			for (int j = 0; j < 4; j++){
-				printf("%x", _temp_block[i][j]);fflush(stdout);
+				printf("%x ", _temp_block[i][j]);fflush(stdout);
 			}
 			printf("\n");
-		}*/
+		}
 		encrypt(_temp_block);
 /*		for (int i = 0; i < 4; i++){
 			for (int j = 0; j < 4; j++){
@@ -293,6 +306,27 @@ void Rijndael::encrypt(unsigned char** block){
 	addRoundKey(block);		
 }
 
+void removePadding(unsigned char* block, int &length, int blocks){
+	if (block[length-1] > 0x00 && block[length-1] < 0x10){
+		int i;
+		for (i = length-2; i > length-block[length-1]; i--){
+			if (block[i] != block[length-1]){
+				return;
+			}
+		//	block[i] = 0x00;
+		}
+		for (int j = i; j < length; j++){
+			block[j] = 0x00;
+		}
+		length = i;
+	}
+/*	int _last_block_length = blocks*128/8 - length;
+	char pad = _last_block_length;
+	for (int i = length; i < (blocks)*128/8; i++){
+		block[i] = pad;
+	}*/
+}
+
 
 void Rijndael::decrypt(unsigned char* block, int length){
 	if (block == NULL){
@@ -322,6 +356,8 @@ void Rijndael::decrypt(unsigned char* block, int length){
 			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
 		}
 	}
+	removePadding(block, length, blocks);
+	printf("length out: %d\n", length);
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;
 }
