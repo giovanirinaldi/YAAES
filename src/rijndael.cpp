@@ -287,9 +287,12 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 		return;
 	}
 	unsigned char** _last_cipher_text;
-	if (_mode == CBC){	//allocates temp mem to save last chain block
+	unsigned char** _next_block_text;
+	if (_mode != ECB){	//allocates temp mem to save last chain block
+		_next_block_text = new unsigned char* [4];
 		_last_cipher_text = new unsigned char* [4];
 		for (int i = 0; i < 4; i++){
+			_next_block_text[i] = new unsigned char [4];
 			_last_cipher_text[i] = new unsigned char [4];
 		}
 	}
@@ -311,15 +314,32 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 		for (int i = 0; i < 4; i++){
 			_temp_block[i] = &_temp_shifted_block[i*4];	// tempblock points to tempshiftedblock
 		}
-		if (_mode == CBC){
-			if (b != 0){	//block is not the first from a chain
-		//		printf("xor last cbc\n");
-				xorBlock(_temp_block, _last_cipher_text);
-			}
-			else{		//first block
-		//		printf("xor iv cbc\n");
-				xorBlock(_temp_block, _iv);
-			}			
+		switch (_mode){
+			case ECB:	
+				break;
+			case CBC:
+				if (b != 0){	//block is not the first from a chain
+					xorBlock(_temp_block, _last_cipher_text);
+				}
+				else{		//first block
+					xorBlock(_temp_block, _iv);
+				}			
+				break;
+			case CFB:
+			case OFB:
+				if (b != 0){
+					for (int i = 0; i < 4; i++){
+						memcpy(_next_block_text[i], _temp_block[i], 4);	
+						memcpy(_temp_block[i], _last_cipher_text[i], 4);
+					}
+				}
+				else{
+					for (int i = 0; i < 4; i++){
+						memcpy(_next_block_text[i], _temp_block[i], 4);	
+						memcpy(_temp_block[i], _iv[i], 4);
+					}
+				}
+				break;
 		}
 /*		for (int i = 0; i < 4; i++){
 			for (int j = 0; j < 4; j++){
@@ -334,18 +354,28 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 			}
 			printf("\n");
 		}*/
-		if (_mode == CBC){		//saves last cipher text, to chain with next
-			if (b < blocks-1){	//not last cipher text
+		switch (_mode){
+			case ECB:
+				break;
+			case CBC:
+				if (b < blocks-1){	//not last cipher text
+					for (int i = 0; i < 4; i++){
+						memcpy(_last_cipher_text[i], _temp_block[i], 4);
+					}
+				}
+				break;
+			case CFB:
+				xorBlock(_temp_block, _next_block_text);
 				for (int i = 0; i < 4; i++){
 					memcpy(_last_cipher_text[i], _temp_block[i], 4);
 				}
-			}
-			else{
+				break;
+			case OFB:
 				for (int i = 0; i < 4; i++){
-					delete[] _last_cipher_text[i];
+					memcpy(_last_cipher_text[i], _temp_block[i], 4);
 				}
-				delete[] _last_cipher_text;
-			}
+				xorBlock(_temp_block, _next_block_text);
+				break;
 		}
 		for (int i = 0; i < 4; i++){					// redo inverse, to original format position
 			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
@@ -353,6 +383,14 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 			memcpy(block+i*4+2+b*16, _temp_shifted_block+i+8, 1);
 			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
 		}
+	}
+	if (_mode != ECB){
+		for (int i = 0; i < 4; i++){
+			delete[] _last_cipher_text[i];
+			delete[] _next_block_text[i];
+		}
+		delete[] _last_cipher_text;
+		delete[] _next_block_text;
 	}
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;
@@ -404,7 +442,7 @@ void Rijndael::decrypt(unsigned char* block, int &length){
 	}
 	unsigned char** _last_cipher_text;
 	unsigned char** _next_cipher_text;
-	if (_mode == CBC){	//allocates temp mem to save last chain block
+	if (_mode != ECB){	//allocates temp mem to save last chain block
 		_next_cipher_text = new unsigned char* [4];
 		_last_cipher_text = new unsigned char* [4];
 		for (int i = 0; i < 4; i++){
@@ -428,22 +466,64 @@ void Rijndael::decrypt(unsigned char* block, int &length){
 		for (int i = 0; i < 4; i++){
 			_temp_block[i] = &_temp_shifted_block[i*4];
 		}
-		if (_mode == CBC){			
-			for (int i = 0; i < 4; i++){
-				memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
-				memcpy(_next_cipher_text[i], _temp_block[i], 4);
-			}
+		switch (_mode){		// pre block mode
+			case ECB:
+				break;
+			case CBC:
+				for (int i = 0; i < 4; i++){
+					memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
+					memcpy(_next_cipher_text[i], _temp_block[i], 4);
+				}
+				break;
+			case CFB:
+			case OFB:
+				if (b != 0){
+					for (int i = 0; i < 4; i++){
+						memcpy(_next_cipher_text[i], _temp_block[i], 4);
+						memcpy(_temp_block[i], _last_cipher_text[i], 4);
+					}
+				}
+				else{
+					for (int i = 0; i < 4; i++){
+						memcpy(_next_cipher_text[i], _temp_block[i], 4);
+						memcpy(_temp_block[i], _iv[i], 4);
+					}
+				}
+				break;
 		}
-		decrypt(_temp_block);
-		if (_mode = CBC){
-			if (b != 0){
-				printf("decrypt last cbc\n");
-				xorBlock(_temp_block, _last_cipher_text);			
-			}
-			else{
-				printf("decrypt iv cbc\n");
-				xorBlock(_temp_block, _iv);
-			}
+		switch (_mode){		// decrypt or encrypt
+			case ECB:
+			case CBC:
+				decrypt(_temp_block);
+				break;
+			case CFB:
+			case OFB:
+				encrypt(_temp_block);
+				break;
+		}
+		switch (_mode){		// pos block mode
+			case ECB:
+				break;
+			case CBC:
+				if (b != 0){
+					xorBlock(_temp_block, _last_cipher_text);			
+				}
+				else{
+					xorBlock(_temp_block, _iv);
+				}
+				break;
+			case CFB:
+				xorBlock(_temp_block, _next_cipher_text);
+				for (int i = 0; i < 4; i++){
+					memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
+				}
+				break;
+			case OFB:				
+				for (int i = 0; i < 4; i++){
+					memcpy(_last_cipher_text[i], _temp_block[i], 4);
+				}
+				xorBlock(_temp_block, _next_cipher_text);
+				break;
 		}
 		for (int i = 0; i < 4; i++){
 			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
@@ -452,7 +532,7 @@ void Rijndael::decrypt(unsigned char* block, int &length){
 			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
 		}
 	}
-	if (_mode == CBC){
+	if (_mode != ECB){
 		for (int i = 0; i < 4; i++){
 			delete[] _last_cipher_text[i];
 			delete[] _next_cipher_text[i];

@@ -118,11 +118,11 @@ int main (int argc, char *argv[]){
 	hexStringToCharString((unsigned char*)chKey, 32, cKey);
 	//r.makeKey(cKey);	
 //	hexStringToCharString((unsigned char*)notABlock, 36, cnotABlock);
-//	unsigned char cBlock[29] = "1234567890123456abcdefghikjl";
-	unsigned char hblock[65] = "eba95a89d791fed693063fb699b8ac0c63d640a519ef4f51ce915cf0b888e2ee";
+//	unsigned char cBlock[29] = "1234567890123456abcdefghijkl";
+	unsigned char hblock[65] = "6f90774ba0d642bbba84664e38e16a5d91828f15bee4312a4a8f54a69c949964";
 	unsigned char chblock[33];
 	hexStringToCharString((unsigned char*)hblock, 64, chblock);
-	unsigned char hiv[33] = "d8a6607855c8d22a69e1eb6db237a384";
+	unsigned char hiv[33] = "702265631d1f84e24dc3ec5edf735567";
 	unsigned char civ[17];
 	hexStringToCharString((unsigned char*)hiv, 32, civ);
 //	unsigned char* paddBlock = new unsigned char [16];		//pad pos hextochar
@@ -141,7 +141,7 @@ int main (int argc, char *argv[]){
 	int length = 32;	
 	timeval t1, t2;
 	gettimeofday(&t1, 0);
-	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::CBC);
+	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::OFB);
 	r.makeKey(cKey);	
 /*	r.encrypt(cBlock, length);
 	unsigned char* iv = new unsigned char [16];
