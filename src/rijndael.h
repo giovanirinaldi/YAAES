@@ -96,9 +96,15 @@ class Rijndael {
 		//CIPHER
 		// input data defined as column by line
 		void encrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
-		void encrypt(unsigned char* block, int length = 16);	// 1d array of 4 * nb columns
+		void encrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
 		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
-		void decrypt(unsigned char* block, int length = 16);	// 1d array of 4 * nb columns
+		void decrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
+		
+		//IV
+		void getIV(unsigned char** iv);
+		void getIV(unsigned char* iv);
+		void setIV(unsigned char** iv);
+		void setIV(unsigned char* iv);
 	protected:
 		//KEY
 		void rotWord(unsigned char* column);
@@ -113,17 +119,24 @@ class Rijndael {
 		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
 
-		//MODE
+		//AUX
 		void xorBlock(unsigned char** a, unsigned char** b);
+	
+		//IV
 		void generateIV();
+
+		//PADDING
+		void makePadding(unsigned char* block, int &length, int blocks);
+		void removePadding(unsigned char* block, int &length, int blocks);
 	private:
 		int _round;
 		unsigned char** _exp_key;	//expanded key
 		unsigned char** _iv;		//initialization vector (when mode != ECB)
 		int _nek;	// # of byte columns of expanded key
-		Mode _mode;
-		KeySize _key_size;
-		BlockSize _block_size;
+		Mode _mode;		// ECB, CBC, etc.
+		KeySize _key_size;	// in bits
+		BlockSize _block_size;	// in bits
+		int _block_char_size;	// in char
 		int _nk;	// # of byte columns of key
 		int _nb;	// # of byte columns of block state;
 		int _nr;	// # of rounds; (fixed)

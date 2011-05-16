@@ -105,20 +105,26 @@ int main (int argc, char *argv[]){
 
 
 
-	Rijndael r(Rijndael::K128, Rijndael::B128);
+	//Rijndael r(Rijndael::K128, Rijndael::B128);
 	//std::string key = "essasenhaehfraca";
 	//std::string hBlock = "00112233445566778899aabbccddeeff";
 	//546578746F2070617261207465737465";
 	//char chBlock[65] = "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff";
-	char notABlock[37] = "001122334455667788990a0b0c0d0e0f0011";
-	unsigned char cnotABlock[32];
+//	char notABlock[] = "001122334455667788990a0b0c0d0e0f0011223344556677";
+//	unsigned char cnotABlock[32];
 	//hexStringToCharString((unsigned char*)notABlock, 20, cnotABlock);
 	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
 	unsigned char cKey[16];
 	hexStringToCharString((unsigned char*)chKey, 32, cKey);
-	r.makeKey(cKey);	
-	hexStringToCharString((unsigned char*)notABlock, 36, cnotABlock);
-
+	//r.makeKey(cKey);	
+//	hexStringToCharString((unsigned char*)notABlock, 36, cnotABlock);
+//	unsigned char cBlock[29] = "1234567890123456abcdefghikjl";
+	unsigned char hblock[65] = "eba95a89d791fed693063fb699b8ac0c63d640a519ef4f51ce915cf0b888e2ee";
+	unsigned char chblock[33];
+	hexStringToCharString((unsigned char*)hblock, 64, chblock);
+	unsigned char hiv[33] = "d8a6607855c8d22a69e1eb6db237a384";
+	unsigned char civ[17];
+	hexStringToCharString((unsigned char*)hiv, 32, civ);
 //	unsigned char* paddBlock = new unsigned char [16];		//pad pos hextochar
 //	int length = 14;
 //	char pad = 16 - length;	//16 == blocksize;
@@ -127,21 +133,36 @@ int main (int argc, char *argv[]){
 /*	for (int l = length; l < 16; l++){
 		cnotABlock[l] = pad;
 	}
-	for (int i = 0; i < 16; i++){
-		printf("%x ", cnotABlock[i]);
-	}*/
+	for (int i = 0; i < 32; i++){
+		printf("%x ", cBlock[i]);
+	}
+	printf("\n");*/
 		
-	
-	r.encrypt(cnotABlock, 18);
-	for (int i = 0; i < 32; i++){
-		printf("%x", cnotABlock[i]);
+	int length = 32;	
+	timeval t1, t2;
+	gettimeofday(&t1, 0);
+	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::CBC);
+	r.makeKey(cKey);	
+/*	r.encrypt(cBlock, length);
+	unsigned char* iv = new unsigned char [16];
+	r.getIV(iv);
+	printf("iv: ");
+	for (int i = 0; i < 16; i++){
+		printf("%x ", iv[i]);
 	}
-	printf("\nout:");
-	r.decrypt(cnotABlock, 32);
-	for (int i = 0; i < 32; i++){
-		printf("%x", cnotABlock[i]);
+	printf("\nout crypt: ");
+	for (int i = 0; i < length; i++){
+		printf("%x ", cBlock[i]);
 	}
-	printf("\n");
+	printf("\n");*/
+	r.setIV(civ);
+	r.decrypt(chblock, length);
+	gettimeofday(&t2, 0);
+	printf("%ld %ld\n", t2.tv_sec - t1.tv_sec, t2.tv_usec - t1.tv_usec);
+	for (int i = 0; i < length; i++){
+		printf("%x", chblock[i]);
+	}
+	printf(" of length %d\n", length);
 //	std::string block = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 	//printf("%d\n", block.length());
 	//hexStringToCharString(chBlock, 32, cBlock);	

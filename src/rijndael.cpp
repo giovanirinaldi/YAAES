@@ -7,12 +7,13 @@ Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
 	_exp_key = NULL;
 	_round = 0;
 	_key_size = ks;
-	_block_size = bs;
+	_block_size = bs;	//bits
+	_block_char_size = bs/8;
 	_nb = bs/32;
 	_nk = ks/32;
 	_mode = mode;
 	if (_mode != ECB){
-		srand(time(NULL));	
+	/*	srand(time(NULL));	
 		_iv = new unsigned char* [4];
 		for (int i = 0; i < 4; i++){
 			_iv[i] = new unsigned char [4];
@@ -21,7 +22,8 @@ Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
 			for (int j = 0; j < 4; j++){
 				_iv[i][j] = rand()%256;
 			}
-		}
+		}*/
+		generateIV();
 	}
 	else{
 		_iv = NULL;
@@ -52,6 +54,46 @@ Rijndael::~Rijndael(){
 	}
 }
 
+void Rijndael::generateIV(){	
+	srand(time(NULL));	
+	_iv = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		_iv[i] = new unsigned char [4];
+	}
+//	printf("iv: ");
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			_iv[i][j] = rand()%256;
+	//		printf("%x ", _iv[i][j]);
+		}
+	}	
+//	printf("\n");
+}
+
+void Rijndael::getIV(unsigned char** iv){
+	for (int i = 0; i < 4; i++){
+		memcpy(iv[i], _iv[i], 4);
+	}
+}
+
+void Rijndael::getIV(unsigned char* iv){
+	for (int i = 0; i < 4; i++){
+		memcpy(iv+i*4, _iv[i], 4);
+	}
+}
+
+void Rijndael::setIV(unsigned char** iv){
+	for (int i = 0; i < 4; i++){
+		memcpy(_iv[i], iv[i], 4);
+	}
+}
+
+void Rijndael::setIV(unsigned char* iv){
+	for (int i = 0; i < 4; i++){
+		memcpy(_iv[i], iv+i*4, 4);
+	}
+}
+
 void Rijndael::makeKey(unsigned char* key){
 //	if (key == NULL){
 //		return;
@@ -68,7 +110,7 @@ void Rijndael::makeKey(unsigned char* key){
 	}*/
 	makeKey(_temp_key);
 	delete[] _temp_key;
-	_initd = true;
+//	_initd = true;
 }
 
 void Rijndael::makeKey(unsigned char** key){
@@ -99,6 +141,7 @@ void Rijndael::makeKey(unsigned char** key){
 		}
 //		printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
 	}
+	_initd = true;
 }
 		
 void Rijndael::rotWord(unsigned char* column){
@@ -229,28 +272,32 @@ void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
 	}
 }
 
-void makePadding(unsigned char* block, int length, int blocks){
-	int _last_block_length = blocks*128/8 - length;
-	char pad = _last_block_length;
-	for (int i = length; i < (blocks)*128/8; i++){
+void Rijndael::makePadding(unsigned char* block, int &length, int blocks){
+	char pad = blocks*128/8 - length;
+	int i;
+	for (i = length; i < (blocks)*128/8; i++){
 		block[i] = pad;
 	}
+	length = i;
 }
 
-void Rijndael::encrypt(unsigned char* block, int length){
+void Rijndael::encrypt(unsigned char* block, int &length){
 	if (block == NULL){
 		printf("block null\n");
 		return;
 	}
-	int blocks = (length / (_block_size/8)) + 1;
+	unsigned char** _last_cipher_text;
+	if (_mode == CBC){	//allocates temp mem to save last chain block
+		_last_cipher_text = new unsigned char* [4];
+		for (int i = 0; i < 4; i++){
+			_last_cipher_text[i] = new unsigned char [4];
+		}
+	}
+	int blocks = (length / (_block_char_size));
+	if (length % _block_char_size != 0){
+		blocks++;
+	}
 //	printf("blocks: %d\n", blocks);
-	//if (length % (_block_size/8) != 0){
-	/*printf("%d\n", block);
-		makePadding(block, length, blocks);	
-	printf("%d\n", block);
-	fflush(stdout);
-	return;*/
-	//}	
 	makePadding(block, length, blocks);
 	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
@@ -264,12 +311,22 @@ void Rijndael::encrypt(unsigned char* block, int length){
 		for (int i = 0; i < 4; i++){
 			_temp_block[i] = &_temp_shifted_block[i*4];	// tempblock points to tempshiftedblock
 		}
-		for (int i = 0; i < 4; i++){
+		if (_mode == CBC){
+			if (b != 0){	//block is not the first from a chain
+		//		printf("xor last cbc\n");
+				xorBlock(_temp_block, _last_cipher_text);
+			}
+			else{		//first block
+		//		printf("xor iv cbc\n");
+				xorBlock(_temp_block, _iv);
+			}			
+		}
+/*		for (int i = 0; i < 4; i++){
 			for (int j = 0; j < 4; j++){
 				printf("%x ", _temp_block[i][j]);fflush(stdout);
 			}
 			printf("\n");
-		}
+		}*/
 		encrypt(_temp_block);
 /*		for (int i = 0; i < 4; i++){
 			for (int j = 0; j < 4; j++){
@@ -277,6 +334,19 @@ void Rijndael::encrypt(unsigned char* block, int length){
 			}
 			printf("\n");
 		}*/
+		if (_mode == CBC){		//saves last cipher text, to chain with next
+			if (b < blocks-1){	//not last cipher text
+				for (int i = 0; i < 4; i++){
+					memcpy(_last_cipher_text[i], _temp_block[i], 4);
+				}
+			}
+			else{
+				for (int i = 0; i < 4; i++){
+					delete[] _last_cipher_text[i];
+				}
+				delete[] _last_cipher_text;
+			}
+		}
 		for (int i = 0; i < 4; i++){					// redo inverse, to original format position
 			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
 			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
@@ -306,7 +376,7 @@ void Rijndael::encrypt(unsigned char** block){
 	addRoundKey(block);		
 }
 
-void removePadding(unsigned char* block, int &length, int blocks){
+void Rijndael::removePadding(unsigned char* block, int &length, int blocks){
 	if (block[length-1] > 0x00 && block[length-1] < 0x10){
 		int i;
 		for (i = length-2; i > length-block[length-1]; i--){
@@ -328,13 +398,23 @@ void removePadding(unsigned char* block, int &length, int blocks){
 }
 
 
-void Rijndael::decrypt(unsigned char* block, int length){
+void Rijndael::decrypt(unsigned char* block, int &length){
 	if (block == NULL){
 		return;
 	}
-	int blocks = length / (_block_size/8);
-	if (length % (_block_size/8) != 0){
-		
+	unsigned char** _last_cipher_text;
+	unsigned char** _next_cipher_text;
+	if (_mode == CBC){	//allocates temp mem to save last chain block
+		_next_cipher_text = new unsigned char* [4];
+		_last_cipher_text = new unsigned char* [4];
+		for (int i = 0; i < 4; i++){
+			_last_cipher_text[i] = new unsigned char [4];
+			_next_cipher_text[i] = new unsigned char [4];
+		}
+	}
+	int blocks = length / (_block_char_size);
+	if (length % _block_char_size != 0){
+		blocks++;
 	}	
 	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
@@ -348,7 +428,23 @@ void Rijndael::decrypt(unsigned char* block, int length){
 		for (int i = 0; i < 4; i++){
 			_temp_block[i] = &_temp_shifted_block[i*4];
 		}
+		if (_mode == CBC){			
+			for (int i = 0; i < 4; i++){
+				memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
+				memcpy(_next_cipher_text[i], _temp_block[i], 4);
+			}
+		}
 		decrypt(_temp_block);
+		if (_mode = CBC){
+			if (b != 0){
+				printf("decrypt last cbc\n");
+				xorBlock(_temp_block, _last_cipher_text);			
+			}
+			else{
+				printf("decrypt iv cbc\n");
+				xorBlock(_temp_block, _iv);
+			}
+		}
 		for (int i = 0; i < 4; i++){
 			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
 			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
@@ -356,8 +452,15 @@ void Rijndael::decrypt(unsigned char* block, int length){
 			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
 		}
 	}
+	if (_mode == CBC){
+		for (int i = 0; i < 4; i++){
+			delete[] _last_cipher_text[i];
+			delete[] _next_cipher_text[i];
+		}
+		delete[] _next_cipher_text;
+		delete[] _last_cipher_text;
+	}
 	removePadding(block, length, blocks);
-	printf("length out: %d\n", length);
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;
 }
