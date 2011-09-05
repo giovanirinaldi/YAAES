@@ -3,6 +3,9 @@
 #include <cstdio>
 #include <ctime>
 
+#define DEBUG 0
+#define STDOUT stdout
+
 Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
 	_exp_key = NULL;
 	_round = 0;
@@ -300,8 +303,7 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 	if (length % _block_char_size != 0){
 		blocks++;
 	}
-//	printf("blocks: %d\n", blocks);
-	makePadding(block, length, blocks);
+//	makePadding(block, length, blocks);
 	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
 	unsigned char** _temp_block = new unsigned char* [4];
 	for (int b = 0; b < blocks; b++){
@@ -540,7 +542,7 @@ void Rijndael::decrypt(unsigned char* block, int &length){
 		delete[] _next_cipher_text;
 		delete[] _last_cipher_text;
 	}
-	removePadding(block, length, blocks);
+//	removePadding(block, length, blocks);
 	delete[] _temp_block;
 	delete[] _temp_shifted_block;
 }
@@ -560,5 +562,49 @@ void Rijndael::decrypt(unsigned char** block){
 	}		
 	invShiftRows(block);
 	invSubBytes(block);
+	addRoundKey(block);
+}
+
+void Rijndael::encryptOneRound(unsigned char** block){
+	if (!_initd){
+		return;
+	}
+	_round = 0;
+#if DEBUG	
+	fprintf(STDOUT, "Round %i\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKey(block);		
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after whitening ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	_round++;
+	subBytes(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	shiftRows(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	mixColumns(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after MC\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKey(block);		
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+}
+
+void Rijndael::decryptOneRound(unsigned char** block){
+	if (!_initd){
+		return;
+	}
+	_round = 1;
+	addRoundKey(block);
+	invMixColumns(block);
+	invShiftRows(block);
+	invSubBytes(block);
+	_round--;
 	addRoundKey(block);
 }

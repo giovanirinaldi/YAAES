@@ -35,76 +35,50 @@ void hexStringToCharString(unsigned char* hexString, int hexStringLen, unsigned 
 	}
 }
 
-Gtk::Window* pWindow = 0;
-/*static void on_button_clicked()
-{
-  if(pDialog)
-    pDialog->hide(); //hide() will cause main::run() to end.
-}*/
-
-void on_menu_file_quit(){
-	if (pWindow){
-		pWindow->hide();
+void diff(unsigned char** a, unsigned char** b, unsigned char** r){	// a - b (or b - a, the same, we just don't want negative values =) = r
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			if (a[i][j] > b[i][j]){
+				r[i][j] = a[i][j] - b[i][j];
+			}
+			else{
+				r[i][j] = b[i][j] - a[i][j];
+			}
+		}
 	}
 }
 
-void on_about_dialog_close(){
-	
+bool isEqual(unsigned char** a, unsigned char** b){	
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			if (a[i][j] != b[i][j]){
+				return false;
+			}
+		}
+	}
+	return true;
 }
 
-void on_menu_help_about(){
-	Gtk::AboutDialog* pAboutDialog;
-  	Glib::RefPtr<Gtk::Builder> aboutBuilder = Gtk::Builder::create();
-	aboutBuilder->add_from_file("about.glade");
-	aboutBuilder->get_widget("aboutDialog", pAboutDialog);
-	if (pAboutDialog)
-		pAboutDialog->show();
-		
+void printEqualBytes(unsigned char** a, unsigned char** b){
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			if (a[i][j] == b[i][j]){
+				printf("Has Equal Byte at line %d col %d: %x\n", i, j, a[i][j]);
+			}
+		}
+	}
+}
+
+void printBlock(unsigned char** block){
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			printf("%x ", block[i][j]);
+		}
+		printf("\n");
+	}
 }
 
 int main (int argc, char *argv[]){
-	/*Gtk::Main kit(argc, argv);
-
-	//Load the GtkBuilder file and instantiate its widgets:
-  	Glib::RefPtr<Gtk::Builder> refBuilder = Gtk::Builder::create();
-  	try
-  	{
-    		refBuilder->add_from_file("main.glade");
-  	}
-  	catch(const Glib::FileError& ex)
-  	{
-    		std::cerr << "FileError: " << ex.what() << std::endl;
-    		return 1;
-  	}
-  	catch(const Gtk::BuilderError& ex)
-  	{
-    		std::cerr << "BuilderError: " << ex.what() << std::endl;
-    		return 1;
-  	}
-
-  	//Get the GtkBuilder-instantiated Dialog:
-  	refBuilder->get_widget("mainWindow", pWindow);
-  	if(pWindow)
-  	{
-    		//Get the GtkBuilder-instantiated Button, and connect a signal handler:
-    		Gtk::ImageMenuItem* pMenuFileQuit = 0;
-    		Gtk::ImageMenuItem* pMenuHelpAbout = 0;
-    		refBuilder->get_widget("menu_file_quit", pMenuFileQuit);
-    		refBuilder->get_widget("menu_help_about", pMenuHelpAbout);
-    		if(pMenuFileQuit)
-    		{
-      			pMenuFileQuit->signal_activate().connect(sigc::ptr_fun(on_menu_file_quit));
-    		}
-    		if(pMenuHelpAbout)
-    		{
-      			pMenuHelpAbout->signal_activate().connect(sigc::ptr_fun(on_menu_help_about));
-    		}
-    		kit.run(*pWindow);
-  	}*/
-
-
-
-
 	//Rijndael r(Rijndael::K128, Rijndael::B128);
 	//std::string key = "essasenhaehfraca";
 	//std::string hBlock = "00112233445566778899aabbccddeeff";
@@ -113,18 +87,18 @@ int main (int argc, char *argv[]){
 //	char notABlock[] = "001122334455667788990a0b0c0d0e0f0011223344556677";
 //	unsigned char cnotABlock[32];
 	//hexStringToCharString((unsigned char*)notABlock, 20, cnotABlock);
-	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
+	char chKey[33] = "000102030405060708090a0b0c0d0e0f";			//coluna 1 00010203 linha 1 0004080c
 	unsigned char cKey[16];
 	hexStringToCharString((unsigned char*)chKey, 32, cKey);
 	//r.makeKey(cKey);	
 //	hexStringToCharString((unsigned char*)notABlock, 36, cnotABlock);
 //	unsigned char cBlock[29] = "1234567890123456abcdefghijkl";
-	unsigned char hblock[65] = "6f90774ba0d642bbba84664e38e16a5d91828f15bee4312a4a8f54a69c949964";
+/*	unsigned char hblock[65] = "6f90774ba0d642bbba84664e38e16a5d91828f15bee4312a4a8f54a69c949964";
 	unsigned char chblock[33];
 	hexStringToCharString((unsigned char*)hblock, 64, chblock);
 	unsigned char hiv[33] = "702265631d1f84e24dc3ec5edf735567";
 	unsigned char civ[17];
-	hexStringToCharString((unsigned char*)hiv, 32, civ);
+	hexStringToCharString((unsigned char*)hiv, 32, civ);*/
 //	unsigned char* paddBlock = new unsigned char [16];		//pad pos hextochar
 //	int length = 14;
 //	char pad = 16 - length;	//16 == blocksize;
@@ -138,11 +112,155 @@ int main (int argc, char *argv[]){
 	}
 	printf("\n");*/
 		
-	int length = 32;	
-	timeval t1, t2;
-	gettimeofday(&t1, 0);
-	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::OFB);
+//	int length = 32;	
+	//timeval t1, t2;
+	//gettimeofday(&t1, 0);
+	unsigned char** a_plain = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		a_plain[i] = new unsigned char[4];
+	}
+	unsigned char a_plain_char[17] = "AoqJQ1d4mSI1JSoc"; 
+	for (int i = 0; i < 4; i++){
+		memcpy(a_plain[i], &a_plain_char[i*4], 4);
+	}
+	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::ECB);
 	r.makeKey(cKey);	
+	r.encryptOneRound(a_plain);	
+
+	unsigned char** b_plain = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		b_plain[i] = new unsigned char[4];
+	}
+	unsigned char b_plain_char[17] = "1l4PO10j1nN3AU8s"; 
+	for (int i = 0; i < 4; i++){
+		memcpy(b_plain[i], &b_plain_char[i*4], 4);
+	}
+	r.encryptOneRound(b_plain);	
+
+
+	//copy the original, so we have plain and cipher texts in hexa
+	unsigned char** a_cipher = a_plain;
+	unsigned char** b_cipher = b_plain;
+	a_plain = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		a_plain[i] = new unsigned char[4];
+	}
+	for (int i = 0; i < 4; i++){
+		memcpy(a_plain[i], &a_plain_char[i*4], 4);
+	}
+	b_plain = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		b_plain[i] = new unsigned char[4];
+	}
+	for (int i = 0; i < 4; i++){
+		memcpy(b_plain[i], &b_plain_char[i*4], 4);
+	}
+	
+	printf("--------------\n");
+	printf("A plain\n");
+	printBlock(a_plain);
+	printf("B plain\n");
+	printBlock(b_plain);
+	printf("A cipher\n");
+	printBlock(a_cipher);
+	printf("B cipher\n");
+	printBlock(b_cipher);
+	printf("--------------\n");
+	
+	//diff of ciphertexts
+	unsigned char** ab_cipher_diff = new unsigned char* [4];
+	unsigned char** ab_plain_diff = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		ab_cipher_diff[i] = new unsigned char[4];
+		ab_plain_diff[i] = new unsigned char[4];
+	}
+	diff(a_plain, b_plain, ab_plain_diff);
+	diff(a_cipher, b_cipher, ab_cipher_diff);
+	
+	printf("--------------\n");
+	printf("AB Plain diff\n");
+	printBlock(ab_plain_diff);
+	printf("AB Cipher diff\n");
+	printBlock(ab_cipher_diff);	
+	printf("--------------\n");
+
+	r.invMixColumns(ab_cipher_diff);
+	r.invShiftRows(ab_cipher_diff);
+
+		
+	printf("--------------\n");
+	printf("AB Cipher diff after invMC and invSR\n");
+	printBlock(ab_cipher_diff);	
+	printf("--------------\n");
+
+
+	unsigned char a_plain_byte;
+	unsigned char b_plain_byte;
+	unsigned char ab_cipher_byte_diff;	
+	unsigned char temp_a, temp_b, temp_ab_diff;
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			unsigned char a_plain_byte = a_plain[i][j];
+			unsigned char b_plain_byte = b_plain[i][j];
+			ab_cipher_byte_diff = ab_cipher_diff[i][j];	
+			for (int p = 0; p < 256; p++){
+				temp_a = _sbox[a_plain_byte + p];
+				temp_b = _sbox[b_plain_byte + p];
+				temp_ab_diff = (temp_a > temp_b) ? (temp_a - temp_b) : (temp_b - temp_a);
+				if (temp_ab_diff == ab_cipher_byte_diff){
+					printf("One candidate pair: %x and %x at %d make %x and %x with diff of %x\n", a_plain_byte, b_plain_byte, p, a_cipher[i][j], b_cipher[i][j], ab_cipher_byte_diff);
+				}
+			}
+			printf("---------\n");
+		}
+	}
+
+	//check if sbox input diff equals output diff
+	//create a array of 256 positions (all possible diff input blocks for sbox, beggining from plaintext diff
+/*	unsigned char*** a_diff_block_array = new unsigned char** [256];
+	unsigned char*** b_diff_block_array = new unsigned char** [256];
+	for (int p = 0; p < 256; p++){
+		unsigned char** a_temp_block = new unsigned char* [4];
+		unsigned char** b_temp_block = new unsigned char* [4];
+		for (int i = 0; i < 4; i++){
+			a_temp_block[i] = new unsigned char[4];
+			b_temp_block[i] = new unsigned char[4];
+		}
+		a_diff_block_array[p] = a_temp_block;
+		b_diff_block_array[p] = b_temp_block;		
+	}
+	
+	for (int p = 0; p < 256; p++){
+		for (int i = 0; i < 4; i++){
+			for (int j = 0; j < 4; j++){
+				a_diff_block_array[p][i][j] = a_plain[i][j]+p;				
+				b_diff_block_array[p][i][j] = b_plain[i][j]+p;
+			}
+		}
+	}*/
+	
+
+/*	unsigned char** temp = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		temp[i] = new unsigned char[4];
+	}
+	for (int p = 0; p < 256; p++){
+//		printf("-------diff blocks %d----------\n", p);
+		r.subBytes(a_diff_block_array[p]);
+		//printBlock(a_diff_block_array[p]);
+		r.subBytes(b_diff_block_array[p]);
+		//printBlock(b_diff_block_array[p]);
+		diff(a_diff_block_array[p], b_diff_block_array[p], temp);
+//		printBlock(temp);
+//		printBlock(ab_cipher_diff);
+	//	printEqualBytes(temp, ab_cipher_diff);
+//		sleep(5);
+//		printf("------------------\n");
+	}	*/
+	
+	
+	
+
 /*	r.encrypt(cBlock, length);
 	unsigned char* iv = new unsigned char [16];
 	r.getIV(iv);
@@ -155,14 +273,14 @@ int main (int argc, char *argv[]){
 		printf("%x ", cBlock[i]);
 	}
 	printf("\n");*/
-	r.setIV(civ);
-	r.decrypt(chblock, length);
-	gettimeofday(&t2, 0);
-	printf("%ld %ld\n", t2.tv_sec - t1.tv_sec, t2.tv_usec - t1.tv_usec);
-	for (int i = 0; i < length; i++){
+	//r.setIV(civ);
+	//r.decrypt(chblock, length);
+//	gettimeofday(&t2, 0);
+	//printf("%ld %ld\n", t2.tv_sec - t1.tv_sec, t2.tv_usec - t1.tv_usec);
+/*	for (int i = 0; i < length; i++){
 		printf("%x", chblock[i]);
 	}
-	printf(" of length %d\n", length);
+	printf(" of length %d\n", length);*/
 //	std::string block = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
 	//printf("%d\n", block.length());
 	//hexStringToCharString(chBlock, 32, cBlock);	
@@ -213,7 +331,7 @@ int main (int argc, char *argv[]){
     		kit.run(*pWindow);
   	}	
 
-
+*/
 //	Rijndael r(Rijndael::K128, Rijndael::B128);
 //	timeval t1, t2;
 /*	char input[1024];

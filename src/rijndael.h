@@ -100,12 +100,15 @@ class Rijndael {
 		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
 		void decrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
 		
+		void encryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
+		void decryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
+		
 		//IV
 		void getIV(unsigned char** iv);
 		void getIV(unsigned char* iv);
 		void setIV(unsigned char** iv);
 		void setIV(unsigned char* iv);
-	protected:
+//	protected:
 		//KEY
 		void rotWord(unsigned char* column);
 		void subWord(unsigned char* column);
