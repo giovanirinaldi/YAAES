@@ -6,7 +6,7 @@ AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
 ])
-PKG_CHECK_MODULES([YAAES], [gtkmm-2.4 >= 2.4])
+#PKG_CHECK_MODULES([YAAES], [gtkmm-2.4 >= 2.4])
 
 AC_SUBST(YAAES_CFLAGS)
 AC_SUBST(YAAES_LIBS)

@@ -586,7 +586,7 @@ void Rijndael::encryptOneRound(unsigned char** block){
 #if DEBUG	
 	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
 #endif
-	mixColumns(block);
+	//mixColumns(block);
 #if DEBUG	
 	fprintf(STDOUT, "Round %i after MC\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
 #endif

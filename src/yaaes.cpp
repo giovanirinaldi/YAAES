@@ -3,7 +3,7 @@
 #include <sys/time.h>
 #include <cstring>
 #include <cctype>
-#include <gtkmm.h>
+//#include <gtkmm.h>
 #include <iostream>
 using namespace std;
 
@@ -38,12 +38,13 @@ void hexStringToCharString(unsigned char* hexString, int hexStringLen, unsigned 
 void diff(unsigned char** a, unsigned char** b, unsigned char** r){	// a - b (or b - a, the same, we just don't want negative values =) = r
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			if (a[i][j] > b[i][j]){
+/*			if (a[i][j] > b[i][j]){
 				r[i][j] = a[i][j] - b[i][j];
 			}
 			else{
 				r[i][j] = b[i][j] - a[i][j];
-			}
+			}*/
+			r[i][j] = a[i][j] ^ b[i][j];
 		}
 	}
 }
@@ -193,8 +194,34 @@ int main (int argc, char *argv[]){
 	printBlock(ab_cipher_diff);	
 	printf("--------------\n");
 
+	
+	unsigned char oa = 0x70;
+	unsigned char ob = 0x44;
+	unsigned char a = 0x70;
+	unsigned char b = 0x44;
+	int count = 0;
+	for (unsigned char i = 0x00; i <= 0xff; i=i+0x01){
+		a = oa + i;
+		b = ob + i;
+		for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
+			for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
+				if ((x^y) == a){
+	//				printf("%x xor %x == alpha %x\n", x, y, a);
+					if ((_sbox[x]^_sbox[y]) == b){
+						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
+						count++;
+					}
+				}
+				if (y == 0xff)	break;
+			}
+			if (x == 0xff)	break;
+		}
+		if (i == 0xff)	break;
+	}
+	printf("count = %d\n", count);
 
-	unsigned char a_plain_byte;
+		
+/*	unsigned char a_plain_byte;
 	unsigned char b_plain_byte;
 	unsigned char ab_cipher_byte_diff;	
 	unsigned char temp_a, temp_b, temp_ab_diff;
@@ -213,7 +240,7 @@ int main (int argc, char *argv[]){
 			}
 			printf("---------\n");
 		}
-	}
+	}*/
 
 	//check if sbox input diff equals output diff
 	//create a array of 256 positions (all possible diff input blocks for sbox, beggining from plaintext diff
