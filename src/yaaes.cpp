@@ -120,7 +120,7 @@ int main (int argc, char *argv[]){
 	for (int i = 0; i < 4; i++){
 		a_plain[i] = new unsigned char[4];
 	}
-	unsigned char a_plain_char[17] = "AoqJQ1d4mSI1JSoc"; 
+	unsigned char a_plain_char[17] = "AoqJQ2d4mSI1JSoc"; 
 	for (int i = 0; i < 4; i++){
 		memcpy(a_plain[i], &a_plain_char[i*4], 4);
 	}
@@ -187,38 +187,127 @@ int main (int argc, char *argv[]){
 
 	r.invMixColumns(ab_cipher_diff);
 	r.invShiftRows(ab_cipher_diff);
-
 		
 	printf("--------------\n");
 	printf("AB Cipher diff after invMC and invSR\n");
 	printBlock(ab_cipher_diff);	
 	printf("--------------\n");
 
-	
-	unsigned char oa = 0x70;
-	unsigned char ob = 0x44;
-	unsigned char a = 0x70;
-	unsigned char b = 0x44;
+	//alloc possibilities matrix. for each position (16 pos total), 2 posibilities of 1 byte key
+	unsigned char*** pos = new unsigned char**[4];
+	for (int i = 0; i < 4; i++){
+		pos[i] = new unsigned char*[4];
+		for (int j = 0; j < 4; j++){
+			pos[i][j] = new unsigned char[2];
+		}
+	}	
+	unsigned char a, b;
 	int count = 0;
-	for (unsigned char i = 0x00; i <= 0xff; i=i+0x01){
-		a = oa + i;
-		b = ob + i;
-		for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
-			for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
-				if ((x^y) == a){
-	//				printf("%x xor %x == alpha %x\n", x, y, a);
-					if ((_sbox[x]^_sbox[y]) == b){
-						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			a = ab_plain_diff[i][j];
+			b = ab_cipher_diff[i][j];
+			for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
+				for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
+					if (((x^y) == a) && ((_sbox[x]^_sbox[y]) == b)){
+//						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
+						pos[i][j][0] = x;
+						pos[i][j][1] = y;						
 						count++;
 					}
+					if (y == 0xff)	break;
 				}
-				if (y == 0xff)	break;
+				if (x == 0xff)	break;
 			}
-			if (x == 0xff)	break;
 		}
-		if (i == 0xff)	break;
 	}
-	printf("count = %d\n", count);
+
+	Rijndael testr;
+	unsigned char** testkey = new unsigned char*[4];
+	for (int i = 0; i < 4; i++){
+		testkey[i] = new unsigned char[4];
+	}
+	unsigned char** temp_plain = new unsigned char*[4];
+	for (int i = 0; i < 4; i++){
+		temp_plain[i] = new unsigned char[4];
+	}
+	
+	for (int i = 0; i < 65536; i++){
+		for (int k = 0; k < 4; k++){
+			for (int j = 0; j < 4; j++){
+				temp_plain[k][j] = a_plain[k][j];
+			}
+		}
+		if (i & 1)	testkey[0][0] = pos[0][0][0] ^ a_plain[0][0];
+		else 		testkey[0][0] = pos[0][0][1] ^ a_plain[0][0];
+		
+		if (i & 2)	testkey[1][0] = pos[0][1][0] ^ a_plain[0][1];
+		else 		testkey[1][0] = pos[0][1][1] ^ a_plain[0][1];
+	
+		if (i & 4)	testkey[2][0] = pos[0][2][0] ^ a_plain[0][2];
+		else 		testkey[2][0] = pos[0][2][1] ^ a_plain[0][2];
+	
+		if (i & 8)	testkey[3][0] = pos[0][3][0] ^ a_plain[0][3];
+		else 		testkey[3][0] = pos[0][3][1] ^ a_plain[0][3];
+		
+		if (i & 16)	testkey[0][1] = pos[1][0][0] ^ a_plain[1][0];
+		else 		testkey[0][1] = pos[1][0][1] ^ a_plain[1][0];
+		
+		if (i & 32)	testkey[1][1] = pos[1][1][0] ^ a_plain[1][1];
+		else 		testkey[1][1] = pos[1][1][1] ^ a_plain[1][1];
+	
+		if (i & 64)	testkey[2][1] = pos[1][2][0] ^ a_plain[1][2];
+		else 		testkey[2][1] = pos[1][2][1] ^ a_plain[1][2];
+	
+		if (i & 128)	testkey[3][1] = pos[1][3][0] ^ a_plain[1][3];
+		else 		testkey[3][1] = pos[1][3][1] ^ a_plain[1][3];
+		
+		if (i & 256)	testkey[0][2] = pos[2][0][0] ^ a_plain[2][0];
+		else 		testkey[0][2] = pos[2][0][1] ^ a_plain[2][0];
+		
+		if (i & 512)	testkey[1][2] = pos[2][1][0] ^ a_plain[2][1];
+		else 		testkey[1][2] = pos[2][1][1] ^ a_plain[2][1];
+	
+		if (i & 1024)	testkey[2][2] = pos[2][2][0] ^ a_plain[2][2];
+		else 		testkey[2][2] = pos[2][2][1] ^ a_plain[2][2];
+	
+		if (i & 2048)	testkey[3][2] = pos[2][3][0] ^ a_plain[2][3];
+		else 		testkey[3][2] = pos[2][3][1] ^ a_plain[2][3];
+
+		if (i & 4096)	testkey[0][3] = pos[3][0][0] ^ a_plain[3][0];
+		else 		testkey[0][3] = pos[3][0][1] ^ a_plain[3][0];
+		
+		if (i & 8192)	testkey[1][3] = pos[3][1][0] ^ a_plain[3][1];
+		else 		testkey[1][3] = pos[3][1][1] ^ a_plain[3][1];
+	
+		if (i & 16384)	testkey[2][3] = pos[3][2][0] ^ a_plain[3][2];
+		else 		testkey[2][3] = pos[3][2][1] ^ a_plain[3][2];
+	
+		if (i & 32768)	testkey[3][3] = pos[3][3][0] ^ a_plain[3][3];
+		else 		testkey[3][3] = pos[3][3][1] ^ a_plain[3][3];
+
+		r.makeKey(testkey);
+
+/*		for (int k = 0; k < 4; k++){
+			for (int j = 0; j < 4; j++){
+				printf("%.2x ", testkey[k][j]);
+			}
+			printf("\n");
+		}
+		sleep(2);*/
+		r.encryptOneRound(temp_plain);	
+		if (isEqual(temp_plain, a_cipher)){
+			printf("key found at:\n");
+			for (int k = 0; k < 4; k++){
+				for (int j = 0; j < 4; j++){
+					printf("%.2x ", testkey[k][j]);
+				}
+				printf("\n");
+			}	
+			break;
+		}
+	}
+//	printf("count = %d\n", count);
 
 		
 /*	unsigned char a_plain_byte;
