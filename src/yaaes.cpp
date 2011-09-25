@@ -5,6 +5,7 @@
 #include <cctype>
 //#include <gtkmm.h>
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 #include "rijndael.h"
@@ -243,6 +244,11 @@ int main (int argc, char *argv[]){
 			
 		}
 		printf("\n");
+	}
+
+	for (long long int i = 0; i < pow(2,26); i++){
+//		r.makeKey(cKey);	
+		r.encryptOneRound(a_plain);	
 	}
 
 	
