@@ -233,7 +233,35 @@ int main (int argc, char *argv[]){
 		}
 	}
 
+	unsigned char** temp_plain = new unsigned char*[4];
 	for (int i = 0; i < 4; i++){
+		temp_plain[i] = new unsigned char[4];
+	}
+	
+	for (int i = 0; i < 16; i++){
+		for (int k = 0; k < 4; k++){
+			for (int j = 0; j < 4; j++){
+				temp_plain[k][j] = 0x00;
+			}
+		}
+		if (i & 1)	temp_plain[0][0] = _sbox[pos[0][0][0]];
+		else 		temp_plain[0][0] = _sbox[pos[0][0][1]];
+		
+		if (i & 2)	temp_plain[1][0] = _sbox[pos[1][1][0]];
+		else 		temp_plain[1][0] = _sbox[pos[1][1][1]];
+	
+		if (i & 4)	temp_plain[2][0] = _sbox[pos[2][2][0]];
+		else 		temp_plain[2][0] = _sbox[pos[2][2][1]];
+	
+		if (i & 8)	temp_plain[3][0] = _sbox[pos[3][3][0]];
+		else 		temp_plain[3][0] = _sbox[pos[3][3][1]];
+
+		r.mixColumns(temp_plain);
+		if (temp_plain[0][0] == 0x7f){
+			printf("Found\n");
+		}
+	}
+/*	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			k0[i][j][0] = pos[i][j][0] ^ a_plain[i][j];		
 			k0[i][j][1] = pos[i][j][1] ^ a_plain[i][j];		
@@ -244,12 +272,12 @@ int main (int argc, char *argv[]){
 			
 		}
 		printf("\n");
-	}
+	}*/
 
-	for (long long int i = 0; i < pow(2,26); i++){
+/*	for (long long int i = 0; i < pow(2,26); i++){
 //		r.makeKey(cKey);	
 		r.encryptOneRound(a_plain);	
-	}
+	}*/
 
 	
 
