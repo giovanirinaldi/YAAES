@@ -202,10 +202,15 @@ int main (int argc, char *argv[]){
 	unsigned char*** k0 = new unsigned char**[4];
 	unsigned char*** k1 = new unsigned char**[4];
 
+	unsigned char** final_k0 = new unsigned char*[4];
+	unsigned char** final_k1 = new unsigned char*[4];
+
 	for (int i = 0; i < 4; i++){
 		pos[i] = new unsigned char*[4];
 		k0[i] = new unsigned char*[4];
 		k1[i] = new unsigned char*[4];
+		final_k0[i] = new unsigned char[4];
+		final_k1[i] = new unsigned char[4];
 		for (int j = 0; j < 4; j++){
 			pos[i][j] = new unsigned char[2];
 			k0[i][j] = new unsigned char[2];
@@ -233,46 +238,253 @@ int main (int argc, char *argv[]){
 		}
 	}
 
-	unsigned char** temp_plain = new unsigned char*[4];
-	for (int i = 0; i < 4; i++){
-		temp_plain[i] = new unsigned char[4];
+	unsigned char*** temp_k0 = new unsigned char**[16];
+	for (int i = 0; i < 16; i++){
+		temp_k0[i] = new unsigned char*[4];
+		for (int j = 0; j < 4; j++){
+			temp_k0[i][j] = new unsigned char[4];
+		}
+	}	
+	unsigned char** temp_k1c0 = new unsigned char*[16];
+	unsigned char** temp_k1c1 = new unsigned char*[16];
+	unsigned char** temp_k1c2 = new unsigned char*[16];
+	unsigned char** temp_k1c3 = new unsigned char*[16];
+	for (int i = 0; i < 16; i++){
+		temp_k1c0[i] = new unsigned char[4];
+		temp_k1c1[i] = new unsigned char[4];		
+		temp_k1c2[i] = new unsigned char[4];		
+		temp_k1c3[i] = new unsigned char[4];		
 	}
 	
 	for (int i = 0; i < 16; i++){
-		for (int k = 0; k < 4; k++){
-			for (int j = 0; j < 4; j++){
-				temp_plain[k][j] = 0x00;
-			}
+		if (i & 1){
+			temp_k1c0[i][0] = _sbox[pos[0][0][0]];
+			temp_k0[i][0][0] = pos[0][0][0];
 		}
-		if (i & 1)	temp_plain[0][0] = _sbox[pos[0][0][0]];
-		else 		temp_plain[0][0] = _sbox[pos[0][0][1]];
-		
-		if (i & 2)	temp_plain[1][0] = _sbox[pos[1][1][0]];
-		else 		temp_plain[1][0] = _sbox[pos[1][1][1]];
-	
-		if (i & 4)	temp_plain[2][0] = _sbox[pos[2][2][0]];
-		else 		temp_plain[2][0] = _sbox[pos[2][2][1]];
-	
-		if (i & 8)	temp_plain[3][0] = _sbox[pos[3][3][0]];
-		else 		temp_plain[3][0] = _sbox[pos[3][3][1]];
-
-		r.mixColumns(temp_plain);
-		if (temp_plain[0][0] == 0x7f){
-			printf("Found\n");
+		else{
+			temp_k1c0[i][0] = _sbox[pos[0][0][1]];
+			temp_k0[i][0][0] = pos[0][0][1];
+		}
+		if (i & 2){
+			temp_k1c0[i][1] = _sbox[pos[1][1][0]];
+			temp_k0[i][1][1] = pos[1][1][0];
+		}
+		else{
+			temp_k1c0[i][1] = _sbox[pos[1][1][1]];
+			temp_k0[i][1][1] = pos[1][1][1];
+		}
+		if (i & 4){
+			temp_k1c0[i][2] = _sbox[pos[2][2][0]];
+			temp_k0[i][2][2] = pos[2][2][0];
+		}
+		else{
+			temp_k1c0[i][2] = _sbox[pos[2][2][1]];
+			temp_k0[i][2][2] = pos[2][2][1];
+		}
+		if (i & 8){
+			temp_k1c0[i][3] = _sbox[pos[3][3][0]];
+			temp_k0[i][3][3] = pos[3][3][0];
+		}
+		else{
+			temp_k1c0[i][3] = _sbox[pos[3][3][1]];
+			temp_k0[i][3][3] = pos[3][3][1];
 		}
 	}
-/*	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			k0[i][j][0] = pos[i][j][0] ^ a_plain[i][j];		
-			k0[i][j][1] = pos[i][j][1] ^ a_plain[i][j];		
+
+	for (int i = 0; i < 16; i++){
+		if (i & 1){	//i'm fucking stupid. line order in tempk1c* must go with line order from pos[][]
+			temp_k1c1[i][3] = _sbox[pos[3][0][0]];
+			temp_k0[i][3][0] = pos[3][0][0];
+		}
+		else{
+			temp_k1c1[i][3] = _sbox[pos[3][0][1]];
+			temp_k0[i][3][0] = pos[3][0][1];
+		}
+		if (i & 2){
+			temp_k1c1[i][0] = _sbox[pos[0][1][0]];
+			temp_k0[i][0][1] = pos[0][1][0];
+		}
+		else{
+			temp_k1c1[i][0] = _sbox[pos[0][1][1]];
+			temp_k0[i][0][1] = pos[0][1][1];
+		}
+		if (i & 4){
+			temp_k1c1[i][1] = _sbox[pos[1][2][0]];
+			temp_k0[i][1][2] = pos[1][2][0];
+		}
+		else{
+			temp_k1c1[i][1] = _sbox[pos[1][2][1]];
+			temp_k0[i][1][2] = pos[1][2][1];
+		}
+		if (i & 8){
+			temp_k1c1[i][2] = _sbox[pos[2][3][0]];
+			temp_k0[i][2][3] = pos[2][3][0];
+		}
+		else{
+			temp_k1c1[i][2] = _sbox[pos[2][3][1]];
+			temp_k0[i][2][3] = pos[2][3][1];
+		}
+	}
 	
-			k1[i][j][0] = _sbox[pos[i][j][0]] ^ a_cipher[i][j];
-			k1[i][j][1] = _sbox[pos[i][j][1]] ^ a_cipher[i][j];						
-			printf("[%x,%x] ", _sbox[pos[i][j][0]], _sbox[pos[i][j][1]]);
-			
+	for (int i = 0; i < 16; i++){
+		if (i & 1){
+			temp_k1c2[i][0] = _sbox[pos[0][2][0]];
+			temp_k0[i][0][2] = pos[0][2][0];
+		}
+		else{
+			temp_k1c2[i][0] = _sbox[pos[0][2][1]];
+			temp_k0[i][0][2] = pos[0][2][1];
+		}
+		if (i & 2){
+			temp_k1c2[i][1] = _sbox[pos[1][3][0]];
+			temp_k0[i][1][3] = pos[1][3][0];
+		}
+		else{
+			temp_k1c2[i][1] = _sbox[pos[1][3][1]];
+			temp_k0[i][1][3] = pos[1][3][1];
+		}
+		if (i & 4){
+			temp_k1c2[i][2] = _sbox[pos[2][0][0]];
+			temp_k0[i][2][0] = pos[2][0][0];
+		}
+		else{
+			temp_k1c2[i][2] = _sbox[pos[2][0][1]];
+			temp_k0[i][2][0] = pos[2][0][1];
+		}
+		if (i & 8){
+			temp_k1c2[i][3] = _sbox[pos[3][1][0]];
+			temp_k0[i][3][1] = pos[3][1][0];
+		}
+		else{
+			temp_k1c2[i][3] = _sbox[pos[3][1][1]];
+			temp_k0[i][3][1] = pos[3][1][1];
+		}
+	}
+
+	for (int i = 0; i < 16; i++){
+		if (i & 1){
+			temp_k1c3[i][0] = _sbox[pos[0][3][0]];
+			temp_k0[i][0][3] = pos[0][3][0];
+		}
+		else{
+			temp_k1c3[i][0] = _sbox[pos[0][3][1]];
+			temp_k0[i][0][3] = pos[0][3][1];
+		}
+		if (i & 2){
+			temp_k1c3[i][1] = _sbox[pos[1][0][0]];
+			temp_k0[i][1][0] = pos[1][0][0];
+		}
+		else{
+			temp_k1c3[i][1] = _sbox[pos[1][0][1]];
+			temp_k0[i][1][0] = pos[1][0][1];
+		}
+		if (i & 4){
+			temp_k1c3[i][2] = _sbox[pos[2][1][0]];
+			temp_k0[i][2][1] = pos[2][1][0];
+		}
+		else{
+			temp_k1c3[i][2] = _sbox[pos[2][1][1]];
+			temp_k0[i][2][1] = pos[2][1][1];
+		}
+		if (i & 8){
+			temp_k1c3[i][3] = _sbox[pos[3][2][0]];
+			temp_k0[i][3][2] = pos[3][2][0];
+		}
+		else{
+			temp_k1c3[i][3] = _sbox[pos[3][2][1]];
+			temp_k0[i][3][2] = pos[3][2][1];
+		}
+	}
+
+	unsigned char** temp_k1 = new unsigned char*[4];
+	for (int i = 0; i < 4; i++){
+		temp_k1[i] = new unsigned char[4];
+	}	
+	for (int i = 0; i < 16; i++){
+		for (int m = 0; m < 4; m++){
+			for (int n = 0; n < 4; n++){
+				temp_k0[i][m][n] = (temp_k0[i][m][n]^a_plain[m][n]);					
+			}
+		}
+	}
+	for (int i = 0; i < 16; i++){
+		for (int j = 0; j < 16; j++){
+			temp_k1[0][0] = temp_k1c0[i][0];
+			temp_k1[1][0] = temp_k1c0[i][1];
+			temp_k1[2][0] = temp_k1c0[i][2];
+			temp_k1[3][0] = temp_k1c0[i][3];
+			temp_k1[0][1] = temp_k1c1[j][0];
+			temp_k1[1][1] = temp_k1c1[j][1];
+			temp_k1[2][1] = temp_k1c1[j][2];
+			temp_k1[3][1] = temp_k1c1[j][3];
+			r.mixColumns(temp_k1);
+			for (int m = 0; m < 4; m++){
+				for (int n = 0; n < 2; n++){
+					temp_k1[m][n] = temp_k1[m][n]^a_cipher[m][n];
+				}
+			}
+			if (	(temp_k1[0][1] == (temp_k0[j][0][1] ^ temp_k1[0][0])) &&
+				(temp_k1[1][1] == (temp_k0[i][1][1] ^ temp_k1[1][0]))){ 
+				for (int m = 0; m < 4; m++){
+					for (int n = 0; n < 2; n++){
+						final_k1[m][n] = temp_k1[m][n];
+					}
+				}
+				final_k0[0][0] = temp_k0[i][0][0]; final_k0[0][1] = temp_k0[j][0][1];
+				final_k0[1][1] = temp_k0[i][1][1]; final_k0[1][2] = temp_k0[j][1][2];
+				final_k0[2][2] = temp_k0[i][2][2]; final_k0[2][3] = temp_k0[j][2][3];
+				final_k0[3][3] = temp_k0[i][3][3]; final_k0[3][0] = temp_k0[j][3][0];				
+			}
+		}
+	}
+	
+	for (int i = 0; i < 16; i++){
+		for (int j = 0; j < 16; j++){
+			temp_k1[0][2] = temp_k1c2[i][0];
+			temp_k1[1][2] = temp_k1c2[i][1];
+			temp_k1[2][2] = temp_k1c2[i][2];
+			temp_k1[3][2] = temp_k1c2[i][3];
+			temp_k1[0][3] = temp_k1c3[j][0];
+			temp_k1[1][3] = temp_k1c3[j][1];
+			temp_k1[2][3] = temp_k1c3[j][2];
+			temp_k1[3][3] = temp_k1c3[j][3];
+			r.mixColumns(temp_k1);
+			for (int m = 0; m < 4; m++){
+				for (int n = 2; n < 4; n++){
+					temp_k1[m][n] = temp_k1[m][n]^a_cipher[m][n];
+				}
+			}
+			if (	(temp_k1[0][3] == (temp_k0[j][0][3] ^ temp_k1[0][2])) && 
+				(temp_k1[1][3] == (temp_k0[i][1][3] ^ temp_k1[1][2]))){ 
+				for (int m = 0; m < 4; m++){
+					for (int n = 2; n < 4; n++){
+						final_k1[m][n] = temp_k1[m][n];
+					}
+				}
+				final_k0[0][2] = temp_k0[i][0][2]; final_k0[0][3] = temp_k0[j][0][3];
+				final_k0[1][3] = temp_k0[i][1][3]; final_k0[1][0] = temp_k0[j][1][0];
+				final_k0[2][0] = temp_k0[i][2][0]; final_k0[2][1] = temp_k0[j][2][1];
+				final_k0[3][1] = temp_k0[i][3][1]; final_k0[3][2] = temp_k0[j][3][2];
+			}
+		}
+	}
+	
+	printf("K0 is\n");	
+	for (int m = 0; m < 4; m++){
+		for (int n = 0; n < 4; n++){
+			printf("%.2x ", final_k0[m][n]);
 		}
 		printf("\n");
-	}*/
+	}
+	printf("\n");
+	printf("K1 is\n");	
+	for (int m = 0; m < 4; m++){
+		for (int n = 0; n < 4; n++){
+			printf("%.2x ", final_k1[m][n]);
+		}
+		printf("\n");
+	}
+	
 
 /*	for (long long int i = 0; i < pow(2,26); i++){
 //		r.makeKey(cKey);	
