@@ -5,10 +5,13 @@
 #include <cctype>
 //#include <gtkmm.h>
 #include <iostream>
+#include <fstream>
 #include <cmath>
 using namespace std;
 
 #include "rijndael.h"
+#include "res/x_sbox_diff_coded.h"
+#include "res/y_sbox_diff_coded.h"
 
 int mul(int x, int y) {
     int r = 0;
@@ -36,9 +39,9 @@ void hexStringToCharString(unsigned char* hexString, int hexStringLen, unsigned 
 	}
 }
 
-void diff(unsigned char** a, unsigned char** b, unsigned char** r){	// a - b (or b - a, the same, we just don't want negative values =) = r
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
+void diff(unsigned char** a, unsigned char** b, unsigned char** r, int maxcol = 4, int maxlin = 4){	// a - b (or b - a, the same, we just don't want negative values =) = r
+	for (int i = 0; i < maxlin; i++){
+		for (int j = 0; j < maxcol; j++){
 /*			if (a[i][j] > b[i][j]){
 				r[i][j] = a[i][j] - b[i][j];
 			}
@@ -74,10 +77,27 @@ void printEqualBytes(unsigned char** a, unsigned char** b){
 void printBlock(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			printf("%x ", block[i][j]);
+			printf("%.2x ", block[i][j]);
 		}
 		printf("\n");
 	}
+}
+
+void findXYSboxDiff(ifstream * file, unsigned char alpha, unsigned char beta, unsigned char &x, unsigned char &y){
+	// now this is bad.
+	// given input/output diff of an Sbox, as alpha (in diff) and beta (out diff),
+	// search the pre generated file for the possible input, which generated diff Alpha directly
+	// and, diff beta by sbox[x]^sbox[y]. 
+	char * bufferx = new char [2];
+	char * buffery = new char [2];
+//	ifstream file ("res/xy_sbox_diff_2");
+	file->seekg(alpha*(256*5)+beta*5, ios::beg);
+	file->read(bufferx, 2);
+	file->read(buffery, 2);
+	x = strtol(bufferx, NULL, 16);
+	y = strtol(buffery, NULL, 16);
+	delete bufferx;
+	delete buffery;
 }
 
 int main (int argc, char *argv[]){
@@ -127,7 +147,7 @@ int main (int argc, char *argv[]){
 	}
 	Rijndael r(Rijndael::K128, Rijndael::B128, Rijndael::ECB);
 	r.makeKey(cKey);	
-	r.encryptOneRound(a_plain);	
+	r.encryptTwoRounds(a_plain);	
 
 	unsigned char** b_plain = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
@@ -137,7 +157,7 @@ int main (int argc, char *argv[]){
 	for (int i = 0; i < 4; i++){
 		memcpy(b_plain[i], &b_plain_char[i*4], 4);
 	}
-	r.encryptOneRound(b_plain);	
+	r.encryptTwoRounds(b_plain);	
 
 
 	//copy the original, so we have plain and cipher texts in hexa
@@ -197,8 +217,129 @@ int main (int argc, char *argv[]){
 	printBlock(ab_inv_cipher_diff);	
 	printf("--------------\n");
 
+	//256^4 possibilities for diagonal at k0, 0,5,10,15 
+	unsigned char** k0 = new unsigned char*[4];
+	unsigned char** k1 = new unsigned char*[4];
+	unsigned char** temp_a = new unsigned char*[4];
+	unsigned char** temp_b = new unsigned char*[4];
+	unsigned char** diff_temp_ab = new unsigned char*[4];
+	for (int i = 0; i < 4; i++){
+		k0[i] = new unsigned char[4];
+		k1[i] = new unsigned char[4];
+		temp_a[i] = new unsigned char[4];
+		temp_b[i] = new unsigned char[4];
+		diff_temp_ab[i] = new unsigned char[4];
+	}	
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			k0[i][j] = 0x00;
+			k1[i][j] = 0x00;
+			temp_a[i][j] = 0x00;
+			temp_b[i][j] = 0x00;
+		}
+	}
+	//now i'll pretend to calculate that, and found it!, for block A. its 00, 05, 0a, 0f!
+	//k0[0][0] = 0x00;
+	//k0[1][1] = 0x05;
+	//k0[2][2] = 0x0a;
+	//k0[3][3] = 0x0f;
+	unsigned char poss_a, poss_b;
+//	ifstream file ("res/xy_sbox_diff_2");
+	long long int count = 0;
+	for (unsigned char m = 0x00; m < 0x0f; m++){
+		for (unsigned char n = 0x00; n < 0xff; n++){
+			for (unsigned char o = 0x00; o < 0xff; o++){
+				for (unsigned char p = 0x00; p < 0xff; p++){
+//					count++;
+/*					k0[0][0] = m;
+					k0[1][1] = n;
+					k0[2][2] = o;
+					k0[3][3] = p;*/
+//					for (int i = 0; i < 4; i++){
+//						temp_a[i][i] = a_plain[i][i] ^ k0[i][i];
+//						temp_b[i][i] = b_plain[i][i] ^ k0[i][i];		
+//					}
+					temp_a[0][0] = a_plain[0][0] ^ m;
+					temp_b[0][0] = b_plain[0][0] ^ m;		
+					temp_a[1][1] = a_plain[1][1] ^ n;
+					temp_b[1][1] = b_plain[1][1] ^ n;		
+					temp_a[2][2] = a_plain[2][2] ^ o;
+					temp_b[2][2] = b_plain[2][2] ^ o;		
+					temp_a[3][3] = a_plain[3][3] ^ p;
+					temp_b[3][3] = b_plain[3][3] ^ p;		
+					r.subBytesMainDiagonal(temp_a);
+					r.subBytesMainDiagonal(temp_b);
+					r.shiftRowsMainDiagonal(temp_a);
+					r.shiftRowsMainDiagonal(temp_b);
+					r.mixOneColumn(temp_a, 0);
+					r.mixOneColumn(temp_b, 0);
+					diff(temp_a, temp_b, diff_temp_ab, 1, 4);
+				//	findXYSboxDiff(&file, diff_temp_ab[0][0], ab_inv_cipher_diff[0][0], poss_a, poss_b);
+				//	findXYSboxDiff(&file, diff_temp_ab[1][0], ab_inv_cipher_diff[1][0], poss_a, poss_b);
+				//	findXYSboxDiff(&file, diff_temp_ab[2][0], ab_inv_cipher_diff[2][0], poss_a, poss_b);
+				//	findXYSboxDiff(&file, diff_temp_ab[3][0], ab_inv_cipher_diff[3][0], poss_a, poss_b);
+					poss_a = x_sbox_diff[diff_temp_ab[0][0]*256 + ab_inv_cipher_diff[0][0]];					
+					poss_b = y_sbox_diff[diff_temp_ab[0][0]*256 + ab_inv_cipher_diff[0][0]];					
+					poss_a = x_sbox_diff[diff_temp_ab[1][0]*256 + ab_inv_cipher_diff[1][0]];					
+					poss_b = y_sbox_diff[diff_temp_ab[1][0]*256 + ab_inv_cipher_diff[1][0]];					
+					poss_a = x_sbox_diff[diff_temp_ab[2][0]*256 + ab_inv_cipher_diff[2][0]];					
+					poss_b = y_sbox_diff[diff_temp_ab[2][0]*256 + ab_inv_cipher_diff[2][0]];					
+					poss_a = x_sbox_diff[diff_temp_ab[3][0]*256 + ab_inv_cipher_diff[3][0]];					
+					poss_b = y_sbox_diff[diff_temp_ab[3][0]*256 + ab_inv_cipher_diff[3][0]];					
+
+//					if (p == 0xff){	p = 0x00; break; }
+				}
+//				if (o == 0x0f){	o = 0x00; break; }
+			}
+//			if (n == 0x0f){	n = 0x00; break; }
+		}
+//		if (m == 0x0f){	m = 0x00; break; }
+	}
+//	printf("%lld\n", count);
+
+//	printf("%x\n", x_sbox_diff[112*256 + 68]);
+
+//Generate xy sbox diff
+/*	FILE * file;
+	file = fopen("xy_sbox_diff_coded", "w");
+
+	unsigned char*** xy_sbox = new unsigned char**[256];
+	for (int i = 0; i < 256; i++){
+		xy_sbox[i] = new unsigned char*[256];
+		for (int j = 0; j < 256; j++){
+			xy_sbox[i][j] = new unsigned char[2];
+			xy_sbox[i][j][0] = 0x00;
+			xy_sbox[i][j][1] = 0x00;		
+		}
+	}
+	unsigned char a = 0x00;
+	unsigned char b = 0x00;
+	for (int i = 0; i < 256; i++){
+		for (int j = 0; j < 256; j++){
+			for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
+				for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
+					if (((x^y) == a) && ((_sbox[x]^_sbox[y]) == b)){
+						xy_sbox[i][j][0] = x;
+						xy_sbox[i][j][1] = y;
+						break;
+					}
+					if (y == 0xff)	break;
+				}
+				if (x == 0xff)	break;
+			}
+			b++;
+		}
+		a++;
+	}
+	
+	for (int i = 0; i < 256; i++){
+		for (int j = 0; j < 256; j++){
+			fprintf(file, "0x%.2x,", xy_sbox[i][j][1]);
+		}
+	}
+	fclose(file);*/
 	//alloc possibilities matrix. for each position (16 pos total), 2 posibilities of 1 byte key
-	unsigned char*** pos = new unsigned char**[4];
+/*	unsigned char*** pos = new unsigned char**[4];
 	unsigned char*** k0 = new unsigned char**[4];
 	unsigned char*** k1 = new unsigned char**[4];
 
@@ -485,83 +626,7 @@ int main (int argc, char *argv[]){
 		printf("\n");
 	}
 	
-
-/*	for (long long int i = 0; i < pow(2,26); i++){
-//		r.makeKey(cKey);	
-		r.encryptOneRound(a_plain);	
-	}*/
-
-	
-
-//	printf("count = %d\n", count);
-
-		
-/*	unsigned char a_plain_byte;
-	unsigned char b_plain_byte;
-	unsigned char ab_cipher_byte_diff;	
-	unsigned char temp_a, temp_b, temp_ab_diff;
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			unsigned char a_plain_byte = a_plain[i][j];
-			unsigned char b_plain_byte = b_plain[i][j];
-			ab_cipher_byte_diff = ab_cipher_diff[i][j];	
-			for (int p = 0; p < 256; p++){
-				temp_a = _sbox[a_plain_byte + p];
-				temp_b = _sbox[b_plain_byte + p];
-				temp_ab_diff = (temp_a > temp_b) ? (temp_a - temp_b) : (temp_b - temp_a);
-				if (temp_ab_diff == ab_cipher_byte_diff){
-					printf("One candidate pair: %x and %x at %d make %x and %x with diff of %x\n", a_plain_byte, b_plain_byte, p, a_cipher[i][j], b_cipher[i][j], ab_cipher_byte_diff);
-				}
-			}
-			printf("---------\n");
-		}
-	}*/
-
-	//check if sbox input diff equals output diff
-	//create a array of 256 positions (all possible diff input blocks for sbox, beggining from plaintext diff
-/*	unsigned char*** a_diff_block_array = new unsigned char** [256];
-	unsigned char*** b_diff_block_array = new unsigned char** [256];
-	for (int p = 0; p < 256; p++){
-		unsigned char** a_temp_block = new unsigned char* [4];
-		unsigned char** b_temp_block = new unsigned char* [4];
-		for (int i = 0; i < 4; i++){
-			a_temp_block[i] = new unsigned char[4];
-			b_temp_block[i] = new unsigned char[4];
-		}
-		a_diff_block_array[p] = a_temp_block;
-		b_diff_block_array[p] = b_temp_block;		
-	}
-	
-	for (int p = 0; p < 256; p++){
-		for (int i = 0; i < 4; i++){
-			for (int j = 0; j < 4; j++){
-				a_diff_block_array[p][i][j] = a_plain[i][j]+p;				
-				b_diff_block_array[p][i][j] = b_plain[i][j]+p;
-			}
-		}
-	}*/
-	
-
-/*	unsigned char** temp = new unsigned char* [4];
-	for (int i = 0; i < 4; i++){
-		temp[i] = new unsigned char[4];
-	}
-	for (int p = 0; p < 256; p++){
-//		printf("-------diff blocks %d----------\n", p);
-		r.subBytes(a_diff_block_array[p]);
-		//printBlock(a_diff_block_array[p]);
-		r.subBytes(b_diff_block_array[p]);
-		//printBlock(b_diff_block_array[p]);
-		diff(a_diff_block_array[p], b_diff_block_array[p], temp);
-//		printBlock(temp);
-//		printBlock(ab_cipher_diff);
-	//	printEqualBytes(temp, ab_cipher_diff);
-//		sleep(5);
-//		printf("------------------\n");
-	}	*/
-	
-	
-	
+*/
 
 /*	r.encrypt(cBlock, length);
 	unsigned char* iv = new unsigned char [16];

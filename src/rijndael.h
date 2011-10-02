@@ -103,6 +103,9 @@ class Rijndael {
 		void encryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
 		void decryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
 		
+		void encryptTwoRounds(unsigned char** block);	// 2d array of 4 rows and nb columns
+		void decryptTwoRounds(unsigned char** block);	// 2d array of 4 rows and nb columns
+		
 		//IV
 		void getIV(unsigned char** iv);
 		void getIV(unsigned char* iv);
@@ -115,12 +118,16 @@ class Rijndael {
 
 		//BLOCK
 		void subBytes(unsigned char** block);
+		void subBytesMainDiagonal(unsigned char** block);
 		void invSubBytes(unsigned char** block);
 		void shiftRows(unsigned char** block);
+		void shiftRowsMainDiagonal(unsigned char** block);
 		void invShiftRows(unsigned char** block);
 		void mixColumns(unsigned char** block);
+		void mixOneColumn(unsigned char** block, int column);
 		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
+		void addRoundKeySwappedMCRoundTwo(unsigned char** block);
 
 		//AUX
 		void xorBlock(unsigned char** a, unsigned char** b);
