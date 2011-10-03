@@ -316,11 +316,19 @@ void Rijndael::addRoundKeySwappedMCRoundTwo(unsigned char** block){
 		}
 	}
 	invMixColumns(temp_exp_key);
-	
+#if DEBUG
+	printf("k2 with invMixColumns (for swapping, at round 2, of MC with last ARK)\n");
+#endif
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			block[i][j] ^= temp_exp_key[i][j];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
+#if DEBUG
+			printf("%.2x ", temp_exp_key[i][j]);
+#endif
 		}
+#if DEBUG
+		printf("\n");
+#endif
 	}
 }
 

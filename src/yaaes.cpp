@@ -192,11 +192,16 @@ int main (int argc, char *argv[]){
 	//diff of ciphertexts
 	unsigned char** ab_cipher_diff = new unsigned char* [4];
 	unsigned char** ab_inv_cipher_diff = new unsigned char* [4];
+	unsigned char** a_inv_cipher = new unsigned char* [4];
 	unsigned char** ab_plain_diff = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
 		ab_cipher_diff[i] = new unsigned char[4];
 		ab_inv_cipher_diff[i] = new unsigned char[4];
+		a_inv_cipher[i] = new unsigned char[4];
 		ab_plain_diff[i] = new unsigned char[4];
+		for (int j = 0; j < 4; j++){
+			a_inv_cipher[i][j] = a_cipher[i][j];
+		}
 	}
 	diff(a_plain, b_plain, ab_plain_diff);
 	diff(a_cipher, b_cipher, ab_cipher_diff);
@@ -211,6 +216,8 @@ int main (int argc, char *argv[]){
 
 	r.invMixColumns(ab_inv_cipher_diff);
 	r.invShiftRows(ab_inv_cipher_diff);
+
+	r.invMixColumns(a_inv_cipher);
 		
 	printf("--------------\n");
 	printf("AB Cipher diff after invMC and invSR\n");
@@ -218,22 +225,33 @@ int main (int argc, char *argv[]){
 	printf("--------------\n");
 
 	//256^4 possibilities for diagonal at k0, 0,5,10,15 
+	unsigned char*** k1_pos = new unsigned char**[4];
 	unsigned char** k0 = new unsigned char*[4];
 	unsigned char** k1 = new unsigned char*[4];
+	unsigned char** u2 = new unsigned char*[4];
 	unsigned char** temp_a = new unsigned char*[4];
 	unsigned char** temp_b = new unsigned char*[4];
 	unsigned char** diff_temp_ab = new unsigned char*[4];
 	for (int i = 0; i < 4; i++){
+		k1_pos[i] = new unsigned char*[4];
+		for (int j = 0; j < 4; j++){
+			k1_pos[i][j] = new unsigned char[2];
+		}
 		k0[i] = new unsigned char[4];
 		k1[i] = new unsigned char[4];
+		u2[i] = new unsigned char[4];
 		temp_a[i] = new unsigned char[4];
 		temp_b[i] = new unsigned char[4];
 		diff_temp_ab[i] = new unsigned char[4];
 	}	
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
+			for (int k = 0; k < 2; k++){
+				k1_pos[i][j][k] = 0x00;
+			}
 			k0[i][j] = 0x00;
 			k1[i][j] = 0x00;
+			u2[i][j] = 0x00;
 			temp_a[i][j] = 0x00;
 			temp_b[i][j] = 0x00;
 		}
@@ -243,22 +261,18 @@ int main (int argc, char *argv[]){
 	//k0[1][1] = 0x05;
 	//k0[2][2] = 0x0a;
 	//k0[3][3] = 0x0f;
-	unsigned char poss_a, poss_b;
-//	ifstream file ("res/xy_sbox_diff_2");
-	long long int count = 0;
-	for (unsigned char m = 0x00; m < 0x0f; m++){
-		for (unsigned char n = 0x00; n < 0xff; n++){
-			for (unsigned char o = 0x00; o < 0xff; o++){
-				for (unsigned char p = 0x00; p < 0xff; p++){
-//					count++;
-/*					k0[0][0] = m;
-					k0[1][1] = n;
-					k0[2][2] = o;
-					k0[3][3] = p;*/
-//					for (int i = 0; i < 4; i++){
-//						temp_a[i][i] = a_plain[i][i] ^ k0[i][i];
-//						temp_b[i][i] = b_plain[i][i] ^ k0[i][i];		
-//					}
+	
+	unsigned char** new_temp_a = new unsigned char*[4];
+	unsigned char** new_temp_b = new unsigned char*[4];
+	for (int i = 0; i < 4; i++){	
+		new_temp_a[i] = new unsigned char[4];
+		new_temp_b[i] = new unsigned char[4];
+	}
+	register unsigned char poss_x;
+	for (register short int m = 0; m < 16; m++){
+		for (register short int n = 0; n < 256; n++){
+			for (register short int o = 0; o < 256; o++){
+				for (register short int p = 0; p < 256; p++){	
 					temp_a[0][0] = a_plain[0][0] ^ m;
 					temp_b[0][0] = b_plain[0][0] ^ m;		
 					temp_a[1][1] = a_plain[1][1] ^ n;
@@ -274,30 +288,43 @@ int main (int argc, char *argv[]){
 					r.mixOneColumn(temp_a, 0);
 					r.mixOneColumn(temp_b, 0);
 					diff(temp_a, temp_b, diff_temp_ab, 1, 4);
-				//	findXYSboxDiff(&file, diff_temp_ab[0][0], ab_inv_cipher_diff[0][0], poss_a, poss_b);
-				//	findXYSboxDiff(&file, diff_temp_ab[1][0], ab_inv_cipher_diff[1][0], poss_a, poss_b);
-				//	findXYSboxDiff(&file, diff_temp_ab[2][0], ab_inv_cipher_diff[2][0], poss_a, poss_b);
-				//	findXYSboxDiff(&file, diff_temp_ab[3][0], ab_inv_cipher_diff[3][0], poss_a, poss_b);
-					poss_a = x_sbox_diff[diff_temp_ab[0][0]*256 + ab_inv_cipher_diff[0][0]];					
-					poss_b = y_sbox_diff[diff_temp_ab[0][0]*256 + ab_inv_cipher_diff[0][0]];					
-					poss_a = x_sbox_diff[diff_temp_ab[1][0]*256 + ab_inv_cipher_diff[1][0]];					
-					poss_b = y_sbox_diff[diff_temp_ab[1][0]*256 + ab_inv_cipher_diff[1][0]];					
-					poss_a = x_sbox_diff[diff_temp_ab[2][0]*256 + ab_inv_cipher_diff[2][0]];					
-					poss_b = y_sbox_diff[diff_temp_ab[2][0]*256 + ab_inv_cipher_diff[2][0]];					
-					poss_a = x_sbox_diff[diff_temp_ab[3][0]*256 + ab_inv_cipher_diff[3][0]];					
-					poss_b = y_sbox_diff[diff_temp_ab[3][0]*256 + ab_inv_cipher_diff[3][0]];					
-
-//					if (p == 0xff){	p = 0x00; break; }
+					for (int i = 0; i < 4; i++){
+						poss_x = x_sbox_diff[diff_temp_ab[i][0]*256 + ab_inv_cipher_diff[i][0]]; 
+						k1_pos[i][0][0] = poss_x^temp_a[i][0];
+						k1_pos[i][0][1] = poss_x^temp_b[i][0];
+					}
+					for (int i = 0; i < 16; i++){
+						if (i & 1){	k1[0][0] = k1_pos[0][0][0];	}
+						else{		k1[0][0] = k1_pos[0][0][1];	}
+						if (i & 2){	k1[1][0] = k1_pos[1][0][0];	}
+						else{		k1[1][0] = k1_pos[1][0][1];	}
+						if (i & 4){	k1[2][0] = k1_pos[2][0][0];	}
+						else{		k1[2][0] = k1_pos[2][0][1];	}
+						if (i & 8){	k1[3][0] = k1_pos[3][0][0];	}
+						else{		k1[3][0] = k1_pos[3][0][1];	}					
+						u2[0][0] = (_sbox[(temp_a[0][0]^k1[0][0])]^a_inv_cipher[0][0]);
+						u2[1][3] = (_sbox[(temp_a[1][0]^k1[1][0])]^a_inv_cipher[1][3]);
+						u2[2][2] = (_sbox[(temp_a[2][0]^k1[2][0])]^a_inv_cipher[2][2]);
+						u2[3][1] = (_sbox[(temp_a[3][0]^k1[3][0])]^a_inv_cipher[3][1]);
+						k0[0][0] = m; k0[1][1] = n; k0[2][2] = o; k0[3][3] = p;
+						k0[2][0] = _sbox[k0[3][3]]^k1[2][0];
+						k0[1][3] = _inv_sbox[k1[0][0]^0x01]^k0[0][0];
+						k1[1][1] = k1[1][0]^k0[1][1];
+/*						if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && k1[0][0] == 0xd6 && k1[1][0] == 0xaa && k1[2][0] == 0x74 && k1[3][0] == 0xfd){
+//							printBlock(temp_a);
+							printBlock(k0);
+							printBlock(k1);
+//							printBlock(a_inv_cipher);
+							printBlock(u2);
+//							printf("%x %x %x %x\n", u2[0][0], u2[1][3], u2[2][2], u2[3][1]);							
+						}*/
+					}
 				}
-//				if (o == 0x0f){	o = 0x00; break; }
 			}
-//			if (n == 0x0f){	n = 0x00; break; }
 		}
-//		if (m == 0x0f){	m = 0x00; break; }
 	}
-//	printf("%lld\n", count);
 
-//	printf("%x\n", x_sbox_diff[112*256 + 68]);
+	
 
 //Generate xy sbox diff
 /*	FILE * file;
