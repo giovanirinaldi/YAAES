@@ -143,7 +143,7 @@ int main (int argc, char *argv[]){
 //	char notABlock[] = "001122334455667788990a0b0c0d0e0f0011223344556677";
 //	unsigned char cnotABlock[32];
 	//hexStringToCharString((unsigned char*)notABlock, 20, cnotABlock);
-	char chKey[33] = "000102030405060708090a0b0c0d0e0f";			//coluna 1 00010203 linha 1 0004080c
+	char chKey[33] = "0f010203040a06070809050b0c0d0e00";			//coluna 1 00010203 linha 1 0004080c
 	unsigned char cKey[16];
 	hexStringToCharString((unsigned char*)chKey, 32, cKey);
 	//r.makeKey(cKey);	
@@ -307,11 +307,14 @@ int main (int argc, char *argv[]){
 	}
 	register unsigned char poss_x;
 	//guess 4 bytes at k0
-	for (register short int m = 0; m < 1; m++){		//k0,0
-		for (register short int n = 0; n < 6; n++){	//k0,5
-			for (register short int o = 0; o < 11; o++){	//k0,10
-				for (register short int p = 0; p < 16; p++){	//k0,15	
-					k0[0][0] = m; k0[1][1] = n; k0[2][2] = o; k0[3][3] = p;
+	for (register short int m = 0; m < 16; m++){		//k0,0
+		k0[0][0] = m;
+		for (register short int n = 0; n < 11; n++){	//k0,5
+			k0[1][1] = n;
+			for (register short int o = 0; o < 6; o++){	//k0,10
+				k0[2][2] = o;
+				for (register short int p = 0; p < 1; p++){	//k0,15	
+					k0[3][3] = p;
 					//get them just before ARK at first round
 					temp_a[0][0] = a_plain[0][0] ^ m;
 					temp_b[0][0] = b_plain[0][0] ^ m;		
@@ -334,24 +337,35 @@ int main (int argc, char *argv[]){
 						k1_pos[i][0][0] = poss_x^temp_a[i][0];
 						k1_pos[i][0][1] = poss_x^temp_b[i][0];
 					}
-					for (int i = 0; i < 16; i++){
+//					for (int i = 0; i < 16; i++){
+					for (int k100 = 0; k100 < 2; k100++){
+				         k1[0][0] = k1_pos[0][0][k100];
+					 for (int k110 = 0; k110 < 2; k110++){
+					  k1[1][0] = k1_pos[1][0][k110];
+					  for (int k120 = 0; k120 < 2; k120++){
+					   k1[2][0] = k1_pos[2][0][k120];
+					   for (int k130 = 0; k130 < 2; k130++){
+					    k1[3][0] = k1_pos[3][0][k130];
 						//check 16 combinations that make input/output diff
-						if (i & 1){	k1[0][0] = k1_pos[0][0][0];	}
+/*						if (i & 1){	k1[0][0] = k1_pos[0][0][0];	}
 						else{		k1[0][0] = k1_pos[0][0][1];	}
 						if (i & 2){	k1[1][0] = k1_pos[1][0][0];	}
 						else{		k1[1][0] = k1_pos[1][0][1];	}
 						if (i & 4){	k1[2][0] = k1_pos[2][0][0];	}
 						else{		k1[2][0] = k1_pos[2][0][1];	}
 						if (i & 8){	k1[3][0] = k1_pos[3][0][0];	}
-						else{		k1[3][0] = k1_pos[3][0][1];	}
+						else{		k1[3][0] = k1_pos[3][0][1];	}*/
 						u2[0][0] = (_sbox[(temp_a[0][0]^k1[0][0])]^a_inv_cipher[0][0]);
 						u2[1][3] = (_sbox[(temp_a[1][0]^k1[1][0])]^a_inv_cipher[1][3]);
 						u2[2][2] = (_sbox[(temp_a[2][0]^k1[2][0])]^a_inv_cipher[2][2]);
 						u2[3][1] = (_sbox[(temp_a[3][0]^k1[3][0])]^a_inv_cipher[3][1]);
 						//key schedule exploit
 						k0[2][0] = _sbox[k0[3][3]]^k1[2][0];
-						k0[1][3] = _inv_sbox[k1[0][0]^0x01]^k0[0][0];
+						k0[1][3] = _inv_sbox[k1[0][0]^0x01^k0[0][0]];
 						k1[1][1] = k1[1][0]^k0[1][1];
+					/*	if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd){
+							printBlock(k0);
+						}*/
 						//here begins phase 2
 						//calculate new k0 over a and b
 //						temp_a[1][2] = _sbox[a_plain[1][3] ^ k0[1][3]];								
@@ -365,6 +379,10 @@ int main (int argc, char *argv[]){
 						for (int q = 0; q < 8; q++){	//this would be k0,7
 							for (int r = 0; r < 9; r++){	//and this k0,8
 								k0[3][1] = q;	k0[0][2] = r;
+						/*		if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08){
+									printBlock(k0);
+									printBlock(k1);
+								}*/
 								//this is repeated up there, because of mixcolumns
 								temp_a[1][2] = _sbox[a_plain[1][3] ^ k0[1][3]];								
 								temp_b[1][2] = _sbox[b_plain[1][3] ^ k0[1][3]];								
@@ -383,16 +401,27 @@ int main (int argc, char *argv[]){
 									k1_pos[i][2][0] = poss_x^temp_a[i][2];
 									k1_pos[i][2][1] = poss_x^temp_b[i][2];
 								}								
-								for (int i = 0; i < 16; i++){
+								for (int k102 = 0; k102 < 2; k102++){
+ 								 k1[0][2] = k1_pos[0][2][k102];
+								 for (int k112 = 0; k112 < 2; k112++){
+								  k1[1][2] = k1_pos[1][2][k112];
+								  for (int k122 = 0; k122 < 2; k122++){
+								   k1[2][2] = k1_pos[2][2][k122];
+								   for (int k132 = 0; k132 < 2; k132++){
+								    k1[3][2] = k1_pos[3][2][k132];
 									//check 16 combinations that make input/output diff
-									if (i & 1){	k1[0][2] = k1_pos[0][2][0];	}
+								/*	k1[0][2] = k1_pos[0][2][k102];
+									k1[1][2] = k1_pos[1][2][k112];
+									k1[2][2] = k1_pos[2][2][k122];
+									k1[3][2] = k1_pos[3][2][k132];*/
+/*									if (i & 1){	k1[0][2] = k1_pos[0][2][0];	}
 									else{		k1[0][2] = k1_pos[0][2][1];	}
 									if (i & 2){	k1[1][2] = k1_pos[1][2][0];	}
 									else{		k1[1][2] = k1_pos[1][2][1];	}
 									if (i & 4){	k1[2][2] = k1_pos[2][2][0];	}
 									else{		k1[2][2] = k1_pos[2][2][1];	}
 									if (i & 8){	k1[3][2] = k1_pos[3][2][0];	}
-									else{		k1[3][2] = k1_pos[3][2][1];	}	
+									else{		k1[3][2] = k1_pos[3][2][1];	}	*/
 									u2[0][2] = (_sbox[temp_a[0][2] ^ k1[0][2]]) ^ a_inv_cipher[0][2];
 									u2[1][1] = (_sbox[temp_a[1][2] ^ k1[1][2]]) ^ a_inv_cipher[1][1];
 									u2[2][0] = (_sbox[temp_a[2][2] ^ k1[2][2]]) ^ a_inv_cipher[2][0];
@@ -409,14 +438,14 @@ int main (int argc, char *argv[]){
 									solveMixColumnFor2RoundPhase2(k2, u2);
 									k1[0][3] = _inv_sbox[k2[3][0] ^ k1[3][0]];
 									k1[2][3] = _inv_sbox[k2[1][0] ^ k1[1][0]];
-									if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && k1[0][0] == 0xd6 && k1[1][0] == 0xaa && k1[2][0] == 0x74 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08 &&
-									    k1[0][2] == 0xda && k1[1][2] == 0xa6 && k1[2][2] == 0x78 && k1[3][2] ==0xf1){
+									if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08 &&
+									    k1[0][2] == 0xd5 && k1[1][2] == 0xa9 && k1[2][2] == 0x62 && k1[3][2] ==0xf1){
 										printf("k0\n");printBlock(k0);
 										printf("k1\n");printBlock(k1);
 										printf("u2\n");printBlock(u2);
 										printf("k2\n");printBlock(k2);				
 									}
-								}
+								}}}}
 							}
 						}
 /*						if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && k1[0][0] == 0xd6 && k1[1][0] == 0xaa && k1[2][0] == 0x74 && k1[3][0] == 0xfd){
@@ -427,7 +456,7 @@ int main (int argc, char *argv[]){
 							printBlock(u2);
 //							printf("%x %x %x %x\n", u2[0][0], u2[1][3], u2[2][2], u2[3][1]);							
 						}*/
-					}
+					}}}}
 				}
 			}
 		}
