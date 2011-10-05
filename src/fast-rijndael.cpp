@@ -1,4 +1,4 @@
-#include "rijndael.h"
+#include "fast-rijndael.h"
 #include <cstring>
 #include <cstdio>
 #include <ctime>
@@ -6,7 +6,7 @@
 #define DEBUG 1
 #define STDOUT stdout
 
-Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
+FastRijndael::FastRijndael(KeySize ks, BlockSize bs, Mode mode){
 	_exp_key = NULL;
 	_round = 0;
 	_key_size = ks;
@@ -40,7 +40,7 @@ Rijndael::Rijndael(KeySize ks, BlockSize bs, Mode mode){
 	_initd = false;
 }
 
-Rijndael::~Rijndael(){
+FastRijndael::~FastRijndael(){
 	if (_exp_key){
 		for (int i = 0; i < _nek; i++){
 			delete[] _exp_key[i];	
@@ -57,7 +57,7 @@ Rijndael::~Rijndael(){
 	}
 }
 
-void Rijndael::generateIV(){	
+void FastRijndael::generateIV(){	
 	srand(time(NULL));	
 	_iv = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
@@ -73,31 +73,31 @@ void Rijndael::generateIV(){
 //	printf("\n");
 }
 
-void Rijndael::getIV(unsigned char** iv){
+void FastRijndael::getIV(unsigned char** iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(iv[i], _iv[i], 4);
 	}
 }
 
-void Rijndael::getIV(unsigned char* iv){
+void FastRijndael::getIV(unsigned char* iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(iv+i*4, _iv[i], 4);
 	}
 }
 
-void Rijndael::setIV(unsigned char** iv){
+void FastRijndael::setIV(unsigned char** iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(_iv[i], iv[i], 4);
 	}
 }
 
-void Rijndael::setIV(unsigned char* iv){
+void FastRijndael::setIV(unsigned char* iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(_iv[i], iv+i*4, 4);
 	}
 }
 
-void Rijndael::makeKey(unsigned char* key){
+void FastRijndael::makeKey(unsigned char* key){
 //	if (key == NULL){
 //		return;
 //	}
@@ -116,7 +116,7 @@ void Rijndael::makeKey(unsigned char* key){
 //	_initd = true;
 }
 
-void Rijndael::makeKey(unsigned char** key){
+void FastRijndael::makeKey(unsigned char** key){
 //	if (key == NULL){
 //		return;
 //	}
@@ -147,7 +147,7 @@ void Rijndael::makeKey(unsigned char** key){
 	_initd = true;
 }
 		
-void Rijndael::rotWord(unsigned char* column){
+void FastRijndael::rotWord(unsigned char* column){
 	unsigned char temp = column[0];
 	column[0] = column[1];
 	column[1] = column[2];
@@ -155,13 +155,13 @@ void Rijndael::rotWord(unsigned char* column){
 	column[3] = temp;
 }
 
-void Rijndael::subWord(unsigned char* column){
+void FastRijndael::subWord(unsigned char* column){
 	for (int i = 0; i < 4; i++){
 		column[i] = _sbox[column[i]];
 	}
 }
 
-void Rijndael::subBytes(unsigned char** block){
+void FastRijndael::subBytes(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			block[i][j] = _sbox[block[i][j]];
@@ -169,13 +169,13 @@ void Rijndael::subBytes(unsigned char** block){
 	}
 }
 
-void Rijndael::subBytesMainDiagonal(unsigned char** block){
+void FastRijndael::subBytesMainDiagonal(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		block[i][i] = _sbox[block[i][i]];
 	}
 }
 
-void Rijndael::invSubBytes(unsigned char** block){
+void FastRijndael::invSubBytes(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			block[i][j] = _inv_sbox[block[i][j]];
@@ -183,7 +183,7 @@ void Rijndael::invSubBytes(unsigned char** block){
 	}
 }
 
-void Rijndael::shiftRows(unsigned char** block){
+void FastRijndael::shiftRows(unsigned char** block){
 	unsigned char* temp = new unsigned char [4];
 	for (int i = 1; i < 4; i++){	//row 0 do not shift
 		memcpy(temp, block[i], 4);
@@ -193,13 +193,13 @@ void Rijndael::shiftRows(unsigned char** block){
 	delete[] temp;
 }
 
-void Rijndael::shiftRowsMainDiagonal(unsigned char** block){
+void FastRijndael::shiftRowsMainDiagonal(unsigned char** block){
 	block[1][0] = block[1][1];
 	block[2][0] = block[2][2];
 	block[3][0] = block[3][3];
 }
 
-void Rijndael::invShiftRows(unsigned char** block){
+void FastRijndael::invShiftRows(unsigned char** block){
 	unsigned char* temp = new unsigned char [4];
 	for (int i = 1; i < 4; i++){	//row 0 do not shift
 		memcpy(temp, block[i], 4);
@@ -209,7 +209,7 @@ void Rijndael::invShiftRows(unsigned char** block){
 	delete[] temp;
 }
 
-void Rijndael::mixColumns(unsigned char** block){
+void FastRijndael::mixColumns(unsigned char** block){
 	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
 	for (int j = 0; j < 4; j++){
 		memcpy(temp, &block[0][j], 1);
@@ -219,7 +219,7 @@ void Rijndael::mixColumns(unsigned char** block){
 		for (int i = 0; i < 4; i++){
 			block[i][j] = 0x00;
 			for (int m = 0; m < 4; m ++){
-				if (_mix[i][m] >= 2){
+/*				if (_mix[i][m] >= 2){
 					block[i][j] ^= temp[m] << 1;
 					if (_mix[i][m] == 3){
 						block[i][j] ^= temp[m];
@@ -230,14 +230,15 @@ void Rijndael::mixColumns(unsigned char** block){
 				}		
 				else{
 					block[i][j] ^= temp[m];
-				}
+				}*/
+				block[i][j] ^= mult(temp[m], _mix[i][m]);
 			}
 		}
 	}
 	delete[] temp;
 }
 
-void Rijndael::mixOneColumn(unsigned char** block, int column){
+void FastRijndael::mixOneColumn(unsigned char** block, int column){
 	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
 	memcpy(temp, &block[0][column], 1);
 	memcpy(temp+1, &block[1][column], 1);
@@ -246,7 +247,7 @@ void Rijndael::mixOneColumn(unsigned char** block, int column){
 	for (int i = 0; i < 4; i++){
 		block[i][column] = 0x00;
 		for (int m = 0; m < 4; m ++){
-			if (_mix[i][m] >= 2){
+/*			if (_mix[i][m] >= 2){
 				block[i][column] ^= temp[m] << 1;
 				if (_mix[i][m] == 3){
 					block[i][column] ^= temp[m];
@@ -257,30 +258,22 @@ void Rijndael::mixOneColumn(unsigned char** block, int column){
 			}		
 			else{
 				block[i][column] ^= temp[m];
-			}
+			}*/
+			block[i][column] ^= mult(temp[m], _mix[i][m]);
 		}
 	}
 	delete[] temp;
 }
 
-unsigned char Rijndael::gmul(unsigned char a, unsigned char b) {
-	unsigned char p = 0;
-	unsigned char counter;
-	unsigned char hi_bit_set;
-	for(counter = 0; counter < 8; counter++) {
-		if((b & 1) == 1) 
-			p ^= a;
-		hi_bit_set = (a & 0x80);
-		a <<= 1;
-		if(hi_bit_set == 0x80) 
-			a ^= 0x1b;		
-		b >>= 1;
-	}
-	return p;
+unsigned char FastRijndael::mult(unsigned char a, unsigned char b) {
+	return mult_table[a][b];
 }
 
+unsigned char FastRijndael::div(unsigned char a, unsigned char b) {
+	return div_table[a][b];
+}
 
-void Rijndael::invMixColumns(unsigned char** block){
+void FastRijndael::invMixColumns(unsigned char** block){
 	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
 	for (int j = 0; j < 4; j++){
 		memcpy(temp, &block[0][j], 1);
@@ -290,14 +283,14 @@ void Rijndael::invMixColumns(unsigned char** block){
 		for (int i = 0; i < 4; i++){
 			block[i][j] = 0x00;
 			for (int m = 0; m < 4; m ++){
-					block[i][j] ^= gmul(temp[m], _inv_mix[i][m]);	// this gmul totally sucks at performance. thinking about static pre-calculated tables.
+					block[i][j] ^= mult(temp[m], _inv_mix[i][m]);
 			}
 		}
 	}
 	delete[] temp;
 }
 
-void Rijndael::addRoundKey(unsigned char** block){
+void FastRijndael::addRoundKey(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
@@ -305,7 +298,7 @@ void Rijndael::addRoundKey(unsigned char** block){
 	}
 }
 
-void Rijndael::addRoundKeySwappedMCRoundTwo(unsigned char** block){
+void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char** block){
 	unsigned char** temp_exp_key = new unsigned char*[4];
 	for (int i = 0; i < 4; i++){
 		temp_exp_key[i] = new unsigned char[4];
@@ -332,7 +325,7 @@ void Rijndael::addRoundKeySwappedMCRoundTwo(unsigned char** block){
 	}
 }
 
-void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
+void FastRijndael::xorBlock(unsigned char** a, unsigned char** b){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			a[i][j] ^= b[i][j];
@@ -340,7 +333,7 @@ void Rijndael::xorBlock(unsigned char** a, unsigned char** b){
 	}
 }
 
-void Rijndael::makePadding(unsigned char* block, int &length, int blocks){
+void FastRijndael::makePadding(unsigned char* block, int &length, int blocks){
 	char pad = blocks*128/8 - length;
 	int i;
 	for (i = length; i < (blocks)*128/8; i++){
@@ -349,7 +342,7 @@ void Rijndael::makePadding(unsigned char* block, int &length, int blocks){
 	length = i;
 }
 
-void Rijndael::encrypt(unsigned char* block, int &length){
+void FastRijndael::encrypt(unsigned char* block, int &length){
 	if (block == NULL){
 		printf("block null\n");
 		return;
@@ -463,7 +456,7 @@ void Rijndael::encrypt(unsigned char* block, int &length){
 	delete[] _temp_shifted_block;
 }
 
-void Rijndael::encrypt(unsigned char** block){
+void FastRijndael::encrypt(unsigned char** block){
 	if (!_initd){
 		return;
 	}
@@ -481,7 +474,7 @@ void Rijndael::encrypt(unsigned char** block){
 	addRoundKey(block);		
 }
 
-void Rijndael::removePadding(unsigned char* block, int &length, int blocks){
+void FastRijndael::removePadding(unsigned char* block, int &length, int blocks){
 	if (block[length-1] > 0x00 && block[length-1] < 0x10){
 		int i;
 		for (i = length-2; i > length-block[length-1]; i--){
@@ -503,7 +496,7 @@ void Rijndael::removePadding(unsigned char* block, int &length, int blocks){
 }
 
 
-void Rijndael::decrypt(unsigned char* block, int &length){
+void FastRijndael::decrypt(unsigned char* block, int &length){
 	if (block == NULL){
 		return;
 	}
@@ -612,7 +605,7 @@ void Rijndael::decrypt(unsigned char* block, int &length){
 	delete[] _temp_shifted_block;
 }
 
-void Rijndael::decrypt(unsigned char** block){
+void FastRijndael::decrypt(unsigned char** block){
 	if (!_initd){
 		return;
 	}
@@ -630,7 +623,7 @@ void Rijndael::decrypt(unsigned char** block){
 	addRoundKey(block);
 }
 
-void Rijndael::encryptOneRound(unsigned char** block){
+void FastRijndael::encryptOneRound(unsigned char** block){
 	if (!_initd){
 		return;
 	}
@@ -661,7 +654,7 @@ void Rijndael::encryptOneRound(unsigned char** block){
 #endif
 }
 
-void Rijndael::decryptOneRound(unsigned char** block){
+void FastRijndael::decryptOneRound(unsigned char** block){
 	if (!_initd){
 		return;
 	}
@@ -674,7 +667,7 @@ void Rijndael::decryptOneRound(unsigned char** block){
 	addRoundKey(block);
 }
 
-void Rijndael::encryptTwoRounds(unsigned char** block){
+void FastRijndael::encryptTwoRounds(unsigned char** block){
 	if (!_initd){
 		return;
 	}
@@ -721,7 +714,7 @@ void Rijndael::encryptTwoRounds(unsigned char** block){
 }
 
 
-void Rijndael::decryptTwoRounds(unsigned char** block){
+void FastRijndael::decryptTwoRounds(unsigned char** block){
 	if (!_initd){
 		return;
 	}
