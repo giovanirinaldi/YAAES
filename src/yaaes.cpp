@@ -13,6 +13,12 @@ using namespace std;
 #include "res/x_sbox_diff_coded.h"
 #include "res/y_sbox_diff_coded.h"
 
+static unsigned char tempMixC0, tempMixC1, tempMixC2, tempMixC3;
+
+static int count_ok, count_loops;
+static int count_ok2, count_loops2;
+
+
 int mul(int x, int y) {
     int r = 0;
     for (;y!=0;y>>=1,x<<=1)
@@ -133,8 +139,106 @@ void solveMixColumnFor2RoundPhase2(unsigned char ** k2, unsigned char ** u2){
 	k2[1][0] = u2[0][0] ^ gfmult(u2[1][0], 0x02) ^ gfmult(u2[2][0], 0x03) ^ u2[3][0];
 	k2[3][0] = gfmult(u2[0][0], 0x03) ^ u2[1][0] ^ u2[2][0] ^ gfmult(u2[3][0], 0x02);
 }
+						
+int compareAResultsWithB(unsigned char ** new_temp_b, unsigned char ** b_inv_cipher, unsigned char ** k0, unsigned char ** k1, unsigned char ** u2){
+	new_temp_b[0][0] = _sbox[new_temp_b[0][0] ^ k0[0][0]];		
+	new_temp_b[1][0] = _sbox[new_temp_b[1][1] ^ k0[1][1]];		
+	new_temp_b[2][0] = _sbox[new_temp_b[2][2] ^ k0[2][2]];		
+	new_temp_b[3][0] = _sbox[new_temp_b[3][3] ^ k0[3][3]];		
+	tempMixC0 = new_temp_b[0][0];
+	tempMixC1 = new_temp_b[1][0];
+	tempMixC2 = new_temp_b[2][0];
+	tempMixC3 = new_temp_b[3][0];
+	new_temp_b[0][0] = gfmult(tempMixC0,0x02) ^ gfmult(tempMixC1,0x03) ^ tempMixC2 ^ tempMixC3;
+	new_temp_b[1][0] = tempMixC0 ^ gfmult(tempMixC1,0x02) ^ gfmult(tempMixC2,0x3) ^ tempMixC3;
+	new_temp_b[2][0] = tempMixC0 ^ tempMixC1 ^ gfmult(tempMixC2,0x02) ^ gfmult(tempMixC3,0x03);
+	new_temp_b[3][0] = gfmult(tempMixC0,0x03) ^ tempMixC1 ^ tempMixC2 ^ gfmult(tempMixC3,0x02);
+	new_temp_b[0][0] = _sbox[new_temp_b[0][0] ^ k1[0][0]] ^ u2[0][0];	
+	new_temp_b[1][3] = _sbox[new_temp_b[1][0] ^ k1[1][0]] ^ u2[1][3];	
+	new_temp_b[2][2] = _sbox[new_temp_b[2][0] ^ k1[2][0]] ^ u2[2][2];
+	new_temp_b[3][1] = _sbox[new_temp_b[3][0] ^ k1[3][0]] ^ u2[3][1];
+	count_loops++;
+	if (new_temp_b[0][0] != b_inv_cipher[0][0])	return -1;
+	if (new_temp_b[1][3] != b_inv_cipher[1][3])	return -1;
+	if (new_temp_b[2][2] != b_inv_cipher[2][2])	return -1;
+	if (new_temp_b[3][1] != b_inv_cipher[3][1])	return -1;
+//	printBlock(k0);
+//	printf("\n");
+//	sleep(5);
+	count_ok++;
+	return 0;
+}
 
+int compareAResultsWithBAgain(unsigned char ** new_temp_b, unsigned char ** b_inv_cipher, unsigned char ** k0, unsigned char ** k1, unsigned char ** u2){
+	//this is ark/sb and shift altogether
+	new_temp_b[0][2] = _sbox[new_temp_b[0][2] ^ k0[0][2]];		
+	new_temp_b[1][2] = _sbox[new_temp_b[1][3] ^ k0[1][3]];		
+	new_temp_b[2][2] = _sbox[new_temp_b[2][0] ^ k0[2][0]];		
+	new_temp_b[3][2] = _sbox[new_temp_b[3][1] ^ k0[3][1]];		
+	tempMixC0 = new_temp_b[0][2];
+	tempMixC1 = new_temp_b[1][2];
+	tempMixC2 = new_temp_b[2][2];
+	tempMixC3 = new_temp_b[3][2];
+	new_temp_b[0][2] = gfmult(tempMixC0,0x02) ^ gfmult(tempMixC1,0x03) ^ tempMixC2 ^ tempMixC3;
+	new_temp_b[1][2] = tempMixC0 ^ gfmult(tempMixC1,0x02) ^ gfmult(tempMixC2,0x3) ^ tempMixC3;
+	new_temp_b[2][2] = tempMixC0 ^ tempMixC1 ^ gfmult(tempMixC2,0x02) ^ gfmult(tempMixC3,0x03);
+	new_temp_b[3][2] = gfmult(tempMixC0,0x03) ^ tempMixC1 ^ tempMixC2 ^ gfmult(tempMixC3,0x02);
+	new_temp_b[0][2] = _sbox[new_temp_b[0][2] ^ k1[0][2]] ^ u2[0][2];	
+	new_temp_b[1][1] = _sbox[new_temp_b[1][2] ^ k1[1][2]] ^ u2[1][1];	
+	new_temp_b[2][0] = _sbox[new_temp_b[2][2] ^ k1[2][2]] ^ u2[2][0];
+	new_temp_b[3][3] = _sbox[new_temp_b[3][2] ^ k1[3][2]] ^ u2[3][3];
+	count_loops2++;
+	if (new_temp_b[0][2] != b_inv_cipher[0][2])	return -1;
+	if (new_temp_b[1][1] != b_inv_cipher[1][1])	return -1;
+	if (new_temp_b[2][0] != b_inv_cipher[2][0])	return -1;
+	if (new_temp_b[3][3] != b_inv_cipher[3][3])	return -1;
+//	printBlock(k0);
+//	printf("\n");
+//	sleep(5);
+	count_ok2++;
+	return 0;
+}
 int main (int argc, char *argv[]){
+	count_ok = 0;
+	count_loops = 0;
+	count_ok2 = 0;
+	count_loops2 = 0;
+	FastRijndael ri;	
+	unsigned char** ttt = new unsigned char* [4];
+	for (int i = 0; i < 4; i++){
+		ttt[i] = new unsigned char[4];
+	}
+	ri.makeKey(ttt);
+	for (long long int i = 0; i < 256*256*192; i++){	
+		ri.encryptTwoRounds(ttt);	
+	}
+	printf("%x\n", ttt[3][3]);
+	exit(0);
+	/*ttt[0][0] = 0x41 ^ 0x0f; 
+	ttt[1][1] = 0x32 ^ 0x0a; 
+	ttt[2][2] = 0x49 ^ 0x05; 
+	ttt[3][3] = 0x63 ^ 0x00; 
+	ttt[0][0] = _sbox[ttt[0][0]]; 
+	ttt[1][1] = _sbox[ttt[1][1]]; 
+	ttt[2][2] = _sbox[ttt[2][2]]; 
+	ttt[3][3] = _sbox[ttt[3][3]]; 
+	ri.shiftRows(ttt);
+	ri.mixOneColumn(ttt, 0);
+	ttt[0][0] ^= 0xd9;
+	ttt[1][0] ^= 0xaa;
+	ttt[2][0] ^= 0x61;
+	ttt[3][0] ^= 0xfd;
+	ttt[0][0] = _sbox[ttt[0][0]]; 
+	ttt[1][0] = _sbox[ttt[1][0]]; 
+	ttt[2][0] = _sbox[ttt[2][0]]; 
+	ttt[3][0] = _sbox[ttt[3][0]]; 
+	ri.shiftRows(ttt);
+	ttt[0][0] ^= 0x50;
+	ttt[1][3] ^= 0xbc;
+	ttt[2][2] ^= 0x98;
+	ttt[3][1] ^= 0x81;
+	printBlock(ttt);
+	exit (0);*/
 	//Rijndael r(Rijndael::K128, Rijndael::B128);
 	//std::string key = "essasenhaehfraca";
 	//std::string hBlock = "00112233445566778899aabbccddeeff";
@@ -227,14 +331,17 @@ int main (int argc, char *argv[]){
 	unsigned char** ab_cipher_diff = new unsigned char* [4];
 	unsigned char** ab_inv_cipher_diff = new unsigned char* [4];
 	unsigned char** a_inv_cipher = new unsigned char* [4];
+	unsigned char** b_inv_cipher = new unsigned char* [4];
 	unsigned char** ab_plain_diff = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
 		ab_cipher_diff[i] = new unsigned char[4];
 		ab_inv_cipher_diff[i] = new unsigned char[4];
 		a_inv_cipher[i] = new unsigned char[4];
+		b_inv_cipher[i] = new unsigned char[4];
 		ab_plain_diff[i] = new unsigned char[4];
 		for (int j = 0; j < 4; j++){
 			a_inv_cipher[i][j] = a_cipher[i][j];
+			b_inv_cipher[i][j] = b_cipher[i][j];
 		}
 	}
 	diff(a_plain, b_plain, ab_plain_diff);
@@ -252,10 +359,17 @@ int main (int argc, char *argv[]){
 	rijn.invShiftRows(ab_inv_cipher_diff);
 
 	rijn.invMixColumns(a_inv_cipher);
+	rijn.invMixColumns(b_inv_cipher);
 		
 	printf("--------------\n");
 	printf("AB Cipher diff after invMC and invSR\n");
 	printBlock(ab_inv_cipher_diff);	
+	printf("--------------\n");
+	printf("A Cipher with invMC\n");
+	printBlock(a_inv_cipher);
+	printf("--------------\n");
+	printf("B Cipher with invMC\n");
+	printBlock(b_inv_cipher);
 	printf("--------------\n");
 
 	//256^4 possibilities for diagonal at k0, 0,5,10,15 
@@ -307,14 +421,15 @@ int main (int argc, char *argv[]){
 	}
 	register unsigned char poss_x;
 	//guess 4 bytes at k0
-	for (register short int m = 0; m < 16; m++){		//k0,0
+	for (register short int m = 0; m < 1; m++){		//k0,0
 		k0[0][0] = m;
-		for (register short int n = 0; n < 11; n++){	//k0,5
+		for (register short int n = 0; n < 1; n++){	//k0,5
 			k0[1][1] = n;
-			for (register short int o = 0; o < 6; o++){	//k0,10
+			for (register short int o = 0; o < 16; o++){	//k0,10
 				k0[2][2] = o;
-				for (register short int p = 0; p < 1; p++){	//k0,15	
+				for (register short int p = 0; p < 256; p++){	//k0,15	
 					k0[3][3] = p;
+					printf("%.2x %.2x %.2x %.2x\n", m, n, o, p);
 					//get them just before ARK at first round
 					temp_a[0][0] = a_plain[0][0] ^ m;
 					temp_b[0][0] = b_plain[0][0] ^ m;		
@@ -337,7 +452,6 @@ int main (int argc, char *argv[]){
 						k1_pos[i][0][0] = poss_x^temp_a[i][0];
 						k1_pos[i][0][1] = poss_x^temp_b[i][0];
 					}
-//					for (int i = 0; i < 16; i++){
 					for (int k100 = 0; k100 < 2; k100++){
 				         k1[0][0] = k1_pos[0][0][k100];
 					 for (int k110 = 0; k110 < 2; k110++){
@@ -347,18 +461,14 @@ int main (int argc, char *argv[]){
 					   for (int k130 = 0; k130 < 2; k130++){
 					    k1[3][0] = k1_pos[3][0][k130];
 						//check 16 combinations that make input/output diff
-/*						if (i & 1){	k1[0][0] = k1_pos[0][0][0];	}
-						else{		k1[0][0] = k1_pos[0][0][1];	}
-						if (i & 2){	k1[1][0] = k1_pos[1][0][0];	}
-						else{		k1[1][0] = k1_pos[1][0][1];	}
-						if (i & 4){	k1[2][0] = k1_pos[2][0][0];	}
-						else{		k1[2][0] = k1_pos[2][0][1];	}
-						if (i & 8){	k1[3][0] = k1_pos[3][0][0];	}
-						else{		k1[3][0] = k1_pos[3][0][1];	}*/
 						u2[0][0] = (_sbox[(temp_a[0][0]^k1[0][0])]^a_inv_cipher[0][0]);
 						u2[1][3] = (_sbox[(temp_a[1][0]^k1[1][0])]^a_inv_cipher[1][3]);
 						u2[2][2] = (_sbox[(temp_a[2][0]^k1[2][0])]^a_inv_cipher[2][2]);
 						u2[3][1] = (_sbox[(temp_a[3][0]^k1[3][0])]^a_inv_cipher[3][1]);
+						for (int i = 0; i < 4; i++){
+							new_temp_b[i][i] = b_plain[i][i];
+						}
+						if (compareAResultsWithB(new_temp_b, b_inv_cipher, k0, k1, u2) == -1)	continue;
 						//key schedule exploit
 						k0[2][0] = _sbox[k0[3][3]]^k1[2][0];
 						k0[1][3] = _inv_sbox[k1[0][0]^0x01^k0[0][0]];
@@ -376,8 +486,8 @@ int main (int argc, char *argv[]){
 						//	printf("%x %x %x\n", temp_a[1][2], a_plain[1][3], k0[1][3]);
 						//}
 						//guess new bytes k0,7 and k0,8
-						for (int q = 0; q < 8; q++){	//this would be k0,7
-							for (int r = 0; r < 9; r++){	//and this k0,8
+						for (int q = 0; q < 256; q++){	//this would be k0,7
+							for (int r = 0; r < 256; r++){	//and this k0,8
 								k0[3][1] = q;	k0[0][2] = r;
 						/*		if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08){
 									printBlock(k0);
@@ -410,22 +520,15 @@ int main (int argc, char *argv[]){
 								   for (int k132 = 0; k132 < 2; k132++){
 								    k1[3][2] = k1_pos[3][2][k132];
 									//check 16 combinations that make input/output diff
-								/*	k1[0][2] = k1_pos[0][2][k102];
-									k1[1][2] = k1_pos[1][2][k112];
-									k1[2][2] = k1_pos[2][2][k122];
-									k1[3][2] = k1_pos[3][2][k132];*/
-/*									if (i & 1){	k1[0][2] = k1_pos[0][2][0];	}
-									else{		k1[0][2] = k1_pos[0][2][1];	}
-									if (i & 2){	k1[1][2] = k1_pos[1][2][0];	}
-									else{		k1[1][2] = k1_pos[1][2][1];	}
-									if (i & 4){	k1[2][2] = k1_pos[2][2][0];	}
-									else{		k1[2][2] = k1_pos[2][2][1];	}
-									if (i & 8){	k1[3][2] = k1_pos[3][2][0];	}
-									else{		k1[3][2] = k1_pos[3][2][1];	}	*/
 									u2[0][2] = (_sbox[temp_a[0][2] ^ k1[0][2]]) ^ a_inv_cipher[0][2];
 									u2[1][1] = (_sbox[temp_a[1][2] ^ k1[1][2]]) ^ a_inv_cipher[1][1];
 									u2[2][0] = (_sbox[temp_a[2][2] ^ k1[2][2]]) ^ a_inv_cipher[2][0];
 									u2[3][3] = (_sbox[temp_a[3][2] ^ k1[3][2]]) ^ a_inv_cipher[3][3];
+									new_temp_b[0][2] = b_plain[0][2];
+									new_temp_b[1][3] = b_plain[1][3];
+									new_temp_b[2][0] = b_plain[2][0];
+									new_temp_b[3][1] = b_plain[3][1];							
+									if (compareAResultsWithBAgain(new_temp_b, b_inv_cipher, k0, k1, u2) == -1)	continue;
 									//step 9 and 10, key sched exploit
 									k1[3][1] = k1[3][0] ^ k0[3][1];
 									k1[3][3] = k0[3][3] ^ k1[3][2];
@@ -448,21 +551,14 @@ int main (int argc, char *argv[]){
 								}}}}
 							}
 						}
-/*						if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && k1[0][0] == 0xd6 && k1[1][0] == 0xaa && k1[2][0] == 0x74 && k1[3][0] == 0xfd){
-//							printBlock(temp_a);
-							printBlock(k0);
-							printBlock(k1);
-//							printBlock(a_inv_cipher);
-							printBlock(u2);
-//							printf("%x %x %x %x\n", u2[0][0], u2[1][3], u2[2][2], u2[3][1]);							
-						}*/
 					}}}}
 				}
 			}
 		}
 	}
 
-	
+	printf("%d %d\n", count_loops, count_ok);	
+	printf("%d %d\n", count_loops2, count_ok2);	
 
 //Generate xy sbox diff
 /*	FILE * file;

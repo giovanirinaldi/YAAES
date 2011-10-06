@@ -3,8 +3,10 @@
 #include <cstdio>
 #include <ctime>
 
-#define DEBUG 1
+#define DEBUG 0
 #define STDOUT stdout
+
+static unsigned char tempMixc0, tempMixc1, tempMixc2, tempMixc3;
 
 FastRijndael::FastRijndael(KeySize ks, BlockSize bs, Mode mode){
 	_exp_key = NULL;
@@ -239,14 +241,24 @@ void FastRijndael::mixColumns(unsigned char** block){
 }
 
 void FastRijndael::mixOneColumn(unsigned char** block, int column){
-	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
+/*	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
 	memcpy(temp, &block[0][column], 1);
 	memcpy(temp+1, &block[1][column], 1);
 	memcpy(temp+2, &block[2][column], 1);
 	memcpy(temp+3, &block[3][column], 1);
-	for (int i = 0; i < 4; i++){
-		block[i][column] = 0x00;
-		for (int m = 0; m < 4; m ++){
+	for (int i = 0; i < 4; i++){*/
+	tempMixc0 = block[0][column];
+	tempMixc1 = block[1][column];
+	tempMixc2 = block[2][column];
+	tempMixc3 = block[3][column];
+
+	block[0][column] = mult(tempMixc0,0x02) ^ mult(tempMixc1,0x03) ^ tempMixc2 ^ tempMixc3;
+	block[1][column] = tempMixc0 ^ mult(tempMixc1,0x02) ^ mult(tempMixc2,0x3) ^ tempMixc3;
+	block[2][column] = tempMixc0 ^ tempMixc1 ^ mult(tempMixc2,0x02) ^ mult(tempMixc3,0x03);
+	block[3][column] = mult(tempMixc0,0x03) ^ tempMixc1 ^ tempMixc2 ^ mult(tempMixc3,0x02);
+	
+/*		block[i][column] = 0x00;
+		for (int m = 0; m < 4; m ++){*/
 /*			if (_mix[i][m] >= 2){
 				block[i][column] ^= temp[m] << 1;
 				if (_mix[i][m] == 3){
@@ -259,10 +271,10 @@ void FastRijndael::mixOneColumn(unsigned char** block, int column){
 			else{
 				block[i][column] ^= temp[m];
 			}*/
-			block[i][column] ^= mult(temp[m], _mix[i][m]);
+/*			block[i][column] ^= mult(temp[m], _mix[i][m]);
 		}
 	}
-	delete[] temp;
+	delete[] temp;*/
 }
 
 unsigned char FastRijndael::mult(unsigned char a, unsigned char b) {

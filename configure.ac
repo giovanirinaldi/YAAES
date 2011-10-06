@@ -8,7 +8,9 @@ AC_CONFIG_FILES([
 ])
 #PKG_CHECK_MODULES([YAAES], [gtkmm-2.4 >= 2.4])
 
-AC_SUBST(CXXFLAGS, "-g -O3")
+#AC_SUBST(CXXFLAGS, "-g -O3 -march=amdfam10 -mabm -msse4a -funroll-all-loops -fwhole-program -ftree-parallelize-loops=4 -fprefetch-loop-arrays -ffast-math")
+AC_SUBST(CXXFLAGS, "-g -O3 -march=amdfam10 -mabm -msse4a -funroll-all-loops -ftree-parallelize-loops=4 -fprefetch-loop-arrays -ffast-math -fno-trapping-math")
+#AC_SUBST(CXXFLAGS, "-g -O2 -pg")
 
 AC_SUBST(YAAES_CFLAGS)
 AC_SUBST(YAAES_LIBS)

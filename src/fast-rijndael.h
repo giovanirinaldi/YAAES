@@ -74,6 +74,7 @@ static const int _inv_mix[4][4] = {
 
 class FastRijndael {
 	public:
+
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
 		enum BlockSize { B128 = 128 };
