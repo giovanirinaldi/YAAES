@@ -158,10 +158,12 @@ int compareAResultsWithB(unsigned char ** new_temp_b, unsigned char ** b_inv_cip
 	new_temp_b[2][2] = _sbox[new_temp_b[2][0] ^ k1[2][0]] ^ u2[2][2];
 	new_temp_b[3][1] = _sbox[new_temp_b[3][0] ^ k1[3][0]] ^ u2[3][1];
 	count_loops++;
-	if (new_temp_b[0][0] != b_inv_cipher[0][0])	return -1;
-	if (new_temp_b[1][3] != b_inv_cipher[1][3])	return -1;
-	if (new_temp_b[2][2] != b_inv_cipher[2][2])	return -1;
-	if (new_temp_b[3][1] != b_inv_cipher[3][1])	return -1;
+	if ( (new_temp_b[0][0] != b_inv_cipher[0][0]) ||
+	     (new_temp_b[1][3] != b_inv_cipher[1][3]) ||
+	     (new_temp_b[2][2] != b_inv_cipher[2][2]) ||
+	     (new_temp_b[3][1] != b_inv_cipher[3][1])){
+		return -1;
+	}
 //	printBlock(k0);
 //	printf("\n");
 //	sleep(5);
@@ -203,7 +205,7 @@ int main (int argc, char *argv[]){
 	count_loops = 0;
 	count_ok2 = 0;
 	count_loops2 = 0;
-	FastRijndael ri;	
+/*	FastRijndael ri;	
 	unsigned char** ttt = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
 		ttt[i] = new unsigned char[4];
@@ -213,7 +215,7 @@ int main (int argc, char *argv[]){
 		ri.encryptTwoRounds(ttt);	
 	}
 	printf("%x\n", ttt[3][3]);
-	exit(0);
+	exit(0);*/
 	/*ttt[0][0] = 0x41 ^ 0x0f; 
 	ttt[1][1] = 0x32 ^ 0x0a; 
 	ttt[2][2] = 0x49 ^ 0x05; 
@@ -421,15 +423,15 @@ int main (int argc, char *argv[]){
 	}
 	register unsigned char poss_x;
 	//guess 4 bytes at k0
-	for (register short int m = 0; m < 1; m++){		//k0,0
+	for (register short int m = 0; m < 16; m++){		//k0,0
 		k0[0][0] = m;
-		for (register short int n = 0; n < 1; n++){	//k0,5
+		for (register short int n = 0; n < 11; n++){	//k0,5
 			k0[1][1] = n;
-			for (register short int o = 0; o < 16; o++){	//k0,10
+			for (register short int o = 0; o < 6; o++){	//k0,10
 				k0[2][2] = o;
-				for (register short int p = 0; p < 256; p++){	//k0,15	
+				for (register short int p = 0; p < 1; p++){	//k0,15	
 					k0[3][3] = p;
-					printf("%.2x %.2x %.2x %.2x\n", m, n, o, p);
+//					printf("%.2x %.2x %.2x %.2x\n", m, n, o, p);
 					//get them just before ARK at first round
 					temp_a[0][0] = a_plain[0][0] ^ m;
 					temp_b[0][0] = b_plain[0][0] ^ m;		
@@ -486,8 +488,8 @@ int main (int argc, char *argv[]){
 						//	printf("%x %x %x\n", temp_a[1][2], a_plain[1][3], k0[1][3]);
 						//}
 						//guess new bytes k0,7 and k0,8
-						for (int q = 0; q < 256; q++){	//this would be k0,7
-							for (int r = 0; r < 256; r++){	//and this k0,8
+						for (int q = 0; q < 8; q++){	//this would be k0,7
+							for (int r = 0; r < 9; r++){	//and this k0,8
 								k0[3][1] = q;	k0[0][2] = r;
 						/*		if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08){
 									printBlock(k0);
