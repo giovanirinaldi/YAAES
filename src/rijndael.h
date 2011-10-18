@@ -77,6 +77,8 @@ class Rijndael {
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
 		enum BlockSize { B128 = 128 };
 
+		KeySize ks_temp;
+
 		//CONSTRUCTORS
 		//Rijndael();
 		Rijndael(KeySize ks = K128, BlockSize bs = B128, Mode mode = ECB);

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogNew</class>
+ <widget class="QDialog" name="DialogNew">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>279</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>New Rijndael</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>321</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxKey">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>361</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Key Size (bits)</string>
+   </property>
+   <widget class="QRadioButton" name="radioKey128">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>116</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>128</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioKey192">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>116</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>192</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioKey256">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>116</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>256</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupNumberRounds">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>361</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Number of Rounds</string>
+   </property>
+   <widget class="QSpinBox" name="spinBoxNumberRounds">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>59</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>14</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxSetData">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>160</y>
+     <width>281</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Data Set</string>
+   </property>
+   <widget class="QPushButton" name="buttonSetInput">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>93</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Input</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonSetKey">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>93</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Set Key</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
