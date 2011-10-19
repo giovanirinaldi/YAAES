@@ -3,26 +3,28 @@
 
 #include <QMainWindow>
 #include "ui_mainwindow.h"
-#include "rijndael.h"
-#include "dialogsetmatriximpl.h"
-#include "dialognew.h"
 
-Rijndael* rijn;
+#include "rijndael.h"
 
 class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 {
 	Q_OBJECT
 public:
-	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );			
-	
+	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
+	void Initialize();		
+		
 	int getRound();
 	void setRound(int round);
 	int getMaxRounds();
 	void setMaxRounds(int maxRounds);
+	
+	void updateKeyMatrix();
 		
 private:
 	int round, maxRounds;	
-	unsigned char** inputMatrix, keyMatrix, outputMatrix, stateMatrix;	
+	unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
+	
+	
 	
 public slots:	
 	void on_actionSetInputMatrix_activated();

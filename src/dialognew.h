@@ -3,9 +3,6 @@
 
 #include <QDialog>
 #include "ui_dialognew.h"
-#include "mainwindowimpl.h"
-
-extern Rijndael* rijn;
 
 class DialogNew : public QDialog, public Ui::DialogNew
 {

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Oct 18 16:52:33 2011
-**      by: Qt User Interface Compiler version 4.6.2
+** Created: Wed Oct 19 02:40:10 2011
+**      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -74,22 +74,38 @@ public:
     QLabel *inputByte03;
     QWidget *gridLayoutWidget_4;
     QGridLayout *layoutKeyMatrix;
-    QLabel *keyByte13;
-    QLabel *keyByte15;
-    QLabel *keyByte12;
-    QLabel *keyByte14;
-    QLabel *keyByte09;
-    QLabel *keyByte10;
-    QLabel *keyByte11;
-    QLabel *keyByte08;
-    QLabel *keyByte05;
-    QLabel *keyByte06;
-    QLabel *keyByte07;
-    QLabel *keyByte04;
     QLabel *keyByte00;
     QLabel *keyByte01;
     QLabel *keyByte02;
     QLabel *keyByte03;
+    QLabel *keyByte04;
+    QLabel *keyByte05;
+    QLabel *keyByte06;
+    QLabel *keyByte07;
+    QLabel *keyByte08;
+    QLabel *keyByte09;
+    QLabel *keyByte10;
+    QLabel *keyByte11;
+    QLabel *keyByte12;
+    QLabel *keyByte13;
+    QLabel *keyByte14;
+    QLabel *keyByte15;
+    QLabel *keyByte16;
+    QLabel *keyByte17;
+    QLabel *keyByte18;
+    QLabel *keyByte19;
+    QLabel *keyByte20;
+    QLabel *keyByte21;
+    QLabel *keyByte22;
+    QLabel *keyByte23;
+    QLabel *keyByte24;
+    QLabel *keyByte25;
+    QLabel *keyByte26;
+    QLabel *keyByte27;
+    QLabel *keyByte28;
+    QLabel *keyByte29;
+    QLabel *keyByte30;
+    QLabel *keyByte31;
     QWidget *gridLayoutWidget_5;
     QGridLayout *layoutOutputMatrix;
     QLabel *outputByte13;
@@ -414,113 +430,17 @@ public:
 
         gridLayoutWidget_4 = new QWidget(centralwidget);
         gridLayoutWidget_4->setObjectName(QString::fromUtf8("gridLayoutWidget_4"));
-        gridLayoutWidget_4->setGeometry(QRect(220, 50, 101, 91));
+        gridLayoutWidget_4->setGeometry(QRect(210, 50, 101, 81));
         layoutKeyMatrix = new QGridLayout(gridLayoutWidget_4);
         layoutKeyMatrix->setObjectName(QString::fromUtf8("layoutKeyMatrix"));
         layoutKeyMatrix->setContentsMargins(0, 0, 0, 0);
-        keyByte13 = new QLabel(gridLayoutWidget_4);
-        keyByte13->setObjectName(QString::fromUtf8("keyByte13"));
-        keyByte13->setFont(font);
-        keyByte13->setLayoutDirection(Qt::LeftToRight);
-        keyByte13->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte13, 2, 3, 1, 1);
-
-        keyByte15 = new QLabel(gridLayoutWidget_4);
-        keyByte15->setObjectName(QString::fromUtf8("keyByte15"));
-        keyByte15->setFont(font);
-        keyByte15->setLayoutDirection(Qt::LeftToRight);
-        keyByte15->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte15, 4, 3, 1, 1);
-
-        keyByte12 = new QLabel(gridLayoutWidget_4);
-        keyByte12->setObjectName(QString::fromUtf8("keyByte12"));
-        keyByte12->setFont(font);
-        keyByte12->setLayoutDirection(Qt::LeftToRight);
-        keyByte12->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte12, 1, 3, 1, 1);
-
-        keyByte14 = new QLabel(gridLayoutWidget_4);
-        keyByte14->setObjectName(QString::fromUtf8("keyByte14"));
-        keyByte14->setFont(font);
-        keyByte14->setLayoutDirection(Qt::LeftToRight);
-        keyByte14->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte14, 3, 3, 1, 1);
-
-        keyByte09 = new QLabel(gridLayoutWidget_4);
-        keyByte09->setObjectName(QString::fromUtf8("keyByte09"));
-        keyByte09->setFont(font);
-        keyByte09->setLayoutDirection(Qt::LeftToRight);
-        keyByte09->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte09, 2, 2, 1, 1);
-
-        keyByte10 = new QLabel(gridLayoutWidget_4);
-        keyByte10->setObjectName(QString::fromUtf8("keyByte10"));
-        keyByte10->setFont(font);
-        keyByte10->setLayoutDirection(Qt::LeftToRight);
-        keyByte10->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte10, 3, 2, 1, 1);
-
-        keyByte11 = new QLabel(gridLayoutWidget_4);
-        keyByte11->setObjectName(QString::fromUtf8("keyByte11"));
-        keyByte11->setFont(font);
-        keyByte11->setLayoutDirection(Qt::LeftToRight);
-        keyByte11->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte11, 4, 2, 1, 1);
-
-        keyByte08 = new QLabel(gridLayoutWidget_4);
-        keyByte08->setObjectName(QString::fromUtf8("keyByte08"));
-        keyByte08->setFont(font);
-        keyByte08->setLayoutDirection(Qt::LeftToRight);
-        keyByte08->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte08, 1, 2, 1, 1);
-
-        keyByte05 = new QLabel(gridLayoutWidget_4);
-        keyByte05->setObjectName(QString::fromUtf8("keyByte05"));
-        keyByte05->setFont(font);
-        keyByte05->setLayoutDirection(Qt::LeftToRight);
-        keyByte05->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte05, 2, 1, 1, 1);
-
-        keyByte06 = new QLabel(gridLayoutWidget_4);
-        keyByte06->setObjectName(QString::fromUtf8("keyByte06"));
-        keyByte06->setFont(font);
-        keyByte06->setLayoutDirection(Qt::LeftToRight);
-        keyByte06->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte06, 3, 1, 1, 1);
-
-        keyByte07 = new QLabel(gridLayoutWidget_4);
-        keyByte07->setObjectName(QString::fromUtf8("keyByte07"));
-        keyByte07->setFont(font);
-        keyByte07->setLayoutDirection(Qt::LeftToRight);
-        keyByte07->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte07, 4, 1, 1, 1);
-
-        keyByte04 = new QLabel(gridLayoutWidget_4);
-        keyByte04->setObjectName(QString::fromUtf8("keyByte04"));
-        keyByte04->setFont(font);
-        keyByte04->setLayoutDirection(Qt::LeftToRight);
-        keyByte04->setAlignment(Qt::AlignCenter);
-
-        layoutKeyMatrix->addWidget(keyByte04, 1, 1, 1, 1);
-
         keyByte00 = new QLabel(gridLayoutWidget_4);
         keyByte00->setObjectName(QString::fromUtf8("keyByte00"));
         keyByte00->setFont(font);
         keyByte00->setLayoutDirection(Qt::LeftToRight);
         keyByte00->setAlignment(Qt::AlignCenter);
 
-        layoutKeyMatrix->addWidget(keyByte00, 1, 0, 1, 1);
+        layoutKeyMatrix->addWidget(keyByte00, 0, 0, 1, 1);
 
         keyByte01 = new QLabel(gridLayoutWidget_4);
         keyByte01->setObjectName(QString::fromUtf8("keyByte01"));
@@ -528,7 +448,7 @@ public:
         keyByte01->setLayoutDirection(Qt::LeftToRight);
         keyByte01->setAlignment(Qt::AlignCenter);
 
-        layoutKeyMatrix->addWidget(keyByte01, 2, 0, 1, 1);
+        layoutKeyMatrix->addWidget(keyByte01, 1, 0, 1, 1);
 
         keyByte02 = new QLabel(gridLayoutWidget_4);
         keyByte02->setObjectName(QString::fromUtf8("keyByte02"));
@@ -536,7 +456,7 @@ public:
         keyByte02->setLayoutDirection(Qt::LeftToRight);
         keyByte02->setAlignment(Qt::AlignCenter);
 
-        layoutKeyMatrix->addWidget(keyByte02, 3, 0, 1, 1);
+        layoutKeyMatrix->addWidget(keyByte02, 2, 0, 1, 1);
 
         keyByte03 = new QLabel(gridLayoutWidget_4);
         keyByte03->setObjectName(QString::fromUtf8("keyByte03"));
@@ -544,7 +464,231 @@ public:
         keyByte03->setLayoutDirection(Qt::LeftToRight);
         keyByte03->setAlignment(Qt::AlignCenter);
 
-        layoutKeyMatrix->addWidget(keyByte03, 4, 0, 1, 1);
+        layoutKeyMatrix->addWidget(keyByte03, 3, 0, 1, 1);
+
+        keyByte04 = new QLabel(gridLayoutWidget_4);
+        keyByte04->setObjectName(QString::fromUtf8("keyByte04"));
+        keyByte04->setFont(font);
+        keyByte04->setLayoutDirection(Qt::LeftToRight);
+        keyByte04->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte04, 0, 1, 1, 1);
+
+        keyByte05 = new QLabel(gridLayoutWidget_4);
+        keyByte05->setObjectName(QString::fromUtf8("keyByte05"));
+        keyByte05->setFont(font);
+        keyByte05->setLayoutDirection(Qt::LeftToRight);
+        keyByte05->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte05, 1, 1, 1, 1);
+
+        keyByte06 = new QLabel(gridLayoutWidget_4);
+        keyByte06->setObjectName(QString::fromUtf8("keyByte06"));
+        keyByte06->setFont(font);
+        keyByte06->setLayoutDirection(Qt::LeftToRight);
+        keyByte06->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte06, 2, 1, 1, 1);
+
+        keyByte07 = new QLabel(gridLayoutWidget_4);
+        keyByte07->setObjectName(QString::fromUtf8("keyByte07"));
+        keyByte07->setFont(font);
+        keyByte07->setLayoutDirection(Qt::LeftToRight);
+        keyByte07->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte07, 3, 1, 1, 1);
+
+        keyByte08 = new QLabel(gridLayoutWidget_4);
+        keyByte08->setObjectName(QString::fromUtf8("keyByte08"));
+        keyByte08->setFont(font);
+        keyByte08->setLayoutDirection(Qt::LeftToRight);
+        keyByte08->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte08, 0, 2, 1, 1);
+
+        keyByte09 = new QLabel(gridLayoutWidget_4);
+        keyByte09->setObjectName(QString::fromUtf8("keyByte09"));
+        keyByte09->setFont(font);
+        keyByte09->setLayoutDirection(Qt::LeftToRight);
+        keyByte09->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte09, 1, 2, 1, 1);
+
+        keyByte10 = new QLabel(gridLayoutWidget_4);
+        keyByte10->setObjectName(QString::fromUtf8("keyByte10"));
+        keyByte10->setFont(font);
+        keyByte10->setLayoutDirection(Qt::LeftToRight);
+        keyByte10->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte10, 2, 2, 1, 1);
+
+        keyByte11 = new QLabel(gridLayoutWidget_4);
+        keyByte11->setObjectName(QString::fromUtf8("keyByte11"));
+        keyByte11->setFont(font);
+        keyByte11->setLayoutDirection(Qt::LeftToRight);
+        keyByte11->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte11, 3, 2, 1, 1);
+
+        keyByte12 = new QLabel(gridLayoutWidget_4);
+        keyByte12->setObjectName(QString::fromUtf8("keyByte12"));
+        keyByte12->setFont(font);
+        keyByte12->setLayoutDirection(Qt::LeftToRight);
+        keyByte12->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte12, 0, 3, 1, 1);
+
+        keyByte13 = new QLabel(gridLayoutWidget_4);
+        keyByte13->setObjectName(QString::fromUtf8("keyByte13"));
+        keyByte13->setFont(font);
+        keyByte13->setLayoutDirection(Qt::LeftToRight);
+        keyByte13->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte13, 1, 3, 1, 1);
+
+        keyByte14 = new QLabel(gridLayoutWidget_4);
+        keyByte14->setObjectName(QString::fromUtf8("keyByte14"));
+        keyByte14->setFont(font);
+        keyByte14->setLayoutDirection(Qt::LeftToRight);
+        keyByte14->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte14, 2, 3, 1, 1);
+
+        keyByte15 = new QLabel(gridLayoutWidget_4);
+        keyByte15->setObjectName(QString::fromUtf8("keyByte15"));
+        keyByte15->setFont(font);
+        keyByte15->setLayoutDirection(Qt::LeftToRight);
+        keyByte15->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte15, 3, 3, 1, 1);
+
+        keyByte16 = new QLabel(gridLayoutWidget_4);
+        keyByte16->setObjectName(QString::fromUtf8("keyByte16"));
+        keyByte16->setFont(font);
+        keyByte16->setLayoutDirection(Qt::LeftToRight);
+        keyByte16->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte16, 0, 4, 1, 1);
+
+        keyByte17 = new QLabel(gridLayoutWidget_4);
+        keyByte17->setObjectName(QString::fromUtf8("keyByte17"));
+        keyByte17->setFont(font);
+        keyByte17->setLayoutDirection(Qt::LeftToRight);
+        keyByte17->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte17, 1, 4, 1, 1);
+
+        keyByte18 = new QLabel(gridLayoutWidget_4);
+        keyByte18->setObjectName(QString::fromUtf8("keyByte18"));
+        keyByte18->setFont(font);
+        keyByte18->setLayoutDirection(Qt::LeftToRight);
+        keyByte18->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte18, 2, 4, 1, 1);
+
+        keyByte19 = new QLabel(gridLayoutWidget_4);
+        keyByte19->setObjectName(QString::fromUtf8("keyByte19"));
+        keyByte19->setFont(font);
+        keyByte19->setLayoutDirection(Qt::LeftToRight);
+        keyByte19->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte19, 3, 4, 1, 1);
+
+        keyByte20 = new QLabel(gridLayoutWidget_4);
+        keyByte20->setObjectName(QString::fromUtf8("keyByte20"));
+        keyByte20->setFont(font);
+        keyByte20->setLayoutDirection(Qt::LeftToRight);
+        keyByte20->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte20, 0, 5, 1, 1);
+
+        keyByte21 = new QLabel(gridLayoutWidget_4);
+        keyByte21->setObjectName(QString::fromUtf8("keyByte21"));
+        keyByte21->setFont(font);
+        keyByte21->setLayoutDirection(Qt::LeftToRight);
+        keyByte21->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte21, 1, 5, 1, 1);
+
+        keyByte22 = new QLabel(gridLayoutWidget_4);
+        keyByte22->setObjectName(QString::fromUtf8("keyByte22"));
+        keyByte22->setFont(font);
+        keyByte22->setLayoutDirection(Qt::LeftToRight);
+        keyByte22->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte22, 2, 5, 1, 1);
+
+        keyByte23 = new QLabel(gridLayoutWidget_4);
+        keyByte23->setObjectName(QString::fromUtf8("keyByte23"));
+        keyByte23->setFont(font);
+        keyByte23->setLayoutDirection(Qt::LeftToRight);
+        keyByte23->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte23, 3, 5, 1, 1);
+
+        keyByte24 = new QLabel(gridLayoutWidget_4);
+        keyByte24->setObjectName(QString::fromUtf8("keyByte24"));
+        keyByte24->setFont(font);
+        keyByte24->setLayoutDirection(Qt::LeftToRight);
+        keyByte24->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte24, 0, 6, 1, 1);
+
+        keyByte25 = new QLabel(gridLayoutWidget_4);
+        keyByte25->setObjectName(QString::fromUtf8("keyByte25"));
+        keyByte25->setFont(font);
+        keyByte25->setLayoutDirection(Qt::LeftToRight);
+        keyByte25->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte25, 1, 6, 1, 1);
+
+        keyByte26 = new QLabel(gridLayoutWidget_4);
+        keyByte26->setObjectName(QString::fromUtf8("keyByte26"));
+        keyByte26->setFont(font);
+        keyByte26->setLayoutDirection(Qt::LeftToRight);
+        keyByte26->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte26, 2, 6, 1, 1);
+
+        keyByte27 = new QLabel(gridLayoutWidget_4);
+        keyByte27->setObjectName(QString::fromUtf8("keyByte27"));
+        keyByte27->setFont(font);
+        keyByte27->setLayoutDirection(Qt::LeftToRight);
+        keyByte27->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte27, 3, 6, 1, 1);
+
+        keyByte28 = new QLabel(gridLayoutWidget_4);
+        keyByte28->setObjectName(QString::fromUtf8("keyByte28"));
+        keyByte28->setFont(font);
+        keyByte28->setLayoutDirection(Qt::LeftToRight);
+        keyByte28->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte28, 0, 7, 1, 1);
+
+        keyByte29 = new QLabel(gridLayoutWidget_4);
+        keyByte29->setObjectName(QString::fromUtf8("keyByte29"));
+        keyByte29->setFont(font);
+        keyByte29->setLayoutDirection(Qt::LeftToRight);
+        keyByte29->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte29, 1, 7, 1, 1);
+
+        keyByte30 = new QLabel(gridLayoutWidget_4);
+        keyByte30->setObjectName(QString::fromUtf8("keyByte30"));
+        keyByte30->setFont(font);
+        keyByte30->setLayoutDirection(Qt::LeftToRight);
+        keyByte30->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte30, 2, 7, 1, 1);
+
+        keyByte31 = new QLabel(gridLayoutWidget_4);
+        keyByte31->setObjectName(QString::fromUtf8("keyByte31"));
+        keyByte31->setFont(font);
+        keyByte31->setLayoutDirection(Qt::LeftToRight);
+        keyByte31->setAlignment(Qt::AlignCenter);
+
+        layoutKeyMatrix->addWidget(keyByte31, 3, 7, 1, 1);
 
         gridLayoutWidget_5 = new QWidget(centralwidget);
         gridLayoutWidget_5->setObjectName(QString::fromUtf8("gridLayoutWidget_5"));
@@ -708,7 +852,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 640, 23));
+        menubar->setGeometry(QRect(0, 0, 640, 25));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuHelp = new QMenu(menubar);
@@ -778,22 +922,38 @@ public:
         inputByte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         inputByte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         inputByte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        keyByte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         keyByte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         keyByte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         keyByte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         keyByte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte16->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte17->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte18->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte19->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte20->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte21->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte22->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte23->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte24->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte25->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte26->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte27->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte28->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte29->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte30->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        keyByte31->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         outputByte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         outputByte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         outputByte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));

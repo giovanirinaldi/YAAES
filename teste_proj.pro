@@ -6,7 +6,11 @@ OBJECTS_DIR = build
 MOC_DIR = build
 UI_DIR = build
 FORMS = ui/mainwindow.ui ui/setmatrix.ui ui/dialognew.ui
-HEADERS = src/mainwindowimpl.h src/dialogsetmatriximpl.h src/rijndael.h src/dialognew.h
+HEADERS = src/mainwindowimpl.h \
+ src/dialogsetmatriximpl.h \
+ src/rijndael.h \
+ src/dialognew.h \
+ src/global.h
 SOURCES = src/mainwindowimpl.cpp \
  src/main.cpp \
  src/dialogsetmatriximpl.cpp \

@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'setmatrix.ui'
 **
-** Created: Tue Oct 18 16:52:33 2011
-**      by: Qt User Interface Compiler version 4.6.2
+** Created: Wed Oct 19 02:40:10 2011
+**      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -56,6 +56,14 @@ public:
     QLineEdit *setByte21;
     QLineEdit *setByte22;
     QLineEdit *setByte23;
+    QLineEdit *setByte24;
+    QLineEdit *setByte25;
+    QLineEdit *setByte26;
+    QLineEdit *setByte27;
+    QLineEdit *setByte28;
+    QLineEdit *setByte29;
+    QLineEdit *setByte30;
+    QLineEdit *setByte31;
     QLineEdit *setTextBytes;
 
     void setupUi(QDialog *DialogSetMatrix)
@@ -78,7 +86,7 @@ public:
         radioTextMode->setGeometry(QRect(10, 180, 116, 22));
         gridLayoutWidget = new QWidget(DialogSetMatrix);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(20, 40, 182, 120));
+        gridLayoutWidget->setGeometry(QRect(20, 40, 244, 120));
         layoutMatrixMode = new QGridLayout(gridLayoutWidget);
         layoutMatrixMode->setObjectName(QString::fromUtf8("layoutMatrixMode"));
         layoutMatrixMode->setContentsMargins(0, 0, 0, 0);
@@ -349,6 +357,94 @@ public:
 
         layoutMatrixMode->addWidget(setByte23, 3, 5, 1, 1);
 
+        setByte24 = new QLineEdit(gridLayoutWidget);
+        setByte24->setObjectName(QString::fromUtf8("setByte24"));
+        sizePolicy.setHeightForWidth(setByte24->sizePolicy().hasHeightForWidth());
+        setByte24->setSizePolicy(sizePolicy);
+        setByte24->setMaximumSize(QSize(25, 25));
+        setByte24->setMaxLength(2);
+        setByte24->setFrame(true);
+        setByte24->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte24, 0, 6, 1, 1);
+
+        setByte25 = new QLineEdit(gridLayoutWidget);
+        setByte25->setObjectName(QString::fromUtf8("setByte25"));
+        sizePolicy.setHeightForWidth(setByte25->sizePolicy().hasHeightForWidth());
+        setByte25->setSizePolicy(sizePolicy);
+        setByte25->setMaximumSize(QSize(25, 25));
+        setByte25->setMaxLength(2);
+        setByte25->setFrame(true);
+        setByte25->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte25, 1, 6, 1, 1);
+
+        setByte26 = new QLineEdit(gridLayoutWidget);
+        setByte26->setObjectName(QString::fromUtf8("setByte26"));
+        sizePolicy.setHeightForWidth(setByte26->sizePolicy().hasHeightForWidth());
+        setByte26->setSizePolicy(sizePolicy);
+        setByte26->setMaximumSize(QSize(25, 25));
+        setByte26->setMaxLength(2);
+        setByte26->setFrame(true);
+        setByte26->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte26, 2, 6, 1, 1);
+
+        setByte27 = new QLineEdit(gridLayoutWidget);
+        setByte27->setObjectName(QString::fromUtf8("setByte27"));
+        sizePolicy.setHeightForWidth(setByte27->sizePolicy().hasHeightForWidth());
+        setByte27->setSizePolicy(sizePolicy);
+        setByte27->setMaximumSize(QSize(25, 25));
+        setByte27->setMaxLength(2);
+        setByte27->setFrame(true);
+        setByte27->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte27, 3, 6, 1, 1);
+
+        setByte28 = new QLineEdit(gridLayoutWidget);
+        setByte28->setObjectName(QString::fromUtf8("setByte28"));
+        sizePolicy.setHeightForWidth(setByte28->sizePolicy().hasHeightForWidth());
+        setByte28->setSizePolicy(sizePolicy);
+        setByte28->setMaximumSize(QSize(25, 25));
+        setByte28->setMaxLength(2);
+        setByte28->setFrame(true);
+        setByte28->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte28, 0, 7, 1, 1);
+
+        setByte29 = new QLineEdit(gridLayoutWidget);
+        setByte29->setObjectName(QString::fromUtf8("setByte29"));
+        sizePolicy.setHeightForWidth(setByte29->sizePolicy().hasHeightForWidth());
+        setByte29->setSizePolicy(sizePolicy);
+        setByte29->setMaximumSize(QSize(25, 25));
+        setByte29->setMaxLength(2);
+        setByte29->setFrame(true);
+        setByte29->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte29, 1, 7, 1, 1);
+
+        setByte30 = new QLineEdit(gridLayoutWidget);
+        setByte30->setObjectName(QString::fromUtf8("setByte30"));
+        sizePolicy.setHeightForWidth(setByte30->sizePolicy().hasHeightForWidth());
+        setByte30->setSizePolicy(sizePolicy);
+        setByte30->setMaximumSize(QSize(25, 25));
+        setByte30->setMaxLength(2);
+        setByte30->setFrame(true);
+        setByte30->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte30, 2, 7, 1, 1);
+
+        setByte31 = new QLineEdit(gridLayoutWidget);
+        setByte31->setObjectName(QString::fromUtf8("setByte31"));
+        sizePolicy.setHeightForWidth(setByte31->sizePolicy().hasHeightForWidth());
+        setByte31->setSizePolicy(sizePolicy);
+        setByte31->setMaximumSize(QSize(25, 25));
+        setByte31->setMaxLength(2);
+        setByte31->setFrame(true);
+        setByte31->setAlignment(Qt::AlignCenter);
+
+        layoutMatrixMode->addWidget(setByte31, 3, 7, 1, 1);
+
         setTextBytes = new QLineEdit(DialogSetMatrix);
         setTextBytes->setObjectName(QString::fromUtf8("setTextBytes"));
         setTextBytes->setGeometry(QRect(20, 210, 271, 27));
@@ -388,6 +484,14 @@ public:
         setByte21->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
         setByte22->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
         setByte23->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte24->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte25->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte26->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte27->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte28->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte29->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte30->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
+        setByte31->setText(QApplication::translate("DialogSetMatrix", "FF", 0, QApplication::UnicodeUTF8));
         setTextBytes->setText(QApplication::translate("DialogSetMatrix", "01234567890123456789012345678901", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

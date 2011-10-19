@@ -1,11 +1,12 @@
 #include "dialogsetmatriximpl.h"
 
+#include "global.h"
+
 DialogSetMatrixImpl::DialogSetMatrixImpl( QWidget * parent, Qt::WFlags f) 
 	: QDialog(parent, f)
 {
 	setupUi(this);	
 	radioMatrixMode->click();	
-	rijn->ks_temp = Rijndael::K128;
 }
 
 void DialogSetMatrixImpl::SetWindowTitle(QString title)
@@ -30,7 +31,15 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 					setByte20->setVisible(false);
 					setByte21->setVisible(false);
 					setByte22->setVisible(false);
-					setByte23->setVisible(false);		
+					setByte23->setVisible(false);	
+					setByte24->setVisible(false);
+					setByte25->setVisible(false);
+					setByte26->setVisible(false);
+					setByte27->setVisible(false);
+					setByte28->setVisible(false);
+					setByte29->setVisible(false);
+					setByte30->setVisible(false);
+					setByte31->setVisible(false);			
 					setTextBytes->setMaxLength(16);	
 					break;
 				case Rijndael::K192:
@@ -38,10 +47,18 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 					setByte17->setVisible(true);
 					setByte18->setVisible(true);
 					setByte19->setVisible(true);
-					setByte20->setVisible(false);
-					setByte21->setVisible(false);
-					setByte22->setVisible(false);
-					setByte23->setVisible(false);		
+					setByte20->setVisible(true);
+					setByte21->setVisible(true);
+					setByte22->setVisible(true);
+					setByte23->setVisible(true);	
+					setByte24->setVisible(false);
+					setByte25->setVisible(false);
+					setByte26->setVisible(false);
+					setByte27->setVisible(false);
+					setByte28->setVisible(false);
+					setByte29->setVisible(false);
+					setByte30->setVisible(false);
+					setByte31->setVisible(false);	
 					setTextBytes->setMaxLength(24);	
 					break;
 				case Rijndael::K256:
@@ -52,7 +69,15 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 					setByte20->setVisible(true);
 					setByte21->setVisible(true);
 					setByte22->setVisible(true);
-					setByte23->setVisible(true);		
+					setByte23->setVisible(true);	
+					setByte24->setVisible(true);
+					setByte25->setVisible(true);
+					setByte26->setVisible(true);
+					setByte27->setVisible(true);
+					setByte28->setVisible(true);
+					setByte29->setVisible(true);
+					setByte30->setVisible(true);
+					setByte31->setVisible(true);	
 					setTextBytes->setMaxLength(32);
 					break;
 				default:
@@ -67,7 +92,15 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 			setByte20->setVisible(false);
 			setByte21->setVisible(false);
 			setByte22->setVisible(false);
-			setByte23->setVisible(false);		
+			setByte23->setVisible(false);	
+			setByte24->setVisible(false);
+			setByte25->setVisible(false);
+			setByte26->setVisible(false);
+			setByte27->setVisible(false);
+			setByte28->setVisible(false);
+			setByte29->setVisible(false);
+			setByte30->setVisible(false);
+			setByte31->setVisible(false);		
 			setTextBytes->setMaxLength(16);	
 			break;
 		default:
