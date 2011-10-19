@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'setmatrix.ui'
 **
-** Created: Wed Oct 19 02:40:10 2011
-**      by: Qt User Interface Compiler version 4.7.2
+** Created: Wed Oct 19 13:31:15 2011
+**      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -71,7 +71,7 @@ public:
         if (DialogSetMatrix->objectName().isEmpty())
             DialogSetMatrix->setObjectName(QString::fromUtf8("DialogSetMatrix"));
         DialogSetMatrix->setWindowModality(Qt::ApplicationModal);
-        DialogSetMatrix->resize(299, 300);
+        DialogSetMatrix->resize(299, 297);
         DialogSetMatrix->setModal(true);
         buttonBox = new QDialogButtonBox(DialogSetMatrix);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));

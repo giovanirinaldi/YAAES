@@ -1,12 +1,37 @@
 #include "dialogsetmatriximpl.h"
+#include "mainwindowimpl.h"
 
 #include "global.h"
+
+#include <cstdio>
 
 DialogSetMatrixImpl::DialogSetMatrixImpl( QWidget * parent, Qt::WFlags f) 
 	: QDialog(parent, f)
 {
 	setupUi(this);	
 	radioMatrixMode->click();	
+}
+
+unsigned char hexValue(unsigned char hex){
+        if (hex >= 48 && hex <= 57){
+                return hex - 48;
+        }
+        else if (toupper(hex) >= 65 && toupper(hex) <= 70){
+                return toupper(hex) - 55;
+        }
+        else{
+                return hex;
+        }
+}
+
+void DialogSetMatrixImpl::updateTargetMatrix(){
+	QList<QLineEdit*> list = this->findChildren<QLineEdit*>(QRegExp("(setByte)(([0][0-9])|([1][0-5]))"));
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			targetMatrix[i][j] = hexValue(list.at(i)->text().at(0).combiningClass()) * 16 +
+								 hexValue(list.at(i)->text().at(1).combiningClass());
+		}
+	}	
 }
 
 void DialogSetMatrixImpl::SetWindowTitle(QString title)
@@ -22,6 +47,7 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 {
 	switch (type){
 		case Key:
+			targetMatrix = keyMatrix;
 			switch (keySize){
 				case Rijndael::K128:
 					setByte16->setVisible(false);
@@ -85,6 +111,7 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 			}
 			break;
 		case Input:
+			targetMatrix = inputMatrix;
 			setByte16->setVisible(false);
 			setByte17->setVisible(false);
 			setByte18->setVisible(false);
@@ -111,6 +138,9 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 void DialogSetMatrixImpl::on_buttonBox_clicked(QAbstractButton* button)
 {
 	if (QString::compare(button->text(),"&ok", Qt::CaseInsensitive) == 0){
+		updateTargetMatrix();
+		MainWindowImpl* p = (MainWindowImpl*) this->parent();
+		p->updateAllMatrices();
 		this->close();
 	}
 	else if (QString::compare(button->text(), "&cancel", Qt::CaseInsensitive) == 0){

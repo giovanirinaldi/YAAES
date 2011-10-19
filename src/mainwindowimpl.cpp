@@ -10,20 +10,24 @@
 #endif
 
 #include "global.h"
-
+#include <QSplitter>
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
 {
 	setupUi(this);	
 	rijn = new Rijndael(Rijndael::K128);
-	rijn->ks_temp = Rijndael::K256;
-	//layoutKeyMatrix->setGeometry(QRect(layoutKeyMatrix->geometry().topLeft(), QSize(layoutKeyMatrix->geometry().size().width()*2, layoutKeyMatrix->geometry().size().height())));
-layoutKeyMatrix->setSizeConstraint(QLayout::SetNoConstraint);	
-	layoutKeyMatrix->setGeometry(QRect(QPoint(0,0), QSize(200, 50)));
+	rijn->ks_temp = Rijndael::K128;
 	
-	Initialize();
-	
+	/*QSplitter* qs = new QSplitter(this);
+	qs->setGeometry(400, 300, 200, 200);
+	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
+	qs->setOrientation(Qt::Vertical);
+	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
+	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
+	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));*/
+		
+	Initialize();	
 }
 
 void MainWindowImpl::Initialize(){
@@ -44,7 +48,8 @@ void MainWindowImpl::Initialize(){
 			keyMatrix[i][j] = 0x00;
 		}
 	}
-	updateKeyMatrix();
+	
+	updateAllMatrices();
 }
 
 void hexToUpperCaseText(unsigned char &hex, char* temp_string){
@@ -71,7 +76,7 @@ void MainWindowImpl::updateKeyMatrix(){
 			keyByte28->setVisible(false);
 			keyByte29->setVisible(false);
 			keyByte30->setVisible(false);
-			keyByte31->setVisible(false);	
+			keyByte31->setVisible(false);
 			break;
 		case Rijndael::K192:
 			keyByte16->setVisible(true);
@@ -113,7 +118,7 @@ void MainWindowImpl::updateKeyMatrix(){
 			break;
 	}
 	char* temp_string = new char [3];
-	QRegExp regex("(keyByte)[0-3][0-9]");
+	QRegExp regex("(keyByte)(([0][0-9])|([1][0-5]))");
 	QList<QLabel*> list = this->findChildren<QLabel*>(regex);
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
@@ -124,9 +129,51 @@ void MainWindowImpl::updateKeyMatrix(){
 	delete temp_string;
 }
 
-/*void MainWindowImpl::updateAllMatrices){
-	
-}*/
+void MainWindowImpl::updateInputMatrix(){
+	char* temp_string = new char [3];
+	QRegExp regex("(inputByte)(([0][0-9])|([1][0-5]))");
+	QList<QLabel*> list = this->findChildren<QLabel*>(regex);	
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			hexToUpperCaseText(inputMatrix[i][j], temp_string);
+			list.at(i+j*4)->setText(temp_string);
+		}
+	}
+	delete temp_string;
+}
+
+void MainWindowImpl::updateOutputMatrix(){
+	char* temp_string = new char [3];
+	QRegExp regex("(outputByte)(([0][0-9])|([1][0-5]))");
+	QList<QLabel*> list = this->findChildren<QLabel*>(regex);	
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			hexToUpperCaseText(outputMatrix[i][j], temp_string);
+			list.at(i+j*4)->setText(temp_string);
+		}
+	}
+	delete temp_string;
+}
+
+void MainWindowImpl::updateStateMatrix(){
+	char* temp_string = new char [3];
+	QRegExp regex("(stateByte)(([0][0-9])|([1][0-5]))");
+	QList<QLabel*> list = this->findChildren<QLabel*>(regex);	
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			hexToUpperCaseText(stateMatrix[i][j], temp_string);
+			list.at(i+j*4)->setText(temp_string);
+		}
+	}
+	delete temp_string;
+}
+
+void MainWindowImpl::updateAllMatrices(){
+	updateInputMatrix();
+	updateKeyMatrix();
+	updateOutputMatrix();
+	updateStateMatrix();
+}
 
 int MainWindowImpl::getRound(){
 	return this->round;

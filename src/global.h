@@ -10,4 +10,6 @@
 
 EXTERN Rijndael* rijn;
 
+EXTERN unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
+
 #endif // __GLOBAL_H__

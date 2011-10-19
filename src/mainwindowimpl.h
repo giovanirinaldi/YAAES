@@ -19,10 +19,14 @@ public:
 	void setMaxRounds(int maxRounds);
 	
 	void updateKeyMatrix();
+	void updateInputMatrix();
+	void updateOutputMatrix();
+	void updateStateMatrix();	
+	void updateAllMatrices();
 		
 private:
 	int round, maxRounds;	
-	unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
+	//unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
 	
 	
 	
