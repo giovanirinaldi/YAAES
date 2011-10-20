@@ -1,7 +1,10 @@
 #include "dialogsetmatriximpl.h"
 #include "mainwindowimpl.h"
+#include "dialognew.h"
 
 #include "global.h"
+
+#include <QMessageBox>
 
 #include <cstdio>
 
@@ -148,8 +151,10 @@ void DialogSetMatrixImpl::on_buttonBox_clicked(QAbstractButton* button)
 {
 	if (QString::compare(button->text(),"&ok", Qt::CaseInsensitive) == 0){
 		updateTargetMatrix();
-		MainWindowImpl* p = (MainWindowImpl*) this->parent();
-		p->updateAllMatrices();
+		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
+		if (parent_main != NULL){	
+			parent_main->updateAllMatrices();		
+		}		
 		this->close();
 	}
 	else if (QString::compare(button->text(), "&cancel", Qt::CaseInsensitive) == 0){

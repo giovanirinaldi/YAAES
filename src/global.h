@@ -7,6 +7,8 @@
 
 #include "rijndael.h"
 
+#include <QMessageBox>
+
 EXTERN Rijndael* rijn;
 
 EXTERN unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;

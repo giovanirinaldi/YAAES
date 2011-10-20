@@ -1,6 +1,7 @@
 #include "dialognew.h"
 
 #include "mainwindowimpl.h"
+#include "dialogsetmatriximpl.h"
 #include "global.h"
 
 DialogNew::DialogNew( QWidget * parent, Qt::WFlags f) 
@@ -14,8 +15,14 @@ DialogNew::DialogNew( QWidget * parent, Qt::WFlags f)
 void DialogNew::on_buttonBox_clicked(QAbstractButton* button)
 {
 	if (QString::compare(button->text(),"&ok", Qt::CaseInsensitive) == 0){
-		//MainWindowImpl* p = (MainWindowImpl*)(this->parent());
-		//p->setMaxRounds(spinBoxNumberRounds->value());
+		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
+		if (parent_main != NULL){	
+			parent_main->updateAllMatrices();		
+		}	
+		else
+		{
+			QMessageBox msg;msg.setText("como?");msg.exec();
+		}
 		maxRounds = spinBoxNumberRounds->value();		
 		this->close();
 	}
@@ -46,7 +53,7 @@ void DialogNew::on_radioKey256_clicked()
 
 void DialogNew::on_buttonSetInput_clicked()
 {	
-	MainWindowImpl* p = (MainWindowImpl*)(this->parent());
+	MainWindowImpl* p = qobject_cast<MainWindowImpl*>(this->parent());
 	p->on_actionSetInputMatrix_activated();
 }
 

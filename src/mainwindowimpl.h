@@ -12,11 +12,6 @@ class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 public:
 	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 	void Initialize();		
-		
-	/*int getRound();
-	void setRound(int round);
-	int getMaxRounds();
-	void setMaxRounds(int maxRounds);*/
 	
 	void updateKeyMatrix();
 	void updateInputMatrix();
@@ -24,11 +19,6 @@ public:
 	void updateStateMatrix();	
 	void updateAllMatrices();
 		
-private:
-//	int round, maxRounds;	
-	//unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
-	
-	
 	
 public slots:	
 	void on_actionSetInputMatrix_activated();

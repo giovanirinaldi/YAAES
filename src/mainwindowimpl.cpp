@@ -11,6 +11,7 @@
 
 #include "global.h"
 #include <QSplitter>
+#include <QMessageBox>
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
@@ -193,7 +194,7 @@ void MainWindowImpl::setMaxRounds(int maxRounds){
 
 void MainWindowImpl::on_actionNewRijndael_activated()
 {
-	DialogNew* dialogNewRijndael = new DialogNew(); 
+	DialogNew* dialogNewRijndael = new DialogNew(this); 
 	dialogNewRijndael->show();	
 }
 
