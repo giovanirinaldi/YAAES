@@ -28,8 +28,7 @@ void DialogSetMatrixImpl::updateTargetMatrix(){
 	QList<QLineEdit*> list = this->findChildren<QLineEdit*>(QRegExp("(setByte)(([0][0-9])|([1][0-5]))"));
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			targetMatrix[i][j] = hexValue(list.at(i)->text().at(0).combiningClass()) * 16 +
-								 hexValue(list.at(i)->text().at(1).combiningClass());
+			targetMatrix[i][j] = hexValue(list.at(i+j*4)->text().at(0).toAscii())*16 + hexValue(list.at(i+j*4)->text().at(1).toAscii());
 		}
 	}	
 }
@@ -41,6 +40,16 @@ void DialogSetMatrixImpl::SetWindowTitle(QString title)
 
 void DialogSetMatrixImpl::SetMatrixPointer(unsigned char ** matrix){
 	this->targetMatrix = matrix;
+	char* temp = new char[3];
+	QList<QLineEdit*> list = this->findChildren<QLineEdit*>(QRegExp("(setByte)(([0][0-9])|([1][0-5]))"));
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){			
+			snprintf(temp, 3, "%.2x", targetMatrix[i][j]);
+			temp[0] = toupper(temp[0]); temp[1] = toupper(temp[1]);
+			list.at(i+j*4)->setText(temp);
+		}
+	}
+	delete temp;
 }
 
 void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySize)

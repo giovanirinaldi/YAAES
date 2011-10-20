@@ -13,10 +13,10 @@ public:
 	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 	void Initialize();		
 		
-	int getRound();
+	/*int getRound();
 	void setRound(int round);
 	int getMaxRounds();
-	void setMaxRounds(int maxRounds);
+	void setMaxRounds(int maxRounds);*/
 	
 	void updateKeyMatrix();
 	void updateInputMatrix();
@@ -25,7 +25,7 @@ public:
 	void updateAllMatrices();
 		
 private:
-	int round, maxRounds;	
+//	int round, maxRounds;	
 	//unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
 	
 	

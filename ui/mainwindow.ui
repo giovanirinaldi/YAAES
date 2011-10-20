@@ -330,8 +330,8 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="layoutInputMatrix">
-     <item row="2" column="3">
-      <widget class="QLabel" name="inputByte13">
+     <item row="1" column="0">
+      <widget class="QLabel" name="inputByte00">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -348,8 +348,8 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="3">
-      <widget class="QLabel" name="inputByte15">
+     <item row="2" column="0">
+      <widget class="QLabel" name="inputByte01">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -366,8 +366,8 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="3">
-      <widget class="QLabel" name="inputByte12">
+     <item row="3" column="0">
+      <widget class="QLabel" name="inputByte02">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -384,8 +384,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="3">
-      <widget class="QLabel" name="inputByte14">
+     <item row="4" column="0">
+      <widget class="QLabel" name="inputByte03">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -402,62 +402,8 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="2">
-      <widget class="QLabel" name="inputByte09">
-       <property name="font">
-        <font>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>FF</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="2">
-      <widget class="QLabel" name="inputByte10">
-       <property name="font">
-        <font>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>FF</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="2">
-      <widget class="QLabel" name="inputByte11">
-       <property name="font">
-        <font>
-         <kerning>true</kerning>
-        </font>
-       </property>
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <property name="text">
-        <string>FF</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="inputByte08">
+     <item row="1" column="1">
+      <widget class="QLabel" name="inputByte04">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -528,8 +474,8 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="1">
-      <widget class="QLabel" name="inputByte04">
+     <item row="1" column="2">
+      <widget class="QLabel" name="inputByte08">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -546,8 +492,8 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="inputByte00">
+     <item row="2" column="2">
+      <widget class="QLabel" name="inputByte09">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -564,8 +510,8 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="inputByte01">
+     <item row="3" column="2">
+      <widget class="QLabel" name="inputByte10">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -582,8 +528,8 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="inputByte02">
+     <item row="4" column="2">
+      <widget class="QLabel" name="inputByte11">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -600,8 +546,62 @@
        </property>
       </widget>
      </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="inputByte03">
+     <item row="1" column="3">
+      <widget class="QLabel" name="inputByte12">
+       <property name="font">
+        <font>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>FF</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLabel" name="inputByte13">
+       <property name="font">
+        <font>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>FF</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLabel" name="inputByte14">
+       <property name="font">
+        <font>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>FF</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLabel" name="inputByte15">
        <property name="font">
         <font>
          <kerning>true</kerning>
@@ -1032,7 +1032,7 @@
      <rect>
       <x>220</x>
       <y>50</y>
-      <width>101</width>
+      <width>180</width>
       <height>88</height>
      </rect>
     </property>
@@ -1622,7 +1622,7 @@
      <x>0</x>
      <y>0</y>
      <width>640</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

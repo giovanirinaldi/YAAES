@@ -175,7 +175,7 @@ void MainWindowImpl::updateAllMatrices(){
 	updateStateMatrix();
 }
 
-int MainWindowImpl::getRound(){
+/*int MainWindowImpl::getRound(){
 	return this->round;
 }
 
@@ -189,7 +189,7 @@ int MainWindowImpl::getMaxRounds(){
 
 void MainWindowImpl::setMaxRounds(int maxRounds){
 	this->maxRounds = maxRounds;
-}
+}*/
 
 void MainWindowImpl::on_actionNewRijndael_activated()
 {
@@ -223,6 +223,7 @@ void MainWindowImpl::on_actionSetInputMatrix_activated()
 	DialogSetMatrixImpl* dialogSetInput = new DialogSetMatrixImpl(this); 
 	dialogSetInput->SetWindowTitle("Set Input Matrix");
 	dialogSetInput->SetMatrixType(DialogSetMatrixImpl::Input);
+	dialogSetInput->SetMatrixPointer(inputMatrix);
 	dialogSetInput->show();
 }
 
@@ -231,6 +232,7 @@ void MainWindowImpl::on_actionSetKeyMatrix_activated()
 	DialogSetMatrixImpl* dialogSetKey = new DialogSetMatrixImpl(this); 
 	dialogSetKey->SetWindowTitle("Set Key Matrix");
 	dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->ks_temp);
+	dialogSetKey->SetMatrixPointer(keyMatrix);
 	dialogSetKey->show();
 }
 

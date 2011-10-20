@@ -14,8 +14,9 @@ DialogNew::DialogNew( QWidget * parent, Qt::WFlags f)
 void DialogNew::on_buttonBox_clicked(QAbstractButton* button)
 {
 	if (QString::compare(button->text(),"&ok", Qt::CaseInsensitive) == 0){
-		MainWindowImpl* p = (MainWindowImpl*)(this->parent());
-		p->setMaxRounds(spinBoxNumberRounds->value());		
+		//MainWindowImpl* p = (MainWindowImpl*)(this->parent());
+		//p->setMaxRounds(spinBoxNumberRounds->value());
+		maxRounds = spinBoxNumberRounds->value();		
 		this->close();
 	}
 	else if (QString::compare(button->text(), "&cancel", Qt::CaseInsensitive) == 0){
