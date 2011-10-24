@@ -8,20 +8,21 @@
 #include "rijndael.h"
 
 #include <QMessageBox>
+#include <QDebug>
 
 EXTERN Rijndael* rijn;
 
-EXTERN unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix;
+EXTERN unsigned char ** inputMatrix, ** keyMatrix, ** outputMatrix, ** stateMatrix, ** previousMatrix, ** nextMatrix;
 
-EXTERN int round, maxRounds;
+EXTERN int round, maxRounds, maxRoundByKey;
 
 enum rijnOps {
-		SB, SR, MC, ARK, NONE 
+		SB, SR, MC, ARK , STOP
 	};
 	
-static const rijnOps opsOrder[4] = {
-	SB, SR, MC, ARK
-};
+EXTERN rijnOps op;
+
+EXTERN bool forward;
 
 EXTERN rijnOps nextOp, thisOp, previousOp;
 

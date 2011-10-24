@@ -1,8 +1,8 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindowimpl.h'
 **
-** Created: Thu Oct 20 15:18:09 2011
-**      by: The Qt Meta Object Compiler version 62 (Qt 4.6.2)
+** Created: Sat Oct 22 20:21:15 2011
+**      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -11,7 +11,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindowimpl.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 62
-#error "This file was generated using the moc from 4.6.2. It"
+#error "This file was generated using the moc from 4.7.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,7 +20,7 @@ QT_BEGIN_MOC_NAMESPACE
 static const uint qt_meta_data_MainWindowImpl[] = {
 
  // content:
-       4,       // revision
+       5,       // revision
        0,       // classname
        0,    0, // classinfo
        8,   14, // methods
@@ -36,9 +36,9 @@ static const uint qt_meta_data_MainWindowImpl[] = {
       86,   15,   15,   15, 0x08,
      112,   15,   15,   15, 0x08,
      138,   15,   15,   15, 0x08,
-     164,   15,   15,   15, 0x08,
-     191,   15,   15,   15, 0x08,
-     217,   15,   15,   15, 0x08,
+     165,   15,   15,   15, 0x08,
+     195,   15,   15,   15, 0x08,
+     221,   15,   15,   15, 0x08,
 
        0        // eod
 };
@@ -47,9 +47,9 @@ static const char qt_meta_stringdata_MainWindowImpl[] = {
     "MainWindowImpl\0\0on_actionSetInputMatrix_activated()\0"
     "on_actionSetKeyMatrix_activated()\0"
     "on_actionExit_activated()\0"
-    "on_buttonBackOp_pressed()\0"
     "on_buttonNextOp_pressed()\0"
     "on_buttonFirstOp_pressed()\0"
+    "on_buttonPreviousOp_pressed()\0"
     "on_buttonLastOp_pressed()\0"
     "on_actionNewRijndael_activated()\0"
 };
@@ -88,9 +88,9 @@ int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: on_actionSetInputMatrix_activated(); break;
         case 1: on_actionSetKeyMatrix_activated(); break;
         case 2: on_actionExit_activated(); break;
-        case 3: on_buttonBackOp_pressed(); break;
-        case 4: on_buttonNextOp_pressed(); break;
-        case 5: on_buttonFirstOp_pressed(); break;
+        case 3: on_buttonNextOp_pressed(); break;
+        case 4: on_buttonFirstOp_pressed(); break;
+        case 5: on_buttonPreviousOp_pressed(); break;
         case 6: on_buttonLastOp_pressed(); break;
         case 7: on_actionNewRijndael_activated(); break;
         default: ;

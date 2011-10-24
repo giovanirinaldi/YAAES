@@ -1,7 +1,8 @@
-#ifndef __RIJNDAEL_H__
-#define __RIJNDAEL_H__
+#ifndef __FAST_RIJNDAEL_H__
+#define __FAST_RIJNDAEL_H__
 
 #include <cstdlib>
+#include "../../res/tables.h"
 
 static const int _sbox[256] = 
  {0x63 ,0x7c ,0x77 ,0x7b ,0xf2 ,0x6b ,0x6f ,0xc5 ,0x30 ,0x01 ,0x67 ,0x2b ,0xfe ,0xd7 ,0xab ,0x76
@@ -71,20 +72,19 @@ static const int _inv_mix[4][4] = {
  {0x0b, 0x0d, 0x09, 0x0e}
 };
 
-class Rijndael {
+class FastRijndael {
 	public:
+
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
 		enum BlockSize { B128 = 128 };
 
-		KeySize ks_temp;
-
 		//CONSTRUCTORS
 		//Rijndael();
-		Rijndael(KeySize ks = K128, BlockSize bs = B128, Mode mode = ECB);
+		FastRijndael(KeySize ks = K128, BlockSize bs = B128, Mode mode = ECB);
 		
 		//DESTRUCTOR
-		virtual ~Rijndael();
+		virtual ~FastRijndael();
 
 		//KEY
 		// do not use this unless you know what you're doing
@@ -101,8 +101,6 @@ class Rijndael {
 		void encrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
 		void decrypt(unsigned char** block);	// 2d array of 4 rows and nb columns
 		void decrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
-		
-		void encryptNRounds(unsigned char** block, int rounds);
 		
 		void encryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
 		void decryptOneRound(unsigned char** block);	// 2d array of 4 rows and nb columns
@@ -131,7 +129,6 @@ class Rijndael {
 		void mixOneColumn(unsigned char** block, int column);
 		void invMixColumns(unsigned char** block);
 		void addRoundKey(unsigned char** block);
-		void addNRoundKey(unsigned char** block, int round);
 		void addRoundKeySwappedMCRoundTwo(unsigned char** block);
 
 		//AUX
@@ -144,8 +141,9 @@ class Rijndael {
 		void makePadding(unsigned char* block, int &length, int blocks);
 		void removePadding(unsigned char* block, int &length, int blocks);
 
-		//MULT 
-		unsigned char gmul(unsigned char a, unsigned char b);
+		//GALOIS FIELD OP
+		unsigned char mult(unsigned char a, unsigned char b);
+		unsigned char div(unsigned char a, unsigned char b);
 	private:
 		int _round;
 		unsigned char** _exp_key;	//expanded key

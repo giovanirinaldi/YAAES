@@ -8,22 +8,32 @@ DialogNew::DialogNew( QWidget * parent, Qt::WFlags f)
 	: QDialog(parent, f)
 {
 	setupUi(this);
-	radioKey128->click();
-	rijn->ks_temp = Rijndael::K128;
+	switch (rijn->ks_temp){
+		case Rijndael::K128:
+			radioKey128->click();
+			break;
+		case Rijndael::K192:
+			radioKey192->click();
+			break;
+		case Rijndael::K256:
+			radioKey256->click();
+			break;
+	}
+	//radioKey128->click();
+	//rijn->ks_temp = Rijndael::K128;
+	spinBoxNumberRounds->setValue(maxRounds);
 }
 
 void DialogNew::on_buttonBox_clicked(QAbstractButton* button)
 {
 	if (QString::compare(button->text(),"&ok", Qt::CaseInsensitive) == 0){
+		maxRounds = spinBoxNumberRounds->value();		
 		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
 		if (parent_main != NULL){	
-			parent_main->updateAllMatrices();		
-		}	
-		else
-		{
-			QMessageBox msg;msg.setText("como?");msg.exec();
+			parent_main->initialized = false;
+			parent_main->calculateMatrices();
+			parent_main->updateAllMatrices();			
 		}
-		maxRounds = spinBoxNumberRounds->value();		
 		this->close();
 	}
 	else if (QString::compare(button->text(), "&cancel", Qt::CaseInsensitive) == 0){
