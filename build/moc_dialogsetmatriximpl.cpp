@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dialogsetmatriximpl.h'
 **
-** Created: Sun Oct 23 14:42:15 2011
+** Created: Mon Feb 6 18:30:00 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!

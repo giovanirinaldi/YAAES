@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'dialognew.h'
 **
-** Created: Sat Oct 22 19:11:51 2011
+** Created: Mon Feb 6 18:30:01 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!

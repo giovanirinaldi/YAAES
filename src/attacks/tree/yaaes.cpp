@@ -369,11 +369,10 @@ int main (int argc, char *argv[]){
 	printBlock(ab_inv_cipher_diff);	
 	printf("--------------\n");
 
-	for (int i = 0; i < 256; i ++){
+/*	for (int i = 0; i < 256; i ++){
 		printf("%.2x %.2x %.2x %.2x\n", ab_plain_diff[0][0]^i, ab_plain_diff[1][0]^i, ab_plain_diff[2][0]^i, ab_plain_diff[3][0]^i);
-	}
+	}*/
 
-	exit(0);
 
 	//256^4 possibilities for diagonal at k0, 0,5,10,15 
 	unsigned char*** k1_pos = new unsigned char**[4];
@@ -424,13 +423,13 @@ int main (int argc, char *argv[]){
 	}
 	register unsigned char poss_x;
 	//guess 4 bytes at k0
-	for (register short int m = 0; m < 16; m++){		//k0,0
+	for (register short int m = 0; m < 256; m++){		//k0,0
 		k0[0][0] = m;
-		for (register short int n = 0; n < 11; n++){	//k0,5
+		for (register short int n = 0; n < 256; n++){	//k0,5
 			k0[1][1] = n;
-			for (register short int o = 0; o < 6; o++){	//k0,10
+			for (register short int o = 0; o < 256; o++){	//k0,10
 				k0[2][2] = o;
-				for (register short int p = 0; p < 1; p++){	//k0,15	
+				for (register short int p = 0; p < 256; p++){	//k0,15	
 					k0[3][3] = p;
 //					printf("%.2x %.2x %.2x %.2x\n", m, n, o, p);
 					//get them just before ARK at first round
@@ -455,13 +454,13 @@ int main (int argc, char *argv[]){
 						k1_pos[i][0][0] = poss_x^temp_a[i][0];
 						k1_pos[i][0][1] = poss_x^temp_b[i][0];
 					}
-					for (int k100 = 0; k100 < 2; k100++){
+					for (int k100 = 0; k100 < 1; k100++){
 				         k1[0][0] = k1_pos[0][0][k100];
-					 for (int k110 = 0; k110 < 2; k110++){
+					 for (int k110 = 0; k110 < 1; k110++){
 					  k1[1][0] = k1_pos[1][0][k110];
-					  for (int k120 = 0; k120 < 2; k120++){
+					  for (int k120 = 0; k120 < 1; k120++){
 					   k1[2][0] = k1_pos[2][0][k120];
-					   for (int k130 = 0; k130 < 2; k130++){
+					   for (int k130 = 0; k130 < 1; k130++){
 					    k1[3][0] = k1_pos[3][0][k130];
 						//check 16 combinations that make input/output diff
 						u2[0][0] = (_sbox[(temp_a[0][0]^k1[0][0])]^a_inv_cipher[0][0]);
@@ -489,8 +488,8 @@ int main (int argc, char *argv[]){
 						//	printf("%x %x %x\n", temp_a[1][2], a_plain[1][3], k0[1][3]);
 						//}
 						//guess new bytes k0,7 and k0,8
-						for (int q = 0; q < 8; q++){	//this would be k0,7
-							for (int r = 0; r < 9; r++){	//and this k0,8
+						for (int q = 0; q < 1; q++){	//this would be k0,7
+							for (int r = 0; r < 1; r++){	//and this k0,8*/
 								k0[3][1] = q;	k0[0][2] = r;
 						/*		if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08){
 									printBlock(k0);
@@ -514,13 +513,13 @@ int main (int argc, char *argv[]){
 									k1_pos[i][2][0] = poss_x^temp_a[i][2];
 									k1_pos[i][2][1] = poss_x^temp_b[i][2];
 								}								
-								for (int k102 = 0; k102 < 2; k102++){
+								for (int k102 = 0; k102 < 1; k102++){
  								 k1[0][2] = k1_pos[0][2][k102];
-								 for (int k112 = 0; k112 < 2; k112++){
+								 for (int k112 = 0; k112 < 1; k112++){
 								  k1[1][2] = k1_pos[1][2][k112];
-								  for (int k122 = 0; k122 < 2; k122++){
+								  for (int k122 = 0; k122 < 1; k122++){
 								   k1[2][2] = k1_pos[2][2][k122];
-								   for (int k132 = 0; k132 < 2; k132++){
+								   for (int k132 = 0; k132 < 1; k132++){
 								    k1[3][2] = k1_pos[3][2][k132];
 									//check 16 combinations that make input/output diff
 									u2[0][2] = (_sbox[temp_a[0][2] ^ k1[0][2]]) ^ a_inv_cipher[0][2];
@@ -544,13 +543,13 @@ int main (int argc, char *argv[]){
 									solveMixColumnFor2RoundPhase2(k2, u2);
 									k1[0][3] = _inv_sbox[k2[3][0] ^ k1[3][0]];
 									k1[2][3] = _inv_sbox[k2[1][0] ^ k1[1][0]];
-									if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08 &&
+/*									if (m == 0x0f && n == 0x0a && o == 0x05 && p == 0x00 && k1[0][0] == 0xd9 && k1[1][0] == 0xaa && k1[2][0] == 0x61 && k1[3][0] == 0xfd && q == 0x07 && r == 0x08 &&
 									    k1[0][2] == 0xd5 && k1[1][2] == 0xa9 && k1[2][2] == 0x62 && k1[3][2] ==0xf1){
 										printf("k0\n");printBlock(k0);
 										printf("k1\n");printBlock(k1);
 										printf("u2\n");printBlock(u2);
 										printf("k2\n");printBlock(k2);				
-									}
+									}*/
 								}}}}
 							}
 						}
