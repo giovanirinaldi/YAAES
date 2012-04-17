@@ -88,6 +88,8 @@ class FastRijndael {
 		//DESTRUCTOR
 		virtual ~FastRijndael();
 
+		void cleanUp();
+
 		//KEY
 		// do not use this unless you know what you're doing
 		// input data defined as line by column

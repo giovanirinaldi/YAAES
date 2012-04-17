@@ -45,16 +45,23 @@ FastRijndael::~FastRijndael(){
 /*		for (int i = 0; i < _nek; i++){
 			delete[] _exp_key[i];	
 		}*/
-		delete[] _exp_key;
-		_exp_key = NULL;
+/*		delete[] _exp_key;
+		_exp_key = NULL;*/
 	}
 	if (_mode != ECB){
 /*		for (int i = 0; i < 4; i++){
 			delete[] _iv[i];
 		}	*/
-		delete[] _iv;
-		_iv = NULL;
+/*		delete[] _iv;
+		_iv = NULL;*/
 	}
+}
+
+void FastRijndael::cleanUp(){
+	if (_initd)
+		delete[] _exp_key;
+	if (_mode != ECB)
+		delete[] _iv;
 }
 
 void FastRijndael::generateIV(){	
@@ -81,7 +88,7 @@ void FastRijndael::getIV(unsigned char* iv){
 
 void FastRijndael::setIV(unsigned char* iv){
 //	for (int i = 0; i < 4; i++){
-		memcpy(&_iv[0], &iv[0], _nb*4);
+	memcpy(&_iv[0], &iv[0], _nb*4);
 //	}
 }
 
@@ -153,7 +160,9 @@ void FastRijndael::makeKey(unsigned char* key){
 		
 void FastRijndael::rotWord(unsigned char* column){
 	unsigned char temp = column[0];
-	memcpy(&column[0], &column[1], 3);
+	memcpy(&column[0], &column[1], 1);
+	memcpy(&column[1], &column[2], 1);
+	memcpy(&column[2], &column[3], 1);
 	column[3] = temp;
 //	column[0] = column[1];
 //	column[1] = column[2];
@@ -490,7 +499,6 @@ void FastRijndael::encrypt(unsigned char* block, int &length){
 		_last_cipher_text = new unsigned char [16];
 	}
 	int blocks = (length / (_block_char_size));
-	printf("blocks %d\n", blocks);
 	if (length % _block_char_size != 0){
 		blocks++;
 	}

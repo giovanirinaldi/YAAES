@@ -19,7 +19,7 @@
 
 using namespace std;
 
-#include "fast-rijndael-1d.h"
+#include "../fast-rijndael-1d.h"
 
 int mul(int x, int y) {
     int r = 0;
@@ -114,7 +114,7 @@ int main (int argc, char *argv[]){
 	struct dirent *de = NULL;
 	DIR *d = NULL;
 
-	d = opendir("./kat/");
+	d = opendir("./");
 	
 	FastRijndael rijn_kat;
 	FastRijndael::Mode mode = FastRijndael::ECB;
@@ -175,7 +175,7 @@ int main (int argc, char *argv[]){
 				chKey = chKey256;
 				cKey = cKey256;				
 			}
-			file = "./kat/" + file;
+			file = "./" + file;
 			ifstream namefile;
 			namefile.open (file.c_str(), std::ios::binary);
 			string line;
