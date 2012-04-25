@@ -19,7 +19,7 @@
 
 using namespace std;
 
-#include "fast-rijndael-1d.h"
+#include "fast-rijndael-1d/fast-rijndael-1d.h"
 
 int mul(int x, int y) {
     int r = 0;
@@ -111,7 +111,7 @@ unsigned char gfdiv(unsigned char a, unsigned char b) {
 
 int main (int argc, char *argv[]){
 
-	struct dirent *de = NULL;
+	/*struct dirent *de = NULL;
 	DIR *d = NULL;
 
 	d = opendir("./kat/");
@@ -291,7 +291,7 @@ int main (int argc, char *argv[]){
 			namefile.close();
 		}
 	}
-	
+
 	delete[] chKey128;
 	delete[] cKey128;
 	delete[] chKey192;
@@ -305,15 +305,15 @@ int main (int argc, char *argv[]){
 	delete[] chAnsw;
 	delete[] cAnsw;
 	closedir(d);
-	return(0);
+	return(0);*/
 
-/*	FastRijndael rijn(FastRijndael::K192, FastRijndael::B128, FastRijndael::ECB);
-//	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
-	char chKey[49] = "800000000000000000000000000000000000000000000000";
-        unsigned char* cKey = new unsigned char [16];
-        hexStringToCharString((unsigned char*)chKey, 48, cKey);
+	FastRijndael rijn(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
+	unsigned char chKey[17] = "essasenhaehfraca";
+//	char chKey[49] = "800000000000000000000000000000000000000000000000";
+//        unsigned char* cKey = new unsigned char [16];
+//        hexStringToCharString((unsigned char*)chKey, 48, cKey);
 
-	rijn.makeKey(cKey);
+	rijn.makeKey(&chKey[0]);
 	
 //	char chIV[33] = "000102030405060708090a0b0c0d0e0f";
 //	char chIV[33] = "80000000000000000000000000000000";
@@ -322,16 +322,17 @@ int main (int argc, char *argv[]){
 
 //	rijn.setIV(cIV);
 	
-	char chBlock[33] = "00000000000000000000000000000000";
+	unsigned char chBlock[33] = "7bf094256426447110a04ee8eec18550"; 
+
         unsigned char* cBlock = new unsigned char [16];
         hexStringToCharString((unsigned char*)chBlock, 32, cBlock);
 	int blockLength = 16;
 
 //	printBlock1(cBlock, 16);	
-	rijn.encrypt(cBlock, blockLength);
+	rijn.decrypt(cBlock, blockLength);
 	printBlock1(cBlock, 16);
 //	rijn.decrypt(cBlock);
 //	printBlock1(cBlock, 16);
-*/	
+
 	return EXIT_SUCCESS;
 }

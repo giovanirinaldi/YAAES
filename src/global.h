@@ -5,7 +5,7 @@
 #define EXTERN extern
 #endif
 
-#include "rijndael.h"
+#include "rijndael/rijndael.h"
 
 #include <QMessageBox>
 #include <QDebug>

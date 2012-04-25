@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindowimpl.h'
 **
-** Created: Mon Feb 6 18:30:00 2012
+** Created: Tue Apr 24 22:18:53 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindowImpl[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -39,6 +39,9 @@ static const uint qt_meta_data_MainWindowImpl[] = {
      165,   15,   15,   15, 0x08,
      195,   15,   15,   15, 0x08,
      221,   15,   15,   15, 0x08,
+     254,   15,   15,   15, 0x08,
+     280,   15,   15,   15, 0x08,
+     304,   15,   15,   15, 0x08,
 
        0        // eod
 };
@@ -52,6 +55,9 @@ static const char qt_meta_stringdata_MainWindowImpl[] = {
     "on_buttonPreviousOp_pressed()\0"
     "on_buttonLastOp_pressed()\0"
     "on_actionNewRijndael_activated()\0"
+    "on_btnEditInput_clicked()\0"
+    "on_btnEditKey_clicked()\0"
+    "on_btnShowPreviousOp_clicked()\0"
 };
 
 const QMetaObject MainWindowImpl::staticMetaObject = {
@@ -93,9 +99,12 @@ int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: on_buttonPreviousOp_pressed(); break;
         case 6: on_buttonLastOp_pressed(); break;
         case 7: on_actionNewRijndael_activated(); break;
+        case 8: on_btnEditInput_clicked(); break;
+        case 9: on_btnEditKey_clicked(); break;
+        case 10: on_btnShowPreviousOp_clicked(); break;
         default: ;
         }
-        _id -= 8;
+        _id -= 11;
     }
     return _id;
 }

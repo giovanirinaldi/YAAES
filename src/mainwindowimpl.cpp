@@ -9,9 +9,12 @@
 #define EXTERN  
 #endif
 
+#include "lines.h"
 #include "global.h"
 #include <QSplitter>
 #include <QMessageBox>
+#include <QPainter>
+#include <QDesktopWidget>
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
 	: QMainWindow(parent, f)
@@ -21,7 +24,7 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	rijn->ks_temp = Rijndael::K128;
 	maxRounds = 10;
 	forward = true;
-	
+
 	keyByteArray = new QLabel*[32];
 	keyByteArray[0] = keyByte00;keyByteArray[1] = keyByte01;keyByteArray[2] = keyByte02;keyByteArray[3] = keyByte03;
 	keyByteArray[4] = keyByte04;keyByteArray[5] = keyByte05;keyByteArray[6] = keyByte06;keyByteArray[7] = keyByte07;
@@ -69,7 +72,21 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
 	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));*/
 	initialized = false;
-	Initialize();	
+        Initialize();
+}
+
+void MainWindowImpl::paintEvent(QPaintEvent *){
+
+    /*QDesktopWidget *desktop = QApplication::desktop();
+
+    int screenWidth = desktop->width();
+    int screenHeight = desktop->height();
+
+    QPainter painter(this);
+    QPen pen(Qt::black, 1, Qt::SolidLine);
+    painter.setPen(pen);
+    painter.drawLine(600, 50, 800, 50);*/
+
 }
 
 void MainWindowImpl::Initialize(){
@@ -111,14 +128,32 @@ void hexToUpperCaseText(unsigned char &hex, char* temp_string){
 }
 
 void MainWindowImpl::updateKeyMatrix(){
+        keyByteArray[0]->setGeometry(26, keyByteArray[0]->y(), keyByteArray[0]->width(), keyByteArray[0]->height());
+        keyByteArray[1]->setGeometry(26, keyByteArray[1]->y(), keyByteArray[1]->width(), keyByteArray[1]->height());
+        keyByteArray[2]->setGeometry(26, keyByteArray[2]->y(), keyByteArray[2]->width(), keyByteArray[2]->height());
+        keyByteArray[3]->setGeometry(26, keyByteArray[3]->y(), keyByteArray[3]->width(), keyByteArray[3]->height());
+        for (int i = 4; i < 32; i++){
+            keyByteArray[i]->setGeometry(keyByteArray[i-4]->x()+24, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
+        }
 	switch (rijn->ks_temp){
 		case Rijndael::K128:
+                        for (int i = 0; i < 16; i++){
+                            keyByteArray[i]->setGeometry(keyByteArray[i]->x()+48, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
+                        }
 			for (int i = 16; i < 32; i++){
 				keyByteArray[i]->setVisible(false);
 			}
 			break;
 		case Rijndael::K192:
-			for (int i = 16; i < 24; i++){
+                        for (int i = 0; i < 4; i++){
+                            for (int j = 0; j < 6; j++){
+                                    keyMatrix[i][j] = i+j*4;
+                            }
+                        }
+                        for (int i = 0; i < 24; i++){
+                            keyByteArray[i]->setGeometry(keyByteArray[i]->x()+24, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
+                        }
+                        for (int i = 0; i < 24; i++){
 				keyByteArray[i]->setVisible(true);
 			}
 			for (int i = 24; i < 32; i++){
@@ -126,7 +161,12 @@ void MainWindowImpl::updateKeyMatrix(){
 			}
 			break;
 		case Rijndael::K256:
-			for (int i = 16; i < 32; i++){
+                        for (int i = 0; i < 4; i++){
+                            for (int j = 0; j < 8; j++){
+                                    keyMatrix[i][j] = i+j*4;
+                            }
+                        }
+                        for (int i = 0; i < 32; i++){
 				keyByteArray[i]->setVisible(true);
 			}
 			break;
@@ -180,10 +220,12 @@ void MainWindowImpl::updatePreviousMatrix(){
 	if (previousDisabled){
 		disablePreviousMatrix();		
 		buttonPreviousOp->setEnabled(false);
+                btnShowPreviousOp->setEnabled(false);
 		return;
 	}
 	else{		
 		buttonPreviousOp->setEnabled(true);
+                btnShowPreviousOp->setEnabled(true);
 	}
 	char* temp_string = new char [3];
 	for (int i = 0; i < 4; i++){
@@ -199,10 +241,12 @@ void MainWindowImpl::updateNextMatrix(){
 	if (nextDisabled){
 		disableNextMatrix();		
 		buttonNextOp->setEnabled(false);
+                btnShowNextOp->setEnabled(false);
 		return;
 	}
 	else{
 		buttonNextOp->setEnabled(true);
+                btnShowNextOp->setEnabled(true);
 	}
 	char* temp_string = new char [3];
 	for (int i = 0; i < 4; i++){
@@ -230,6 +274,8 @@ void MainWindowImpl::disablePreviousMatrix(){
 			previousByteArray[i+4*j]->setText("--");
 		}
 	}
+        buttonPreviousOp->setEnabled(false);
+        btnShowPreviousOp->setEnabled(false);
 }
 
 void MainWindowImpl::disableNextMatrix(){
@@ -239,6 +285,7 @@ void MainWindowImpl::disableNextMatrix(){
 		}
 	}
 	buttonNextOp->setEnabled(false);
+        btnShowNextOp->setEnabled(false);
 }
 
 void copyMatrix(unsigned char** a, unsigned char** b){
@@ -255,16 +302,36 @@ void MainWindowImpl::updateRoundAndOp(){
 	labelRoundNumber->setText(temp);
 	delete temp;
 	switch (op){
-		case SB:
+                case SB:
+                        labelPrevOperationDesc->setText("AddRoundKey");
 			labelOperationDesc->setText("SubBytes");
 			break;
 		case SR:
+                        labelPrevOperationDesc->setText("SubBytes");
 			labelOperationDesc->setText("ShiftRows");
-			break;
-		case MC:
-			labelOperationDesc->setText("MixColumns");
+			break;                        
+                case MC:
+                        if (round != maxRounds){
+                            labelPrevOperationDesc->setText("ShiftRows");
+                            labelOperationDesc->setText("MixColumns");
+                        }
+                        else{
+                            labelPrevOperationDesc->setText("AddRoundKey");
+                            labelOperationDesc->setText("---");
+                        }
 			break;
 		case ARK:
+                        if (round != 0){
+                            if (round != maxRounds){
+                                 labelPrevOperationDesc->setText("MixColumns");
+                            }
+                            else{
+                                labelPrevOperationDesc->setText("ShiftRows");
+                            }
+                        }
+                        else{
+                            labelPrevOperationDesc->setText("---");
+                        }
 			labelOperationDesc->setText("AddRoundKey");
 			break;
 	}
@@ -522,6 +589,7 @@ void MainWindowImpl::on_buttonPreviousOp_pressed()
 	updateNextMatrix();
 	updatePreviousMatrix();
 	updateRoundAndOp();
+        MainWindowImpl::update();
 }
 
 void MainWindowImpl::on_buttonNextOp_pressed()
@@ -530,8 +598,9 @@ void MainWindowImpl::on_buttonNextOp_pressed()
 	calculateMatrices();
 	updateStateMatrix();
 	updateNextMatrix();
-	updatePreviousMatrix();
+        updatePreviousMatrix();
 	updateRoundAndOp();
+        MainWindowImpl::update();
 }
 
 void MainWindowImpl::on_buttonFirstOp_pressed()
@@ -550,6 +619,7 @@ void MainWindowImpl::on_buttonFirstOp_pressed()
 	updateNextMatrix();
 	updatePreviousMatrix();
 	updateRoundAndOp();
+        MainWindowImpl::update();
 }
 
 void MainWindowImpl::on_buttonLastOp_pressed()
@@ -573,7 +643,7 @@ void MainWindowImpl::on_buttonLastOp_pressed()
 	updatePreviousMatrix();
 	updateStateMatrix();
 	updateRoundAndOp();
-	
+        MainWindowImpl::update();
 }
 
 void MainWindowImpl::on_actionSetInputMatrix_activated()
@@ -594,9 +664,27 @@ void MainWindowImpl::on_actionSetKeyMatrix_activated()
 	dialogSetKey->show();
 }
 
+void MainWindowImpl::on_btnEditInput_clicked()
+{
+    on_actionSetInputMatrix_activated();
+}
+
+void MainWindowImpl::on_btnEditKey_clicked()
+{
+    on_actionSetKeyMatrix_activated();
+}
+
+void MainWindowImpl::on_btnShowPreviousOp_clicked()
+{
+
+}
+
+void MainWindowImpl::on_btnShowNextOp_clicked()
+{
+
+}
+
 void MainWindowImpl::on_actionExit_activated()
 {
 	exit(0);
 }
-
-

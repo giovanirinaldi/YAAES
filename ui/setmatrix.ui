@@ -16,6 +16,11 @@
   <property name="windowTitle">
    <string>Set</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: white;
+}</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>

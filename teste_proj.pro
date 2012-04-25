@@ -8,11 +8,13 @@ UI_DIR = build
 FORMS = ui/mainwindow.ui ui/setmatrix.ui ui/dialognew.ui
 HEADERS = src/mainwindowimpl.h \
  src/dialogsetmatriximpl.h \
- src/rijndael.h \
+ src/rijndael/rijndael.h \
  src/dialognew.h \
  src/global.h
 SOURCES = src/mainwindowimpl.cpp \
  src/main.cpp \
  src/dialogsetmatriximpl.cpp \
- src/rijndael.cpp \
+ src/rijndael/rijndael.cpp \
  src/dialognew.cpp
+
+OTHER_FILES +=

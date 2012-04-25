@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
-#include "rijndael.h"
+#include "rijndael/rijndael.h"
 
 class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 {
@@ -39,6 +39,8 @@ private:
 	QLabel** stateByteArray;
 	QLabel** previousByteArray;
 	QLabel** nextByteArray;
+
+        void paintEvent(QPaintEvent *);
 	
 public slots:	
 	void on_actionSetInputMatrix_activated();
@@ -50,7 +52,11 @@ private slots:
 	void on_buttonFirstOp_pressed();
 	void on_buttonPreviousOp_pressed();
 	void on_buttonLastOp_pressed();
-	void on_actionNewRijndael_activated();	
+        void on_actionNewRijndael_activated();
+        void on_btnEditInput_clicked();
+        void on_btnEditKey_clicked();
+        void on_btnShowPreviousOp_clicked();
+        void on_btnShowNextOp_clicked();
 };
 
 #endif

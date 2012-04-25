@@ -4,7 +4,7 @@
 #include <QDialog>
 #include "ui_setmatrix.h"
 
-#include "rijndael.h"
+#include "rijndael/rijndael.h"
 
 class DialogSetMatrixImpl : public QDialog, public Ui::DialogSetMatrix
 {
