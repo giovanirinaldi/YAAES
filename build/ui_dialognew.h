@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dialognew.ui'
 **
-** Created: Sat Apr 21 00:21:05 2012
+** Created: Wed Apr 25 22:32:05 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -43,7 +43,10 @@ public:
         if (DialogNew->objectName().isEmpty())
             DialogNew->setObjectName(QString::fromUtf8("DialogNew"));
         DialogNew->setWindowModality(Qt::ApplicationModal);
-        DialogNew->resize(340, 279);
+        DialogNew->resize(340, 270);
+        DialogNew->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
+"	background-color: white;\n"
+"}"));
         DialogNew->setModal(true);
         buttonBox = new QDialogButtonBox(DialogNew);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));

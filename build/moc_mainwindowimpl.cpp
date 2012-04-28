@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindowimpl.h'
 **
-** Created: Tue Apr 24 22:18:53 2012
+** Created: Wed Apr 25 23:50:37 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindowImpl[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -42,6 +42,7 @@ static const uint qt_meta_data_MainWindowImpl[] = {
      254,   15,   15,   15, 0x08,
      280,   15,   15,   15, 0x08,
      304,   15,   15,   15, 0x08,
+     335,   15,   15,   15, 0x08,
 
        0        // eod
 };
@@ -58,6 +59,7 @@ static const char qt_meta_stringdata_MainWindowImpl[] = {
     "on_btnEditInput_clicked()\0"
     "on_btnEditKey_clicked()\0"
     "on_btnShowPreviousOp_clicked()\0"
+    "on_btnShowNextOp_clicked()\0"
 };
 
 const QMetaObject MainWindowImpl::staticMetaObject = {
@@ -102,9 +104,10 @@ int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 8: on_btnEditInput_clicked(); break;
         case 9: on_btnEditKey_clicked(); break;
         case 10: on_btnShowPreviousOp_clicked(); break;
+        case 11: on_btnShowNextOp_clicked(); break;
         default: ;
         }
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }

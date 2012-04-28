@@ -659,7 +659,7 @@ void MainWindowImpl::on_actionSetKeyMatrix_activated()
 {
 	DialogSetMatrixImpl* dialogSetKey = new DialogSetMatrixImpl(this); 
 	dialogSetKey->SetWindowTitle("Set Key Matrix");
-	dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->ks_temp);
+        dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->ks_temp);
 	dialogSetKey->SetMatrixPointer(keyMatrix);
 	dialogSetKey->show();
 }

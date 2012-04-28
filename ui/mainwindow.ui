@@ -26,9 +26,7 @@
    <string>YAAES Inspector</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow {
-	background-color: white;
-}</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
@@ -172,7 +170,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -209,7 +208,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -246,7 +246,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -283,7 +284,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -320,7 +322,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -357,7 +360,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -394,7 +398,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -431,7 +436,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -468,7 +474,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -505,7 +512,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -542,7 +550,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -579,7 +588,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -616,7 +626,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -653,7 +664,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -690,7 +702,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -727,7 +740,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -752,6 +766,9 @@
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="title">
      <string>Input Matrix</string>
@@ -789,7 +806,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -829,7 +847,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -869,7 +888,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -909,7 +929,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -949,7 +970,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -989,7 +1011,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1029,7 +1052,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1069,7 +1093,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1109,7 +1134,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1149,7 +1175,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1189,7 +1216,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1232,7 +1260,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1272,7 +1301,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1312,7 +1342,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1352,7 +1383,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1392,7 +1424,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1461,7 +1494,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1498,7 +1532,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1535,7 +1570,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1572,7 +1608,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1609,7 +1646,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1646,7 +1684,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1683,7 +1722,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1720,7 +1760,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1757,7 +1798,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1794,7 +1836,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1831,7 +1874,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1868,7 +1912,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1905,7 +1950,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1942,7 +1988,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -1979,7 +2026,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2016,7 +2064,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2053,7 +2102,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2090,7 +2140,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2127,7 +2178,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2164,7 +2216,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2201,7 +2254,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2238,7 +2292,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2275,7 +2330,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2312,7 +2368,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2349,7 +2406,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2386,7 +2444,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2423,7 +2482,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2460,7 +2520,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2497,7 +2558,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2534,7 +2596,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2571,7 +2634,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2608,7 +2672,8 @@
       <string notr="true">QLabel {
 	 border-width: 1px;
      border-style: solid;
-     border-color: black;
+     border-color: black; 
+     background-color: white;
 }</string>
      </property>
      <property name="text">
@@ -2648,7 +2713,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>help.png</normaloff>help.png</iconset>
+       <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
      </property>
      <property name="checkable">
       <bool>false</bool>
@@ -4547,7 +4612,7 @@
     </property>
     <property name="icon">
      <iconset>
-      <normaloff>help.png</normaloff>help.png</iconset>
+      <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
     </property>
     <property name="checkable">
      <bool>false</bool>

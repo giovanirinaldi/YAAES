@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Tue Apr 24 22:17:19 2012
+** Created: Wed Apr 25 23:50:33 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -186,10 +186,7 @@ public:
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
         MainWindow->setMaximumSize(QSize(609, 514));
-        MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
-"	background-image: url(imageD.png);\n"
-"	background-color: white;\n"
-"}"));
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         actionAbout = new QAction(MainWindow);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         actionNewRijndael = new QAction(MainWindow);
@@ -243,7 +240,8 @@ public:
         outputByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte15->setAlignment(Qt::AlignCenter);
         outputByte04 = new QLabel(groupOutput);
@@ -256,7 +254,8 @@ public:
         outputByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte04->setAlignment(Qt::AlignCenter);
         outputByte05 = new QLabel(groupOutput);
@@ -269,7 +268,8 @@ public:
         outputByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte05->setAlignment(Qt::AlignCenter);
         outputByte10 = new QLabel(groupOutput);
@@ -282,7 +282,8 @@ public:
         outputByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte10->setAlignment(Qt::AlignCenter);
         outputByte12 = new QLabel(groupOutput);
@@ -295,7 +296,8 @@ public:
         outputByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte12->setAlignment(Qt::AlignCenter);
         outputByte06 = new QLabel(groupOutput);
@@ -308,7 +310,8 @@ public:
         outputByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte06->setAlignment(Qt::AlignCenter);
         outputByte11 = new QLabel(groupOutput);
@@ -321,7 +324,8 @@ public:
         outputByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte11->setAlignment(Qt::AlignCenter);
         outputByte13 = new QLabel(groupOutput);
@@ -334,7 +338,8 @@ public:
         outputByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte13->setAlignment(Qt::AlignCenter);
         outputByte14 = new QLabel(groupOutput);
@@ -347,7 +352,8 @@ public:
         outputByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte14->setAlignment(Qt::AlignCenter);
         outputByte00 = new QLabel(groupOutput);
@@ -360,7 +366,8 @@ public:
         outputByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte00->setAlignment(Qt::AlignCenter);
         outputByte01 = new QLabel(groupOutput);
@@ -373,7 +380,8 @@ public:
         outputByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte01->setAlignment(Qt::AlignCenter);
         outputByte02 = new QLabel(groupOutput);
@@ -386,7 +394,8 @@ public:
         outputByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte02->setAlignment(Qt::AlignCenter);
         outputByte09 = new QLabel(groupOutput);
@@ -399,7 +408,8 @@ public:
         outputByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte09->setAlignment(Qt::AlignCenter);
         outputByte08 = new QLabel(groupOutput);
@@ -412,7 +422,8 @@ public:
         outputByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte08->setAlignment(Qt::AlignCenter);
         outputByte03 = new QLabel(groupOutput);
@@ -425,7 +436,8 @@ public:
         outputByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte03->setAlignment(Qt::AlignCenter);
         outputByte07 = new QLabel(groupOutput);
@@ -438,7 +450,8 @@ public:
         outputByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         outputByte07->setAlignment(Qt::AlignCenter);
         groupInput = new QGroupBox(centralwidget);
@@ -446,6 +459,7 @@ public:
         groupInput->setGeometry(QRect(20, 20, 150, 150));
         sizePolicy.setHeightForWidth(groupInput->sizePolicy().hasHeightForWidth());
         groupInput->setSizePolicy(sizePolicy);
+        groupInput->setStyleSheet(QString::fromUtf8(""));
         groupInput->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         inputByte15 = new QLabel(groupInput);
         inputByte15->setObjectName(QString::fromUtf8("inputByte15"));
@@ -458,7 +472,8 @@ public:
         inputByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte15->setAlignment(Qt::AlignCenter);
         inputByte13 = new QLabel(groupInput);
@@ -472,7 +487,8 @@ public:
         inputByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte13->setAlignment(Qt::AlignCenter);
         inputByte14 = new QLabel(groupInput);
@@ -486,7 +502,8 @@ public:
         inputByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte14->setAlignment(Qt::AlignCenter);
         inputByte06 = new QLabel(groupInput);
@@ -500,7 +517,8 @@ public:
         inputByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte06->setAlignment(Qt::AlignCenter);
         inputByte04 = new QLabel(groupInput);
@@ -514,7 +532,8 @@ public:
         inputByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte04->setAlignment(Qt::AlignCenter);
         inputByte02 = new QLabel(groupInput);
@@ -528,7 +547,8 @@ public:
         inputByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte02->setAlignment(Qt::AlignCenter);
         inputByte10 = new QLabel(groupInput);
@@ -542,7 +562,8 @@ public:
         inputByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte10->setAlignment(Qt::AlignCenter);
         inputByte09 = new QLabel(groupInput);
@@ -556,7 +577,8 @@ public:
         inputByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte09->setAlignment(Qt::AlignCenter);
         inputByte01 = new QLabel(groupInput);
@@ -570,7 +592,8 @@ public:
         inputByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte01->setAlignment(Qt::AlignCenter);
         inputByte08 = new QLabel(groupInput);
@@ -584,7 +607,8 @@ public:
         inputByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte08->setAlignment(Qt::AlignCenter);
         inputByte00 = new QLabel(groupInput);
@@ -598,7 +622,8 @@ public:
         inputByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte00->setAlignment(Qt::AlignCenter);
         inputByte00->setWordWrap(false);
@@ -613,7 +638,8 @@ public:
         inputByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte07->setAlignment(Qt::AlignCenter);
         inputByte12 = new QLabel(groupInput);
@@ -627,7 +653,8 @@ public:
         inputByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte12->setAlignment(Qt::AlignCenter);
         inputByte03 = new QLabel(groupInput);
@@ -641,7 +668,8 @@ public:
         inputByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte03->setAlignment(Qt::AlignCenter);
         inputByte11 = new QLabel(groupInput);
@@ -655,7 +683,8 @@ public:
         inputByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte11->setAlignment(Qt::AlignCenter);
         inputByte05 = new QLabel(groupInput);
@@ -669,7 +698,8 @@ public:
         inputByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         inputByte05->setAlignment(Qt::AlignCenter);
         btnEditInput = new QToolButton(groupInput);
@@ -690,7 +720,8 @@ public:
         keyByte31->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte31->setAlignment(Qt::AlignCenter);
         keyByte08 = new QLabel(groupKey);
@@ -703,7 +734,8 @@ public:
         keyByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte08->setAlignment(Qt::AlignCenter);
         keyByte17 = new QLabel(groupKey);
@@ -716,7 +748,8 @@ public:
         keyByte17->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte17->setAlignment(Qt::AlignCenter);
         keyByte10 = new QLabel(groupKey);
@@ -729,7 +762,8 @@ public:
         keyByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte10->setAlignment(Qt::AlignCenter);
         keyByte00 = new QLabel(groupKey);
@@ -742,7 +776,8 @@ public:
         keyByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte00->setAlignment(Qt::AlignCenter);
         keyByte20 = new QLabel(groupKey);
@@ -755,7 +790,8 @@ public:
         keyByte20->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte20->setAlignment(Qt::AlignCenter);
         keyByte23 = new QLabel(groupKey);
@@ -768,7 +804,8 @@ public:
         keyByte23->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte23->setAlignment(Qt::AlignCenter);
         keyByte11 = new QLabel(groupKey);
@@ -781,7 +818,8 @@ public:
         keyByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte11->setAlignment(Qt::AlignCenter);
         keyByte27 = new QLabel(groupKey);
@@ -794,7 +832,8 @@ public:
         keyByte27->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte27->setAlignment(Qt::AlignCenter);
         keyByte22 = new QLabel(groupKey);
@@ -807,7 +846,8 @@ public:
         keyByte22->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte22->setAlignment(Qt::AlignCenter);
         keyByte01 = new QLabel(groupKey);
@@ -820,7 +860,8 @@ public:
         keyByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte01->setAlignment(Qt::AlignCenter);
         keyByte06 = new QLabel(groupKey);
@@ -833,7 +874,8 @@ public:
         keyByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte06->setAlignment(Qt::AlignCenter);
         keyByte30 = new QLabel(groupKey);
@@ -846,7 +888,8 @@ public:
         keyByte30->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte30->setAlignment(Qt::AlignCenter);
         keyByte12 = new QLabel(groupKey);
@@ -859,7 +902,8 @@ public:
         keyByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte12->setAlignment(Qt::AlignCenter);
         keyByte21 = new QLabel(groupKey);
@@ -872,7 +916,8 @@ public:
         keyByte21->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte21->setAlignment(Qt::AlignCenter);
         keyByte26 = new QLabel(groupKey);
@@ -885,7 +930,8 @@ public:
         keyByte26->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte26->setAlignment(Qt::AlignCenter);
         keyByte02 = new QLabel(groupKey);
@@ -898,7 +944,8 @@ public:
         keyByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte02->setAlignment(Qt::AlignCenter);
         keyByte14 = new QLabel(groupKey);
@@ -911,7 +958,8 @@ public:
         keyByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte14->setAlignment(Qt::AlignCenter);
         keyByte15 = new QLabel(groupKey);
@@ -924,7 +972,8 @@ public:
         keyByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte15->setAlignment(Qt::AlignCenter);
         keyByte05 = new QLabel(groupKey);
@@ -937,7 +986,8 @@ public:
         keyByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte05->setAlignment(Qt::AlignCenter);
         keyByte04 = new QLabel(groupKey);
@@ -950,7 +1000,8 @@ public:
         keyByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte04->setAlignment(Qt::AlignCenter);
         keyByte18 = new QLabel(groupKey);
@@ -963,7 +1014,8 @@ public:
         keyByte18->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte18->setAlignment(Qt::AlignCenter);
         keyByte13 = new QLabel(groupKey);
@@ -976,7 +1028,8 @@ public:
         keyByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte13->setAlignment(Qt::AlignCenter);
         keyByte24 = new QLabel(groupKey);
@@ -989,7 +1042,8 @@ public:
         keyByte24->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte24->setAlignment(Qt::AlignCenter);
         keyByte07 = new QLabel(groupKey);
@@ -1002,7 +1056,8 @@ public:
         keyByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte07->setAlignment(Qt::AlignCenter);
         keyByte16 = new QLabel(groupKey);
@@ -1015,7 +1070,8 @@ public:
         keyByte16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte16->setAlignment(Qt::AlignCenter);
         keyByte25 = new QLabel(groupKey);
@@ -1028,7 +1084,8 @@ public:
         keyByte25->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte25->setAlignment(Qt::AlignCenter);
         keyByte03 = new QLabel(groupKey);
@@ -1041,7 +1098,8 @@ public:
         keyByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte03->setAlignment(Qt::AlignCenter);
         keyByte09 = new QLabel(groupKey);
@@ -1054,7 +1112,8 @@ public:
         keyByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte09->setAlignment(Qt::AlignCenter);
         keyByte19 = new QLabel(groupKey);
@@ -1067,7 +1126,8 @@ public:
         keyByte19->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte19->setAlignment(Qt::AlignCenter);
         keyByte29 = new QLabel(groupKey);
@@ -1080,7 +1140,8 @@ public:
         keyByte29->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte29->setAlignment(Qt::AlignCenter);
         keyByte28 = new QLabel(groupKey);
@@ -1093,7 +1154,8 @@ public:
         keyByte28->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
-"     border-color: black;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
 "}"));
         keyByte28->setAlignment(Qt::AlignCenter);
         btnEditKey = new QToolButton(groupKey);
