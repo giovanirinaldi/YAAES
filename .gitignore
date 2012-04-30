@@ -16,4 +16,4 @@ src/Makefile
 src/.deps/*
 src/*.o
 
-build/*.o
+build/
