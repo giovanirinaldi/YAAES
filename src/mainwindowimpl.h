@@ -57,6 +57,7 @@ private slots:
         void on_btnEditKey_clicked();
         void on_btnShowPreviousOp_clicked();
         void on_btnShowNextOp_clicked();
+        void on_btnShowKey_clicked();
 };
 
 #endif

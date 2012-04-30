@@ -602,7 +602,7 @@ void DialogSetMatrixImpl::on_setHexTextBytes_textChanged(QString text)
     if (!editing) updateModeFromTo(radioTextMode);
 }
 
-void DialogSetMatrixImpl::on_setCharTextBytes_textChanged(QString text)
+void DialogSetMatrixImpl::on_setCharTextBytes_textChanged(QString )
 {
     if (!editing) updateModeFromTo(radioCharTextMode);
 }

@@ -75,6 +75,14 @@ void Rijndael::generateIV(){
 //	printf("\n");
 }
 
+unsigned char** Rijndael::getExpKey(){
+    /*for (int i = 0; i < 4; i++){
+        memcpy(expKey[i], _exp_key[i], _nk);
+    }*/
+    return _exp_key;
+
+}
+
 void Rijndael::getIV(unsigned char** iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(iv[i], _iv[i], 4);
@@ -106,7 +114,7 @@ void Rijndael::makeKey(unsigned char* key){
 	unsigned char** _temp_key = new unsigned char* [_nk];
 	for (int i = 0; i < _nk; i++){
 		_temp_key[i] = &key[i*4];
-	}
+        }
 	/*for (int i = 0; i < _nk; i++){
 		for (int j = 0; j < 4; j++){
 			printf("%x ", _temp_key[i][j]);
@@ -154,7 +162,7 @@ void Rijndael::makeKey(unsigned char** key){
 		}
 		for (int i = 0; i < 4; i++){
 			_exp_key[i][j] ^= _exp_key[i][j-_nk];
-		}		
+                }
 	}	
 	_initd = true;
 	

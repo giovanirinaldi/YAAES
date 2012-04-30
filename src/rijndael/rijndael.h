@@ -115,6 +115,8 @@ class Rijndael {
 		void getIV(unsigned char* iv);
 		void setIV(unsigned char** iv);
 		void setIV(unsigned char* iv);
+
+                unsigned char** getExpKey();
 //	protected:
 		//KEY
 		void rotWord(unsigned char* column);

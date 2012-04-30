@@ -307,14 +307,15 @@ int main (int argc, char *argv[]){
 	closedir(d);
 	return(0);*/
 
-	FastRijndael rijn(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
-	unsigned char chKey[17] = "essasenhaehfraca";
-//	char chKey[49] = "800000000000000000000000000000000000000000000000";
-//        unsigned char* cKey = new unsigned char [16];
-//        hexStringToCharString((unsigned char*)chKey, 48, cKey);
-
-	rijn.makeKey(&chKey[0]);
+	FastRijndael rijn(FastRijndael::K256, FastRijndael::B128, FastRijndael::ECB);
 	
+//	unsigned char chKey[17] = "essasenhaehfraca";
+	char chKey[65] = "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4";
+        unsigned char* cKey = new unsigned char [32];
+        hexStringToCharString((unsigned char*)chKey, 64, cKey);
+
+	rijn.makeKey(cKey);
+	return(0);
 //	char chIV[33] = "000102030405060708090a0b0c0d0e0f";
 //	char chIV[33] = "80000000000000000000000000000000";
 //	unsigned char* cIV = new unsigned char [16];

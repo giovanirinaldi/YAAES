@@ -133,27 +133,27 @@ void FastRijndael::makeKey(unsigned char* key){
 	register int imult4;
 	for (int i = _nk; i < _nek; i++){
 		imult4 = i*4;
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		//printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		memcpy(&_exp_key[imult4], &_exp_key[(i-1)*4], 4);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		if (_nk == 8){			// 256 bit key	- one subword only
 			if ((i-4)%8 == 0){	// between each full step (fullstep -> rot,sub,rcon,xor)
 				subWord(&_exp_key[imult4]);
+				printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);	
 			}
 		}
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		if (i % _nk == 0){
 			rotWord(&_exp_key[imult4]);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 			subWord(&_exp_key[imult4]);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 			_exp_key[imult4] ^= _rcon[i/_nk];	//xor Rcon
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		}
 		for (int j = 0; j < 4; j++){
 			_exp_key[imult4+j] ^= _exp_key[(i-_nk)*4+j];
 		}
-		//printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 	}
 	_initd = true;
 }

@@ -3,6 +3,7 @@
 #include "mainwindowimpl.h"
 #include "dialognew.h"
 #include "dialogsetmatriximpl.h"
+#include "ui/dialogshowexpkey.h"
 
 #ifndef EXTERN
 #undef EXTERN
@@ -17,9 +18,9 @@
 #include <QDesktopWidget>
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
-	: QMainWindow(parent, f)
+        : QMainWindow(parent, f)
 {
-	setupUi(this);	
+        setupUi(this);
 	rijn = new Rijndael(Rijndael::K128);
 	rijn->ks_temp = Rijndael::K128;
 	maxRounds = 10;
@@ -63,30 +64,17 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	nextByteArray[0] = nextByte00;nextByteArray[1] = nextByte01;nextByteArray[2] = nextByte02;nextByteArray[3] = nextByte03;
 	nextByteArray[4] = nextByte04;nextByteArray[5] = nextByte05;nextByteArray[6] = nextByte06;nextByteArray[7] = nextByte07;
 	nextByteArray[8] = nextByte08;nextByteArray[9] = nextByte09;nextByteArray[10] = nextByte10;nextByteArray[11] = nextByte11;
-	nextByteArray[12] = nextByte12;nextByteArray[13] = nextByte13;nextByteArray[14] = nextByte14;nextByteArray[15] = nextByte15;
-	/*QSplitter* qs = new QSplitter(this);
-	qs->setGeometry(400, 300, 200, 200);
-	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
-	qs->setOrientation(Qt::Vertical);
-	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
-	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));
-	qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola")); qs->addWidget(new QLabel("ola"));*/
+        nextByteArray[12] = nextByte12;nextByteArray[13] = nextByte13;nextByteArray[14] = nextByte14;nextByteArray[15] = nextByte15;
+
 	initialized = false;
         Initialize();
 }
 
 void MainWindowImpl::paintEvent(QPaintEvent *){
-
-    /*QDesktopWidget *desktop = QApplication::desktop();
-
-    int screenWidth = desktop->width();
-    int screenHeight = desktop->height();
-
-    QPainter painter(this);
+    /*QPainter painter(this);
     QPen pen(Qt::black, 1, Qt::SolidLine);
     painter.setPen(pen);
     painter.drawLine(600, 50, 800, 50);*/
-
 }
 
 void MainWindowImpl::Initialize(){
@@ -334,6 +322,8 @@ void MainWindowImpl::updateRoundAndOp(){
                         }
 			labelOperationDesc->setText("AddRoundKey");
 			break;
+                case STOP:
+                        break;
 	}
 }
 
@@ -380,6 +370,8 @@ void MainWindowImpl::calculateMatrices(){
 					op = SB; round++;
 				}
 				break;
+                        case STOP:
+                            break;
 		}		
 	}
 	else if (round < maxRounds){
@@ -441,6 +433,8 @@ void MainWindowImpl::calculateMatrices(){
 					op = MC;
 				}
 				break;
+                        case STOP:
+                            break;
 		}
 	}
 	else if (round == maxRounds && maxRounds == maxRoundByKey){
@@ -497,6 +491,8 @@ void MainWindowImpl::calculateMatrices(){
 					op = ARK;
 				}
 				break;
+                        case STOP:
+                            break;
 		}
 	}
 	else if (round == maxRounds && maxRounds != maxRoundByKey){
@@ -687,4 +683,14 @@ void MainWindowImpl::on_btnShowNextOp_clicked()
 void MainWindowImpl::on_actionExit_activated()
 {
 	exit(0);
+}
+
+void MainWindowImpl::on_btnShowKey_clicked()
+{
+    unsigned char** tempExpKey;
+    tempExpKey = rijn->getExpKey();
+    DialogShowExpKey* dialogShowExpKey = new DialogShowExpKey(this);
+    dialogShowExpKey->SetKeySize(rijn->ks_temp);
+    dialogShowExpKey->SetExpKeyMatrixPointer(tempExpKey);
+    dialogShowExpKey->show();
 }
