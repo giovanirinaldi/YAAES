@@ -2,19 +2,15 @@
 
 #include "mainwindowimpl.h"
 #include "dialognew.h"
-#include "dialogsetmatriximpl.h"
-#include "ui/dialogshowexpkey.h"
+#include "dialogsetmatrix.h"
+#include "dialogshowexpkey.h"
 
 #ifndef EXTERN
 #undef EXTERN
 #define EXTERN  
 #endif
 
-#include "global.h"
-#include <QSplitter>
-#include <QMessageBox>
-#include <QPainter>
-#include <QDesktopWidget>
+#include "src/global.h"
 
 MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
         : QMainWindow(parent, f)
@@ -67,13 +63,6 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 
 	initialized = false;
         Initialize();
-}
-
-void MainWindowImpl::paintEvent(QPaintEvent *){
-    /*QPainter painter(this);
-    QPen pen(Qt::black, 1, Qt::SolidLine);
-    painter.setPen(pen);
-    painter.drawLine(600, 50, 800, 50);*/
 }
 
 void MainWindowImpl::Initialize(){

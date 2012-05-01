@@ -7,19 +7,21 @@ MOC_DIR = build
 UI_DIR = build
 FORMS = ui/mainwindow.ui ui/setmatrix.ui ui/dialognew.ui \
     ui/dialogshowexpkey.ui
-HEADERS = src/mainwindowimpl.h \
- src/dialogsetmatriximpl.h \
+HEADERS = \
  src/rijndael/rijndael.h \
- src/dialognew.h \
  src/global.h \
     ui/dialogshowexpkey.h \
-    src/fast-rijndael-1d/fast-rijndael-1d.h
-SOURCES = src/mainwindowimpl.cpp \
+    src/fast-rijndael-1d/fast-rijndael-1d.h \
+    ui/dialognew.h \
+    ui/mainwindowimpl.h \
+    ui/dialogsetmatrix.h
+SOURCES = \
  src/main.cpp \
- src/dialogsetmatriximpl.cpp \
  src/rijndael/rijndael.cpp \
- src/dialognew.cpp \
     ui/dialogshowexpkey.cpp \
-    src/fast-rijndael-1d/fast-rijndael-1d.cpp
+    src/fast-rijndael-1d/fast-rijndael-1d.cpp \
+    ui/dialognew.cpp \
+    ui/mainwindowimpl.cpp \
+    ui/dialogsetmatrix.cpp
 
 OTHER_FILES +=

@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
-#include "rijndael/rijndael.h"
+#include "src/rijndael/rijndael.h"
 
 class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 {
@@ -39,8 +39,6 @@ private:
 	QLabel** stateByteArray;
 	QLabel** previousByteArray;
 	QLabel** nextByteArray;
-
-        void paintEvent(QPaintEvent *);
 	
 public slots:	
 	void on_actionSetInputMatrix_activated();

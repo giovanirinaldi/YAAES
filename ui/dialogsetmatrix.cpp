@@ -1,10 +1,8 @@
-#include "dialogsetmatriximpl.h"
+#include "dialogsetmatrix.h"
 #include "mainwindowimpl.h"
 #include "dialognew.h"
 
-#include "global.h"
-
-#include <QMessageBox>
+#include "src/global.h"
 
 #include <cstdio>
 #include <cstring>

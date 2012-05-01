@@ -1,8 +1,8 @@
 #include "dialognew.h"
 
 #include "mainwindowimpl.h"
-#include "dialogsetmatriximpl.h"
-#include "global.h"
+#include "dialogsetmatrix.h"
+#include "src/global.h"
 
 DialogNew::DialogNew( QWidget * parent, Qt::WFlags f) 
 	: QDialog(parent, f)
