@@ -10,7 +10,6 @@
 #define EXTERN  
 #endif
 
-#include "lines.h"
 #include "global.h"
 #include <QSplitter>
 #include <QMessageBox>

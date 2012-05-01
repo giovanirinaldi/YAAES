@@ -16,16 +16,6 @@ FastRijndael::FastRijndael(KeySize ks, BlockSize bs, Mode mode){
 	_nk = ks/32;
 	_mode = mode;
 	if (_mode != ECB){
-	/*	srand(time(NULL));	
-		_iv = new unsigned char* [4];
-		for (int i = 0; i < 4; i++){
-			_iv[i] = new unsigned char [4];
-		}
-		for (int i = 0; i < 4; i++){
-			for (int j = 0; j < 4; j++){
-				_iv[i][j] = rand()%256;
-			}
-		}*/
 		generateIV();
 	}
 	else{
@@ -41,20 +31,6 @@ FastRijndael::FastRijndael(KeySize ks, BlockSize bs, Mode mode){
 }
 
 FastRijndael::~FastRijndael(){
-	if (_exp_key){
-/*		for (int i = 0; i < _nek; i++){
-			delete[] _exp_key[i];	
-		}*/
-/*		delete[] _exp_key;
-		_exp_key = NULL;*/
-	}
-	if (_mode != ECB){
-/*		for (int i = 0; i < 4; i++){
-			delete[] _iv[i];
-		}	*/
-/*		delete[] _iv;
-		_iv = NULL;*/
-	}
 }
 
 void FastRijndael::cleanUp(){
@@ -67,29 +43,17 @@ void FastRijndael::cleanUp(){
 void FastRijndael::generateIV(){	
 	srand(time(NULL));	
 	_iv = new unsigned char [_nb*4];
-/*	for (int i = 0; i < 4; i++){
-		_iv[i] = new unsigned char [4];
-	}*/
-//	printf("iv: ");
 	for (int i = 0; i < _nb*4; i++){
-//		for (int j = 0; j < 4; j++){
 		_iv[i] = rand()%256;
-	//		printf("%x ", _iv[i][j]);
-//		}
 	}	
-//	printf("\n");
 }
 
 void FastRijndael::getIV(unsigned char* iv){
-//	for (int i = 0; i < 4; i++){
-		memcpy(&iv[0], &_iv[0], _nb*4);
-//	}
+	memcpy(&iv[0], &_iv[0], _nb*4);
 }
 
 void FastRijndael::setIV(unsigned char* iv){
-//	for (int i = 0; i < 4; i++){
 	memcpy(&_iv[0], &iv[0], _nb*4);
-//	}
 }
 
 void FastRijndael::makeKey(unsigned char* key){
@@ -98,76 +62,46 @@ void FastRijndael::makeKey(unsigned char* key){
 	}
 
 	_exp_key = new unsigned char [_nek*4];	
-/*	for (int i = 0; i < _nek; i++){
-		_exp_key[i] = new unsigned char [4];
-	}*/
-//	for (int i = 0; i < _nk; i++){
+
 	memcpy(&_exp_key[0], &key[0], _nk*4);
-/*	for (int i = 0; i < _nk*4; i+=4){
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i], _exp_key[i+1], _exp_key[i+2], _exp_key[i+3]);
-	}*/
-//	}
-/*	for (int i = _nk; i < _nek; i++){
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-		memcpy(&_exp_key[i*4], &_exp_key[(i-1)*4], 4);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-		if (_nk == 8){			// 256 bit key	- one subword only
-			if ((i-4)%8 == 0){	// between each full step (fullstep -> rot,sub,rcon,xor)
-				subWord(&_exp_key[i*4]);
-			}
-		}
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-		if (i % _nk == 0){
-			rotWord(&_exp_key[i*4]);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-			subWord(&_exp_key[i*4]);
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-			_exp_key[i*4] ^= _rcon[i/_nk];	//xor Rcon
-//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-		}
-		for (int j = 0; j < 4; j++){
-			_exp_key[i*4+j] ^= _exp_key[(i-_nk)*4+j];
-		}
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
-	}*/
-	register int imult4;
+
 	for (int i = _nk; i < _nek; i++){
 		imult4 = i*4;
 		//printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		memcpy(&_exp_key[imult4], &_exp_key[(i-1)*4], 4);
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		if (_nk == 8){			// 256 bit key	- one subword only
 			if ((i-4)%8 == 0){	// between each full step (fullstep -> rot,sub,rcon,xor)
 				subWord(&_exp_key[imult4]);
-				printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);	
+//				printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);	
 			}
 		}
 		if (i % _nk == 0){
 			rotWord(&_exp_key[imult4]);
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 			subWord(&_exp_key[imult4]);
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 			_exp_key[imult4] ^= _rcon[i/_nk];	//xor Rcon
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 		}
 		for (int j = 0; j < 4; j++){
 			_exp_key[imult4+j] ^= _exp_key[(i-_nk)*4+j];
 		}
-		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
+//		printf("%.2x%.2x%.2x%.2x\n", _exp_key[i*4], _exp_key[i*4+1], _exp_key[i*4+2], _exp_key[i*4+3]);
 	}
 	_initd = true;
 }
+
+void FastRijndael::getExpKey(unsigned char* expKey){
+	memcpy(expKey, _exp_key, _nek*4);
+}
 		
 void FastRijndael::rotWord(unsigned char* column){
-	unsigned char temp = column[0];
-	memcpy(&column[0], &column[1], 1);
-	memcpy(&column[1], &column[2], 1);
-	memcpy(&column[2], &column[3], 1);
-	column[3] = temp;
-//	column[0] = column[1];
-//	column[1] = column[2];
-//	column[2] = column[3];
-//	column[3] = temp;
+	tempChar = column[0];
+	column[0] = column[1];
+	column[1] = column[2];
+	column[2] = column[3];
+	column[3] = tempChar;
 }
 
 void FastRijndael::subWord(unsigned char* column){
@@ -175,23 +109,16 @@ void FastRijndael::subWord(unsigned char* column){
 	column[1] = _sbox[column[1]];
 	column[2] = _sbox[column[2]];
 	column[3] = _sbox[column[3]];
-//	for (int i = 0; i < 4; i++){
-//		column[i] = _sbox[column[i]];
-//	}
 }
 
 void FastRijndael::subBytes(unsigned char* block){
-	for (int i = 0; i < 16; i++){	// nb*4
-	//	for (int j = 0; j < 4; j++){
-			block[i] = _sbox[block[i]];
-	//	}
-	}
+	block[0] = _sbox[block[0]]; block[1] = _sbox[block[1]]; block[2] = _sbox[block[2]]; block[3] = _sbox[block[3]];
+	block[4] = _sbox[block[4]]; block[5] = _sbox[block[5]]; block[6] = _sbox[block[6]]; block[7] = _sbox[block[7]];
+	block[8] = _sbox[block[8]]; block[9] = _sbox[block[9]]; block[10] = _sbox[block[10]]; block[11] = _sbox[block[11]];
+	block[12] = _sbox[block[12]]; block[13] = _sbox[block[13]]; block[14] = _sbox[block[14]]; block[15] = _sbox[block[15]];
 }
 
 void FastRijndael::subBytesMainDiagonal(unsigned char* block){
-/*	for (int i = 0; i < 4; i++){
-		block[i][i] = _sbox[block[i][i]];
-	}*/
 	block[0] = _sbox[block[0]];
 	block[5] = _sbox[block[5]];
 	block[10] = _sbox[block[10]];
@@ -199,29 +126,19 @@ void FastRijndael::subBytesMainDiagonal(unsigned char* block){
 }
 
 void FastRijndael::invSubBytes(unsigned char* block){
-	for (int i = 0; i < 16; i++){	// nb*4
-//		for (int j = 0; j < 4; j++){
-			block[i] = _inv_sbox[block[i]];
-//		}
-	}
+	block[0] = _inv_sbox[block[0]]; block[1] = _inv_sbox[block[1]]; block[2] = _inv_sbox[block[2]]; block[3] = _inv_sbox[block[3]];
+	block[4] = _inv_sbox[block[4]]; block[5] = _inv_sbox[block[5]]; block[6] = _inv_sbox[block[6]]; block[7] = _inv_sbox[block[7]];
+	block[8] = _inv_sbox[block[8]]; block[9] = _inv_sbox[block[9]]; block[10] = _inv_sbox[block[10]]; block[11] = _inv_sbox[block[11]];
+	block[12] = _inv_sbox[block[12]]; block[13] = _inv_sbox[block[13]]; block[14] = _inv_sbox[block[14]]; block[15] = _inv_sbox[block[15]];
 }
 
 void FastRijndael::shiftRows(unsigned char* block){
-/*	unsigned char* temp = new unsigned char [4];
-	register int imult4;
-	for (int i = 1; i < 4; i++){ //1to_nb	//row 0 do not shift
-		imult4 = i*4;
-		memcpy(temp, &block[imult4], 4);
-		memcpy(&block[imult4], temp+i, 4-i);
-		memcpy(&block[imult4]+(4-i), temp, i);
-	}
-	delete[] temp;*/
-	register unsigned char temp = block[5];
-	block[5] = block[9]; block[9] = block[13]; block[13] = block[1]; block[1] = temp;
-	temp = block[6]; register unsigned char temp1 = block[2];
-	block[2] = block[10]; block[6] = block[14]; block[10] = temp1; block[14] = temp;
-	temp = block[3];
-	block[3] = block[15]; block[15] = block[11]; block[11] = block[7]; block[7] = temp;
+	tempChar = block[5];
+	block[5] = block[9]; block[9] = block[13]; block[13] = block[1]; block[1] = tempChar;
+	tempChar = block[6]; tempChar2 = block[2];
+	block[2] = block[10]; block[6] = block[14]; block[10] = tempChar2; block[14] = tempChar;
+	tempChar = block[3];
+	block[3] = block[15]; block[15] = block[11]; block[11] = block[7]; block[7] = tempChar;
 }
 
 //void FastRijndael::shiftRowsMainDiagonal(unsigned char** block){
@@ -231,145 +148,48 @@ void FastRijndael::shiftRows(unsigned char* block){
 //}
 
 void FastRijndael::invShiftRows(unsigned char* block){
-/*	unsigned char* temp = new unsigned char [4];
-	register int imult4;
-	for (int i = 1; i < 4; i++){	//row 0 do not shift
-		imult4 = i*4;
-		memcpy(temp, &block[imult4], 4);
-		memcpy(&block[imult4], temp+(4-i), i);
-		memcpy(&block[imult4]+i, temp, 4-i);
-	}
-	delete[] temp;*/
-	register unsigned char temp = block[5];
-	block[5] = block[1]; block[1] = block[13]; block[13] = block[9]; block[9] = temp;
-	temp = block[10]; register unsigned char temp1 = block[14];
-	block[10] = block[2]; block[14] = block[6]; block[2] = temp; block[6] = temp1;
-	temp = block[15];
-	block[15] = block[3]; block[3] = block[7]; block[7] = block[11]; block[11] = temp;
+	tempChar = block[5];
+	block[5] = block[1]; block[1] = block[13]; block[13] = block[9]; block[9] = tempChar;
+	tempChar = block[10]; tempChar2 = block[14];
+	block[10] = block[2]; block[14] = block[6]; block[2] = tempChar; block[6] = tempChar2;
+	tempChar = block[15];
+	block[15] = block[3]; block[3] = block[7]; block[7] = block[11]; block[11] = tempChar;
 }
 
 void FastRijndael::mixColumns(unsigned char* block){
-//	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
-//	for (int j = 0; j < 4; j++){
-//		memcpy(temp, &block[0][j], 1);
-//		memcpy(temp+1, &block[1][j], 1);
-//		memcpy(temp+2, &block[2][j], 1);
-//		memcpy(temp+3, &block[3][j], 1);
-//		for (int i = 0; i < 4; i++){
-//			block[i][j] = 0x00;
-//			for (int m = 0; m < 4; m ++){
-///*				if (_mix[i][m] >= 2){
-//					block[i][j] ^= temp[m] << 1;
-//					if (_mix[i][m] == 3){
-//						block[i][j] ^= temp[m];
-//					}
-//					if (temp[m] & 0x80){	// antes, primeiro bit mais signficativo era 1
-//						block[i][j] ^= 0x1b;
-//					}	
-//				}		
-//				else{
-//					block[i][j] ^= temp[m];
-//				}*/
-//				block[i][j] ^= mult(temp[m], _mix[i][m]);
-//			}
-//		}
-//	}
-//	delete[] temp;
-
 	//mult comes from _mix values (2,3,1,1......3,1,1,2);
-	unsigned char* temp = new unsigned char [16];
-	memcpy(temp, block, 16);
-	/*block[0] = mult_table[temp[0]][2] ^ mult_table[temp[1]][3] ^ temp[2] ^ temp[3];
-	block[1] = temp[0] ^ mult_table[temp[1]][2] ^ mult_table[temp[2]][3] ^ temp[3];
-	block[2] = temp[0] ^ temp[1] ^ mult_table[temp[2]][2] ^ mult_table[temp[3]][3];
-	block[3] = mult_table[temp[0]][3] ^ temp[1] ^ temp[2] ^ mult_table[temp[3]][2];
+	memcpy(tempBlock, block, 16);
 	
-	block[4] = mult_table[temp[4]][2] ^ mult_table[temp[5]][3] ^ temp[6] ^ temp[7];
-	block[5] = temp[4] ^ mult_table[temp[5]][2] ^ mult_table[temp[6]][3] ^ temp[7];
-	block[6] = temp[4] ^ temp[5] ^ mult_table[temp[6]][2] ^ mult_table[temp[7]][3];
-	block[7] = mult_table[temp[4]][3] ^ temp[5] ^ temp[6] ^ mult_table[temp[7]][2];
-	
-	block[8] = mult_table[temp[8]][2] ^ mult_table[temp[9]][3] ^ temp[10] ^ temp[11];
-	block[9] = temp[8] ^ mult_table[temp[9]][2] ^ mult_table[temp[10]][3] ^ temp[11];
-	block[10] = temp[8] ^ temp[9] ^ mult_table[temp[10]][2] ^ mult_table[temp[11]][3];
-	block[11] = mult_table[temp[8]][3] ^ temp[9] ^ temp[10] ^ mult_table[temp[11]][2];
+	block[0] = mult_2_table[tempBlock[0]] ^ mult_3_table[tempBlock[1]] ^ tempBlock[2] ^ tempBlock[3];
+	block[1] = tempBlock[0] ^ mult_2_table[tempBlock[1]] ^ mult_3_table[tempBlock[2]] ^ tempBlock[3];
+	block[2] = tempBlock[0] ^ tempBlock[1] ^ mult_2_table[tempBlock[2]] ^ mult_3_table[tempBlock[3]];
+	block[3] = mult_3_table[tempBlock[0]] ^ tempBlock[1] ^ tempBlock[2] ^ mult_2_table[tempBlock[3]];
 
-	block[12] = mult_table[temp[12]][2] ^ mult_table[temp[13]][3] ^ temp[14] ^ temp[15];
-	block[13] = temp[12] ^ mult_table[temp[13]][2] ^ mult_table[temp[14]][3] ^ temp[15];
-	block[14] = temp[12] ^ temp[13] ^ mult_table[temp[14]][2] ^ mult_table[temp[15]][3];
-	block[15] = mult_table[temp[12]][3] ^ temp[13] ^ temp[14] ^ mult_table[temp[15]][2];*/
-	
-	block[0] = mult_2_table[temp[0]] ^ mult_3_table[temp[1]] ^ temp[2] ^ temp[3];
-	block[1] = temp[0] ^ mult_2_table[temp[1]] ^ mult_3_table[temp[2]] ^ temp[3];
-	block[2] = temp[0] ^ temp[1] ^ mult_2_table[temp[2]] ^ mult_3_table[temp[3]];
-	block[3] = mult_3_table[temp[0]] ^ temp[1] ^ temp[2] ^ mult_2_table[temp[3]];
+	block[4] = mult_2_table[tempBlock[4]] ^ mult_3_table[tempBlock[5]] ^ tempBlock[6] ^ tempBlock[7];
+	block[5] = tempBlock[4] ^ mult_2_table[tempBlock[5]] ^ mult_3_table[tempBlock[6]] ^ tempBlock[7];
+	block[6] = tempBlock[4] ^ tempBlock[5] ^ mult_2_table[tempBlock[6]] ^ mult_3_table[tempBlock[7]];
+	block[7] = mult_3_table[tempBlock[4]] ^ tempBlock[5] ^ tempBlock[6] ^ mult_2_table[tempBlock[7]];
 
-	block[4] = mult_2_table[temp[4]] ^ mult_3_table[temp[5]] ^ temp[6] ^ temp[7];
-	block[5] = temp[4] ^ mult_2_table[temp[5]] ^ mult_3_table[temp[6]] ^ temp[7];
-	block[6] = temp[4] ^ temp[5] ^ mult_2_table[temp[6]] ^ mult_3_table[temp[7]];
-	block[7] = mult_3_table[temp[4]] ^ temp[5] ^ temp[6] ^ mult_2_table[temp[7]];
+	block[8] = mult_2_table[tempBlock[8]] ^ mult_3_table[tempBlock[9]] ^ tempBlock[10] ^ tempBlock[11];
+	block[9] = tempBlock[8] ^ mult_2_table[tempBlock[9]] ^ mult_3_table[tempBlock[10]] ^ tempBlock[11];
+	block[10] = tempBlock[8] ^ tempBlock[9] ^ mult_2_table[tempBlock[10]] ^ mult_3_table[tempBlock[11]];
+	block[11] = mult_3_table[tempBlock[8]] ^ tempBlock[9] ^ tempBlock[10] ^ mult_2_table[tempBlock[11]];
 
-	block[8] = mult_2_table[temp[8]] ^ mult_3_table[temp[9]] ^ temp[10] ^ temp[11];
-	block[9] = temp[8] ^ mult_2_table[temp[9]] ^ mult_3_table[temp[10]] ^ temp[11];
-	block[10] = temp[8] ^ temp[9] ^ mult_2_table[temp[10]] ^ mult_3_table[temp[11]];
-	block[11] = mult_3_table[temp[8]] ^ temp[9] ^ temp[10] ^ mult_2_table[temp[11]];
-
-	block[12] = mult_2_table[temp[12]] ^ mult_3_table[temp[13]] ^ temp[14] ^ temp[15];
-	block[13] = temp[12] ^ mult_2_table[temp[13]] ^ mult_3_table[temp[14]] ^ temp[15];
-	block[14] = temp[12] ^ temp[13] ^ mult_2_table[temp[14]] ^ mult_3_table[temp[15]];
-	block[15] = mult_3_table[temp[12]] ^ temp[13] ^ temp[14] ^ mult_2_table[temp[15]];
-
-	delete[] temp;
+	block[12] = mult_2_table[tempBlock[12]] ^ mult_3_table[tempBlock[13]] ^ tempBlock[14] ^ tempBlock[15];
+	block[13] = tempBlock[12] ^ mult_2_table[tempBlock[13]] ^ mult_3_table[tempBlock[14]] ^ tempBlock[15];
+	block[14] = tempBlock[12] ^ tempBlock[13] ^ mult_2_table[tempBlock[14]] ^ mult_3_table[tempBlock[15]];
+	block[15] = mult_3_table[tempBlock[12]] ^ tempBlock[13] ^ tempBlock[14] ^ mult_2_table[tempBlock[15]];
 }
 
 void FastRijndael::mixOneColumn(unsigned char* block, int column){
-/*	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
-	memcpy(temp, &block[0][column], 1);
-	memcpy(temp+1, &block[1][column], 1);
-	memcpy(temp+2, &block[2][column], 1);
-	memcpy(temp+3, &block[3][column], 1);
-	for (int i = 0; i < 4; i++){*/
-/*	tempMixc0 = block[0][column];
-	tempMixc1 = block[1][column];
-	tempMixc2 = block[2][column];
-	tempMixc3 = block[3][column];
-
-	block[0][column] = mult(tempMixc0,0x02) ^ mult(tempMixc1,0x03) ^ tempMixc2 ^ tempMixc3;
-	block[1][column] = tempMixc0 ^ mult(tempMixc1,0x02) ^ mult(tempMixc2,0x3) ^ tempMixc3;
-	block[2][column] = tempMixc0 ^ tempMixc1 ^ mult(tempMixc2,0x02) ^ mult(tempMixc3,0x03);
-	block[3][column] = mult(tempMixc0,0x03) ^ tempMixc1 ^ tempMixc2 ^ mult(tempMixc3,0x02);*/
-
-	register int l0,l1,l2,l3;
 	l0 = column*4; l1 = l0 + 1; l2 = l0 + 2; l3 = l0 + 3;
 
-	unsigned char* temp = new unsigned char [4];
-	memcpy(temp, &block[l0], 4);
+	memcpy(tempColumn, &block[l0], 4);
 
-	block[l0] = mult_2_table[temp[0]] ^ mult_3_table[temp[1]] ^ temp[2] ^ temp[3];
-	block[l1] = temp[0] ^ mult_2_table[temp[1]] ^ mult_3_table[temp[2]] ^ temp[3];
-	block[l2] = temp[0] ^ temp[1] ^ mult_2_table[temp[2]] ^ mult_3_table[temp[3]];
-	block[l3] = mult_3_table[temp[0]] ^ temp[1] ^ temp[2] ^ mult_2_table[temp[3]];
-
-	delete[] temp;
-	
-/*		block[i][column] = 0x00;
-		for (int m = 0; m < 4; m ++){*/
-/*			if (_mix[i][m] >= 2){
-				block[i][column] ^= temp[m] << 1;
-				if (_mix[i][m] == 3){
-					block[i][column] ^= temp[m];
-				}
-				if (temp[m] & 0x80){	// antes, primeiro bit mais signficativo era 1
-					block[i][column] ^= 0x1b;
-				}	
-			}		
-			else{
-				block[i][column] ^= temp[m];
-			}*/
-/*			block[i][column] ^= mult(temp[m], _mix[i][m]);
-		}
-	}
-	delete[] temp;*/
+	block[l0] = mult_2_table[tempColumn[0]] ^ mult_3_table[tempColumn[1]] ^ tempColumn[2] ^ tempColumn[3];
+	block[l1] = tempColumn[0] ^ mult_2_table[tempColumn[1]] ^ mult_3_table[tempColumn[2]] ^ tempColumn[3];
+	block[l2] = tempColumn[0] ^ tempColumn[1] ^ mult_2_table[tempColumn[2]] ^ mult_3_table[tempColumn[3]];
+	block[l3] = mult_3_table[tempColumn[0]] ^ tempColumn[1] ^ tempColumn[2] ^ mult_2_table[tempColumn[3]];
 }
 
 //unsigned char FastRijndael::mult(unsigned char a, unsigned char b) {
@@ -381,57 +201,40 @@ void FastRijndael::mixOneColumn(unsigned char* block, int column){
 //}
 
 void FastRijndael::invMixColumns(unsigned char* block){
-//	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
-//	for (int j = 0; j < 4; j++){
-//		memcpy(temp, &block[0][j], 1);
-//		memcpy(temp+1, &block[1][j], 1);
-//		memcpy(temp+2, &block[2][j], 1);
-//		memcpy(temp+3, &block[3][j], 1);
-//		for (int i = 0; i < 4; i++){
-//			block[i][j] = 0x00;
-//			for (int m = 0; m < 4; m ++){
-//					block[i][j] ^= mult(temp[m], _inv_mix[i][m]);
-//			}
-//		}
-//	}
-//	delete[] temp;
-	
 	//mult comes from _inv_mix values (2,3,1,1......3,1,1,2);
-	unsigned char* temp = new unsigned char [16];
-	memcpy(temp, block, 16);
-	block[0] = mult_14_table[temp[0]] ^ mult_11_table[temp[1]] ^ mult_13_table[temp[2]] ^ mult_9_table[temp[3]];
-	block[1] = mult_9_table[temp[0]] ^ mult_14_table[temp[1]] ^ mult_11_table[temp[2]] ^ mult_13_table[temp[3]];
-	block[2] = mult_13_table[temp[0]] ^ mult_9_table[temp[1]] ^ mult_14_table[temp[2]] ^ mult_11_table[temp[3]];
-	block[3] = mult_11_table[temp[0]] ^ mult_13_table[temp[1]] ^ mult_9_table[temp[2]] ^ mult_14_table[temp[3]];
 
-	block[4] = mult_14_table[temp[4]] ^ mult_11_table[temp[5]] ^ mult_13_table[temp[6]] ^ mult_9_table[temp[7]];
-	block[5] = mult_9_table[temp[4]] ^ mult_14_table[temp[5]] ^ mult_11_table[temp[6]] ^ mult_13_table[temp[7]];
-	block[6] = mult_13_table[temp[4]] ^ mult_9_table[temp[5]] ^ mult_14_table[temp[6]] ^ mult_11_table[temp[7]];
-	block[7] = mult_11_table[temp[4]] ^ mult_13_table[temp[5]] ^ mult_9_table[temp[6]] ^ mult_14_table[temp[7]];
+	memcpy(tempBlock, block, 16);
+	block[0] = mult_14_table[tempBlock[0]] ^ mult_11_table[tempBlock[1]] ^ mult_13_table[tempBlock[2]] ^ mult_9_table[tempBlock[3]];
+	block[1] = mult_9_table[tempBlock[0]] ^ mult_14_table[tempBlock[1]] ^ mult_11_table[tempBlock[2]] ^ mult_13_table[tempBlock[3]];
+	block[2] = mult_13_table[tempBlock[0]] ^ mult_9_table[tempBlock[1]] ^ mult_14_table[tempBlock[2]] ^ mult_11_table[tempBlock[3]];
+	block[3] = mult_11_table[tempBlock[0]] ^ mult_13_table[tempBlock[1]] ^ mult_9_table[tempBlock[2]] ^ mult_14_table[tempBlock[3]];
 
-	block[8] = mult_14_table[temp[8]] ^ mult_11_table[temp[9]] ^ mult_13_table[temp[10]] ^ mult_9_table[temp[11]];
-	block[9] = mult_9_table[temp[8]] ^ mult_14_table[temp[9]] ^ mult_11_table[temp[10]] ^ mult_13_table[temp[11]];
-	block[10] = mult_13_table[temp[8]] ^ mult_9_table[temp[9]] ^ mult_14_table[temp[10]] ^ mult_11_table[temp[11]];
-	block[11] = mult_11_table[temp[8]] ^ mult_13_table[temp[9]] ^ mult_9_table[temp[10]] ^ mult_14_table[temp[11]];
+	block[4] = mult_14_table[tempBlock[4]] ^ mult_11_table[tempBlock[5]] ^ mult_13_table[tempBlock[6]] ^ mult_9_table[tempBlock[7]];
+	block[5] = mult_9_table[tempBlock[4]] ^ mult_14_table[tempBlock[5]] ^ mult_11_table[tempBlock[6]] ^ mult_13_table[tempBlock[7]];
+	block[6] = mult_13_table[tempBlock[4]] ^ mult_9_table[tempBlock[5]] ^ mult_14_table[tempBlock[6]] ^ mult_11_table[tempBlock[7]];
+	block[7] = mult_11_table[tempBlock[4]] ^ mult_13_table[tempBlock[5]] ^ mult_9_table[tempBlock[6]] ^ mult_14_table[tempBlock[7]];
 
-	block[12] = mult_14_table[temp[12]] ^ mult_11_table[temp[13]] ^ mult_13_table[temp[14]] ^ mult_9_table[temp[15]];
-	block[13] = mult_9_table[temp[12]] ^ mult_14_table[temp[13]] ^ mult_11_table[temp[14]] ^ mult_13_table[temp[15]];
-	block[14] = mult_13_table[temp[12]] ^ mult_9_table[temp[13]] ^ mult_14_table[temp[14]] ^ mult_11_table[temp[15]];
-	block[15] = mult_11_table[temp[12]] ^ mult_13_table[temp[13]] ^ mult_9_table[temp[14]] ^ mult_14_table[temp[15]];
+	block[8] = mult_14_table[tempBlock[8]] ^ mult_11_table[tempBlock[9]] ^ mult_13_table[tempBlock[10]] ^ mult_9_table[tempBlock[11]];
+	block[9] = mult_9_table[tempBlock[8]] ^ mult_14_table[tempBlock[9]] ^ mult_11_table[tempBlock[10]] ^ mult_13_table[tempBlock[11]];
+	block[10] = mult_13_table[tempBlock[8]] ^ mult_9_table[tempBlock[9]] ^ mult_14_table[tempBlock[10]] ^ mult_11_table[tempBlock[11]];
+	block[11] = mult_11_table[tempBlock[8]] ^ mult_13_table[tempBlock[9]] ^ mult_9_table[tempBlock[10]] ^ mult_14_table[tempBlock[11]];
 
-	delete[] temp;
+	block[12] = mult_14_table[tempBlock[12]] ^ mult_11_table[tempBlock[13]] ^ mult_13_table[tempBlock[14]] ^ mult_9_table[tempBlock[15]];
+	block[13] = mult_9_table[tempBlock[12]] ^ mult_14_table[tempBlock[13]] ^ mult_11_table[tempBlock[14]] ^ mult_13_table[tempBlock[15]];
+	block[14] = mult_13_table[tempBlock[12]] ^ mult_9_table[tempBlock[13]] ^ mult_14_table[tempBlock[14]] ^ mult_11_table[tempBlock[15]];
+	block[15] = mult_11_table[tempBlock[12]] ^ mult_13_table[tempBlock[13]] ^ mult_9_table[tempBlock[14]] ^ mult_14_table[tempBlock[15]];
+
 }
 
 void FastRijndael::addRoundKey(unsigned char* block){
-//	for (int i = 0; i < 4; i++){
-//		for (int j = 0; j < 4; j++){
-//			block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
-//		}
-//	}
 	register int round_key = _round*16;
-	for (int i = 0; i < 16; i++){
+/*	for (int i = 0; i < 16; i++){
 		block[i] ^= _exp_key[round_key+i];
-	}
+	}*/
+	block[0] ^= _exp_key[round_key]; block[1] ^= _exp_key[round_key+1]; block[2] ^= _exp_key[round_key+2]; block[3] ^= _exp_key[round_key+3]; 
+	block[4] ^= _exp_key[round_key+4]; block[5] ^= _exp_key[round_key+5]; block[6] ^= _exp_key[round_key+6]; block[7] ^= _exp_key[round_key+7]; 
+	block[8] ^= _exp_key[round_key+8]; block[9] ^= _exp_key[round_key+9]; block[10] ^= _exp_key[round_key+10]; block[11] ^= _exp_key[round_key+11]; 
+	block[12] ^= _exp_key[round_key+12]; block[13] ^= _exp_key[round_key+13]; block[14] ^= _exp_key[round_key+14]; block[15] ^= _exp_key[round_key+15]; 
 }
 
 void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
@@ -469,11 +272,13 @@ void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
 }
 
 void FastRijndael::xorBlock(unsigned char* a, unsigned char* b){
-	for (int i = 0; i < 16; i++){
-//		for (int j = 0; j < 4; j++){
+/*	for (int i = 0; i < 16; i++){
 		a[i] ^= b[i];
-//		}
-	}
+	}*/
+	a[0] ^= b[0]; a[1] ^= b[1]; a[2] ^= b[2]; a[3] ^= b[3];
+	a[4] ^= b[4]; a[5] ^= b[5]; a[6] ^= b[6]; a[7] ^= b[7];
+	a[8] ^= b[8]; a[9] ^= b[9]; a[10] ^= b[10]; a[11] ^= b[11];
+	a[12] ^= b[12]; a[13] ^= b[13]; a[14] ^= b[14]; a[15] ^= b[15];	
 }
 
 //params: total blocks, block data pointer (with allocated pad size) and length)
@@ -554,102 +359,6 @@ void FastRijndael::encrypt(unsigned char* block, int &length){
 		delete[] _last_cipher_text;
 		delete[] _next_block_text;
 	}
-//	delete[] _temp_block;
-
-//old
-////	makePadding(block, length, blocks);
-//	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
-//	unsigned char** _temp_block = new unsigned char* [4];
-//	for (int b = 0; b < blocks; b++){
-//		for (int i = 0; i < 4; i++){
-//			memcpy(_temp_shifted_block+i*4, block+i+0+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+1, block+i+4+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+2, block+i+8+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+3, block+i+12+b*16, 1);
-//		}
-//		for (int i = 0; i < 4; i++){
-//			_temp_block[i] = &_temp_shifted_block[i*4];	// tempblock points to tempshiftedblock
-//		}
-//		switch (_mode){
-//			case ECB:	
-//				break;
-//			case CBC:
-//				if (b != 0){	//block is not the first from a chain
-//					xorBlock(_temp_block, _last_cipher_text);
-//				}
-//				else{		//first block
-//					xorBlock(_temp_block, _iv);
-//				}			
-//				break;
-//			case CFB:
-//			case OFB:
-//				if (b != 0){
-//					for (int i = 0; i < 4; i++){
-//						memcpy(_next_block_text[i], _temp_block[i], 4);	
-//						memcpy(_temp_block[i], _last_cipher_text[i], 4);
-//					}
-//				}
-//				else{
-//					for (int i = 0; i < 4; i++){
-//						memcpy(_next_block_text[i], _temp_block[i], 4);	
-//						memcpy(_temp_block[i], _iv[i], 4);
-//					}
-//				}
-//				break;
-//		}
-///*		for (int i = 0; i < 4; i++){
-//			for (int j = 0; j < 4; j++){
-//				printf("%x ", _temp_block[i][j]);fflush(stdout);
-//			}
-//			printf("\n");
-//		}*/
-//		encrypt(_temp_block);
-///*		for (int i = 0; i < 4; i++){
-//			for (int j = 0; j < 4; j++){
-//				printf("%x", _temp_block[i][j]);fflush(stdout);
-//			}
-//			printf("\n");
-//		}*/
-//		switch (_mode){
-//			case ECB:
-//				break;
-//			case CBC:
-//				if (b < blocks-1){	//not last cipher text
-//					for (int i = 0; i < 4; i++){
-//						memcpy(_last_cipher_text[i], _temp_block[i], 4);
-//					}
-//				}
-//				break;
-//			case CFB:
-//				xorBlock(_temp_block, _next_block_text);
-//				for (int i = 0; i < 4; i++){
-//					memcpy(_last_cipher_text[i], _temp_block[i], 4);
-//				}
-//				break;
-//			case OFB:
-//				for (int i = 0; i < 4; i++){
-//					memcpy(_last_cipher_text[i], _temp_block[i], 4);
-//				}
-//				xorBlock(_temp_block, _next_block_text);
-//				break;
-//		}
-//		for (int i = 0; i < 4; i++){					// redo inverse, to original format position
-//			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
-//			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
-//			memcpy(block+i*4+2+b*16, _temp_shifted_block+i+8, 1);
-//			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
-//		}
-//	}
-//	if (_mode != ECB){
-//		for (int i = 0; i < 4; i++){
-//			delete[] _last_cipher_text[i];
-//			delete[] _next_block_text[i];
-//		}
-//		delete[] _last_cipher_text;
-//		delete[] _next_block_text;
-//	}
-//	delete[] _temp_block;
-//	delete[] _temp_shifted_block;
 }
 
 void printBlock(unsigned char* block){
@@ -779,97 +488,6 @@ void FastRijndael::decrypt(unsigned char* block, int &length){
 	}
 //	removePadding(block, length, blocks);
 //	delete[] _temp_block;
-
-//old
-//	unsigned char* _temp_shifted_block = new unsigned char [16];	// do inverse matrix, so pointers for char** are in position
-//	unsigned char** _temp_block = new unsigned char* [4];
-//	for (int b = 0; b < blocks; b++){
-//		for (int i = 0; i < 4; i++){
-//			memcpy(_temp_shifted_block+i*4, block+i+0+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+1, block+i+4+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+2, block+i+8+b*16, 1);
-//			memcpy(_temp_shifted_block+i*4+3, block+i+12+b*16, 1);
-//		}
-//		for (int i = 0; i < 4; i++){
-//			_temp_block[i] = &_temp_shifted_block[i*4];
-//		}
-//		switch (_mode){		// pre block mode
-//			case ECB:
-//				break;
-//			case CBC:
-//				for (int i = 0; i < 4; i++){
-//					memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
-//					memcpy(_next_cipher_text[i], _temp_block[i], 4);
-//				}
-//				break;
-//			case CFB:
-//			case OFB:
-//				if (b != 0){
-//					for (int i = 0; i < 4; i++){
-//						memcpy(_next_cipher_text[i], _temp_block[i], 4);
-//						memcpy(_temp_block[i], _last_cipher_text[i], 4);
-//					}
-//				}
-//				else{
-//					for (int i = 0; i < 4; i++){
-//						memcpy(_next_cipher_text[i], _temp_block[i], 4);
-//						memcpy(_temp_block[i], _iv[i], 4);
-//					}
-//				}
-//				break;
-//		}
-//		switch (_mode){		// decrypt or encrypt
-//			case ECB:
-//			case CBC:
-//				decrypt(_temp_block);
-//				break;
-//			case CFB:
-//			case OFB:
-//				encrypt(_temp_block);
-//				break;
-//		}
-//		switch (_mode){		// pos block mode
-//			case ECB:
-//				break;
-//			case CBC:
-//				if (b != 0){
-//					xorBlock(_temp_block, _last_cipher_text);			
-//				}
-//				else{
-//					xorBlock(_temp_block, _iv);
-//				}
-//				break;
-//			case CFB:
-//				xorBlock(_temp_block, _next_cipher_text);
-//				for (int i = 0; i < 4; i++){
-//					memcpy(_last_cipher_text[i], _next_cipher_text[i], 4);
-//				}
-//				break;
-//			case OFB:				
-//				for (int i = 0; i < 4; i++){
-//					memcpy(_last_cipher_text[i], _temp_block[i], 4);
-//				}
-//				xorBlock(_temp_block, _next_cipher_text);
-//				break;
-//		}
-//		for (int i = 0; i < 4; i++){
-//			memcpy(block+i*4+b*16, _temp_shifted_block+i+0, 1);
-//			memcpy(block+i*4+1+b*16, _temp_shifted_block+i+4, 1);
-//			memcpy(block+i*4+2+b*16, _temp_shifted_block+i+8, 1);
-//			memcpy(block+i*4+3+b*16, _temp_shifted_block+i+12, 1);
-//		}
-//	}
-//	if (_mode != ECB){
-//		for (int i = 0; i < 4; i++){
-//			delete[] _last_cipher_text[i];
-//			delete[] _next_cipher_text[i];
-//		}
-//		delete[] _next_cipher_text;
-//		delete[] _last_cipher_text;
-//	}
-////	removePadding(block, length, blocks);
-//	delete[] _temp_block;
-//	delete[] _temp_shifted_block;
 }
 
 void FastRijndael::decrypt(unsigned char* block){

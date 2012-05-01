@@ -117,6 +117,9 @@ class FastRijndael {
 		void getIV(unsigned char* iv);
 //		void setIV(unsigned char** iv);
 		void setIV(unsigned char* iv);
+
+		//EXPKEY
+		void getExpKey(unsigned char* expKey);
 //	protected:
 		//KEY
 		void rotWord(unsigned char* column);
@@ -149,6 +152,17 @@ class FastRijndael {
 		//GALOIS FIELD OP
 /*		unsigned char mult(unsigned char a, unsigned char b);
 		unsigned char div(unsigned char a, unsigned char b);*/
+
+		
+		int getRound(){			return _round;		}
+		int getNumberColumnsKey(){	return _nk;		}
+		int getNumberColumnsExpKey(){	return _nek; 		}
+		int getNumberColumnsBlock(){	return _nb;		}
+		int getNumberRounds(){		return _nr;		}		
+		Mode getEncryptionMode(){	return _mode;		}
+		KeySize getKeySize(){		return _key_size;	}
+		BlockSize getBlockSize(){	return _block_size;	}
+		
 	private:
 		int _round;
 		unsigned char* _exp_key;	//expanded key
@@ -162,8 +176,12 @@ class FastRijndael {
 		int _nb;	// # of byte columns of block state;
 		int _nr;	// # of rounds; (fixed)
 		bool _initd;	// indicates if class object was properly initialized (with key by makeKey)
-		
-		
+
+		int imult4;			
+		unsigned char tempChar, tempChar2;
+		unsigned char tempBlock[16];
+		unsigned char tempColumn[4];
+		int l0,l1,l2,l3;
 };
 
 

@@ -16,6 +16,7 @@
 
 #include <sys/types.h>
 #include <dirent.h>
+#include <string.h>
 
 using namespace std;
 
@@ -107,6 +108,19 @@ unsigned char gfmult(unsigned char a, unsigned char b) {
 
 unsigned char gfdiv(unsigned char a, unsigned char b) {
 //	return div_table[a][b];
+}
+
+timespec diff(timespec start, timespec end)
+{
+	timespec temp;
+	if ((end.tv_nsec-start.tv_nsec)<0) {
+		temp.tv_sec = end.tv_sec-start.tv_sec-1;
+		temp.tv_nsec = 1000000000+end.tv_nsec-start.tv_nsec;
+	} else {
+		temp.tv_sec = end.tv_sec-start.tv_sec;
+		temp.tv_nsec = end.tv_nsec-start.tv_nsec;
+	}
+	return temp;
 }
 
 int main (int argc, char *argv[]){
@@ -307,6 +321,25 @@ int main (int argc, char *argv[]){
 	closedir(d);
 	return(0);*/
 
+	
+
+/*	unsigned char* column = new unsigned char[8];
+	column[0] = 'a'; column[1] = 'b'; column[2] = 'c'; column[3] = 'd';
+	column[4] = 'e'; column[5] = '1'; column[6] = 'z'; column[7] = 't';
+	
+//	unsigned char temp[8];
+	unsigned char* temp = new unsigned char[8];
+
+	timespec time1, time2;
+	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time1);	
+
+	memcpy(temp, column, 8);	
+
+	clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &time2);
+	cout<<diff(time1,time2).tv_sec<<":"<<diff(time1,time2).tv_nsec<<endl;
+	cout << temp[5];
+	return(0);*/
+
 	FastRijndael rijn(FastRijndael::K256, FastRijndael::B128, FastRijndael::ECB);
 	
 //	unsigned char chKey[17] = "essasenhaehfraca";
@@ -315,7 +348,6 @@ int main (int argc, char *argv[]){
         hexStringToCharString((unsigned char*)chKey, 64, cKey);
 
 	rijn.makeKey(cKey);
-	return(0);
 //	char chIV[33] = "000102030405060708090a0b0c0d0e0f";
 //	char chIV[33] = "80000000000000000000000000000000";
 //	unsigned char* cIV = new unsigned char [16];

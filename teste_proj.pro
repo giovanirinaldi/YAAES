@@ -12,12 +12,14 @@ HEADERS = src/mainwindowimpl.h \
  src/rijndael/rijndael.h \
  src/dialognew.h \
  src/global.h \
-    ui/dialogshowexpkey.h
+    ui/dialogshowexpkey.h \
+    src/fast-rijndael-1d/fast-rijndael-1d.h
 SOURCES = src/mainwindowimpl.cpp \
  src/main.cpp \
  src/dialogsetmatriximpl.cpp \
  src/rijndael/rijndael.cpp \
  src/dialognew.cpp \
-    ui/dialogshowexpkey.cpp
+    ui/dialogshowexpkey.cpp \
+    src/fast-rijndael-1d/fast-rijndael-1d.cpp
 
 OTHER_FILES +=
