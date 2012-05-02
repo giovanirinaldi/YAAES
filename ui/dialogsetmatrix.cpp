@@ -106,10 +106,8 @@ bool DialogSetMatrixImpl::updateTargetMatrix(){
                 return false;
             }
         }
-        for (int i = 0; i < 4; i++){
-                for (int j = 0; j < 4; j++){
-                        targetMatrix[i][j] = hexValue(setByteArray[i+j*4]->text().at(0).toAscii())*16 + hexValue(setByteArray[i+j*4]->text().at(1).toAscii());
-                }
+        for (int i = 0; i < 16; i++){
+            targetMatrix[i]= hexValue(setByteArray[i]->text().at(0).toAscii())*16 + hexValue(setByteArray[i]->text().at(1).toAscii());
         }
         /*if (radioMatrixMode->isChecked()){
 		for (int i = 0; i < 4; i++){
@@ -146,28 +144,26 @@ void DialogSetMatrixImpl::SetWindowTitle(QString title)
 	this->setWindowTitle(title);
 }
 
-void DialogSetMatrixImpl::SetMatrixPointer(unsigned char ** matrix){
+void DialogSetMatrixImpl::SetMatrixPointer(unsigned char * matrix){
 	this->targetMatrix = matrix;
 	char* temp = new char[3];
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){			
-			snprintf(temp, 3, "%.2x", targetMatrix[i][j]);
-			temp[0] = toupper(temp[0]); temp[1] = toupper(temp[1]);
-			setByteArray[i+j*4]->setText(temp);
-                        updateModeFromTo(radioMatrixMode);
-		}
+        for (int i = 0; i < 16; i++){
+            snprintf(temp, 3, "%.2x", targetMatrix[i]);
+            temp[0] = toupper(temp[0]); temp[1] = toupper(temp[1]);
+            setByteArray[i]->setText(temp);
+            updateModeFromTo(radioMatrixMode);
 	}
 	delete temp;
 }
 
-void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySize)
+void DialogSetMatrixImpl::SetMatrixType(MatrixType type, FastRijndael::KeySize keySize)
 {
 	this->type = type;
 	switch (type){
 		case Key:			
-			targetMatrix = keyMatrix;
+                        targetMatrix = keyMatrix;
 			switch (keySize){
-				case Rijndael::K128:
+                                case FastRijndael::K128:
                                         for (int i = 0; i < 16; i++){
                                             setByteArray[i]->setGeometry(setByteArray[i]->x()+60, setByteArray[i]->y(), setByteArray[i]->width(), setByteArray[i]->height());
                                         }
@@ -177,7 +173,7 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
                                         setHexTextBytes->setMaxLength(32);
                                         setCharTextBytes->setMaxLength(16);
 					break;
-				case Rijndael::K192:
+                                case FastRijndael::K192:
                                         for (int i = 0; i < 24; i++){
                                             setByteArray[i]->setGeometry(setByteArray[i]->x()+30, setByteArray[i]->y(), setByteArray[i]->width(), setByteArray[i]->height());
                                         }
@@ -190,7 +186,7 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
                                         setHexTextBytes->setMaxLength(48);
                                         setCharTextBytes->setMaxLength(24);
 					break;
-				case Rijndael::K256:
+                                case FastRijndael::K256:
 					for (int i = 16; i < 32; i++){
 						setByteArray[i]->setVisible(true);
 					}			
@@ -202,7 +198,7 @@ void DialogSetMatrixImpl::SetMatrixType(MatrixType type, Rijndael::KeySize keySi
 			}
 			break;
 		case Input:
-			targetMatrix = inputMatrix;
+                        targetMatrix = inputMatrix;
                         for (int i = 0; i < 16; i++){
                             setByteArray[i]->setGeometry(setByteArray[i]->x()+60, setByteArray[i]->y(), setByteArray[i]->width(), setByteArray[i]->height());
                         }
@@ -224,8 +220,8 @@ void DialogSetMatrixImpl::on_buttonBox_clicked(QAbstractButton* button)
 		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
 		if (parent_main != NULL){	
 			parent_main->initialized = false;
-			parent_main->calculateMatrices();
-			parent_main->updateAllMatrices();
+                        //parent_main->calculateMatrices();
+                //	parent_main->updateAllMatrices();
 		}		
 		this->close();
 	}

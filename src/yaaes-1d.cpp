@@ -125,7 +125,7 @@ timespec diff(timespec start, timespec end)
 
 int main (int argc, char *argv[]){
 
-	/*struct dirent *de = NULL;
+	struct dirent *de = NULL;
 	DIR *d = NULL;
 
 	d = opendir("./kat/");
@@ -319,7 +319,7 @@ int main (int argc, char *argv[]){
 	delete[] chAnsw;
 	delete[] cAnsw;
 	closedir(d);
-	return(0);*/
+	return(0);
 
 	
 
@@ -340,7 +340,7 @@ int main (int argc, char *argv[]){
 	cout << temp[5];
 	return(0);*/
 
-	FastRijndael rijn(FastRijndael::K256, FastRijndael::B128, FastRijndael::ECB);
+/*	FastRijndael rijn(FastRijndael::K256, FastRijndael::B128, FastRijndael::ECB);
 	
 //	unsigned char chKey[17] = "essasenhaehfraca";
 	char chKey[65] = "603deb1015ca71be2b73aef0857d77811f352c073b6108d72d9810a30914dff4";
@@ -367,5 +367,5 @@ int main (int argc, char *argv[]){
 //	rijn.decrypt(cBlock);
 //	printBlock1(cBlock, 16);
 
-	return EXIT_SUCCESS;
+	return EXIT_SUCCESS;*/
 }

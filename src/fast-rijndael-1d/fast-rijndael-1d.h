@@ -79,7 +79,7 @@ class FastRijndael {
 
 		enum Mode { ECB = 1, CBC = 2, CFB = 3, OFB = 4, CTR = 5 };
 		enum KeySize { K128 = 128, K192 = 192, K256 = 256 };
-		enum BlockSize { B128 = 128 };
+		enum BlockSize { B128 = 128 };                
 
 		//CONSTRUCTORS
 		//Rijndael();
@@ -137,7 +137,9 @@ class FastRijndael {
 		void mixOneColumn(unsigned char* block, int column);
 		void invMixColumns(unsigned char* block);
 		void addRoundKey(unsigned char* block);
+                void addNRoundKey(unsigned char* block, int round);
 		void addRoundKeySwappedMCRoundTwo(unsigned char* block);
+                void encryptNRounds(unsigned char* block, int rounds);
 
 		//AUX
 		void xorBlock(unsigned char* a, unsigned char* b);
@@ -162,6 +164,9 @@ class FastRijndael {
 		Mode getEncryptionMode(){	return _mode;		}
 		KeySize getKeySize(){		return _key_size;	}
 		BlockSize getBlockSize(){	return _block_size;	}
+                int getKeySizeInBytes(){        return _nk*4;           }
+                int getExpKeySizeInBytes(){     return _nek*4;          }
+                int getBlockSizeInBytes(){      return _nb*4;           }
 		
 	private:
 		int _round;

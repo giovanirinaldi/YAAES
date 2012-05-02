@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
-#include "src/rijndael/rijndael.h"
+#include "src/fast-rijndael-1d/fast-rijndael-1d.h"
 
 class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 {

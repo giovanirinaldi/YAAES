@@ -4,7 +4,7 @@
 #include <QDialog>
 #include "ui_setmatrix.h"
 
-#include "src/rijndael/rijndael.h"
+#include "src/fast-rijndael-1d/fast-rijndael-1d.h"
 
 class DialogSetMatrixImpl : public QDialog, public Ui::DialogSetMatrix
 {
@@ -18,14 +18,14 @@ public:
 	
 	QLineEdit** setByteArray;
 	
-	unsigned char** targetMatrix;	
+        unsigned char* targetMatrix;
 
         bool editing;
 
 	DialogSetMatrixImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 	void SetWindowTitle(QString title);
-	void SetMatrixType(MatrixType type, Rijndael::KeySize keySize = Rijndael::K128);
-	void SetMatrixPointer(unsigned char** matrix);	
+        void SetMatrixType(MatrixType type, FastRijndael::KeySize keySize = FastRijndael::K128);
+        void SetMatrixPointer(unsigned char* matrix);
 	bool updateTargetMatrix();
         void updateModeFromTo(QRadioButton* source);
 private slots:

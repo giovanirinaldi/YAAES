@@ -237,6 +237,12 @@ void FastRijndael::addRoundKey(unsigned char* block){
 	block[12] ^= _exp_key[round_key+12]; block[13] ^= _exp_key[round_key+13]; block[14] ^= _exp_key[round_key+14]; block[15] ^= _exp_key[round_key+15]; 
 }
 
+void FastRijndael::addNRoundKey(unsigned char* block, int round){
+        for (int i = 0; i < 16; i++){
+            block[i] ^= _exp_key[i+round*16];
+        }
+}
+
 void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
 //	unsigned char** temp_exp_key = new unsigned char*[4];
 //	for (int i = 0; i < 4; i++){
@@ -386,6 +392,27 @@ void FastRijndael::encrypt(unsigned char* block){
 	subBytes(block);
 	shiftRows(block);
 	addRoundKey(block);		
+}
+
+void FastRijndael::encryptNRounds(unsigned char* block, int rounds){
+        if (!_initd){
+                return;
+        }
+        _round = 0;
+        addRoundKey(block);
+        _round++;
+        for (; _round <= rounds; _round++){
+                if (_round == _nr)	break;
+                subBytes(block);
+                shiftRows(block);
+                mixColumns(block);
+                addRoundKey(block);
+        }
+        if (_round == _nr && rounds != _nr-1){
+                subBytes(block);
+                shiftRows(block);
+                addRoundKey(block);
+        }
 }
 
 void FastRijndael::removePadding(unsigned char* block, int &length, int blocks){

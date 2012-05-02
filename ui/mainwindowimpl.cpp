@@ -16,9 +16,10 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
         : QMainWindow(parent, f)
 {
         setupUi(this);
-	rijn = new Rijndael(Rijndael::K128);
-	rijn->ks_temp = Rijndael::K128;
+       // rijn = new FastRijndael(FastRijndael::K128);
+        ks_temp = FastRijndael::K128;
 	maxRounds = 10;
+        maxRoundByKey = 10;
 	forward = true;
 
 	keyByteArray = new QLabel*[32];
@@ -66,35 +67,26 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 }
 
 void MainWindowImpl::Initialize(){
-	//rijn = new Rijndael(rijn->ks_temp);
-	inputMatrix = new unsigned char* [4];
-	outputMatrix = new unsigned char* [4];
-	stateMatrix = new unsigned char* [4];
-	previousMatrix = new unsigned char* [4];
-	nextMatrix = new unsigned char* [4];
-	keyMatrix = new unsigned char* [4];
-	for (int i = 0; i < 4; i++){
-		inputMatrix[i] = new unsigned char [4];
-		outputMatrix[i] = new unsigned char [4];
-		stateMatrix[i] = new unsigned char [4];
-		previousMatrix[i] = new unsigned char [4];
-		nextMatrix[i] = new unsigned char [4];
-		keyMatrix[i] = new unsigned char [4];
-		/*for (int j = 0; j < 4; j++){
-			inputMatrix[i][j] = 0x00;
-			outputMatrix[i][j] = 0x00;
-			stateMatrix[i][j] = 0x00;			
-			keyMatrix[i][j] = 0x00;
-		}*/
-	}
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			keyMatrix[i][j] = i+j*4;
-			inputMatrix[i][j] = ((i+j*4)<<4) + (i+j*4);
-		}
-	}
-	calculateMatrices();
-	updateAllMatrices();	
+        rijn = new FastRijndael(ks_temp);
+        if (!initialized){
+            //rijn = new FastRijndael(rijn->ks_temp);
+            inputMatrix = new unsigned char [rijn->getBlockSizeInBytes()];
+            outputMatrix = new unsigned char [rijn->getBlockSizeInBytes()];
+            stateMatrix = new unsigned char [rijn->getBlockSizeInBytes()];
+            previousMatrix = new unsigned char [rijn->getBlockSizeInBytes()];
+            nextMatrix = new unsigned char [rijn->getBlockSizeInBytes()];
+            keyMatrix = new unsigned char [rijn->getKeySizeInBytes()];
+        }
+
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            inputMatrix[i] = ((i)<<4) + (i);
+        }
+
+        for (int i = 0; i < rijn->getKeySizeInBytes(); i++){
+            keyMatrix[i] = i;
+        }
+        calculateMatrices();
+        updateAllMatrices();
 }
 
 void hexToUpperCaseText(unsigned char &hex, char* temp_string){
@@ -111,8 +103,8 @@ void MainWindowImpl::updateKeyMatrix(){
         for (int i = 4; i < 32; i++){
             keyByteArray[i]->setGeometry(keyByteArray[i-4]->x()+24, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
         }
-	switch (rijn->ks_temp){
-		case Rijndael::K128:
+        switch (rijn->getKeySize()){
+                case FastRijndael::K128:
                         for (int i = 0; i < 16; i++){
                             keyByteArray[i]->setGeometry(keyByteArray[i]->x()+48, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
                         }
@@ -120,12 +112,7 @@ void MainWindowImpl::updateKeyMatrix(){
 				keyByteArray[i]->setVisible(false);
 			}
 			break;
-		case Rijndael::K192:
-                        for (int i = 0; i < 4; i++){
-                            for (int j = 0; j < 6; j++){
-                                    keyMatrix[i][j] = i+j*4;
-                            }
-                        }
+                case FastRijndael::K192:
                         for (int i = 0; i < 24; i++){
                             keyByteArray[i]->setGeometry(keyByteArray[i]->x()+24, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
                         }
@@ -136,12 +123,7 @@ void MainWindowImpl::updateKeyMatrix(){
 				keyByteArray[i]->setVisible(false);
 			}
 			break;
-		case Rijndael::K256:
-                        for (int i = 0; i < 4; i++){
-                            for (int j = 0; j < 8; j++){
-                                    keyMatrix[i][j] = i+j*4;
-                            }
-                        }
+                case FastRijndael::K256:
                         for (int i = 0; i < 32; i++){
 				keyByteArray[i]->setVisible(true);
 			}
@@ -150,44 +132,36 @@ void MainWindowImpl::updateKeyMatrix(){
 			break;
 	}
 	char* temp_string = new char [3];
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(keyMatrix[i][j], temp_string);
-			keyByteArray[i+j*4]->setText(temp_string);
-		}
+        for (int i = 0; i < rijn->getKeySizeInBytes(); i++){
+            hexToUpperCaseText(keyMatrix[i], temp_string);
+            keyByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
 
 void MainWindowImpl::updateInputMatrix(){
 	char* temp_string = new char [3];	
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(inputMatrix[i][j], temp_string);
-			inputByteArray[i+j*4]->setText(temp_string);
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            hexToUpperCaseText(inputMatrix[i], temp_string);
+            inputByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
 
 void MainWindowImpl::updateOutputMatrix(){
 	char* temp_string = new char [3];	
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(outputMatrix[i][j], temp_string);
-			outputByteArray[i+j*4]->setText(temp_string);
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            hexToUpperCaseText(outputMatrix[i], temp_string);
+            outputByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
 
 void MainWindowImpl::updateStateMatrix(){
 	char* temp_string = new char [3];
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(stateMatrix[i][j], temp_string);
-			stateByteArray[i+j*4]->setText(temp_string);
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            hexToUpperCaseText(stateMatrix[i], temp_string);
+            stateByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
@@ -204,11 +178,9 @@ void MainWindowImpl::updatePreviousMatrix(){
                 btnShowPreviousOp->setEnabled(true);
 	}
 	char* temp_string = new char [3];
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(previousMatrix[i][j], temp_string);
-			previousByteArray[i+j*4]->setText(temp_string);
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            hexToUpperCaseText(previousMatrix[i], temp_string);
+            previousByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
@@ -224,12 +196,10 @@ void MainWindowImpl::updateNextMatrix(){
 		buttonNextOp->setEnabled(true);
                 btnShowNextOp->setEnabled(true);
 	}
-	char* temp_string = new char [3];
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			hexToUpperCaseText(nextMatrix[i][j], temp_string);
-			nextByteArray[i+j*4]->setText(temp_string);
-		}
+        char* temp_string = new char [3];
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            hexToUpperCaseText(nextMatrix[i], temp_string);
+            nextByteArray[i]->setText(temp_string);
 	}
 	delete temp_string;
 }
@@ -264,12 +234,10 @@ void MainWindowImpl::disableNextMatrix(){
         btnShowNextOp->setEnabled(false);
 }
 
-void copyMatrix(unsigned char** a, unsigned char** b){
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			b[i][j] = a[i][j];
-		}
-	}
+void copyMatrix(unsigned char* a, unsigned char* b, int size){
+        for (int i = 0; i < size; i++){
+            b[i] = a[i];
+        }
 }
 
 void MainWindowImpl::updateRoundAndOp(){
@@ -292,8 +260,14 @@ void MainWindowImpl::updateRoundAndOp(){
                             labelOperationDesc->setText("MixColumns");
                         }
                         else{
-                            labelPrevOperationDesc->setText("AddRoundKey");
-                            labelOperationDesc->setText("---");
+                            if (maxRounds == maxRoundByKey){
+                                labelPrevOperationDesc->setText("AddRoundKey");
+                                labelOperationDesc->setText("---");
+                            }
+                            else{
+                                labelPrevOperationDesc->setText("ShiftRows");
+                                labelOperationDesc->setText("MixColumns");
+                            }
                         }
 			break;
 		case ARK:
@@ -302,39 +276,45 @@ void MainWindowImpl::updateRoundAndOp(){
                                  labelPrevOperationDesc->setText("MixColumns");
                             }
                             else{
-                                labelPrevOperationDesc->setText("ShiftRows");
+                                if (maxRounds == maxRoundByKey){
+                                    labelPrevOperationDesc->setText("ShiftRows");
+                                }
+                                else{
+                                    labelPrevOperationDesc->setText("MixColumns");
+                                }
                             }
                         }
                         else{
                             labelPrevOperationDesc->setText("---");
                         }
-			labelOperationDesc->setText("AddRoundKey");
+                        labelOperationDesc->setText("AddRoundKey");
 			break;
                 case STOP:
                         break;
 	}
+        printf("%d %d %d\n", round, maxRounds, maxRoundByKey);
+        fflush(stdout);
 }
 
 void MainWindowImpl::calculateMatrices(){
-	if (!initialized){
-		switch (rijn->ks_temp){
-			case Rijndael::K128:
+        if (!initialized){
+                switch (ks_temp){
+                        case FastRijndael::K128:
 				maxRoundByKey = 10; break;				
-			case Rijndael::K192:
+                        case FastRijndael::K192:
 				maxRoundByKey = 12; break;				
-			case Rijndael::K256:
+                        case FastRijndael::K256:
 				maxRoundByKey = 14; break;
 		}
 		rijn->makeKey(keyMatrix);
-		for (int i = 0; i < 4; i++){
-			for (int j = 0; j < 4; j++){
-				outputMatrix[i][j] = inputMatrix[i][j];
-				stateMatrix[i][j] = inputMatrix[i][j];
-				previousMatrix[i][j] = 0x00;
-				disablePreviousMatrix();
-				nextMatrix[i][j] = inputMatrix[i][j];		
-			}
-		}		
+                for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+                    outputMatrix[i] = inputMatrix[i];
+                    stateMatrix[i] = inputMatrix[i];
+                    nextMatrix[i] = inputMatrix[i];
+                    previousMatrix[i] = 0x00;
+                }
+                disablePreviousMatrix();
+
 		round = 0; op = ARK;
 		rijn->encryptNRounds(outputMatrix, maxRounds);
 		rijn->addNRoundKey(nextMatrix, round);
@@ -351,7 +331,7 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case ARK:
 				if (forward){					
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					previousDisabled = false;
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->subBytes(nextMatrix);
@@ -366,14 +346,14 @@ void MainWindowImpl::calculateMatrices(){
 		switch (op){
 			case SB:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
 					op = SR;
 				}
 				else{
-					op = ARK; round--;
-					copyMatrix(stateMatrix, nextMatrix);
+                                        op = ARK; round--;
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					if (round == 0) previousDisabled = true;
 					else rijn->invMixColumns(previousMatrix);
 					rijn->addNRoundKey(stateMatrix, round);				
@@ -381,13 +361,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case SR:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->mixColumns(nextMatrix);
 					op = MC;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
 					op = SB;
@@ -395,13 +375,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case MC:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->mixColumns(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
 					op = ARK;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
 					op = SR;
@@ -409,13 +389,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case ARK:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->subBytes(nextMatrix);
 					op = SB; round++;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invMixColumns(stateMatrix);
 					rijn->invShiftRows(previousMatrix);
 					op = MC;
@@ -429,14 +409,14 @@ void MainWindowImpl::calculateMatrices(){
 		switch (op){
 			case SB:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
 					op = SR;
 				}
 				else{
 					round--;
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invMixColumns(previousMatrix);
 					op = ARK;
@@ -444,13 +424,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case SR:
 				if (forward){					
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
 					op = ARK;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
 					op = SB;
@@ -458,13 +438,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;			
 			case ARK:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					nextDisabled = true;
 					op = MC; //round++;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
 					op = SR;
@@ -473,7 +453,7 @@ void MainWindowImpl::calculateMatrices(){
 			case MC:
 				if (!forward){
 					nextDisabled = false;
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invShiftRows(previousMatrix);
 					op = ARK;
@@ -487,14 +467,14 @@ void MainWindowImpl::calculateMatrices(){
 		switch (op){
 			case SB:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
 					op = SR;
 				}
 				else{
 					op = ARK; round--;
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					if (round == 0) previousDisabled = true;
 					else rijn->invMixColumns(previousMatrix);
 					rijn->addNRoundKey(stateMatrix, round);				
@@ -502,13 +482,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case SR:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->mixColumns(nextMatrix);
 					op = MC;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
 					op = SB;
@@ -516,13 +496,13 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case MC:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->mixColumns(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
 					op = ARK;
 				}
 				else{
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
 					op = SR;
@@ -530,14 +510,14 @@ void MainWindowImpl::calculateMatrices(){
 				break;
 			case ARK:
 				if (forward){
-					copyMatrix(stateMatrix, previousMatrix);
+                                        copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					nextDisabled = true;
 					//rijn->subBytes(nextMatrix);
 					op = STOP;
 				}
 				else{					
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invMixColumns(stateMatrix);
 					rijn->invShiftRows(previousMatrix);
 					op = MC;
@@ -546,7 +526,7 @@ void MainWindowImpl::calculateMatrices(){
 			case STOP:
 				if (!forward){
 					nextDisabled = false;
-					copyMatrix(stateMatrix, nextMatrix);
+                                        copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invMixColumns(previousMatrix);
 					op = ARK;
@@ -556,7 +536,7 @@ void MainWindowImpl::calculateMatrices(){
 	}
 	else{
 		
-	}
+        }
 }
 
 void MainWindowImpl::on_actionNewRijndael_activated()
@@ -589,14 +569,12 @@ void MainWindowImpl::on_buttonNextOp_pressed()
 
 void MainWindowImpl::on_buttonFirstOp_pressed()
 {
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			stateMatrix[i][j] = inputMatrix[i][j];
-			nextMatrix[i][j] = inputMatrix[i][j];
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            stateMatrix[i] = inputMatrix[i];
+            nextMatrix[i] = inputMatrix[i];
 	}	
 	op = ARK; round = 0;
-	rijn->addNRoundKey(nextMatrix, round);
+        rijn->addNRoundKey(nextMatrix, round);
 	previousDisabled = true;
 	nextDisabled = false;
 	updateStateMatrix();
@@ -608,11 +586,9 @@ void MainWindowImpl::on_buttonFirstOp_pressed()
 
 void MainWindowImpl::on_buttonLastOp_pressed()
 {
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){				
-			stateMatrix[i][j] = outputMatrix[i][j];			
-			previousMatrix[i][j] = outputMatrix[i][j];	
-		}
+        for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
+            stateMatrix[i] = outputMatrix[i];
+            previousMatrix[i] = outputMatrix[i];
 	}
 	if (maxRounds == maxRoundByKey)	{
 		op = MC; round = maxRounds;
@@ -620,7 +596,7 @@ void MainWindowImpl::on_buttonLastOp_pressed()
 	else {
 		op = STOP; round = maxRounds;
 	}
-	rijn->addNRoundKey(previousMatrix, round);
+        rijn->addNRoundKey(previousMatrix, round);
 	previousDisabled = false;
 	nextDisabled = true;
 	updateNextMatrix();
@@ -635,7 +611,7 @@ void MainWindowImpl::on_actionSetInputMatrix_activated()
 	DialogSetMatrixImpl* dialogSetInput = new DialogSetMatrixImpl(this); 
 	dialogSetInput->SetWindowTitle("Set Input Matrix");
 	dialogSetInput->SetMatrixType(DialogSetMatrixImpl::Input);
-	dialogSetInput->SetMatrixPointer(inputMatrix);
+        dialogSetInput->SetMatrixPointer(inputMatrix);
 	dialogSetInput->show();
 }
 
@@ -643,8 +619,8 @@ void MainWindowImpl::on_actionSetKeyMatrix_activated()
 {
 	DialogSetMatrixImpl* dialogSetKey = new DialogSetMatrixImpl(this); 
 	dialogSetKey->SetWindowTitle("Set Key Matrix");
-        dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->ks_temp);
-	dialogSetKey->SetMatrixPointer(keyMatrix);
+        dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->getKeySize());
+        dialogSetKey->SetMatrixPointer(keyMatrix);
 	dialogSetKey->show();
 }
 
@@ -676,9 +652,9 @@ void MainWindowImpl::on_actionExit_activated()
 void MainWindowImpl::on_btnShowKey_clicked()
 {
     unsigned char** tempExpKey;
-    tempExpKey = rijn->getExpKey();
+//    tempExpKey = rijn->getExpKey();
     DialogShowExpKey* dialogShowExpKey = new DialogShowExpKey(this);
-    dialogShowExpKey->SetKeySize(rijn->ks_temp);
+    dialogShowExpKey->SetKeySize(rijn->getKeySize());
     dialogShowExpKey->SetExpKeyMatrixPointer(tempExpKey);
     dialogShowExpKey->show();
 }

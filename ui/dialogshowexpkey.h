@@ -4,7 +4,7 @@
 #include <QDialog>
 #include "ui_dialogshowexpkey.h"
 
-#include "../src/rijndael/rijndael.h"
+#include "src/fast-rijndael-1d/fast-rijndael-1d.h"
 
 namespace Ui {
     class DialogShowExpKey;
@@ -18,7 +18,7 @@ public:
     explicit DialogShowExpKey(QWidget *parent = 0);
     ~DialogShowExpKey();
 
-    void SetKeySize(Rijndael::KeySize keySize = Rijndael::K128);
+    void SetKeySize(FastRijndael::KeySize keySize = FastRijndael::K128);
     void SetExpKeyMatrixPointer(unsigned char** matrix);
 
 private:
@@ -28,7 +28,7 @@ private:
            ** k10ByteArray,** k11ByteArray,** k12ByteArray,** k13ByteArray,** k14ByteArray;
     QLabel *** kPartArray;
     unsigned char** expKeyMatrix;
-    Rijndael::KeySize keySize;
+    FastRijndael::KeySize keySize;
 
 
 };

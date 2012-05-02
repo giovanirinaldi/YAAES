@@ -81,21 +81,21 @@ void DialogShowExpKey::SetExpKeyMatrixPointer(unsigned char ** matrix){
         delete temp;
 }
 
-void DialogShowExpKey::SetKeySize(Rijndael::KeySize keySize)
+void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize)
 {
         this->keySize = keySize;
         switch (keySize){
-                case Rijndael::K128:
+                case FastRijndael::K128:
                         ui->groupK11->setVisible(false);
                         ui->groupK12->setVisible(false);
                         ui->groupK13->setVisible(false);
                         ui->groupK14->setVisible(false);
                         break;
-                case Rijndael::K192:
+                case FastRijndael::K192:
                         ui->groupK13->setVisible(false);
                         ui->groupK14->setVisible(false);
                         break;
-                case Rijndael::K256:
+                case FastRijndael::K256:
                         break;
                 default:
                         break;

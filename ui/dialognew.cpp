@@ -8,19 +8,19 @@ DialogNew::DialogNew( QWidget * parent, Qt::WFlags f)
 	: QDialog(parent, f)
 {
 	setupUi(this);
-	switch (rijn->ks_temp){
-		case Rijndael::K128:
+        switch (rijn->getKeySize()){
+                case FastRijndael::K128:
 			radioKey128->click();
 			break;
-		case Rijndael::K192:
+                case FastRijndael::K192:
 			radioKey192->click();
 			break;
-		case Rijndael::K256:
+                case FastRijndael::K256:
 			radioKey256->click();
 			break;
 	}
 	//radioKey128->click();
-	//rijn->ks_temp = Rijndael::K128;
+        ks_temp = FastRijndael::K128;
 	spinBoxNumberRounds->setValue(maxRounds);
 }
 
@@ -31,8 +31,9 @@ void DialogNew::on_buttonBox_clicked(QAbstractButton* button)
 		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
 		if (parent_main != NULL){	
 			parent_main->initialized = false;
-			parent_main->calculateMatrices();
-			parent_main->updateAllMatrices();			
+                        parent_main->Initialize();
+                        //parent_main->calculateMatrices();
+                //	parent_main->updateAllMatrices();
 		}
 		this->close();
 	}
@@ -46,19 +47,19 @@ void DialogNew::on_buttonBox_clicked(QAbstractButton* button)
 void DialogNew::on_radioKey128_clicked()
 {
 	spinBoxNumberRounds->setMaximum(10);
-	rijn->ks_temp = Rijndael::K128;	
+        ks_temp = FastRijndael::K128;
 }
 
 void DialogNew::on_radioKey192_clicked()
 {
 	spinBoxNumberRounds->setMaximum(12);
-	rijn->ks_temp = Rijndael::K192;
+        ks_temp = FastRijndael::K192;
 }
 
 void DialogNew::on_radioKey256_clicked()
 {
 	spinBoxNumberRounds->setMaximum(14);
-	rijn->ks_temp = Rijndael::K256;
+        ks_temp = FastRijndael::K256;
 }
 
 void DialogNew::on_buttonSetInput_clicked()
