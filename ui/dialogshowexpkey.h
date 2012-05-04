@@ -18,8 +18,13 @@ public:
     explicit DialogShowExpKey(QWidget *parent = 0);
     ~DialogShowExpKey();
 
-    void SetKeySize(FastRijndael::KeySize keySize = FastRijndael::K128);
-    void SetExpKeyMatrixPointer(unsigned char** matrix);
+    void SetKeySize(FastRijndael::KeySize keySize = FastRijndael::K128, int numberColumns = 11);
+    void SetExpKeyMatrixPointer(unsigned char* matrix);
+
+private slots:
+    void on_buttonBox_clicked(QAbstractButton* button);
+
+    void on_btnShowKey_clicked();
 
 private:
     Ui::DialogShowExpKey *ui;
@@ -27,8 +32,9 @@ private:
            ** k5ByteArray, ** k6ByteArray, ** k7ByteArray, ** k8ByteArray, ** k9ByteArray,
            ** k10ByteArray,** k11ByteArray,** k12ByteArray,** k13ByteArray,** k14ByteArray;
     QLabel *** kPartArray;
-    unsigned char** expKeyMatrix;
+    unsigned char* expKeyMatrix;
     FastRijndael::KeySize keySize;
+    int numberColumns;
 
 
 };

@@ -64,26 +64,25 @@ DialogShowExpKey::~DialogShowExpKey()
     delete ui;
 }
 
-void DialogShowExpKey::SetExpKeyMatrixPointer(unsigned char ** matrix){
+void DialogShowExpKey::SetExpKeyMatrixPointer(unsigned char * matrix){
         this->expKeyMatrix = matrix;
         QLabel** kNow;
         char* temp = new char[3];
         for (int k = 0; k < 11; k++){
             kNow = kPartArray[k];
-            for (int i = 0; i < 4; i++){
-                    for (int j = 0; j < 4; j++){
-                            snprintf(temp, 3, "%.2x", expKeyMatrix[i][j+k*4]);
-                            temp[0] = toupper(temp[0]); temp[1] = toupper(temp[1]);
-                            kNow[i+j*4]->setText(temp);
-                    }
+            for (int i = 0; i < 16; i++){
+                snprintf(temp, 3, "%.2x", expKeyMatrix[i+k*16]);
+                temp[0] = toupper(temp[0]); temp[1] = toupper(temp[1]);
+                kNow[i]->setText(temp);
             }
         }
         delete temp;
 }
 
-void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize)
+void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize, int numberColumns)
 {
         this->keySize = keySize;
+        this->numberColumns = numberColumns;
         switch (keySize){
                 case FastRijndael::K128:
                         ui->groupK11->setVisible(false);
@@ -100,4 +99,15 @@ void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize)
                 default:
                         break;
         }
+}
+
+void DialogShowExpKey::on_buttonBox_clicked(QAbstractButton* button)
+{
+    delete[] this->expKeyMatrix;
+}
+
+
+void DialogShowExpKey::on_btnShowKey_clicked()
+{
+
 }

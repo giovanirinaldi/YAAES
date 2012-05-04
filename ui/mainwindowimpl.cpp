@@ -136,7 +136,7 @@ void MainWindowImpl::updateKeyMatrix(){
             hexToUpperCaseText(keyMatrix[i], temp_string);
             keyByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updateInputMatrix(){
@@ -145,7 +145,7 @@ void MainWindowImpl::updateInputMatrix(){
             hexToUpperCaseText(inputMatrix[i], temp_string);
             inputByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updateOutputMatrix(){
@@ -154,7 +154,7 @@ void MainWindowImpl::updateOutputMatrix(){
             hexToUpperCaseText(outputMatrix[i], temp_string);
             outputByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updateStateMatrix(){
@@ -163,7 +163,7 @@ void MainWindowImpl::updateStateMatrix(){
             hexToUpperCaseText(stateMatrix[i], temp_string);
             stateByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updatePreviousMatrix(){
@@ -182,7 +182,7 @@ void MainWindowImpl::updatePreviousMatrix(){
             hexToUpperCaseText(previousMatrix[i], temp_string);
             previousByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updateNextMatrix(){
@@ -201,7 +201,7 @@ void MainWindowImpl::updateNextMatrix(){
             hexToUpperCaseText(nextMatrix[i], temp_string);
             nextByteArray[i]->setText(temp_string);
 	}
-	delete temp_string;
+        delete[] temp_string;
 }
 
 void MainWindowImpl::updateAllMatrices(){
@@ -244,17 +244,20 @@ void MainWindowImpl::updateRoundAndOp(){
 	char* temp = new char[3];
 	snprintf(temp, 3, "%d", round);
 	labelRoundNumber->setText(temp);
-	delete temp;
+        delete[] temp;
 	switch (op){
                 case SB:
+                        printf("sb ");
                         labelPrevOperationDesc->setText("AddRoundKey");
 			labelOperationDesc->setText("SubBytes");
 			break;
 		case SR:
+                        printf("sr ");
                         labelPrevOperationDesc->setText("SubBytes");
 			labelOperationDesc->setText("ShiftRows");
 			break;                        
                 case MC:
+                        printf("mc ");
                         if (round != maxRounds){
                             labelPrevOperationDesc->setText("ShiftRows");
                             labelOperationDesc->setText("MixColumns");
@@ -270,7 +273,8 @@ void MainWindowImpl::updateRoundAndOp(){
                             }
                         }
 			break;
-		case ARK:
+		case ARK:            
+                        printf("ark ");
                         if (round != 0){
                             if (round != maxRounds){
                                  labelPrevOperationDesc->setText("MixColumns");
@@ -290,6 +294,9 @@ void MainWindowImpl::updateRoundAndOp(){
                         labelOperationDesc->setText("AddRoundKey");
 			break;
                 case STOP:
+                        labelPrevOperationDesc->setText("AddRoundKey");
+                        labelOperationDesc->setText("---");
+                        printf("stop ");
                         break;
 	}
         printf("%d %d %d\n", round, maxRounds, maxRoundByKey);
@@ -646,15 +653,16 @@ void MainWindowImpl::on_btnShowNextOp_clicked()
 
 void MainWindowImpl::on_actionExit_activated()
 {
+        rijn->cleanUp();
 	exit(0);
 }
 
 void MainWindowImpl::on_btnShowKey_clicked()
 {
-    unsigned char** tempExpKey;
-//    tempExpKey = rijn->getExpKey();
+    unsigned char* tempExpKey = new unsigned char [rijn->getExpKeySizeInBytes()];
+    rijn->getExpKey(tempExpKey);
     DialogShowExpKey* dialogShowExpKey = new DialogShowExpKey(this);
-    dialogShowExpKey->SetKeySize(rijn->getKeySize());
+    dialogShowExpKey->SetKeySize(rijn->getKeySize(), rijn->getNumberColumnsExpKey());
     dialogShowExpKey->SetExpKeyMatrixPointer(tempExpKey);
     dialogShowExpKey->show();
 }
