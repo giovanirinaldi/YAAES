@@ -2269,23 +2269,10 @@
     <string notr="true">image: url(:/images/res/xor.png);</string>
    </property>
   </widget>
-  <widget class="QWidget" name="widget_5" native="true">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>190</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/images/res/arrowright.png);</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="widget_6" native="true">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>330</x>
      <y>190</y>
      <width>31</width>
      <height>21</height>
@@ -2457,6 +2444,19 @@
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>190</y>
+     <width>31</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/images/res/arrowright.png);</string>
    </property>
   </widget>
  </widget>

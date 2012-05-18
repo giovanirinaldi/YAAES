@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-#include "rijndael.h"
+#include "../rijndael/rijndael.h"
 
 int mul(int x, int y) {
     int r = 0;
@@ -137,8 +137,7 @@ int main (int argc, char *argv[]){
 		memcpy(b_plain[i], &b_plain_char[i*4], 4);
 	}
 	r.encryptOneRound(b_plain);	
-
-
+	exit(0);
 	//copy the original, so we have plain and cipher texts in hexa
 	unsigned char** a_cipher = a_plain;
 	unsigned char** b_cipher = b_plain;
@@ -210,10 +209,11 @@ int main (int argc, char *argv[]){
 			for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
 				for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
 					if (((x^y) == a) && ((_sbox[x]^_sbox[y]) == b)){
-//						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
+						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
 						pos[i][j][0] = x;
 						pos[i][j][1] = y;						
 						count++;
+//						printf("%d %d %d %.2x %.2x\n", count, i, j, x, y);
 					}
 					if (y == 0xff)	break;
 				}
@@ -221,6 +221,7 @@ int main (int argc, char *argv[]){
 			}
 		}
 	}
+	printf("%d\n", count);
 
 	Rijndael testr;
 	unsigned char** testkey = new unsigned char*[4];
@@ -288,14 +289,33 @@ int main (int argc, char *argv[]){
 
 		r.makeKey(testkey);
 
-/*		for (int k = 0; k < 4; k++){
-			for (int j = 0; j < 4; j++){
-				printf("%.2x ", testkey[k][j]);
+		if ( 
+			testkey[0][0] == 0x00 && testkey[1][0] == 0x01 && testkey[2][0] == 0x02 && testkey[3][0] == 0x03 &&
+			testkey[0][1] == 0x04 && testkey[1][1] == 0x05 && testkey[2][1] == 0x06 && testkey[3][1] == 0x07 &&
+			testkey[0][2] == 0x08 && testkey[1][2] == 0x09 && testkey[2][2] == 0x0a && testkey[3][2] == 0x0b &&
+			testkey[0][3] == 0x0c && testkey[1][3] == 0x0d && testkey[2][3] == 0x0e && testkey[3][3] == 0x0f )
+		{
+			for (int k = 0; k < 4; k++){
+				for (int j = 0; j < 4; j++){
+					printf("%.2x ", testkey[k][j]);
+				}
+				printf("\n");
 			}
-			printf("\n");
-		}
-		sleep(2);*/
+
+			for (int k = 0; k < 4; k++){
+				for (int j = 0; j < 4; j++){
+					printf("%.2x ", temp_plain[k][j]);
+				}
+				printf("\n");
+			}
 		r.encryptOneRound(temp_plain);	
+		
+			for (int k = 0; k < 4; k++){
+				for (int j = 0; j < 4; j++){
+					printf("%.2x ", temp_plain[k][j]);
+				}
+				printf("\n");
+			}
 		if (isEqual(temp_plain, a_cipher)){
 			printf("key found at:\n");
 			for (int k = 0; k < 4; k++){
@@ -306,6 +326,7 @@ int main (int argc, char *argv[]){
 			}	
 			break;
 		}
+	}
 	}
 //	printf("count = %d\n", count);
 

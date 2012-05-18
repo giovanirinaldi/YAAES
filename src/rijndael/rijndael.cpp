@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <ctime>
 
-#include <QDebug>
+//#include <QDebug>
 
 #define DEBUG 1
 #define STDOUT stdout
@@ -130,7 +130,7 @@ void Rijndael::makeKey(unsigned char** key){
 //	if (key == NULL){
 //		return;
 //	}
-	_exp_key = new unsigned char* [4];
+/*	_exp_key = new unsigned char* [4];
 	for (int i = 0; i < 4; i++){
 		_exp_key[i] = new unsigned char [_nek];
 	}
@@ -164,9 +164,9 @@ void Rijndael::makeKey(unsigned char** key){
 			_exp_key[i][j] ^= _exp_key[i][j-_nk];
                 }
 	}	
-	_initd = true;
+	_initd = true;*/
 	
-	/*_exp_key = new unsigned char* [_nek];	
+	_exp_key = new unsigned char* [_nek];	
 	for (int i = 0; i < _nek; i++){
 		_exp_key[i] = new unsigned char [4];
 	}
@@ -188,9 +188,9 @@ void Rijndael::makeKey(unsigned char** key){
 		for (int j = 0; j < 4; j++){
 			_exp_key[i][j] ^= _exp_key[i-_nk][j];
 		}
-//		printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
+		printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
 	}
-	_initd = true;*/
+	_initd = true;
 }
 		
 void Rijndael::rotWord(unsigned char* column){
