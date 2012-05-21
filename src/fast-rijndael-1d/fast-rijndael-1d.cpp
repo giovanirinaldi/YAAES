@@ -125,6 +125,13 @@ void FastRijndael::subBytesMainDiagonal(unsigned char* block){
 	block[15] = _sbox[block[15]];
 }
 
+void FastRijndael::subBytesFirstColumn(unsigned char* block){
+	block[0] = _sbox[block[0]];
+	block[1] = _sbox[block[1]];
+	block[2] = _sbox[block[2]];
+	block[3] = _sbox[block[3]];
+}
+
 void FastRijndael::invSubBytes(unsigned char* block){
 	block[0] = _inv_sbox[block[0]]; block[1] = _inv_sbox[block[1]]; block[2] = _inv_sbox[block[2]]; block[3] = _inv_sbox[block[3]];
 	block[4] = _inv_sbox[block[4]]; block[5] = _inv_sbox[block[5]]; block[6] = _inv_sbox[block[6]]; block[7] = _inv_sbox[block[7]];
@@ -179,6 +186,16 @@ void FastRijndael::mixColumns(unsigned char* block){
 	block[13] = tempBlock[12] ^ mult_2_table[tempBlock[13]] ^ mult_3_table[tempBlock[14]] ^ tempBlock[15];
 	block[14] = tempBlock[12] ^ tempBlock[13] ^ mult_2_table[tempBlock[14]] ^ mult_3_table[tempBlock[15]];
 	block[15] = mult_3_table[tempBlock[12]] ^ tempBlock[13] ^ tempBlock[14] ^ mult_2_table[tempBlock[15]];
+}
+
+
+void FastRijndael::mixFirstColumn(unsigned char* block){
+	memcpy(tempColumn, &block[0], 4);
+
+	block[0] = mult_2_table[tempColumn[0]] ^ mult_3_table[tempColumn[1]] ^ tempColumn[2] ^ tempColumn[3];
+	block[1] = tempColumn[0] ^ mult_2_table[tempColumn[1]] ^ mult_3_table[tempColumn[2]] ^ tempColumn[3];
+	block[2] = tempColumn[0] ^ tempColumn[1] ^ mult_2_table[tempColumn[2]] ^ mult_3_table[tempColumn[3]];
+	block[3] = mult_3_table[tempColumn[0]] ^ tempColumn[1] ^ tempColumn[2] ^ mult_2_table[tempColumn[3]];
 }
 
 void FastRijndael::mixOneColumn(unsigned char* block, int column){
@@ -273,12 +290,6 @@ void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
 	invMixColumns(temp_exp_key);
 	for (int i = 0; i < 16; i++){
 		block[i] ^= temp_exp_key[i];
-	}
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			printf("%.2x", temp_exp_key[j*4+i]);
-		}
-		printf("\n");
 	}
 	delete[] temp_exp_key;
 }

@@ -129,12 +129,14 @@ class FastRijndael {
 		//BLOCK
 		void subBytes(unsigned char* block);
 		void subBytesMainDiagonal(unsigned char* block);
+		void subBytesFirstColumn(unsigned char* block);
 		void invSubBytes(unsigned char* block);
 
 		void shiftRows(unsigned char* block);
 		void shiftRowsMainDiagonal(unsigned char* block);
 		void invShiftRows(unsigned char* block);
 		void mixColumns(unsigned char* block);
+		void mixFirstColumn(unsigned char* block);
 		void mixOneColumn(unsigned char* block, int column);
 		void invMixColumns(unsigned char* block);
 		void addRoundKey(unsigned char* block);
