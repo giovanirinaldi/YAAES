@@ -141,11 +141,11 @@ void FastRijndael::shiftRows(unsigned char* block){
 	block[3] = block[15]; block[15] = block[11]; block[11] = block[7]; block[7] = tempChar;
 }
 
-//void FastRijndael::shiftRowsMainDiagonal(unsigned char** block){
-//	block[1][0] = block[1][1];
-//	block[2][0] = block[2][2];
-//	block[3][0] = block[3][3];
-//}
+void FastRijndael::shiftRowsMainDiagonal(unsigned char* block){
+	block[1] = block[5];
+	block[2] = block[10];
+	block[3] = block[15];
+}
 
 void FastRijndael::invShiftRows(unsigned char* block){
 	tempChar = block[5];
@@ -274,6 +274,12 @@ void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
 	for (int i = 0; i < 16; i++){
 		block[i] ^= temp_exp_key[i];
 	}
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 4; j++){
+			printf("%.2x", temp_exp_key[j*4+i]);
+		}
+		printf("\n");
+	}
 	delete[] temp_exp_key;
 }
 
@@ -367,14 +373,14 @@ void FastRijndael::encrypt(unsigned char* block, int &length){
 	}
 }
 
-void printBlock(unsigned char* block){
+/*void printBlock(unsigned char* block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
 			printf("%.2x ", block[j*4+i]);
 		}
 		printf("\n");
 	}
-}
+}*/
 
 void FastRijndael::encrypt(unsigned char* block){
 	if (!_initd){
