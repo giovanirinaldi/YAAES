@@ -3,8 +3,9 @@
 
 #include <cstdlib>
 //#include "res/tables.h"
-#include "../res/new_mult_tables.h"
+//#include "../res/new_mult_tables.h"
 #include "../res/spec_mult_table.h"
+#include "../res/spec_div_table.h"
 
 static const int _sbox[256] = 
  {0x63 ,0x7c ,0x77 ,0x7b ,0xf2 ,0x6b ,0x6f ,0xc5 ,0x30 ,0x01 ,0x67 ,0x2b ,0xfe ,0xd7 ,0xab ,0x76

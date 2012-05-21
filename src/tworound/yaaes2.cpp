@@ -14,6 +14,12 @@ using namespace std;
 #include "../res/x_sbox_diff_coded.h"
 #include "../res/y_sbox_diff_coded.h"
 #include "../res/new_div_tables.h"
+	
+
+unsigned char* k1_12_1;
+unsigned char* k1_12_2;
+unsigned char* k1_13_1;
+unsigned char* k1_13_2;
 
 unsigned char hexValue(unsigned char &hex){
 	if (hex >= 48 && hex <= 57){
@@ -61,15 +67,6 @@ void diff(unsigned char* block1, unsigned char* block2, unsigned char* dest){
 	}
 }
 
-unsigned char gfmult(unsigned char a, unsigned char b) {
-        return mult_table[a][b];
-}
-
-unsigned char gfdiv(unsigned char a, unsigned char b) {
-        return div_table[a][b];
-}
-
-
 void solveMixColumnFor2RoundPhase2(unsigned char * k2, unsigned char * u2){
         //both c0, c1 have 4 positions (each c is one column with 4 lines)
         //c0 is before, c1 is after mixcolumn
@@ -80,12 +77,50 @@ void solveMixColumnFor2RoundPhase2(unsigned char * k2, unsigned char * u2){
 //      unsigned char tempb = 0x04;             //0x01 ^ gfmult(0x03, 0x03);                    //fator da variavel b0 a ser resolvida
 //      templeft ^= tempa ^ tempc;
 //        u2[1] = gfdiv((gfmult(k2[0], 0x03) ^ k2[2]) ^ (gfmult(u2[0], 0x06)  ^ u2[0]) ^ (gfmult(u2[2], 0x03) ^ gfmult(u2[2], 0x02)), 0x04); //templeft, tempb
-	printf("%.2x %.2x %.2x %.2x %.2x %.2x %.2x\n", mult_3_table[k2[0]], k2[2], u2[0], gfmult(u2[0], 0x06), mult_3_table[u2[2]], mult_2_table[u2[2]], u2[2]);
-	printf("%.2x %.2x %.2x %.2x %.2x %.2x %.2x\n", gfmult(k2[0], 0x03), k2[2], u2[0], gfmult(u2[0], 0x06), mult_3_table[u2[2]], mult_2_table[u2[2]], u2[2]);
-	u2[1] = gfdiv(mult_3_table[k2[0]] ^ k2[2] ^ gfmult(u2[0], 0x06)  ^ u2[0] ^ mult_3_table[u2[2]] ^ mult_2_table[u2[2]], 0x04); //templeft, tempb
-        u2[3] = k2[0] ^ gfmult(u2[0], 0x02) ^ gfmult(u2[1], 0x03) ^ u2[2];
-        k2[1] = u2[0] ^ gfmult(u2[1], 0x02) ^ gfmult(u2[2], 0x03) ^ u2[3];
-        k2[3] = gfmult(u2[0], 0x03) ^ u2[1] ^ u2[2] ^ gfmult(u2[3], 0x02);
+	//printf("%.2x %.2x %.2x %.2x\n", k2[0], k2[2], u2[0], u2[2]);
+	//printf("%.2x %.2x %.2x %.2x %.2x %.2x %.2x\n", mult_3_table[k2[0]], k2[2], u2[0], gfmult(u2[0], 0x06), mult_3_table[u2[2]], mult_2_table[u2[2]], u2[2]);
+	//printf("%.2x %.2x %.2x %.2x %.2x %.2x %.2x\n", gfmult(k2[0], 0x03), k2[2], u2[0], gfmult(u2[0], 0x06), mult_3_table[u2[2]], mult_2_table[u2[2]], u2[2]);
+	u2[1] = div_4_table[mult_3_table[k2[0]] ^ k2[2] ^ mult_6_table[u2[0]]  ^ u2[0] ^ mult_3_table[u2[2]] ^ mult_2_table[u2[2]]]; //templeft, tempb
+        u2[3] = k2[0] ^ mult_2_table[u2[0]] ^ mult_3_table[u2[1]]^ u2[2];
+        k2[1] = u2[0] ^ mult_2_table[u2[1]] ^ mult_3_table[u2[2]] ^ u2[3];
+        k2[3] = mult_3_table[u2[0]]^ u2[1] ^ u2[2] ^ mult_2_table[u2[3]];
+}
+
+bool sboxDiffsMatches(unsigned char** tempBlock_arrays, unsigned char* tempBlockDiff12, unsigned char* tempBlockDiff13, unsigned char * invCipherDiff12, unsigned char* invCipherDiff13, unsigned char* k1, int from, int to){
+	for (int i = from; i <= to; i++){
+		//aqui começa a comparar os pares p0,p1 e p0,p2 com os possiveis k1 de cada um	
+		//	poss_x = x_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
+		unsigned char poss_x = x_sbox_diff[tempBlockDiff12[i]*256 + invCipherDiff12[i]];
+		//	poss_x = y_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
+		//	poss_x = y_sbox_diff[tempBlockDiff12[0]*256 + invCipherDiff12[0]];
+		k1_12_1[i] = poss_x ^ tempBlock_arrays[0][i];
+		k1_12_2[i] = poss_x ^ tempBlock_arrays[1][i];
+		poss_x = x_sbox_diff[tempBlockDiff13[i]*256 + invCipherDiff13[i]];
+		k1_13_1[i] = poss_x ^ tempBlock_arrays[0][i];
+		k1_13_2[i] = poss_x ^ tempBlock_arrays[2][i];
+		if (k1_12_1[i] == k1_13_1[i]|| k1_12_1[i] == k1_13_2[i] || k1_12_2[i] == k1_13_1[i] || k1_12_2[i] == k1_13_2[i]){
+			if (k1_12_1[i] == k1_13_1[i]){
+				k1[i] = k1_12_1[i];
+				continue;
+			}
+			if (k1_12_1[i] == k1_13_2[i]){
+				k1[i] = k1_12_1[i];
+				continue;
+			}
+			if (k1_12_2[i] == k1_13_1[i]){
+				k1[i] = k1_12_2[i];
+				continue;
+			}
+			if (k1_12_2[i] == k1_13_2[i]){
+				k1[i] = k1_12_2[i];
+				continue;
+			}
+		}
+		else{
+			return false;
+		}
+	}
+	return true;
 }
 
 void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigned char** ciphertexts, int num_texts){
@@ -134,10 +169,10 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 	unsigned char* k2 = new unsigned char[16];
 	unsigned char* u2 = new unsigned char[16];
 
-	unsigned char* k1_12_1 = new unsigned char[16];
-	unsigned char* k1_12_2 = new unsigned char[1];
-	unsigned char* k1_13_1 = new unsigned char[16];
-	unsigned char* k1_13_2 = new unsigned char[16];
+	k1_12_1 = new unsigned char[16];
+	k1_12_2 = new unsigned char[16];
+	k1_13_1 = new unsigned char[16];
+	k1_13_2 = new unsigned char[16];
 	
 	for (int i = 0; i < 16; i++){
 		tempBlock1[i] = 0x00;
@@ -152,12 +187,13 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 	}
 	
 	int fi = 0;
+	int count = 0;
 	register unsigned char poss_x;
-	for (register short int m = 0; m < 1; m++){            //k0,0
+	for (register short int m = 0; m < 16; m++){            //k0,0
                 k0[0] = m;
-                for (register short int n = 0; n < 6; n++){    //k0,5
+                for (register short int n = 0; n < 16; n++){    //k0,5
                         k0[5] = n;
-                        for (register short int o = 0; o < 11; o++){     //k0,10
+                        for (register short int o = 0; o < 16; o++){     //k0,10
                                 k0[10] = o;
                                 for (register short int p = 0; p < 16; p++){     //k0,15 
                                         k0[15] = p;
@@ -172,36 +208,9 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 					diff(tempBlock_arrays[0], tempBlock_arrays[2], tempBlockDiff13);
 	
 
-					//aqui começa a comparar os pares p0,p1 e p0,p2 com os possiveis k1 de cada um	
-				//	poss_x = x_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
-					poss_x = x_sbox_diff[tempBlockDiff12[0]*256 + invCipherDiff12[0]];
-				//	poss_x = y_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
-				//	poss_x = y_sbox_diff[tempBlockDiff12[0]*256 + invCipherDiff12[0]];
-					k1_12_1[0] = poss_x ^ tempBlock_arrays[0][0];
-					k1_12_2[0] = poss_x ^ tempBlock_arrays[1][0];
-					poss_x = x_sbox_diff[tempBlockDiff13[0]*256 + invCipherDiff13[0]];
-					k1_13_1[0] = poss_x ^ tempBlock_arrays[0][0];
-					k1_13_2[0] = poss_x ^ tempBlock_arrays[2][0];
-					if (k1_12_1[0] == k1_13_1[0]|| k1_12_1[0] == k1_13_2[0] || k1_12_2[0] == k1_13_1[0] || k1_12_2[0] == k1_13_2[0]){
-						if (k1_12_1[0] == k1_13_1[0]){
-							k1[0] = k1_12_1[0];
-						}
-						if (k1_12_1[0] == k1_13_2[0]){
-							k1[0] = k1_12_1[0];
-						}
-						if (k1_12_2[0] == k1_13_1[0]){
-							k1[0] = k1_12_2[0];
-						}
-						if (k1_12_2[0] == k1_13_2[0]){
-							k1[0] = k1_12_2[0];
-						}
-					}
-					else{
-						continue;
-					}	
-
+					if (!sboxDiffsMatches(tempBlock_arrays, tempBlockDiff12, tempBlockDiff13, invCipherDiff12, invCipherDiff13, k1, 0, 3)) continue;
 					
-					poss_x = x_sbox_diff[tempBlockDiff12[1]*256 + invCipherDiff12[1]];
+					/*poss_x = x_sbox_diff[tempBlockDiff12[1]*256 + invCipherDiff12[1]];
 					k1_12_1[1] = poss_x ^ tempBlock_arrays[0][1];
 					k1_12_2[1] = poss_x ^ tempBlock_arrays[1][1];
 					poss_x = x_sbox_diff[tempBlockDiff13[1]*256 + invCipherDiff13[1]];
@@ -271,21 +280,21 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 					}
 					else{
 						continue;
-					}
+					}*/
 					//fim da procura pela primeira coluna de k1
 
 					u2[0] = (_sbox[(tempBlock_arrays[0][0]^k1[0])] ^ invCipher1[0]);
 					u2[13] = (_sbox[(tempBlock_arrays[0][1]^k1[1])] ^ invCipher1[13]);
 					u2[10] = (_sbox[(tempBlock_arrays[0][2]^k1[2])] ^ invCipher1[10]);
 					u2[7] = (_sbox[(tempBlock_arrays[0][3]^k1[3])] ^ invCipher1[7]);
-				
+					
 					k0[2] = _sbox[k0[15]]^k1[2];
 					k0[13] = _inv_sbox[k1[0]^0x01^k0[0]];
 					k1[5] = k1[1]^k0[5];
 				
-					for (register int q = 0; q < 8; q++){
+					for (register int q = 0; q < 256; q++){
 						k0[7] = q;
-						for (register int r = 0; r < 9; r++){
+						for (register int r = 0; r < 256; r++){
 							k0[8] = r;
 						
 							for (fi = 0; fi < 3; fi++){
@@ -300,7 +309,10 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 							diff(tempBlock_arrays[0], tempBlock_arrays[2], tempBlockDiff13);
 						
 							
-							//aqui começa a comparar os pares p0,p1 e p0,p2 com os possiveis k1 de cada um	
+							if (!sboxDiffsMatches(tempBlock_arrays, tempBlockDiff12, tempBlockDiff13, invCipherDiff12, invCipherDiff13, k1, 8, 11)) continue;
+							
+
+							/*//aqui começa a comparar os pares p0,p1 e p0,p2 com os possiveis k1 de cada um	
 							//	poss_x = x_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
 							poss_x = x_sbox_diff[tempBlockDiff12[8]*256 + invCipherDiff12[8]];
 							//	poss_x = y_sbox_diff[invCipherDiff12[0]*256 + tempBlockDiff12[0]];
@@ -398,7 +410,7 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 							}
 							else{
 								continue;
-							}
+							}*/
 
 							u2[8] = (_sbox[(tempBlock_arrays[0][8]^k1[8])] ^ invCipher1[8]);
 							u2[5] = (_sbox[(tempBlock_arrays[0][9]^k1[9])] ^ invCipher1[5]);
@@ -414,19 +426,34 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 							k2[0] = (_sbox[k1[13]] ^ 0x02) ^ k1[0];
 							k2[2] = (_sbox[k1[15]]) ^ k1[2];
 				
-
-/*							k1[12] = _inv_sbox[k2[3] ^ k1[3]];
-							k1[14] = _inv_sbox[k2[1] ^ k1[1]];*/
-
-							if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && q == 0x07 && r == 0x08){
 							solveMixColumnFor2RoundPhase2(k2, u2);
+
+							k1[12] = _inv_sbox[k2[3] ^ k1[3]];
+							k1[14] = _inv_sbox[k2[1] ^ k1[1]];
+
+							//now we have k1 fully complete, let's get k0
+							
+							k0[12] = k1[8] ^ k1[12];
+							k0[14] = k1[10] ^ k1[14];
+							k0[9] = k1[5] ^ k1[9];
+							k0[11] = k1[7] ^ k1[11];
+							k0[4] = k1[0] ^ k1[4];
+							k0[6] = k1[2] ^ k1[6];
+							
+							k0[1] = _sbox[k0[14]] ^ k1[1];
+							k0[3] = _sbox[k0[12]] ^ k1[3];
+
+							//k0 complete
+						
+							if (m == 0x00 && n == 0x05 && o == 0x0a && p == 0x0f && q == 0x07 && r == 0x08){
 								printf("----------\n");
 								printBlock(k0);
 								printBlock(k1);
 								printBlock(k2);
 								printBlock(u2);
+								printBlock(tempBlock_arrays[0]);
 								printf("==============\n");
-								//printf("%.2x %.2x %.2x %.2x\n", k1_12_1[0], k1_12_2[0], k1_13_1[0], k1_13_2[0]);*/
+								//printf("%.2x %.2x %.2x %.2x\n", k1_12_1[0], k1_12_2[0], k1_13_1[0], k1_13_2[0]);
 							}
 						}
 					}
@@ -435,6 +462,8 @@ void findKeyForTwoRounds(FastRijndael* rijn, unsigned char** plaintexts, unsigne
 			}
 		}
 	}
+
+	printf("%d\n", count);
 
 	
 	delete[] tempBlock1;	
