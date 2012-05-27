@@ -294,6 +294,16 @@ void FastRijndael::addRoundKeySwappedMCRoundTwo(unsigned char* block){
 	delete[] temp_exp_key;
 }
 
+void FastRijndael::addRoundKeySwappedMCRoundThree(unsigned char* block){
+	unsigned char* temp_exp_key = new unsigned char [16];
+	memcpy(temp_exp_key, &_exp_key[48], 16);	//32 = 16 round key 0 + 16 round key 1; then round key 2
+	invMixColumns(temp_exp_key);
+	for (int i = 0; i < 16; i++){
+		block[i] ^= temp_exp_key[i];
+	}
+	delete[] temp_exp_key;
+}
+
 void FastRijndael::xorBlock(unsigned char* a, unsigned char* b){
 /*	for (int i = 0; i < 16; i++){
 		a[i] ^= b[i];
@@ -648,6 +658,93 @@ void FastRijndael::decryptTwoRounds(unsigned char* block){
 		return;
 	}
 	_round = 2;
+	addRoundKey(block);
+	invMixColumns(block);
+	invShiftRows(block);
+	invSubBytes(block);
+	_round--;
+	addRoundKey(block);
+	invMixColumns(block);
+	invShiftRows(block);
+	invSubBytes(block);
+	_round--;
+	addRoundKey(block);
+}
+
+void FastRijndael::encryptThreeRounds(unsigned char* block){
+	if (!_initd){
+		return;
+	}
+	_round = 0;
+#if DEBUG	
+	fprintf(STDOUT, "Round %i\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKey(block);		
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after whitening ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	_round++;
+	subBytes(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	shiftRows(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	mixColumns(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after MC\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKey(block);		
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	
+	_round++;
+	subBytes(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	shiftRows(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	mixColumns(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after MC\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKey(block);		
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	
+	_round++;
+	subBytes(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	shiftRows(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	addRoundKeySwappedMCRoundThree(block);
+#if DEBUG	
+	fprintf(STDOUT, "Round %i after ARK with k swapped\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
+#endif
+	mixColumns(block);
+}
+
+void FastRijndael::decryptThreeRounds(unsigned char* block){
+	if (!_initd){
+		return;
+	}
+	_round = 3;
+	addRoundKey(block);
+	invMixColumns(block);
+	invShiftRows(block);
+	invSubBytes(block);
+	_round--;
 	addRoundKey(block);
 	invMixColumns(block);
 	invShiftRows(block);

@@ -1,5 +1,6 @@
 *.m4
 *.in
+*.o
 Makefile
 configure
 autom4te.cache/*

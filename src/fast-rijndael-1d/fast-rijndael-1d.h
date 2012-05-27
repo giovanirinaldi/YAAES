@@ -113,6 +113,8 @@ class FastRijndael {
 		void encryptTwoRounds(unsigned char* block);	// 2d array of 4 rows and nb columns
 		void decryptTwoRounds(unsigned char* block);	// 2d array of 4 rows and nb columns
 		
+		void encryptThreeRounds(unsigned char* block);
+		void decryptThreeRounds(unsigned char* block);
 		//IV
 //		void getIV(unsigned char** iv);
 		void getIV(unsigned char* iv);
@@ -142,6 +144,7 @@ class FastRijndael {
 		void addRoundKey(unsigned char* block);
                 void addNRoundKey(unsigned char* block, int round);
 		void addRoundKeySwappedMCRoundTwo(unsigned char* block);
+		void addRoundKeySwappedMCRoundThree(unsigned char* block);
                 void encryptNRounds(unsigned char* block, int rounds);
 
 		//AUX
