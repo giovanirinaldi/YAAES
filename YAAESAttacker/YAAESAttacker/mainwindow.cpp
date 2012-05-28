@@ -492,6 +492,9 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
         printf("tabS01E02\n");fflush(stdout);
     }
+    else if (tab == ui->tabS01E03){
+        setColumnsS01E03();
+    }
     else{
         printf("tabFringe\n");fflush(stdout);
     }
@@ -533,6 +536,75 @@ void MainWindow::setCipherS01E02(QString cipher1, QString cipher2, QString ciphe
         temp_string[1] = cipher3[i+1].toUpper();
         s01e02cipher3[i/2]->setText(temp_string);
     }
+}
+
+void MainWindow::setColumnsS01E03(){
+    ui->s01e03plain1AfterR1Col0Byte00->setText(ui->outPlain1s01e01MCByte00->text());
+    ui->s01e03plain1AfterR1Col0Byte01->setText(ui->outPlain1s01e01MCByte01->text());
+    ui->s01e03plain1AfterR1Col0Byte02->setText(ui->outPlain1s01e01MCByte02->text());
+    ui->s01e03plain1AfterR1Col0Byte03->setText(ui->outPlain1s01e01MCByte03->text());
+    ui->s01e03plain2AfterR1Col0Byte00->setText(ui->outPlain2s01e01MCByte00->text());
+    ui->s01e03plain2AfterR1Col0Byte01->setText(ui->outPlain2s01e01MCByte01->text());
+    ui->s01e03plain2AfterR1Col0Byte02->setText(ui->outPlain2s01e01MCByte02->text());
+    ui->s01e03plain2AfterR1Col0Byte03->setText(ui->outPlain2s01e01MCByte03->text());
+    ui->s01e03plain3AfterR1Col0Byte00->setText(ui->outPlain3s01e01MCByte00->text());
+    ui->s01e03plain3AfterR1Col0Byte01->setText(ui->outPlain3s01e01MCByte01->text());
+    ui->s01e03plain3AfterR1Col0Byte02->setText(ui->outPlain3s01e01MCByte02->text());
+    ui->s01e03plain3AfterR1Col0Byte03->setText(ui->outPlain3s01e01MCByte03->text());
+
+    ui->s01e03InvCipherDiff12Column0Byte00->setText(ui->s01e02InvCipherDiff12SRByte00->text());
+    ui->s01e03InvCipherDiff12Column0Byte01->setText(ui->s01e02InvCipherDiff12SRByte01->text());
+    ui->s01e03InvCipherDiff12Column0Byte02->setText(ui->s01e02InvCipherDiff12SRByte02->text());
+    ui->s01e03InvCipherDiff12Column0Byte03->setText(ui->s01e02InvCipherDiff12SRByte03->text());
+    ui->s01e03InvCipherDiff13Column0Byte00->setText(ui->s01e02InvCipherDiff13SRByte00->text());
+    ui->s01e03InvCipherDiff13Column0Byte01->setText(ui->s01e02InvCipherDiff13SRByte01->text());
+    ui->s01e03InvCipherDiff13Column0Byte02->setText(ui->s01e02InvCipherDiff13SRByte02->text());
+    ui->s01e03InvCipherDiff13Column0Byte03->setText(ui->s01e02InvCipherDiff13SRByte03->text());
+
+    unsigned char byte_temp_a, byte_temp_b, byte_temp_c;
+    char* temp_string = new char [3];
+
+    byte_temp_a = hexValue(ui->s01e03plain1AfterR1Col0Byte00->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain1AfterR1Col0Byte00->text().at(1).toAscii());
+    byte_temp_b = hexValue(ui->s01e03plain2AfterR1Col0Byte00->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain2AfterR1Col0Byte00->text().at(1).toAscii());
+    byte_temp_c = hexValue(ui->s01e03plain3AfterR1Col0Byte00->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain3AfterR1Col0Byte00->text().at(1).toAscii());
+    byte_temp_b ^= byte_temp_a;
+    byte_temp_c ^= byte_temp_a;
+    hexToUpperCaseText(byte_temp_b, temp_string);
+    ui->s01e03plainAfterR1Diff12Col0Byte00->setText(temp_string);
+    hexToUpperCaseText(byte_temp_c, temp_string);
+    ui->s01e03plainAfterR1Diff13Col0Byte00->setText(temp_string);
+
+    byte_temp_a = hexValue(ui->s01e03plain1AfterR1Col0Byte01->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain1AfterR1Col0Byte01->text().at(1).toAscii());
+    byte_temp_b = hexValue(ui->s01e03plain2AfterR1Col0Byte01->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain2AfterR1Col0Byte01->text().at(1).toAscii());
+    byte_temp_c = hexValue(ui->s01e03plain3AfterR1Col0Byte01->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain3AfterR1Col0Byte01->text().at(1).toAscii());
+    byte_temp_b ^= byte_temp_a;
+    byte_temp_c ^= byte_temp_a;
+    hexToUpperCaseText(byte_temp_b, temp_string);
+    ui->s01e03plainAfterR1Diff12Col0Byte01->setText(temp_string);
+    hexToUpperCaseText(byte_temp_c, temp_string);
+    ui->s01e03plainAfterR1Diff13Col0Byte01->setText(temp_string);
+
+    byte_temp_a = hexValue(ui->s01e03plain1AfterR1Col0Byte02->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain1AfterR1Col0Byte02->text().at(1).toAscii());
+    byte_temp_b = hexValue(ui->s01e03plain2AfterR1Col0Byte02->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain2AfterR1Col0Byte02->text().at(1).toAscii());
+    byte_temp_c = hexValue(ui->s01e03plain3AfterR1Col0Byte02->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain3AfterR1Col0Byte02->text().at(1).toAscii());
+    byte_temp_b ^= byte_temp_a;
+    byte_temp_c ^= byte_temp_a;
+    hexToUpperCaseText(byte_temp_b, temp_string);
+    ui->s01e03plainAfterR1Diff12Col0Byte02->setText(temp_string);
+    hexToUpperCaseText(byte_temp_c, temp_string);
+    ui->s01e03plainAfterR1Diff13Col0Byte02->setText(temp_string);
+
+    byte_temp_a = hexValue(ui->s01e03plain1AfterR1Col0Byte03->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain1AfterR1Col0Byte03->text().at(1).toAscii());
+    byte_temp_b = hexValue(ui->s01e03plain2AfterR1Col0Byte03->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain2AfterR1Col0Byte03->text().at(1).toAscii());
+    byte_temp_c = hexValue(ui->s01e03plain3AfterR1Col0Byte03->text().at(0).toAscii())*16 + hexValue(ui->s01e03plain3AfterR1Col0Byte03->text().at(1).toAscii());
+    byte_temp_b ^= byte_temp_a;
+    byte_temp_c ^= byte_temp_a;
+    hexToUpperCaseText(byte_temp_b, temp_string);
+    ui->s01e03plainAfterR1Diff12Col0Byte03->setText(temp_string);
+    hexToUpperCaseText(byte_temp_c, temp_string);
+    ui->s01e03plainAfterR1Diff13Col0Byte03->setText(temp_string);
+
+    delete[] temp_string;
 }
 
 void MainWindow::on_buttonS01E01ARK_clicked()
@@ -839,8 +911,17 @@ void MainWindow::on_buttonS01E02InvSR_clicked()
 
 void MainWindow::on_buttonSBoxLookup_clicked()
 {
-    /*unsigned char temp_char;
-    temp_char = RijndaelAttacker::hexValue(s01e02InvCipherDiff12[i]->text().at(0).toAscii())*16 + hexValue(s01e02InvCipherDiff12[i]->text().at(1).toAscii());*/
+    unsigned char temp_char_a, temp_char_b, res_x, res_y;
+    char* temp_string = new char [3];
+    temp_char_a = hexValue(ui->editByteAlpha->text().at(0).toAscii())*16 + hexValue(ui->editByteAlpha->text().at(1).toAscii());
+    temp_char_b = hexValue(ui->editByteBeta->text().at(0).toAscii())*16 + hexValue(ui->editByteBeta->text().at(1).toAscii());
+    res_x = rijnAttacker.xSboxDiff(temp_char_a, temp_char_b);
+    res_y = rijnAttacker.ySboxDiff(temp_char_a, temp_char_b);
+    hexToUpperCaseText(res_x, temp_string);
+    ui->labelResultLookupX->setText(temp_string);
+    hexToUpperCaseText(res_y, temp_string);
+    ui->labelResultLookupY->setText(temp_string);
+    delete[] temp_string;
 }
 
 void MainWindow::on_editByteAlpha_textChanged(QString text)

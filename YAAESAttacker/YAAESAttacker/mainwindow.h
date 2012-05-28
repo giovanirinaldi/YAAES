@@ -46,25 +46,15 @@ private slots:
     void on_buttonS01E01SB_clicked();
     void on_buttonS01E01SR_clicked();
     void on_buttonS01E01MC_clicked();
-
     void on_buttonS01E02InvMC_clicked();
-
     void on_buttonS01E02XOR_clicked();
-
     void on_buttonS01E02InvSR_clicked();
-
     void on_buttonSBoxLookup_clicked();
-
     void on_editByteAlpha_textChanged(QString );
-
     void on_editByteBeta_textChanged(QString );
-
     void on_editByte00ResultSbox_textChanged(QString );
-
     void on_editByte01ResultSbox_textChanged(QString );
-
     void on_editByte02ResultSbox_textChanged(QString );
-
     void on_editByte03ResultSbox_textChanged(QString );
 
 private:
@@ -96,6 +86,7 @@ private:
 
     void setPlainS01E01(QString plain1, QString plain2, QString plain3);
     void setCipherS01E02(QString cipher1, QString cipher2, QString cipher3);
+    void setColumnsS01E03();
 };
 
 #endif // MAINWINDOW_H

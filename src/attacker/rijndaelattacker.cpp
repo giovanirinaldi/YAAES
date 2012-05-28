@@ -56,6 +56,14 @@ void RijndaelAttacker::solveMixColumnFor2RoundPhase2(unsigned char * k2, unsigne
         k2[3] = mult_3_table[u2[0]]^ u2[1] ^ u2[2] ^ mult_2_table[u2[3]];
 }
 
+unsigned char RijndaelAttacker::xSboxDiff(unsigned char a, unsigned char b){
+	return x_sbox_diff[a*256 + b];
+}
+
+unsigned char RijndaelAttacker::ySboxDiff(unsigned char a, unsigned char b){
+	return y_sbox_diff[a*256 + b];
+}
+
 bool RijndaelAttacker::sboxDiffsMatches(unsigned char** tempBlock_arrays, unsigned char* tempBlockDiff12, unsigned char* tempBlockDiff13, unsigned char * invCipherDiff12, unsigned char* invCipherDiff13, unsigned char* k1, int from, int to){
 	for (int i = from; i <= to; i++){
 		//aqui começa a comparar os pares p0,p1 e p0,p2 com os possiveis k1 de cada um	
@@ -162,7 +170,16 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 	}
 	
 	int fi = 0;
-        int count = 0;
+	int countfour = 0;
+	int countafter1sbox = 0;
+	int countaftertestk0cipher2 = 0;
+	int countaftertestk0cipher3 = 0;
+	int countsix = 0;
+	int countafter2sbox = 0;
+	int countwrong = 0;
+	int countright = 0;
+	
+	unsigned char temp_kkk;
         for (register short int m = k0b00from; m <= k0b00to; m++){            //k0,0
                 k0[0] = m;
                 for (register short int n = k0b05from; n <= k0b05to; n++){    //k0,5
@@ -171,8 +188,9 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
                                 k0[10] = o;
                                 for (register short int p = k0b15from; p <= k0b15to; p++){     //k0,15
                                         k0[15] = p;
+					countfour++;
                                         //printf("%.2x %.2x %.2x %.2x\n", m, n, o, p);
-                                        fflush(stdout);
+                                        //fflush(stdout);
 					
 					copyMainDiagonalAndXorGuesses(k0, tempBlock_arrays, plaintexts, num_texts);
 					for (fi = 0; fi < num_texts; fi++){
@@ -188,12 +206,24 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 	
 
 					if (!sboxDiffsMatches(tempBlock_arrays, tempBlockDiff12, tempBlockDiff13, invCipherDiff12, invCipherDiff13, k1, 0, 3)) continue;
+					countafter1sbox++;
 					//fim da procura pela primeira coluna de k1
+
 
 					u2[0] = (_sbox[(tempBlock_arrays[0][0]^k1[0])] ^ invCipher1[0]);
 					u2[13] = (_sbox[(tempBlock_arrays[0][1]^k1[1])] ^ invCipher1[13]);
 					u2[10] = (_sbox[(tempBlock_arrays[0][2]^k1[2])] ^ invCipher1[10]);
 					u2[7] = (_sbox[(tempBlock_arrays[0][3]^k1[3])] ^ invCipher1[7]);
+	
+					if ((_sbox[tempBlock_arrays[1][0] ^ k1[0]] ^ u2[0]) != invCipher2[0]){
+						continue;
+					}
+					countaftertestk0cipher2++;
+					if ((_sbox[tempBlock_arrays[2][0] ^ k1[0]] ^ u2[0]) != invCipher3[0]){
+						continue;
+					}
+					countaftertestk0cipher3++;
+
 					
 					k0[2] = _sbox[k0[15]]^k1[2];
 					k0[13] = _inv_sbox[k1[0]^0x01^k0[0]];
@@ -202,6 +232,7 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
                                         for (register int q = k0b07from; q <= k0b07to; q++){
 						k0[7] = q;
                                                 for (register int r = k0b08from; r <= k0b08to; r++){
+							countsix++;
 							k0[8] = r;
 						
 							for (fi = 0; fi < 3; fi++){
@@ -217,6 +248,7 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 						
 							
 							if (!sboxDiffsMatches(tempBlock_arrays, tempBlockDiff12, tempBlockDiff13, invCipherDiff12, invCipherDiff13, k1, 8, 11)) continue;
+							countafter2sbox++;
 
 							u2[8] = (_sbox[(tempBlock_arrays[0][8]^k1[8])] ^ invCipher1[8]);
 							u2[5] = (_sbox[(tempBlock_arrays[0][9]^k1[9])] ^ invCipher1[5]);
@@ -250,14 +282,22 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 							k0[3] = _sbox[k0[12]] ^ k1[3];
 							
 							//k0 complete
-							count++;
+//							count++;
+							/*if (m == 0x0f && n == 0x05 && o == 0x0a && p == 0x0f && q == 0x07 && r == 0x08){
+								printf("pass\n");
+							}*/
+
 							rijn.makeKey(k0);
 							copyBlock(plaintexts[0], testBlock);
 							rijn.encryptTwoRounds(testBlock);
 							rijn.cleanUp();
 							if (blocksAreEqual(ciphertexts[0], testBlock)){
+								//printf("ok\n");
+								//continue;
 								copyBlock(k0, k0found);
-								delete[] invCipher1;delete[] invCipher2;delete[] invCipher3;
+								countright++;
+								continue;
+						/*		delete[] invCipher1;delete[] invCipher2;delete[] invCipher3;
 								delete[] invCipherDiff12;delete[] invCipherDiff13;
 								delete[] plainDiff12;delete[] plainDiff13;
 								delete[] cipherDiff12;delete[] cipherDiff13;
@@ -265,10 +305,11 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 								delete[] tempBlock1;delete[] tempBlock2;delete[] tempBlock3;	
 								delete[] k0;delete[] k1;delete[] k2;delete[] u2;
 								delete[] k1_12_1;delete[] k1_12_2;delete[] k1_13_1;delete[] k1_13_2;
-								delete[] tempBlockDiff12;delete[] tempBlockDiff13;delete[] tempBlock_arrays;
-								return true;
+								delete[] tempBlockDiff12;delete[] tempBlockDiff13;delete[] tempBlock_arrays;*/
+								return true;			
 							}
 							else{
+								countwrong++;
 								continue;
 							}
 						}
@@ -278,6 +319,15 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 			}
 		}
 	}
+
+	printf("countfour %d\n", countfour);
+	printf("countsix %d\n", countsix);
+	printf("countaftertestk0cipher2 %d\n", countaftertestk0cipher2);
+	printf("countaftertestk0cipher3 %d\n", countaftertestk0cipher3);
+	printf("countafter1sbox %d\n", countafter1sbox);
+	printf("countafter2sbox %d\n", countafter2sbox);
+	printf("countwrong %d\n", countwrong);
+	printf("countright %d\n", countright);
 
 	delete[] invCipher1;delete[] invCipher2;delete[] invCipher3;
 	delete[] invCipherDiff12;delete[] invCipherDiff13;

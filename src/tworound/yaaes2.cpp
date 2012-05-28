@@ -53,14 +53,21 @@ void copyBlock(unsigned char* block_src, unsigned char* block_dest){
 
 int main(){
 
+	int countfound = 0;
+	int  countnotfound = 0;
 	FastRijndael rijn(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
-	
+	//for (int i = 0; i < 256; i++){	
+	//printf("%d\n", i);
+	//for (int j = 0; j < 256; j++){
 //	unsigned char chKey[17] = "essasenhaehfraca";
 	char chKey[33] = "000102030405060708090a0b0c0d0e0f";
         unsigned char* cKey = new unsigned char [16];
         hexStringToCharString((unsigned char*)chKey, 32, cKey);
+//	cKey[1] ^= i;
+//	cKey[2] ^= j;
 
 	rijn.makeKey(cKey);
+	//printBlock(cKey);
 
 	unsigned char chBlock1[33] = "00112233445566778899aabbccddeeff"; 
 //	unsigned char chBlock1[33] = "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"; 	
@@ -86,9 +93,9 @@ int main(){
 	copyBlock(cBlock3_plain, cBlock3_cipher);
 	rijn.encryptTwoRounds(cBlock3_cipher);
 
-	printBlockInline(cBlock1_cipher);
+/*	printBlockInline(cBlock1_cipher);
 	printBlockInline(cBlock2_cipher);
-	printBlockInline(cBlock3_cipher);
+	printBlockInline(cBlock3_cipher);*/
 
 	unsigned char** plaintexts_array = new unsigned char* [3];
 	plaintexts_array[0] = cBlock1_plain;
@@ -103,14 +110,20 @@ int main(){
 	unsigned char* k0found = new unsigned char [16];
 
 	RijndaelAttacker rijnAttack;	
-	if (rijnAttack.findKeyForTwoRounds(plaintexts_array, ciphertexts_array, 3, k0found, 0x00, 0x00, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff)){
+	if (rijnAttack.findKeyForTwoRounds(plaintexts_array, ciphertexts_array, 3, k0found, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff)){
 		printBlock(k0found);
+//		countfound++;
 	}
 	else{
-		printf("not found\n");
+		//printf("not found\n");
+//		countnotfound++;
 	}
+//}
+//	};
 
-	delete[] plaintexts_array;
+//	printf("%d %d\n", countfound, countnotfound);
+
+/*	delete[] plaintexts_array;
 	delete[] ciphertexts_array;
 
 	delete[] cKey;
@@ -120,7 +133,7 @@ int main(){
 	delete[] cBlock2_cipher;
 	delete[] cBlock3_plain;
 	delete[] cBlock3_cipher;
-	delete[] k0found;
+	delete[] k0found;*/
 	rijn.cleanUp();
 
 	return 0;

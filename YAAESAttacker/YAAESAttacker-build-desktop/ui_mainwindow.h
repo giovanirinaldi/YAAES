@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Mon May 28 00:07:54 2012
+** Created: Mon May 28 12:19:23 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -503,32 +503,32 @@ public:
     QLabel *s01e03InvCipherDiff13Column0Byte02;
     QLabel *s01e03InvCipherDiff13Column0Byte01;
     QLabel *s01e03InvCipherDiff13Column0Byte00;
-    QLabel *s01e03InvCipherDiff13Column0Byte033;
+    QLabel *s01e03InvCipherDiff13Column0Byte03;
     QGroupBox *groupInvCipher12DiffColumns01e03_2;
-    QLabel *s01e03InvCipherDiff12Column0Byte02_2;
-    QLabel *s01e03InvCipherDiff12Column0Byte01_2;
-    QLabel *s01e03InvCipherDiff12Column0Byte00_2;
-    QLabel *s01e03InvCipherDiff12Column0Byte03_2;
+    QLabel *s01e03plain1AfterR1Col0Byte02;
+    QLabel *s01e03plain1AfterR1Col0Byte01;
+    QLabel *s01e03plain1AfterR1Col0Byte00;
+    QLabel *s01e03plain1AfterR1Col0Byte03;
     QGroupBox *groupInvCipher12DiffColumns01e03_3;
-    QLabel *s01e03InvCipherDiff12Column0Byte02_3;
-    QLabel *s01e03InvCipherDiff12Column0Byte01_3;
-    QLabel *s01e03InvCipherDiff12Column0Byte00_3;
-    QLabel *s01e03InvCipherDiff12Column0Byte03_3;
+    QLabel *s01e03plain2AfterR1Col0Byte02;
+    QLabel *s01e03plain2AfterR1Col0Byte01;
+    QLabel *s01e03plain2AfterR1Col0Byte00;
+    QLabel *s01e03plain2AfterR1Col0Byte03;
     QGroupBox *groupInvCipher12DiffColumns01e03_4;
-    QLabel *s01e03InvCipherDiff12Column0Byte02_4;
-    QLabel *s01e03InvCipherDiff12Column0Byte01_4;
-    QLabel *s01e03InvCipherDiff12Column0Byte00_4;
-    QLabel *s01e03InvCipherDiff12Column0Byte03_4;
+    QLabel *s01e03plain3AfterR1Col0Byte02;
+    QLabel *s01e03plain3AfterR1Col0Byte01;
+    QLabel *s01e03plain3AfterR1Col0Byte00;
+    QLabel *s01e03plain3AfterR1Col0Byte03;
     QGroupBox *groupInvCipher12DiffColumns01e03_5;
-    QLabel *s01e03InvCipherDiff12Column0Byte02_5;
-    QLabel *s01e03InvCipherDiff12Column0Byte01_5;
-    QLabel *s01e03InvCipherDiff12Column0Byte00_5;
-    QLabel *s01e03InvCipherDiff12Column0Byte03_5;
+    QLabel *s01e03plainAfterR1Diff12Col0Byte02;
+    QLabel *s01e03plainAfterR1Diff12Col0Byte01;
+    QLabel *s01e03plainAfterR1Diff12Col0Byte00;
+    QLabel *s01e03plainAfterR1Diff12Col0Byte03;
     QGroupBox *groupInvCipher13DiffColumns01e03_2;
-    QLabel *s01e03InvCipherDiff13Column0Byte02_2;
-    QLabel *s01e03InvCipherDiff13Column0Byte01_2;
-    QLabel *s01e03InvCipherDiff13Column0Byte00_2;
-    QLabel *s01e03InvCipherDiff13Column0Byte033_2;
+    QLabel *s01e03plainAfterR1Diff13Col0Byte02;
+    QLabel *s01e03plainAfterR1Diff13Col0Byte01;
+    QLabel *s01e03plainAfterR1Diff13Col0Byte00;
+    QLabel *s01e03plainAfterR1Diff13Col0Byte03;
     QLabel *label_18;
     QLabel *label_19;
     QGroupBox *groupBox;
@@ -540,6 +540,8 @@ public:
     QPushButton *buttonSBoxLookup;
     QLabel *labelResultLookupX;
     QLabel *labelResultLookupY;
+    QLabel *label_23;
+    QLabel *label_24;
     QGroupBox *groupBox_2;
     QLineEdit *editByte00ResultSbox;
     QLineEdit *editByte01ResultSbox;
@@ -7021,21 +7023,21 @@ public:
 "}"));
         s01e03InvCipherDiff13Column0Byte00->setAlignment(Qt::AlignCenter);
         s01e03InvCipherDiff13Column0Byte00->setWordWrap(false);
-        s01e03InvCipherDiff13Column0Byte033 = new QLabel(groupInvCipher13DiffColumns01e03);
-        s01e03InvCipherDiff13Column0Byte033->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte033"));
-        s01e03InvCipherDiff13Column0Byte033->setEnabled(true);
-        s01e03InvCipherDiff13Column0Byte033->setGeometry(QRect(90, 102, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte033->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff13Column0Byte033->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte033->setFont(font);
-        s01e03InvCipherDiff13Column0Byte033->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff13Column0Byte033->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03InvCipherDiff13Column0Byte03 = new QLabel(groupInvCipher13DiffColumns01e03);
+        s01e03InvCipherDiff13Column0Byte03->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte03"));
+        s01e03InvCipherDiff13Column0Byte03->setEnabled(true);
+        s01e03InvCipherDiff13Column0Byte03->setGeometry(QRect(90, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03InvCipherDiff13Column0Byte03->setSizePolicy(sizePolicy);
+        s01e03InvCipherDiff13Column0Byte03->setFont(font);
+        s01e03InvCipherDiff13Column0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03InvCipherDiff13Column0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff13Column0Byte033->setAlignment(Qt::AlignCenter);
+        s01e03InvCipherDiff13Column0Byte03->setAlignment(Qt::AlignCenter);
         groupInvCipher12DiffColumns01e03_2 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_2->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_2"));
         groupInvCipher12DiffColumns01e03_2->setGeometry(QRect(10, 30, 201, 141));
@@ -7044,67 +7046,67 @@ public:
         groupInvCipher12DiffColumns01e03_2->setStyleSheet(QString::fromUtf8(""));
         groupInvCipher12DiffColumns01e03_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupInvCipher12DiffColumns01e03_2->setFlat(false);
-        s01e03InvCipherDiff12Column0Byte02_2 = new QLabel(groupInvCipher12DiffColumns01e03_2);
-        s01e03InvCipherDiff12Column0Byte02_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte02_2"));
-        s01e03InvCipherDiff12Column0Byte02_2->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte02_2->setGeometry(QRect(20, 76, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte02_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte02_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte02_2->setFont(font);
-        s01e03InvCipherDiff12Column0Byte02_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain1AfterR1Col0Byte02 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        s01e03plain1AfterR1Col0Byte02->setObjectName(QString::fromUtf8("s01e03plain1AfterR1Col0Byte02"));
+        s01e03plain1AfterR1Col0Byte02->setEnabled(true);
+        s01e03plain1AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
+        s01e03plain1AfterR1Col0Byte02->setSizePolicy(sizePolicy);
+        s01e03plain1AfterR1Col0Byte02->setFont(font);
+        s01e03plain1AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain1AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte02_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte01_2 = new QLabel(groupInvCipher12DiffColumns01e03_2);
-        s01e03InvCipherDiff12Column0Byte01_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte01_2"));
-        s01e03InvCipherDiff12Column0Byte01_2->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte01_2->setGeometry(QRect(20, 52, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte01_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte01_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte01_2->setFont(font);
-        s01e03InvCipherDiff12Column0Byte01_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain1AfterR1Col0Byte02->setAlignment(Qt::AlignCenter);
+        s01e03plain1AfterR1Col0Byte01 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        s01e03plain1AfterR1Col0Byte01->setObjectName(QString::fromUtf8("s01e03plain1AfterR1Col0Byte01"));
+        s01e03plain1AfterR1Col0Byte01->setEnabled(true);
+        s01e03plain1AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
+        s01e03plain1AfterR1Col0Byte01->setSizePolicy(sizePolicy);
+        s01e03plain1AfterR1Col0Byte01->setFont(font);
+        s01e03plain1AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain1AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte01_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_2 = new QLabel(groupInvCipher12DiffColumns01e03_2);
-        s01e03InvCipherDiff12Column0Byte00_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte00_2"));
-        s01e03InvCipherDiff12Column0Byte00_2->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte00_2->setGeometry(QRect(20, 28, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte00_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte00_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte00_2->setFont(font);
-        s01e03InvCipherDiff12Column0Byte00_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain1AfterR1Col0Byte01->setAlignment(Qt::AlignCenter);
+        s01e03plain1AfterR1Col0Byte00 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        s01e03plain1AfterR1Col0Byte00->setObjectName(QString::fromUtf8("s01e03plain1AfterR1Col0Byte00"));
+        s01e03plain1AfterR1Col0Byte00->setEnabled(true);
+        s01e03plain1AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
+        s01e03plain1AfterR1Col0Byte00->setSizePolicy(sizePolicy);
+        s01e03plain1AfterR1Col0Byte00->setFont(font);
+        s01e03plain1AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain1AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte00_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_2->setWordWrap(false);
-        s01e03InvCipherDiff12Column0Byte03_2 = new QLabel(groupInvCipher12DiffColumns01e03_2);
-        s01e03InvCipherDiff12Column0Byte03_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte03_2"));
-        s01e03InvCipherDiff12Column0Byte03_2->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte03_2->setGeometry(QRect(20, 100, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte03_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte03_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte03_2->setFont(font);
-        s01e03InvCipherDiff12Column0Byte03_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain1AfterR1Col0Byte00->setAlignment(Qt::AlignCenter);
+        s01e03plain1AfterR1Col0Byte00->setWordWrap(false);
+        s01e03plain1AfterR1Col0Byte03 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        s01e03plain1AfterR1Col0Byte03->setObjectName(QString::fromUtf8("s01e03plain1AfterR1Col0Byte03"));
+        s01e03plain1AfterR1Col0Byte03->setEnabled(true);
+        s01e03plain1AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03plain1AfterR1Col0Byte03->setSizePolicy(sizePolicy);
+        s01e03plain1AfterR1Col0Byte03->setFont(font);
+        s01e03plain1AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain1AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte03_2->setAlignment(Qt::AlignCenter);
+        s01e03plain1AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
         groupInvCipher12DiffColumns01e03_3 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_3->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_3"));
         groupInvCipher12DiffColumns01e03_3->setGeometry(QRect(10, 170, 271, 141));
@@ -7113,67 +7115,67 @@ public:
         groupInvCipher12DiffColumns01e03_3->setStyleSheet(QString::fromUtf8(""));
         groupInvCipher12DiffColumns01e03_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupInvCipher12DiffColumns01e03_3->setFlat(false);
-        s01e03InvCipherDiff12Column0Byte02_3 = new QLabel(groupInvCipher12DiffColumns01e03_3);
-        s01e03InvCipherDiff12Column0Byte02_3->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte02_3"));
-        s01e03InvCipherDiff12Column0Byte02_3->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte02_3->setGeometry(QRect(20, 76, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte02_3->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte02_3->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte02_3->setFont(font);
-        s01e03InvCipherDiff12Column0Byte02_3->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain2AfterR1Col0Byte02 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        s01e03plain2AfterR1Col0Byte02->setObjectName(QString::fromUtf8("s01e03plain2AfterR1Col0Byte02"));
+        s01e03plain2AfterR1Col0Byte02->setEnabled(true);
+        s01e03plain2AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
+        s01e03plain2AfterR1Col0Byte02->setSizePolicy(sizePolicy);
+        s01e03plain2AfterR1Col0Byte02->setFont(font);
+        s01e03plain2AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain2AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte02_3->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte01_3 = new QLabel(groupInvCipher12DiffColumns01e03_3);
-        s01e03InvCipherDiff12Column0Byte01_3->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte01_3"));
-        s01e03InvCipherDiff12Column0Byte01_3->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte01_3->setGeometry(QRect(20, 52, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte01_3->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte01_3->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte01_3->setFont(font);
-        s01e03InvCipherDiff12Column0Byte01_3->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain2AfterR1Col0Byte02->setAlignment(Qt::AlignCenter);
+        s01e03plain2AfterR1Col0Byte01 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        s01e03plain2AfterR1Col0Byte01->setObjectName(QString::fromUtf8("s01e03plain2AfterR1Col0Byte01"));
+        s01e03plain2AfterR1Col0Byte01->setEnabled(true);
+        s01e03plain2AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
+        s01e03plain2AfterR1Col0Byte01->setSizePolicy(sizePolicy);
+        s01e03plain2AfterR1Col0Byte01->setFont(font);
+        s01e03plain2AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain2AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte01_3->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_3 = new QLabel(groupInvCipher12DiffColumns01e03_3);
-        s01e03InvCipherDiff12Column0Byte00_3->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte00_3"));
-        s01e03InvCipherDiff12Column0Byte00_3->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte00_3->setGeometry(QRect(20, 28, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte00_3->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte00_3->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte00_3->setFont(font);
-        s01e03InvCipherDiff12Column0Byte00_3->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte00_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain2AfterR1Col0Byte01->setAlignment(Qt::AlignCenter);
+        s01e03plain2AfterR1Col0Byte00 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        s01e03plain2AfterR1Col0Byte00->setObjectName(QString::fromUtf8("s01e03plain2AfterR1Col0Byte00"));
+        s01e03plain2AfterR1Col0Byte00->setEnabled(true);
+        s01e03plain2AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
+        s01e03plain2AfterR1Col0Byte00->setSizePolicy(sizePolicy);
+        s01e03plain2AfterR1Col0Byte00->setFont(font);
+        s01e03plain2AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain2AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte00_3->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_3->setWordWrap(false);
-        s01e03InvCipherDiff12Column0Byte03_3 = new QLabel(groupInvCipher12DiffColumns01e03_3);
-        s01e03InvCipherDiff12Column0Byte03_3->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte03_3"));
-        s01e03InvCipherDiff12Column0Byte03_3->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte03_3->setGeometry(QRect(20, 100, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte03_3->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte03_3->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte03_3->setFont(font);
-        s01e03InvCipherDiff12Column0Byte03_3->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain2AfterR1Col0Byte00->setAlignment(Qt::AlignCenter);
+        s01e03plain2AfterR1Col0Byte00->setWordWrap(false);
+        s01e03plain2AfterR1Col0Byte03 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        s01e03plain2AfterR1Col0Byte03->setObjectName(QString::fromUtf8("s01e03plain2AfterR1Col0Byte03"));
+        s01e03plain2AfterR1Col0Byte03->setEnabled(true);
+        s01e03plain2AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03plain2AfterR1Col0Byte03->setSizePolicy(sizePolicy);
+        s01e03plain2AfterR1Col0Byte03->setFont(font);
+        s01e03plain2AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain2AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte03_3->setAlignment(Qt::AlignCenter);
+        s01e03plain2AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
         groupInvCipher12DiffColumns01e03_4 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_4->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_4"));
         groupInvCipher12DiffColumns01e03_4->setGeometry(QRect(10, 310, 271, 141));
@@ -7182,67 +7184,67 @@ public:
         groupInvCipher12DiffColumns01e03_4->setStyleSheet(QString::fromUtf8(""));
         groupInvCipher12DiffColumns01e03_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupInvCipher12DiffColumns01e03_4->setFlat(false);
-        s01e03InvCipherDiff12Column0Byte02_4 = new QLabel(groupInvCipher12DiffColumns01e03_4);
-        s01e03InvCipherDiff12Column0Byte02_4->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte02_4"));
-        s01e03InvCipherDiff12Column0Byte02_4->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte02_4->setGeometry(QRect(20, 76, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte02_4->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte02_4->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte02_4->setFont(font);
-        s01e03InvCipherDiff12Column0Byte02_4->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte02_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain3AfterR1Col0Byte02 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        s01e03plain3AfterR1Col0Byte02->setObjectName(QString::fromUtf8("s01e03plain3AfterR1Col0Byte02"));
+        s01e03plain3AfterR1Col0Byte02->setEnabled(true);
+        s01e03plain3AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
+        s01e03plain3AfterR1Col0Byte02->setSizePolicy(sizePolicy);
+        s01e03plain3AfterR1Col0Byte02->setFont(font);
+        s01e03plain3AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain3AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte02_4->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte01_4 = new QLabel(groupInvCipher12DiffColumns01e03_4);
-        s01e03InvCipherDiff12Column0Byte01_4->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte01_4"));
-        s01e03InvCipherDiff12Column0Byte01_4->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte01_4->setGeometry(QRect(20, 52, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte01_4->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte01_4->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte01_4->setFont(font);
-        s01e03InvCipherDiff12Column0Byte01_4->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte01_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain3AfterR1Col0Byte02->setAlignment(Qt::AlignCenter);
+        s01e03plain3AfterR1Col0Byte01 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        s01e03plain3AfterR1Col0Byte01->setObjectName(QString::fromUtf8("s01e03plain3AfterR1Col0Byte01"));
+        s01e03plain3AfterR1Col0Byte01->setEnabled(true);
+        s01e03plain3AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
+        s01e03plain3AfterR1Col0Byte01->setSizePolicy(sizePolicy);
+        s01e03plain3AfterR1Col0Byte01->setFont(font);
+        s01e03plain3AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain3AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte01_4->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_4 = new QLabel(groupInvCipher12DiffColumns01e03_4);
-        s01e03InvCipherDiff12Column0Byte00_4->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte00_4"));
-        s01e03InvCipherDiff12Column0Byte00_4->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte00_4->setGeometry(QRect(20, 28, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte00_4->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte00_4->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte00_4->setFont(font);
-        s01e03InvCipherDiff12Column0Byte00_4->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte00_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain3AfterR1Col0Byte01->setAlignment(Qt::AlignCenter);
+        s01e03plain3AfterR1Col0Byte00 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        s01e03plain3AfterR1Col0Byte00->setObjectName(QString::fromUtf8("s01e03plain3AfterR1Col0Byte00"));
+        s01e03plain3AfterR1Col0Byte00->setEnabled(true);
+        s01e03plain3AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
+        s01e03plain3AfterR1Col0Byte00->setSizePolicy(sizePolicy);
+        s01e03plain3AfterR1Col0Byte00->setFont(font);
+        s01e03plain3AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain3AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte00_4->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_4->setWordWrap(false);
-        s01e03InvCipherDiff12Column0Byte03_4 = new QLabel(groupInvCipher12DiffColumns01e03_4);
-        s01e03InvCipherDiff12Column0Byte03_4->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte03_4"));
-        s01e03InvCipherDiff12Column0Byte03_4->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte03_4->setGeometry(QRect(20, 100, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte03_4->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte03_4->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte03_4->setFont(font);
-        s01e03InvCipherDiff12Column0Byte03_4->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte03_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plain3AfterR1Col0Byte00->setAlignment(Qt::AlignCenter);
+        s01e03plain3AfterR1Col0Byte00->setWordWrap(false);
+        s01e03plain3AfterR1Col0Byte03 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        s01e03plain3AfterR1Col0Byte03->setObjectName(QString::fromUtf8("s01e03plain3AfterR1Col0Byte03"));
+        s01e03plain3AfterR1Col0Byte03->setEnabled(true);
+        s01e03plain3AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03plain3AfterR1Col0Byte03->setSizePolicy(sizePolicy);
+        s01e03plain3AfterR1Col0Byte03->setFont(font);
+        s01e03plain3AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03plain3AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte03_4->setAlignment(Qt::AlignCenter);
+        s01e03plain3AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
         groupInvCipher12DiffColumns01e03_5 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_5->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_5"));
         groupInvCipher12DiffColumns01e03_5->setGeometry(QRect(120, 100, 101, 141));
@@ -7251,67 +7253,67 @@ public:
         groupInvCipher12DiffColumns01e03_5->setStyleSheet(QString::fromUtf8(""));
         groupInvCipher12DiffColumns01e03_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupInvCipher12DiffColumns01e03_5->setFlat(false);
-        s01e03InvCipherDiff12Column0Byte02_5 = new QLabel(groupInvCipher12DiffColumns01e03_5);
-        s01e03InvCipherDiff12Column0Byte02_5->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte02_5"));
-        s01e03InvCipherDiff12Column0Byte02_5->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte02_5->setGeometry(QRect(40, 78, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte02_5->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte02_5->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte02_5->setFont(font);
-        s01e03InvCipherDiff12Column0Byte02_5->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte02_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff12Col0Byte02 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        s01e03plainAfterR1Diff12Col0Byte02->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff12Col0Byte02"));
+        s01e03plainAfterR1Diff12Col0Byte02->setEnabled(true);
+        s01e03plainAfterR1Diff12Col0Byte02->setGeometry(QRect(40, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte02->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff12Col0Byte02->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff12Col0Byte02->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte02->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff12Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte02_5->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte01_5 = new QLabel(groupInvCipher12DiffColumns01e03_5);
-        s01e03InvCipherDiff12Column0Byte01_5->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte01_5"));
-        s01e03InvCipherDiff12Column0Byte01_5->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte01_5->setGeometry(QRect(40, 54, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte01_5->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte01_5->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte01_5->setFont(font);
-        s01e03InvCipherDiff12Column0Byte01_5->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte01_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff12Col0Byte02->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff12Col0Byte01 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        s01e03plainAfterR1Diff12Col0Byte01->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff12Col0Byte01"));
+        s01e03plainAfterR1Diff12Col0Byte01->setEnabled(true);
+        s01e03plainAfterR1Diff12Col0Byte01->setGeometry(QRect(40, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte01->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff12Col0Byte01->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff12Col0Byte01->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte01->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff12Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte01_5->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_5 = new QLabel(groupInvCipher12DiffColumns01e03_5);
-        s01e03InvCipherDiff12Column0Byte00_5->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte00_5"));
-        s01e03InvCipherDiff12Column0Byte00_5->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte00_5->setGeometry(QRect(40, 30, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte00_5->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte00_5->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte00_5->setFont(font);
-        s01e03InvCipherDiff12Column0Byte00_5->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte00_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff12Col0Byte01->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff12Col0Byte00 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        s01e03plainAfterR1Diff12Col0Byte00->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff12Col0Byte00"));
+        s01e03plainAfterR1Diff12Col0Byte00->setEnabled(true);
+        s01e03plainAfterR1Diff12Col0Byte00->setGeometry(QRect(40, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte00->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff12Col0Byte00->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff12Col0Byte00->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte00->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff12Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte00_5->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff12Column0Byte00_5->setWordWrap(false);
-        s01e03InvCipherDiff12Column0Byte03_5 = new QLabel(groupInvCipher12DiffColumns01e03_5);
-        s01e03InvCipherDiff12Column0Byte03_5->setObjectName(QString::fromUtf8("s01e03InvCipherDiff12Column0Byte03_5"));
-        s01e03InvCipherDiff12Column0Byte03_5->setEnabled(true);
-        s01e03InvCipherDiff12Column0Byte03_5->setGeometry(QRect(40, 102, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte03_5->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff12Column0Byte03_5->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte03_5->setFont(font);
-        s01e03InvCipherDiff12Column0Byte03_5->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff12Column0Byte03_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff12Col0Byte00->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff12Col0Byte00->setWordWrap(false);
+        s01e03plainAfterR1Diff12Col0Byte03 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        s01e03plainAfterR1Diff12Col0Byte03->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff12Col0Byte03"));
+        s01e03plainAfterR1Diff12Col0Byte03->setEnabled(true);
+        s01e03plainAfterR1Diff12Col0Byte03->setGeometry(QRect(40, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff12Col0Byte03->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff12Col0Byte03->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff12Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff12Column0Byte03_5->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff12Col0Byte03->setAlignment(Qt::AlignCenter);
         groupInvCipher13DiffColumns01e03_2 = new QGroupBox(tabS01E03);
         groupInvCipher13DiffColumns01e03_2->setObjectName(QString::fromUtf8("groupInvCipher13DiffColumns01e03_2"));
         groupInvCipher13DiffColumns01e03_2->setGeometry(QRect(120, 250, 101, 141));
@@ -7320,67 +7322,67 @@ public:
         groupInvCipher13DiffColumns01e03_2->setStyleSheet(QString::fromUtf8(""));
         groupInvCipher13DiffColumns01e03_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         groupInvCipher13DiffColumns01e03_2->setFlat(false);
-        s01e03InvCipherDiff13Column0Byte02_2 = new QLabel(groupInvCipher13DiffColumns01e03_2);
-        s01e03InvCipherDiff13Column0Byte02_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte02_2"));
-        s01e03InvCipherDiff13Column0Byte02_2->setEnabled(true);
-        s01e03InvCipherDiff13Column0Byte02_2->setGeometry(QRect(40, 78, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte02_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff13Column0Byte02_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte02_2->setFont(font);
-        s01e03InvCipherDiff13Column0Byte02_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff13Column0Byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff13Col0Byte02 = new QLabel(groupInvCipher13DiffColumns01e03_2);
+        s01e03plainAfterR1Diff13Col0Byte02->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff13Col0Byte02"));
+        s01e03plainAfterR1Diff13Col0Byte02->setEnabled(true);
+        s01e03plainAfterR1Diff13Col0Byte02->setGeometry(QRect(40, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte02->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff13Col0Byte02->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff13Col0Byte02->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte02->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff13Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff13Column0Byte02_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff13Column0Byte01_2 = new QLabel(groupInvCipher13DiffColumns01e03_2);
-        s01e03InvCipherDiff13Column0Byte01_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte01_2"));
-        s01e03InvCipherDiff13Column0Byte01_2->setEnabled(true);
-        s01e03InvCipherDiff13Column0Byte01_2->setGeometry(QRect(40, 54, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte01_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff13Column0Byte01_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte01_2->setFont(font);
-        s01e03InvCipherDiff13Column0Byte01_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff13Column0Byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff13Col0Byte02->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff13Col0Byte01 = new QLabel(groupInvCipher13DiffColumns01e03_2);
+        s01e03plainAfterR1Diff13Col0Byte01->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff13Col0Byte01"));
+        s01e03plainAfterR1Diff13Col0Byte01->setEnabled(true);
+        s01e03plainAfterR1Diff13Col0Byte01->setGeometry(QRect(40, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte01->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff13Col0Byte01->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff13Col0Byte01->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte01->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff13Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff13Column0Byte01_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff13Column0Byte00_2 = new QLabel(groupInvCipher13DiffColumns01e03_2);
-        s01e03InvCipherDiff13Column0Byte00_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte00_2"));
-        s01e03InvCipherDiff13Column0Byte00_2->setEnabled(true);
-        s01e03InvCipherDiff13Column0Byte00_2->setGeometry(QRect(40, 30, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte00_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff13Column0Byte00_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte00_2->setFont(font);
-        s01e03InvCipherDiff13Column0Byte00_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff13Column0Byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff13Col0Byte01->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff13Col0Byte00 = new QLabel(groupInvCipher13DiffColumns01e03_2);
+        s01e03plainAfterR1Diff13Col0Byte00->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff13Col0Byte00"));
+        s01e03plainAfterR1Diff13Col0Byte00->setEnabled(true);
+        s01e03plainAfterR1Diff13Col0Byte00->setGeometry(QRect(40, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte00->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff13Col0Byte00->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff13Col0Byte00->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte00->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff13Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff13Column0Byte00_2->setAlignment(Qt::AlignCenter);
-        s01e03InvCipherDiff13Column0Byte00_2->setWordWrap(false);
-        s01e03InvCipherDiff13Column0Byte033_2 = new QLabel(groupInvCipher13DiffColumns01e03_2);
-        s01e03InvCipherDiff13Column0Byte033_2->setObjectName(QString::fromUtf8("s01e03InvCipherDiff13Column0Byte033_2"));
-        s01e03InvCipherDiff13Column0Byte033_2->setEnabled(true);
-        s01e03InvCipherDiff13Column0Byte033_2->setGeometry(QRect(40, 102, 25, 25));
-        sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte033_2->sizePolicy().hasHeightForWidth());
-        s01e03InvCipherDiff13Column0Byte033_2->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte033_2->setFont(font);
-        s01e03InvCipherDiff13Column0Byte033_2->setLayoutDirection(Qt::LeftToRight);
-        s01e03InvCipherDiff13Column0Byte033_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        s01e03plainAfterR1Diff13Col0Byte00->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff13Col0Byte00->setWordWrap(false);
+        s01e03plainAfterR1Diff13Col0Byte03 = new QLabel(groupInvCipher13DiffColumns01e03_2);
+        s01e03plainAfterR1Diff13Col0Byte03->setObjectName(QString::fromUtf8("s01e03plainAfterR1Diff13Col0Byte03"));
+        s01e03plainAfterR1Diff13Col0Byte03->setEnabled(true);
+        s01e03plainAfterR1Diff13Col0Byte03->setGeometry(QRect(40, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte03->sizePolicy().hasHeightForWidth());
+        s01e03plainAfterR1Diff13Col0Byte03->setSizePolicy(sizePolicy);
+        s01e03plainAfterR1Diff13Col0Byte03->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte03->setLayoutDirection(Qt::LeftToRight);
+        s01e03plainAfterR1Diff13Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
 "     border-style: solid;\n"
 "     border-color: black; \n"
 "     background-color: white;\n"
 "}"));
-        s01e03InvCipherDiff13Column0Byte033_2->setAlignment(Qt::AlignCenter);
+        s01e03plainAfterR1Diff13Col0Byte03->setAlignment(Qt::AlignCenter);
         label_18 = new QLabel(tabS01E03);
         label_18->setObjectName(QString::fromUtf8("label_18"));
         label_18->setGeometry(QRect(10, 10, 91, 17));
@@ -7410,13 +7412,19 @@ public:
         editByteBeta->setMaxLength(2);
         buttonSBoxLookup = new QPushButton(groupBox);
         buttonSBoxLookup->setObjectName(QString::fromUtf8("buttonSBoxLookup"));
-        buttonSBoxLookup->setGeometry(QRect(50, 200, 97, 27));
+        buttonSBoxLookup->setGeometry(QRect(60, 200, 97, 27));
         labelResultLookupX = new QLabel(groupBox);
         labelResultLookupX->setObjectName(QString::fromUtf8("labelResultLookupX"));
-        labelResultLookupX->setGeometry(QRect(60, 240, 61, 16));
+        labelResultLookupX->setGeometry(QRect(70, 240, 31, 16));
         labelResultLookupY = new QLabel(groupBox);
         labelResultLookupY->setObjectName(QString::fromUtf8("labelResultLookupY"));
-        labelResultLookupY->setGeometry(QRect(110, 240, 51, 17));
+        labelResultLookupY->setGeometry(QRect(140, 240, 41, 17));
+        label_23 = new QLabel(groupBox);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+        label_23->setGeometry(QRect(10, 240, 51, 17));
+        label_24 = new QLabel(groupBox);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+        label_24->setGeometry(QRect(100, 240, 31, 17));
         groupBox_2 = new QGroupBox(tabS01E03);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
         groupBox_2->setGeometry(QRect(330, 300, 120, 151));
@@ -8946,32 +8954,32 @@ public:
         s01e03InvCipherDiff13Column0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03InvCipherDiff13Column0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03InvCipherDiff13Column0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff13Column0Byte033->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03InvCipherDiff13Column0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_2->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 1", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte02_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte01_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte00_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte03_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain1AfterR1Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain1AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain1AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain1AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_3->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 2", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte02_3->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte01_3->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte00_3->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte03_3->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain2AfterR1Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain2AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain2AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain2AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_4->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 3", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte02_4->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte01_4->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte00_4->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte03_4->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain3AfterR1Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain3AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain3AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plain3AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_5->setTitle(QApplication::translate("MainWindow", "Diff (1 and 2)", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte02_5->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte01_5->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte00_5->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff12Column0Byte03_5->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff12Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff12Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff12Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff12Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         groupInvCipher13DiffColumns01e03_2->setTitle(QApplication::translate("MainWindow", "Diff (1 and 3)", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff13Column0Byte02_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff13Column0Byte01_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff13Column0Byte00_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
-        s01e03InvCipherDiff13Column0Byte033_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff13Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff13Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff13Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s01e03plainAfterR1Diff13Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         label_18->setText(QApplication::translate("MainWindow", "From S01E01", 0, QApplication::UnicodeUTF8));
         label_19->setText(QApplication::translate("MainWindow", "From S01E02", 0, QApplication::UnicodeUTF8));
         groupBox->setTitle(QApplication::translate("MainWindow", "Sbox Difference Table Lookup", 0, QApplication::UnicodeUTF8));
@@ -8986,6 +8994,8 @@ public:
         buttonSBoxLookup->setText(QApplication::translate("MainWindow", "Lookup", 0, QApplication::UnicodeUTF8));
         labelResultLookupX->setText(QApplication::translate("MainWindow", "X:", 0, QApplication::UnicodeUTF8));
         labelResultLookupY->setText(QApplication::translate("MainWindow", "Y: ", 0, QApplication::UnicodeUTF8));
+        label_23->setText(QApplication::translate("MainWindow", "Found:", 0, QApplication::UnicodeUTF8));
+        label_24->setText(QApplication::translate("MainWindow", "and", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Results", 0, QApplication::UnicodeUTF8));
         editByte00ResultSbox->setText(QApplication::translate("MainWindow", "00", 0, QApplication::UnicodeUTF8));
         editByte01ResultSbox->setText(QApplication::translate("MainWindow", "00", 0, QApplication::UnicodeUTF8));

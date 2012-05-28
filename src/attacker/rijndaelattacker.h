@@ -9,6 +9,8 @@ class RijndaelAttacker {
 		void copyMainDiagonalAndXorGuesses(unsigned char* k0, unsigned char** tempBlock_arrays, unsigned char** plaintexts, int num_texts);
 		void diff(unsigned char* block1, unsigned char* block2, unsigned char* dest);
 		void solveMixColumnFor2RoundPhase2(unsigned char * k2, unsigned char * u2);
+		unsigned char xSboxDiff(unsigned char a, unsigned char b);
+		unsigned char ySboxDiff(unsigned char a, unsigned char b);
 		bool sboxDiffsMatches(unsigned char** tempBlock_arrays, unsigned char* tempBlockDiff12, unsigned char* tempBlockDiff13, unsigned char * invCipherDiff12, unsigned char* invCipherDiff13, unsigned char* k1, int from, int to);
                 bool findKeyForTwoRounds(unsigned char** plaintexts, unsigned char** ciphertexts, int num_texts, unsigned char* k0found,
                                          short int k0b00from, short int k0b00to, short int k0b05from, short int k0b05to, short int k0b07from, short int k0b07to,
