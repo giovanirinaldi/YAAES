@@ -1,3 +1,7 @@
+//#include "../res/x_sbox_diff_coded.h"
+//#include "../res/y_sbox_diff_coded.h"
+
+
 class RijndaelAttacker {
 	public:
 		void copyBlock(unsigned char* block_src, unsigned char* block_dest);

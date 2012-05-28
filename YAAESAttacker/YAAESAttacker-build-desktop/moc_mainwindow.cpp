@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sun May 27 17:33:01 2012
+** Created: Mon May 28 00:11:01 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      27,   14, // methods
+      37,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -58,6 +58,16 @@ static const uint qt_meta_data_MainWindow[] = {
      890,   11,   11,   11, 0x08,
      918,   11,   11,   11, 0x08,
      946,   11,   11,   11, 0x08,
+     974,   11,   11,   11, 0x08,
+    1005,   11,   11,   11, 0x08,
+    1034,   11,   11,   11, 0x08,
+    1065,   11,   11,   11, 0x08,
+    1095,   11,   11,   11, 0x08,
+    1133,   11,   11,   11, 0x08,
+    1170,   11,   11,   11, 0x08,
+    1215,   11,   11,   11, 0x08,
+    1260,   11,   11,   11, 0x08,
+    1305,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -90,6 +100,16 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_buttonS01E01SB_clicked()\0"
     "on_buttonS01E01SR_clicked()\0"
     "on_buttonS01E01MC_clicked()\0"
+    "on_buttonS01E02InvMC_clicked()\0"
+    "on_buttonS01E02XOR_clicked()\0"
+    "on_buttonS01E02InvSR_clicked()\0"
+    "on_buttonSBoxLookup_clicked()\0"
+    "on_editByteAlpha_textChanged(QString)\0"
+    "on_editByteBeta_textChanged(QString)\0"
+    "on_editByte00ResultSbox_textChanged(QString)\0"
+    "on_editByte01ResultSbox_textChanged(QString)\0"
+    "on_editByte02ResultSbox_textChanged(QString)\0"
+    "on_editByte03ResultSbox_textChanged(QString)\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -148,9 +168,19 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 24: on_buttonS01E01SB_clicked(); break;
         case 25: on_buttonS01E01SR_clicked(); break;
         case 26: on_buttonS01E01MC_clicked(); break;
+        case 27: on_buttonS01E02InvMC_clicked(); break;
+        case 28: on_buttonS01E02XOR_clicked(); break;
+        case 29: on_buttonS01E02InvSR_clicked(); break;
+        case 30: on_buttonSBoxLookup_clicked(); break;
+        case 31: on_editByteAlpha_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 32: on_editByteBeta_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 33: on_editByte00ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 34: on_editByte01ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 35: on_editByte02ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 36: on_editByte03ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         default: ;
         }
-        _id -= 27;
+        _id -= 37;
     }
     return _id;
 }

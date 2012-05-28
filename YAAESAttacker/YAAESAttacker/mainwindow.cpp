@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-
 //d
 #include <cstdio>
 
@@ -63,6 +62,66 @@ MainWindow::MainWindow(QWidget *parent) :
     s01e01plain3[4]=ui->outPlain3s01e01Byte04;s01e01plain3[5]=ui->outPlain3s01e01Byte05;s01e01plain3[6]=ui->outPlain3s01e01Byte06;s01e01plain3[7]=ui->outPlain3s01e01Byte07;
     s01e01plain3[8]=ui->outPlain3s01e01Byte08;s01e01plain3[9]=ui->outPlain3s01e01Byte09;s01e01plain3[10]=ui->outPlain3s01e01Byte10;s01e01plain3[11]=ui->outPlain3s01e01Byte11;
     s01e01plain3[12]=ui->outPlain3s01e01Byte12;s01e01plain3[13]=ui->outPlain3s01e01Byte13;s01e01plain3[14]=ui->outPlain3s01e01Byte14;s01e01plain3[15]=ui->outPlain3s01e01Byte15;
+
+    s01e02cipher1 = new QLabel*[16];
+    s01e02cipher1[0]=ui->s01e02Cipher1Byte00;s01e02cipher1[1]=ui->s01e02Cipher1Byte01;s01e02cipher1[2]=ui->s01e02Cipher1Byte02;s01e02cipher1[3]=ui->s01e02Cipher1Byte03;
+    s01e02cipher1[4]=ui->s01e02Cipher1Byte04;s01e02cipher1[5]=ui->s01e02Cipher1Byte05;s01e02cipher1[6]=ui->s01e02Cipher1Byte06;s01e02cipher1[7]=ui->s01e02Cipher1Byte07;
+    s01e02cipher1[8]=ui->s01e02Cipher1Byte08;s01e02cipher1[9]=ui->s01e02Cipher1Byte09;s01e02cipher1[10]=ui->s01e02Cipher1Byte10;s01e02cipher1[11]=ui->s01e02Cipher1Byte11;
+    s01e02cipher1[12]=ui->s01e02Cipher1Byte12;s01e02cipher1[13]=ui->s01e02Cipher1Byte13;s01e02cipher1[14]=ui->s01e02Cipher1Byte14;s01e02cipher1[15]=ui->s01e02Cipher1Byte15;
+
+    s01e02cipher2 = new QLabel*[16];
+    s01e02cipher2[0]=ui->s01e02Cipher2Byte00;s01e02cipher2[1]=ui->s01e02Cipher2Byte01;s01e02cipher2[2]=ui->s01e02Cipher2Byte02;s01e02cipher2[3]=ui->s01e02Cipher2Byte03;
+    s01e02cipher2[4]=ui->s01e02Cipher2Byte04;s01e02cipher2[5]=ui->s01e02Cipher2Byte05;s01e02cipher2[6]=ui->s01e02Cipher2Byte06;s01e02cipher2[7]=ui->s01e02Cipher2Byte07;
+    s01e02cipher2[8]=ui->s01e02Cipher2Byte08;s01e02cipher2[9]=ui->s01e02Cipher2Byte09;s01e02cipher2[10]=ui->s01e02Cipher2Byte10;s01e02cipher2[11]=ui->s01e02Cipher2Byte11;
+    s01e02cipher2[12]=ui->s01e02Cipher2Byte12;s01e02cipher2[13]=ui->s01e02Cipher2Byte13;s01e02cipher2[14]=ui->s01e02Cipher2Byte14;s01e02cipher2[15]=ui->s01e02Cipher2Byte15;
+
+    s01e02cipher3 = new QLabel*[16];
+    s01e02cipher3[0]=ui->s01e02Cipher3Byte00;s01e02cipher3[1]=ui->s01e02Cipher3Byte01;s01e02cipher3[2]=ui->s01e02Cipher3Byte02;s01e02cipher3[3]=ui->s01e02Cipher3Byte03;
+    s01e02cipher3[4]=ui->s01e02Cipher3Byte04;s01e02cipher3[5]=ui->s01e02Cipher3Byte05;s01e02cipher3[6]=ui->s01e02Cipher3Byte06;s01e02cipher3[7]=ui->s01e02Cipher3Byte07;
+    s01e02cipher3[8]=ui->s01e02Cipher3Byte08;s01e02cipher3[9]=ui->s01e02Cipher3Byte09;s01e02cipher3[10]=ui->s01e02Cipher3Byte10;s01e02cipher3[11]=ui->s01e02Cipher3Byte11;
+    s01e02cipher3[12]=ui->s01e02Cipher3Byte12;s01e02cipher3[13]=ui->s01e02Cipher3Byte13;s01e02cipher3[14]=ui->s01e02Cipher3Byte14;s01e02cipher3[15]=ui->s01e02Cipher3Byte15;
+
+    s01e02Cipher1InvMC = new QLabel*[16];
+    s01e02Cipher1InvMC[0]=ui->s01e02Cipher1InvMCByte00;s01e02Cipher1InvMC[1]=ui->s01e02Cipher1InvMCByte01;s01e02Cipher1InvMC[2]=ui->s01e02Cipher1InvMCByte02;s01e02Cipher1InvMC[3]=ui->s01e02Cipher1InvMCByte03;
+    s01e02Cipher1InvMC[4]=ui->s01e02Cipher1InvMCByte04;s01e02Cipher1InvMC[5]=ui->s01e02Cipher1InvMCByte05;s01e02Cipher1InvMC[6]=ui->s01e02Cipher1InvMCByte06;s01e02Cipher1InvMC[7]=ui->s01e02Cipher1InvMCByte07;
+    s01e02Cipher1InvMC[8]=ui->s01e02Cipher1InvMCByte08;s01e02Cipher1InvMC[9]=ui->s01e02Cipher1InvMCByte09;s01e02Cipher1InvMC[10]=ui->s01e02Cipher1InvMCByte10;s01e02Cipher1InvMC[11]=ui->s01e02Cipher1InvMCByte11;
+    s01e02Cipher1InvMC[12]=ui->s01e02Cipher1InvMCByte12;s01e02Cipher1InvMC[13]=ui->s01e02Cipher1InvMCByte13;s01e02Cipher1InvMC[14]=ui->s01e02Cipher1InvMCByte14;s01e02Cipher1InvMC[15]=ui->s01e02Cipher1InvMCByte15;
+
+    s01e02Cipher2InvMC = new QLabel*[16];
+    s01e02Cipher2InvMC[0]=ui->s01e02Cipher2InvMCByte00;s01e02Cipher2InvMC[1]=ui->s01e02Cipher2InvMCByte01;s01e02Cipher2InvMC[2]=ui->s01e02Cipher2InvMCByte02;s01e02Cipher2InvMC[3]=ui->s01e02Cipher2InvMCByte03;
+    s01e02Cipher2InvMC[4]=ui->s01e02Cipher2InvMCByte04;s01e02Cipher2InvMC[5]=ui->s01e02Cipher2InvMCByte05;s01e02Cipher2InvMC[6]=ui->s01e02Cipher2InvMCByte06;s01e02Cipher2InvMC[7]=ui->s01e02Cipher2InvMCByte07;
+    s01e02Cipher2InvMC[8]=ui->s01e02Cipher2InvMCByte08;s01e02Cipher2InvMC[9]=ui->s01e02Cipher2InvMCByte09;s01e02Cipher2InvMC[10]=ui->s01e02Cipher2InvMCByte10;s01e02Cipher2InvMC[11]=ui->s01e02Cipher2InvMCByte11;
+    s01e02Cipher2InvMC[12]=ui->s01e02Cipher2InvMCByte12;s01e02Cipher2InvMC[13]=ui->s01e02Cipher2InvMCByte13;s01e02Cipher2InvMC[14]=ui->s01e02Cipher2InvMCByte14;s01e02Cipher2InvMC[15]=ui->s01e02Cipher2InvMCByte15;
+
+    s01e02Cipher3InvMC = new QLabel*[16];
+    s01e02Cipher3InvMC[0]=ui->s01e02Cipher3InvMCByte00;s01e02Cipher3InvMC[1]=ui->s01e02Cipher3InvMCByte01;s01e02Cipher3InvMC[2]=ui->s01e02Cipher3InvMCByte02;s01e02Cipher3InvMC[3]=ui->s01e02Cipher3InvMCByte03;
+    s01e02Cipher3InvMC[4]=ui->s01e02Cipher3InvMCByte04;s01e02Cipher3InvMC[5]=ui->s01e02Cipher3InvMCByte05;s01e02Cipher3InvMC[6]=ui->s01e02Cipher3InvMCByte06;s01e02Cipher3InvMC[7]=ui->s01e02Cipher3InvMCByte07;
+    s01e02Cipher3InvMC[8]=ui->s01e02Cipher3InvMCByte08;s01e02Cipher3InvMC[9]=ui->s01e02Cipher3InvMCByte09;s01e02Cipher3InvMC[10]=ui->s01e02Cipher3InvMCByte10;s01e02Cipher3InvMC[11]=ui->s01e02Cipher3InvMCByte11;
+    s01e02Cipher3InvMC[12]=ui->s01e02Cipher3InvMCByte12;s01e02Cipher3InvMC[13]=ui->s01e02Cipher3InvMCByte13;s01e02Cipher3InvMC[14]=ui->s01e02Cipher3InvMCByte14;s01e02Cipher3InvMC[15]=ui->s01e02Cipher3InvMCByte15;
+
+    s01e02InvCipherDiff12 = new QLabel*[16];
+    s01e02InvCipherDiff12[0]=ui->s01e02InvCipherDiff12Byte00;s01e02InvCipherDiff12[1]=ui->s01e02InvCipherDiff12Byte01;s01e02InvCipherDiff12[2]=ui->s01e02InvCipherDiff12Byte02;s01e02InvCipherDiff12[3]=ui->s01e02InvCipherDiff12Byte03;
+    s01e02InvCipherDiff12[4]=ui->s01e02InvCipherDiff12Byte04;s01e02InvCipherDiff12[5]=ui->s01e02InvCipherDiff12Byte05;s01e02InvCipherDiff12[6]=ui->s01e02InvCipherDiff12Byte06;s01e02InvCipherDiff12[7]=ui->s01e02InvCipherDiff12Byte07;
+    s01e02InvCipherDiff12[8]=ui->s01e02InvCipherDiff12Byte08;s01e02InvCipherDiff12[9]=ui->s01e02InvCipherDiff12Byte09;s01e02InvCipherDiff12[10]=ui->s01e02InvCipherDiff12Byte10;s01e02InvCipherDiff12[11]=ui->s01e02InvCipherDiff12Byte11;
+    s01e02InvCipherDiff12[12]=ui->s01e02InvCipherDiff12Byte12;s01e02InvCipherDiff12[13]=ui->s01e02InvCipherDiff12Byte13;s01e02InvCipherDiff12[14]=ui->s01e02InvCipherDiff12Byte14;s01e02InvCipherDiff12[15]=ui->s01e02InvCipherDiff12Byte15;
+
+    s01e02InvCipherDiff13 = new QLabel*[16];
+    s01e02InvCipherDiff13[0]=ui->s01e02InvCipherDiff13Byte00;s01e02InvCipherDiff13[1]=ui->s01e02InvCipherDiff13Byte01;s01e02InvCipherDiff13[2]=ui->s01e02InvCipherDiff13Byte02;s01e02InvCipherDiff13[3]=ui->s01e02InvCipherDiff13Byte03;
+    s01e02InvCipherDiff13[4]=ui->s01e02InvCipherDiff13Byte04;s01e02InvCipherDiff13[5]=ui->s01e02InvCipherDiff13Byte05;s01e02InvCipherDiff13[6]=ui->s01e02InvCipherDiff13Byte06;s01e02InvCipherDiff13[7]=ui->s01e02InvCipherDiff13Byte07;
+    s01e02InvCipherDiff13[8]=ui->s01e02InvCipherDiff13Byte08;s01e02InvCipherDiff13[9]=ui->s01e02InvCipherDiff13Byte09;s01e02InvCipherDiff13[10]=ui->s01e02InvCipherDiff13Byte10;s01e02InvCipherDiff13[11]=ui->s01e02InvCipherDiff13Byte11;
+    s01e02InvCipherDiff13[12]=ui->s01e02InvCipherDiff13Byte12;s01e02InvCipherDiff13[13]=ui->s01e02InvCipherDiff13Byte13;s01e02InvCipherDiff13[14]=ui->s01e02InvCipherDiff13Byte14;s01e02InvCipherDiff13[15]=ui->s01e02InvCipherDiff13Byte15;
+
+    s01e02InvCipherDiff12SR = new QLabel*[16];
+    s01e02InvCipherDiff12SR[0]=ui->s01e02InvCipherDiff12SRByte00;s01e02InvCipherDiff12SR[1]=ui->s01e02InvCipherDiff12SRByte01;s01e02InvCipherDiff12SR[2]=ui->s01e02InvCipherDiff12SRByte02;s01e02InvCipherDiff12SR[3]=ui->s01e02InvCipherDiff12SRByte03;
+    s01e02InvCipherDiff12SR[4]=ui->s01e02InvCipherDiff12SRByte04;s01e02InvCipherDiff12SR[5]=ui->s01e02InvCipherDiff12SRByte05;s01e02InvCipherDiff12SR[6]=ui->s01e02InvCipherDiff12SRByte06;s01e02InvCipherDiff12SR[7]=ui->s01e02InvCipherDiff12SRByte07;
+    s01e02InvCipherDiff12SR[8]=ui->s01e02InvCipherDiff12SRByte08;s01e02InvCipherDiff12SR[9]=ui->s01e02InvCipherDiff12SRByte09;s01e02InvCipherDiff12SR[10]=ui->s01e02InvCipherDiff12SRByte10;s01e02InvCipherDiff12SR[11]=ui->s01e02InvCipherDiff12SRByte11;
+    s01e02InvCipherDiff12SR[12]=ui->s01e02InvCipherDiff12SRByte12;s01e02InvCipherDiff12SR[13]=ui->s01e02InvCipherDiff12SRByte13;s01e02InvCipherDiff12SR[14]=ui->s01e02InvCipherDiff12SRByte14;s01e02InvCipherDiff12SR[15]=ui->s01e02InvCipherDiff12SRByte15;
+
+    s01e02InvCipherDiff13SR = new QLabel*[16];
+    s01e02InvCipherDiff13SR[0]=ui->s01e02InvCipherDiff13SRByte00;s01e02InvCipherDiff13SR[1]=ui->s01e02InvCipherDiff13SRByte01;s01e02InvCipherDiff13SR[2]=ui->s01e02InvCipherDiff13SRByte02;s01e02InvCipherDiff13SR[3]=ui->s01e02InvCipherDiff13SRByte03;
+    s01e02InvCipherDiff13SR[4]=ui->s01e02InvCipherDiff13SRByte04;s01e02InvCipherDiff13SR[5]=ui->s01e02InvCipherDiff13SRByte05;s01e02InvCipherDiff13SR[6]=ui->s01e02InvCipherDiff13SRByte06;s01e02InvCipherDiff13SR[7]=ui->s01e02InvCipherDiff13SRByte07;
+    s01e02InvCipherDiff13SR[8]=ui->s01e02InvCipherDiff13SRByte08;s01e02InvCipherDiff13SR[9]=ui->s01e02InvCipherDiff13SRByte09;s01e02InvCipherDiff13SR[10]=ui->s01e02InvCipherDiff13SRByte10;s01e02InvCipherDiff13SR[11]=ui->s01e02InvCipherDiff13SRByte11;
+    s01e02InvCipherDiff13SR[12]=ui->s01e02InvCipherDiff13SRByte12;s01e02InvCipherDiff13SR[13]=ui->s01e02InvCipherDiff13SRByte13;s01e02InvCipherDiff13SR[14]=ui->s01e02InvCipherDiff13SRByte14;s01e02InvCipherDiff13SR[15]=ui->s01e02InvCipherDiff13SRByte15;
 }
 
 MainWindow::~MainWindow()
@@ -426,10 +485,12 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         tryByte07 = hexValue(ui->editByte07From->text().at(0).toAscii())*256 + hexValue(ui->editByte07From->text().at(1).toAscii());
         tryByte08 = hexValue(ui->editByte08From->text().at(0).toAscii())*256 + hexValue(ui->editByte08From->text().at(1).toAscii());
         tryByte10 = hexValue(ui->editByte10From->text().at(0).toAscii())*256 + hexValue(ui->editByte10From->text().at(1).toAscii());
-        tryByte15 = hexValue(ui->editByte15From->text().at(0).toAscii())*256 + hexValue(ui->editByte15From->text().at(1).toAscii());
-        printf("%.2x %.2x %.2x %.2x %.2x %.2x\n", tryByte00,tryByte05,tryByte07,tryByte08,tryByte10,tryByte15);
-        ui->statusBar->showMessage("oi");
+        tryByte15 = hexValue(ui->editByte15From->text().at(0).toAscii())*256 + hexValue(ui->editByte15From->text().at(1).toAscii());        
         printf("tabS01E01\n");fflush(stdout);
+    }
+    else if (tab == ui->tabS01E02){
+        setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
+        printf("tabS01E02\n");fflush(stdout);
     }
     else{
         printf("tabFringe\n");fflush(stdout);
@@ -452,6 +513,25 @@ void MainWindow::setPlainS01E01(QString plain1, QString plain2, QString plain3){
         temp_string[0] = plain3[i].toUpper();
         temp_string[1] = plain3[i+1].toUpper();
         s01e01plain3[i/2]->setText(temp_string);
+    }
+}
+
+void MainWindow::setCipherS01E02(QString cipher1, QString cipher2, QString cipher3){
+    QString temp_string = "FF";
+    for (int i = 0; i < 32; i+=2){
+        temp_string[0] = cipher1[i].toUpper();
+        temp_string[1] = cipher1[i+1].toUpper();
+        s01e02cipher1[i/2]->setText(temp_string);
+    }
+    for (int i = 0; i < 32; i+=2){
+        temp_string[0] = cipher2[i].toUpper();
+        temp_string[1] = cipher2[i+1].toUpper();
+        s01e02cipher2[i/2]->setText(temp_string);
+    }
+    for (int i = 0; i < 32; i+=2){
+        temp_string[0] = cipher3[i].toUpper();
+        temp_string[1] = cipher3[i+1].toUpper();
+        s01e02cipher3[i/2]->setText(temp_string);
     }
 }
 
@@ -660,4 +740,159 @@ void MainWindow::on_buttonS01E01MC_clicked()
 
     delete[] temp_string;
 
+}
+
+void MainWindow::on_buttonS01E02InvMC_clicked()
+{
+    char* temp_string = new char [3];
+    unsigned char* temp_block = new unsigned char[16];
+
+    for (int i = 0; i < 16; i++){
+        temp_block[i] = hexValue(s01e02cipher1[i]->text().at(0).toAscii())*16 + hexValue(s01e02cipher1[i]->text().at(1).toAscii());
+    }
+    rijn.invMixColumns(temp_block);
+    for (int i = 0; i < 16; i++){
+        hexToUpperCaseText(temp_block[i], temp_string);
+        s01e02Cipher1InvMC[i]->setText(temp_string);
+    }
+
+    for (int i = 0; i < 16; i++){
+        temp_block[i] = hexValue(s01e02cipher2[i]->text().at(0).toAscii())*16 + hexValue(s01e02cipher2[i]->text().at(1).toAscii());
+    }
+    rijn.invMixColumns(temp_block);
+    for (int i = 0; i < 16; i++){
+        hexToUpperCaseText(temp_block[i], temp_string);
+        s01e02Cipher2InvMC[i]->setText(temp_string);
+    }
+
+    for (int i = 0; i < 16; i++){
+        temp_block[i] = hexValue(s01e02cipher3[i]->text().at(0).toAscii())*16 + hexValue(s01e02cipher3[i]->text().at(1).toAscii());
+    }
+    rijn.invMixColumns(temp_block);
+    for (int i = 0; i < 16; i++){
+        hexToUpperCaseText(temp_block[i], temp_string);
+        s01e02Cipher3InvMC[i]->setText(temp_string);
+    }
+
+    delete[] temp_block;
+    delete[] temp_string;
+
+}
+
+void MainWindow::on_buttonS01E02XOR_clicked()
+{
+    char* temp_string = new char [3];
+    unsigned char* temp_block_1 = new unsigned char[16];
+    unsigned char* temp_block_2 = new unsigned char[16];
+    unsigned char* temp_block_3 = new unsigned char[16];
+    unsigned char* temp_block_diff_12 = new unsigned char[16];
+    unsigned char* temp_block_diff_13 = new unsigned char[16];
+
+    for (int i = 0; i < 16; i++){
+        temp_block_1[i] = hexValue(s01e02Cipher1InvMC[i]->text().at(0).toAscii())*16 + hexValue(s01e02Cipher1InvMC[i]->text().at(1).toAscii());
+        temp_block_2[i] = hexValue(s01e02Cipher2InvMC[i]->text().at(0).toAscii())*16 + hexValue(s01e02Cipher2InvMC[i]->text().at(1).toAscii());
+        temp_block_3[i] = hexValue(s01e02Cipher3InvMC[i]->text().at(0).toAscii())*16 + hexValue(s01e02Cipher3InvMC[i]->text().at(1).toAscii());
+    }
+    rijnAttacker.diff(temp_block_1, temp_block_2, temp_block_diff_12);
+    rijnAttacker.diff(temp_block_1, temp_block_3, temp_block_diff_13);
+
+    for (int i = 0; i < 16; i++){
+        hexToUpperCaseText(temp_block_diff_12[i], temp_string);
+        s01e02InvCipherDiff12[i]->setText(temp_string);
+        hexToUpperCaseText(temp_block_diff_13[i], temp_string);
+        s01e02InvCipherDiff13[i]->setText(temp_string);
+    }
+
+    delete[] temp_block_1;
+    delete[] temp_block_2;
+    delete[] temp_block_3;
+    delete[] temp_block_diff_12;
+    delete[] temp_block_diff_13;
+    delete[] temp_string;
+}
+
+void MainWindow::on_buttonS01E02InvSR_clicked()
+{
+    char* temp_string = new char [3];
+    unsigned char* temp_block_1 = new unsigned char[16];
+    unsigned char* temp_block_2 = new unsigned char[16];
+
+    for (int i = 0; i < 16; i++){
+        temp_block_1[i] = hexValue(s01e02InvCipherDiff12[i]->text().at(0).toAscii())*16 + hexValue(s01e02InvCipherDiff12[i]->text().at(1).toAscii());
+        temp_block_2[i] = hexValue(s01e02InvCipherDiff13[i]->text().at(0).toAscii())*16 + hexValue(s01e02InvCipherDiff13[i]->text().at(1).toAscii());
+    }
+
+    rijn.invShiftRows(temp_block_1);
+    rijn.invShiftRows(temp_block_2);
+
+    for (int i = 0; i < 16; i++){
+        hexToUpperCaseText(temp_block_1[i], temp_string);
+        s01e02InvCipherDiff12SR[i]->setText(temp_string);
+        hexToUpperCaseText(temp_block_2[i], temp_string);
+        s01e02InvCipherDiff13SR[i]->setText(temp_string);
+    }
+
+    delete[] temp_block_1;
+    delete[] temp_block_2;
+    delete[] temp_string;
+}
+
+void MainWindow::on_buttonSBoxLookup_clicked()
+{
+    /*unsigned char temp_char;
+    temp_char = RijndaelAttacker::hexValue(s01e02InvCipherDiff12[i]->text().at(0).toAscii())*16 + hexValue(s01e02InvCipherDiff12[i]->text().at(1).toAscii());*/
+}
+
+void MainWindow::on_editByteAlpha_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByteAlpha->setText(text.toUpper());
+}
+
+void MainWindow::on_editByteBeta_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByteBeta->setText(text.toUpper());
+}
+
+void MainWindow::on_editByte00ResultSbox_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByte00ResultSbox->setText(text.toUpper());
+}
+
+void MainWindow::on_editByte01ResultSbox_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByte01ResultSbox->setText(text.toUpper());
+}
+
+void MainWindow::on_editByte02ResultSbox_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByte02ResultSbox->setText(text.toUpper());
+}
+
+void MainWindow::on_editByte03ResultSbox_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByte03ResultSbox->setText(text.toUpper());
 }

@@ -47,6 +47,26 @@ private slots:
     void on_buttonS01E01SR_clicked();
     void on_buttonS01E01MC_clicked();
 
+    void on_buttonS01E02InvMC_clicked();
+
+    void on_buttonS01E02XOR_clicked();
+
+    void on_buttonS01E02InvSR_clicked();
+
+    void on_buttonSBoxLookup_clicked();
+
+    void on_editByteAlpha_textChanged(QString );
+
+    void on_editByteBeta_textChanged(QString );
+
+    void on_editByte00ResultSbox_textChanged(QString );
+
+    void on_editByte01ResultSbox_textChanged(QString );
+
+    void on_editByte02ResultSbox_textChanged(QString );
+
+    void on_editByte03ResultSbox_textChanged(QString );
+
 private:
     Ui::MainWindow *ui;
     RijndaelAttacker rijnAttacker;
@@ -59,6 +79,11 @@ private:
 
     QLabel** s01e01plain1;QLabel** s01e01plain2;QLabel** s01e01plain3;
 
+    QLabel** s01e02cipher1;QLabel** s01e02cipher2;QLabel** s01e02cipher3;
+    QLabel** s01e02Cipher1InvMC;QLabel** s01e02Cipher2InvMC;QLabel** s01e02Cipher3InvMC;
+    QLabel** s01e02InvCipherDiff12;QLabel** s01e02InvCipherDiff13;
+    QLabel** s01e02InvCipherDiff12SR; QLabel** s01e02InvCipherDiff13SR;
+
     unsigned char* k0found;
     bool keyFound;
 
@@ -70,6 +95,7 @@ private:
     void setOutCipherK0(QString block);
 
     void setPlainS01E01(QString plain1, QString plain2, QString plain3);
+    void setCipherS01E02(QString cipher1, QString cipher2, QString cipher3);
 };
 
 #endif // MAINWINDOW_H
