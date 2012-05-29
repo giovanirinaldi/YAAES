@@ -40,7 +40,6 @@ private slots:
     void on_editCiphertext2_textChanged(QString );
     void on_editCiphertext3_textChanged(QString );
     void on_actionExample_1_triggered();
-    void on_tabWidget_currentChanged(int index);
     void on_tabWidget_currentChanged(QWidget* );
     void on_buttonS01E01ARK_clicked();
     void on_buttonS01E01SB_clicked();
@@ -56,6 +55,14 @@ private slots:
     void on_editByte01ResultSbox_textChanged(QString );
     void on_editByte02ResultSbox_textChanged(QString );
     void on_editByte03ResultSbox_textChanged(QString );
+
+    void on_buttonS01E04ArkK1_clicked();
+
+    void on_buttonS01E04SB_clicked();
+
+    void on_buttonS01E04SR_clicked();
+
+    void on_buttonS01E04FindU2Bytes_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -73,6 +80,7 @@ private:
     QLabel** s01e02Cipher1InvMC;QLabel** s01e02Cipher2InvMC;QLabel** s01e02Cipher3InvMC;
     QLabel** s01e02InvCipherDiff12;QLabel** s01e02InvCipherDiff13;
     QLabel** s01e02InvCipherDiff12SR; QLabel** s01e02InvCipherDiff13SR;
+    QLabel** s01e04Cipher1InvMC;
 
     unsigned char* k0found;
     bool keyFound;
@@ -87,6 +95,7 @@ private:
     void setPlainS01E01(QString plain1, QString plain2, QString plain3);
     void setCipherS01E02(QString cipher1, QString cipher2, QString cipher3);
     void setColumnsS01E03();
+    void setColumnAndBlockS01E04();
 };
 
 #endif // MAINWINDOW_H

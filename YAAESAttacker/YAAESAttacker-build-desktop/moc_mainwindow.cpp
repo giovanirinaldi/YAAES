@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon May 28 11:45:19 2012
+** Created: Mon May 28 21:25:29 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      37,   14, // methods
+      40,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -52,22 +52,25 @@ static const uint qt_meta_data_MainWindow[] = {
      673,   11,   11,   11, 0x08,
      713,   11,   11,   11, 0x08,
      753,   11,   11,   11, 0x08,
-     790,  784,   11,   11, 0x08,
-     823,   11,   11,   11, 0x08,
-     861,   11,   11,   11, 0x08,
-     890,   11,   11,   11, 0x08,
-     918,   11,   11,   11, 0x08,
-     946,   11,   11,   11, 0x08,
-     974,   11,   11,   11, 0x08,
-    1005,   11,   11,   11, 0x08,
-    1034,   11,   11,   11, 0x08,
-    1065,   11,   11,   11, 0x08,
-    1095,   11,   11,   11, 0x08,
-    1133,   11,   11,   11, 0x08,
-    1170,   11,   11,   11, 0x08,
-    1215,   11,   11,   11, 0x08,
-    1260,   11,   11,   11, 0x08,
-    1305,   11,   11,   11, 0x08,
+     784,   11,   11,   11, 0x08,
+     822,   11,   11,   11, 0x08,
+     851,   11,   11,   11, 0x08,
+     879,   11,   11,   11, 0x08,
+     907,   11,   11,   11, 0x08,
+     935,   11,   11,   11, 0x08,
+     966,   11,   11,   11, 0x08,
+     995,   11,   11,   11, 0x08,
+    1026,   11,   11,   11, 0x08,
+    1056,   11,   11,   11, 0x08,
+    1094,   11,   11,   11, 0x08,
+    1131,   11,   11,   11, 0x08,
+    1176,   11,   11,   11, 0x08,
+    1221,   11,   11,   11, 0x08,
+    1266,   11,   11,   11, 0x08,
+    1311,   11,   11,   11, 0x08,
+    1342,   11,   11,   11, 0x08,
+    1370,   11,   11,   11, 0x08,
+    1398,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -93,8 +96,7 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_editCiphertext1_textChanged(QString)\0"
     "on_editCiphertext2_textChanged(QString)\0"
     "on_editCiphertext3_textChanged(QString)\0"
-    "on_actionExample_1_triggered()\0index\0"
-    "on_tabWidget_currentChanged(int)\0"
+    "on_actionExample_1_triggered()\0"
     "on_tabWidget_currentChanged(QWidget*)\0"
     "on_buttonS01E01ARK_clicked()\0"
     "on_buttonS01E01SB_clicked()\0"
@@ -110,6 +112,10 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_editByte01ResultSbox_textChanged(QString)\0"
     "on_editByte02ResultSbox_textChanged(QString)\0"
     "on_editByte03ResultSbox_textChanged(QString)\0"
+    "on_buttonS01E04ArkK1_clicked()\0"
+    "on_buttonS01E04SB_clicked()\0"
+    "on_buttonS01E04SR_clicked()\0"
+    "on_buttonS01E04FindU2Bytes_clicked()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -162,25 +168,28 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 18: on_editCiphertext2_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 19: on_editCiphertext3_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 20: on_actionExample_1_triggered(); break;
-        case 21: on_tabWidget_currentChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 22: on_tabWidget_currentChanged((*reinterpret_cast< QWidget*(*)>(_a[1]))); break;
-        case 23: on_buttonS01E01ARK_clicked(); break;
-        case 24: on_buttonS01E01SB_clicked(); break;
-        case 25: on_buttonS01E01SR_clicked(); break;
-        case 26: on_buttonS01E01MC_clicked(); break;
-        case 27: on_buttonS01E02InvMC_clicked(); break;
-        case 28: on_buttonS01E02XOR_clicked(); break;
-        case 29: on_buttonS01E02InvSR_clicked(); break;
-        case 30: on_buttonSBoxLookup_clicked(); break;
-        case 31: on_editByteAlpha_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 32: on_editByteBeta_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 33: on_editByte00ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 34: on_editByte01ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 35: on_editByte02ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 36: on_editByte03ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 21: on_tabWidget_currentChanged((*reinterpret_cast< QWidget*(*)>(_a[1]))); break;
+        case 22: on_buttonS01E01ARK_clicked(); break;
+        case 23: on_buttonS01E01SB_clicked(); break;
+        case 24: on_buttonS01E01SR_clicked(); break;
+        case 25: on_buttonS01E01MC_clicked(); break;
+        case 26: on_buttonS01E02InvMC_clicked(); break;
+        case 27: on_buttonS01E02XOR_clicked(); break;
+        case 28: on_buttonS01E02InvSR_clicked(); break;
+        case 29: on_buttonSBoxLookup_clicked(); break;
+        case 30: on_editByteAlpha_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 31: on_editByteBeta_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 32: on_editByte00ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 33: on_editByte01ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 34: on_editByte02ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 35: on_editByte03ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 36: on_buttonS01E04ArkK1_clicked(); break;
+        case 37: on_buttonS01E04SB_clicked(); break;
+        case 38: on_buttonS01E04SR_clicked(); break;
+        case 39: on_buttonS01E04FindU2Bytes_clicked(); break;
         default: ;
         }
-        _id -= 37;
+        _id -= 40;
     }
     return _id;
 }

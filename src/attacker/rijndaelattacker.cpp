@@ -170,16 +170,15 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 	}
 	
 	int fi = 0;
-	int countfour = 0;
-	int countafter1sbox = 0;
-	int countaftertestk0cipher2 = 0;
-	int countaftertestk0cipher3 = 0;
-	int countsix = 0;
-	int countafter2sbox = 0;
-	int countwrong = 0;
-	int countright = 0;
-	
-	unsigned char temp_kkk;
+	unsigned long long countfour = 0;
+	unsigned long long countafter1sbox = 0;
+	unsigned long long countaftertestk0cipher2 = 0;
+	unsigned long long countaftertestk0cipher3 = 0;
+	unsigned long long countsix = 0;
+	unsigned long long countafter2sbox = 0;
+	unsigned long long countwrong = 0;
+	unsigned long long countright = 0;
+
         for (register short int m = k0b00from; m <= k0b00to; m++){            //k0,0
                 k0[0] = m;
                 for (register short int n = k0b05from; n <= k0b05to; n++){    //k0,5
@@ -320,14 +319,14 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 		}
 	}
 
-	printf("countfour %d\n", countfour);
-	printf("countsix %d\n", countsix);
-	printf("countaftertestk0cipher2 %d\n", countaftertestk0cipher2);
-	printf("countaftertestk0cipher3 %d\n", countaftertestk0cipher3);
-	printf("countafter1sbox %d\n", countafter1sbox);
-	printf("countafter2sbox %d\n", countafter2sbox);
-	printf("countwrong %d\n", countwrong);
-	printf("countright %d\n", countright);
+	printf("countfour %llu\n", countfour);
+	printf("countsix %llu\n", countsix);
+	printf("countaftertestk0cipher2 %llu\n", countaftertestk0cipher2);
+	printf("countaftertestk0cipher3 %llu\n", countaftertestk0cipher3);
+	printf("countafter1sbox %llu\n", countafter1sbox);
+	printf("countafter2sbox %llu\n", countafter2sbox);
+	printf("countwrong %llu\n", countwrong);
+	printf("countright %llu\n", countright);
 
 	delete[] invCipher1;delete[] invCipher2;delete[] invCipher3;
 	delete[] invCipherDiff12;delete[] invCipherDiff13;
