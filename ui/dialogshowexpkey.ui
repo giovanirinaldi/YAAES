@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Expanded Key</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>0</y>
+     <y>10</y>
      <width>150</width>
      <height>150</height>
     </rect>
@@ -720,7 +720,7 @@
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>0</y>
+     <y>10</y>
      <width>150</width>
      <height>150</height>
     </rect>
@@ -1404,7 +1404,7 @@
    <property name="geometry">
     <rect>
      <x>320</x>
-     <y>0</y>
+     <y>10</y>
      <width>150</width>
      <height>150</height>
     </rect>
@@ -2088,7 +2088,7 @@
    <property name="geometry">
     <rect>
      <x>470</x>
-     <y>0</y>
+     <y>10</y>
      <width>150</width>
      <height>150</height>
     </rect>
@@ -2772,7 +2772,7 @@
    <property name="geometry">
     <rect>
      <x>620</x>
-     <y>0</y>
+     <y>10</y>
      <width>150</width>
      <height>150</height>
     </rect>
@@ -5503,6 +5503,23 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <zorder>k7byte15</zorder>
+   <zorder>k7byte13</zorder>
+   <zorder>k7byte14</zorder>
+   <zorder>k7byte06</zorder>
+   <zorder>k7byte04</zorder>
+   <zorder>k7byte02</zorder>
+   <zorder>k7byte10</zorder>
+   <zorder>k7byte09</zorder>
+   <zorder>k7byte01</zorder>
+   <zorder>k7byte08</zorder>
+   <zorder>k7byte00</zorder>
+   <zorder>k7byte07</zorder>
+   <zorder>k7byte12</zorder>
+   <zorder>k7byte03</zorder>
+   <zorder>k7byte11</zorder>
+   <zorder>k7byte05</zorder>
+   <zorder>btnShowKeyK7K8</zorder>
   </widget>
   <widget class="QGroupBox" name="groupK8">
    <property name="geometry">
@@ -10292,180 +10309,427 @@
     </property>
    </widget>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_2">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>70</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="btnEditInput_3">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>70</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="btnEditInput_4">
-   <property name="geometry">
-    <rect>
-     <x>610</x>
-     <y>70</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="btnEditInput_6">
+  <widget class="QPushButton" name="btnShowKeyK0K1">
    <property name="geometry">
     <rect>
      <x>160</x>
-     <y>220</y>
-     <width>21</width>
+     <y>80</y>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_5">
+  <widget class="QPushButton" name="btnShowKeyK1K2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>80</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK2K3">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>80</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK3K4">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>80</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK4K5">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>220</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_7">
+  <widget class="QPushButton" name="btnShowKeyK5K6">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>160</x>
      <y>220</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_8">
-   <property name="geometry">
-    <rect>
-     <x>460</x>
-     <y>220</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="btnEditInput_9">
-   <property name="geometry">
-    <rect>
-     <x>610</x>
-     <y>220</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QToolButton" name="btnEditInput_10">
+  <widget class="QPushButton" name="btnShowKeyK9K10">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>370</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_11">
+  <widget class="QPushButton" name="btnShowKeyK10K11">
    <property name="geometry">
     <rect>
      <x>160</x>
      <y>370</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_12">
+  <widget class="QPushButton" name="btnShowKeyK6K7">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>220</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK7K8">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>220</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK8K9">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>220</y>
+     <width>16</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnShowKeyK11K12">
    <property name="geometry">
     <rect>
      <x>310</x>
      <y>370</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_13">
+  <widget class="QPushButton" name="btnShowKeyK12K13">
    <property name="geometry">
     <rect>
      <x>460</x>
      <y>370</y>
-     <width>21</width>
+     <width>16</width>
      <height>21</height>
     </rect>
    </property>
-   <property name="text">
-    <string>...</string>
+   <property name="toolTip">
+    <string>ola</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnEditInput_14">
+  <widget class="QPushButton" name="btnShowKeyK13K14">
    <property name="geometry">
     <rect>
      <x>610</x>
      <y>370</y>
-     <width>21</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>...</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnShowKey">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>70</y>
      <width>16</width>
      <height>21</height>
     </rect>

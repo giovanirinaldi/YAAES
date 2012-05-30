@@ -220,8 +220,8 @@ void DialogSetMatrixImpl::on_buttonBox_clicked(QAbstractButton* button)
 		MainWindowImpl* parent_main = qobject_cast<MainWindowImpl*>(this->parent());
 		if (parent_main != NULL){	
 			parent_main->initialized = false;
-                        //parent_main->calculateMatrices();
-                //	parent_main->updateAllMatrices();
+                        parent_main->calculateMatrices();
+                        parent_main->updateAllMatrices();
 		}		
 		this->close();
 	}

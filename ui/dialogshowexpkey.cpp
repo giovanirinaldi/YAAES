@@ -1,7 +1,10 @@
 #include "dialogshowexpkey.h"
 #include "ui_dialogshowexpkey.h"
+#include "dialogkeyschedule.h"
 
 #include <cstdio>
+
+#include "src/global.h"
 
 DialogShowExpKey::DialogShowExpKey(QWidget *parent) :
     QDialog(parent),
@@ -85,6 +88,10 @@ void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize, int numberColum
         this->numberColumns = numberColumns;
         switch (keySize){
                 case FastRijndael::K128:
+                        ui->btnShowKeyK10K11->setVisible(false);
+                        ui->btnShowKeyK11K12->setVisible(false);
+                        ui->btnShowKeyK12K13->setVisible(false);
+                        ui->btnShowKeyK13K14->setVisible(false);
                         ui->groupK11->setVisible(false);
                         ui->groupK12->setVisible(false);
                         ui->groupK13->setVisible(false);
@@ -106,8 +113,139 @@ void DialogShowExpKey::on_buttonBox_clicked(QAbstractButton* button)
     delete[] this->expKeyMatrix;
 }
 
-
-void DialogShowExpKey::on_btnShowKey_clicked()
+void DialogShowExpKey::on_btnShowKeyK0K1_clicked()
 {
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+16);
+    dialogKeySched->setSubKeyNum(1);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
 
+void DialogShowExpKey::on_btnShowKeyK1K2_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+16);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+32);
+    dialogKeySched->setSubKeyNum(2);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK2K3_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+32);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+48);
+    dialogKeySched->setSubKeyNum(3);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK3K4_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+48);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+64);
+    dialogKeySched->setSubKeyNum(4);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK4K5_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+64);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+80);
+    dialogKeySched->setSubKeyNum(5);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK5K6_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+80);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+96);
+    dialogKeySched->setSubKeyNum(6);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK6K7_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+96);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+112);
+    dialogKeySched->setSubKeyNum(7);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK7K8_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+112);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+128);
+    dialogKeySched->setSubKeyNum(8);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK8K9_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+128);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+144);
+    dialogKeySched->setSubKeyNum(9);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK9K10_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+144);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+160);
+    dialogKeySched->setSubKeyNum(10);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK10K11_clicked()
+{
+    DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key+176);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+192);
+    dialogKeySched->setSubKeyNum(11);
+    dialogKeySched->update();
+    dialogKeySched->show();
+}
+
+void DialogShowExpKey::on_btnShowKeyK11K12_clicked()
+{
+    /*DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+16);
+    dialogKeySched->update();
+    dialogKeySched->show();*/
+}
+
+void DialogShowExpKey::on_btnShowKeyK12K13_clicked()
+{
+    /*DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+16);
+    dialogKeySched->update();
+    dialogKeySched->show();*/
+}
+
+void DialogShowExpKey::on_btnShowKeyK13K14_clicked()
+{
+    /*DialogKeySchedule* dialogKeySched = new DialogKeySchedule(this);
+    dialogKeySched->setSubKeyA(rijn->_exp_key);
+    dialogKeySched->setSubKeyB(rijn->_exp_key+16);
+    dialogKeySched->update();
+    dialogKeySched->show();*/
 }

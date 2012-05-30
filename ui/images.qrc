@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/images">
-        <file>res/arrowdown.png</file>
-        <file>res/arrowright.png</file>
         <file>res/xor.png</file>
     </qresource>
 </RCC>

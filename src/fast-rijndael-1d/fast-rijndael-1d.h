@@ -174,9 +174,10 @@ class FastRijndael {
                 int getExpKeySizeInBytes(){     return _nek*4;          }
                 int getBlockSizeInBytes(){      return _nb*4;           }
 		
+                unsigned char* _exp_key;	//expanded key
 	private:
 		int _round;
-		unsigned char* _exp_key;	//expanded key
+
 		unsigned char* _iv;		//initialization vector (when mode != ECB)
 		int _nek;	// # of byte columns of expanded key
 		Mode _mode;		// ECB, CBC, etc.

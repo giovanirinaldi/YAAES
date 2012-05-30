@@ -4,6 +4,11 @@
 #include "dialognew.h"
 #include "dialogsetmatrix.h"
 #include "dialogshowexpkey.h"
+#include "dialogaddroundkey.h"
+#include "dialogshiftrows.h"
+#include "dialogsubbytes.h"
+#include "dialogmixcolumns.h"
+#include "dialogexport.h"
 
 #ifndef EXTERN
 #undef EXTERN
@@ -90,9 +95,9 @@ void MainWindowImpl::Initialize(){
 }
 
 void hexToUpperCaseText(unsigned char &hex, char* temp_string){
-	snprintf(temp_string, 3, "%.2x", hex);
-	temp_string[0] = toupper(temp_string[0]);
-	temp_string[1] = toupper(temp_string[1]);
+        snprintf(temp_string, 3, "%.2x", hex);
+        temp_string[0] = toupper(temp_string[0]);
+        temp_string[1] = toupper(temp_string[1]);
 }
 
 void MainWindowImpl::updateKeyMatrix(){
@@ -643,12 +648,90 @@ void MainWindowImpl::on_btnEditKey_clicked()
 
 void MainWindowImpl::on_btnShowPreviousOp_clicked()
 {
-
+    switch (previousOp){
+        case ARK:
+            {
+                unsigned char* temp_exp_key = new unsigned char [rijn->getExpKeySizeInBytes()];
+                rijn->getExpKey(temp_exp_key);
+                DialogAddRoundKey* dialogARK = new DialogAddRoundKey(this);
+                dialogARK->setStateMatrix(previousMatrix);
+                dialogARK->setSubKeyMatrix(temp_exp_key+16*round);
+                dialogARK->updateMatrix();
+                dialogARK->show();
+                delete[] temp_exp_key;
+            }
+            break;
+        case SR:
+            {
+                DialogShiftRows* dialogSR = new DialogShiftRows(this);
+                dialogSR->setStateMatrix(previousMatrix);
+                dialogSR->updateMatrix();
+                dialogSR->show();
+                break;
+            }
+        case SB:
+            {
+                DialogSubBytes* dialogSB = new DialogSubBytes(this);
+                dialogSB->setStateMatrix(previousMatrix);
+                dialogSB->updateMatrix();
+                dialogSB->show();
+                break;
+            }
+            break;
+        case MC:
+            {
+                DialogMixColumns* dialogMC = new DialogMixColumns(this);
+                dialogMC->setStateMatrix(previousMatrix);
+                dialogMC->updateMatrix();
+                dialogMC->show();
+                break;
+            }
+            break;
+    }
 }
 
 void MainWindowImpl::on_btnShowNextOp_clicked()
 {
-
+    switch (op){
+        case ARK:
+            {
+                unsigned char* temp_exp_key = new unsigned char [rijn->getExpKeySizeInBytes()];
+                rijn->getExpKey(temp_exp_key);
+                DialogAddRoundKey* dialogARK = new DialogAddRoundKey(this);
+                dialogARK->setStateMatrix(stateMatrix);
+                dialogARK->setSubKeyMatrix(temp_exp_key+16*round);
+                dialogARK->updateMatrix();
+                dialogARK->show();
+                delete[] temp_exp_key;
+            }
+            break;
+        case SR:
+            {
+                DialogShiftRows* dialogSR = new DialogShiftRows(this);
+                dialogSR->setStateMatrix(stateMatrix);
+                dialogSR->updateMatrix();
+                dialogSR->show();
+                break;
+            }
+        case SB:
+            {
+                DialogSubBytes* dialogSB = new DialogSubBytes(this);
+                dialogSB->setStateMatrix(stateMatrix);
+                dialogSB->updateMatrix();
+                dialogSB->show();
+                break;
+            }
+            break;
+        case MC:
+            {
+                DialogMixColumns* dialogMC = new DialogMixColumns(this);
+                dialogMC->setStateMatrix(stateMatrix);
+                dialogMC->updateMatrix();
+                dialogMC->show();
+                break;
+            }
+            break;
+    }
 }
 
 void MainWindowImpl::on_actionExit_activated()
@@ -665,4 +748,13 @@ void MainWindowImpl::on_btnShowKey_clicked()
     dialogShowExpKey->SetKeySize(rijn->getKeySize(), rijn->getNumberColumnsExpKey());
     dialogShowExpKey->SetExpKeyMatrixPointer(tempExpKey);
     dialogShowExpKey->show();
+}
+
+void MainWindowImpl::on_actionExport_triggered()
+{
+    DialogExport* dialogExport = new DialogExport(this);
+    dialogExport->setPlaintext(inputMatrix);
+    dialogExport->setCiphertext(outputMatrix);
+    dialogExport->update();
+    dialogExport->show();
 }

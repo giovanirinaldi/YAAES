@@ -23,8 +23,33 @@ public:
 
 private slots:
     void on_buttonBox_clicked(QAbstractButton* button);
+    void on_btnShowKeyK0K1_clicked();
 
-    void on_btnShowKey_clicked();
+    void on_btnShowKeyK1K2_clicked();
+
+    void on_btnShowKeyK2K3_clicked();
+
+    void on_btnShowKeyK3K4_clicked();
+
+    void on_btnShowKeyK4K5_clicked();
+
+    void on_btnShowKeyK5K6_clicked();
+
+    void on_btnShowKeyK6K7_clicked();
+
+    void on_btnShowKeyK7K8_clicked();
+
+    void on_btnShowKeyK8K9_clicked();
+
+    void on_btnShowKeyK9K10_clicked();
+
+    void on_btnShowKeyK10K11_clicked();
+
+    void on_btnShowKeyK11K12_clicked();
+
+    void on_btnShowKeyK12K13_clicked();
+
+    void on_btnShowKeyK13K14_clicked();
 
 private:
     Ui::DialogShowExpKey *ui;
