@@ -18,6 +18,11 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    QString* subkeyk0;
+    QString* subkeyk1;
+    QString* subkeyk2;
+    QString* subkeyu2;
+
 private slots:
     void on_editByte00From_textChanged(QString );
     void on_editByte00To_textChanged(QString );
@@ -32,7 +37,6 @@ private slots:
     void on_editByte15From_textChanged(QString );
     void on_editByte15To_textEdited(QString );
     void on_actionExit_triggered();
-    void on_buttonRun_clicked();
     void on_editPlaintext1_textChanged(QString );
     void on_editPlaintext2_textChanged(QString );
     void on_editPlaintext3_textChanged(QString );
@@ -48,27 +52,41 @@ private slots:
     void on_buttonS01E02InvMC_clicked();
     void on_buttonS01E02XOR_clicked();
     void on_buttonS01E02InvSR_clicked();
-    void on_buttonSBoxLookup_clicked();
-    void on_editByteAlpha_textChanged(QString );
-    void on_editByteBeta_textChanged(QString );
+    void on_buttonSBoxLookup12_clicked();
+    void on_editByteAlpha12_textChanged(QString );
+    void on_editByteBeta12_textChanged(QString );
     void on_editByte00ResultSbox_textChanged(QString );
     void on_editByte01ResultSbox_textChanged(QString );
     void on_editByte02ResultSbox_textChanged(QString );
     void on_editByte03ResultSbox_textChanged(QString );
-
     void on_buttonS01E04ArkK1_clicked();
-
     void on_buttonS01E04SB_clicked();
-
     void on_buttonS01E04SR_clicked();
-
     void on_buttonS01E04FindU2Bytes_clicked();
+    void on_buttonSBoxLookup13_clicked();
+    void on_editByteAlpha13_textChanged(QString );
+    void on_editByteBeta13_textChanged(QString );
+    void on_actionRun_triggered();
+    void on_actionSubkeys_triggered();
+
+    void on_pushButtonEncryptOutput_clicked();
+
+    void on_editSugK0Byte00_textChanged(QString );
+
+    void on_editSugK0Byte05_textChanged(QString );
+
+    void on_editSugK0Byte07_textChanged(QString );
+
+    void on_editSugK0Byte08_textChanged(QString );
+
+    void on_editSugK0Byte10_textChanged(QString );
+
+    void on_editSugK0Byte15_textChanged(QString );
 
 private:
     Ui::MainWindow *ui;
     RijndaelAttacker rijnAttacker;
     FastRijndael rijn;
-
 
     unsigned char tryByte00, tryByte05, tryByte07, tryByte08, tryByte10, tryByte15;
 

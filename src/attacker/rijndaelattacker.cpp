@@ -294,8 +294,8 @@ bool RijndaelAttacker::findKeyForTwoRounds(unsigned char** plaintexts, unsigned 
 								//printf("ok\n");
 								//continue;
 								copyBlock(k0, k0found);
-								countright++;
-								continue;
+                                                                /*countright++;
+                                                                continue;*/
 						/*		delete[] invCipher1;delete[] invCipher2;delete[] invCipher3;
 								delete[] invCipherDiff12;delete[] invCipherDiff13;
 								delete[] plainDiff12;delete[] plainDiff13;

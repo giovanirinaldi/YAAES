@@ -1,8 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "../../src/dialogshowsubkeys.h"
 
 //d
 #include <cstdio>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,6 +22,17 @@ MainWindow::MainWindow(QWidget *parent) :
         k0found[i] = 0x00;
     }
     keyFound = false;
+
+    subkeyk0 = new QString[16];
+    subkeyk1 = new QString[16];
+    subkeyk2 = new QString[16];
+    subkeyu2 = new QString[16];
+    for (int i = 0; i < 16; i++){
+        subkeyk0[i] = "??";
+        subkeyk1[i] = "??";
+        subkeyk2[i] = "??";
+        subkeyu2[i] = "??";
+    }
 
     outK0Array = new QLabel*[16];
     outK0Array[0]=ui->outK0byte00;outK0Array[1]=ui->outK0byte01;outK0Array[2]=ui->outK0byte02;outK0Array[3]=ui->outK0byte03;
@@ -161,6 +174,8 @@ void MainWindow::on_editByte00From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte00From->setText(text.toUpper());
+    ui->editSugK0Byte00->setText(text.toUpper());
+    subkeyk0[0] = ui->editSugK0Byte00->text();
 }
 
 void MainWindow::on_editByte00To_textChanged(QString text)
@@ -169,7 +184,7 @@ void MainWindow::on_editByte00To_textChanged(QString text)
     for (int i = 0; i < text.length(); i++)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
-    ui->editByte00To->setText(text.toUpper());
+    ui->editByte00To->setText(text.toUpper());    
 }
 
 void MainWindow::on_editByte05From_textChanged(QString text)
@@ -179,6 +194,8 @@ void MainWindow::on_editByte05From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte05From->setText(text.toUpper());
+    ui->editSugK0Byte05->setText(text.toUpper());
+    subkeyk0[5] = ui->editSugK0Byte05->text();
 }
 
 void MainWindow::on_editByte05To_textChanged(QString text)
@@ -197,6 +214,7 @@ void MainWindow::on_editByte07From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte07From->setText(text.toUpper());
+    ui->editSugK0Byte07->setText(text.toUpper());
 }
 
 void MainWindow::on_editByte07To_textChanged(QString text)
@@ -215,6 +233,7 @@ void MainWindow::on_editByte08From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte08From->setText(text.toUpper());
+    ui->editSugK0Byte08->setText(text.toUpper());
 }
 
 void MainWindow::on_editByte08To_textChanged(QString text)
@@ -233,6 +252,7 @@ void MainWindow::on_editByte10From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte10From->setText(text.toUpper());
+    ui->editSugK0Byte10->setText(text.toUpper());
 }
 
 void MainWindow::on_editByte10To_textChanged(QString text)
@@ -251,6 +271,7 @@ void MainWindow::on_editByte15From_textChanged(QString text)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
     ui->editByte15From->setText(text.toUpper());
+    ui->editSugK0Byte15->setText(text.toUpper());
 }
 
 void MainWindow::on_editByte15To_textEdited(QString text)
@@ -327,8 +348,7 @@ void MainWindow::setOutCipherK0(QString block){
     }
 }
 
-void MainWindow::on_buttonRun_clicked()
-{
+void MainWindow::on_actionRun_triggered(){
     unsigned char** plaintexts = new unsigned char* [3];
     unsigned char* plaintext1 = new unsigned char [16];
     unsigned char* plaintext2 = new unsigned char [16];
@@ -371,9 +391,15 @@ void MainWindow::on_buttonRun_clicked()
 
     if (rijnAttacker.findKeyForTwoRounds(plaintexts, ciphertexts, 3, k0found, k0byte00from, k0byte00to, k0byte05from, k0byte05to, k0byte07from, k0byte07to, k0byte08from, k0byte08to, k0byte10from, k0byte10to, k0byte15from, k0byte15to)){
         keyFound = true;
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setText("Key found!");
+        msgBox->show();
         ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabOutput));
     }
     else{
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setText("Key nof found! Change search range for K0 or try with another plaintext/ciphertext pairs.");
+        msgBox->show();
     }
 
     delete[] plaintexts;
@@ -485,7 +511,11 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         tryByte07 = hexValue(ui->editByte07From->text().at(0).toAscii())*256 + hexValue(ui->editByte07From->text().at(1).toAscii());
         tryByte08 = hexValue(ui->editByte08From->text().at(0).toAscii())*256 + hexValue(ui->editByte08From->text().at(1).toAscii());
         tryByte10 = hexValue(ui->editByte10From->text().at(0).toAscii())*256 + hexValue(ui->editByte10From->text().at(1).toAscii());
-        tryByte15 = hexValue(ui->editByte15From->text().at(0).toAscii())*256 + hexValue(ui->editByte15From->text().at(1).toAscii());        
+        tryByte15 = hexValue(ui->editByte15From->text().at(0).toAscii())*256 + hexValue(ui->editByte15From->text().at(1).toAscii());
+        subkeyk0[0]=ui->editSugK0Byte00->text();
+        subkeyk0[5]=ui->editSugK0Byte05->text();
+        subkeyk0[10]=ui->editSugK0Byte10->text();
+        subkeyk0[15]=ui->editSugK0Byte15->text();
         printf("tabS01E01\n");fflush(stdout);
     }
     else if (tab == ui->tabS01E02){
@@ -568,7 +598,7 @@ void MainWindow::setColumnsS01E03(){
     ui->s01e03plain1AfterR1Col0Byte02_2->setText(ui->outPlain1s01e01MCByte02->text());
     ui->s01e03plain1AfterR1Col0Byte03_2->setText(ui->outPlain1s01e01MCByte03->text());
 
-    ui->s01e03k1Byte00->setText("??"); ui->s01e03k1Byte01->setText("??"); ui->s01e03k1Byte02->setText("??"); ui->s01e03k1Byte03->setText("??");
+    //ui->s01e03k1Byte00->setText("??"); ui->s01e03k1Byte01->setText("??"); ui->s01e03k1Byte02->setText("??"); ui->s01e03k1Byte03->setText("??");
 
     unsigned char byte_temp_a, byte_temp_b, byte_temp_c;
     char* temp_string = new char [3];
@@ -632,7 +662,7 @@ void MainWindow::setColumnAndBlockS01E04(){
         s01e04Cipher1InvMC[i]->setText(s01e02Cipher1InvMC[i]->text());
     }
 
-    ui->s01e04u2Byte00->setText("??");ui->s01e04u2Byte07->setText("??");ui->s01e04u2Byte10->setText("??");ui->s01e04u2Byte13->setText("??");
+    //ui->s01e04u2Byte00->setText("??");ui->s01e04u2Byte07->setText("??");ui->s01e04u2Byte10->setText("??");ui->s01e04u2Byte13->setText("??");
 }
 
 void MainWindow::on_buttonS01E01ARK_clicked()
@@ -937,37 +967,71 @@ void MainWindow::on_buttonS01E02InvSR_clicked()
     delete[] temp_string;
 }
 
-void MainWindow::on_buttonSBoxLookup_clicked()
+void MainWindow::on_buttonSBoxLookup12_clicked()
 {
     unsigned char temp_char_a, temp_char_b, res_x, res_y;
     char* temp_string = new char [3];
-    temp_char_a = hexValue(ui->editByteAlpha->text().at(0).toAscii())*16 + hexValue(ui->editByteAlpha->text().at(1).toAscii());
-    temp_char_b = hexValue(ui->editByteBeta->text().at(0).toAscii())*16 + hexValue(ui->editByteBeta->text().at(1).toAscii());
+    temp_char_a = hexValue(ui->editByteAlpha12->text().at(0).toAscii())*16 + hexValue(ui->editByteAlpha12->text().at(1).toAscii());
+    temp_char_b = hexValue(ui->editByteBeta12->text().at(0).toAscii())*16 + hexValue(ui->editByteBeta12->text().at(1).toAscii());
     res_x = rijnAttacker.xSboxDiff(temp_char_a, temp_char_b);
     res_y = rijnAttacker.ySboxDiff(temp_char_a, temp_char_b);
     hexToUpperCaseText(res_x, temp_string);
-    ui->labelResultLookupX->setText(temp_string);
+    ui->labelResultLookupX12->setText(temp_string);
     hexToUpperCaseText(res_y, temp_string);
-    ui->labelResultLookupY->setText(temp_string);
+    ui->labelResultLookupY12->setText(temp_string);
     delete[] temp_string;
 }
 
-void MainWindow::on_editByteAlpha_textChanged(QString text)
+
+void MainWindow::on_buttonSBoxLookup13_clicked()
 {
-    text = text.toUpper();
-    for (int i = 0; i < text.length(); i++)
-        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
-            text.remove(i, 1);
-    ui->editByteAlpha->setText(text.toUpper());
+    unsigned char temp_char_a, temp_char_b, res_x, res_y;
+    char* temp_string = new char [3];
+    temp_char_a = hexValue(ui->editByteAlpha13->text().at(0).toAscii())*16 + hexValue(ui->editByteAlpha13->text().at(1).toAscii());
+    temp_char_b = hexValue(ui->editByteBeta13->text().at(0).toAscii())*16 + hexValue(ui->editByteBeta13->text().at(1).toAscii());
+    res_x = rijnAttacker.xSboxDiff(temp_char_a, temp_char_b);
+    res_y = rijnAttacker.ySboxDiff(temp_char_a, temp_char_b);
+    hexToUpperCaseText(res_x, temp_string);
+    ui->labelResultLookupX13->setText(temp_string);
+    hexToUpperCaseText(res_y, temp_string);
+    ui->labelResultLookupY13->setText(temp_string);
+    delete[] temp_string;
 }
 
-void MainWindow::on_editByteBeta_textChanged(QString text)
+void MainWindow::on_editByteAlpha12_textChanged(QString text)
 {
     text = text.toUpper();
     for (int i = 0; i < text.length(); i++)
         if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
             text.remove(i, 1);
-    ui->editByteBeta->setText(text.toUpper());
+    ui->editByteAlpha12->setText(text.toUpper());
+}
+
+void MainWindow::on_editByteBeta12_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByteBeta12->setText(text.toUpper());
+}
+
+void MainWindow::on_editByteAlpha13_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByteAlpha13->setText(text.toUpper());
+}
+
+void MainWindow::on_editByteBeta13_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editByteBeta13->setText(text.toUpper());
 }
 
 void MainWindow::on_editByte00ResultSbox_textChanged(QString text)
@@ -985,6 +1049,7 @@ void MainWindow::on_editByte00ResultSbox_textChanged(QString text)
         byte_temp_c = byte_temp_a ^ byte_temp_b;
         hexToUpperCaseText(byte_temp_c, temp_string);
         ui->s01e03k1Byte00->setText(temp_string);
+        subkeyk1[0]=ui->s01e03k1Byte00->text();
         delete[] temp_string;
     }
 }
@@ -1004,6 +1069,7 @@ void MainWindow::on_editByte01ResultSbox_textChanged(QString text)
         byte_temp_c = byte_temp_a ^ byte_temp_b;
         hexToUpperCaseText(byte_temp_c, temp_string);
         ui->s01e03k1Byte01->setText(temp_string);
+        subkeyk1[1]=ui->s01e03k1Byte01->text();
         delete[] temp_string;
     }
 }
@@ -1023,6 +1089,7 @@ void MainWindow::on_editByte02ResultSbox_textChanged(QString text)
         byte_temp_c = byte_temp_a ^ byte_temp_b;
         hexToUpperCaseText(byte_temp_c, temp_string);
         ui->s01e03k1Byte02->setText(temp_string);
+        subkeyk1[2]=ui->s01e03k1Byte02->text();
         delete[] temp_string;
     }
 }
@@ -1042,6 +1109,7 @@ void MainWindow::on_editByte03ResultSbox_textChanged(QString text)
         byte_temp_c = byte_temp_a ^ byte_temp_b;
         hexToUpperCaseText(byte_temp_c, temp_string);
         ui->s01e03k1Byte03->setText(temp_string);
+        subkeyk1[3]=ui->s01e03k1Byte03->text();
         delete[] temp_string;
     }
 }
@@ -1123,6 +1191,7 @@ void MainWindow::on_buttonS01E04FindU2Bytes_clicked()
     byte_temp_a ^= byte_temp_b;
     hexToUpperCaseText(byte_temp_a, temp_string);
     ui->s01e04u2Byte00->setText(temp_string);
+    subkeyu2[0] =ui->s01e04u2Byte00->text();
 
     byte_temp_b = hexValue(ui->s01e04plain2AfterSBR1Col0Byte00->text().at(0).toAscii())*16 + hexValue(ui->s01e04plain2AfterSBR1Col0Byte00->text().at(1).toAscii());
     byte_temp_b ^= byte_temp_a;
@@ -1138,19 +1207,95 @@ void MainWindow::on_buttonS01E04FindU2Bytes_clicked()
     byte_temp_a ^= byte_temp_b;
     hexToUpperCaseText(byte_temp_a, temp_string);
     ui->s01e04u2Byte07->setText(temp_string);
+    subkeyu2[7] =ui->s01e04u2Byte07->text();
 
     byte_temp_a = hexValue(ui->s01e04plain1AfterSRR1Byte10->text().at(0).toAscii())*16 + hexValue(ui->s01e04plain1AfterSRR1Byte10->text().at(1).toAscii());
     byte_temp_b = hexValue(ui->s01e04Cipher1InvMCByte10->text().at(0).toAscii())*16 + hexValue(ui->s01e04Cipher1InvMCByte10->text().at(1).toAscii());
     byte_temp_a ^= byte_temp_b;
     hexToUpperCaseText(byte_temp_a, temp_string);
     ui->s01e04u2Byte10->setText(temp_string);
+    subkeyu2[10] =ui->s01e04u2Byte10->text();
 
     byte_temp_a = hexValue(ui->s01e04plain1AfterSRR1Byte13->text().at(0).toAscii())*16 + hexValue(ui->s01e04plain1AfterSRR1Byte13->text().at(1).toAscii());
     byte_temp_b = hexValue(ui->s01e04Cipher1InvMCByte13->text().at(0).toAscii())*16 + hexValue(ui->s01e04Cipher1InvMCByte13->text().at(1).toAscii());
     byte_temp_a ^= byte_temp_b;
     hexToUpperCaseText(byte_temp_a, temp_string);
     ui->s01e04u2Byte13->setText(temp_string);
+    subkeyu2[13] =ui->s01e04u2Byte13->text();
 
 
     delete[] temp_string;
+}
+
+void MainWindow::on_actionSubkeys_triggered()
+{
+    DialogShowSubKeys* dialogShowSubKeys = new DialogShowSubKeys(this);
+    dialogShowSubKeys->setSubKeysMatrix(subkeyk0, subkeyk1, subkeyk2, subkeyu2);
+    dialogShowSubKeys->show();
+}
+
+
+void MainWindow::on_pushButtonEncryptOutput_clicked()
+{
+    //rijn.encryptTwoRounds();
+}
+
+void MainWindow::on_editSugK0Byte00_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte00->setText(text.toUpper());
+    subkeyk0[0] = ui->editSugK0Byte00->text();
+}
+
+void MainWindow::on_editSugK0Byte05_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte05->setText(text.toUpper());
+    subkeyk0[5] = ui->editSugK0Byte05->text();
+}
+
+void MainWindow::on_editSugK0Byte07_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte07->setText(text.toUpper());
+    subkeyk0[7] = ui->editSugK0Byte07->text();
+}
+
+void MainWindow::on_editSugK0Byte08_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte08->setText(text.toUpper());
+    subkeyk0[8] = ui->editSugK0Byte08->text();
+}
+
+void MainWindow::on_editSugK0Byte10_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte10->setText(text.toUpper());
+    subkeyk0[10] = ui->editSugK0Byte10->text();
+}
+
+void MainWindow::on_editSugK0Byte15_textChanged(QString text)
+{
+    text = text.toUpper();
+    for (int i = 0; i < text.length(); i++)
+        if (text.at(i).toAscii() < 48 || (text.at(i).toAscii() > 57 && text.at(i).toAscii() < 65) || text.at(i).toAscii() > 70)
+            text.remove(i, 1);
+    ui->editSugK0Byte15->setText(text.toUpper());
+    subkeyk0[15] = ui->editSugK0Byte15->text();
 }

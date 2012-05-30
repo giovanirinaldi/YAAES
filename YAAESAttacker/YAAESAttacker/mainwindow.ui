@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>739</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,13 +24,13 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>0</y>
       <width>781</width>
-      <height>501</height>
+      <height>531</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabInput">
      <attribute name="title">
@@ -46,7 +46,7 @@
        </rect>
       </property>
       <property name="title">
-       <string>Pares Plaintext/Ciphertext</string>
+       <string>Plaintext/Ciphertext Pairs</string>
       </property>
       <widget class="QLineEdit" name="editPlaintext1">
        <property name="geometry">
@@ -154,7 +154,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Par 1</string>
+        <string>Pair 1</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_2">
@@ -167,7 +167,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Par 2</string>
+        <string>Pair 2</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_3">
@@ -180,7 +180,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Par 3</string>
+        <string>Pair 3</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_4">
@@ -220,7 +220,7 @@
        </rect>
       </property>
       <property name="title">
-       <string>Espaço de procura para chave k0</string>
+       <string>Search Range for Key K0</string>
       </property>
       <widget class="QLineEdit" name="editByte00From">
        <property name="geometry">
@@ -261,7 +261,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -518,7 +518,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -534,7 +534,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -550,7 +550,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -566,7 +566,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -582,10 +582,197 @@
         </rect>
        </property>
        <property name="text">
-        <string>a</string>
+        <string>to</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupK0Range_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>200</y>
+        <width>171</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Next suggestion for K0</string>
+      </property>
+      <widget class="QLineEdit" name="editSugK0Byte00">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>30</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_47">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>40</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 00</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSugK0Byte05">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>60</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSugK0Byte07">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>90</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSugK0Byte08">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>120</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSugK0Byte10">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>150</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="editSugK0Byte15">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>31</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>00</string>
+       </property>
+       <property name="maxLength">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_49">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 05</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_50">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 07</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_51">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>130</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 08</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_52">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>160</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 10</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_53">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>190</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Byte 15</string>
        </property>
       </widget>
      </widget>
@@ -613,7 +800,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Plaintext (Par 1)</string>
+       <string>Plaintext (Pair 1)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1517,7 +1704,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1763,7 +1950,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1804,7 +1991,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1927,7 +2114,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2176,7 +2363,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2422,7 +2609,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2463,7 +2650,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2586,7 +2773,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2630,7 +2817,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2917,7 +3104,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -2999,7 +3186,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3245,7 +3432,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3371,7 +3558,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3412,7 +3599,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3494,7 +3681,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3825,7 +4012,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -3985,7 +4172,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Plaintext (Par 2)</string>
+       <string>Plaintext (Pair 2)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4889,7 +5076,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5135,7 +5322,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5176,7 +5363,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5299,7 +5486,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5548,7 +5735,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5794,7 +5981,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5835,7 +6022,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -5958,7 +6145,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6002,7 +6189,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6289,7 +6476,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6371,7 +6558,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6617,7 +6804,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6743,7 +6930,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6784,7 +6971,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -6866,7 +7053,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -7197,7 +7384,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -7305,7 +7492,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Plaintext (Par 3)</string>
+       <string>Plaintext (Pair 3)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -8209,7 +8396,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -8455,7 +8642,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -8496,7 +8683,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -8619,7 +8806,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -8868,7 +9055,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9114,7 +9301,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9155,7 +9342,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9278,7 +9465,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9322,7 +9509,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9609,7 +9796,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9691,7 +9878,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -9937,7 +10124,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -10063,7 +10250,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -10104,7 +10291,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -10186,7 +10373,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -10517,7 +10704,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -10630,7 +10817,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Ciphertext (Par 1)</string>
+       <string>Ciphertext (Pair 1)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -11329,7 +11516,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11370,7 +11557,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11411,7 +11598,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11452,7 +11639,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11493,7 +11680,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11534,7 +11721,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11575,7 +11762,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11616,7 +11803,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11657,7 +11844,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11698,7 +11885,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11739,7 +11926,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11780,7 +11967,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11821,7 +12008,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11862,7 +12049,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11903,7 +12090,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11944,7 +12131,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -11986,7 +12173,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Ciphertext (Par 2)</string>
+       <string>Ciphertext (Pair 2)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12685,7 +12872,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12726,7 +12913,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12767,7 +12954,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12808,7 +12995,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12849,7 +13036,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12890,7 +13077,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12931,7 +13118,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -12972,7 +13159,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13013,7 +13200,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13054,7 +13241,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13095,7 +13282,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13136,7 +13323,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13177,7 +13364,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13218,7 +13405,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13259,7 +13446,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13300,7 +13487,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -13329,7 +13516,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Ciphertext (Par 3)</string>
+       <string>Ciphertext (Pair 3)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -14028,7 +14215,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14069,7 +14256,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14110,7 +14297,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14151,7 +14338,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14192,7 +14379,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14233,7 +14420,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14274,7 +14461,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14315,7 +14502,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14356,7 +14543,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14397,7 +14584,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14438,7 +14625,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14479,7 +14666,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14520,7 +14707,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14561,7 +14748,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14602,7 +14789,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14643,7 +14830,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14672,7 +14859,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Difference After InvSR (Pair 1 and 2)</string>
+       <string>Difference After InvSR (Pairs 1 and 2)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -14715,7 +14902,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14756,7 +14943,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14797,7 +14984,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14838,7 +15025,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14879,7 +15066,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14920,7 +15107,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -14961,7 +15148,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15002,7 +15189,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15043,7 +15230,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15084,7 +15271,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15125,7 +15312,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15169,7 +15356,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15210,7 +15397,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15251,7 +15438,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15292,7 +15479,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15333,7 +15520,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15374,7 +15561,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15418,7 +15605,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15459,7 +15646,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15500,7 +15687,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15541,7 +15728,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15582,7 +15769,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15623,7 +15810,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15664,7 +15851,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15705,7 +15892,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15746,7 +15933,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15787,7 +15974,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15828,7 +16015,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15869,7 +16056,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15910,7 +16097,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15951,7 +16138,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -15992,7 +16179,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16031,7 +16218,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Difference After InvSR (Pair 1 and 3)</string>
+       <string>Difference After InvSR (Pairs 1 and 3)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -16071,7 +16258,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16112,7 +16299,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16153,7 +16340,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16194,7 +16381,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16235,7 +16422,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16276,7 +16463,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16317,7 +16504,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16358,7 +16545,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16399,7 +16586,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16440,7 +16627,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16481,7 +16668,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16525,7 +16712,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16566,7 +16753,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16607,7 +16794,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16648,7 +16835,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16689,7 +16876,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16730,7 +16917,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16771,7 +16958,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16812,7 +16999,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16853,7 +17040,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16894,7 +17081,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16935,7 +17122,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -16976,7 +17163,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17017,7 +17204,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17061,7 +17248,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17102,7 +17289,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17143,7 +17330,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17184,7 +17371,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17225,7 +17412,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17266,7 +17453,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17307,7 +17494,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17348,7 +17535,7 @@
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -17358,14 +17545,280 @@
      <widget class="QPushButton" name="buttonS01E02XOR">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>150</y>
+        <x>345</x>
+        <y>110</y>
         <width>81</width>
         <height>27</height>
        </rect>
       </property>
       <property name="text">
        <string>Diff (XOR)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_45">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>145</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/xor.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>305</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/xor.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_48">
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>90</y>
+        <width>61</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_54">
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>390</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_55">
+      <property name="geometry">
+       <rect>
+        <x>282</x>
+        <y>240</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_56">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>148</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_57">
+      <property name="geometry">
+       <rect>
+        <x>395</x>
+        <y>148</y>
+        <width>31</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_58">
+      <property name="geometry">
+       <rect>
+        <x>335</x>
+        <y>308</y>
+        <width>91</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_59">
+      <property name="geometry">
+       <rect>
+        <x>331</x>
+        <y>98</y>
+        <width>20</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_60">
+      <property name="geometry">
+       <rect>
+        <x>314</x>
+        <y>100</y>
+        <width>16</width>
+        <height>205</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_61">
+      <property name="geometry">
+       <rect>
+        <x>315</x>
+        <y>330</y>
+        <width>16</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_62">
+      <property name="geometry">
+       <rect>
+        <x>374</x>
+        <y>170</y>
+        <width>16</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_63">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>150</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/arrowpointright.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_64">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>310</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/arrowpointright.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -17376,7 +17829,7 @@
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>610</x>
         <y>100</y>
         <width>181</width>
         <height>141</height>
@@ -17571,7 +18024,7 @@
      <widget class="QGroupBox" name="groupInvCipher13DiffColumns01e03">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>610</x>
         <y>250</y>
         <width>181</width>
         <height>141</height>
@@ -17957,11 +18410,44 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <zorder>s01e03plain1AfterR1Col0Byte02</zorder>
-      <zorder>s01e03plain1AfterR1Col0Byte01</zorder>
-      <zorder>s01e03plain1AfterR1Col0Byte00</zorder>
-      <zorder>s01e03plain1AfterR1Col0Byte03</zorder>
-      <zorder>groupInvCipher12DiffColumns01e03_5</zorder>
+      <widget class="QLabel" name="label_69">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>67</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/vline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_72">
+       <property name="geometry">
+        <rect>
+         <x>133</x>
+         <y>77</y>
+         <width>20</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/hline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_3">
       <property name="geometry">
@@ -18155,6 +18641,44 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_70">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>67</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/vline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_74">
+       <property name="geometry">
+        <rect>
+         <x>133</x>
+         <y>20</y>
+         <width>20</width>
+         <height>59</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/hline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
@@ -18352,11 +18876,96 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+      <widget class="QLabel" name="label_68">
+       <property name="geometry">
+        <rect>
+         <x>133</x>
+         <y>8</y>
+         <width>51</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/vline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_67">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>10</y>
+         <width>21</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/arrowpointright.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_71">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>67</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/vline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_75">
+       <property name="geometry">
+        <rect>
+         <x>113</x>
+         <y>30</y>
+         <width>20</width>
+         <height>47</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/hline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>s01e03plain3AfterR1Col0Byte02</zorder>
+      <zorder>s01e03plain3AfterR1Col0Byte01</zorder>
+      <zorder>s01e03plain3AfterR1Col0Byte00</zorder>
+      <zorder>s01e03plain3AfterR1Col0Byte03</zorder>
+      <zorder>label_68</zorder>
+      <zorder>label_67</zorder>
+      <zorder>groupInvCipher13DiffColumns01e03_2</zorder>
+      <zorder>label_71</zorder>
+      <zorder>label_75</zorder>
      </widget>
      <widget class="QGroupBox" name="groupInvCipher13DiffColumns01e03_2">
       <property name="geometry">
        <rect>
-        <x>120</x>
+        <x>160</x>
         <y>250</y>
         <width>101</width>
         <height>141</height>
@@ -18564,8 +19173,8 @@
      <widget class="QLabel" name="label_19">
       <property name="geometry">
        <rect>
-        <x>640</x>
-        <y>70</y>
+        <x>660</x>
+        <y>80</y>
         <width>91</width>
         <height>17</height>
        </rect>
@@ -18577,10 +19186,10 @@
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>30</y>
+        <x>320</x>
+        <y>20</y>
         <width>231</width>
-        <height>271</height>
+        <height>291</height>
        </rect>
       </property>
       <property name="title">
@@ -18590,150 +19199,297 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>30</y>
+         <y>20</y>
          <width>211</width>
-         <height>131</height>
+         <height>41</height>
         </rect>
        </property>
        <property name="text">
-        <string>Given Input (Alpha) and Output (Beta) SBox differences, find X and Y that satisfies the following relations:
-
-X xor Y = Alpha 
+        <string>X xor Y = Alpha 
 SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QLabel" name="label_21">
+      <widget class="QGroupBox" name="groupBox_4">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>170</y>
-         <width>51</width>
-         <height>17</height>
+         <y>60</y>
+         <width>201</width>
+         <height>111</height>
         </rect>
        </property>
-       <property name="text">
-        <string>Alpha: </string>
+       <property name="title">
+        <string>Lookup For 1 And 2</string>
        </property>
+       <widget class="QLineEdit" name="editByteBeta12">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>31</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editByteAlpha12">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>30</y>
+          <width>31</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Alpha: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Beta:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="buttonSBoxLookup12">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>60</y>
+          <width>97</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lookup</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelResultLookupY12">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>90</y>
+          <width>41</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>90</y>
+          <width>31</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>and</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Found:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelResultLookupX12">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>90</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
-      <widget class="QLabel" name="label_22">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>170</y>
-         <width>51</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Beta:</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="editByteAlpha">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>160</y>
-         <width>31</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>00</string>
-       </property>
-       <property name="maxLength">
-        <number>2</number>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="editByteBeta">
-       <property name="geometry">
-        <rect>
-         <x>150</x>
-         <y>160</y>
-         <width>31</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>00</string>
-       </property>
-       <property name="maxLength">
-        <number>2</number>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="buttonSBoxLookup">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>200</y>
-         <width>97</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lookup</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="labelResultLookupX">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>240</y>
-         <width>31</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="labelResultLookupY">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>240</y>
-         <width>41</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_23">
+      <widget class="QGroupBox" name="groupBox_5">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>240</y>
-         <width>51</width>
-         <height>17</height>
+         <y>180</y>
+         <width>201</width>
+         <height>111</height>
         </rect>
        </property>
-       <property name="text">
-        <string>Found:</string>
+       <property name="title">
+        <string>Lookup For 1 And 3</string>
        </property>
-      </widget>
-      <widget class="QLabel" name="label_24">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>240</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>and</string>
-       </property>
+       <widget class="QLineEdit" name="editByteBeta13">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>30</y>
+          <width>31</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="editByteAlpha13">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>30</y>
+          <width>31</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_39">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Alpha: </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Beta:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="buttonSBoxLookup13">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>60</y>
+          <width>97</width>
+          <height>27</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lookup</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelResultLookupY13">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>90</y>
+          <width>41</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>90</y>
+          <width>31</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>and</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>51</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Found:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelResultLookupX13">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>90</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>300</y>
+        <x>480</x>
+        <y>320</y>
         <width>141</width>
         <height>151</height>
        </rect>
@@ -18754,7 +19510,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         </rect>
        </property>
        <property name="text">
-        <string>00</string>
+        <string/>
        </property>
        <property name="maxLength">
         <number>2</number>
@@ -18770,7 +19526,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         </rect>
        </property>
        <property name="text">
-        <string>00</string>
+        <string/>
        </property>
        <property name="maxLength">
         <number>2</number>
@@ -18786,7 +19542,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         </rect>
        </property>
        <property name="text">
-        <string>00</string>
+        <string/>
        </property>
        <property name="maxLength">
         <number>2</number>
@@ -18802,7 +19558,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         </rect>
        </property>
        <property name="text">
-        <string>00</string>
+        <string/>
        </property>
        <property name="maxLength">
         <number>2</number>
@@ -18812,8 +19568,8 @@ SBox(X) xor SBox(Y) = Beta</string>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_6">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>300</y>
+        <x>290</x>
+        <y>320</y>
         <width>161</width>
         <height>141</height>
        </rect>
@@ -19038,7 +19794,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19079,7 +19835,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19123,7 +19879,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19164,7 +19920,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19174,20 +19930,26 @@ SBox(X) xor SBox(Y) = Beta</string>
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>60</y>
-         <width>41</width>
-         <height>17</height>
+         <y>63</y>
+         <width>25</width>
+         <height>25</height>
         </rect>
        </property>
        <property name="text">
-        <string>XOR</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/xor.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_5">
       <property name="geometry">
        <rect>
-        <x>120</x>
+        <x>160</x>
         <y>100</y>
         <width>101</width>
         <height>141</height>
@@ -19378,18 +20140,118 @@ SBox(X) xor SBox(Y) = Beta</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
+      <widget class="QLabel" name="label_65">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>21</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/arrowpointright.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_66">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>68</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/vline.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
      </widget>
      <widget class="QLabel" name="label_26">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>360</y>
+        <x>470</x>
+        <y>385</y>
         <width>31</width>
         <height>17</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>=</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_43">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>167</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/xor.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_44">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>315</y>
+        <width>25</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/xor.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_73">
+      <property name="geometry">
+       <rect>
+        <x>122</x>
+        <y>107</y>
+        <width>20</width>
+        <height>210</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -19655,7 +20517,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19696,7 +20558,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19737,7 +20599,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19781,7 +20643,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19835,7 +20697,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19876,7 +20738,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19917,7 +20779,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -19958,7 +20820,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -20138,7 +21000,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -20261,7 +21123,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -20466,7 +21328,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -20507,7 +21369,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -21326,10 +22188,15 @@ SBox(X) xor SBox(Y) = Beta</string>
         <property name="geometry">
          <rect>
           <x>20</x>
-          <y>70</y>
+          <y>60</y>
           <width>21</width>
           <height>17</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>30</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>=</string>
@@ -21436,7 +22303,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -21641,7 +22508,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -21805,7 +22672,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -21849,7 +22716,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22024,13 +22891,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <property name="geometry">
         <rect>
          <x>380</x>
-         <y>70</y>
+         <y>60</y>
          <width>31</width>
-         <height>17</height>
+         <height>31</height>
         </rect>
        </property>
        <property name="text">
-        <string>XOR</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>res/xor.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
        </property>
       </widget>
      </widget>
@@ -22094,7 +22967,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <string notr="true"/>
        </property>
        <property name="title">
-        <string>Col. 0 Byte 0 - Pair 2</string>
+        <string>Col. 0 Byte 00 - Pair 2</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -22181,7 +23054,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22225,7 +23098,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22365,7 +23238,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22397,7 +23270,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <string notr="true"/>
        </property>
        <property name="title">
-        <string>Col. 0 Byte 0 - Pair 3</string>
+        <string>Col. 0 Byte 00 - Pair 3</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -22484,7 +23357,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22528,7 +23401,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22655,7 +23528,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
         </property>
         <property name="text">
-         <string>FF</string>
+         <string>??</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -22703,7 +23576,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Chave (k0) Calculada</string>
+       <string>Key (k0) found</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -22743,7 +23616,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22784,7 +23657,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22825,7 +23698,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22866,7 +23739,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22907,7 +23780,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22948,7 +23821,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -22989,7 +23862,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23030,7 +23903,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23071,7 +23944,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23112,7 +23985,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23153,7 +24026,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23197,7 +24070,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23238,7 +24111,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23279,7 +24152,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23320,7 +24193,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -23361,7 +24234,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24055,9 +24928,9 @@ SBox(X) xor SBox(Y) = Beta</string>
      <widget class="QGroupBox" name="groupOutCipherK0">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>320</x>
         <y>170</y>
-        <width>171</width>
+        <width>201</width>
         <height>141</height>
        </rect>
       </property>
@@ -24071,7 +24944,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Ciphertext (com k0)</string>
+       <string>Ciphertext (with k0 found)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -24082,7 +24955,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>98</x>
+         <x>120</x>
          <y>102</y>
          <width>25</width>
          <height>25</height>
@@ -24111,7 +24984,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24123,7 +24996,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>98</x>
+         <x>120</x>
          <y>54</y>
          <width>25</width>
          <height>25</height>
@@ -24152,7 +25025,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24164,7 +25037,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>98</x>
+         <x>120</x>
          <y>78</y>
          <width>25</width>
          <height>25</height>
@@ -24193,7 +25066,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24205,7 +25078,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>72</x>
          <y>78</y>
          <width>25</width>
          <height>25</height>
@@ -24234,7 +25107,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24246,7 +25119,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>72</x>
          <y>30</y>
          <width>25</width>
          <height>25</height>
@@ -24275,7 +25148,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24287,7 +25160,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>26</x>
+         <x>48</x>
          <y>78</y>
          <width>25</width>
          <height>25</height>
@@ -24316,7 +25189,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24328,7 +25201,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>74</x>
+         <x>96</x>
          <y>78</y>
          <width>25</width>
          <height>25</height>
@@ -24357,7 +25230,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24369,7 +25242,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>74</x>
+         <x>96</x>
          <y>54</y>
          <width>25</width>
          <height>25</height>
@@ -24398,7 +25271,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24410,7 +25283,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>26</x>
+         <x>48</x>
          <y>54</y>
          <width>25</width>
          <height>25</height>
@@ -24439,7 +25312,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24451,7 +25324,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>74</x>
+         <x>96</x>
          <y>30</y>
          <width>25</width>
          <height>25</height>
@@ -24480,7 +25353,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24492,7 +25365,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>26</x>
+         <x>48</x>
          <y>30</y>
          <width>25</width>
          <height>25</height>
@@ -24521,7 +25394,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24536,7 +25409,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>72</x>
          <y>102</y>
          <width>25</width>
          <height>25</height>
@@ -24565,7 +25438,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24577,7 +25450,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>98</x>
+         <x>120</x>
          <y>30</y>
          <width>25</width>
          <height>25</height>
@@ -24606,7 +25479,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24618,7 +25491,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>26</x>
+         <x>48</x>
          <y>102</y>
          <width>25</width>
          <height>25</height>
@@ -24647,7 +25520,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24659,7 +25532,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>74</x>
+         <x>96</x>
          <y>102</y>
          <width>25</width>
          <height>25</height>
@@ -24688,7 +25561,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24700,7 +25573,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>50</x>
+         <x>72</x>
          <y>54</y>
          <width>25</width>
          <height>25</height>
@@ -24729,7 +25602,7 @@ SBox(X) xor SBox(Y) = Beta</string>
 }</string>
        </property>
        <property name="text">
-        <string>FF</string>
+        <string>??</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -24739,7 +25612,7 @@ SBox(X) xor SBox(Y) = Beta</string>
      <widget class="QGroupBox" name="groupOutCipher1">
       <property name="geometry">
        <rect>
-        <x>520</x>
+        <x>550</x>
         <y>170</y>
         <width>171</width>
         <height>141</height>
@@ -25420,11 +26293,11 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="pushButtonEncryptOutput">
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>230</y>
+        <y>235</y>
         <width>97</width>
         <height>27</height>
        </rect>
@@ -25433,59 +26306,139 @@ SBox(X) xor SBox(Y) = Beta</string>
        <string>Encrypt</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_76">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>137</y>
+        <width>20</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/hline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_77">
+      <property name="geometry">
+       <rect>
+        <x>245</x>
+        <y>220</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/arrowpointdown.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_78">
+      <property name="geometry">
+       <rect>
+        <x>153</x>
+        <y>240</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_79">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>240</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/arrowpointright.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_80">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>220</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>=?</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_81">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>240</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/arrowpointright.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_82">
+      <property name="geometry">
+       <rect>
+        <x>305</x>
+        <y>240</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>res/vline.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="buttonReset">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>600</y>
-      <width>97</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Reset</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonBack">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>600</y>
-      <width>97</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Back</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonNext">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>600</y>
-      <width>97</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Next</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonRun">
-    <property name="geometry">
-     <rect>
-      <x>500</x>
-      <y>600</y>
-      <width>97</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Run</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -25509,10 +26462,21 @@ SBox(X) xor SBox(Y) = Beta</string>
      <addaction name="actionExample_2"/>
      <addaction name="actionExample_3"/>
     </widget>
-    <addaction name="actionExit"/>
     <addaction name="menuLoad"/>
+    <addaction name="separator"/>
+    <addaction name="actionRun"/>
+    <addaction name="actionReset"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionSubkeys"/>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuView"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -25541,6 +26505,21 @@ SBox(X) xor SBox(Y) = Beta</string>
   <action name="actionExample_3">
    <property name="text">
     <string>Example 3</string>
+   </property>
+  </action>
+  <action name="actionSubkeys">
+   <property name="text">
+    <string>Subkeys</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
    </property>
   </action>
  </widget>

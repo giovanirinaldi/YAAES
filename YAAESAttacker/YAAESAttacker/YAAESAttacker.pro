@@ -13,10 +13,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     ../../src/attacker/rijndaelattacker.cpp \
-    ../../src/fast-rijndael-1d/fast-rijndael-1d.cpp
+    ../../src/fast-rijndael-1d/fast-rijndael-1d.cpp \
+    ../../src/dialogshowsubkeys.cpp
 
 HEADERS  += mainwindow.h \
     ../../src/attacker/rijndaelattacker.h \
-    ../../src/fast-rijndael-1d/fast-rijndael-1d.h
+    ../../src/fast-rijndael-1d/fast-rijndael-1d.h \
+    ../../src/dialogshowsubkeys.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    ../../src/dialogshowsubkeys.ui
