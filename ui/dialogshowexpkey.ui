@@ -5519,7 +5519,6 @@
    <zorder>k7byte03</zorder>
    <zorder>k7byte11</zorder>
    <zorder>k7byte05</zorder>
-   <zorder>btnShowKeyK7K8</zorder>
   </widget>
   <widget class="QGroupBox" name="groupK8">
    <property name="geometry">

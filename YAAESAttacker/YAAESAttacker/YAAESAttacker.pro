@@ -22,5 +22,4 @@ HEADERS  += mainwindow.h \
     ../../src/dialogshowsubkeys.h
 
 FORMS    += mainwindow.ui \
-    ../../src/dialogshowsubkeys.ui \
-    ../../src/dialogtemp.ui
+    ../../src/dialogshowsubkeys.ui

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'dialogshowsubkeys.ui'
 **
-** Created: Wed May 30 21:19:45 2012
+** Created: Thu May 31 12:36:52 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -1112,7 +1112,7 @@ public:
 
     void retranslateUi(QDialog *DialogShowSubKeys)
     {
-        DialogShowSubKeys->setWindowTitle(QApplication::translate("DialogShowSubKeys", "Dialog", 0, QApplication::UnicodeUTF8));
+        DialogShowSubKeys->setWindowTitle(QApplication::translate("DialogShowSubKeys", "SubKeys", 0, QApplication::UnicodeUTF8));
         groupSubKeyK0->setTitle(QApplication::translate("DialogShowSubKeys", "K0", 0, QApplication::UnicodeUTF8));
         k0byte15->setText(QApplication::translate("DialogShowSubKeys", "?", 0, QApplication::UnicodeUTF8));
         k0byte13->setText(QApplication::translate("DialogShowSubKeys", "?", 0, QApplication::UnicodeUTF8));
