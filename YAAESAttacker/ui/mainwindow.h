@@ -3,8 +3,8 @@
 
 #include <QMainWindow>
 #include <QLabel>
-#include "../../Rijndael/attacker/rijndaelattacker.h"
-#include "../../Rijndael/fast-rijndael-1d/fast-rijndael-1d.h"
+#include "../Rijndael/attacker/rijndaelattacker.h"
+#include "../Rijndael/fast-rijndael-1d/fast-rijndael-1d.h"
 
 namespace Ui {
     class MainWindow;

@@ -19,6 +19,6 @@ src/*.o
 
 src/yaaes-1d
 
-bin/YAAESInspector
+YAAESInspector/bin/YAAESInspector
 
 build/

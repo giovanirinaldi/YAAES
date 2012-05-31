@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "../../src/dialogshowsubkeys.h"
+#include "dialogshowsubkeys.h"
 
 //d
 #include <cstdio>
