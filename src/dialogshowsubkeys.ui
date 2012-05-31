@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>SubKeys</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
@@ -88,7 +88,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -129,7 +129,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -170,7 +170,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -211,7 +211,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -252,7 +252,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -293,7 +293,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -334,7 +334,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -375,7 +375,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -416,7 +416,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -457,7 +457,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -498,7 +498,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -542,7 +542,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -583,7 +583,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -624,7 +624,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -665,7 +665,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -706,7 +706,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -772,7 +772,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -813,7 +813,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -854,7 +854,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -895,7 +895,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -936,7 +936,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -977,7 +977,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1018,7 +1018,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1059,7 +1059,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1100,7 +1100,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1141,7 +1141,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1182,7 +1182,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1226,7 +1226,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1267,7 +1267,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1308,7 +1308,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1349,7 +1349,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1390,7 +1390,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1456,7 +1456,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1497,7 +1497,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1538,7 +1538,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1579,7 +1579,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1620,7 +1620,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1661,7 +1661,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1702,7 +1702,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1743,7 +1743,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1784,7 +1784,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1825,7 +1825,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1866,7 +1866,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1910,7 +1910,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1951,7 +1951,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1992,7 +1992,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2033,7 +2033,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2074,7 +2074,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2140,7 +2140,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2181,7 +2181,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2222,7 +2222,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2263,7 +2263,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2304,7 +2304,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2345,7 +2345,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2386,7 +2386,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2427,7 +2427,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2468,7 +2468,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2509,7 +2509,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2550,7 +2550,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2594,7 +2594,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2635,7 +2635,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2676,7 +2676,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2717,7 +2717,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -2758,7 +2758,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>??</string>
+     <string>?</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

@@ -68,20 +68,45 @@ private slots:
     void on_editByteBeta13_textChanged(QString );
     void on_actionRun_triggered();
     void on_actionSubkeys_triggered();
-
     void on_pushButtonEncryptOutput_clicked();
-
     void on_editSugK0Byte00_textChanged(QString );
-
     void on_editSugK0Byte05_textChanged(QString );
-
     void on_editSugK0Byte07_textChanged(QString );
-
     void on_editSugK0Byte08_textChanged(QString );
-
     void on_editSugK0Byte10_textChanged(QString );
-
     void on_editSugK0Byte15_textChanged(QString );
+    void on_buttonSBoxSolveLookupByte00_clicked();
+    void on_buttonSBoxSolveLookupByte01_clicked();
+    void on_buttonSBoxSolveLookupByte02_clicked();
+    void on_buttonSBoxSolveLookupByte03_clicked();
+    void on_buttonS02E01ARK_clicked();
+    void on_buttonS02E01SB_clicked();
+    void on_buttonS02E01SR_clicked();
+    void on_buttonS02E01MC_clicked();
+    void on_buttonS01E04FindMissingBytes_clicked();
+    void on_buttonSBoxLookup12_2_clicked();
+    void on_buttonSBoxLookup13_2_clicked();
+    void on_editByteAlpha12_2_textChanged(QString );
+    void on_editByteBeta12_2_textChanged(QString );
+    void on_editByteAlpha13_2_textChanged(QString );
+    void on_editByteBeta13_2_textChanged(QString );
+    void on_editByte08ResultSbox_textChanged(QString );
+    void on_editByte09ResultSbox_textChanged(QString );
+    void on_editByte10ResultSbox_textChanged(QString );
+    void on_editByte11ResultSbox_textChanged(QString );
+    void on_buttonSBoxSolveLookupByte08_clicked();
+    void on_buttonSBoxSolveLookupByte09_clicked();
+    void on_buttonSBoxSolveLookupByte10_clicked();
+    void on_buttonSBoxSolveLookupByte11_clicked();
+    void on_buttonS01E04ArkK1_2_clicked();
+    void on_buttonS01E04SB_2_clicked();
+    void on_buttonS01E04SR_2_clicked();
+    void on_buttonS02E03FindU2Bytes_clicked();
+    void on_buttonS02E03FindMissingBytes_clicked();
+
+    void on_buttonS02E04SolveLinearSystem_clicked();
+
+    void on_buttonS02E04FindMissingBytes_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -93,12 +118,13 @@ private:
     QLabel** outK0Array;    QLabel** outPlain1Array;    QLabel** outCipher1Array;    QLabel** outCipherK0Array;
 
     QLabel** s01e01plain1;QLabel** s01e01plain2;QLabel** s01e01plain3;
-
     QLabel** s01e02cipher1;QLabel** s01e02cipher2;QLabel** s01e02cipher3;
     QLabel** s01e02Cipher1InvMC;QLabel** s01e02Cipher2InvMC;QLabel** s01e02Cipher3InvMC;
     QLabel** s01e02InvCipherDiff12;QLabel** s01e02InvCipherDiff13;
     QLabel** s01e02InvCipherDiff12SR; QLabel** s01e02InvCipherDiff13SR;
     QLabel** s01e04Cipher1InvMC;
+    QLabel** s02e01plain1;QLabel** s02e01plain2;QLabel** s02e01plain3;
+    QLabel** s02e03Cipher1InvMC;
 
     unsigned char* k0found;
     bool keyFound;
@@ -114,6 +140,10 @@ private:
     void setCipherS01E02(QString cipher1, QString cipher2, QString cipher3);
     void setColumnsS01E03();
     void setColumnAndBlockS01E04();
+    void setPlainS02E01();
+    void setColumnsS02E02();
+    void setColumnAndBlockS02E03();
+    void setColumnsS02E04();
 };
 
 #endif // MAINWINDOW_H

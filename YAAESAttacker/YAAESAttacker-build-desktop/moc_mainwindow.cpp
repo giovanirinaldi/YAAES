@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Wed May 30 12:42:45 2012
+** Created: Thu May 31 00:54:37 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-      51,   14, // methods
+      81,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -82,6 +82,36 @@ static const uint qt_meta_data_MainWindow[] = {
     1740,   11,   11,   11, 0x08,
     1780,   11,   11,   11, 0x08,
     1820,   11,   11,   11, 0x08,
+    1860,   11,   11,   11, 0x08,
+    1901,   11,   11,   11, 0x08,
+    1942,   11,   11,   11, 0x08,
+    1983,   11,   11,   11, 0x08,
+    2024,   11,   11,   11, 0x08,
+    2053,   11,   11,   11, 0x08,
+    2081,   11,   11,   11, 0x08,
+    2109,   11,   11,   11, 0x08,
+    2137,   11,   11,   11, 0x08,
+    2179,   11,   11,   11, 0x08,
+    2213,   11,   11,   11, 0x08,
+    2247,   11,   11,   11, 0x08,
+    2289,   11,   11,   11, 0x08,
+    2330,   11,   11,   11, 0x08,
+    2372,   11,   11,   11, 0x08,
+    2413,   11,   11,   11, 0x08,
+    2458,   11,   11,   11, 0x08,
+    2503,   11,   11,   11, 0x08,
+    2548,   11,   11,   11, 0x08,
+    2593,   11,   11,   11, 0x08,
+    2634,   11,   11,   11, 0x08,
+    2675,   11,   11,   11, 0x08,
+    2716,   11,   11,   11, 0x08,
+    2757,   11,   11,   11, 0x08,
+    2790,   11,   11,   11, 0x08,
+    2820,   11,   11,   11, 0x08,
+    2850,   11,   11,   11, 0x08,
+    2887,   11,   11,   11, 0x08,
+    2929,   11,   11,   11, 0x08,
+    2972,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -138,6 +168,36 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_editSugK0Byte08_textChanged(QString)\0"
     "on_editSugK0Byte10_textChanged(QString)\0"
     "on_editSugK0Byte15_textChanged(QString)\0"
+    "on_buttonSBoxSolveLookupByte00_clicked()\0"
+    "on_buttonSBoxSolveLookupByte01_clicked()\0"
+    "on_buttonSBoxSolveLookupByte02_clicked()\0"
+    "on_buttonSBoxSolveLookupByte03_clicked()\0"
+    "on_buttonS02E01ARK_clicked()\0"
+    "on_buttonS02E01SB_clicked()\0"
+    "on_buttonS02E01SR_clicked()\0"
+    "on_buttonS02E01MC_clicked()\0"
+    "on_buttonS01E04FindMissingBytes_clicked()\0"
+    "on_buttonSBoxLookup12_2_clicked()\0"
+    "on_buttonSBoxLookup13_2_clicked()\0"
+    "on_editByteAlpha12_2_textChanged(QString)\0"
+    "on_editByteBeta12_2_textChanged(QString)\0"
+    "on_editByteAlpha13_2_textChanged(QString)\0"
+    "on_editByteBeta13_2_textChanged(QString)\0"
+    "on_editByte08ResultSbox_textChanged(QString)\0"
+    "on_editByte09ResultSbox_textChanged(QString)\0"
+    "on_editByte10ResultSbox_textChanged(QString)\0"
+    "on_editByte11ResultSbox_textChanged(QString)\0"
+    "on_buttonSBoxSolveLookupByte08_clicked()\0"
+    "on_buttonSBoxSolveLookupByte09_clicked()\0"
+    "on_buttonSBoxSolveLookupByte10_clicked()\0"
+    "on_buttonSBoxSolveLookupByte11_clicked()\0"
+    "on_buttonS01E04ArkK1_2_clicked()\0"
+    "on_buttonS01E04SB_2_clicked()\0"
+    "on_buttonS01E04SR_2_clicked()\0"
+    "on_buttonS02E03FindU2Bytes_clicked()\0"
+    "on_buttonS02E03FindMissingBytes_clicked()\0"
+    "on_buttonS02E04SolveLinearSystem_clicked()\0"
+    "on_buttonS02E04FindMissingBytes_clicked()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -220,9 +280,39 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 48: on_editSugK0Byte08_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 49: on_editSugK0Byte10_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 50: on_editSugK0Byte15_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 51: on_buttonSBoxSolveLookupByte00_clicked(); break;
+        case 52: on_buttonSBoxSolveLookupByte01_clicked(); break;
+        case 53: on_buttonSBoxSolveLookupByte02_clicked(); break;
+        case 54: on_buttonSBoxSolveLookupByte03_clicked(); break;
+        case 55: on_buttonS02E01ARK_clicked(); break;
+        case 56: on_buttonS02E01SB_clicked(); break;
+        case 57: on_buttonS02E01SR_clicked(); break;
+        case 58: on_buttonS02E01MC_clicked(); break;
+        case 59: on_buttonS01E04FindMissingBytes_clicked(); break;
+        case 60: on_buttonSBoxLookup12_2_clicked(); break;
+        case 61: on_buttonSBoxLookup13_2_clicked(); break;
+        case 62: on_editByteAlpha12_2_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 63: on_editByteBeta12_2_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 64: on_editByteAlpha13_2_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 65: on_editByteBeta13_2_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 66: on_editByte08ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 67: on_editByte09ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 68: on_editByte10ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 69: on_editByte11ResultSbox_textChanged((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 70: on_buttonSBoxSolveLookupByte08_clicked(); break;
+        case 71: on_buttonSBoxSolveLookupByte09_clicked(); break;
+        case 72: on_buttonSBoxSolveLookupByte10_clicked(); break;
+        case 73: on_buttonSBoxSolveLookupByte11_clicked(); break;
+        case 74: on_buttonS01E04ArkK1_2_clicked(); break;
+        case 75: on_buttonS01E04SB_2_clicked(); break;
+        case 76: on_buttonS01E04SR_2_clicked(); break;
+        case 77: on_buttonS02E03FindU2Bytes_clicked(); break;
+        case 78: on_buttonS02E03FindMissingBytes_clicked(); break;
+        case 79: on_buttonS02E04SolveLinearSystem_clicked(); break;
+        case 80: on_buttonS02E04FindMissingBytes_clicked(); break;
         default: ;
         }
-        _id -= 51;
+        _id -= 81;
     }
     return _id;
 }

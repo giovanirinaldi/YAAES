@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Wed May 30 12:53:51 2012
+** Created: Thu May 31 01:57:50 2012
 **      by: Qt User Interface Compiler version 4.7.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -511,6 +511,18 @@ public:
     QPushButton *buttonS01E02XOR;
     QLabel *label_45;
     QLabel *label_46;
+    QLabel *label_48;
+    QLabel *label_54;
+    QLabel *label_55;
+    QLabel *label_56;
+    QLabel *label_57;
+    QLabel *label_58;
+    QLabel *label_59;
+    QLabel *label_60;
+    QLabel *label_61;
+    QLabel *label_62;
+    QLabel *label_63;
+    QLabel *label_64;
     QWidget *tabS01E03;
     QGroupBox *groupInvCipher12DiffColumns01e03;
     QLabel *s01e03InvCipherDiff12Column0Byte02;
@@ -527,16 +539,24 @@ public:
     QLabel *s01e03plain1AfterR1Col0Byte01;
     QLabel *s01e03plain1AfterR1Col0Byte00;
     QLabel *s01e03plain1AfterR1Col0Byte03;
+    QLabel *label_69;
+    QLabel *label_72;
     QGroupBox *groupInvCipher12DiffColumns01e03_3;
     QLabel *s01e03plain2AfterR1Col0Byte02;
     QLabel *s01e03plain2AfterR1Col0Byte01;
     QLabel *s01e03plain2AfterR1Col0Byte00;
     QLabel *s01e03plain2AfterR1Col0Byte03;
+    QLabel *label_70;
+    QLabel *label_74;
     QGroupBox *groupInvCipher12DiffColumns01e03_4;
     QLabel *s01e03plain3AfterR1Col0Byte02;
     QLabel *s01e03plain3AfterR1Col0Byte01;
     QLabel *s01e03plain3AfterR1Col0Byte00;
     QLabel *s01e03plain3AfterR1Col0Byte03;
+    QLabel *label_68;
+    QLabel *label_67;
+    QLabel *label_71;
+    QLabel *label_75;
     QGroupBox *groupInvCipher13DiffColumns01e03_2;
     QLabel *s01e03plainAfterR1Diff13Col0Byte02;
     QLabel *s01e03plainAfterR1Diff13Col0Byte01;
@@ -571,6 +591,10 @@ public:
     QLineEdit *editByte01ResultSbox;
     QLineEdit *editByte02ResultSbox;
     QLineEdit *editByte03ResultSbox;
+    QPushButton *buttonSBoxSolveLookupByte00;
+    QPushButton *buttonSBoxSolveLookupByte01;
+    QPushButton *buttonSBoxSolveLookupByte02;
+    QPushButton *buttonSBoxSolveLookupByte03;
     QGroupBox *groupInvCipher12DiffColumns01e03_6;
     QLabel *s01e03plain1AfterR1Col0Byte02_2;
     QLabel *s01e03plain1AfterR1Col0Byte01_2;
@@ -586,9 +610,12 @@ public:
     QLabel *s01e03plainAfterR1Diff12Col0Byte01;
     QLabel *s01e03plainAfterR1Diff12Col0Byte00;
     QLabel *s01e03plainAfterR1Diff12Col0Byte03;
+    QLabel *label_65;
+    QLabel *label_66;
     QLabel *label_26;
     QLabel *label_43;
     QLabel *label_44;
+    QLabel *label_73;
     QWidget *tabS01E04;
     QLabel *label_27;
     QGroupBox *groupInvCipher12DiffColumns01e03_7;
@@ -682,6 +709,623 @@ public:
     QLabel *label_36;
     QLabel *s01e04plain3AfterU2Col0Byte00;
     QLabel *label_38;
+    QGroupBox *groupBox_6;
+    QGroupBox *groupSubKeyK1;
+    QLabel *k1byte15;
+    QLabel *k1byte13;
+    QLabel *k1byte14;
+    QLabel *k1byte06;
+    QLabel *k1byte04;
+    QLabel *k1byte02;
+    QLabel *k1byte10;
+    QLabel *k1byte09;
+    QLabel *k1byte01;
+    QLabel *k1byte08;
+    QLabel *k1byte00;
+    QLabel *k1byte07;
+    QLabel *k1byte12;
+    QLabel *k1byte03;
+    QLabel *k1byte11;
+    QLabel *k1byte05;
+    QGroupBox *groupSubKeyK0;
+    QLabel *k0byte15;
+    QLabel *k0byte13;
+    QLabel *k0byte14;
+    QLabel *k0byte06;
+    QLabel *k0byte04;
+    QLabel *k0byte02;
+    QLabel *k0byte10;
+    QLabel *k0byte09;
+    QLabel *k0byte01;
+    QLabel *k0byte08;
+    QLabel *k0byte00;
+    QLabel *k0byte07;
+    QLabel *k0byte12;
+    QLabel *k0byte03;
+    QLabel *k0byte11;
+    QLabel *k0byte05;
+    QPushButton *buttonS01E04FindMissingBytes;
+    QWidget *tabS02E01;
+    QGroupBox *groupPlain3s02e01;
+    QLabel *plain3s02e01Byte15;
+    QLabel *plain3s02e01Byte13;
+    QLabel *plain3s02e01Byte14;
+    QLabel *plain3s02e01Byte06;
+    QLabel *plain3s02e01Byte04;
+    QLabel *plain3s02e01Byte02;
+    QLabel *plain3s02e01Byte10;
+    QLabel *plain3s02e01Byte09;
+    QLabel *plain3s02e01Byte01;
+    QLabel *plain3s02e01Byte08;
+    QLabel *plain3s02e01Byte00;
+    QLabel *plain3s02e01Byte07;
+    QLabel *plain3s02e01Byte12;
+    QLabel *plain3s02e01Byte03;
+    QLabel *plain3s02e01Byte11;
+    QLabel *plain3s02e01Byte05;
+    QLabel *outPlainByte03_15;
+    QLabel *plain3s02e01ARKByte08;
+    QLabel *outPlainByte11_17;
+    QLabel *outPlainByte09_17;
+    QLabel *outPlainByte04_17;
+    QLabel *plain3s02e01ARKByte05;
+    QLabel *outPlainByte14_17;
+    QLabel *outPlainByte01_15;
+    QLabel *plain3s02e01ARKByte13;
+    QLabel *plain3s02e01ARKByte02;
+    QLabel *outPlainByte12_17;
+    QLabel *plain3s02e01ARKByte10;
+    QLabel *plain3s02e01ARKByte15;
+    QLabel *outPlainByte06_17;
+    QLabel *plain3s02e01ARKByte07;
+    QLabel *plain3s02e01ARKByte00;
+    QLabel *outPlainByte03_16;
+    QLabel *plain3s02e01SBByte08;
+    QLabel *outPlainByte11_18;
+    QLabel *outPlainByte09_18;
+    QLabel *outPlainByte04_18;
+    QLabel *plain3s02e01SBByte05;
+    QLabel *outPlainByte14_18;
+    QLabel *outPlainByte01_16;
+    QLabel *plain3s02e01SBByte13;
+    QLabel *plain3s02e01SBByte02;
+    QLabel *outPlainByte12_18;
+    QLabel *plain3s02e01SBByte10;
+    QLabel *plain3s02e01SBByte15;
+    QLabel *outPlainByte06_18;
+    QLabel *plain3s02e01SBByte07;
+    QLabel *plain3s02e01SBByte00;
+    QLabel *plain3s02e01SRByte03;
+    QLabel *plain3s02e01SRByte08;
+    QLabel *plain3s02e01SRByte11;
+    QLabel *plain3s02e01SRByte09;
+    QLabel *outPlainByte04_19;
+    QLabel *outPlainByte05_17;
+    QLabel *outPlainByte14_19;
+    QLabel *plain3s02e01SRByte01;
+    QLabel *outPlainByte13_19;
+    QLabel *plain3s02e01SRByte02;
+    QLabel *outPlainByte12_19;
+    QLabel *plain3s02e01SRByte10;
+    QLabel *outPlainByte15_17;
+    QLabel *outPlainByte06_19;
+    QLabel *outPlainByte07_19;
+    QLabel *plain3s02e01SRByte00;
+    QLabel *outPlainByte13_20;
+    QLabel *plain3s02e01MCByte08;
+    QLabel *plain3s02e01MCByte03;
+    QLabel *plain3s02e01MCByte02;
+    QLabel *outPlainByte04_20;
+    QLabel *plain3s02e01MCByte00;
+    QLabel *outPlainByte07_20;
+    QLabel *outPlainByte15_18;
+    QLabel *outPlainByte06_20;
+    QLabel *outPlainByte12_20;
+    QLabel *plain3s02e01MCByte11;
+    QLabel *outPlainByte14_20;
+    QLabel *outPlainByte05_18;
+    QLabel *plain3s02e01MCByte01;
+    QLabel *plain3s02e01MCByte09;
+    QLabel *plain3s02e01MCByte10;
+    QGroupBox *groupPlain2s02e01;
+    QLabel *plain2s02e01Byte15;
+    QLabel *plain2s02e01Byte13;
+    QLabel *plain2s02e01Byte14;
+    QLabel *plain2s02e01Byte06;
+    QLabel *plain2s02e01Byte04;
+    QLabel *plain2s02e01Byte02;
+    QLabel *plain2s02e01Byte10;
+    QLabel *plain2s02e01Byte09;
+    QLabel *plain2s02e01Byte01;
+    QLabel *plain2s02e01Byte08;
+    QLabel *plain2s02e01Byte00;
+    QLabel *plain2s02e01Byte07;
+    QLabel *plain2s02e01Byte12;
+    QLabel *plain2s02e01Byte03;
+    QLabel *plain2s02e01Byte11;
+    QLabel *plain2s02e01Byte05;
+    QLabel *outPlainByte03_10;
+    QLabel *plain2s02e01ARKByte08;
+    QLabel *outPlainByte11_24;
+    QLabel *outPlainByte09_24;
+    QLabel *outPlainByte04_24;
+    QLabel *plain2s02e01ARKByte05;
+    QLabel *outPlainByte14_24;
+    QLabel *outPlainByte01_10;
+    QLabel *plain2s02e01ARKByte13;
+    QLabel *plain2s02e01ARKByte02;
+    QLabel *outPlainByte12_24;
+    QLabel *plain2s02e01ARKByte10;
+    QLabel *plain2s02e01ARKByte15;
+    QLabel *outPlainByte06_24;
+    QLabel *plain2s02e01ARKByte07;
+    QLabel *plain2s02e01ARKByte00;
+    QLabel *outPlainByte03_11;
+    QLabel *plain2s02e01SBByte08;
+    QLabel *outPlainByte11_25;
+    QLabel *outPlainByte09_25;
+    QLabel *outPlainByte04_25;
+    QLabel *plain2s02e01SBByte05;
+    QLabel *outPlainByte14_25;
+    QLabel *outPlainByte01_11;
+    QLabel *plain2s02e01SBByte13;
+    QLabel *plain2s02e01SBByte02;
+    QLabel *outPlainByte12_25;
+    QLabel *plain2s02e01SBByte10;
+    QLabel *plain2s02e01SBByte15;
+    QLabel *outPlainByte06_25;
+    QLabel *plain2s02e01SBByte07;
+    QLabel *plain2s02e01SBByte00;
+    QLabel *plain2s02e01SRByte03;
+    QLabel *plain2s02e01SRByte08;
+    QLabel *plain2s02e01SRByte11;
+    QLabel *plain2s02e01SRByte09;
+    QLabel *outPlainByte04_26;
+    QLabel *outPlainByte05_12;
+    QLabel *outPlainByte14_26;
+    QLabel *plain2s02e01SRByte01;
+    QLabel *outPlainByte13_25;
+    QLabel *plain2s02e01SRByte02;
+    QLabel *outPlainByte12_26;
+    QLabel *plain2s02e01SRByte10;
+    QLabel *outPlainByte15_12;
+    QLabel *outPlainByte06_26;
+    QLabel *outPlainByte07_25;
+    QLabel *plain2s02e01SRByte00;
+    QLabel *outPlainByte13_26;
+    QLabel *plain2s02e01MCByte08;
+    QLabel *plain2s02e01MCByte03;
+    QLabel *plain2s02e01MCByte02;
+    QLabel *outPlainByte04_27;
+    QLabel *plain2s02e01MCByte00;
+    QLabel *outPlainByte07_26;
+    QLabel *outPlainByte15_13;
+    QLabel *outPlainByte06_27;
+    QLabel *outPlainByte12_27;
+    QLabel *plain2s02e01MCByte11;
+    QLabel *outPlainByte14_27;
+    QLabel *outPlainByte05_13;
+    QLabel *plain2s02e01MCByte01;
+    QLabel *plain2s02e01MCByte09;
+    QLabel *plain2s02e01MCByte10;
+    QGroupBox *groupPlain1s02e01;
+    QLabel *plain1s02e01Byte15;
+    QLabel *plain1s02e01Byte13;
+    QLabel *plain1s02e01Byte14;
+    QLabel *plain1s02e01Byte06;
+    QLabel *plain1s02e01Byte04;
+    QLabel *plain1s02e01Byte02;
+    QLabel *plain1s02e01Byte10;
+    QLabel *plain1s02e01Byte09;
+    QLabel *plain1s02e01Byte01;
+    QLabel *plain1s02e01Byte08;
+    QLabel *plain1s02e01Byte00;
+    QLabel *plain1s02e01Byte07;
+    QLabel *plain1s02e01Byte12;
+    QLabel *plain1s02e01Byte03;
+    QLabel *plain1s02e01Byte11;
+    QLabel *plain1s02e01Byte05;
+    QLabel *outPlainByte03_6;
+    QLabel *plain1s02e01ARKByte08;
+    QLabel *outPlainByte11_12;
+    QLabel *outPlainByte09_12;
+    QLabel *outPlainByte04_12;
+    QLabel *plain1s02e01ARKByte05;
+    QLabel *outPlainByte14_12;
+    QLabel *outPlainByte01_6;
+    QLabel *plain1s02e01ARKByte13;
+    QLabel *plain1s02e01ARKByte02;
+    QLabel *outPlainByte12_12;
+    QLabel *plain1s02e01ARKByte10;
+    QLabel *plain1s02e01ARKByte15;
+    QLabel *outPlainByte06_12;
+    QLabel *plain1s02e01ARKByte07;
+    QLabel *plain1s02e01ARKByte00;
+    QLabel *outPlainByte03_7;
+    QLabel *plain1s02e01SBByte08;
+    QLabel *outPlainByte11_21;
+    QLabel *outPlainByte09_21;
+    QLabel *outPlainByte04_21;
+    QLabel *plain1s02e01SBByte05;
+    QLabel *outPlainByte14_21;
+    QLabel *outPlainByte01_7;
+    QLabel *plain1s02e01SBByte13;
+    QLabel *plain1s02e01SBByte02;
+    QLabel *outPlainByte12_21;
+    QLabel *plain1s02e01SBByte10;
+    QLabel *plain1s02e01SBByte15;
+    QLabel *outPlainByte06_21;
+    QLabel *plain1s02e01SBByte07;
+    QLabel *plain1s02e01SBByte00;
+    QLabel *plain1s02e01SRByte03;
+    QLabel *plain1s02e01SRByte08;
+    QLabel *plain1s02e01SRByte11;
+    QLabel *plain1s02e01SRByte09;
+    QLabel *outPlainByte04_22;
+    QLabel *outPlainByte05_7;
+    QLabel *outPlainByte14_22;
+    QLabel *plain1s02e01SRByte01;
+    QLabel *outPlainByte13_21;
+    QLabel *plain1s02e01SRByte02;
+    QLabel *outPlainByte12_22;
+    QLabel *plain1s02e01SRByte10;
+    QLabel *outPlainByte15_7;
+    QLabel *outPlainByte06_22;
+    QLabel *outPlainByte07_21;
+    QLabel *plain1s02e01SRByte00;
+    QLabel *outPlainByte13_22;
+    QLabel *plain1s02e01MCByte08;
+    QLabel *plain1s02e01MCByte03;
+    QLabel *plain1s02e01MCByte02;
+    QLabel *outPlainByte04_23;
+    QLabel *plain1s02e01MCByte00;
+    QLabel *outPlainByte07_22;
+    QLabel *outPlainByte15_8;
+    QLabel *outPlainByte06_23;
+    QLabel *outPlainByte12_23;
+    QLabel *plain1s02e01MCByte11;
+    QLabel *outPlainByte14_23;
+    QLabel *outPlainByte05_8;
+    QLabel *plain1s02e01MCByte01;
+    QLabel *plain1s02e01MCByte09;
+    QLabel *plain1s02e01MCByte10;
+    QPushButton *buttonS02E01ARK;
+    QPushButton *buttonS02E01SB;
+    QPushButton *buttonS02E01SR;
+    QPushButton *buttonS02E01MC;
+    QWidget *tabS02E02;
+    QLabel *label_83;
+    QLabel *label_84;
+    QGroupBox *groupInvCipher12DiffColumns01e03_10;
+    QLabel *s02e02plainAfterR1Diff12Col2Byte10;
+    QLabel *s02e02plainAfterR1Diff12Col2Byte09;
+    QLabel *s02e02plainAfterR1Diff12Col2Byte08;
+    QLabel *s02e02plainAfterR1Diff12Col2Byte11;
+    QLabel *label_85;
+    QLabel *label_86;
+    QGroupBox *groupInvCipher12DiffColumns01e03_11;
+    QLabel *s02e02plain1AfterR1Col2Byte10;
+    QLabel *s02e02plain1AfterR1Col2Byte09;
+    QLabel *s02e02plain1AfterR1Col2Byte08;
+    QLabel *s02e02plain1AfterR1Col2Byte11;
+    QLabel *label_87;
+    QLabel *label_88;
+    QGroupBox *groupInvCipher13DiffColumns01e03_3;
+    QLabel *s02e02plainAfterR1Diff13Col2Byte10;
+    QLabel *s02e02plainAfterR1Diff13Col2Byte09;
+    QLabel *s02e02plainAfterR1Diff13Col2Byte08;
+    QLabel *s02e02plainAfterR1Diff13Col2Byte11;
+    QGroupBox *groupInvCipher12DiffColumns01e03_12;
+    QLabel *s02e02InvCipherDiff12Column2Byte10;
+    QLabel *s02e02InvCipherDiff12Column2Byte09;
+    QLabel *s02e02InvCipherDiff12Column2Byte08;
+    QLabel *s02e02InvCipherDiff12Column2Byte11;
+    QGroupBox *groupInvCipher13DiffColumns01e03_4;
+    QLabel *s02e02InvCipherDiff13Column2Byte10;
+    QLabel *s02e02InvCipherDiff13Column2Byte09;
+    QLabel *s02e02InvCipherDiff13Column2Byte08;
+    QLabel *s02e02InvCipherDiff13Column2Byte11;
+    QLabel *label_89;
+    QLabel *label_90;
+    QGroupBox *groupInvCipher12DiffColumns01e03_13;
+    QLabel *s02e02plain2AfterR1Col2Byte10;
+    QLabel *s02e02plain2AfterR1Col2Byte09;
+    QLabel *s02e02plain2AfterR1Col2Byte08;
+    QLabel *s02e02plain2AfterR1Col2Byte11;
+    QLabel *label_91;
+    QLabel *label_92;
+    QGroupBox *groupInvCipher12DiffColumns01e03_14;
+    QLabel *s02e02plain3AfterR1Col2Byte10;
+    QLabel *s02e02plain3AfterR1Col2Byte09;
+    QLabel *s02e02plain3AfterR1Col2Byte08;
+    QLabel *s02e02plain3AfterR1Col2Byte11;
+    QLabel *label_93;
+    QLabel *label_94;
+    QLabel *label_95;
+    QLabel *label_96;
+    QLabel *label_108;
+    QGroupBox *groupBox_7;
+    QLabel *label_97;
+    QGroupBox *groupBox_8;
+    QLineEdit *editByteBeta12_2;
+    QLineEdit *editByteAlpha12_2;
+    QLabel *label_98;
+    QLabel *label_99;
+    QPushButton *buttonSBoxLookup12_2;
+    QLabel *labelResultLookupY12_2;
+    QLabel *label_100;
+    QLabel *label_101;
+    QLabel *labelResultLookupX12_2;
+    QGroupBox *groupBox_9;
+    QLineEdit *editByteBeta13_2;
+    QLineEdit *editByteAlpha13_2;
+    QLabel *label_102;
+    QLabel *label_103;
+    QPushButton *buttonSBoxLookup13_2;
+    QLabel *labelResultLookupY13_2;
+    QLabel *label_104;
+    QLabel *label_105;
+    QLabel *labelResultLookupX13_2;
+    QGroupBox *groupInvCipher12DiffColumns01e03_15;
+    QLabel *s02e02plain1AfterR1Col2Byte10_2;
+    QLabel *s02e02plain1AfterR1Col2Byte09_2;
+    QLabel *s02e02plain1AfterR1Col2Byte08_2;
+    QLabel *s02e02plain1AfterR1Col2Byte11_2;
+    QLabel *s02e02k1Byte09;
+    QLabel *s02e02k1Byte08;
+    QLabel *s02e02k1Byte11;
+    QLabel *s02e02k1Byte10;
+    QLabel *label_106;
+    QGroupBox *groupBox_10;
+    QLineEdit *editByte08ResultSbox;
+    QLineEdit *editByte09ResultSbox;
+    QLineEdit *editByte10ResultSbox;
+    QLineEdit *editByte11ResultSbox;
+    QPushButton *buttonSBoxSolveLookupByte08;
+    QPushButton *buttonSBoxSolveLookupByte09;
+    QPushButton *buttonSBoxSolveLookupByte10;
+    QPushButton *buttonSBoxSolveLookupByte11;
+    QLabel *label_107;
+    QWidget *tabS02E03;
+    QGroupBox *groupInvCipher12DiffColumns01e03_16;
+    QLabel *s02e03plain1AfterR1Col2Byte10;
+    QLabel *s02e03plain1AfterR1Col2Byte09;
+    QLabel *s02e03plain1AfterR1Col2Byte08;
+    QLabel *s02e03plain1AfterR1Col2Byte11;
+    QPushButton *buttonS01E04ArkK1_2;
+    QLabel *s02e03plain1AfterK1Col2Byte09;
+    QLabel *s02e03plain1AfterK1Col2Byte11;
+    QLabel *s02e03plain1AfterK1Col2Byte08;
+    QLabel *s02e03plain1AfterK1Col2Byte10;
+    QPushButton *buttonS01E04SB_2;
+    QLabel *s02e03plain1AfterSBR1Col2Byte11;
+    QLabel *s02e03plain1AfterSBR1Col2Byte10;
+    QLabel *s02e03plain1AfterSBR1Col2Byte09;
+    QLabel *s02e03plain1AfterSBR1Col2Byte08;
+    QPushButton *buttonS01E04SR_2;
+    QLabel *s02e03plain1AfterSRR1Byte05;
+    QLabel *outPlainByte14_28;
+    QLabel *outPlainByte06_28;
+    QLabel *s02e03plain1AfterSRR1Byte07;
+    QLabel *s02e03plain1AfterSRR1Byte02;
+    QLabel *s02e03plain1AfterSRR1Byte15;
+    QLabel *s02e03plain1AfterSRR1Byte10;
+    QLabel *outPlainByte04_28;
+    QLabel *s02e03plain1AfterSRR1Byte08;
+    QLabel *outPlainByte11_19;
+    QLabel *outPlainByte09_19;
+    QLabel *s02e03plain1AfterSRR1Byte13;
+    QLabel *s02e03plain1AfterSRR1Byte00;
+    QLabel *outPlainByte01_12;
+    QLabel *outPlainByte03_12;
+    QLabel *outPlainByte12_28;
+    QGroupBox *groupCipher1s01e02_4;
+    QLabel *s02e03Cipher1InvMCByte15;
+    QLabel *s02e03Cipher1InvMCByte13;
+    QLabel *s02e03Cipher1InvMCByte14;
+    QLabel *s02e03Cipher1InvMCByte06;
+    QLabel *s02e03Cipher1InvMCByte04;
+    QLabel *s02e03Cipher1InvMCByte02;
+    QLabel *s02e03Cipher1InvMCByte10;
+    QLabel *s02e03Cipher1InvMCByte09;
+    QLabel *s02e03Cipher1InvMCByte01;
+    QLabel *s02e03Cipher1InvMCByte08;
+    QLabel *s02e03Cipher1InvMCByte00;
+    QLabel *s02e03Cipher1InvMCByte07;
+    QLabel *s02e03Cipher1InvMCByte12;
+    QLabel *s02e03Cipher1InvMCByte03;
+    QLabel *s02e03Cipher1InvMCByte11;
+    QLabel *s02e03Cipher1InvMCByte05;
+    QLabel *label_109;
+    QGroupBox *groupCipher1s01e02_5;
+    QLabel *s02e03u2Byte15;
+    QLabel *s02e03u2Byte13;
+    QLabel *s01e02Cipher1Byte14_4;
+    QLabel *s01e02Cipher1Byte06_4;
+    QLabel *s01e02Cipher1Byte04_4;
+    QLabel *s02e03u2Byte02;
+    QLabel *s02e03u2Byte10;
+    QLabel *s01e02Cipher1Byte09_4;
+    QLabel *s01e02Cipher1Byte01_4;
+    QLabel *s02e03u2Byte08;
+    QLabel *s02e03u2Byte00;
+    QLabel *s02e03u2Byte07;
+    QLabel *s01e02Cipher1Byte12_4;
+    QLabel *s01e02Cipher1Byte03_4;
+    QLabel *s01e02Cipher1Byte11_4;
+    QLabel *s02e03u2Byte05;
+    QLabel *label_110;
+    QGroupBox *groupBox_11;
+    QGroupBox *groupSubKeyK1_2;
+    QLabel *k1byte15_2;
+    QLabel *k1byte13_2;
+    QLabel *k1byte14_2;
+    QLabel *k1byte06_2;
+    QLabel *k1byte04_2;
+    QLabel *k1byte02_2;
+    QLabel *k1byte10_2;
+    QLabel *k1byte09_2;
+    QLabel *k1byte01_2;
+    QLabel *k1byte08_2;
+    QLabel *k1byte00_2;
+    QLabel *k1byte07_2;
+    QLabel *k1byte12_2;
+    QLabel *k1byte03_2;
+    QLabel *k1byte11_2;
+    QLabel *k1byte05_2;
+    QGroupBox *groupSubKeyK0_2;
+    QLabel *k0byte15_2;
+    QLabel *k0byte13_2;
+    QLabel *k0byte14_2;
+    QLabel *k0byte06_2;
+    QLabel *k0byte04_2;
+    QLabel *k0byte02_2;
+    QLabel *k0byte10_2;
+    QLabel *k0byte09_2;
+    QLabel *k0byte01_2;
+    QLabel *k0byte08_2;
+    QLabel *k0byte00_2;
+    QLabel *k0byte07_2;
+    QLabel *k0byte12_2;
+    QLabel *k0byte03_2;
+    QLabel *k0byte11_2;
+    QLabel *k0byte05_2;
+    QPushButton *buttonS02E03FindMissingBytes;
+    QGroupBox *groupSubKeyK2;
+    QLabel *k2byte15;
+    QLabel *k2byte13;
+    QLabel *k2byte14;
+    QLabel *k2byte06;
+    QLabel *k2byte04;
+    QLabel *k2byte02;
+    QLabel *k2byte10;
+    QLabel *k2byte09;
+    QLabel *k2byte01;
+    QLabel *k2byte08;
+    QLabel *k2byte00;
+    QLabel *k2byte07;
+    QLabel *k2byte12;
+    QLabel *k2byte03;
+    QLabel *k2byte11;
+    QLabel *k2byte05;
+    QPushButton *buttonS02E03FindU2Bytes;
+    QLabel *label_111;
+    QLabel *label_112;
+    QWidget *tabS02E04;
+    QGroupBox *groupBox_12;
+    QLabel *label_113;
+    QLabel *s02e04sysk2byte01;
+    QLabel *s02e04sysk2byte02;
+    QLabel *s02e04sysk2byte00;
+    QLabel *s02e04sysk2byte03;
+    QLabel *label_114;
+    QLabel *label_115;
+    QLabel *label_116;
+    QLabel *label_117;
+    QLabel *s02e04sysu2byte00_3;
+    QLabel *s02e04sysu2byte00_1;
+    QLabel *s02e04sysu2byte00_0;
+    QLabel *s02e04sysu2byte00_2;
+    QLabel *s02e04sysu2byte01_1;
+    QLabel *s02e04sysu2byte01_0;
+    QLabel *s02e04sysu2byte01_2;
+    QLabel *s02e04sysu2byte01_3;
+    QLabel *label_118;
+    QLabel *label_119;
+    QLabel *label_120;
+    QLabel *label_121;
+    QLabel *label_122;
+    QLabel *s02e04sysu2byte02_0;
+    QLabel *s02e04sysu2byte02_2;
+    QLabel *s02e04sysu2byte02_1;
+    QLabel *s02e04sysu2byte02_3;
+    QLabel *s02e04sysu2byte03_0;
+    QLabel *s02e04sysu2byte03_2;
+    QLabel *s02e04sysu2byte03_1;
+    QLabel *s02e04sysu2byte03_3;
+    QLabel *label_123;
+    QLabel *label_124;
+    QLabel *label_125;
+    QLabel *label_126;
+    QLabel *label_127;
+    QLabel *label_128;
+    QLabel *label_129;
+    QLabel *label_130;
+    QLabel *label_131;
+    QLabel *label_132;
+    QLabel *label_133;
+    QLabel *label_134;
+    QPushButton *buttonS02E04SolveLinearSystem;
+    QLabel *label_135;
+    QGroupBox *groupSubKeyK2_2;
+    QLabel *s02e04k2byte02;
+    QLabel *s02e04k2byte01;
+    QLabel *s02e04k2byte00;
+    QLabel *s02e04k2byte03;
+    QLabel *label_136;
+    QLabel *label_137;
+    QGroupBox *groupBox_13;
+    QGroupBox *groupSubKeyK1_3;
+    QLabel *k1byte15_3;
+    QLabel *k1byte13_3;
+    QLabel *k1byte14_3;
+    QLabel *k1byte06_3;
+    QLabel *k1byte04_3;
+    QLabel *k1byte02_3;
+    QLabel *k1byte10_3;
+    QLabel *k1byte09_3;
+    QLabel *k1byte01_3;
+    QLabel *k1byte08_3;
+    QLabel *k1byte00_3;
+    QLabel *k1byte07_3;
+    QLabel *k1byte12_3;
+    QLabel *k1byte03_3;
+    QLabel *k1byte11_3;
+    QLabel *k1byte05_3;
+    QGroupBox *groupSubKeyK0_3;
+    QLabel *k0byte15_3;
+    QLabel *k0byte13_3;
+    QLabel *k0byte14_3;
+    QLabel *k0byte06_3;
+    QLabel *k0byte04_3;
+    QLabel *k0byte02_3;
+    QLabel *k0byte10_3;
+    QLabel *k0byte09_3;
+    QLabel *k0byte01_3;
+    QLabel *k0byte08_3;
+    QLabel *k0byte00_3;
+    QLabel *k0byte07_3;
+    QLabel *k0byte12_3;
+    QLabel *k0byte03_3;
+    QLabel *k0byte11_3;
+    QLabel *k0byte05_3;
+    QPushButton *buttonS02E04FindMissingBytes;
+    QGroupBox *groupSubKeyK2_3;
+    QLabel *k2byte15_2;
+    QLabel *k2byte13_2;
+    QLabel *k2byte14_2;
+    QLabel *k2byte06_2;
+    QLabel *k2byte04_2;
+    QLabel *k2byte02_2;
+    QLabel *k2byte10_2;
+    QLabel *k2byte09_2;
+    QLabel *k2byte01_2;
+    QLabel *k2byte08_2;
+    QLabel *k2byte00_2;
+    QLabel *k2byte07_2;
+    QLabel *k2byte12_2;
+    QLabel *k2byte03_2;
+    QLabel *k2byte11_2;
+    QLabel *k2byte05_2;
+    QGroupBox *groupCipher1s01e02_6;
+    QLabel *s02e04u2Byte02;
+    QLabel *s02e04u2Byte01;
+    QLabel *s02e04u2Byte00;
+    QLabel *s02e04u2Byte03;
+    QLabel *label_138;
+    QLabel *label_139;
+    QLabel *label_140;
+    QLabel *label_141;
     QWidget *tabOutput;
     QGroupBox *groupOutK0;
     QLabel *outK0byte15;
@@ -752,6 +1396,13 @@ public:
     QLabel *outCipherPair1Byte11;
     QLabel *outCipherPair1Byte05;
     QPushButton *pushButtonEncryptOutput;
+    QLabel *label_76;
+    QLabel *label_77;
+    QLabel *label_78;
+    QLabel *label_79;
+    QLabel *label_80;
+    QLabel *label_81;
+    QLabel *label_82;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuLoad;
@@ -987,6 +1638,8 @@ public:
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte15->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte15->setSizePolicy(sizePolicy);
         QFont font;
+        font.setBold(true);
+        font.setWeight(75);
         font.setKerning(true);
         outPlain1s01e01Byte15->setFont(font);
         outPlain1s01e01Byte15->setLayoutDirection(Qt::LeftToRight);
@@ -1003,7 +1656,9 @@ public:
         outPlain1s01e01Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte13->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte13->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte13->setFont(font);
+        QFont font1;
+        font1.setKerning(true);
+        outPlain1s01e01Byte13->setFont(font1);
         outPlain1s01e01Byte13->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1018,7 +1673,7 @@ public:
         outPlain1s01e01Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte14->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte14->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte14->setFont(font);
+        outPlain1s01e01Byte14->setFont(font1);
         outPlain1s01e01Byte14->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1033,7 +1688,7 @@ public:
         outPlain1s01e01Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte06->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte06->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte06->setFont(font);
+        outPlain1s01e01Byte06->setFont(font1);
         outPlain1s01e01Byte06->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1048,7 +1703,7 @@ public:
         outPlain1s01e01Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte04->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte04->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte04->setFont(font);
+        outPlain1s01e01Byte04->setFont(font1);
         outPlain1s01e01Byte04->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1063,7 +1718,7 @@ public:
         outPlain1s01e01Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte02->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte02->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte02->setFont(font);
+        outPlain1s01e01Byte02->setFont(font1);
         outPlain1s01e01Byte02->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1093,7 +1748,7 @@ public:
         outPlain1s01e01Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte09->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte09->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte09->setFont(font);
+        outPlain1s01e01Byte09->setFont(font1);
         outPlain1s01e01Byte09->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1108,7 +1763,7 @@ public:
         outPlain1s01e01Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte01->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte01->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte01->setFont(font);
+        outPlain1s01e01Byte01->setFont(font1);
         outPlain1s01e01Byte01->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1123,7 +1778,7 @@ public:
         outPlain1s01e01Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte08->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte08->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte08->setFont(font);
+        outPlain1s01e01Byte08->setFont(font1);
         outPlain1s01e01Byte08->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1154,7 +1809,7 @@ public:
         outPlain1s01e01Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte07->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte07->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte07->setFont(font);
+        outPlain1s01e01Byte07->setFont(font1);
         outPlain1s01e01Byte07->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1169,7 +1824,7 @@ public:
         outPlain1s01e01Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte12->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte12->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte12->setFont(font);
+        outPlain1s01e01Byte12->setFont(font1);
         outPlain1s01e01Byte12->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1184,7 +1839,7 @@ public:
         outPlain1s01e01Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte03->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte03->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte03->setFont(font);
+        outPlain1s01e01Byte03->setFont(font1);
         outPlain1s01e01Byte03->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1199,7 +1854,7 @@ public:
         outPlain1s01e01Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01Byte11->sizePolicy().hasHeightForWidth());
         outPlain1s01e01Byte11->setSizePolicy(sizePolicy);
-        outPlain1s01e01Byte11->setFont(font);
+        outPlain1s01e01Byte11->setFont(font1);
         outPlain1s01e01Byte11->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1229,7 +1884,7 @@ public:
         outPlainByte03_3->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_3->sizePolicy().hasHeightForWidth());
         outPlainByte03_3->setSizePolicy(sizePolicy);
-        outPlainByte03_3->setFont(font);
+        outPlainByte03_3->setFont(font1);
         outPlainByte03_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1244,7 +1899,7 @@ public:
         outPlainByte08_3->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_3->sizePolicy().hasHeightForWidth());
         outPlainByte08_3->setSizePolicy(sizePolicy);
-        outPlainByte08_3->setFont(font);
+        outPlainByte08_3->setFont(font1);
         outPlainByte08_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1259,7 +1914,7 @@ public:
         outPlainByte11_3->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_3->sizePolicy().hasHeightForWidth());
         outPlainByte11_3->setSizePolicy(sizePolicy);
-        outPlainByte11_3->setFont(font);
+        outPlainByte11_3->setFont(font1);
         outPlainByte11_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1274,7 +1929,7 @@ public:
         outPlainByte09_3->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_3->sizePolicy().hasHeightForWidth());
         outPlainByte09_3->setSizePolicy(sizePolicy);
-        outPlainByte09_3->setFont(font);
+        outPlainByte09_3->setFont(font1);
         outPlainByte09_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1289,7 +1944,7 @@ public:
         outPlainByte04_3->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_3->sizePolicy().hasHeightForWidth());
         outPlainByte04_3->setSizePolicy(sizePolicy);
-        outPlainByte04_3->setFont(font);
+        outPlainByte04_3->setFont(font1);
         outPlainByte04_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1304,7 +1959,7 @@ public:
         outPlain1s01e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte05->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte05->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte05->setFont(font);
+        outPlain1s01e01ARKByte05->setFont(font1);
         outPlain1s01e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1319,7 +1974,7 @@ public:
         outPlainByte14_3->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_3->sizePolicy().hasHeightForWidth());
         outPlainByte14_3->setSizePolicy(sizePolicy);
-        outPlainByte14_3->setFont(font);
+        outPlainByte14_3->setFont(font1);
         outPlainByte14_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1334,7 +1989,7 @@ public:
         outPlainByte01_3->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_3->sizePolicy().hasHeightForWidth());
         outPlainByte01_3->setSizePolicy(sizePolicy);
-        outPlainByte01_3->setFont(font);
+        outPlainByte01_3->setFont(font1);
         outPlainByte01_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1349,7 +2004,7 @@ public:
         outPlainByte13_3->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_3->sizePolicy().hasHeightForWidth());
         outPlainByte13_3->setSizePolicy(sizePolicy);
-        outPlainByte13_3->setFont(font);
+        outPlainByte13_3->setFont(font1);
         outPlainByte13_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1364,7 +2019,7 @@ public:
         outPlainByte02_3->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_3->sizePolicy().hasHeightForWidth());
         outPlainByte02_3->setSizePolicy(sizePolicy);
-        outPlainByte02_3->setFont(font);
+        outPlainByte02_3->setFont(font1);
         outPlainByte02_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1379,7 +2034,7 @@ public:
         outPlainByte12_3->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_3->sizePolicy().hasHeightForWidth());
         outPlainByte12_3->setSizePolicy(sizePolicy);
-        outPlainByte12_3->setFont(font);
+        outPlainByte12_3->setFont(font1);
         outPlainByte12_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1394,7 +2049,7 @@ public:
         outPlain1s01e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte10->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte10->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte10->setFont(font);
+        outPlain1s01e01ARKByte10->setFont(font1);
         outPlain1s01e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1409,7 +2064,7 @@ public:
         outPlain1s01e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte15->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte15->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte15->setFont(font);
+        outPlain1s01e01ARKByte15->setFont(font1);
         outPlain1s01e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1424,7 +2079,7 @@ public:
         outPlainByte06_3->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_3->sizePolicy().hasHeightForWidth());
         outPlainByte06_3->setSizePolicy(sizePolicy);
-        outPlainByte06_3->setFont(font);
+        outPlainByte06_3->setFont(font1);
         outPlainByte06_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1439,7 +2094,7 @@ public:
         outPlainByte07_3->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_3->sizePolicy().hasHeightForWidth());
         outPlainByte07_3->setSizePolicy(sizePolicy);
-        outPlainByte07_3->setFont(font);
+        outPlainByte07_3->setFont(font1);
         outPlainByte07_3->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1454,7 +2109,7 @@ public:
         outPlain1s01e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte00->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte00->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte00->setFont(font);
+        outPlain1s01e01ARKByte00->setFont(font1);
         outPlain1s01e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1470,7 +2125,7 @@ public:
         outPlainByte03_4->setGeometry(QRect(340, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_4->sizePolicy().hasHeightForWidth());
         outPlainByte03_4->setSizePolicy(sizePolicy);
-        outPlainByte03_4->setFont(font);
+        outPlainByte03_4->setFont(font1);
         outPlainByte03_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1485,7 +2140,7 @@ public:
         outPlainByte08_4->setGeometry(QRect(388, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_4->sizePolicy().hasHeightForWidth());
         outPlainByte08_4->setSizePolicy(sizePolicy);
-        outPlainByte08_4->setFont(font);
+        outPlainByte08_4->setFont(font1);
         outPlainByte08_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1500,7 +2155,7 @@ public:
         outPlainByte11_4->setGeometry(QRect(388, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_4->sizePolicy().hasHeightForWidth());
         outPlainByte11_4->setSizePolicy(sizePolicy);
-        outPlainByte11_4->setFont(font);
+        outPlainByte11_4->setFont(font1);
         outPlainByte11_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1515,7 +2170,7 @@ public:
         outPlainByte09_4->setGeometry(QRect(388, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_4->sizePolicy().hasHeightForWidth());
         outPlainByte09_4->setSizePolicy(sizePolicy);
-        outPlainByte09_4->setFont(font);
+        outPlainByte09_4->setFont(font1);
         outPlainByte09_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1530,7 +2185,7 @@ public:
         outPlainByte04_4->setGeometry(QRect(364, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_4->sizePolicy().hasHeightForWidth());
         outPlainByte04_4->setSizePolicy(sizePolicy);
-        outPlainByte04_4->setFont(font);
+        outPlainByte04_4->setFont(font1);
         outPlainByte04_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1545,7 +2200,7 @@ public:
         outPlain1s01e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SBByte05->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SBByte05->setSizePolicy(sizePolicy);
-        outPlain1s01e01SBByte05->setFont(font);
+        outPlain1s01e01SBByte05->setFont(font1);
         outPlain1s01e01SBByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1560,7 +2215,7 @@ public:
         outPlainByte14_4->setGeometry(QRect(412, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_4->sizePolicy().hasHeightForWidth());
         outPlainByte14_4->setSizePolicy(sizePolicy);
-        outPlainByte14_4->setFont(font);
+        outPlainByte14_4->setFont(font1);
         outPlainByte14_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1575,7 +2230,7 @@ public:
         outPlainByte01_4->setGeometry(QRect(340, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_4->sizePolicy().hasHeightForWidth());
         outPlainByte01_4->setSizePolicy(sizePolicy);
-        outPlainByte01_4->setFont(font);
+        outPlainByte01_4->setFont(font1);
         outPlainByte01_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1590,7 +2245,7 @@ public:
         outPlainByte13_4->setGeometry(QRect(412, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_4->sizePolicy().hasHeightForWidth());
         outPlainByte13_4->setSizePolicy(sizePolicy);
-        outPlainByte13_4->setFont(font);
+        outPlainByte13_4->setFont(font1);
         outPlainByte13_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1605,7 +2260,7 @@ public:
         outPlainByte02_4->setGeometry(QRect(340, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_4->sizePolicy().hasHeightForWidth());
         outPlainByte02_4->setSizePolicy(sizePolicy);
-        outPlainByte02_4->setFont(font);
+        outPlainByte02_4->setFont(font1);
         outPlainByte02_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1620,7 +2275,7 @@ public:
         outPlainByte12_4->setGeometry(QRect(412, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_4->sizePolicy().hasHeightForWidth());
         outPlainByte12_4->setSizePolicy(sizePolicy);
-        outPlainByte12_4->setFont(font);
+        outPlainByte12_4->setFont(font1);
         outPlainByte12_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1635,7 +2290,7 @@ public:
         outPlain1s01e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SBByte10->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SBByte10->setSizePolicy(sizePolicy);
-        outPlain1s01e01SBByte10->setFont(font);
+        outPlain1s01e01SBByte10->setFont(font1);
         outPlain1s01e01SBByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1650,7 +2305,7 @@ public:
         outPlain1s01e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SBByte15->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SBByte15->setSizePolicy(sizePolicy);
-        outPlain1s01e01SBByte15->setFont(font);
+        outPlain1s01e01SBByte15->setFont(font1);
         outPlain1s01e01SBByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1665,7 +2320,7 @@ public:
         outPlainByte06_4->setGeometry(QRect(364, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_4->sizePolicy().hasHeightForWidth());
         outPlainByte06_4->setSizePolicy(sizePolicy);
-        outPlainByte06_4->setFont(font);
+        outPlainByte06_4->setFont(font1);
         outPlainByte06_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1680,7 +2335,7 @@ public:
         outPlainByte07_4->setGeometry(QRect(364, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_4->sizePolicy().hasHeightForWidth());
         outPlainByte07_4->setSizePolicy(sizePolicy);
-        outPlainByte07_4->setFont(font);
+        outPlainByte07_4->setFont(font1);
         outPlainByte07_4->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1695,7 +2350,7 @@ public:
         outPlain1s01e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SBByte00->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SBByte00->setSizePolicy(sizePolicy);
-        outPlain1s01e01SBByte00->setFont(font);
+        outPlain1s01e01SBByte00->setFont(font1);
         outPlain1s01e01SBByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1711,7 +2366,7 @@ public:
         outPlain1s01e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SRByte03->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SRByte03->setSizePolicy(sizePolicy);
-        outPlain1s01e01SRByte03->setFont(font);
+        outPlain1s01e01SRByte03->setFont(font1);
         outPlain1s01e01SRByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1726,7 +2381,7 @@ public:
         outPlainByte08_5->setGeometry(QRect(550, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_5->sizePolicy().hasHeightForWidth());
         outPlainByte08_5->setSizePolicy(sizePolicy);
-        outPlainByte08_5->setFont(font);
+        outPlainByte08_5->setFont(font1);
         outPlainByte08_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1741,7 +2396,7 @@ public:
         outPlainByte11_5->setGeometry(QRect(550, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_5->sizePolicy().hasHeightForWidth());
         outPlainByte11_5->setSizePolicy(sizePolicy);
-        outPlainByte11_5->setFont(font);
+        outPlainByte11_5->setFont(font1);
         outPlainByte11_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1756,7 +2411,7 @@ public:
         outPlainByte09_5->setGeometry(QRect(550, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_5->sizePolicy().hasHeightForWidth());
         outPlainByte09_5->setSizePolicy(sizePolicy);
-        outPlainByte09_5->setFont(font);
+        outPlainByte09_5->setFont(font1);
         outPlainByte09_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1771,7 +2426,7 @@ public:
         outPlainByte04_5->setGeometry(QRect(526, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_5->sizePolicy().hasHeightForWidth());
         outPlainByte04_5->setSizePolicy(sizePolicy);
-        outPlainByte04_5->setFont(font);
+        outPlainByte04_5->setFont(font1);
         outPlainByte04_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1786,7 +2441,7 @@ public:
         outPlainByte05_5->setGeometry(QRect(526, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_5->sizePolicy().hasHeightForWidth());
         outPlainByte05_5->setSizePolicy(sizePolicy);
-        outPlainByte05_5->setFont(font);
+        outPlainByte05_5->setFont(font1);
         outPlainByte05_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1801,7 +2456,7 @@ public:
         outPlainByte14_5->setGeometry(QRect(574, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_5->sizePolicy().hasHeightForWidth());
         outPlainByte14_5->setSizePolicy(sizePolicy);
-        outPlainByte14_5->setFont(font);
+        outPlainByte14_5->setFont(font1);
         outPlainByte14_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1816,7 +2471,7 @@ public:
         outPlain1s01e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SRByte01->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SRByte01->setSizePolicy(sizePolicy);
-        outPlain1s01e01SRByte01->setFont(font);
+        outPlain1s01e01SRByte01->setFont(font1);
         outPlain1s01e01SRByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1831,7 +2486,7 @@ public:
         outPlainByte13_5->setGeometry(QRect(574, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_5->sizePolicy().hasHeightForWidth());
         outPlainByte13_5->setSizePolicy(sizePolicy);
-        outPlainByte13_5->setFont(font);
+        outPlainByte13_5->setFont(font1);
         outPlainByte13_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1846,7 +2501,7 @@ public:
         outPlain1s01e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SRByte02->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SRByte02->setSizePolicy(sizePolicy);
-        outPlain1s01e01SRByte02->setFont(font);
+        outPlain1s01e01SRByte02->setFont(font1);
         outPlain1s01e01SRByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1861,7 +2516,7 @@ public:
         outPlainByte12_5->setGeometry(QRect(574, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_5->sizePolicy().hasHeightForWidth());
         outPlainByte12_5->setSizePolicy(sizePolicy);
-        outPlainByte12_5->setFont(font);
+        outPlainByte12_5->setFont(font1);
         outPlainByte12_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1876,7 +2531,7 @@ public:
         outPlainByte10_5->setGeometry(QRect(550, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_5->sizePolicy().hasHeightForWidth());
         outPlainByte10_5->setSizePolicy(sizePolicy);
-        outPlainByte10_5->setFont(font);
+        outPlainByte10_5->setFont(font1);
         outPlainByte10_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1891,7 +2546,7 @@ public:
         outPlainByte15_5->setGeometry(QRect(574, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_5->sizePolicy().hasHeightForWidth());
         outPlainByte15_5->setSizePolicy(sizePolicy);
-        outPlainByte15_5->setFont(font);
+        outPlainByte15_5->setFont(font1);
         outPlainByte15_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1906,7 +2561,7 @@ public:
         outPlainByte06_5->setGeometry(QRect(526, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_5->sizePolicy().hasHeightForWidth());
         outPlainByte06_5->setSizePolicy(sizePolicy);
-        outPlainByte06_5->setFont(font);
+        outPlainByte06_5->setFont(font1);
         outPlainByte06_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1921,7 +2576,7 @@ public:
         outPlainByte07_5->setGeometry(QRect(526, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_5->sizePolicy().hasHeightForWidth());
         outPlainByte07_5->setSizePolicy(sizePolicy);
-        outPlainByte07_5->setFont(font);
+        outPlainByte07_5->setFont(font1);
         outPlainByte07_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1936,7 +2591,7 @@ public:
         outPlain1s01e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01SRByte00->sizePolicy().hasHeightForWidth());
         outPlain1s01e01SRByte00->setSizePolicy(sizePolicy);
-        outPlain1s01e01SRByte00->setFont(font);
+        outPlain1s01e01SRByte00->setFont(font1);
         outPlain1s01e01SRByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1952,7 +2607,7 @@ public:
         outPlainByte13_6->setGeometry(QRect(734, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_6->sizePolicy().hasHeightForWidth());
         outPlainByte13_6->setSizePolicy(sizePolicy);
-        outPlainByte13_6->setFont(font);
+        outPlainByte13_6->setFont(font1);
         outPlainByte13_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1967,7 +2622,7 @@ public:
         outPlainByte08_6->setGeometry(QRect(710, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_6->sizePolicy().hasHeightForWidth());
         outPlainByte08_6->setSizePolicy(sizePolicy);
-        outPlainByte08_6->setFont(font);
+        outPlainByte08_6->setFont(font1);
         outPlainByte08_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1982,7 +2637,7 @@ public:
         outPlain1s01e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01MCByte03->sizePolicy().hasHeightForWidth());
         outPlain1s01e01MCByte03->setSizePolicy(sizePolicy);
-        outPlain1s01e01MCByte03->setFont(font);
+        outPlain1s01e01MCByte03->setFont(font1);
         outPlain1s01e01MCByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -1997,7 +2652,7 @@ public:
         outPlain1s01e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01MCByte02->sizePolicy().hasHeightForWidth());
         outPlain1s01e01MCByte02->setSizePolicy(sizePolicy);
-        outPlain1s01e01MCByte02->setFont(font);
+        outPlain1s01e01MCByte02->setFont(font1);
         outPlain1s01e01MCByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2012,7 +2667,7 @@ public:
         outPlainByte04_6->setGeometry(QRect(686, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_6->sizePolicy().hasHeightForWidth());
         outPlainByte04_6->setSizePolicy(sizePolicy);
-        outPlainByte04_6->setFont(font);
+        outPlainByte04_6->setFont(font1);
         outPlainByte04_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2027,7 +2682,7 @@ public:
         outPlain1s01e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01MCByte00->sizePolicy().hasHeightForWidth());
         outPlain1s01e01MCByte00->setSizePolicy(sizePolicy);
-        outPlain1s01e01MCByte00->setFont(font);
+        outPlain1s01e01MCByte00->setFont(font1);
         outPlain1s01e01MCByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2043,7 +2698,7 @@ public:
         outPlainByte07_6->setGeometry(QRect(686, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_6->sizePolicy().hasHeightForWidth());
         outPlainByte07_6->setSizePolicy(sizePolicy);
-        outPlainByte07_6->setFont(font);
+        outPlainByte07_6->setFont(font1);
         outPlainByte07_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2058,7 +2713,7 @@ public:
         outPlainByte15_6->setGeometry(QRect(734, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_6->sizePolicy().hasHeightForWidth());
         outPlainByte15_6->setSizePolicy(sizePolicy);
-        outPlainByte15_6->setFont(font);
+        outPlainByte15_6->setFont(font1);
         outPlainByte15_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2073,7 +2728,7 @@ public:
         outPlainByte06_6->setGeometry(QRect(686, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_6->sizePolicy().hasHeightForWidth());
         outPlainByte06_6->setSizePolicy(sizePolicy);
-        outPlainByte06_6->setFont(font);
+        outPlainByte06_6->setFont(font1);
         outPlainByte06_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2088,7 +2743,7 @@ public:
         outPlainByte12_6->setGeometry(QRect(734, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_6->sizePolicy().hasHeightForWidth());
         outPlainByte12_6->setSizePolicy(sizePolicy);
-        outPlainByte12_6->setFont(font);
+        outPlainByte12_6->setFont(font1);
         outPlainByte12_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2103,7 +2758,7 @@ public:
         outPlainByte11_6->setGeometry(QRect(710, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_6->sizePolicy().hasHeightForWidth());
         outPlainByte11_6->setSizePolicy(sizePolicy);
-        outPlainByte11_6->setFont(font);
+        outPlainByte11_6->setFont(font1);
         outPlainByte11_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2118,7 +2773,7 @@ public:
         outPlainByte14_6->setGeometry(QRect(734, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_6->sizePolicy().hasHeightForWidth());
         outPlainByte14_6->setSizePolicy(sizePolicy);
-        outPlainByte14_6->setFont(font);
+        outPlainByte14_6->setFont(font1);
         outPlainByte14_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2133,7 +2788,7 @@ public:
         outPlainByte05_6->setGeometry(QRect(686, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_6->sizePolicy().hasHeightForWidth());
         outPlainByte05_6->setSizePolicy(sizePolicy);
-        outPlainByte05_6->setFont(font);
+        outPlainByte05_6->setFont(font1);
         outPlainByte05_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2148,7 +2803,7 @@ public:
         outPlain1s01e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01MCByte01->sizePolicy().hasHeightForWidth());
         outPlain1s01e01MCByte01->setSizePolicy(sizePolicy);
-        outPlain1s01e01MCByte01->setFont(font);
+        outPlain1s01e01MCByte01->setFont(font1);
         outPlain1s01e01MCByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2163,7 +2818,7 @@ public:
         outPlainByte09_6->setGeometry(QRect(710, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_6->sizePolicy().hasHeightForWidth());
         outPlainByte09_6->setSizePolicy(sizePolicy);
-        outPlainByte09_6->setFont(font);
+        outPlainByte09_6->setFont(font1);
         outPlainByte09_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2178,7 +2833,7 @@ public:
         outPlainByte10_6->setGeometry(QRect(710, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_6->sizePolicy().hasHeightForWidth());
         outPlainByte10_6->setSizePolicy(sizePolicy);
-        outPlainByte10_6->setFont(font);
+        outPlainByte10_6->setFont(font1);
         outPlainByte10_6->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2195,10 +2850,10 @@ public:
         buttonS01E01SB->setGeometry(QRect(280, 60, 51, 27));
         buttonS01E01SR = new QPushButton(groupPlain1s01e01);
         buttonS01E01SR->setObjectName(QString::fromUtf8("buttonS01E01SR"));
-        buttonS01E01SR->setGeometry(QRect(440, 60, 51, 27));
+        buttonS01E01SR->setGeometry(QRect(445, 60, 51, 27));
         buttonS01E01MC = new QPushButton(groupPlain1s01e01);
         buttonS01E01MC->setObjectName(QString::fromUtf8("buttonS01E01MC"));
-        buttonS01E01MC->setGeometry(QRect(610, 60, 51, 27));
+        buttonS01E01MC->setGeometry(QRect(605, 60, 51, 27));
         groupPlain2s01e01 = new QGroupBox(tabS01E01);
         groupPlain2s01e01->setObjectName(QString::fromUtf8("groupPlain2s01e01"));
         groupPlain2s01e01->setGeometry(QRect(10, 170, 761, 141));
@@ -2227,7 +2882,7 @@ public:
         outPlain2s01e01Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte13->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte13->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte13->setFont(font);
+        outPlain2s01e01Byte13->setFont(font1);
         outPlain2s01e01Byte13->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2242,7 +2897,7 @@ public:
         outPlain2s01e01Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte14->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte14->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte14->setFont(font);
+        outPlain2s01e01Byte14->setFont(font1);
         outPlain2s01e01Byte14->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2257,7 +2912,7 @@ public:
         outPlain2s01e01Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte06->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte06->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte06->setFont(font);
+        outPlain2s01e01Byte06->setFont(font1);
         outPlain2s01e01Byte06->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2272,7 +2927,7 @@ public:
         outPlain2s01e01Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte04->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte04->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte04->setFont(font);
+        outPlain2s01e01Byte04->setFont(font1);
         outPlain2s01e01Byte04->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2287,7 +2942,7 @@ public:
         outPlain2s01e01Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte02->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte02->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte02->setFont(font);
+        outPlain2s01e01Byte02->setFont(font1);
         outPlain2s01e01Byte02->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2317,7 +2972,7 @@ public:
         outPlain2s01e01Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte09->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte09->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte09->setFont(font);
+        outPlain2s01e01Byte09->setFont(font1);
         outPlain2s01e01Byte09->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2332,7 +2987,7 @@ public:
         outPlain2s01e01Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte01->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte01->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte01->setFont(font);
+        outPlain2s01e01Byte01->setFont(font1);
         outPlain2s01e01Byte01->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2347,7 +3002,7 @@ public:
         outPlain2s01e01Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte08->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte08->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte08->setFont(font);
+        outPlain2s01e01Byte08->setFont(font1);
         outPlain2s01e01Byte08->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2378,7 +3033,7 @@ public:
         outPlain2s01e01Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte07->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte07->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte07->setFont(font);
+        outPlain2s01e01Byte07->setFont(font1);
         outPlain2s01e01Byte07->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2393,7 +3048,7 @@ public:
         outPlain2s01e01Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte12->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte12->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte12->setFont(font);
+        outPlain2s01e01Byte12->setFont(font1);
         outPlain2s01e01Byte12->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2408,7 +3063,7 @@ public:
         outPlain2s01e01Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte03->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte03->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte03->setFont(font);
+        outPlain2s01e01Byte03->setFont(font1);
         outPlain2s01e01Byte03->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2423,7 +3078,7 @@ public:
         outPlain2s01e01Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01Byte11->sizePolicy().hasHeightForWidth());
         outPlain2s01e01Byte11->setSizePolicy(sizePolicy);
-        outPlain2s01e01Byte11->setFont(font);
+        outPlain2s01e01Byte11->setFont(font1);
         outPlain2s01e01Byte11->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2453,7 +3108,7 @@ public:
         outPlainByte03_8->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_8->sizePolicy().hasHeightForWidth());
         outPlainByte03_8->setSizePolicy(sizePolicy);
-        outPlainByte03_8->setFont(font);
+        outPlainByte03_8->setFont(font1);
         outPlainByte03_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2468,7 +3123,7 @@ public:
         outPlainByte08_8->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_8->sizePolicy().hasHeightForWidth());
         outPlainByte08_8->setSizePolicy(sizePolicy);
-        outPlainByte08_8->setFont(font);
+        outPlainByte08_8->setFont(font1);
         outPlainByte08_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2483,7 +3138,7 @@ public:
         outPlainByte11_8->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_8->sizePolicy().hasHeightForWidth());
         outPlainByte11_8->setSizePolicy(sizePolicy);
-        outPlainByte11_8->setFont(font);
+        outPlainByte11_8->setFont(font1);
         outPlainByte11_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2498,7 +3153,7 @@ public:
         outPlainByte09_8->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_8->sizePolicy().hasHeightForWidth());
         outPlainByte09_8->setSizePolicy(sizePolicy);
-        outPlainByte09_8->setFont(font);
+        outPlainByte09_8->setFont(font1);
         outPlainByte09_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2513,7 +3168,7 @@ public:
         outPlainByte04_8->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_8->sizePolicy().hasHeightForWidth());
         outPlainByte04_8->setSizePolicy(sizePolicy);
-        outPlainByte04_8->setFont(font);
+        outPlainByte04_8->setFont(font1);
         outPlainByte04_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2528,7 +3183,7 @@ public:
         outPlain2s01e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01ARKByte05->sizePolicy().hasHeightForWidth());
         outPlain2s01e01ARKByte05->setSizePolicy(sizePolicy);
-        outPlain2s01e01ARKByte05->setFont(font);
+        outPlain2s01e01ARKByte05->setFont(font1);
         outPlain2s01e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2543,7 +3198,7 @@ public:
         outPlainByte14_8->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_8->sizePolicy().hasHeightForWidth());
         outPlainByte14_8->setSizePolicy(sizePolicy);
-        outPlainByte14_8->setFont(font);
+        outPlainByte14_8->setFont(font1);
         outPlainByte14_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2558,7 +3213,7 @@ public:
         outPlainByte01_8->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_8->sizePolicy().hasHeightForWidth());
         outPlainByte01_8->setSizePolicy(sizePolicy);
-        outPlainByte01_8->setFont(font);
+        outPlainByte01_8->setFont(font1);
         outPlainByte01_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2573,7 +3228,7 @@ public:
         outPlainByte13_8->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_8->sizePolicy().hasHeightForWidth());
         outPlainByte13_8->setSizePolicy(sizePolicy);
-        outPlainByte13_8->setFont(font);
+        outPlainByte13_8->setFont(font1);
         outPlainByte13_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2588,7 +3243,7 @@ public:
         outPlainByte02_8->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_8->sizePolicy().hasHeightForWidth());
         outPlainByte02_8->setSizePolicy(sizePolicy);
-        outPlainByte02_8->setFont(font);
+        outPlainByte02_8->setFont(font1);
         outPlainByte02_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2603,7 +3258,7 @@ public:
         outPlainByte12_8->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_8->sizePolicy().hasHeightForWidth());
         outPlainByte12_8->setSizePolicy(sizePolicy);
-        outPlainByte12_8->setFont(font);
+        outPlainByte12_8->setFont(font1);
         outPlainByte12_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2618,7 +3273,7 @@ public:
         outPlain2s01e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01ARKByte10->sizePolicy().hasHeightForWidth());
         outPlain2s01e01ARKByte10->setSizePolicy(sizePolicy);
-        outPlain2s01e01ARKByte10->setFont(font);
+        outPlain2s01e01ARKByte10->setFont(font1);
         outPlain2s01e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2633,7 +3288,7 @@ public:
         outPlain2s01e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01ARKByte15->sizePolicy().hasHeightForWidth());
         outPlain2s01e01ARKByte15->setSizePolicy(sizePolicy);
-        outPlain2s01e01ARKByte15->setFont(font);
+        outPlain2s01e01ARKByte15->setFont(font1);
         outPlain2s01e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2648,7 +3303,7 @@ public:
         outPlainByte06_8->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_8->sizePolicy().hasHeightForWidth());
         outPlainByte06_8->setSizePolicy(sizePolicy);
-        outPlainByte06_8->setFont(font);
+        outPlainByte06_8->setFont(font1);
         outPlainByte06_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2663,7 +3318,7 @@ public:
         outPlainByte07_8->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_8->sizePolicy().hasHeightForWidth());
         outPlainByte07_8->setSizePolicy(sizePolicy);
-        outPlainByte07_8->setFont(font);
+        outPlainByte07_8->setFont(font1);
         outPlainByte07_8->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2678,7 +3333,7 @@ public:
         outPlain2s01e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01ARKByte00->sizePolicy().hasHeightForWidth());
         outPlain2s01e01ARKByte00->setSizePolicy(sizePolicy);
-        outPlain2s01e01ARKByte00->setFont(font);
+        outPlain2s01e01ARKByte00->setFont(font1);
         outPlain2s01e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2694,7 +3349,7 @@ public:
         outPlainByte03_9->setGeometry(QRect(340, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_9->sizePolicy().hasHeightForWidth());
         outPlainByte03_9->setSizePolicy(sizePolicy);
-        outPlainByte03_9->setFont(font);
+        outPlainByte03_9->setFont(font1);
         outPlainByte03_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2709,7 +3364,7 @@ public:
         outPlainByte08_9->setGeometry(QRect(388, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_9->sizePolicy().hasHeightForWidth());
         outPlainByte08_9->setSizePolicy(sizePolicy);
-        outPlainByte08_9->setFont(font);
+        outPlainByte08_9->setFont(font1);
         outPlainByte08_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2724,7 +3379,7 @@ public:
         outPlainByte11_9->setGeometry(QRect(388, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_9->sizePolicy().hasHeightForWidth());
         outPlainByte11_9->setSizePolicy(sizePolicy);
-        outPlainByte11_9->setFont(font);
+        outPlainByte11_9->setFont(font1);
         outPlainByte11_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2739,7 +3394,7 @@ public:
         outPlainByte09_9->setGeometry(QRect(388, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_9->sizePolicy().hasHeightForWidth());
         outPlainByte09_9->setSizePolicy(sizePolicy);
-        outPlainByte09_9->setFont(font);
+        outPlainByte09_9->setFont(font1);
         outPlainByte09_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2754,7 +3409,7 @@ public:
         outPlainByte04_9->setGeometry(QRect(364, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_9->sizePolicy().hasHeightForWidth());
         outPlainByte04_9->setSizePolicy(sizePolicy);
-        outPlainByte04_9->setFont(font);
+        outPlainByte04_9->setFont(font1);
         outPlainByte04_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2769,7 +3424,7 @@ public:
         outPlain2s01e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SBByte05->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SBByte05->setSizePolicy(sizePolicy);
-        outPlain2s01e01SBByte05->setFont(font);
+        outPlain2s01e01SBByte05->setFont(font1);
         outPlain2s01e01SBByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2784,7 +3439,7 @@ public:
         outPlainByte14_9->setGeometry(QRect(412, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_9->sizePolicy().hasHeightForWidth());
         outPlainByte14_9->setSizePolicy(sizePolicy);
-        outPlainByte14_9->setFont(font);
+        outPlainByte14_9->setFont(font1);
         outPlainByte14_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2799,7 +3454,7 @@ public:
         outPlainByte01_9->setGeometry(QRect(340, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_9->sizePolicy().hasHeightForWidth());
         outPlainByte01_9->setSizePolicy(sizePolicy);
-        outPlainByte01_9->setFont(font);
+        outPlainByte01_9->setFont(font1);
         outPlainByte01_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2814,7 +3469,7 @@ public:
         outPlainByte13_9->setGeometry(QRect(412, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_9->sizePolicy().hasHeightForWidth());
         outPlainByte13_9->setSizePolicy(sizePolicy);
-        outPlainByte13_9->setFont(font);
+        outPlainByte13_9->setFont(font1);
         outPlainByte13_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2829,7 +3484,7 @@ public:
         outPlainByte02_9->setGeometry(QRect(340, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_9->sizePolicy().hasHeightForWidth());
         outPlainByte02_9->setSizePolicy(sizePolicy);
-        outPlainByte02_9->setFont(font);
+        outPlainByte02_9->setFont(font1);
         outPlainByte02_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2844,7 +3499,7 @@ public:
         outPlainByte12_9->setGeometry(QRect(412, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_9->sizePolicy().hasHeightForWidth());
         outPlainByte12_9->setSizePolicy(sizePolicy);
-        outPlainByte12_9->setFont(font);
+        outPlainByte12_9->setFont(font1);
         outPlainByte12_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2859,7 +3514,7 @@ public:
         outPlain2s01e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SBByte10->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SBByte10->setSizePolicy(sizePolicy);
-        outPlain2s01e01SBByte10->setFont(font);
+        outPlain2s01e01SBByte10->setFont(font1);
         outPlain2s01e01SBByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2874,7 +3529,7 @@ public:
         outPlain2s01e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SBByte15->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SBByte15->setSizePolicy(sizePolicy);
-        outPlain2s01e01SBByte15->setFont(font);
+        outPlain2s01e01SBByte15->setFont(font1);
         outPlain2s01e01SBByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2889,7 +3544,7 @@ public:
         outPlainByte06_9->setGeometry(QRect(364, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_9->sizePolicy().hasHeightForWidth());
         outPlainByte06_9->setSizePolicy(sizePolicy);
-        outPlainByte06_9->setFont(font);
+        outPlainByte06_9->setFont(font1);
         outPlainByte06_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2904,7 +3559,7 @@ public:
         outPlainByte07_9->setGeometry(QRect(364, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_9->sizePolicy().hasHeightForWidth());
         outPlainByte07_9->setSizePolicy(sizePolicy);
-        outPlainByte07_9->setFont(font);
+        outPlainByte07_9->setFont(font1);
         outPlainByte07_9->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_9->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2919,7 +3574,7 @@ public:
         outPlain2s01e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SBByte00->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SBByte00->setSizePolicy(sizePolicy);
-        outPlain2s01e01SBByte00->setFont(font);
+        outPlain2s01e01SBByte00->setFont(font1);
         outPlain2s01e01SBByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2935,7 +3590,7 @@ public:
         outPlain2s01e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SRByte03->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SRByte03->setSizePolicy(sizePolicy);
-        outPlain2s01e01SRByte03->setFont(font);
+        outPlain2s01e01SRByte03->setFont(font1);
         outPlain2s01e01SRByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2950,7 +3605,7 @@ public:
         outPlainByte08_10->setGeometry(QRect(550, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_10->sizePolicy().hasHeightForWidth());
         outPlainByte08_10->setSizePolicy(sizePolicy);
-        outPlainByte08_10->setFont(font);
+        outPlainByte08_10->setFont(font1);
         outPlainByte08_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2965,7 +3620,7 @@ public:
         outPlainByte11_10->setGeometry(QRect(550, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_10->sizePolicy().hasHeightForWidth());
         outPlainByte11_10->setSizePolicy(sizePolicy);
-        outPlainByte11_10->setFont(font);
+        outPlainByte11_10->setFont(font1);
         outPlainByte11_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2980,7 +3635,7 @@ public:
         outPlainByte09_10->setGeometry(QRect(550, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_10->sizePolicy().hasHeightForWidth());
         outPlainByte09_10->setSizePolicy(sizePolicy);
-        outPlainByte09_10->setFont(font);
+        outPlainByte09_10->setFont(font1);
         outPlainByte09_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -2995,7 +3650,7 @@ public:
         outPlainByte04_10->setGeometry(QRect(526, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_10->sizePolicy().hasHeightForWidth());
         outPlainByte04_10->setSizePolicy(sizePolicy);
-        outPlainByte04_10->setFont(font);
+        outPlainByte04_10->setFont(font1);
         outPlainByte04_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3010,7 +3665,7 @@ public:
         outPlainByte05_10->setGeometry(QRect(526, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_10->sizePolicy().hasHeightForWidth());
         outPlainByte05_10->setSizePolicy(sizePolicy);
-        outPlainByte05_10->setFont(font);
+        outPlainByte05_10->setFont(font1);
         outPlainByte05_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3025,7 +3680,7 @@ public:
         outPlainByte14_10->setGeometry(QRect(574, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_10->sizePolicy().hasHeightForWidth());
         outPlainByte14_10->setSizePolicy(sizePolicy);
-        outPlainByte14_10->setFont(font);
+        outPlainByte14_10->setFont(font1);
         outPlainByte14_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3040,7 +3695,7 @@ public:
         outPlain2s01e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SRByte01->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SRByte01->setSizePolicy(sizePolicy);
-        outPlain2s01e01SRByte01->setFont(font);
+        outPlain2s01e01SRByte01->setFont(font1);
         outPlain2s01e01SRByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3055,7 +3710,7 @@ public:
         outPlainByte13_10->setGeometry(QRect(574, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_10->sizePolicy().hasHeightForWidth());
         outPlainByte13_10->setSizePolicy(sizePolicy);
-        outPlainByte13_10->setFont(font);
+        outPlainByte13_10->setFont(font1);
         outPlainByte13_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3070,7 +3725,7 @@ public:
         outPlain2s01e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SRByte02->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SRByte02->setSizePolicy(sizePolicy);
-        outPlain2s01e01SRByte02->setFont(font);
+        outPlain2s01e01SRByte02->setFont(font1);
         outPlain2s01e01SRByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3085,7 +3740,7 @@ public:
         outPlainByte12_10->setGeometry(QRect(574, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_10->sizePolicy().hasHeightForWidth());
         outPlainByte12_10->setSizePolicy(sizePolicy);
-        outPlainByte12_10->setFont(font);
+        outPlainByte12_10->setFont(font1);
         outPlainByte12_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3100,7 +3755,7 @@ public:
         outPlainByte10_10->setGeometry(QRect(550, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_10->sizePolicy().hasHeightForWidth());
         outPlainByte10_10->setSizePolicy(sizePolicy);
-        outPlainByte10_10->setFont(font);
+        outPlainByte10_10->setFont(font1);
         outPlainByte10_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3115,7 +3770,7 @@ public:
         outPlainByte15_10->setGeometry(QRect(574, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_10->sizePolicy().hasHeightForWidth());
         outPlainByte15_10->setSizePolicy(sizePolicy);
-        outPlainByte15_10->setFont(font);
+        outPlainByte15_10->setFont(font1);
         outPlainByte15_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3130,7 +3785,7 @@ public:
         outPlainByte06_10->setGeometry(QRect(526, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_10->sizePolicy().hasHeightForWidth());
         outPlainByte06_10->setSizePolicy(sizePolicy);
-        outPlainByte06_10->setFont(font);
+        outPlainByte06_10->setFont(font1);
         outPlainByte06_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3145,7 +3800,7 @@ public:
         outPlainByte07_10->setGeometry(QRect(526, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_10->sizePolicy().hasHeightForWidth());
         outPlainByte07_10->setSizePolicy(sizePolicy);
-        outPlainByte07_10->setFont(font);
+        outPlainByte07_10->setFont(font1);
         outPlainByte07_10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3160,7 +3815,7 @@ public:
         outPlain2s01e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01SRByte00->sizePolicy().hasHeightForWidth());
         outPlain2s01e01SRByte00->setSizePolicy(sizePolicy);
-        outPlain2s01e01SRByte00->setFont(font);
+        outPlain2s01e01SRByte00->setFont(font1);
         outPlain2s01e01SRByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3176,7 +3831,7 @@ public:
         outPlainByte13_11->setGeometry(QRect(734, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_11->sizePolicy().hasHeightForWidth());
         outPlainByte13_11->setSizePolicy(sizePolicy);
-        outPlainByte13_11->setFont(font);
+        outPlainByte13_11->setFont(font1);
         outPlainByte13_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3191,7 +3846,7 @@ public:
         outPlainByte08_11->setGeometry(QRect(710, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_11->sizePolicy().hasHeightForWidth());
         outPlainByte08_11->setSizePolicy(sizePolicy);
-        outPlainByte08_11->setFont(font);
+        outPlainByte08_11->setFont(font1);
         outPlainByte08_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3206,7 +3861,7 @@ public:
         outPlain2s01e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01MCByte03->sizePolicy().hasHeightForWidth());
         outPlain2s01e01MCByte03->setSizePolicy(sizePolicy);
-        outPlain2s01e01MCByte03->setFont(font);
+        outPlain2s01e01MCByte03->setFont(font1);
         outPlain2s01e01MCByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3221,7 +3876,7 @@ public:
         outPlain2s01e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01MCByte02->sizePolicy().hasHeightForWidth());
         outPlain2s01e01MCByte02->setSizePolicy(sizePolicy);
-        outPlain2s01e01MCByte02->setFont(font);
+        outPlain2s01e01MCByte02->setFont(font1);
         outPlain2s01e01MCByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3236,7 +3891,7 @@ public:
         outPlainByte04_11->setGeometry(QRect(686, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_11->sizePolicy().hasHeightForWidth());
         outPlainByte04_11->setSizePolicy(sizePolicy);
-        outPlainByte04_11->setFont(font);
+        outPlainByte04_11->setFont(font1);
         outPlainByte04_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3251,7 +3906,7 @@ public:
         outPlain2s01e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01MCByte00->sizePolicy().hasHeightForWidth());
         outPlain2s01e01MCByte00->setSizePolicy(sizePolicy);
-        outPlain2s01e01MCByte00->setFont(font);
+        outPlain2s01e01MCByte00->setFont(font1);
         outPlain2s01e01MCByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3267,7 +3922,7 @@ public:
         outPlainByte07_11->setGeometry(QRect(686, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_11->sizePolicy().hasHeightForWidth());
         outPlainByte07_11->setSizePolicy(sizePolicy);
-        outPlainByte07_11->setFont(font);
+        outPlainByte07_11->setFont(font1);
         outPlainByte07_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3282,7 +3937,7 @@ public:
         outPlainByte15_11->setGeometry(QRect(734, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_11->sizePolicy().hasHeightForWidth());
         outPlainByte15_11->setSizePolicy(sizePolicy);
-        outPlainByte15_11->setFont(font);
+        outPlainByte15_11->setFont(font1);
         outPlainByte15_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3297,7 +3952,7 @@ public:
         outPlainByte06_11->setGeometry(QRect(686, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_11->sizePolicy().hasHeightForWidth());
         outPlainByte06_11->setSizePolicy(sizePolicy);
-        outPlainByte06_11->setFont(font);
+        outPlainByte06_11->setFont(font1);
         outPlainByte06_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3312,7 +3967,7 @@ public:
         outPlainByte12_11->setGeometry(QRect(734, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_11->sizePolicy().hasHeightForWidth());
         outPlainByte12_11->setSizePolicy(sizePolicy);
-        outPlainByte12_11->setFont(font);
+        outPlainByte12_11->setFont(font1);
         outPlainByte12_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3327,7 +3982,7 @@ public:
         outPlainByte11_11->setGeometry(QRect(710, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_11->sizePolicy().hasHeightForWidth());
         outPlainByte11_11->setSizePolicy(sizePolicy);
-        outPlainByte11_11->setFont(font);
+        outPlainByte11_11->setFont(font1);
         outPlainByte11_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3342,7 +3997,7 @@ public:
         outPlainByte14_11->setGeometry(QRect(734, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_11->sizePolicy().hasHeightForWidth());
         outPlainByte14_11->setSizePolicy(sizePolicy);
-        outPlainByte14_11->setFont(font);
+        outPlainByte14_11->setFont(font1);
         outPlainByte14_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3357,7 +4012,7 @@ public:
         outPlainByte05_11->setGeometry(QRect(686, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_11->sizePolicy().hasHeightForWidth());
         outPlainByte05_11->setSizePolicy(sizePolicy);
-        outPlainByte05_11->setFont(font);
+        outPlainByte05_11->setFont(font1);
         outPlainByte05_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3372,7 +4027,7 @@ public:
         outPlain2s01e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain2s01e01MCByte01->sizePolicy().hasHeightForWidth());
         outPlain2s01e01MCByte01->setSizePolicy(sizePolicy);
-        outPlain2s01e01MCByte01->setFont(font);
+        outPlain2s01e01MCByte01->setFont(font1);
         outPlain2s01e01MCByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain2s01e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3387,7 +4042,7 @@ public:
         outPlainByte09_11->setGeometry(QRect(710, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_11->sizePolicy().hasHeightForWidth());
         outPlainByte09_11->setSizePolicy(sizePolicy);
-        outPlainByte09_11->setFont(font);
+        outPlainByte09_11->setFont(font1);
         outPlainByte09_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3402,7 +4057,7 @@ public:
         outPlainByte10_11->setGeometry(QRect(710, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_11->sizePolicy().hasHeightForWidth());
         outPlainByte10_11->setSizePolicy(sizePolicy);
-        outPlainByte10_11->setFont(font);
+        outPlainByte10_11->setFont(font1);
         outPlainByte10_11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3439,7 +4094,7 @@ public:
         outPlain3s01e01Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte13->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte13->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte13->setFont(font);
+        outPlain3s01e01Byte13->setFont(font1);
         outPlain3s01e01Byte13->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3454,7 +4109,7 @@ public:
         outPlain3s01e01Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte14->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte14->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte14->setFont(font);
+        outPlain3s01e01Byte14->setFont(font1);
         outPlain3s01e01Byte14->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3469,7 +4124,7 @@ public:
         outPlain3s01e01Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte06->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte06->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte06->setFont(font);
+        outPlain3s01e01Byte06->setFont(font1);
         outPlain3s01e01Byte06->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3484,7 +4139,7 @@ public:
         outPlain3s01e01Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte04->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte04->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte04->setFont(font);
+        outPlain3s01e01Byte04->setFont(font1);
         outPlain3s01e01Byte04->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3499,7 +4154,7 @@ public:
         outPlain3s01e01Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte02->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte02->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte02->setFont(font);
+        outPlain3s01e01Byte02->setFont(font1);
         outPlain3s01e01Byte02->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3529,7 +4184,7 @@ public:
         outPlain3s01e01Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte09->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte09->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte09->setFont(font);
+        outPlain3s01e01Byte09->setFont(font1);
         outPlain3s01e01Byte09->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3544,7 +4199,7 @@ public:
         outPlain3s01e01Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte01->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte01->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte01->setFont(font);
+        outPlain3s01e01Byte01->setFont(font1);
         outPlain3s01e01Byte01->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3559,7 +4214,7 @@ public:
         outPlain3s01e01Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte08->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte08->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte08->setFont(font);
+        outPlain3s01e01Byte08->setFont(font1);
         outPlain3s01e01Byte08->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3590,7 +4245,7 @@ public:
         outPlain3s01e01Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte07->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte07->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte07->setFont(font);
+        outPlain3s01e01Byte07->setFont(font1);
         outPlain3s01e01Byte07->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3605,7 +4260,7 @@ public:
         outPlain3s01e01Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte12->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte12->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte12->setFont(font);
+        outPlain3s01e01Byte12->setFont(font1);
         outPlain3s01e01Byte12->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3620,7 +4275,7 @@ public:
         outPlain3s01e01Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte03->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte03->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte03->setFont(font);
+        outPlain3s01e01Byte03->setFont(font1);
         outPlain3s01e01Byte03->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3635,7 +4290,7 @@ public:
         outPlain3s01e01Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01Byte11->sizePolicy().hasHeightForWidth());
         outPlain3s01e01Byte11->setSizePolicy(sizePolicy);
-        outPlain3s01e01Byte11->setFont(font);
+        outPlain3s01e01Byte11->setFont(font1);
         outPlain3s01e01Byte11->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3665,7 +4320,7 @@ public:
         outPlainByte03_13->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_13->sizePolicy().hasHeightForWidth());
         outPlainByte03_13->setSizePolicy(sizePolicy);
-        outPlainByte03_13->setFont(font);
+        outPlainByte03_13->setFont(font1);
         outPlainByte03_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3680,7 +4335,7 @@ public:
         outPlainByte08_13->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_13->sizePolicy().hasHeightForWidth());
         outPlainByte08_13->setSizePolicy(sizePolicy);
-        outPlainByte08_13->setFont(font);
+        outPlainByte08_13->setFont(font1);
         outPlainByte08_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3695,7 +4350,7 @@ public:
         outPlainByte11_13->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_13->sizePolicy().hasHeightForWidth());
         outPlainByte11_13->setSizePolicy(sizePolicy);
-        outPlainByte11_13->setFont(font);
+        outPlainByte11_13->setFont(font1);
         outPlainByte11_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3710,7 +4365,7 @@ public:
         outPlainByte09_13->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_13->sizePolicy().hasHeightForWidth());
         outPlainByte09_13->setSizePolicy(sizePolicy);
-        outPlainByte09_13->setFont(font);
+        outPlainByte09_13->setFont(font1);
         outPlainByte09_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3725,7 +4380,7 @@ public:
         outPlainByte04_13->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_13->sizePolicy().hasHeightForWidth());
         outPlainByte04_13->setSizePolicy(sizePolicy);
-        outPlainByte04_13->setFont(font);
+        outPlainByte04_13->setFont(font1);
         outPlainByte04_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3740,7 +4395,7 @@ public:
         outPlain3s01e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01ARKByte05->sizePolicy().hasHeightForWidth());
         outPlain3s01e01ARKByte05->setSizePolicy(sizePolicy);
-        outPlain3s01e01ARKByte05->setFont(font);
+        outPlain3s01e01ARKByte05->setFont(font1);
         outPlain3s01e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3755,7 +4410,7 @@ public:
         outPlainByte14_13->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_13->sizePolicy().hasHeightForWidth());
         outPlainByte14_13->setSizePolicy(sizePolicy);
-        outPlainByte14_13->setFont(font);
+        outPlainByte14_13->setFont(font1);
         outPlainByte14_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3770,7 +4425,7 @@ public:
         outPlainByte01_13->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_13->sizePolicy().hasHeightForWidth());
         outPlainByte01_13->setSizePolicy(sizePolicy);
-        outPlainByte01_13->setFont(font);
+        outPlainByte01_13->setFont(font1);
         outPlainByte01_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3785,7 +4440,7 @@ public:
         outPlainByte13_13->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_13->sizePolicy().hasHeightForWidth());
         outPlainByte13_13->setSizePolicy(sizePolicy);
-        outPlainByte13_13->setFont(font);
+        outPlainByte13_13->setFont(font1);
         outPlainByte13_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3800,7 +4455,7 @@ public:
         outPlainByte02_13->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_13->sizePolicy().hasHeightForWidth());
         outPlainByte02_13->setSizePolicy(sizePolicy);
-        outPlainByte02_13->setFont(font);
+        outPlainByte02_13->setFont(font1);
         outPlainByte02_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3815,7 +4470,7 @@ public:
         outPlainByte12_13->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_13->sizePolicy().hasHeightForWidth());
         outPlainByte12_13->setSizePolicy(sizePolicy);
-        outPlainByte12_13->setFont(font);
+        outPlainByte12_13->setFont(font1);
         outPlainByte12_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3830,7 +4485,7 @@ public:
         outPlain3s01e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01ARKByte10->sizePolicy().hasHeightForWidth());
         outPlain3s01e01ARKByte10->setSizePolicy(sizePolicy);
-        outPlain3s01e01ARKByte10->setFont(font);
+        outPlain3s01e01ARKByte10->setFont(font1);
         outPlain3s01e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3845,7 +4500,7 @@ public:
         outPlain3s01e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01ARKByte15->sizePolicy().hasHeightForWidth());
         outPlain3s01e01ARKByte15->setSizePolicy(sizePolicy);
-        outPlain3s01e01ARKByte15->setFont(font);
+        outPlain3s01e01ARKByte15->setFont(font1);
         outPlain3s01e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3860,7 +4515,7 @@ public:
         outPlainByte06_13->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_13->sizePolicy().hasHeightForWidth());
         outPlainByte06_13->setSizePolicy(sizePolicy);
-        outPlainByte06_13->setFont(font);
+        outPlainByte06_13->setFont(font1);
         outPlainByte06_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3875,7 +4530,7 @@ public:
         outPlainByte07_13->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_13->sizePolicy().hasHeightForWidth());
         outPlainByte07_13->setSizePolicy(sizePolicy);
-        outPlainByte07_13->setFont(font);
+        outPlainByte07_13->setFont(font1);
         outPlainByte07_13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3890,7 +4545,7 @@ public:
         outPlain3s01e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01ARKByte00->sizePolicy().hasHeightForWidth());
         outPlain3s01e01ARKByte00->setSizePolicy(sizePolicy);
-        outPlain3s01e01ARKByte00->setFont(font);
+        outPlain3s01e01ARKByte00->setFont(font1);
         outPlain3s01e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3906,7 +4561,7 @@ public:
         outPlainByte03_14->setGeometry(QRect(340, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_14->sizePolicy().hasHeightForWidth());
         outPlainByte03_14->setSizePolicy(sizePolicy);
-        outPlainByte03_14->setFont(font);
+        outPlainByte03_14->setFont(font1);
         outPlainByte03_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3921,7 +4576,7 @@ public:
         outPlainByte08_14->setGeometry(QRect(388, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_14->sizePolicy().hasHeightForWidth());
         outPlainByte08_14->setSizePolicy(sizePolicy);
-        outPlainByte08_14->setFont(font);
+        outPlainByte08_14->setFont(font1);
         outPlainByte08_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3936,7 +4591,7 @@ public:
         outPlainByte11_14->setGeometry(QRect(388, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_14->sizePolicy().hasHeightForWidth());
         outPlainByte11_14->setSizePolicy(sizePolicy);
-        outPlainByte11_14->setFont(font);
+        outPlainByte11_14->setFont(font1);
         outPlainByte11_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3951,7 +4606,7 @@ public:
         outPlainByte09_14->setGeometry(QRect(388, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_14->sizePolicy().hasHeightForWidth());
         outPlainByte09_14->setSizePolicy(sizePolicy);
-        outPlainByte09_14->setFont(font);
+        outPlainByte09_14->setFont(font1);
         outPlainByte09_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3966,7 +4621,7 @@ public:
         outPlainByte04_14->setGeometry(QRect(364, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_14->sizePolicy().hasHeightForWidth());
         outPlainByte04_14->setSizePolicy(sizePolicy);
-        outPlainByte04_14->setFont(font);
+        outPlainByte04_14->setFont(font1);
         outPlainByte04_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3981,7 +4636,7 @@ public:
         outPlain3s01e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SBByte05->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SBByte05->setSizePolicy(sizePolicy);
-        outPlain3s01e01SBByte05->setFont(font);
+        outPlain3s01e01SBByte05->setFont(font1);
         outPlain3s01e01SBByte05->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -3996,7 +4651,7 @@ public:
         outPlainByte14_14->setGeometry(QRect(412, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_14->sizePolicy().hasHeightForWidth());
         outPlainByte14_14->setSizePolicy(sizePolicy);
-        outPlainByte14_14->setFont(font);
+        outPlainByte14_14->setFont(font1);
         outPlainByte14_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4011,7 +4666,7 @@ public:
         outPlainByte01_14->setGeometry(QRect(340, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_14->sizePolicy().hasHeightForWidth());
         outPlainByte01_14->setSizePolicy(sizePolicy);
-        outPlainByte01_14->setFont(font);
+        outPlainByte01_14->setFont(font1);
         outPlainByte01_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4026,7 +4681,7 @@ public:
         outPlainByte13_14->setGeometry(QRect(412, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_14->sizePolicy().hasHeightForWidth());
         outPlainByte13_14->setSizePolicy(sizePolicy);
-        outPlainByte13_14->setFont(font);
+        outPlainByte13_14->setFont(font1);
         outPlainByte13_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4041,7 +4696,7 @@ public:
         outPlainByte02_14->setGeometry(QRect(340, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_14->sizePolicy().hasHeightForWidth());
         outPlainByte02_14->setSizePolicy(sizePolicy);
-        outPlainByte02_14->setFont(font);
+        outPlainByte02_14->setFont(font1);
         outPlainByte02_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4056,7 +4711,7 @@ public:
         outPlainByte12_14->setGeometry(QRect(412, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_14->sizePolicy().hasHeightForWidth());
         outPlainByte12_14->setSizePolicy(sizePolicy);
-        outPlainByte12_14->setFont(font);
+        outPlainByte12_14->setFont(font1);
         outPlainByte12_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4071,7 +4726,7 @@ public:
         outPlain3s01e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SBByte10->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SBByte10->setSizePolicy(sizePolicy);
-        outPlain3s01e01SBByte10->setFont(font);
+        outPlain3s01e01SBByte10->setFont(font1);
         outPlain3s01e01SBByte10->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4086,7 +4741,7 @@ public:
         outPlain3s01e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SBByte15->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SBByte15->setSizePolicy(sizePolicy);
-        outPlain3s01e01SBByte15->setFont(font);
+        outPlain3s01e01SBByte15->setFont(font1);
         outPlain3s01e01SBByte15->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4101,7 +4756,7 @@ public:
         outPlainByte06_14->setGeometry(QRect(364, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_14->sizePolicy().hasHeightForWidth());
         outPlainByte06_14->setSizePolicy(sizePolicy);
-        outPlainByte06_14->setFont(font);
+        outPlainByte06_14->setFont(font1);
         outPlainByte06_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4116,7 +4771,7 @@ public:
         outPlainByte07_14->setGeometry(QRect(364, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_14->sizePolicy().hasHeightForWidth());
         outPlainByte07_14->setSizePolicy(sizePolicy);
-        outPlainByte07_14->setFont(font);
+        outPlainByte07_14->setFont(font1);
         outPlainByte07_14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4131,7 +4786,7 @@ public:
         outPlain3s01e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SBByte00->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SBByte00->setSizePolicy(sizePolicy);
-        outPlain3s01e01SBByte00->setFont(font);
+        outPlain3s01e01SBByte00->setFont(font1);
         outPlain3s01e01SBByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4147,7 +4802,7 @@ public:
         outPlain3s01e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SRByte03->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SRByte03->setSizePolicy(sizePolicy);
-        outPlain3s01e01SRByte03->setFont(font);
+        outPlain3s01e01SRByte03->setFont(font1);
         outPlain3s01e01SRByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4162,7 +4817,7 @@ public:
         outPlainByte08_15->setGeometry(QRect(550, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_15->sizePolicy().hasHeightForWidth());
         outPlainByte08_15->setSizePolicy(sizePolicy);
-        outPlainByte08_15->setFont(font);
+        outPlainByte08_15->setFont(font1);
         outPlainByte08_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4177,7 +4832,7 @@ public:
         outPlainByte11_15->setGeometry(QRect(550, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_15->sizePolicy().hasHeightForWidth());
         outPlainByte11_15->setSizePolicy(sizePolicy);
-        outPlainByte11_15->setFont(font);
+        outPlainByte11_15->setFont(font1);
         outPlainByte11_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4192,7 +4847,7 @@ public:
         outPlainByte09_15->setGeometry(QRect(550, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_15->sizePolicy().hasHeightForWidth());
         outPlainByte09_15->setSizePolicy(sizePolicy);
-        outPlainByte09_15->setFont(font);
+        outPlainByte09_15->setFont(font1);
         outPlainByte09_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4207,7 +4862,7 @@ public:
         outPlainByte04_15->setGeometry(QRect(526, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_15->sizePolicy().hasHeightForWidth());
         outPlainByte04_15->setSizePolicy(sizePolicy);
-        outPlainByte04_15->setFont(font);
+        outPlainByte04_15->setFont(font1);
         outPlainByte04_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4222,7 +4877,7 @@ public:
         outPlainByte05_15->setGeometry(QRect(526, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_15->sizePolicy().hasHeightForWidth());
         outPlainByte05_15->setSizePolicy(sizePolicy);
-        outPlainByte05_15->setFont(font);
+        outPlainByte05_15->setFont(font1);
         outPlainByte05_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4237,7 +4892,7 @@ public:
         outPlainByte14_15->setGeometry(QRect(574, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_15->sizePolicy().hasHeightForWidth());
         outPlainByte14_15->setSizePolicy(sizePolicy);
-        outPlainByte14_15->setFont(font);
+        outPlainByte14_15->setFont(font1);
         outPlainByte14_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4252,7 +4907,7 @@ public:
         outPlain3s01e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SRByte01->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SRByte01->setSizePolicy(sizePolicy);
-        outPlain3s01e01SRByte01->setFont(font);
+        outPlain3s01e01SRByte01->setFont(font1);
         outPlain3s01e01SRByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4267,7 +4922,7 @@ public:
         outPlainByte13_15->setGeometry(QRect(574, 56, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_15->sizePolicy().hasHeightForWidth());
         outPlainByte13_15->setSizePolicy(sizePolicy);
-        outPlainByte13_15->setFont(font);
+        outPlainByte13_15->setFont(font1);
         outPlainByte13_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4282,7 +4937,7 @@ public:
         outPlain3s01e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SRByte02->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SRByte02->setSizePolicy(sizePolicy);
-        outPlain3s01e01SRByte02->setFont(font);
+        outPlain3s01e01SRByte02->setFont(font1);
         outPlain3s01e01SRByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4297,7 +4952,7 @@ public:
         outPlainByte12_15->setGeometry(QRect(574, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_15->sizePolicy().hasHeightForWidth());
         outPlainByte12_15->setSizePolicy(sizePolicy);
-        outPlainByte12_15->setFont(font);
+        outPlainByte12_15->setFont(font1);
         outPlainByte12_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4312,7 +4967,7 @@ public:
         outPlainByte10_15->setGeometry(QRect(550, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_15->sizePolicy().hasHeightForWidth());
         outPlainByte10_15->setSizePolicy(sizePolicy);
-        outPlainByte10_15->setFont(font);
+        outPlainByte10_15->setFont(font1);
         outPlainByte10_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4327,7 +4982,7 @@ public:
         outPlainByte15_15->setGeometry(QRect(574, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_15->sizePolicy().hasHeightForWidth());
         outPlainByte15_15->setSizePolicy(sizePolicy);
-        outPlainByte15_15->setFont(font);
+        outPlainByte15_15->setFont(font1);
         outPlainByte15_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4342,7 +4997,7 @@ public:
         outPlainByte06_15->setGeometry(QRect(526, 80, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_15->sizePolicy().hasHeightForWidth());
         outPlainByte06_15->setSizePolicy(sizePolicy);
-        outPlainByte06_15->setFont(font);
+        outPlainByte06_15->setFont(font1);
         outPlainByte06_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4357,7 +5012,7 @@ public:
         outPlainByte07_15->setGeometry(QRect(526, 104, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_15->sizePolicy().hasHeightForWidth());
         outPlainByte07_15->setSizePolicy(sizePolicy);
-        outPlainByte07_15->setFont(font);
+        outPlainByte07_15->setFont(font1);
         outPlainByte07_15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4372,7 +5027,7 @@ public:
         outPlain3s01e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01SRByte00->sizePolicy().hasHeightForWidth());
         outPlain3s01e01SRByte00->setSizePolicy(sizePolicy);
-        outPlain3s01e01SRByte00->setFont(font);
+        outPlain3s01e01SRByte00->setFont(font1);
         outPlain3s01e01SRByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4388,7 +5043,7 @@ public:
         outPlainByte13_16->setGeometry(QRect(734, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13_16->sizePolicy().hasHeightForWidth());
         outPlainByte13_16->setSizePolicy(sizePolicy);
-        outPlainByte13_16->setFont(font);
+        outPlainByte13_16->setFont(font1);
         outPlainByte13_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4403,7 +5058,7 @@ public:
         outPlainByte08_16->setGeometry(QRect(710, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_16->sizePolicy().hasHeightForWidth());
         outPlainByte08_16->setSizePolicy(sizePolicy);
-        outPlainByte08_16->setFont(font);
+        outPlainByte08_16->setFont(font1);
         outPlainByte08_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4418,7 +5073,7 @@ public:
         outPlain3s01e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01MCByte03->sizePolicy().hasHeightForWidth());
         outPlain3s01e01MCByte03->setSizePolicy(sizePolicy);
-        outPlain3s01e01MCByte03->setFont(font);
+        outPlain3s01e01MCByte03->setFont(font1);
         outPlain3s01e01MCByte03->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4433,7 +5088,7 @@ public:
         outPlain3s01e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01MCByte02->sizePolicy().hasHeightForWidth());
         outPlain3s01e01MCByte02->setSizePolicy(sizePolicy);
-        outPlain3s01e01MCByte02->setFont(font);
+        outPlain3s01e01MCByte02->setFont(font1);
         outPlain3s01e01MCByte02->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4448,7 +5103,7 @@ public:
         outPlainByte04_16->setGeometry(QRect(686, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_16->sizePolicy().hasHeightForWidth());
         outPlainByte04_16->setSizePolicy(sizePolicy);
-        outPlainByte04_16->setFont(font);
+        outPlainByte04_16->setFont(font1);
         outPlainByte04_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4463,7 +5118,7 @@ public:
         outPlain3s01e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01MCByte00->sizePolicy().hasHeightForWidth());
         outPlain3s01e01MCByte00->setSizePolicy(sizePolicy);
-        outPlain3s01e01MCByte00->setFont(font);
+        outPlain3s01e01MCByte00->setFont(font1);
         outPlain3s01e01MCByte00->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4479,7 +5134,7 @@ public:
         outPlainByte07_16->setGeometry(QRect(686, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07_16->sizePolicy().hasHeightForWidth());
         outPlainByte07_16->setSizePolicy(sizePolicy);
-        outPlainByte07_16->setFont(font);
+        outPlainByte07_16->setFont(font1);
         outPlainByte07_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4494,7 +5149,7 @@ public:
         outPlainByte15_16->setGeometry(QRect(734, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15_16->sizePolicy().hasHeightForWidth());
         outPlainByte15_16->setSizePolicy(sizePolicy);
-        outPlainByte15_16->setFont(font);
+        outPlainByte15_16->setFont(font1);
         outPlainByte15_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4509,7 +5164,7 @@ public:
         outPlainByte06_16->setGeometry(QRect(686, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_16->sizePolicy().hasHeightForWidth());
         outPlainByte06_16->setSizePolicy(sizePolicy);
-        outPlainByte06_16->setFont(font);
+        outPlainByte06_16->setFont(font1);
         outPlainByte06_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4524,7 +5179,7 @@ public:
         outPlainByte12_16->setGeometry(QRect(734, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_16->sizePolicy().hasHeightForWidth());
         outPlainByte12_16->setSizePolicy(sizePolicy);
-        outPlainByte12_16->setFont(font);
+        outPlainByte12_16->setFont(font1);
         outPlainByte12_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4539,7 +5194,7 @@ public:
         outPlainByte11_16->setGeometry(QRect(710, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_16->sizePolicy().hasHeightForWidth());
         outPlainByte11_16->setSizePolicy(sizePolicy);
-        outPlainByte11_16->setFont(font);
+        outPlainByte11_16->setFont(font1);
         outPlainByte11_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4554,7 +5209,7 @@ public:
         outPlainByte14_16->setGeometry(QRect(734, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_16->sizePolicy().hasHeightForWidth());
         outPlainByte14_16->setSizePolicy(sizePolicy);
-        outPlainByte14_16->setFont(font);
+        outPlainByte14_16->setFont(font1);
         outPlainByte14_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4569,7 +5224,7 @@ public:
         outPlainByte05_16->setGeometry(QRect(686, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05_16->sizePolicy().hasHeightForWidth());
         outPlainByte05_16->setSizePolicy(sizePolicy);
-        outPlainByte05_16->setFont(font);
+        outPlainByte05_16->setFont(font1);
         outPlainByte05_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4584,7 +5239,7 @@ public:
         outPlain3s01e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain3s01e01MCByte01->sizePolicy().hasHeightForWidth());
         outPlain3s01e01MCByte01->setSizePolicy(sizePolicy);
-        outPlain3s01e01MCByte01->setFont(font);
+        outPlain3s01e01MCByte01->setFont(font1);
         outPlain3s01e01MCByte01->setLayoutDirection(Qt::LeftToRight);
         outPlain3s01e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4599,7 +5254,7 @@ public:
         outPlainByte09_16->setGeometry(QRect(710, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_16->sizePolicy().hasHeightForWidth());
         outPlainByte09_16->setSizePolicy(sizePolicy);
-        outPlainByte09_16->setFont(font);
+        outPlainByte09_16->setFont(font1);
         outPlainByte09_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4614,7 +5269,7 @@ public:
         outPlainByte10_16->setGeometry(QRect(710, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10_16->sizePolicy().hasHeightForWidth());
         outPlainByte10_16->setSizePolicy(sizePolicy);
-        outPlainByte10_16->setFont(font);
+        outPlainByte10_16->setFont(font1);
         outPlainByte10_16->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4639,7 +5294,7 @@ public:
         s01e02Cipher1Byte15->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte15->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte15->setFont(font);
+        s01e02Cipher1Byte15->setFont(font1);
         s01e02Cipher1Byte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4654,7 +5309,7 @@ public:
         s01e02Cipher1Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte13->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte13->setFont(font);
+        s01e02Cipher1Byte13->setFont(font1);
         s01e02Cipher1Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4669,7 +5324,7 @@ public:
         s01e02Cipher1Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte14->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte14->setFont(font);
+        s01e02Cipher1Byte14->setFont(font1);
         s01e02Cipher1Byte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4684,7 +5339,7 @@ public:
         s01e02Cipher1Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte06->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte06->setFont(font);
+        s01e02Cipher1Byte06->setFont(font1);
         s01e02Cipher1Byte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4699,7 +5354,7 @@ public:
         s01e02Cipher1Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte04->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte04->setFont(font);
+        s01e02Cipher1Byte04->setFont(font1);
         s01e02Cipher1Byte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4714,7 +5369,7 @@ public:
         s01e02Cipher1Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte02->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte02->setFont(font);
+        s01e02Cipher1Byte02->setFont(font1);
         s01e02Cipher1Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4729,7 +5384,7 @@ public:
         s01e02Cipher1Byte10->setGeometry(QRect(56, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte10->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte10->setFont(font);
+        s01e02Cipher1Byte10->setFont(font1);
         s01e02Cipher1Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4744,7 +5399,7 @@ public:
         s01e02Cipher1Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte09->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte09->setFont(font);
+        s01e02Cipher1Byte09->setFont(font1);
         s01e02Cipher1Byte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4759,7 +5414,7 @@ public:
         s01e02Cipher1Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte01->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte01->setFont(font);
+        s01e02Cipher1Byte01->setFont(font1);
         s01e02Cipher1Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4774,7 +5429,7 @@ public:
         s01e02Cipher1Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte08->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte08->setFont(font);
+        s01e02Cipher1Byte08->setFont(font1);
         s01e02Cipher1Byte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4789,7 +5444,7 @@ public:
         s01e02Cipher1Byte00->setGeometry(QRect(8, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte00->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte00->setFont(font);
+        s01e02Cipher1Byte00->setFont(font1);
         s01e02Cipher1Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4805,7 +5460,7 @@ public:
         s01e02Cipher1Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte07->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte07->setFont(font);
+        s01e02Cipher1Byte07->setFont(font1);
         s01e02Cipher1Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4820,7 +5475,7 @@ public:
         s01e02Cipher1Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte12->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte12->setFont(font);
+        s01e02Cipher1Byte12->setFont(font1);
         s01e02Cipher1Byte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4835,7 +5490,7 @@ public:
         s01e02Cipher1Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte03->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte03->setFont(font);
+        s01e02Cipher1Byte03->setFont(font1);
         s01e02Cipher1Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4850,7 +5505,7 @@ public:
         s01e02Cipher1Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte11->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte11->setFont(font);
+        s01e02Cipher1Byte11->setFont(font1);
         s01e02Cipher1Byte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4865,7 +5520,7 @@ public:
         s01e02Cipher1Byte05->setGeometry(QRect(32, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte05->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte05->setFont(font);
+        s01e02Cipher1Byte05->setFont(font1);
         s01e02Cipher1Byte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4880,7 +5535,7 @@ public:
         s01e02Cipher1InvMCByte03->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte03->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte03->setFont(font);
+        s01e02Cipher1InvMCByte03->setFont(font1);
         s01e02Cipher1InvMCByte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4895,7 +5550,7 @@ public:
         s01e02Cipher1InvMCByte08->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte08->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte08->setFont(font);
+        s01e02Cipher1InvMCByte08->setFont(font1);
         s01e02Cipher1InvMCByte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4910,7 +5565,7 @@ public:
         s01e02Cipher1InvMCByte11->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte11->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte11->setFont(font);
+        s01e02Cipher1InvMCByte11->setFont(font1);
         s01e02Cipher1InvMCByte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4925,7 +5580,7 @@ public:
         s01e02Cipher1InvMCByte09->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte09->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte09->setFont(font);
+        s01e02Cipher1InvMCByte09->setFont(font1);
         s01e02Cipher1InvMCByte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4940,7 +5595,7 @@ public:
         s01e02Cipher1InvMCByte04->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte04->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte04->setFont(font);
+        s01e02Cipher1InvMCByte04->setFont(font1);
         s01e02Cipher1InvMCByte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4955,7 +5610,7 @@ public:
         s01e02Cipher1InvMCByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte05->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte05->setFont(font);
+        s01e02Cipher1InvMCByte05->setFont(font1);
         s01e02Cipher1InvMCByte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4970,7 +5625,7 @@ public:
         s01e02Cipher1InvMCByte14->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte14->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte14->setFont(font);
+        s01e02Cipher1InvMCByte14->setFont(font1);
         s01e02Cipher1InvMCByte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -4985,7 +5640,7 @@ public:
         s01e02Cipher1InvMCByte01->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte01->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte01->setFont(font);
+        s01e02Cipher1InvMCByte01->setFont(font1);
         s01e02Cipher1InvMCByte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5000,7 +5655,7 @@ public:
         s01e02Cipher1InvMCByte13->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte13->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte13->setFont(font);
+        s01e02Cipher1InvMCByte13->setFont(font1);
         s01e02Cipher1InvMCByte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5015,7 +5670,7 @@ public:
         s01e02Cipher1InvMCByte02->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte02->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte02->setFont(font);
+        s01e02Cipher1InvMCByte02->setFont(font1);
         s01e02Cipher1InvMCByte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5030,7 +5685,7 @@ public:
         s01e02Cipher1InvMCByte12->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte12->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte12->setFont(font);
+        s01e02Cipher1InvMCByte12->setFont(font1);
         s01e02Cipher1InvMCByte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5045,7 +5700,7 @@ public:
         s01e02Cipher1InvMCByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte10->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte10->setFont(font);
+        s01e02Cipher1InvMCByte10->setFont(font1);
         s01e02Cipher1InvMCByte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5060,7 +5715,7 @@ public:
         s01e02Cipher1InvMCByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte15->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte15->setFont(font);
+        s01e02Cipher1InvMCByte15->setFont(font1);
         s01e02Cipher1InvMCByte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5075,7 +5730,7 @@ public:
         s01e02Cipher1InvMCByte06->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte06->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte06->setFont(font);
+        s01e02Cipher1InvMCByte06->setFont(font1);
         s01e02Cipher1InvMCByte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5090,7 +5745,7 @@ public:
         s01e02Cipher1InvMCByte07->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte07->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte07->setFont(font);
+        s01e02Cipher1InvMCByte07->setFont(font1);
         s01e02Cipher1InvMCByte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5105,7 +5760,7 @@ public:
         s01e02Cipher1InvMCByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1InvMCByte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher1InvMCByte00->setSizePolicy(sizePolicy);
-        s01e02Cipher1InvMCByte00->setFont(font);
+        s01e02Cipher1InvMCByte00->setFont(font1);
         s01e02Cipher1InvMCByte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5131,7 +5786,7 @@ public:
         s01e02Cipher2Byte15->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte15->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte15->setFont(font);
+        s01e02Cipher2Byte15->setFont(font1);
         s01e02Cipher2Byte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5146,7 +5801,7 @@ public:
         s01e02Cipher2Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte13->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte13->setFont(font);
+        s01e02Cipher2Byte13->setFont(font1);
         s01e02Cipher2Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5161,7 +5816,7 @@ public:
         s01e02Cipher2Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte14->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte14->setFont(font);
+        s01e02Cipher2Byte14->setFont(font1);
         s01e02Cipher2Byte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5176,7 +5831,7 @@ public:
         s01e02Cipher2Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte06->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte06->setFont(font);
+        s01e02Cipher2Byte06->setFont(font1);
         s01e02Cipher2Byte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5191,7 +5846,7 @@ public:
         s01e02Cipher2Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte04->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte04->setFont(font);
+        s01e02Cipher2Byte04->setFont(font1);
         s01e02Cipher2Byte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5206,7 +5861,7 @@ public:
         s01e02Cipher2Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte02->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte02->setFont(font);
+        s01e02Cipher2Byte02->setFont(font1);
         s01e02Cipher2Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5221,7 +5876,7 @@ public:
         s01e02Cipher2Byte10->setGeometry(QRect(56, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte10->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte10->setFont(font);
+        s01e02Cipher2Byte10->setFont(font1);
         s01e02Cipher2Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5236,7 +5891,7 @@ public:
         s01e02Cipher2Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte09->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte09->setFont(font);
+        s01e02Cipher2Byte09->setFont(font1);
         s01e02Cipher2Byte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5251,7 +5906,7 @@ public:
         s01e02Cipher2Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte01->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte01->setFont(font);
+        s01e02Cipher2Byte01->setFont(font1);
         s01e02Cipher2Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5266,7 +5921,7 @@ public:
         s01e02Cipher2Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte08->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte08->setFont(font);
+        s01e02Cipher2Byte08->setFont(font1);
         s01e02Cipher2Byte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5281,7 +5936,7 @@ public:
         s01e02Cipher2Byte00->setGeometry(QRect(8, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte00->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte00->setFont(font);
+        s01e02Cipher2Byte00->setFont(font1);
         s01e02Cipher2Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5297,7 +5952,7 @@ public:
         s01e02Cipher2Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte07->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte07->setFont(font);
+        s01e02Cipher2Byte07->setFont(font1);
         s01e02Cipher2Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5312,7 +5967,7 @@ public:
         s01e02Cipher2Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte12->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte12->setFont(font);
+        s01e02Cipher2Byte12->setFont(font1);
         s01e02Cipher2Byte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5327,7 +5982,7 @@ public:
         s01e02Cipher2Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte03->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte03->setFont(font);
+        s01e02Cipher2Byte03->setFont(font1);
         s01e02Cipher2Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5342,7 +5997,7 @@ public:
         s01e02Cipher2Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte11->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte11->setFont(font);
+        s01e02Cipher2Byte11->setFont(font1);
         s01e02Cipher2Byte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5357,7 +6012,7 @@ public:
         s01e02Cipher2Byte05->setGeometry(QRect(32, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2Byte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher2Byte05->setSizePolicy(sizePolicy);
-        s01e02Cipher2Byte05->setFont(font);
+        s01e02Cipher2Byte05->setFont(font1);
         s01e02Cipher2Byte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5372,7 +6027,7 @@ public:
         s01e02Cipher2InvMCByte03->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte03->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte03->setFont(font);
+        s01e02Cipher2InvMCByte03->setFont(font1);
         s01e02Cipher2InvMCByte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5387,7 +6042,7 @@ public:
         s01e02Cipher2InvMCByte08->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte08->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte08->setFont(font);
+        s01e02Cipher2InvMCByte08->setFont(font1);
         s01e02Cipher2InvMCByte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5402,7 +6057,7 @@ public:
         s01e02Cipher2InvMCByte11->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte11->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte11->setFont(font);
+        s01e02Cipher2InvMCByte11->setFont(font1);
         s01e02Cipher2InvMCByte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5417,7 +6072,7 @@ public:
         s01e02Cipher2InvMCByte09->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte09->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte09->setFont(font);
+        s01e02Cipher2InvMCByte09->setFont(font1);
         s01e02Cipher2InvMCByte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5432,7 +6087,7 @@ public:
         s01e02Cipher2InvMCByte04->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte04->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte04->setFont(font);
+        s01e02Cipher2InvMCByte04->setFont(font1);
         s01e02Cipher2InvMCByte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5447,7 +6102,7 @@ public:
         s01e02Cipher2InvMCByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte05->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte05->setFont(font);
+        s01e02Cipher2InvMCByte05->setFont(font1);
         s01e02Cipher2InvMCByte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5462,7 +6117,7 @@ public:
         s01e02Cipher2InvMCByte14->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte14->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte14->setFont(font);
+        s01e02Cipher2InvMCByte14->setFont(font1);
         s01e02Cipher2InvMCByte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5477,7 +6132,7 @@ public:
         s01e02Cipher2InvMCByte01->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte01->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte01->setFont(font);
+        s01e02Cipher2InvMCByte01->setFont(font1);
         s01e02Cipher2InvMCByte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5492,7 +6147,7 @@ public:
         s01e02Cipher2InvMCByte13->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte13->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte13->setFont(font);
+        s01e02Cipher2InvMCByte13->setFont(font1);
         s01e02Cipher2InvMCByte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5507,7 +6162,7 @@ public:
         s01e02Cipher2InvMCByte02->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte02->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte02->setFont(font);
+        s01e02Cipher2InvMCByte02->setFont(font1);
         s01e02Cipher2InvMCByte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5522,7 +6177,7 @@ public:
         s01e02Cipher2InvMCByte12->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte12->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte12->setFont(font);
+        s01e02Cipher2InvMCByte12->setFont(font1);
         s01e02Cipher2InvMCByte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5537,7 +6192,7 @@ public:
         s01e02Cipher2InvMCByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte10->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte10->setFont(font);
+        s01e02Cipher2InvMCByte10->setFont(font1);
         s01e02Cipher2InvMCByte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5552,7 +6207,7 @@ public:
         s01e02Cipher2InvMCByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte15->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte15->setFont(font);
+        s01e02Cipher2InvMCByte15->setFont(font1);
         s01e02Cipher2InvMCByte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5567,7 +6222,7 @@ public:
         s01e02Cipher2InvMCByte06->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte06->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte06->setFont(font);
+        s01e02Cipher2InvMCByte06->setFont(font1);
         s01e02Cipher2InvMCByte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5582,7 +6237,7 @@ public:
         s01e02Cipher2InvMCByte07->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte07->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte07->setFont(font);
+        s01e02Cipher2InvMCByte07->setFont(font1);
         s01e02Cipher2InvMCByte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5597,7 +6252,7 @@ public:
         s01e02Cipher2InvMCByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher2InvMCByte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher2InvMCByte00->setSizePolicy(sizePolicy);
-        s01e02Cipher2InvMCByte00->setFont(font);
+        s01e02Cipher2InvMCByte00->setFont(font1);
         s01e02Cipher2InvMCByte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher2InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5620,7 +6275,7 @@ public:
         s01e02Cipher3Byte15->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte15->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte15->setFont(font);
+        s01e02Cipher3Byte15->setFont(font1);
         s01e02Cipher3Byte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5635,7 +6290,7 @@ public:
         s01e02Cipher3Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte13->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte13->setFont(font);
+        s01e02Cipher3Byte13->setFont(font1);
         s01e02Cipher3Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5650,7 +6305,7 @@ public:
         s01e02Cipher3Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte14->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte14->setFont(font);
+        s01e02Cipher3Byte14->setFont(font1);
         s01e02Cipher3Byte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5665,7 +6320,7 @@ public:
         s01e02Cipher3Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte06->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte06->setFont(font);
+        s01e02Cipher3Byte06->setFont(font1);
         s01e02Cipher3Byte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5680,7 +6335,7 @@ public:
         s01e02Cipher3Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte04->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte04->setFont(font);
+        s01e02Cipher3Byte04->setFont(font1);
         s01e02Cipher3Byte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5695,7 +6350,7 @@ public:
         s01e02Cipher3Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte02->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte02->setFont(font);
+        s01e02Cipher3Byte02->setFont(font1);
         s01e02Cipher3Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5710,7 +6365,7 @@ public:
         s01e02Cipher3Byte10->setGeometry(QRect(56, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte10->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte10->setFont(font);
+        s01e02Cipher3Byte10->setFont(font1);
         s01e02Cipher3Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5725,7 +6380,7 @@ public:
         s01e02Cipher3Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte09->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte09->setFont(font);
+        s01e02Cipher3Byte09->setFont(font1);
         s01e02Cipher3Byte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5740,7 +6395,7 @@ public:
         s01e02Cipher3Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte01->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte01->setFont(font);
+        s01e02Cipher3Byte01->setFont(font1);
         s01e02Cipher3Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5755,7 +6410,7 @@ public:
         s01e02Cipher3Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte08->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte08->setFont(font);
+        s01e02Cipher3Byte08->setFont(font1);
         s01e02Cipher3Byte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5770,7 +6425,7 @@ public:
         s01e02Cipher3Byte00->setGeometry(QRect(8, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte00->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte00->setFont(font);
+        s01e02Cipher3Byte00->setFont(font1);
         s01e02Cipher3Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5786,7 +6441,7 @@ public:
         s01e02Cipher3Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte07->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte07->setFont(font);
+        s01e02Cipher3Byte07->setFont(font1);
         s01e02Cipher3Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5801,7 +6456,7 @@ public:
         s01e02Cipher3Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte12->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte12->setFont(font);
+        s01e02Cipher3Byte12->setFont(font1);
         s01e02Cipher3Byte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5816,7 +6471,7 @@ public:
         s01e02Cipher3Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte03->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte03->setFont(font);
+        s01e02Cipher3Byte03->setFont(font1);
         s01e02Cipher3Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5831,7 +6486,7 @@ public:
         s01e02Cipher3Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte11->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte11->setFont(font);
+        s01e02Cipher3Byte11->setFont(font1);
         s01e02Cipher3Byte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5846,7 +6501,7 @@ public:
         s01e02Cipher3Byte05->setGeometry(QRect(32, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3Byte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher3Byte05->setSizePolicy(sizePolicy);
-        s01e02Cipher3Byte05->setFont(font);
+        s01e02Cipher3Byte05->setFont(font1);
         s01e02Cipher3Byte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5861,7 +6516,7 @@ public:
         s01e02Cipher3InvMCByte03->setGeometry(QRect(176, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte03->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte03->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte03->setFont(font);
+        s01e02Cipher3InvMCByte03->setFont(font1);
         s01e02Cipher3InvMCByte03->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5876,7 +6531,7 @@ public:
         s01e02Cipher3InvMCByte08->setGeometry(QRect(224, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte08->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte08->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte08->setFont(font);
+        s01e02Cipher3InvMCByte08->setFont(font1);
         s01e02Cipher3InvMCByte08->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5891,7 +6546,7 @@ public:
         s01e02Cipher3InvMCByte11->setGeometry(QRect(224, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte11->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte11->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte11->setFont(font);
+        s01e02Cipher3InvMCByte11->setFont(font1);
         s01e02Cipher3InvMCByte11->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5906,7 +6561,7 @@ public:
         s01e02Cipher3InvMCByte09->setGeometry(QRect(224, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte09->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte09->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte09->setFont(font);
+        s01e02Cipher3InvMCByte09->setFont(font1);
         s01e02Cipher3InvMCByte09->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5921,7 +6576,7 @@ public:
         s01e02Cipher3InvMCByte04->setGeometry(QRect(200, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte04->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte04->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte04->setFont(font);
+        s01e02Cipher3InvMCByte04->setFont(font1);
         s01e02Cipher3InvMCByte04->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5936,7 +6591,7 @@ public:
         s01e02Cipher3InvMCByte05->setGeometry(QRect(200, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte05->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte05->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte05->setFont(font);
+        s01e02Cipher3InvMCByte05->setFont(font1);
         s01e02Cipher3InvMCByte05->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5951,7 +6606,7 @@ public:
         s01e02Cipher3InvMCByte14->setGeometry(QRect(248, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte14->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte14->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte14->setFont(font);
+        s01e02Cipher3InvMCByte14->setFont(font1);
         s01e02Cipher3InvMCByte14->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5966,7 +6621,7 @@ public:
         s01e02Cipher3InvMCByte01->setGeometry(QRect(176, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte01->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte01->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte01->setFont(font);
+        s01e02Cipher3InvMCByte01->setFont(font1);
         s01e02Cipher3InvMCByte01->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5981,7 +6636,7 @@ public:
         s01e02Cipher3InvMCByte13->setGeometry(QRect(248, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte13->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte13->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte13->setFont(font);
+        s01e02Cipher3InvMCByte13->setFont(font1);
         s01e02Cipher3InvMCByte13->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -5996,7 +6651,7 @@ public:
         s01e02Cipher3InvMCByte02->setGeometry(QRect(176, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte02->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte02->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte02->setFont(font);
+        s01e02Cipher3InvMCByte02->setFont(font1);
         s01e02Cipher3InvMCByte02->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6011,7 +6666,7 @@ public:
         s01e02Cipher3InvMCByte12->setGeometry(QRect(248, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte12->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte12->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte12->setFont(font);
+        s01e02Cipher3InvMCByte12->setFont(font1);
         s01e02Cipher3InvMCByte12->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6026,7 +6681,7 @@ public:
         s01e02Cipher3InvMCByte10->setGeometry(QRect(224, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte10->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte10->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte10->setFont(font);
+        s01e02Cipher3InvMCByte10->setFont(font1);
         s01e02Cipher3InvMCByte10->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6041,7 +6696,7 @@ public:
         s01e02Cipher3InvMCByte15->setGeometry(QRect(248, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte15->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte15->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte15->setFont(font);
+        s01e02Cipher3InvMCByte15->setFont(font1);
         s01e02Cipher3InvMCByte15->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6056,7 +6711,7 @@ public:
         s01e02Cipher3InvMCByte06->setGeometry(QRect(200, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte06->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte06->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte06->setFont(font);
+        s01e02Cipher3InvMCByte06->setFont(font1);
         s01e02Cipher3InvMCByte06->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6071,7 +6726,7 @@ public:
         s01e02Cipher3InvMCByte07->setGeometry(QRect(200, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte07->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte07->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte07->setFont(font);
+        s01e02Cipher3InvMCByte07->setFont(font1);
         s01e02Cipher3InvMCByte07->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6086,7 +6741,7 @@ public:
         s01e02Cipher3InvMCByte00->setGeometry(QRect(176, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher3InvMCByte00->sizePolicy().hasHeightForWidth());
         s01e02Cipher3InvMCByte00->setSizePolicy(sizePolicy);
-        s01e02Cipher3InvMCByte00->setFont(font);
+        s01e02Cipher3InvMCByte00->setFont(font1);
         s01e02Cipher3InvMCByte00->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher3InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6110,7 +6765,7 @@ public:
         s01e02InvCipherDiff12Byte15->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte15->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte15->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte15->setFont(font);
+        s01e02InvCipherDiff12Byte15->setFont(font1);
         s01e02InvCipherDiff12Byte15->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6125,7 +6780,7 @@ public:
         s01e02InvCipherDiff12Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte13->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte13->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte13->setFont(font);
+        s01e02InvCipherDiff12Byte13->setFont(font1);
         s01e02InvCipherDiff12Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6140,7 +6795,7 @@ public:
         s01e02InvCipherDiff12Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte14->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte14->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte14->setFont(font);
+        s01e02InvCipherDiff12Byte14->setFont(font1);
         s01e02InvCipherDiff12Byte14->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6155,7 +6810,7 @@ public:
         s01e02InvCipherDiff12Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte06->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte06->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte06->setFont(font);
+        s01e02InvCipherDiff12Byte06->setFont(font1);
         s01e02InvCipherDiff12Byte06->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6170,7 +6825,7 @@ public:
         s01e02InvCipherDiff12Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte04->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte04->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte04->setFont(font);
+        s01e02InvCipherDiff12Byte04->setFont(font1);
         s01e02InvCipherDiff12Byte04->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6185,7 +6840,7 @@ public:
         s01e02InvCipherDiff12Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte02->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte02->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte02->setFont(font);
+        s01e02InvCipherDiff12Byte02->setFont(font1);
         s01e02InvCipherDiff12Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6200,7 +6855,7 @@ public:
         s01e02InvCipherDiff12Byte10->setGeometry(QRect(56, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte10->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte10->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte10->setFont(font);
+        s01e02InvCipherDiff12Byte10->setFont(font1);
         s01e02InvCipherDiff12Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6215,7 +6870,7 @@ public:
         s01e02InvCipherDiff12Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte09->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte09->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte09->setFont(font);
+        s01e02InvCipherDiff12Byte09->setFont(font1);
         s01e02InvCipherDiff12Byte09->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6230,7 +6885,7 @@ public:
         s01e02InvCipherDiff12Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte01->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte01->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte01->setFont(font);
+        s01e02InvCipherDiff12Byte01->setFont(font1);
         s01e02InvCipherDiff12Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6245,7 +6900,7 @@ public:
         s01e02InvCipherDiff12Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte08->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte08->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte08->setFont(font);
+        s01e02InvCipherDiff12Byte08->setFont(font1);
         s01e02InvCipherDiff12Byte08->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6260,7 +6915,7 @@ public:
         s01e02InvCipherDiff12Byte00->setGeometry(QRect(8, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte00->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte00->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte00->setFont(font);
+        s01e02InvCipherDiff12Byte00->setFont(font1);
         s01e02InvCipherDiff12Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6276,7 +6931,7 @@ public:
         s01e02InvCipherDiff12Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte07->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte07->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte07->setFont(font);
+        s01e02InvCipherDiff12Byte07->setFont(font1);
         s01e02InvCipherDiff12Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6291,7 +6946,7 @@ public:
         s01e02InvCipherDiff12Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte12->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte12->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte12->setFont(font);
+        s01e02InvCipherDiff12Byte12->setFont(font1);
         s01e02InvCipherDiff12Byte12->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6306,7 +6961,7 @@ public:
         s01e02InvCipherDiff12Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte03->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte03->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte03->setFont(font);
+        s01e02InvCipherDiff12Byte03->setFont(font1);
         s01e02InvCipherDiff12Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6321,7 +6976,7 @@ public:
         s01e02InvCipherDiff12Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte11->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte11->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte11->setFont(font);
+        s01e02InvCipherDiff12Byte11->setFont(font1);
         s01e02InvCipherDiff12Byte11->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6336,7 +6991,7 @@ public:
         s01e02InvCipherDiff12Byte05->setGeometry(QRect(32, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12Byte05->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12Byte05->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12Byte05->setFont(font);
+        s01e02InvCipherDiff12Byte05->setFont(font1);
         s01e02InvCipherDiff12Byte05->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6351,7 +7006,7 @@ public:
         s01e02InvCipherDiff12SRByte00->setGeometry(QRect(168, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte00->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte00->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte00->setFont(font);
+        s01e02InvCipherDiff12SRByte00->setFont(font1);
         s01e02InvCipherDiff12SRByte00->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6367,7 +7022,7 @@ public:
         s01e02InvCipherDiff12SRByte11->setGeometry(QRect(216, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte11->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte11->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte11->setFont(font);
+        s01e02InvCipherDiff12SRByte11->setFont(font1);
         s01e02InvCipherDiff12SRByte11->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6382,7 +7037,7 @@ public:
         s01e02InvCipherDiff12SRByte08->setGeometry(QRect(216, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte08->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte08->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte08->setFont(font);
+        s01e02InvCipherDiff12SRByte08->setFont(font1);
         s01e02InvCipherDiff12SRByte08->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6397,7 +7052,7 @@ public:
         s01e02InvCipherDiff12SRByte05->setGeometry(QRect(192, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte05->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte05->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte05->setFont(font);
+        s01e02InvCipherDiff12SRByte05->setFont(font1);
         s01e02InvCipherDiff12SRByte05->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6412,7 +7067,7 @@ public:
         s01e02InvCipherDiff12SRByte04->setGeometry(QRect(192, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte04->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte04->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte04->setFont(font);
+        s01e02InvCipherDiff12SRByte04->setFont(font1);
         s01e02InvCipherDiff12SRByte04->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6427,7 +7082,7 @@ public:
         s01e02InvCipherDiff12SRByte09->setGeometry(QRect(216, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte09->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte09->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte09->setFont(font);
+        s01e02InvCipherDiff12SRByte09->setFont(font1);
         s01e02InvCipherDiff12SRByte09->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6442,7 +7097,7 @@ public:
         s01e02InvCipherDiff12SRByte01->setGeometry(QRect(168, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte01->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte01->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte01->setFont(font);
+        s01e02InvCipherDiff12SRByte01->setFont(font1);
         s01e02InvCipherDiff12SRByte01->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6457,7 +7112,7 @@ public:
         s01e02InvCipherDiff12SRByte07->setGeometry(QRect(192, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte07->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte07->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte07->setFont(font);
+        s01e02InvCipherDiff12SRByte07->setFont(font1);
         s01e02InvCipherDiff12SRByte07->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6472,7 +7127,7 @@ public:
         s01e02InvCipherDiff12SRByte03->setGeometry(QRect(168, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte03->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte03->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte03->setFont(font);
+        s01e02InvCipherDiff12SRByte03->setFont(font1);
         s01e02InvCipherDiff12SRByte03->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6487,7 +7142,7 @@ public:
         s01e02InvCipherDiff12SRByte10->setGeometry(QRect(216, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte10->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte10->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte10->setFont(font);
+        s01e02InvCipherDiff12SRByte10->setFont(font1);
         s01e02InvCipherDiff12SRByte10->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6502,7 +7157,7 @@ public:
         s01e02InvCipherDiff12SRByte12->setGeometry(QRect(240, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte12->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte12->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte12->setFont(font);
+        s01e02InvCipherDiff12SRByte12->setFont(font1);
         s01e02InvCipherDiff12SRByte12->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6517,7 +7172,7 @@ public:
         s01e02InvCipherDiff12SRByte02->setGeometry(QRect(168, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte02->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte02->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte02->setFont(font);
+        s01e02InvCipherDiff12SRByte02->setFont(font1);
         s01e02InvCipherDiff12SRByte02->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6532,7 +7187,7 @@ public:
         s01e02InvCipherDiff12SRByte06->setGeometry(QRect(192, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte06->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte06->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte06->setFont(font);
+        s01e02InvCipherDiff12SRByte06->setFont(font1);
         s01e02InvCipherDiff12SRByte06->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6547,7 +7202,7 @@ public:
         s01e02InvCipherDiff12SRByte13->setGeometry(QRect(240, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte13->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte13->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte13->setFont(font);
+        s01e02InvCipherDiff12SRByte13->setFont(font1);
         s01e02InvCipherDiff12SRByte13->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6562,7 +7217,7 @@ public:
         s01e02InvCipherDiff12SRByte15->setGeometry(QRect(240, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte15->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte15->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte15->setFont(font);
+        s01e02InvCipherDiff12SRByte15->setFont(font1);
         s01e02InvCipherDiff12SRByte15->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6577,7 +7232,7 @@ public:
         s01e02InvCipherDiff12SRByte14->setGeometry(QRect(240, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff12SRByte14->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff12SRByte14->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff12SRByte14->setFont(font);
+        s01e02InvCipherDiff12SRByte14->setFont(font1);
         s01e02InvCipherDiff12SRByte14->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff12SRByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6602,7 +7257,7 @@ public:
         s01e02InvCipherDiff13Byte15->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte15->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte15->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte15->setFont(font);
+        s01e02InvCipherDiff13Byte15->setFont(font1);
         s01e02InvCipherDiff13Byte15->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6617,7 +7272,7 @@ public:
         s01e02InvCipherDiff13Byte13->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte13->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte13->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte13->setFont(font);
+        s01e02InvCipherDiff13Byte13->setFont(font1);
         s01e02InvCipherDiff13Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6632,7 +7287,7 @@ public:
         s01e02InvCipherDiff13Byte14->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte14->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte14->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte14->setFont(font);
+        s01e02InvCipherDiff13Byte14->setFont(font1);
         s01e02InvCipherDiff13Byte14->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6647,7 +7302,7 @@ public:
         s01e02InvCipherDiff13Byte06->setGeometry(QRect(32, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte06->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte06->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte06->setFont(font);
+        s01e02InvCipherDiff13Byte06->setFont(font1);
         s01e02InvCipherDiff13Byte06->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6662,7 +7317,7 @@ public:
         s01e02InvCipherDiff13Byte04->setGeometry(QRect(32, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte04->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte04->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte04->setFont(font);
+        s01e02InvCipherDiff13Byte04->setFont(font1);
         s01e02InvCipherDiff13Byte04->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6677,7 +7332,7 @@ public:
         s01e02InvCipherDiff13Byte02->setGeometry(QRect(8, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte02->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte02->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte02->setFont(font);
+        s01e02InvCipherDiff13Byte02->setFont(font1);
         s01e02InvCipherDiff13Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6692,7 +7347,7 @@ public:
         s01e02InvCipherDiff13Byte10->setGeometry(QRect(56, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte10->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte10->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte10->setFont(font);
+        s01e02InvCipherDiff13Byte10->setFont(font1);
         s01e02InvCipherDiff13Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6707,7 +7362,7 @@ public:
         s01e02InvCipherDiff13Byte09->setGeometry(QRect(56, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte09->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte09->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte09->setFont(font);
+        s01e02InvCipherDiff13Byte09->setFont(font1);
         s01e02InvCipherDiff13Byte09->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6722,7 +7377,7 @@ public:
         s01e02InvCipherDiff13Byte01->setGeometry(QRect(8, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte01->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte01->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte01->setFont(font);
+        s01e02InvCipherDiff13Byte01->setFont(font1);
         s01e02InvCipherDiff13Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6737,7 +7392,7 @@ public:
         s01e02InvCipherDiff13Byte08->setGeometry(QRect(56, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte08->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte08->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte08->setFont(font);
+        s01e02InvCipherDiff13Byte08->setFont(font1);
         s01e02InvCipherDiff13Byte08->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6752,7 +7407,7 @@ public:
         s01e02InvCipherDiff13Byte00->setGeometry(QRect(8, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte00->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte00->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte00->setFont(font);
+        s01e02InvCipherDiff13Byte00->setFont(font1);
         s01e02InvCipherDiff13Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6768,7 +7423,7 @@ public:
         s01e02InvCipherDiff13Byte07->setGeometry(QRect(32, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte07->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte07->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte07->setFont(font);
+        s01e02InvCipherDiff13Byte07->setFont(font1);
         s01e02InvCipherDiff13Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6783,7 +7438,7 @@ public:
         s01e02InvCipherDiff13Byte12->setGeometry(QRect(80, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte12->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte12->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte12->setFont(font);
+        s01e02InvCipherDiff13Byte12->setFont(font1);
         s01e02InvCipherDiff13Byte12->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6798,7 +7453,7 @@ public:
         s01e02InvCipherDiff13Byte03->setGeometry(QRect(8, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte03->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte03->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte03->setFont(font);
+        s01e02InvCipherDiff13Byte03->setFont(font1);
         s01e02InvCipherDiff13Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6813,7 +7468,7 @@ public:
         s01e02InvCipherDiff13Byte11->setGeometry(QRect(56, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte11->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte11->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte11->setFont(font);
+        s01e02InvCipherDiff13Byte11->setFont(font1);
         s01e02InvCipherDiff13Byte11->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6828,7 +7483,7 @@ public:
         s01e02InvCipherDiff13Byte05->setGeometry(QRect(32, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13Byte05->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13Byte05->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13Byte05->setFont(font);
+        s01e02InvCipherDiff13Byte05->setFont(font1);
         s01e02InvCipherDiff13Byte05->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6843,7 +7498,7 @@ public:
         s01e02InvCipherDiff13SRByte03->setGeometry(QRect(168, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte03->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte03->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte03->setFont(font);
+        s01e02InvCipherDiff13SRByte03->setFont(font1);
         s01e02InvCipherDiff13SRByte03->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6858,7 +7513,7 @@ public:
         s01e02InvCipherDiff13SRByte12->setGeometry(QRect(240, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte12->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte12->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte12->setFont(font);
+        s01e02InvCipherDiff13SRByte12->setFont(font1);
         s01e02InvCipherDiff13SRByte12->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6873,7 +7528,7 @@ public:
         s01e02InvCipherDiff13SRByte08->setGeometry(QRect(216, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte08->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte08->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte08->setFont(font);
+        s01e02InvCipherDiff13SRByte08->setFont(font1);
         s01e02InvCipherDiff13SRByte08->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6888,7 +7543,7 @@ public:
         s01e02InvCipherDiff13SRByte02->setGeometry(QRect(168, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte02->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte02->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte02->setFont(font);
+        s01e02InvCipherDiff13SRByte02->setFont(font1);
         s01e02InvCipherDiff13SRByte02->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6903,7 +7558,7 @@ public:
         s01e02InvCipherDiff13SRByte06->setGeometry(QRect(192, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte06->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte06->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte06->setFont(font);
+        s01e02InvCipherDiff13SRByte06->setFont(font1);
         s01e02InvCipherDiff13SRByte06->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6918,7 +7573,7 @@ public:
         s01e02InvCipherDiff13SRByte09->setGeometry(QRect(216, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte09->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte09->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte09->setFont(font);
+        s01e02InvCipherDiff13SRByte09->setFont(font1);
         s01e02InvCipherDiff13SRByte09->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6933,7 +7588,7 @@ public:
         s01e02InvCipherDiff13SRByte07->setGeometry(QRect(192, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte07->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte07->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte07->setFont(font);
+        s01e02InvCipherDiff13SRByte07->setFont(font1);
         s01e02InvCipherDiff13SRByte07->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6948,7 +7603,7 @@ public:
         s01e02InvCipherDiff13SRByte00->setGeometry(QRect(168, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte00->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte00->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte00->setFont(font);
+        s01e02InvCipherDiff13SRByte00->setFont(font1);
         s01e02InvCipherDiff13SRByte00->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6964,7 +7619,7 @@ public:
         s01e02InvCipherDiff13SRByte15->setGeometry(QRect(240, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte15->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte15->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte15->setFont(font);
+        s01e02InvCipherDiff13SRByte15->setFont(font1);
         s01e02InvCipherDiff13SRByte15->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6979,7 +7634,7 @@ public:
         s01e02InvCipherDiff13SRByte11->setGeometry(QRect(216, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte11->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte11->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte11->setFont(font);
+        s01e02InvCipherDiff13SRByte11->setFont(font1);
         s01e02InvCipherDiff13SRByte11->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -6994,7 +7649,7 @@ public:
         s01e02InvCipherDiff13SRByte04->setGeometry(QRect(192, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte04->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte04->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte04->setFont(font);
+        s01e02InvCipherDiff13SRByte04->setFont(font1);
         s01e02InvCipherDiff13SRByte04->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7009,7 +7664,7 @@ public:
         s01e02InvCipherDiff13SRByte13->setGeometry(QRect(240, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte13->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte13->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte13->setFont(font);
+        s01e02InvCipherDiff13SRByte13->setFont(font1);
         s01e02InvCipherDiff13SRByte13->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7024,7 +7679,7 @@ public:
         s01e02InvCipherDiff13SRByte01->setGeometry(QRect(168, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte01->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte01->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte01->setFont(font);
+        s01e02InvCipherDiff13SRByte01->setFont(font1);
         s01e02InvCipherDiff13SRByte01->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7039,7 +7694,7 @@ public:
         s01e02InvCipherDiff13SRByte10->setGeometry(QRect(216, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte10->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte10->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte10->setFont(font);
+        s01e02InvCipherDiff13SRByte10->setFont(font1);
         s01e02InvCipherDiff13SRByte10->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7054,7 +7709,7 @@ public:
         s01e02InvCipherDiff13SRByte05->setGeometry(QRect(192, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte05->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte05->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte05->setFont(font);
+        s01e02InvCipherDiff13SRByte05->setFont(font1);
         s01e02InvCipherDiff13SRByte05->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7069,7 +7724,7 @@ public:
         s01e02InvCipherDiff13SRByte14->setGeometry(QRect(240, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e02InvCipherDiff13SRByte14->sizePolicy().hasHeightForWidth());
         s01e02InvCipherDiff13SRByte14->setSizePolicy(sizePolicy);
-        s01e02InvCipherDiff13SRByte14->setFont(font);
+        s01e02InvCipherDiff13SRByte14->setFont(font1);
         s01e02InvCipherDiff13SRByte14->setLayoutDirection(Qt::LeftToRight);
         s01e02InvCipherDiff13SRByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7080,10 +7735,10 @@ public:
         s01e02InvCipherDiff13SRByte14->setAlignment(Qt::AlignCenter);
         buttonS01E02XOR = new QPushButton(tabS01E02);
         buttonS01E02XOR->setObjectName(QString::fromUtf8("buttonS01E02XOR"));
-        buttonS01E02XOR->setGeometry(QRect(330, 110, 81, 27));
+        buttonS01E02XOR->setGeometry(QRect(345, 110, 81, 27));
         label_45 = new QLabel(tabS01E02);
         label_45->setObjectName(QString::fromUtf8("label_45"));
-        label_45->setGeometry(QRect(360, 145, 25, 25));
+        label_45->setGeometry(QRect(370, 145, 25, 25));
         label_45->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
         label_45->setScaledContents(true);
         label_46 = new QLabel(tabS01E02);
@@ -7091,6 +7746,66 @@ public:
         label_46->setGeometry(QRect(310, 305, 25, 25));
         label_46->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
         label_46->setScaledContents(true);
+        label_48 = new QLabel(tabS01E02);
+        label_48->setObjectName(QString::fromUtf8("label_48"));
+        label_48->setGeometry(QRect(282, 90, 61, 17));
+        label_48->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_48->setScaledContents(true);
+        label_54 = new QLabel(tabS01E02);
+        label_54->setObjectName(QString::fromUtf8("label_54"));
+        label_54->setGeometry(QRect(282, 390, 41, 17));
+        label_54->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_54->setScaledContents(true);
+        label_55 = new QLabel(tabS01E02);
+        label_55->setObjectName(QString::fromUtf8("label_55"));
+        label_55->setGeometry(QRect(282, 240, 101, 17));
+        label_55->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_55->setScaledContents(true);
+        label_56 = new QLabel(tabS01E02);
+        label_56->setObjectName(QString::fromUtf8("label_56"));
+        label_56->setGeometry(QRect(340, 148, 31, 20));
+        label_56->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_56->setScaledContents(true);
+        label_57 = new QLabel(tabS01E02);
+        label_57->setObjectName(QString::fromUtf8("label_57"));
+        label_57->setGeometry(QRect(395, 148, 31, 20));
+        label_57->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_57->setScaledContents(true);
+        label_58 = new QLabel(tabS01E02);
+        label_58->setObjectName(QString::fromUtf8("label_58"));
+        label_58->setGeometry(QRect(335, 308, 91, 20));
+        label_58->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_58->setScaledContents(true);
+        label_59 = new QLabel(tabS01E02);
+        label_59->setObjectName(QString::fromUtf8("label_59"));
+        label_59->setGeometry(QRect(331, 98, 20, 61));
+        label_59->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_59->setScaledContents(true);
+        label_60 = new QLabel(tabS01E02);
+        label_60->setObjectName(QString::fromUtf8("label_60"));
+        label_60->setGeometry(QRect(314, 100, 16, 205));
+        label_60->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_60->setScaledContents(true);
+        label_61 = new QLabel(tabS01E02);
+        label_61->setObjectName(QString::fromUtf8("label_61"));
+        label_61->setGeometry(QRect(315, 330, 16, 71));
+        label_61->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_61->setScaledContents(true);
+        label_62 = new QLabel(tabS01E02);
+        label_62->setObjectName(QString::fromUtf8("label_62"));
+        label_62->setGeometry(QRect(374, 170, 16, 81));
+        label_62->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_62->setScaledContents(true);
+        label_63 = new QLabel(tabS01E02);
+        label_63->setObjectName(QString::fromUtf8("label_63"));
+        label_63->setGeometry(QRect(420, 150, 21, 17));
+        label_63->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_63->setScaledContents(true);
+        label_64 = new QLabel(tabS01E02);
+        label_64->setObjectName(QString::fromUtf8("label_64"));
+        label_64->setGeometry(QRect(420, 310, 21, 17));
+        label_64->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_64->setScaledContents(true);
         tabWidget->addTab(tabS01E02, QString());
         tabS01E03 = new QWidget();
         tabS01E03->setObjectName(QString::fromUtf8("tabS01E03"));
@@ -7108,7 +7823,7 @@ public:
         s01e03InvCipherDiff12Column0Byte02->setGeometry(QRect(90, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte02->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff12Column0Byte02->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte02->setFont(font);
+        s01e03InvCipherDiff12Column0Byte02->setFont(font1);
         s01e03InvCipherDiff12Column0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff12Column0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7123,7 +7838,7 @@ public:
         s01e03InvCipherDiff12Column0Byte01->setGeometry(QRect(90, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte01->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff12Column0Byte01->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte01->setFont(font);
+        s01e03InvCipherDiff12Column0Byte01->setFont(font1);
         s01e03InvCipherDiff12Column0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff12Column0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7138,7 +7853,7 @@ public:
         s01e03InvCipherDiff12Column0Byte00->setGeometry(QRect(90, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte00->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff12Column0Byte00->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte00->setFont(font);
+        s01e03InvCipherDiff12Column0Byte00->setFont(font1);
         s01e03InvCipherDiff12Column0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff12Column0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7154,7 +7869,7 @@ public:
         s01e03InvCipherDiff12Column0Byte03->setGeometry(QRect(90, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff12Column0Byte03->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff12Column0Byte03->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff12Column0Byte03->setFont(font);
+        s01e03InvCipherDiff12Column0Byte03->setFont(font1);
         s01e03InvCipherDiff12Column0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff12Column0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7177,7 +7892,7 @@ public:
         s01e03InvCipherDiff13Column0Byte02->setGeometry(QRect(90, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte02->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff13Column0Byte02->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte02->setFont(font);
+        s01e03InvCipherDiff13Column0Byte02->setFont(font1);
         s01e03InvCipherDiff13Column0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff13Column0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7192,7 +7907,7 @@ public:
         s01e03InvCipherDiff13Column0Byte01->setGeometry(QRect(90, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte01->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff13Column0Byte01->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte01->setFont(font);
+        s01e03InvCipherDiff13Column0Byte01->setFont(font1);
         s01e03InvCipherDiff13Column0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff13Column0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7207,7 +7922,7 @@ public:
         s01e03InvCipherDiff13Column0Byte00->setGeometry(QRect(90, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte00->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff13Column0Byte00->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte00->setFont(font);
+        s01e03InvCipherDiff13Column0Byte00->setFont(font1);
         s01e03InvCipherDiff13Column0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff13Column0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7223,7 +7938,7 @@ public:
         s01e03InvCipherDiff13Column0Byte03->setGeometry(QRect(90, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e03InvCipherDiff13Column0Byte03->sizePolicy().hasHeightForWidth());
         s01e03InvCipherDiff13Column0Byte03->setSizePolicy(sizePolicy);
-        s01e03InvCipherDiff13Column0Byte03->setFont(font);
+        s01e03InvCipherDiff13Column0Byte03->setFont(font1);
         s01e03InvCipherDiff13Column0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03InvCipherDiff13Column0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7246,7 +7961,7 @@ public:
         s01e03plain1AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte02->setFont(font);
+        s01e03plain1AfterR1Col0Byte02->setFont(font1);
         s01e03plain1AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7261,7 +7976,7 @@ public:
         s01e03plain1AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte01->setFont(font);
+        s01e03plain1AfterR1Col0Byte01->setFont(font1);
         s01e03plain1AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7276,7 +7991,7 @@ public:
         s01e03plain1AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte00->setFont(font);
+        s01e03plain1AfterR1Col0Byte00->setFont(font1);
         s01e03plain1AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7292,7 +8007,7 @@ public:
         s01e03plain1AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte03->setFont(font);
+        s01e03plain1AfterR1Col0Byte03->setFont(font1);
         s01e03plain1AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7301,6 +8016,16 @@ public:
 "     background-color: white;\n"
 "}"));
         s01e03plain1AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
+        label_69 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        label_69->setObjectName(QString::fromUtf8("label_69"));
+        label_69->setGeometry(QRect(44, 67, 101, 20));
+        label_69->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_69->setScaledContents(true);
+        label_72 = new QLabel(groupInvCipher12DiffColumns01e03_2);
+        label_72->setObjectName(QString::fromUtf8("label_72"));
+        label_72->setGeometry(QRect(133, 77, 20, 61));
+        label_72->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_72->setScaledContents(true);
         groupInvCipher12DiffColumns01e03_3 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_3->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_3"));
         groupInvCipher12DiffColumns01e03_3->setGeometry(QRect(10, 170, 271, 141));
@@ -7315,7 +8040,7 @@ public:
         s01e03plain2AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e03plain2AfterR1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e03plain2AfterR1Col0Byte02->setFont(font);
+        s01e03plain2AfterR1Col0Byte02->setFont(font1);
         s01e03plain2AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03plain2AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7330,7 +8055,7 @@ public:
         s01e03plain2AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e03plain2AfterR1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e03plain2AfterR1Col0Byte01->setFont(font);
+        s01e03plain2AfterR1Col0Byte01->setFont(font1);
         s01e03plain2AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03plain2AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7345,7 +8070,7 @@ public:
         s01e03plain2AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e03plain2AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e03plain2AfterR1Col0Byte00->setFont(font);
+        s01e03plain2AfterR1Col0Byte00->setFont(font1);
         s01e03plain2AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03plain2AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7361,7 +8086,7 @@ public:
         s01e03plain2AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain2AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e03plain2AfterR1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e03plain2AfterR1Col0Byte03->setFont(font);
+        s01e03plain2AfterR1Col0Byte03->setFont(font1);
         s01e03plain2AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03plain2AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7370,6 +8095,16 @@ public:
 "     background-color: white;\n"
 "}"));
         s01e03plain2AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
+        label_70 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        label_70->setObjectName(QString::fromUtf8("label_70"));
+        label_70->setGeometry(QRect(44, 67, 101, 20));
+        label_70->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_70->setScaledContents(true);
+        label_74 = new QLabel(groupInvCipher12DiffColumns01e03_3);
+        label_74->setObjectName(QString::fromUtf8("label_74"));
+        label_74->setGeometry(QRect(133, 20, 20, 59));
+        label_74->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_74->setScaledContents(true);
         groupInvCipher12DiffColumns01e03_4 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_4->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_4"));
         groupInvCipher12DiffColumns01e03_4->setGeometry(QRect(10, 310, 271, 141));
@@ -7384,7 +8119,7 @@ public:
         s01e03plain3AfterR1Col0Byte02->setGeometry(QRect(20, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e03plain3AfterR1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e03plain3AfterR1Col0Byte02->setFont(font);
+        s01e03plain3AfterR1Col0Byte02->setFont(font1);
         s01e03plain3AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03plain3AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7399,7 +8134,7 @@ public:
         s01e03plain3AfterR1Col0Byte01->setGeometry(QRect(20, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e03plain3AfterR1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e03plain3AfterR1Col0Byte01->setFont(font);
+        s01e03plain3AfterR1Col0Byte01->setFont(font1);
         s01e03plain3AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03plain3AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7414,7 +8149,7 @@ public:
         s01e03plain3AfterR1Col0Byte00->setGeometry(QRect(20, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e03plain3AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e03plain3AfterR1Col0Byte00->setFont(font);
+        s01e03plain3AfterR1Col0Byte00->setFont(font1);
         s01e03plain3AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03plain3AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7430,7 +8165,7 @@ public:
         s01e03plain3AfterR1Col0Byte03->setGeometry(QRect(20, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain3AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e03plain3AfterR1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e03plain3AfterR1Col0Byte03->setFont(font);
+        s01e03plain3AfterR1Col0Byte03->setFont(font1);
         s01e03plain3AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03plain3AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7439,6 +8174,26 @@ public:
 "     background-color: white;\n"
 "}"));
         s01e03plain3AfterR1Col0Byte03->setAlignment(Qt::AlignCenter);
+        label_68 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        label_68->setObjectName(QString::fromUtf8("label_68"));
+        label_68->setGeometry(QRect(133, 8, 51, 20));
+        label_68->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_68->setScaledContents(true);
+        label_67 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        label_67->setObjectName(QString::fromUtf8("label_67"));
+        label_67->setGeometry(QRect(170, 10, 21, 17));
+        label_67->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_67->setScaledContents(true);
+        label_71 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        label_71->setObjectName(QString::fromUtf8("label_71"));
+        label_71->setGeometry(QRect(44, 67, 81, 20));
+        label_71->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_71->setScaledContents(true);
+        label_75 = new QLabel(groupInvCipher12DiffColumns01e03_4);
+        label_75->setObjectName(QString::fromUtf8("label_75"));
+        label_75->setGeometry(QRect(113, 30, 20, 47));
+        label_75->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_75->setScaledContents(true);
         groupInvCipher13DiffColumns01e03_2 = new QGroupBox(tabS01E03);
         groupInvCipher13DiffColumns01e03_2->setObjectName(QString::fromUtf8("groupInvCipher13DiffColumns01e03_2"));
         groupInvCipher13DiffColumns01e03_2->setGeometry(QRect(160, 250, 101, 141));
@@ -7453,7 +8208,7 @@ public:
         s01e03plainAfterR1Diff13Col0Byte02->setGeometry(QRect(40, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff13Col0Byte02->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff13Col0Byte02->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte02->setFont(font1);
         s01e03plainAfterR1Diff13Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff13Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7468,7 +8223,7 @@ public:
         s01e03plainAfterR1Diff13Col0Byte01->setGeometry(QRect(40, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff13Col0Byte01->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff13Col0Byte01->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte01->setFont(font1);
         s01e03plainAfterR1Diff13Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff13Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7483,7 +8238,7 @@ public:
         s01e03plainAfterR1Diff13Col0Byte00->setGeometry(QRect(40, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff13Col0Byte00->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff13Col0Byte00->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte00->setFont(font1);
         s01e03plainAfterR1Diff13Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff13Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7499,7 +8254,7 @@ public:
         s01e03plainAfterR1Diff13Col0Byte03->setGeometry(QRect(40, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff13Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff13Col0Byte03->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff13Col0Byte03->setFont(font);
+        s01e03plainAfterR1Diff13Col0Byte03->setFont(font1);
         s01e03plainAfterR1Diff13Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff13Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7587,7 +8342,7 @@ public:
         labelResultLookupX13->setGeometry(QRect(70, 90, 31, 16));
         groupBox_2 = new QGroupBox(tabS01E03);
         groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
-        groupBox_2->setGeometry(QRect(480, 320, 141, 151));
+        groupBox_2->setGeometry(QRect(480, 320, 181, 151));
         groupBox_2->setTitle(QString::fromUtf8("Results For Pair 1"));
         groupBox_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         editByte00ResultSbox = new QLineEdit(groupBox_2);
@@ -7606,6 +8361,18 @@ public:
         editByte03ResultSbox->setObjectName(QString::fromUtf8("editByte03ResultSbox"));
         editByte03ResultSbox->setGeometry(QRect(40, 100, 31, 27));
         editByte03ResultSbox->setMaxLength(2);
+        buttonSBoxSolveLookupByte00 = new QPushButton(groupBox_2);
+        buttonSBoxSolveLookupByte00->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte00"));
+        buttonSBoxSolveLookupByte00->setGeometry(QRect(80, 25, 97, 27));
+        buttonSBoxSolveLookupByte01 = new QPushButton(groupBox_2);
+        buttonSBoxSolveLookupByte01->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte01"));
+        buttonSBoxSolveLookupByte01->setGeometry(QRect(80, 50, 97, 27));
+        buttonSBoxSolveLookupByte02 = new QPushButton(groupBox_2);
+        buttonSBoxSolveLookupByte02->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte02"));
+        buttonSBoxSolveLookupByte02->setGeometry(QRect(80, 75, 97, 27));
+        buttonSBoxSolveLookupByte03 = new QPushButton(groupBox_2);
+        buttonSBoxSolveLookupByte03->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte03"));
+        buttonSBoxSolveLookupByte03->setGeometry(QRect(80, 100, 97, 27));
         groupInvCipher12DiffColumns01e03_6 = new QGroupBox(tabS01E03);
         groupInvCipher12DiffColumns01e03_6->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_6"));
         groupInvCipher12DiffColumns01e03_6->setGeometry(QRect(290, 320, 161, 141));
@@ -7620,7 +8387,7 @@ public:
         s01e03plain1AfterR1Col0Byte02_2->setGeometry(QRect(20, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte02_2->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte02_2->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte02_2->setFont(font);
+        s01e03plain1AfterR1Col0Byte02_2->setFont(font1);
         s01e03plain1AfterR1Col0Byte02_2->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7635,7 +8402,7 @@ public:
         s01e03plain1AfterR1Col0Byte01_2->setGeometry(QRect(20, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte01_2->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte01_2->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte01_2->setFont(font);
+        s01e03plain1AfterR1Col0Byte01_2->setFont(font1);
         s01e03plain1AfterR1Col0Byte01_2->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7650,7 +8417,7 @@ public:
         s01e03plain1AfterR1Col0Byte00_2->setGeometry(QRect(20, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte00_2->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte00_2->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte00_2->setFont(font);
+        s01e03plain1AfterR1Col0Byte00_2->setFont(font1);
         s01e03plain1AfterR1Col0Byte00_2->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7666,7 +8433,7 @@ public:
         s01e03plain1AfterR1Col0Byte03_2->setGeometry(QRect(20, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plain1AfterR1Col0Byte03_2->sizePolicy().hasHeightForWidth());
         s01e03plain1AfterR1Col0Byte03_2->setSizePolicy(sizePolicy);
-        s01e03plain1AfterR1Col0Byte03_2->setFont(font);
+        s01e03plain1AfterR1Col0Byte03_2->setFont(font1);
         s01e03plain1AfterR1Col0Byte03_2->setLayoutDirection(Qt::LeftToRight);
         s01e03plain1AfterR1Col0Byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7681,7 +8448,7 @@ public:
         s01e03k1Byte01->setGeometry(QRect(120, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e03k1Byte01->sizePolicy().hasHeightForWidth());
         s01e03k1Byte01->setSizePolicy(sizePolicy);
-        s01e03k1Byte01->setFont(font);
+        s01e03k1Byte01->setFont(font1);
         s01e03k1Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03k1Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7696,7 +8463,7 @@ public:
         s01e03k1Byte00->setGeometry(QRect(120, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e03k1Byte00->sizePolicy().hasHeightForWidth());
         s01e03k1Byte00->setSizePolicy(sizePolicy);
-        s01e03k1Byte00->setFont(font);
+        s01e03k1Byte00->setFont(font1);
         s01e03k1Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03k1Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7712,7 +8479,7 @@ public:
         s01e03k1Byte03->setGeometry(QRect(120, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e03k1Byte03->sizePolicy().hasHeightForWidth());
         s01e03k1Byte03->setSizePolicy(sizePolicy);
-        s01e03k1Byte03->setFont(font);
+        s01e03k1Byte03->setFont(font1);
         s01e03k1Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03k1Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7727,7 +8494,7 @@ public:
         s01e03k1Byte02->setGeometry(QRect(120, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e03k1Byte02->sizePolicy().hasHeightForWidth());
         s01e03k1Byte02->setSizePolicy(sizePolicy);
-        s01e03k1Byte02->setFont(font);
+        s01e03k1Byte02->setFont(font1);
         s01e03k1Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03k1Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7755,7 +8522,7 @@ public:
         s01e03plainAfterR1Diff12Col0Byte02->setGeometry(QRect(40, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff12Col0Byte02->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff12Col0Byte02->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte02->setFont(font1);
         s01e03plainAfterR1Diff12Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff12Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7770,7 +8537,7 @@ public:
         s01e03plainAfterR1Diff12Col0Byte01->setGeometry(QRect(40, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff12Col0Byte01->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff12Col0Byte01->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte01->setFont(font1);
         s01e03plainAfterR1Diff12Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff12Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7785,7 +8552,7 @@ public:
         s01e03plainAfterR1Diff12Col0Byte00->setGeometry(QRect(40, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff12Col0Byte00->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff12Col0Byte00->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte00->setFont(font1);
         s01e03plainAfterR1Diff12Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff12Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7801,7 +8568,7 @@ public:
         s01e03plainAfterR1Diff12Col0Byte03->setGeometry(QRect(40, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e03plainAfterR1Diff12Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e03plainAfterR1Diff12Col0Byte03->setSizePolicy(sizePolicy);
-        s01e03plainAfterR1Diff12Col0Byte03->setFont(font);
+        s01e03plainAfterR1Diff12Col0Byte03->setFont(font1);
         s01e03plainAfterR1Diff12Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e03plainAfterR1Diff12Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7810,12 +8577,22 @@ public:
 "     background-color: white;\n"
 "}"));
         s01e03plainAfterR1Diff12Col0Byte03->setAlignment(Qt::AlignCenter);
+        label_65 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        label_65->setObjectName(QString::fromUtf8("label_65"));
+        label_65->setGeometry(QRect(20, 70, 21, 17));
+        label_65->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_65->setScaledContents(true);
+        label_66 = new QLabel(groupInvCipher12DiffColumns01e03_5);
+        label_66->setObjectName(QString::fromUtf8("label_66"));
+        label_66->setGeometry(QRect(5, 68, 21, 20));
+        label_66->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_66->setScaledContents(true);
         label_26 = new QLabel(tabS01E03);
         label_26->setObjectName(QString::fromUtf8("label_26"));
         label_26->setGeometry(QRect(470, 385, 31, 17));
-        QFont font1;
-        font1.setPointSize(25);
-        label_26->setFont(font1);
+        QFont font2;
+        font2.setPointSize(25);
+        label_26->setFont(font2);
         label_43 = new QLabel(tabS01E03);
         label_43->setObjectName(QString::fromUtf8("label_43"));
         label_43->setGeometry(QRect(140, 167, 25, 25));
@@ -7826,6 +8603,11 @@ public:
         label_44->setGeometry(QRect(120, 315, 25, 25));
         label_44->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
         label_44->setScaledContents(true);
+        label_73 = new QLabel(tabS01E03);
+        label_73->setObjectName(QString::fromUtf8("label_73"));
+        label_73->setGeometry(QRect(122, 107, 20, 210));
+        label_73->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_73->setScaledContents(true);
         tabWidget->addTab(tabS01E03, QString());
         tabS01E04 = new QWidget();
         tabS01E04->setObjectName(QString::fromUtf8("tabS01E04"));
@@ -7847,7 +8629,7 @@ public:
         s01e04plain1AfterR1Col0Byte02->setGeometry(QRect(10, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterR1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterR1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e04plain1AfterR1Col0Byte02->setFont(font);
+        s01e04plain1AfterR1Col0Byte02->setFont(font1);
         s01e04plain1AfterR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7862,7 +8644,7 @@ public:
         s01e04plain1AfterR1Col0Byte01->setGeometry(QRect(10, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterR1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterR1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e04plain1AfterR1Col0Byte01->setFont(font);
+        s01e04plain1AfterR1Col0Byte01->setFont(font1);
         s01e04plain1AfterR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7877,7 +8659,7 @@ public:
         s01e04plain1AfterR1Col0Byte00->setGeometry(QRect(10, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain1AfterR1Col0Byte00->setFont(font);
+        s01e04plain1AfterR1Col0Byte00->setFont(font1);
         s01e04plain1AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7893,7 +8675,7 @@ public:
         s01e04plain1AfterR1Col0Byte03->setGeometry(QRect(10, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterR1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterR1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e04plain1AfterR1Col0Byte03->setFont(font);
+        s01e04plain1AfterR1Col0Byte03->setFont(font1);
         s01e04plain1AfterR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7911,7 +8693,7 @@ public:
         s01e04plain1AfterK1Col0Byte01->setGeometry(QRect(110, 52, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterK1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterK1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e04plain1AfterK1Col0Byte01->setFont(font);
+        s01e04plain1AfterK1Col0Byte01->setFont(font1);
         s01e04plain1AfterK1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterK1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7926,7 +8708,7 @@ public:
         s01e04plain1AfterK1Col0Byte03->setGeometry(QRect(110, 100, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterK1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterK1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e04plain1AfterK1Col0Byte03->setFont(font);
+        s01e04plain1AfterK1Col0Byte03->setFont(font1);
         s01e04plain1AfterK1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterK1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7941,7 +8723,7 @@ public:
         s01e04plain1AfterK1Col0Byte00->setGeometry(QRect(110, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterK1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterK1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain1AfterK1Col0Byte00->setFont(font);
+        s01e04plain1AfterK1Col0Byte00->setFont(font1);
         s01e04plain1AfterK1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterK1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7957,7 +8739,7 @@ public:
         s01e04plain1AfterK1Col0Byte02->setGeometry(QRect(110, 76, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterK1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterK1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e04plain1AfterK1Col0Byte02->setFont(font);
+        s01e04plain1AfterK1Col0Byte02->setFont(font1);
         s01e04plain1AfterK1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterK1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7975,7 +8757,7 @@ public:
         s01e04plain1AfterSBR1Col0Byte03->setGeometry(QRect(190, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSBR1Col0Byte03->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSBR1Col0Byte03->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSBR1Col0Byte03->setFont(font);
+        s01e04plain1AfterSBR1Col0Byte03->setFont(font1);
         s01e04plain1AfterSBR1Col0Byte03->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSBR1Col0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -7990,7 +8772,7 @@ public:
         s01e04plain1AfterSBR1Col0Byte02->setGeometry(QRect(190, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSBR1Col0Byte02->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSBR1Col0Byte02->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSBR1Col0Byte02->setFont(font);
+        s01e04plain1AfterSBR1Col0Byte02->setFont(font1);
         s01e04plain1AfterSBR1Col0Byte02->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSBR1Col0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8005,7 +8787,7 @@ public:
         s01e04plain1AfterSBR1Col0Byte01->setGeometry(QRect(190, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSBR1Col0Byte01->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSBR1Col0Byte01->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSBR1Col0Byte01->setFont(font);
+        s01e04plain1AfterSBR1Col0Byte01->setFont(font1);
         s01e04plain1AfterSBR1Col0Byte01->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSBR1Col0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8020,7 +8802,7 @@ public:
         s01e04plain1AfterSBR1Col0Byte00->setGeometry(QRect(190, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSBR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSBR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSBR1Col0Byte00->setFont(font);
+        s01e04plain1AfterSBR1Col0Byte00->setFont(font1);
         s01e04plain1AfterSBR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSBR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8039,7 +8821,7 @@ public:
         outPlain1s01e01ARKByte05_2->setGeometry(QRect(290, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte05_2->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte05_2->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte05_2->setFont(font);
+        outPlain1s01e01ARKByte05_2->setFont(font1);
         outPlain1s01e01ARKByte05_2->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte05_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8054,7 +8836,7 @@ public:
         outPlainByte14_7->setGeometry(QRect(338, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14_7->sizePolicy().hasHeightForWidth());
         outPlainByte14_7->setSizePolicy(sizePolicy);
-        outPlainByte14_7->setFont(font);
+        outPlainByte14_7->setFont(font1);
         outPlainByte14_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8069,7 +8851,7 @@ public:
         outPlainByte06_7->setGeometry(QRect(290, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06_7->sizePolicy().hasHeightForWidth());
         outPlainByte06_7->setSizePolicy(sizePolicy);
-        outPlainByte06_7->setFont(font);
+        outPlainByte06_7->setFont(font1);
         outPlainByte06_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8084,7 +8866,7 @@ public:
         s01e04plain1AfterSRR1Byte07->setGeometry(QRect(290, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSRR1Byte07->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSRR1Byte07->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSRR1Byte07->setFont(font);
+        s01e04plain1AfterSRR1Byte07->setFont(font1);
         s01e04plain1AfterSRR1Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSRR1Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8099,7 +8881,7 @@ public:
         outPlainByte02_5->setGeometry(QRect(266, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02_5->sizePolicy().hasHeightForWidth());
         outPlainByte02_5->setSizePolicy(sizePolicy);
-        outPlainByte02_5->setFont(font);
+        outPlainByte02_5->setFont(font1);
         outPlainByte02_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8114,7 +8896,7 @@ public:
         outPlain1s01e01ARKByte15_2->setGeometry(QRect(338, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlain1s01e01ARKByte15_2->sizePolicy().hasHeightForWidth());
         outPlain1s01e01ARKByte15_2->setSizePolicy(sizePolicy);
-        outPlain1s01e01ARKByte15_2->setFont(font);
+        outPlain1s01e01ARKByte15_2->setFont(font1);
         outPlain1s01e01ARKByte15_2->setLayoutDirection(Qt::LeftToRight);
         outPlain1s01e01ARKByte15_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8129,7 +8911,7 @@ public:
         s01e04plain1AfterSRR1Byte10->setGeometry(QRect(314, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSRR1Byte10->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSRR1Byte10->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSRR1Byte10->setFont(font);
+        s01e04plain1AfterSRR1Byte10->setFont(font1);
         s01e04plain1AfterSRR1Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSRR1Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8144,7 +8926,7 @@ public:
         outPlainByte04_7->setGeometry(QRect(290, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04_7->sizePolicy().hasHeightForWidth());
         outPlainByte04_7->setSizePolicy(sizePolicy);
-        outPlainByte04_7->setFont(font);
+        outPlainByte04_7->setFont(font1);
         outPlainByte04_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8159,7 +8941,7 @@ public:
         outPlainByte08_7->setGeometry(QRect(314, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08_7->sizePolicy().hasHeightForWidth());
         outPlainByte08_7->setSizePolicy(sizePolicy);
-        outPlainByte08_7->setFont(font);
+        outPlainByte08_7->setFont(font1);
         outPlainByte08_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8174,7 +8956,7 @@ public:
         outPlainByte11_7->setGeometry(QRect(314, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11_7->sizePolicy().hasHeightForWidth());
         outPlainByte11_7->setSizePolicy(sizePolicy);
-        outPlainByte11_7->setFont(font);
+        outPlainByte11_7->setFont(font1);
         outPlainByte11_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8189,7 +8971,7 @@ public:
         outPlainByte09_7->setGeometry(QRect(314, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09_7->sizePolicy().hasHeightForWidth());
         outPlainByte09_7->setSizePolicy(sizePolicy);
-        outPlainByte09_7->setFont(font);
+        outPlainByte09_7->setFont(font1);
         outPlainByte09_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8204,7 +8986,7 @@ public:
         s01e04plain1AfterSRR1Byte13->setGeometry(QRect(338, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSRR1Byte13->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSRR1Byte13->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSRR1Byte13->setFont(font);
+        s01e04plain1AfterSRR1Byte13->setFont(font1);
         s01e04plain1AfterSRR1Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSRR1Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8219,7 +9001,7 @@ public:
         s01e04plain1AfterSRR1Byte00->setGeometry(QRect(266, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain1AfterSRR1Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain1AfterSRR1Byte00->setSizePolicy(sizePolicy);
-        s01e04plain1AfterSRR1Byte00->setFont(font);
+        s01e04plain1AfterSRR1Byte00->setFont(font1);
         s01e04plain1AfterSRR1Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain1AfterSRR1Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8235,7 +9017,7 @@ public:
         outPlainByte01_5->setGeometry(QRect(266, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01_5->sizePolicy().hasHeightForWidth());
         outPlainByte01_5->setSizePolicy(sizePolicy);
-        outPlainByte01_5->setFont(font);
+        outPlainByte01_5->setFont(font1);
         outPlainByte01_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8250,7 +9032,7 @@ public:
         outPlainByte03_5->setGeometry(QRect(266, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03_5->sizePolicy().hasHeightForWidth());
         outPlainByte03_5->setSizePolicy(sizePolicy);
-        outPlainByte03_5->setFont(font);
+        outPlainByte03_5->setFont(font1);
         outPlainByte03_5->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03_5->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8265,7 +9047,7 @@ public:
         outPlainByte12_7->setGeometry(QRect(338, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12_7->sizePolicy().hasHeightForWidth());
         outPlainByte12_7->setSizePolicy(sizePolicy);
-        outPlainByte12_7->setFont(font);
+        outPlainByte12_7->setFont(font1);
         outPlainByte12_7->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8288,7 +9070,7 @@ public:
         s01e04Cipher1InvMCByte15->setGeometry(QRect(152, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte15->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte15->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte15->setFont(font);
+        s01e04Cipher1InvMCByte15->setFont(font1);
         s01e04Cipher1InvMCByte15->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8318,7 +9100,7 @@ public:
         s01e04Cipher1InvMCByte14->setGeometry(QRect(152, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte14->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte14->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte14->setFont(font);
+        s01e04Cipher1InvMCByte14->setFont(font1);
         s01e04Cipher1InvMCByte14->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8333,7 +9115,7 @@ public:
         s01e04Cipher1InvMCByte06->setGeometry(QRect(104, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte06->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte06->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte06->setFont(font);
+        s01e04Cipher1InvMCByte06->setFont(font1);
         s01e04Cipher1InvMCByte06->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8348,7 +9130,7 @@ public:
         s01e04Cipher1InvMCByte04->setGeometry(QRect(104, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte04->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte04->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte04->setFont(font);
+        s01e04Cipher1InvMCByte04->setFont(font1);
         s01e04Cipher1InvMCByte04->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8363,7 +9145,7 @@ public:
         s01e04Cipher1InvMCByte02->setGeometry(QRect(80, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte02->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte02->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte02->setFont(font);
+        s01e04Cipher1InvMCByte02->setFont(font1);
         s01e04Cipher1InvMCByte02->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8393,7 +9175,7 @@ public:
         s01e04Cipher1InvMCByte09->setGeometry(QRect(128, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte09->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte09->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte09->setFont(font);
+        s01e04Cipher1InvMCByte09->setFont(font1);
         s01e04Cipher1InvMCByte09->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8408,7 +9190,7 @@ public:
         s01e04Cipher1InvMCByte01->setGeometry(QRect(80, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte01->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte01->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte01->setFont(font);
+        s01e04Cipher1InvMCByte01->setFont(font1);
         s01e04Cipher1InvMCByte01->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8423,7 +9205,7 @@ public:
         s01e04Cipher1InvMCByte08->setGeometry(QRect(128, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte08->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte08->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte08->setFont(font);
+        s01e04Cipher1InvMCByte08->setFont(font1);
         s01e04Cipher1InvMCByte08->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8469,7 +9251,7 @@ public:
         s01e04Cipher1InvMCByte12->setGeometry(QRect(152, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte12->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte12->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte12->setFont(font);
+        s01e04Cipher1InvMCByte12->setFont(font1);
         s01e04Cipher1InvMCByte12->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8484,7 +9266,7 @@ public:
         s01e04Cipher1InvMCByte03->setGeometry(QRect(80, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte03->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte03->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte03->setFont(font);
+        s01e04Cipher1InvMCByte03->setFont(font1);
         s01e04Cipher1InvMCByte03->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8499,7 +9281,7 @@ public:
         s01e04Cipher1InvMCByte11->setGeometry(QRect(128, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte11->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte11->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte11->setFont(font);
+        s01e04Cipher1InvMCByte11->setFont(font1);
         s01e04Cipher1InvMCByte11->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8514,7 +9296,7 @@ public:
         s01e04Cipher1InvMCByte05->setGeometry(QRect(104, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher1InvMCByte05->sizePolicy().hasHeightForWidth());
         s01e04Cipher1InvMCByte05->setSizePolicy(sizePolicy);
-        s01e04Cipher1InvMCByte05->setFont(font);
+        s01e04Cipher1InvMCByte05->setFont(font1);
         s01e04Cipher1InvMCByte05->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher1InvMCByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8526,9 +9308,9 @@ public:
         label_30 = new QLabel(groupCipher1s01e02_2);
         label_30->setObjectName(QString::fromUtf8("label_30"));
         label_30->setGeometry(QRect(20, 60, 21, 17));
-        QFont font2;
-        font2.setPointSize(30);
-        label_30->setFont(font2);
+        QFont font3;
+        font3.setPointSize(30);
+        label_30->setFont(font3);
         groupCipher1s01e02_3 = new QGroupBox(groupInvCipher12DiffColumns01e03_7);
         groupCipher1s01e02_3->setObjectName(QString::fromUtf8("groupCipher1s01e02_3"));
         groupCipher1s01e02_3->setGeometry(QRect(420, 0, 121, 141));
@@ -8543,7 +9325,7 @@ public:
         s01e02Cipher1Byte15_3->setGeometry(QRect(82, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte15_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte15_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte15_3->setFont(font);
+        s01e02Cipher1Byte15_3->setFont(font1);
         s01e02Cipher1Byte15_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte15_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8558,7 +9340,7 @@ public:
         s01e04u2Byte13->setGeometry(QRect(82, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e04u2Byte13->sizePolicy().hasHeightForWidth());
         s01e04u2Byte13->setSizePolicy(sizePolicy);
-        s01e04u2Byte13->setFont(font);
+        s01e04u2Byte13->setFont(font1);
         s01e04u2Byte13->setLayoutDirection(Qt::LeftToRight);
         s01e04u2Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8573,7 +9355,7 @@ public:
         s01e02Cipher1Byte14_3->setGeometry(QRect(82, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte14_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte14_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte14_3->setFont(font);
+        s01e02Cipher1Byte14_3->setFont(font1);
         s01e02Cipher1Byte14_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte14_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8588,7 +9370,7 @@ public:
         s01e02Cipher1Byte06_3->setGeometry(QRect(34, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte06_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte06_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte06_3->setFont(font);
+        s01e02Cipher1Byte06_3->setFont(font1);
         s01e02Cipher1Byte06_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte06_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8603,7 +9385,7 @@ public:
         s01e02Cipher1Byte04_3->setGeometry(QRect(34, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte04_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte04_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte04_3->setFont(font);
+        s01e02Cipher1Byte04_3->setFont(font1);
         s01e02Cipher1Byte04_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte04_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8618,7 +9400,7 @@ public:
         s01e02Cipher1Byte02_3->setGeometry(QRect(10, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte02_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte02_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte02_3->setFont(font);
+        s01e02Cipher1Byte02_3->setFont(font1);
         s01e02Cipher1Byte02_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8633,7 +9415,7 @@ public:
         s01e04u2Byte10->setGeometry(QRect(58, 78, 25, 25));
         sizePolicy.setHeightForWidth(s01e04u2Byte10->sizePolicy().hasHeightForWidth());
         s01e04u2Byte10->setSizePolicy(sizePolicy);
-        s01e04u2Byte10->setFont(font);
+        s01e04u2Byte10->setFont(font1);
         s01e04u2Byte10->setLayoutDirection(Qt::LeftToRight);
         s01e04u2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8648,7 +9430,7 @@ public:
         s01e02Cipher1Byte09_3->setGeometry(QRect(58, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte09_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte09_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte09_3->setFont(font);
+        s01e02Cipher1Byte09_3->setFont(font1);
         s01e02Cipher1Byte09_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte09_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8663,7 +9445,7 @@ public:
         s01e02Cipher1Byte01_3->setGeometry(QRect(10, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte01_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte01_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte01_3->setFont(font);
+        s01e02Cipher1Byte01_3->setFont(font1);
         s01e02Cipher1Byte01_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8678,7 +9460,7 @@ public:
         s01e02Cipher1Byte08_3->setGeometry(QRect(58, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte08_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte08_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte08_3->setFont(font);
+        s01e02Cipher1Byte08_3->setFont(font1);
         s01e02Cipher1Byte08_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte08_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8693,7 +9475,7 @@ public:
         s01e04u2Byte00->setGeometry(QRect(10, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e04u2Byte00->sizePolicy().hasHeightForWidth());
         s01e04u2Byte00->setSizePolicy(sizePolicy);
-        s01e04u2Byte00->setFont(font);
+        s01e04u2Byte00->setFont(font1);
         s01e04u2Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04u2Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8709,7 +9491,7 @@ public:
         s01e04u2Byte07->setGeometry(QRect(34, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e04u2Byte07->sizePolicy().hasHeightForWidth());
         s01e04u2Byte07->setSizePolicy(sizePolicy);
-        s01e04u2Byte07->setFont(font);
+        s01e04u2Byte07->setFont(font1);
         s01e04u2Byte07->setLayoutDirection(Qt::LeftToRight);
         s01e04u2Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8724,7 +9506,7 @@ public:
         s01e02Cipher1Byte12_3->setGeometry(QRect(82, 30, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte12_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte12_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte12_3->setFont(font);
+        s01e02Cipher1Byte12_3->setFont(font1);
         s01e02Cipher1Byte12_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte12_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8739,7 +9521,7 @@ public:
         s01e02Cipher1Byte03_3->setGeometry(QRect(10, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte03_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte03_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte03_3->setFont(font);
+        s01e02Cipher1Byte03_3->setFont(font1);
         s01e02Cipher1Byte03_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8754,7 +9536,7 @@ public:
         s01e02Cipher1Byte11_3->setGeometry(QRect(58, 102, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte11_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte11_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte11_3->setFont(font);
+        s01e02Cipher1Byte11_3->setFont(font1);
         s01e02Cipher1Byte11_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte11_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8769,7 +9551,7 @@ public:
         s01e02Cipher1Byte05_3->setGeometry(QRect(34, 54, 25, 25));
         sizePolicy.setHeightForWidth(s01e02Cipher1Byte05_3->sizePolicy().hasHeightForWidth());
         s01e02Cipher1Byte05_3->setSizePolicy(sizePolicy);
-        s01e02Cipher1Byte05_3->setFont(font);
+        s01e02Cipher1Byte05_3->setFont(font1);
         s01e02Cipher1Byte05_3->setLayoutDirection(Qt::LeftToRight);
         s01e02Cipher1Byte05_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8807,7 +9589,7 @@ public:
         s01e04plain2AfterR1Col0Byte00->setGeometry(QRect(0, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain2AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain2AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain2AfterR1Col0Byte00->setFont(font);
+        s01e04plain2AfterR1Col0Byte00->setFont(font1);
         s01e04plain2AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain2AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8823,7 +9605,7 @@ public:
         s01e04plain2AfterK1Col0Byte00->setGeometry(QRect(80, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain2AfterK1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain2AfterK1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain2AfterK1Col0Byte00->setFont(font);
+        s01e04plain2AfterK1Col0Byte00->setFont(font1);
         s01e04plain2AfterK1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain2AfterK1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8839,7 +9621,7 @@ public:
         s01e04plain2AfterSBR1Col0Byte00->setGeometry(QRect(130, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain2AfterSBR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain2AfterSBR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain2AfterSBR1Col0Byte00->setFont(font);
+        s01e04plain2AfterSBR1Col0Byte00->setFont(font1);
         s01e04plain2AfterSBR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain2AfterSBR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8855,7 +9637,7 @@ public:
         s01e04Cipher2InvMCByte00->setGeometry(QRect(250, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher2InvMCByte00->sizePolicy().hasHeightForWidth());
         s01e04Cipher2InvMCByte00->setSizePolicy(sizePolicy);
-        s01e04Cipher2InvMCByte00->setFont(font);
+        s01e04Cipher2InvMCByte00->setFont(font1);
         s01e04Cipher2InvMCByte00->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher2InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8883,7 +9665,7 @@ public:
         s01e04plain2AfterU2Col0Byte00->setGeometry(QRect(210, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain2AfterU2Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain2AfterU2Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain2AfterU2Col0Byte00->setFont(font);
+        s01e04plain2AfterU2Col0Byte00->setFont(font1);
         s01e04plain2AfterU2Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain2AfterU2Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8908,7 +9690,7 @@ public:
         s01e04plain3AfterR1Col0Byte00->setGeometry(QRect(0, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain3AfterR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain3AfterR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain3AfterR1Col0Byte00->setFont(font);
+        s01e04plain3AfterR1Col0Byte00->setFont(font1);
         s01e04plain3AfterR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain3AfterR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8924,7 +9706,7 @@ public:
         s01e04plain3AfterK1Col0Byte00->setGeometry(QRect(80, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain3AfterK1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain3AfterK1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain3AfterK1Col0Byte00->setFont(font);
+        s01e04plain3AfterK1Col0Byte00->setFont(font1);
         s01e04plain3AfterK1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain3AfterK1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8940,7 +9722,7 @@ public:
         s01e04plain3AfterSBR1Col0Byte00->setGeometry(QRect(130, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain3AfterSBR1Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain3AfterSBR1Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain3AfterSBR1Col0Byte00->setFont(font);
+        s01e04plain3AfterSBR1Col0Byte00->setFont(font1);
         s01e04plain3AfterSBR1Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain3AfterSBR1Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8956,7 +9738,7 @@ public:
         s01e04Cipher3InvMCByte00->setGeometry(QRect(250, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04Cipher3InvMCByte00->sizePolicy().hasHeightForWidth());
         s01e04Cipher3InvMCByte00->setSizePolicy(sizePolicy);
-        s01e04Cipher3InvMCByte00->setFont(font);
+        s01e04Cipher3InvMCByte00->setFont(font1);
         s01e04Cipher3InvMCByte00->setLayoutDirection(Qt::LeftToRight);
         s01e04Cipher3InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8981,7 +9763,7 @@ public:
         s01e04plain3AfterU2Col0Byte00->setGeometry(QRect(210, 28, 25, 25));
         sizePolicy.setHeightForWidth(s01e04plain3AfterU2Col0Byte00->sizePolicy().hasHeightForWidth());
         s01e04plain3AfterU2Col0Byte00->setSizePolicy(sizePolicy);
-        s01e04plain3AfterU2Col0Byte00->setFont(font);
+        s01e04plain3AfterU2Col0Byte00->setFont(font1);
         s01e04plain3AfterU2Col0Byte00->setLayoutDirection(Qt::LeftToRight);
         s01e04plain3AfterU2Col0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -8994,7 +9776,7995 @@ public:
         label_38 = new QLabel(groupInvCipher12DiffColumns01e03_9);
         label_38->setObjectName(QString::fromUtf8("label_38"));
         label_38->setGeometry(QRect(160, 30, 51, 17));
+        groupBox_6 = new QGroupBox(tabS01E04);
+        groupBox_6->setObjectName(QString::fromUtf8("groupBox_6"));
+        groupBox_6->setGeometry(QRect(10, 280, 741, 181));
+        groupSubKeyK1 = new QGroupBox(groupBox_6);
+        groupSubKeyK1->setObjectName(QString::fromUtf8("groupSubKeyK1"));
+        groupSubKeyK1->setGeometry(QRect(170, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK1->sizePolicy().hasHeightForWidth());
+        groupSubKeyK1->setSizePolicy(sizePolicy);
+        groupSubKeyK1->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK1->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k1byte15 = new QLabel(groupSubKeyK1);
+        k1byte15->setObjectName(QString::fromUtf8("k1byte15"));
+        k1byte15->setEnabled(true);
+        k1byte15->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte15->sizePolicy().hasHeightForWidth());
+        k1byte15->setSizePolicy(sizePolicy);
+        k1byte15->setFont(font1);
+        k1byte15->setLayoutDirection(Qt::LeftToRight);
+        k1byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte15->setAlignment(Qt::AlignCenter);
+        k1byte13 = new QLabel(groupSubKeyK1);
+        k1byte13->setObjectName(QString::fromUtf8("k1byte13"));
+        k1byte13->setEnabled(true);
+        k1byte13->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte13->sizePolicy().hasHeightForWidth());
+        k1byte13->setSizePolicy(sizePolicy);
+        k1byte13->setFont(font1);
+        k1byte13->setLayoutDirection(Qt::LeftToRight);
+        k1byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte13->setAlignment(Qt::AlignCenter);
+        k1byte14 = new QLabel(groupSubKeyK1);
+        k1byte14->setObjectName(QString::fromUtf8("k1byte14"));
+        k1byte14->setEnabled(true);
+        k1byte14->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte14->sizePolicy().hasHeightForWidth());
+        k1byte14->setSizePolicy(sizePolicy);
+        k1byte14->setFont(font1);
+        k1byte14->setLayoutDirection(Qt::LeftToRight);
+        k1byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte14->setAlignment(Qt::AlignCenter);
+        k1byte06 = new QLabel(groupSubKeyK1);
+        k1byte06->setObjectName(QString::fromUtf8("k1byte06"));
+        k1byte06->setEnabled(true);
+        k1byte06->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte06->sizePolicy().hasHeightForWidth());
+        k1byte06->setSizePolicy(sizePolicy);
+        k1byte06->setFont(font1);
+        k1byte06->setLayoutDirection(Qt::LeftToRight);
+        k1byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte06->setAlignment(Qt::AlignCenter);
+        k1byte04 = new QLabel(groupSubKeyK1);
+        k1byte04->setObjectName(QString::fromUtf8("k1byte04"));
+        k1byte04->setEnabled(true);
+        k1byte04->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte04->sizePolicy().hasHeightForWidth());
+        k1byte04->setSizePolicy(sizePolicy);
+        k1byte04->setFont(font1);
+        k1byte04->setLayoutDirection(Qt::LeftToRight);
+        k1byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte04->setAlignment(Qt::AlignCenter);
+        k1byte02 = new QLabel(groupSubKeyK1);
+        k1byte02->setObjectName(QString::fromUtf8("k1byte02"));
+        k1byte02->setEnabled(true);
+        k1byte02->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte02->sizePolicy().hasHeightForWidth());
+        k1byte02->setSizePolicy(sizePolicy);
+        k1byte02->setFont(font1);
+        k1byte02->setLayoutDirection(Qt::LeftToRight);
+        k1byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte02->setAlignment(Qt::AlignCenter);
+        k1byte10 = new QLabel(groupSubKeyK1);
+        k1byte10->setObjectName(QString::fromUtf8("k1byte10"));
+        k1byte10->setEnabled(true);
+        k1byte10->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte10->sizePolicy().hasHeightForWidth());
+        k1byte10->setSizePolicy(sizePolicy);
+        k1byte10->setFont(font1);
+        k1byte10->setLayoutDirection(Qt::LeftToRight);
+        k1byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte10->setAlignment(Qt::AlignCenter);
+        k1byte09 = new QLabel(groupSubKeyK1);
+        k1byte09->setObjectName(QString::fromUtf8("k1byte09"));
+        k1byte09->setEnabled(true);
+        k1byte09->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte09->sizePolicy().hasHeightForWidth());
+        k1byte09->setSizePolicy(sizePolicy);
+        k1byte09->setFont(font1);
+        k1byte09->setLayoutDirection(Qt::LeftToRight);
+        k1byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte09->setAlignment(Qt::AlignCenter);
+        k1byte01 = new QLabel(groupSubKeyK1);
+        k1byte01->setObjectName(QString::fromUtf8("k1byte01"));
+        k1byte01->setEnabled(true);
+        k1byte01->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte01->sizePolicy().hasHeightForWidth());
+        k1byte01->setSizePolicy(sizePolicy);
+        k1byte01->setFont(font1);
+        k1byte01->setLayoutDirection(Qt::LeftToRight);
+        k1byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte01->setAlignment(Qt::AlignCenter);
+        k1byte08 = new QLabel(groupSubKeyK1);
+        k1byte08->setObjectName(QString::fromUtf8("k1byte08"));
+        k1byte08->setEnabled(true);
+        k1byte08->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte08->sizePolicy().hasHeightForWidth());
+        k1byte08->setSizePolicy(sizePolicy);
+        k1byte08->setFont(font1);
+        k1byte08->setLayoutDirection(Qt::LeftToRight);
+        k1byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte08->setAlignment(Qt::AlignCenter);
+        k1byte00 = new QLabel(groupSubKeyK1);
+        k1byte00->setObjectName(QString::fromUtf8("k1byte00"));
+        k1byte00->setEnabled(true);
+        k1byte00->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte00->sizePolicy().hasHeightForWidth());
+        k1byte00->setSizePolicy(sizePolicy);
+        k1byte00->setFont(font1);
+        k1byte00->setLayoutDirection(Qt::LeftToRight);
+        k1byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte00->setAlignment(Qt::AlignCenter);
+        k1byte00->setWordWrap(false);
+        k1byte07 = new QLabel(groupSubKeyK1);
+        k1byte07->setObjectName(QString::fromUtf8("k1byte07"));
+        k1byte07->setEnabled(true);
+        k1byte07->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte07->sizePolicy().hasHeightForWidth());
+        k1byte07->setSizePolicy(sizePolicy);
+        k1byte07->setFont(font1);
+        k1byte07->setLayoutDirection(Qt::LeftToRight);
+        k1byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte07->setAlignment(Qt::AlignCenter);
+        k1byte12 = new QLabel(groupSubKeyK1);
+        k1byte12->setObjectName(QString::fromUtf8("k1byte12"));
+        k1byte12->setEnabled(true);
+        k1byte12->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte12->sizePolicy().hasHeightForWidth());
+        k1byte12->setSizePolicy(sizePolicy);
+        k1byte12->setFont(font1);
+        k1byte12->setLayoutDirection(Qt::LeftToRight);
+        k1byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte12->setAlignment(Qt::AlignCenter);
+        k1byte03 = new QLabel(groupSubKeyK1);
+        k1byte03->setObjectName(QString::fromUtf8("k1byte03"));
+        k1byte03->setEnabled(true);
+        k1byte03->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte03->sizePolicy().hasHeightForWidth());
+        k1byte03->setSizePolicy(sizePolicy);
+        k1byte03->setFont(font1);
+        k1byte03->setLayoutDirection(Qt::LeftToRight);
+        k1byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte03->setAlignment(Qt::AlignCenter);
+        k1byte11 = new QLabel(groupSubKeyK1);
+        k1byte11->setObjectName(QString::fromUtf8("k1byte11"));
+        k1byte11->setEnabled(true);
+        k1byte11->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte11->sizePolicy().hasHeightForWidth());
+        k1byte11->setSizePolicy(sizePolicy);
+        k1byte11->setFont(font1);
+        k1byte11->setLayoutDirection(Qt::LeftToRight);
+        k1byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte11->setAlignment(Qt::AlignCenter);
+        k1byte05 = new QLabel(groupSubKeyK1);
+        k1byte05->setObjectName(QString::fromUtf8("k1byte05"));
+        k1byte05->setEnabled(true);
+        k1byte05->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte05->sizePolicy().hasHeightForWidth());
+        k1byte05->setSizePolicy(sizePolicy);
+        k1byte05->setFont(font);
+        k1byte05->setLayoutDirection(Qt::LeftToRight);
+        k1byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte05->setAlignment(Qt::AlignCenter);
+        groupSubKeyK0 = new QGroupBox(groupBox_6);
+        groupSubKeyK0->setObjectName(QString::fromUtf8("groupSubKeyK0"));
+        groupSubKeyK0->setGeometry(QRect(20, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK0->sizePolicy().hasHeightForWidth());
+        groupSubKeyK0->setSizePolicy(sizePolicy);
+        groupSubKeyK0->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK0->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k0byte15 = new QLabel(groupSubKeyK0);
+        k0byte15->setObjectName(QString::fromUtf8("k0byte15"));
+        k0byte15->setEnabled(true);
+        k0byte15->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte15->sizePolicy().hasHeightForWidth());
+        k0byte15->setSizePolicy(sizePolicy);
+        k0byte15->setFont(font1);
+        k0byte15->setLayoutDirection(Qt::LeftToRight);
+        k0byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte15->setAlignment(Qt::AlignCenter);
+        k0byte13 = new QLabel(groupSubKeyK0);
+        k0byte13->setObjectName(QString::fromUtf8("k0byte13"));
+        k0byte13->setEnabled(true);
+        k0byte13->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte13->sizePolicy().hasHeightForWidth());
+        k0byte13->setSizePolicy(sizePolicy);
+        k0byte13->setFont(font);
+        k0byte13->setLayoutDirection(Qt::LeftToRight);
+        k0byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte13->setAlignment(Qt::AlignCenter);
+        k0byte14 = new QLabel(groupSubKeyK0);
+        k0byte14->setObjectName(QString::fromUtf8("k0byte14"));
+        k0byte14->setEnabled(true);
+        k0byte14->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte14->sizePolicy().hasHeightForWidth());
+        k0byte14->setSizePolicy(sizePolicy);
+        k0byte14->setFont(font1);
+        k0byte14->setLayoutDirection(Qt::LeftToRight);
+        k0byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte14->setAlignment(Qt::AlignCenter);
+        k0byte06 = new QLabel(groupSubKeyK0);
+        k0byte06->setObjectName(QString::fromUtf8("k0byte06"));
+        k0byte06->setEnabled(true);
+        k0byte06->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte06->sizePolicy().hasHeightForWidth());
+        k0byte06->setSizePolicy(sizePolicy);
+        k0byte06->setFont(font1);
+        k0byte06->setLayoutDirection(Qt::LeftToRight);
+        k0byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte06->setAlignment(Qt::AlignCenter);
+        k0byte04 = new QLabel(groupSubKeyK0);
+        k0byte04->setObjectName(QString::fromUtf8("k0byte04"));
+        k0byte04->setEnabled(true);
+        k0byte04->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte04->sizePolicy().hasHeightForWidth());
+        k0byte04->setSizePolicy(sizePolicy);
+        k0byte04->setFont(font1);
+        k0byte04->setLayoutDirection(Qt::LeftToRight);
+        k0byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte04->setAlignment(Qt::AlignCenter);
+        k0byte02 = new QLabel(groupSubKeyK0);
+        k0byte02->setObjectName(QString::fromUtf8("k0byte02"));
+        k0byte02->setEnabled(true);
+        k0byte02->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte02->sizePolicy().hasHeightForWidth());
+        k0byte02->setSizePolicy(sizePolicy);
+        k0byte02->setFont(font);
+        k0byte02->setLayoutDirection(Qt::LeftToRight);
+        k0byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte02->setAlignment(Qt::AlignCenter);
+        k0byte10 = new QLabel(groupSubKeyK0);
+        k0byte10->setObjectName(QString::fromUtf8("k0byte10"));
+        k0byte10->setEnabled(true);
+        k0byte10->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte10->sizePolicy().hasHeightForWidth());
+        k0byte10->setSizePolicy(sizePolicy);
+        k0byte10->setFont(font1);
+        k0byte10->setLayoutDirection(Qt::LeftToRight);
+        k0byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte10->setAlignment(Qt::AlignCenter);
+        k0byte09 = new QLabel(groupSubKeyK0);
+        k0byte09->setObjectName(QString::fromUtf8("k0byte09"));
+        k0byte09->setEnabled(true);
+        k0byte09->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte09->sizePolicy().hasHeightForWidth());
+        k0byte09->setSizePolicy(sizePolicy);
+        k0byte09->setFont(font1);
+        k0byte09->setLayoutDirection(Qt::LeftToRight);
+        k0byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte09->setAlignment(Qt::AlignCenter);
+        k0byte01 = new QLabel(groupSubKeyK0);
+        k0byte01->setObjectName(QString::fromUtf8("k0byte01"));
+        k0byte01->setEnabled(true);
+        k0byte01->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte01->sizePolicy().hasHeightForWidth());
+        k0byte01->setSizePolicy(sizePolicy);
+        k0byte01->setFont(font1);
+        k0byte01->setLayoutDirection(Qt::LeftToRight);
+        k0byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte01->setAlignment(Qt::AlignCenter);
+        k0byte08 = new QLabel(groupSubKeyK0);
+        k0byte08->setObjectName(QString::fromUtf8("k0byte08"));
+        k0byte08->setEnabled(true);
+        k0byte08->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte08->sizePolicy().hasHeightForWidth());
+        k0byte08->setSizePolicy(sizePolicy);
+        k0byte08->setFont(font1);
+        k0byte08->setLayoutDirection(Qt::LeftToRight);
+        k0byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte08->setAlignment(Qt::AlignCenter);
+        k0byte00 = new QLabel(groupSubKeyK0);
+        k0byte00->setObjectName(QString::fromUtf8("k0byte00"));
+        k0byte00->setEnabled(true);
+        k0byte00->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte00->sizePolicy().hasHeightForWidth());
+        k0byte00->setSizePolicy(sizePolicy);
+        k0byte00->setFont(font1);
+        k0byte00->setLayoutDirection(Qt::LeftToRight);
+        k0byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte00->setAlignment(Qt::AlignCenter);
+        k0byte00->setWordWrap(false);
+        k0byte07 = new QLabel(groupSubKeyK0);
+        k0byte07->setObjectName(QString::fromUtf8("k0byte07"));
+        k0byte07->setEnabled(true);
+        k0byte07->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte07->sizePolicy().hasHeightForWidth());
+        k0byte07->setSizePolicy(sizePolicy);
+        k0byte07->setFont(font1);
+        k0byte07->setLayoutDirection(Qt::LeftToRight);
+        k0byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte07->setAlignment(Qt::AlignCenter);
+        k0byte12 = new QLabel(groupSubKeyK0);
+        k0byte12->setObjectName(QString::fromUtf8("k0byte12"));
+        k0byte12->setEnabled(true);
+        k0byte12->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte12->sizePolicy().hasHeightForWidth());
+        k0byte12->setSizePolicy(sizePolicy);
+        k0byte12->setFont(font1);
+        k0byte12->setLayoutDirection(Qt::LeftToRight);
+        k0byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte12->setAlignment(Qt::AlignCenter);
+        k0byte03 = new QLabel(groupSubKeyK0);
+        k0byte03->setObjectName(QString::fromUtf8("k0byte03"));
+        k0byte03->setEnabled(true);
+        k0byte03->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte03->sizePolicy().hasHeightForWidth());
+        k0byte03->setSizePolicy(sizePolicy);
+        k0byte03->setFont(font1);
+        k0byte03->setLayoutDirection(Qt::LeftToRight);
+        k0byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte03->setAlignment(Qt::AlignCenter);
+        k0byte11 = new QLabel(groupSubKeyK0);
+        k0byte11->setObjectName(QString::fromUtf8("k0byte11"));
+        k0byte11->setEnabled(true);
+        k0byte11->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte11->sizePolicy().hasHeightForWidth());
+        k0byte11->setSizePolicy(sizePolicy);
+        k0byte11->setFont(font1);
+        k0byte11->setLayoutDirection(Qt::LeftToRight);
+        k0byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte11->setAlignment(Qt::AlignCenter);
+        k0byte05 = new QLabel(groupSubKeyK0);
+        k0byte05->setObjectName(QString::fromUtf8("k0byte05"));
+        k0byte05->setEnabled(true);
+        k0byte05->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte05->sizePolicy().hasHeightForWidth());
+        k0byte05->setSizePolicy(sizePolicy);
+        k0byte05->setFont(font1);
+        k0byte05->setLayoutDirection(Qt::LeftToRight);
+        k0byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte05->setAlignment(Qt::AlignCenter);
+        buttonS01E04FindMissingBytes = new QPushButton(groupBox_6);
+        buttonS01E04FindMissingBytes->setObjectName(QString::fromUtf8("buttonS01E04FindMissingBytes"));
+        buttonS01E04FindMissingBytes->setGeometry(QRect(320, 90, 131, 27));
         tabWidget->addTab(tabS01E04, QString());
+        tabS02E01 = new QWidget();
+        tabS02E01->setObjectName(QString::fromUtf8("tabS02E01"));
+        groupPlain3s02e01 = new QGroupBox(tabS02E01);
+        groupPlain3s02e01->setObjectName(QString::fromUtf8("groupPlain3s02e01"));
+        groupPlain3s02e01->setGeometry(QRect(10, 320, 761, 141));
+        sizePolicy.setHeightForWidth(groupPlain3s02e01->sizePolicy().hasHeightForWidth());
+        groupPlain3s02e01->setSizePolicy(sizePolicy);
+        groupPlain3s02e01->setStyleSheet(QString::fromUtf8(""));
+        groupPlain3s02e01->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        plain3s02e01Byte15 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte15->setObjectName(QString::fromUtf8("plain3s02e01Byte15"));
+        plain3s02e01Byte15->setEnabled(true);
+        plain3s02e01Byte15->setGeometry(QRect(80, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte15->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte15->setSizePolicy(sizePolicy);
+        plain3s02e01Byte15->setFont(font1);
+        plain3s02e01Byte15->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte15->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte13 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte13->setObjectName(QString::fromUtf8("plain3s02e01Byte13"));
+        plain3s02e01Byte13->setEnabled(true);
+        plain3s02e01Byte13->setGeometry(QRect(80, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte13->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte13->setSizePolicy(sizePolicy);
+        plain3s02e01Byte13->setFont(font);
+        plain3s02e01Byte13->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte13->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte14 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte14->setObjectName(QString::fromUtf8("plain3s02e01Byte14"));
+        plain3s02e01Byte14->setEnabled(true);
+        plain3s02e01Byte14->setGeometry(QRect(80, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte14->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte14->setSizePolicy(sizePolicy);
+        plain3s02e01Byte14->setFont(font1);
+        plain3s02e01Byte14->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte14->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte06 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte06->setObjectName(QString::fromUtf8("plain3s02e01Byte06"));
+        plain3s02e01Byte06->setEnabled(true);
+        plain3s02e01Byte06->setGeometry(QRect(32, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte06->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte06->setSizePolicy(sizePolicy);
+        plain3s02e01Byte06->setFont(font1);
+        plain3s02e01Byte06->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte06->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte04 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte04->setObjectName(QString::fromUtf8("plain3s02e01Byte04"));
+        plain3s02e01Byte04->setEnabled(true);
+        plain3s02e01Byte04->setGeometry(QRect(32, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte04->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte04->setSizePolicy(sizePolicy);
+        plain3s02e01Byte04->setFont(font1);
+        plain3s02e01Byte04->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte04->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte02 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte02->setObjectName(QString::fromUtf8("plain3s02e01Byte02"));
+        plain3s02e01Byte02->setEnabled(true);
+        plain3s02e01Byte02->setGeometry(QRect(8, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte02->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte02->setSizePolicy(sizePolicy);
+        plain3s02e01Byte02->setFont(font);
+        plain3s02e01Byte02->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte02->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte10 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte10->setObjectName(QString::fromUtf8("plain3s02e01Byte10"));
+        plain3s02e01Byte10->setEnabled(true);
+        plain3s02e01Byte10->setGeometry(QRect(56, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte10->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte10->setSizePolicy(sizePolicy);
+        plain3s02e01Byte10->setFont(font1);
+        plain3s02e01Byte10->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte10->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte09 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte09->setObjectName(QString::fromUtf8("plain3s02e01Byte09"));
+        plain3s02e01Byte09->setEnabled(true);
+        plain3s02e01Byte09->setGeometry(QRect(56, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte09->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte09->setSizePolicy(sizePolicy);
+        plain3s02e01Byte09->setFont(font1);
+        plain3s02e01Byte09->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte09->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte01 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte01->setObjectName(QString::fromUtf8("plain3s02e01Byte01"));
+        plain3s02e01Byte01->setEnabled(true);
+        plain3s02e01Byte01->setGeometry(QRect(8, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte01->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte01->setSizePolicy(sizePolicy);
+        plain3s02e01Byte01->setFont(font1);
+        plain3s02e01Byte01->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte01->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte08 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte08->setObjectName(QString::fromUtf8("plain3s02e01Byte08"));
+        plain3s02e01Byte08->setEnabled(true);
+        plain3s02e01Byte08->setGeometry(QRect(56, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte08->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte08->setSizePolicy(sizePolicy);
+        plain3s02e01Byte08->setFont(font);
+        plain3s02e01Byte08->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte08->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte00 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte00->setObjectName(QString::fromUtf8("plain3s02e01Byte00"));
+        plain3s02e01Byte00->setEnabled(true);
+        plain3s02e01Byte00->setGeometry(QRect(8, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte00->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte00->setSizePolicy(sizePolicy);
+        plain3s02e01Byte00->setFont(font1);
+        plain3s02e01Byte00->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte00->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte00->setWordWrap(false);
+        plain3s02e01Byte07 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte07->setObjectName(QString::fromUtf8("plain3s02e01Byte07"));
+        plain3s02e01Byte07->setEnabled(true);
+        plain3s02e01Byte07->setGeometry(QRect(32, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte07->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte07->setSizePolicy(sizePolicy);
+        plain3s02e01Byte07->setFont(font);
+        plain3s02e01Byte07->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte07->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte12 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte12->setObjectName(QString::fromUtf8("plain3s02e01Byte12"));
+        plain3s02e01Byte12->setEnabled(true);
+        plain3s02e01Byte12->setGeometry(QRect(80, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte12->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte12->setSizePolicy(sizePolicy);
+        plain3s02e01Byte12->setFont(font1);
+        plain3s02e01Byte12->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte12->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte03 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte03->setObjectName(QString::fromUtf8("plain3s02e01Byte03"));
+        plain3s02e01Byte03->setEnabled(true);
+        plain3s02e01Byte03->setGeometry(QRect(8, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte03->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte03->setSizePolicy(sizePolicy);
+        plain3s02e01Byte03->setFont(font1);
+        plain3s02e01Byte03->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte03->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte11 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte11->setObjectName(QString::fromUtf8("plain3s02e01Byte11"));
+        plain3s02e01Byte11->setEnabled(true);
+        plain3s02e01Byte11->setGeometry(QRect(56, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte11->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte11->setSizePolicy(sizePolicy);
+        plain3s02e01Byte11->setFont(font1);
+        plain3s02e01Byte11->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte11->setAlignment(Qt::AlignCenter);
+        plain3s02e01Byte05 = new QLabel(groupPlain3s02e01);
+        plain3s02e01Byte05->setObjectName(QString::fromUtf8("plain3s02e01Byte05"));
+        plain3s02e01Byte05->setEnabled(true);
+        plain3s02e01Byte05->setGeometry(QRect(32, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01Byte05->sizePolicy().hasHeightForWidth());
+        plain3s02e01Byte05->setSizePolicy(sizePolicy);
+        plain3s02e01Byte05->setFont(font1);
+        plain3s02e01Byte05->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01Byte05->setAlignment(Qt::AlignCenter);
+        outPlainByte03_15 = new QLabel(groupPlain3s02e01);
+        outPlainByte03_15->setObjectName(QString::fromUtf8("outPlainByte03_15"));
+        outPlainByte03_15->setEnabled(true);
+        outPlainByte03_15->setGeometry(QRect(176, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_15->sizePolicy().hasHeightForWidth());
+        outPlainByte03_15->setSizePolicy(sizePolicy);
+        outPlainByte03_15->setFont(font1);
+        outPlainByte03_15->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_15->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte08 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte08->setObjectName(QString::fromUtf8("plain3s02e01ARKByte08"));
+        plain3s02e01ARKByte08->setEnabled(true);
+        plain3s02e01ARKByte08->setGeometry(QRect(224, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte08->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte08->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte08->setFont(font1);
+        plain3s02e01ARKByte08->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte11_17->setObjectName(QString::fromUtf8("outPlainByte11_17"));
+        outPlainByte11_17->setEnabled(true);
+        outPlainByte11_17->setGeometry(QRect(224, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_17->sizePolicy().hasHeightForWidth());
+        outPlainByte11_17->setSizePolicy(sizePolicy);
+        outPlainByte11_17->setFont(font1);
+        outPlainByte11_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_17->setAlignment(Qt::AlignCenter);
+        outPlainByte09_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte09_17->setObjectName(QString::fromUtf8("outPlainByte09_17"));
+        outPlainByte09_17->setEnabled(true);
+        outPlainByte09_17->setGeometry(QRect(224, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_17->sizePolicy().hasHeightForWidth());
+        outPlainByte09_17->setSizePolicy(sizePolicy);
+        outPlainByte09_17->setFont(font1);
+        outPlainByte09_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_17->setAlignment(Qt::AlignCenter);
+        outPlainByte04_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte04_17->setObjectName(QString::fromUtf8("outPlainByte04_17"));
+        outPlainByte04_17->setEnabled(true);
+        outPlainByte04_17->setGeometry(QRect(200, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_17->sizePolicy().hasHeightForWidth());
+        outPlainByte04_17->setSizePolicy(sizePolicy);
+        outPlainByte04_17->setFont(font1);
+        outPlainByte04_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_17->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte05 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte05->setObjectName(QString::fromUtf8("plain3s02e01ARKByte05"));
+        plain3s02e01ARKByte05->setEnabled(true);
+        plain3s02e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte05->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte05->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte05->setFont(font1);
+        plain3s02e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte14_17->setObjectName(QString::fromUtf8("outPlainByte14_17"));
+        outPlainByte14_17->setEnabled(true);
+        outPlainByte14_17->setGeometry(QRect(248, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_17->sizePolicy().hasHeightForWidth());
+        outPlainByte14_17->setSizePolicy(sizePolicy);
+        outPlainByte14_17->setFont(font1);
+        outPlainByte14_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_17->setAlignment(Qt::AlignCenter);
+        outPlainByte01_15 = new QLabel(groupPlain3s02e01);
+        outPlainByte01_15->setObjectName(QString::fromUtf8("outPlainByte01_15"));
+        outPlainByte01_15->setEnabled(true);
+        outPlainByte01_15->setGeometry(QRect(176, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_15->sizePolicy().hasHeightForWidth());
+        outPlainByte01_15->setSizePolicy(sizePolicy);
+        outPlainByte01_15->setFont(font1);
+        outPlainByte01_15->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_15->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte13 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte13->setObjectName(QString::fromUtf8("plain3s02e01ARKByte13"));
+        plain3s02e01ARKByte13->setEnabled(true);
+        plain3s02e01ARKByte13->setGeometry(QRect(248, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte13->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte13->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte13->setFont(font1);
+        plain3s02e01ARKByte13->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte13->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte02 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte02->setObjectName(QString::fromUtf8("plain3s02e01ARKByte02"));
+        plain3s02e01ARKByte02->setEnabled(true);
+        plain3s02e01ARKByte02->setGeometry(QRect(176, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte02->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte02->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte02->setFont(font1);
+        plain3s02e01ARKByte02->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte12_17->setObjectName(QString::fromUtf8("outPlainByte12_17"));
+        outPlainByte12_17->setEnabled(true);
+        outPlainByte12_17->setGeometry(QRect(248, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_17->sizePolicy().hasHeightForWidth());
+        outPlainByte12_17->setSizePolicy(sizePolicy);
+        outPlainByte12_17->setFont(font1);
+        outPlainByte12_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_17->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte10 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte10->setObjectName(QString::fromUtf8("plain3s02e01ARKByte10"));
+        plain3s02e01ARKByte10->setEnabled(true);
+        plain3s02e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte10->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte10->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte10->setFont(font1);
+        plain3s02e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte10->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte15 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte15->setObjectName(QString::fromUtf8("plain3s02e01ARKByte15"));
+        plain3s02e01ARKByte15->setEnabled(true);
+        plain3s02e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte15->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte15->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte15->setFont(font1);
+        plain3s02e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte06_17->setObjectName(QString::fromUtf8("outPlainByte06_17"));
+        outPlainByte06_17->setEnabled(true);
+        outPlainByte06_17->setGeometry(QRect(200, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_17->sizePolicy().hasHeightForWidth());
+        outPlainByte06_17->setSizePolicy(sizePolicy);
+        outPlainByte06_17->setFont(font1);
+        outPlainByte06_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_17->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte07 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte07->setObjectName(QString::fromUtf8("plain3s02e01ARKByte07"));
+        plain3s02e01ARKByte07->setEnabled(true);
+        plain3s02e01ARKByte07->setGeometry(QRect(200, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte07->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte07->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte07->setFont(font1);
+        plain3s02e01ARKByte07->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte07->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte00 = new QLabel(groupPlain3s02e01);
+        plain3s02e01ARKByte00->setObjectName(QString::fromUtf8("plain3s02e01ARKByte00"));
+        plain3s02e01ARKByte00->setEnabled(true);
+        plain3s02e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01ARKByte00->sizePolicy().hasHeightForWidth());
+        plain3s02e01ARKByte00->setSizePolicy(sizePolicy);
+        plain3s02e01ARKByte00->setFont(font1);
+        plain3s02e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01ARKByte00->setAlignment(Qt::AlignCenter);
+        plain3s02e01ARKByte00->setWordWrap(false);
+        outPlainByte03_16 = new QLabel(groupPlain3s02e01);
+        outPlainByte03_16->setObjectName(QString::fromUtf8("outPlainByte03_16"));
+        outPlainByte03_16->setEnabled(true);
+        outPlainByte03_16->setGeometry(QRect(340, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_16->sizePolicy().hasHeightForWidth());
+        outPlainByte03_16->setSizePolicy(sizePolicy);
+        outPlainByte03_16->setFont(font1);
+        outPlainByte03_16->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_16->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte08 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte08->setObjectName(QString::fromUtf8("plain3s02e01SBByte08"));
+        plain3s02e01SBByte08->setEnabled(true);
+        plain3s02e01SBByte08->setGeometry(QRect(388, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte08->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte08->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte08->setFont(font1);
+        plain3s02e01SBByte08->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte11_18->setObjectName(QString::fromUtf8("outPlainByte11_18"));
+        outPlainByte11_18->setEnabled(true);
+        outPlainByte11_18->setGeometry(QRect(388, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_18->sizePolicy().hasHeightForWidth());
+        outPlainByte11_18->setSizePolicy(sizePolicy);
+        outPlainByte11_18->setFont(font1);
+        outPlainByte11_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_18->setAlignment(Qt::AlignCenter);
+        outPlainByte09_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte09_18->setObjectName(QString::fromUtf8("outPlainByte09_18"));
+        outPlainByte09_18->setEnabled(true);
+        outPlainByte09_18->setGeometry(QRect(388, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_18->sizePolicy().hasHeightForWidth());
+        outPlainByte09_18->setSizePolicy(sizePolicy);
+        outPlainByte09_18->setFont(font1);
+        outPlainByte09_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_18->setAlignment(Qt::AlignCenter);
+        outPlainByte04_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte04_18->setObjectName(QString::fromUtf8("outPlainByte04_18"));
+        outPlainByte04_18->setEnabled(true);
+        outPlainByte04_18->setGeometry(QRect(364, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_18->sizePolicy().hasHeightForWidth());
+        outPlainByte04_18->setSizePolicy(sizePolicy);
+        outPlainByte04_18->setFont(font1);
+        outPlainByte04_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_18->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte05 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte05->setObjectName(QString::fromUtf8("plain3s02e01SBByte05"));
+        plain3s02e01SBByte05->setEnabled(true);
+        plain3s02e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte05->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte05->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte05->setFont(font1);
+        plain3s02e01SBByte05->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte14_18->setObjectName(QString::fromUtf8("outPlainByte14_18"));
+        outPlainByte14_18->setEnabled(true);
+        outPlainByte14_18->setGeometry(QRect(412, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_18->sizePolicy().hasHeightForWidth());
+        outPlainByte14_18->setSizePolicy(sizePolicy);
+        outPlainByte14_18->setFont(font1);
+        outPlainByte14_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_18->setAlignment(Qt::AlignCenter);
+        outPlainByte01_16 = new QLabel(groupPlain3s02e01);
+        outPlainByte01_16->setObjectName(QString::fromUtf8("outPlainByte01_16"));
+        outPlainByte01_16->setEnabled(true);
+        outPlainByte01_16->setGeometry(QRect(340, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_16->sizePolicy().hasHeightForWidth());
+        outPlainByte01_16->setSizePolicy(sizePolicy);
+        outPlainByte01_16->setFont(font1);
+        outPlainByte01_16->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_16->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_16->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte13 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte13->setObjectName(QString::fromUtf8("plain3s02e01SBByte13"));
+        plain3s02e01SBByte13->setEnabled(true);
+        plain3s02e01SBByte13->setGeometry(QRect(412, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte13->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte13->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte13->setFont(font1);
+        plain3s02e01SBByte13->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte13->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte02 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte02->setObjectName(QString::fromUtf8("plain3s02e01SBByte02"));
+        plain3s02e01SBByte02->setEnabled(true);
+        plain3s02e01SBByte02->setGeometry(QRect(340, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte02->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte02->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte02->setFont(font1);
+        plain3s02e01SBByte02->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte12_18->setObjectName(QString::fromUtf8("outPlainByte12_18"));
+        outPlainByte12_18->setEnabled(true);
+        outPlainByte12_18->setGeometry(QRect(412, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_18->sizePolicy().hasHeightForWidth());
+        outPlainByte12_18->setSizePolicy(sizePolicy);
+        outPlainByte12_18->setFont(font1);
+        outPlainByte12_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_18->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte10 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte10->setObjectName(QString::fromUtf8("plain3s02e01SBByte10"));
+        plain3s02e01SBByte10->setEnabled(true);
+        plain3s02e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte10->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte10->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte10->setFont(font1);
+        plain3s02e01SBByte10->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte10->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte15 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte15->setObjectName(QString::fromUtf8("plain3s02e01SBByte15"));
+        plain3s02e01SBByte15->setEnabled(true);
+        plain3s02e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte15->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte15->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte15->setFont(font1);
+        plain3s02e01SBByte15->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte06_18->setObjectName(QString::fromUtf8("outPlainByte06_18"));
+        outPlainByte06_18->setEnabled(true);
+        outPlainByte06_18->setGeometry(QRect(364, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_18->sizePolicy().hasHeightForWidth());
+        outPlainByte06_18->setSizePolicy(sizePolicy);
+        outPlainByte06_18->setFont(font1);
+        outPlainByte06_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_18->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte07 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte07->setObjectName(QString::fromUtf8("plain3s02e01SBByte07"));
+        plain3s02e01SBByte07->setEnabled(true);
+        plain3s02e01SBByte07->setGeometry(QRect(364, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte07->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte07->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte07->setFont(font1);
+        plain3s02e01SBByte07->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte07->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte00 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SBByte00->setObjectName(QString::fromUtf8("plain3s02e01SBByte00"));
+        plain3s02e01SBByte00->setEnabled(true);
+        plain3s02e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SBByte00->sizePolicy().hasHeightForWidth());
+        plain3s02e01SBByte00->setSizePolicy(sizePolicy);
+        plain3s02e01SBByte00->setFont(font1);
+        plain3s02e01SBByte00->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SBByte00->setAlignment(Qt::AlignCenter);
+        plain3s02e01SBByte00->setWordWrap(false);
+        plain3s02e01SRByte03 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte03->setObjectName(QString::fromUtf8("plain3s02e01SRByte03"));
+        plain3s02e01SRByte03->setEnabled(true);
+        plain3s02e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte03->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte03->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte03->setFont(font1);
+        plain3s02e01SRByte03->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte03->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte08 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte08->setObjectName(QString::fromUtf8("plain3s02e01SRByte08"));
+        plain3s02e01SRByte08->setEnabled(true);
+        plain3s02e01SRByte08->setGeometry(QRect(550, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte08->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte08->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte08->setFont(font1);
+        plain3s02e01SRByte08->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte08->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte11 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte11->setObjectName(QString::fromUtf8("plain3s02e01SRByte11"));
+        plain3s02e01SRByte11->setEnabled(true);
+        plain3s02e01SRByte11->setGeometry(QRect(550, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte11->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte11->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte11->setFont(font1);
+        plain3s02e01SRByte11->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte11->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte09 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte09->setObjectName(QString::fromUtf8("plain3s02e01SRByte09"));
+        plain3s02e01SRByte09->setEnabled(true);
+        plain3s02e01SRByte09->setGeometry(QRect(550, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte09->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte09->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte09->setFont(font1);
+        plain3s02e01SRByte09->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte09->setAlignment(Qt::AlignCenter);
+        outPlainByte04_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte04_19->setObjectName(QString::fromUtf8("outPlainByte04_19"));
+        outPlainByte04_19->setEnabled(true);
+        outPlainByte04_19->setGeometry(QRect(526, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_19->sizePolicy().hasHeightForWidth());
+        outPlainByte04_19->setSizePolicy(sizePolicy);
+        outPlainByte04_19->setFont(font1);
+        outPlainByte04_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_19->setAlignment(Qt::AlignCenter);
+        outPlainByte05_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte05_17->setObjectName(QString::fromUtf8("outPlainByte05_17"));
+        outPlainByte05_17->setEnabled(true);
+        outPlainByte05_17->setGeometry(QRect(526, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_17->sizePolicy().hasHeightForWidth());
+        outPlainByte05_17->setSizePolicy(sizePolicy);
+        outPlainByte05_17->setFont(font1);
+        outPlainByte05_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_17->setAlignment(Qt::AlignCenter);
+        outPlainByte14_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte14_19->setObjectName(QString::fromUtf8("outPlainByte14_19"));
+        outPlainByte14_19->setEnabled(true);
+        outPlainByte14_19->setGeometry(QRect(574, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_19->sizePolicy().hasHeightForWidth());
+        outPlainByte14_19->setSizePolicy(sizePolicy);
+        outPlainByte14_19->setFont(font1);
+        outPlainByte14_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_19->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte01 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte01->setObjectName(QString::fromUtf8("plain3s02e01SRByte01"));
+        plain3s02e01SRByte01->setEnabled(true);
+        plain3s02e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte01->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte01->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte01->setFont(font1);
+        plain3s02e01SRByte01->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte01->setAlignment(Qt::AlignCenter);
+        outPlainByte13_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte13_19->setObjectName(QString::fromUtf8("outPlainByte13_19"));
+        outPlainByte13_19->setEnabled(true);
+        outPlainByte13_19->setGeometry(QRect(574, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_19->sizePolicy().hasHeightForWidth());
+        outPlainByte13_19->setSizePolicy(sizePolicy);
+        outPlainByte13_19->setFont(font1);
+        outPlainByte13_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_19->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte02 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte02->setObjectName(QString::fromUtf8("plain3s02e01SRByte02"));
+        plain3s02e01SRByte02->setEnabled(true);
+        plain3s02e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte02->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte02->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte02->setFont(font1);
+        plain3s02e01SRByte02->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte12_19->setObjectName(QString::fromUtf8("outPlainByte12_19"));
+        outPlainByte12_19->setEnabled(true);
+        outPlainByte12_19->setGeometry(QRect(574, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_19->sizePolicy().hasHeightForWidth());
+        outPlainByte12_19->setSizePolicy(sizePolicy);
+        outPlainByte12_19->setFont(font1);
+        outPlainByte12_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_19->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte10 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte10->setObjectName(QString::fromUtf8("plain3s02e01SRByte10"));
+        plain3s02e01SRByte10->setEnabled(true);
+        plain3s02e01SRByte10->setGeometry(QRect(550, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte10->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte10->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte10->setFont(font1);
+        plain3s02e01SRByte10->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte10->setAlignment(Qt::AlignCenter);
+        outPlainByte15_17 = new QLabel(groupPlain3s02e01);
+        outPlainByte15_17->setObjectName(QString::fromUtf8("outPlainByte15_17"));
+        outPlainByte15_17->setEnabled(true);
+        outPlainByte15_17->setGeometry(QRect(574, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_17->sizePolicy().hasHeightForWidth());
+        outPlainByte15_17->setSizePolicy(sizePolicy);
+        outPlainByte15_17->setFont(font1);
+        outPlainByte15_17->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_17->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_17->setAlignment(Qt::AlignCenter);
+        outPlainByte06_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte06_19->setObjectName(QString::fromUtf8("outPlainByte06_19"));
+        outPlainByte06_19->setEnabled(true);
+        outPlainByte06_19->setGeometry(QRect(526, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_19->sizePolicy().hasHeightForWidth());
+        outPlainByte06_19->setSizePolicy(sizePolicy);
+        outPlainByte06_19->setFont(font1);
+        outPlainByte06_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_19->setAlignment(Qt::AlignCenter);
+        outPlainByte07_19 = new QLabel(groupPlain3s02e01);
+        outPlainByte07_19->setObjectName(QString::fromUtf8("outPlainByte07_19"));
+        outPlainByte07_19->setEnabled(true);
+        outPlainByte07_19->setGeometry(QRect(526, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_19->sizePolicy().hasHeightForWidth());
+        outPlainByte07_19->setSizePolicy(sizePolicy);
+        outPlainByte07_19->setFont(font1);
+        outPlainByte07_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_19->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte00 = new QLabel(groupPlain3s02e01);
+        plain3s02e01SRByte00->setObjectName(QString::fromUtf8("plain3s02e01SRByte00"));
+        plain3s02e01SRByte00->setEnabled(true);
+        plain3s02e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01SRByte00->sizePolicy().hasHeightForWidth());
+        plain3s02e01SRByte00->setSizePolicy(sizePolicy);
+        plain3s02e01SRByte00->setFont(font1);
+        plain3s02e01SRByte00->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01SRByte00->setAlignment(Qt::AlignCenter);
+        plain3s02e01SRByte00->setWordWrap(false);
+        outPlainByte13_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte13_20->setObjectName(QString::fromUtf8("outPlainByte13_20"));
+        outPlainByte13_20->setEnabled(true);
+        outPlainByte13_20->setGeometry(QRect(734, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_20->sizePolicy().hasHeightForWidth());
+        outPlainByte13_20->setSizePolicy(sizePolicy);
+        outPlainByte13_20->setFont(font1);
+        outPlainByte13_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_20->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte08 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte08->setObjectName(QString::fromUtf8("plain3s02e01MCByte08"));
+        plain3s02e01MCByte08->setEnabled(true);
+        plain3s02e01MCByte08->setGeometry(QRect(710, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte08->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte08->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte08->setFont(font1);
+        plain3s02e01MCByte08->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte08->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte03 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte03->setObjectName(QString::fromUtf8("plain3s02e01MCByte03"));
+        plain3s02e01MCByte03->setEnabled(true);
+        plain3s02e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte03->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte03->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte03->setFont(font1);
+        plain3s02e01MCByte03->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte03->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte02 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte02->setObjectName(QString::fromUtf8("plain3s02e01MCByte02"));
+        plain3s02e01MCByte02->setEnabled(true);
+        plain3s02e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte02->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte02->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte02->setFont(font1);
+        plain3s02e01MCByte02->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte04_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte04_20->setObjectName(QString::fromUtf8("outPlainByte04_20"));
+        outPlainByte04_20->setEnabled(true);
+        outPlainByte04_20->setGeometry(QRect(686, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_20->sizePolicy().hasHeightForWidth());
+        outPlainByte04_20->setSizePolicy(sizePolicy);
+        outPlainByte04_20->setFont(font1);
+        outPlainByte04_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_20->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte00 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte00->setObjectName(QString::fromUtf8("plain3s02e01MCByte00"));
+        plain3s02e01MCByte00->setEnabled(true);
+        plain3s02e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte00->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte00->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte00->setFont(font1);
+        plain3s02e01MCByte00->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte00->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte00->setWordWrap(false);
+        outPlainByte07_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte07_20->setObjectName(QString::fromUtf8("outPlainByte07_20"));
+        outPlainByte07_20->setEnabled(true);
+        outPlainByte07_20->setGeometry(QRect(686, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_20->sizePolicy().hasHeightForWidth());
+        outPlainByte07_20->setSizePolicy(sizePolicy);
+        outPlainByte07_20->setFont(font1);
+        outPlainByte07_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_20->setAlignment(Qt::AlignCenter);
+        outPlainByte15_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte15_18->setObjectName(QString::fromUtf8("outPlainByte15_18"));
+        outPlainByte15_18->setEnabled(true);
+        outPlainByte15_18->setGeometry(QRect(734, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_18->sizePolicy().hasHeightForWidth());
+        outPlainByte15_18->setSizePolicy(sizePolicy);
+        outPlainByte15_18->setFont(font1);
+        outPlainByte15_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_18->setAlignment(Qt::AlignCenter);
+        outPlainByte06_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte06_20->setObjectName(QString::fromUtf8("outPlainByte06_20"));
+        outPlainByte06_20->setEnabled(true);
+        outPlainByte06_20->setGeometry(QRect(686, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_20->sizePolicy().hasHeightForWidth());
+        outPlainByte06_20->setSizePolicy(sizePolicy);
+        outPlainByte06_20->setFont(font1);
+        outPlainByte06_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_20->setAlignment(Qt::AlignCenter);
+        outPlainByte12_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte12_20->setObjectName(QString::fromUtf8("outPlainByte12_20"));
+        outPlainByte12_20->setEnabled(true);
+        outPlainByte12_20->setGeometry(QRect(734, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_20->sizePolicy().hasHeightForWidth());
+        outPlainByte12_20->setSizePolicy(sizePolicy);
+        outPlainByte12_20->setFont(font1);
+        outPlainByte12_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_20->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte11 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte11->setObjectName(QString::fromUtf8("plain3s02e01MCByte11"));
+        plain3s02e01MCByte11->setEnabled(true);
+        plain3s02e01MCByte11->setGeometry(QRect(710, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte11->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte11->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte11->setFont(font1);
+        plain3s02e01MCByte11->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte11->setAlignment(Qt::AlignCenter);
+        outPlainByte14_20 = new QLabel(groupPlain3s02e01);
+        outPlainByte14_20->setObjectName(QString::fromUtf8("outPlainByte14_20"));
+        outPlainByte14_20->setEnabled(true);
+        outPlainByte14_20->setGeometry(QRect(734, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_20->sizePolicy().hasHeightForWidth());
+        outPlainByte14_20->setSizePolicy(sizePolicy);
+        outPlainByte14_20->setFont(font1);
+        outPlainByte14_20->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_20->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_20->setAlignment(Qt::AlignCenter);
+        outPlainByte05_18 = new QLabel(groupPlain3s02e01);
+        outPlainByte05_18->setObjectName(QString::fromUtf8("outPlainByte05_18"));
+        outPlainByte05_18->setEnabled(true);
+        outPlainByte05_18->setGeometry(QRect(686, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_18->sizePolicy().hasHeightForWidth());
+        outPlainByte05_18->setSizePolicy(sizePolicy);
+        outPlainByte05_18->setFont(font1);
+        outPlainByte05_18->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_18->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_18->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte01 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte01->setObjectName(QString::fromUtf8("plain3s02e01MCByte01"));
+        plain3s02e01MCByte01->setEnabled(true);
+        plain3s02e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte01->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte01->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte01->setFont(font1);
+        plain3s02e01MCByte01->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte01->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte09 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte09->setObjectName(QString::fromUtf8("plain3s02e01MCByte09"));
+        plain3s02e01MCByte09->setEnabled(true);
+        plain3s02e01MCByte09->setGeometry(QRect(710, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte09->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte09->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte09->setFont(font1);
+        plain3s02e01MCByte09->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte09->setAlignment(Qt::AlignCenter);
+        plain3s02e01MCByte10 = new QLabel(groupPlain3s02e01);
+        plain3s02e01MCByte10->setObjectName(QString::fromUtf8("plain3s02e01MCByte10"));
+        plain3s02e01MCByte10->setEnabled(true);
+        plain3s02e01MCByte10->setGeometry(QRect(710, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain3s02e01MCByte10->sizePolicy().hasHeightForWidth());
+        plain3s02e01MCByte10->setSizePolicy(sizePolicy);
+        plain3s02e01MCByte10->setFont(font1);
+        plain3s02e01MCByte10->setLayoutDirection(Qt::LeftToRight);
+        plain3s02e01MCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain3s02e01MCByte10->setAlignment(Qt::AlignCenter);
+        groupPlain2s02e01 = new QGroupBox(tabS02E01);
+        groupPlain2s02e01->setObjectName(QString::fromUtf8("groupPlain2s02e01"));
+        groupPlain2s02e01->setGeometry(QRect(10, 170, 761, 141));
+        sizePolicy.setHeightForWidth(groupPlain2s02e01->sizePolicy().hasHeightForWidth());
+        groupPlain2s02e01->setSizePolicy(sizePolicy);
+        groupPlain2s02e01->setStyleSheet(QString::fromUtf8(""));
+        groupPlain2s02e01->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        plain2s02e01Byte15 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte15->setObjectName(QString::fromUtf8("plain2s02e01Byte15"));
+        plain2s02e01Byte15->setEnabled(true);
+        plain2s02e01Byte15->setGeometry(QRect(80, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte15->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte15->setSizePolicy(sizePolicy);
+        plain2s02e01Byte15->setFont(font1);
+        plain2s02e01Byte15->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte15->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte13 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte13->setObjectName(QString::fromUtf8("plain2s02e01Byte13"));
+        plain2s02e01Byte13->setEnabled(true);
+        plain2s02e01Byte13->setGeometry(QRect(80, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte13->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte13->setSizePolicy(sizePolicy);
+        plain2s02e01Byte13->setFont(font);
+        plain2s02e01Byte13->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte13->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte14 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte14->setObjectName(QString::fromUtf8("plain2s02e01Byte14"));
+        plain2s02e01Byte14->setEnabled(true);
+        plain2s02e01Byte14->setGeometry(QRect(80, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte14->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte14->setSizePolicy(sizePolicy);
+        plain2s02e01Byte14->setFont(font1);
+        plain2s02e01Byte14->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte14->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte06 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte06->setObjectName(QString::fromUtf8("plain2s02e01Byte06"));
+        plain2s02e01Byte06->setEnabled(true);
+        plain2s02e01Byte06->setGeometry(QRect(32, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte06->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte06->setSizePolicy(sizePolicy);
+        plain2s02e01Byte06->setFont(font1);
+        plain2s02e01Byte06->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte06->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte04 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte04->setObjectName(QString::fromUtf8("plain2s02e01Byte04"));
+        plain2s02e01Byte04->setEnabled(true);
+        plain2s02e01Byte04->setGeometry(QRect(32, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte04->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte04->setSizePolicy(sizePolicy);
+        plain2s02e01Byte04->setFont(font1);
+        plain2s02e01Byte04->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte04->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte02 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte02->setObjectName(QString::fromUtf8("plain2s02e01Byte02"));
+        plain2s02e01Byte02->setEnabled(true);
+        plain2s02e01Byte02->setGeometry(QRect(8, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte02->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte02->setSizePolicy(sizePolicy);
+        plain2s02e01Byte02->setFont(font);
+        plain2s02e01Byte02->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte02->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte10 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte10->setObjectName(QString::fromUtf8("plain2s02e01Byte10"));
+        plain2s02e01Byte10->setEnabled(true);
+        plain2s02e01Byte10->setGeometry(QRect(56, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte10->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte10->setSizePolicy(sizePolicy);
+        plain2s02e01Byte10->setFont(font1);
+        plain2s02e01Byte10->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte10->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte09 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte09->setObjectName(QString::fromUtf8("plain2s02e01Byte09"));
+        plain2s02e01Byte09->setEnabled(true);
+        plain2s02e01Byte09->setGeometry(QRect(56, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte09->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte09->setSizePolicy(sizePolicy);
+        plain2s02e01Byte09->setFont(font1);
+        plain2s02e01Byte09->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte09->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte01 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte01->setObjectName(QString::fromUtf8("plain2s02e01Byte01"));
+        plain2s02e01Byte01->setEnabled(true);
+        plain2s02e01Byte01->setGeometry(QRect(8, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte01->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte01->setSizePolicy(sizePolicy);
+        plain2s02e01Byte01->setFont(font1);
+        plain2s02e01Byte01->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte01->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte08 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte08->setObjectName(QString::fromUtf8("plain2s02e01Byte08"));
+        plain2s02e01Byte08->setEnabled(true);
+        plain2s02e01Byte08->setGeometry(QRect(56, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte08->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte08->setSizePolicy(sizePolicy);
+        plain2s02e01Byte08->setFont(font);
+        plain2s02e01Byte08->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte08->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte00 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte00->setObjectName(QString::fromUtf8("plain2s02e01Byte00"));
+        plain2s02e01Byte00->setEnabled(true);
+        plain2s02e01Byte00->setGeometry(QRect(8, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte00->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte00->setSizePolicy(sizePolicy);
+        plain2s02e01Byte00->setFont(font1);
+        plain2s02e01Byte00->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte00->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte00->setWordWrap(false);
+        plain2s02e01Byte07 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte07->setObjectName(QString::fromUtf8("plain2s02e01Byte07"));
+        plain2s02e01Byte07->setEnabled(true);
+        plain2s02e01Byte07->setGeometry(QRect(32, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte07->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte07->setSizePolicy(sizePolicy);
+        plain2s02e01Byte07->setFont(font);
+        plain2s02e01Byte07->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte07->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte12 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte12->setObjectName(QString::fromUtf8("plain2s02e01Byte12"));
+        plain2s02e01Byte12->setEnabled(true);
+        plain2s02e01Byte12->setGeometry(QRect(80, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte12->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte12->setSizePolicy(sizePolicy);
+        plain2s02e01Byte12->setFont(font1);
+        plain2s02e01Byte12->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte12->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte03 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte03->setObjectName(QString::fromUtf8("plain2s02e01Byte03"));
+        plain2s02e01Byte03->setEnabled(true);
+        plain2s02e01Byte03->setGeometry(QRect(8, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte03->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte03->setSizePolicy(sizePolicy);
+        plain2s02e01Byte03->setFont(font1);
+        plain2s02e01Byte03->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte03->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte11 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte11->setObjectName(QString::fromUtf8("plain2s02e01Byte11"));
+        plain2s02e01Byte11->setEnabled(true);
+        plain2s02e01Byte11->setGeometry(QRect(56, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte11->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte11->setSizePolicy(sizePolicy);
+        plain2s02e01Byte11->setFont(font1);
+        plain2s02e01Byte11->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte11->setAlignment(Qt::AlignCenter);
+        plain2s02e01Byte05 = new QLabel(groupPlain2s02e01);
+        plain2s02e01Byte05->setObjectName(QString::fromUtf8("plain2s02e01Byte05"));
+        plain2s02e01Byte05->setEnabled(true);
+        plain2s02e01Byte05->setGeometry(QRect(32, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01Byte05->sizePolicy().hasHeightForWidth());
+        plain2s02e01Byte05->setSizePolicy(sizePolicy);
+        plain2s02e01Byte05->setFont(font1);
+        plain2s02e01Byte05->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01Byte05->setAlignment(Qt::AlignCenter);
+        outPlainByte03_10 = new QLabel(groupPlain2s02e01);
+        outPlainByte03_10->setObjectName(QString::fromUtf8("outPlainByte03_10"));
+        outPlainByte03_10->setEnabled(true);
+        outPlainByte03_10->setGeometry(QRect(176, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_10->sizePolicy().hasHeightForWidth());
+        outPlainByte03_10->setSizePolicy(sizePolicy);
+        outPlainByte03_10->setFont(font1);
+        outPlainByte03_10->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_10->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte08 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte08->setObjectName(QString::fromUtf8("plain2s02e01ARKByte08"));
+        plain2s02e01ARKByte08->setEnabled(true);
+        plain2s02e01ARKByte08->setGeometry(QRect(224, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte08->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte08->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte08->setFont(font1);
+        plain2s02e01ARKByte08->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte11_24->setObjectName(QString::fromUtf8("outPlainByte11_24"));
+        outPlainByte11_24->setEnabled(true);
+        outPlainByte11_24->setGeometry(QRect(224, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_24->sizePolicy().hasHeightForWidth());
+        outPlainByte11_24->setSizePolicy(sizePolicy);
+        outPlainByte11_24->setFont(font1);
+        outPlainByte11_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_24->setAlignment(Qt::AlignCenter);
+        outPlainByte09_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte09_24->setObjectName(QString::fromUtf8("outPlainByte09_24"));
+        outPlainByte09_24->setEnabled(true);
+        outPlainByte09_24->setGeometry(QRect(224, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_24->sizePolicy().hasHeightForWidth());
+        outPlainByte09_24->setSizePolicy(sizePolicy);
+        outPlainByte09_24->setFont(font1);
+        outPlainByte09_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_24->setAlignment(Qt::AlignCenter);
+        outPlainByte04_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte04_24->setObjectName(QString::fromUtf8("outPlainByte04_24"));
+        outPlainByte04_24->setEnabled(true);
+        outPlainByte04_24->setGeometry(QRect(200, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_24->sizePolicy().hasHeightForWidth());
+        outPlainByte04_24->setSizePolicy(sizePolicy);
+        outPlainByte04_24->setFont(font1);
+        outPlainByte04_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_24->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte05 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte05->setObjectName(QString::fromUtf8("plain2s02e01ARKByte05"));
+        plain2s02e01ARKByte05->setEnabled(true);
+        plain2s02e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte05->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte05->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte05->setFont(font1);
+        plain2s02e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte14_24->setObjectName(QString::fromUtf8("outPlainByte14_24"));
+        outPlainByte14_24->setEnabled(true);
+        outPlainByte14_24->setGeometry(QRect(248, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_24->sizePolicy().hasHeightForWidth());
+        outPlainByte14_24->setSizePolicy(sizePolicy);
+        outPlainByte14_24->setFont(font1);
+        outPlainByte14_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_24->setAlignment(Qt::AlignCenter);
+        outPlainByte01_10 = new QLabel(groupPlain2s02e01);
+        outPlainByte01_10->setObjectName(QString::fromUtf8("outPlainByte01_10"));
+        outPlainByte01_10->setEnabled(true);
+        outPlainByte01_10->setGeometry(QRect(176, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_10->sizePolicy().hasHeightForWidth());
+        outPlainByte01_10->setSizePolicy(sizePolicy);
+        outPlainByte01_10->setFont(font1);
+        outPlainByte01_10->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_10->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte13 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte13->setObjectName(QString::fromUtf8("plain2s02e01ARKByte13"));
+        plain2s02e01ARKByte13->setEnabled(true);
+        plain2s02e01ARKByte13->setGeometry(QRect(248, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte13->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte13->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte13->setFont(font1);
+        plain2s02e01ARKByte13->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte13->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte02 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte02->setObjectName(QString::fromUtf8("plain2s02e01ARKByte02"));
+        plain2s02e01ARKByte02->setEnabled(true);
+        plain2s02e01ARKByte02->setGeometry(QRect(176, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte02->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte02->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte02->setFont(font1);
+        plain2s02e01ARKByte02->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte12_24->setObjectName(QString::fromUtf8("outPlainByte12_24"));
+        outPlainByte12_24->setEnabled(true);
+        outPlainByte12_24->setGeometry(QRect(248, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_24->sizePolicy().hasHeightForWidth());
+        outPlainByte12_24->setSizePolicy(sizePolicy);
+        outPlainByte12_24->setFont(font1);
+        outPlainByte12_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_24->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte10 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte10->setObjectName(QString::fromUtf8("plain2s02e01ARKByte10"));
+        plain2s02e01ARKByte10->setEnabled(true);
+        plain2s02e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte10->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte10->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte10->setFont(font1);
+        plain2s02e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte10->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte15 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte15->setObjectName(QString::fromUtf8("plain2s02e01ARKByte15"));
+        plain2s02e01ARKByte15->setEnabled(true);
+        plain2s02e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte15->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte15->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte15->setFont(font1);
+        plain2s02e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_24 = new QLabel(groupPlain2s02e01);
+        outPlainByte06_24->setObjectName(QString::fromUtf8("outPlainByte06_24"));
+        outPlainByte06_24->setEnabled(true);
+        outPlainByte06_24->setGeometry(QRect(200, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_24->sizePolicy().hasHeightForWidth());
+        outPlainByte06_24->setSizePolicy(sizePolicy);
+        outPlainByte06_24->setFont(font1);
+        outPlainByte06_24->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_24->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_24->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte07 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte07->setObjectName(QString::fromUtf8("plain2s02e01ARKByte07"));
+        plain2s02e01ARKByte07->setEnabled(true);
+        plain2s02e01ARKByte07->setGeometry(QRect(200, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte07->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte07->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte07->setFont(font1);
+        plain2s02e01ARKByte07->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte07->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte00 = new QLabel(groupPlain2s02e01);
+        plain2s02e01ARKByte00->setObjectName(QString::fromUtf8("plain2s02e01ARKByte00"));
+        plain2s02e01ARKByte00->setEnabled(true);
+        plain2s02e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01ARKByte00->sizePolicy().hasHeightForWidth());
+        plain2s02e01ARKByte00->setSizePolicy(sizePolicy);
+        plain2s02e01ARKByte00->setFont(font1);
+        plain2s02e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01ARKByte00->setAlignment(Qt::AlignCenter);
+        plain2s02e01ARKByte00->setWordWrap(false);
+        outPlainByte03_11 = new QLabel(groupPlain2s02e01);
+        outPlainByte03_11->setObjectName(QString::fromUtf8("outPlainByte03_11"));
+        outPlainByte03_11->setEnabled(true);
+        outPlainByte03_11->setGeometry(QRect(340, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_11->sizePolicy().hasHeightForWidth());
+        outPlainByte03_11->setSizePolicy(sizePolicy);
+        outPlainByte03_11->setFont(font1);
+        outPlainByte03_11->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_11->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte08 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte08->setObjectName(QString::fromUtf8("plain2s02e01SBByte08"));
+        plain2s02e01SBByte08->setEnabled(true);
+        plain2s02e01SBByte08->setGeometry(QRect(388, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte08->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte08->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte08->setFont(font1);
+        plain2s02e01SBByte08->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte11_25->setObjectName(QString::fromUtf8("outPlainByte11_25"));
+        outPlainByte11_25->setEnabled(true);
+        outPlainByte11_25->setGeometry(QRect(388, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_25->sizePolicy().hasHeightForWidth());
+        outPlainByte11_25->setSizePolicy(sizePolicy);
+        outPlainByte11_25->setFont(font1);
+        outPlainByte11_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_25->setAlignment(Qt::AlignCenter);
+        outPlainByte09_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte09_25->setObjectName(QString::fromUtf8("outPlainByte09_25"));
+        outPlainByte09_25->setEnabled(true);
+        outPlainByte09_25->setGeometry(QRect(388, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_25->sizePolicy().hasHeightForWidth());
+        outPlainByte09_25->setSizePolicy(sizePolicy);
+        outPlainByte09_25->setFont(font1);
+        outPlainByte09_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_25->setAlignment(Qt::AlignCenter);
+        outPlainByte04_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte04_25->setObjectName(QString::fromUtf8("outPlainByte04_25"));
+        outPlainByte04_25->setEnabled(true);
+        outPlainByte04_25->setGeometry(QRect(364, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_25->sizePolicy().hasHeightForWidth());
+        outPlainByte04_25->setSizePolicy(sizePolicy);
+        outPlainByte04_25->setFont(font1);
+        outPlainByte04_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_25->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte05 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte05->setObjectName(QString::fromUtf8("plain2s02e01SBByte05"));
+        plain2s02e01SBByte05->setEnabled(true);
+        plain2s02e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte05->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte05->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte05->setFont(font1);
+        plain2s02e01SBByte05->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte14_25->setObjectName(QString::fromUtf8("outPlainByte14_25"));
+        outPlainByte14_25->setEnabled(true);
+        outPlainByte14_25->setGeometry(QRect(412, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_25->sizePolicy().hasHeightForWidth());
+        outPlainByte14_25->setSizePolicy(sizePolicy);
+        outPlainByte14_25->setFont(font1);
+        outPlainByte14_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_25->setAlignment(Qt::AlignCenter);
+        outPlainByte01_11 = new QLabel(groupPlain2s02e01);
+        outPlainByte01_11->setObjectName(QString::fromUtf8("outPlainByte01_11"));
+        outPlainByte01_11->setEnabled(true);
+        outPlainByte01_11->setGeometry(QRect(340, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_11->sizePolicy().hasHeightForWidth());
+        outPlainByte01_11->setSizePolicy(sizePolicy);
+        outPlainByte01_11->setFont(font1);
+        outPlainByte01_11->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_11->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte13 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte13->setObjectName(QString::fromUtf8("plain2s02e01SBByte13"));
+        plain2s02e01SBByte13->setEnabled(true);
+        plain2s02e01SBByte13->setGeometry(QRect(412, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte13->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte13->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte13->setFont(font1);
+        plain2s02e01SBByte13->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte13->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte02 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte02->setObjectName(QString::fromUtf8("plain2s02e01SBByte02"));
+        plain2s02e01SBByte02->setEnabled(true);
+        plain2s02e01SBByte02->setGeometry(QRect(340, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte02->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte02->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte02->setFont(font1);
+        plain2s02e01SBByte02->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte12_25->setObjectName(QString::fromUtf8("outPlainByte12_25"));
+        outPlainByte12_25->setEnabled(true);
+        outPlainByte12_25->setGeometry(QRect(412, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_25->sizePolicy().hasHeightForWidth());
+        outPlainByte12_25->setSizePolicy(sizePolicy);
+        outPlainByte12_25->setFont(font1);
+        outPlainByte12_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_25->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte10 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte10->setObjectName(QString::fromUtf8("plain2s02e01SBByte10"));
+        plain2s02e01SBByte10->setEnabled(true);
+        plain2s02e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte10->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte10->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte10->setFont(font1);
+        plain2s02e01SBByte10->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte10->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte15 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte15->setObjectName(QString::fromUtf8("plain2s02e01SBByte15"));
+        plain2s02e01SBByte15->setEnabled(true);
+        plain2s02e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte15->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte15->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte15->setFont(font1);
+        plain2s02e01SBByte15->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte06_25->setObjectName(QString::fromUtf8("outPlainByte06_25"));
+        outPlainByte06_25->setEnabled(true);
+        outPlainByte06_25->setGeometry(QRect(364, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_25->sizePolicy().hasHeightForWidth());
+        outPlainByte06_25->setSizePolicy(sizePolicy);
+        outPlainByte06_25->setFont(font1);
+        outPlainByte06_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_25->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte07 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte07->setObjectName(QString::fromUtf8("plain2s02e01SBByte07"));
+        plain2s02e01SBByte07->setEnabled(true);
+        plain2s02e01SBByte07->setGeometry(QRect(364, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte07->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte07->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte07->setFont(font1);
+        plain2s02e01SBByte07->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte07->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte00 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SBByte00->setObjectName(QString::fromUtf8("plain2s02e01SBByte00"));
+        plain2s02e01SBByte00->setEnabled(true);
+        plain2s02e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SBByte00->sizePolicy().hasHeightForWidth());
+        plain2s02e01SBByte00->setSizePolicy(sizePolicy);
+        plain2s02e01SBByte00->setFont(font1);
+        plain2s02e01SBByte00->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SBByte00->setAlignment(Qt::AlignCenter);
+        plain2s02e01SBByte00->setWordWrap(false);
+        plain2s02e01SRByte03 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte03->setObjectName(QString::fromUtf8("plain2s02e01SRByte03"));
+        plain2s02e01SRByte03->setEnabled(true);
+        plain2s02e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte03->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte03->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte03->setFont(font1);
+        plain2s02e01SRByte03->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte03->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte08 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte08->setObjectName(QString::fromUtf8("plain2s02e01SRByte08"));
+        plain2s02e01SRByte08->setEnabled(true);
+        plain2s02e01SRByte08->setGeometry(QRect(550, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte08->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte08->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte08->setFont(font1);
+        plain2s02e01SRByte08->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte08->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte11 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte11->setObjectName(QString::fromUtf8("plain2s02e01SRByte11"));
+        plain2s02e01SRByte11->setEnabled(true);
+        plain2s02e01SRByte11->setGeometry(QRect(550, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte11->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte11->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte11->setFont(font1);
+        plain2s02e01SRByte11->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte11->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte09 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte09->setObjectName(QString::fromUtf8("plain2s02e01SRByte09"));
+        plain2s02e01SRByte09->setEnabled(true);
+        plain2s02e01SRByte09->setGeometry(QRect(550, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte09->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte09->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte09->setFont(font1);
+        plain2s02e01SRByte09->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte09->setAlignment(Qt::AlignCenter);
+        outPlainByte04_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte04_26->setObjectName(QString::fromUtf8("outPlainByte04_26"));
+        outPlainByte04_26->setEnabled(true);
+        outPlainByte04_26->setGeometry(QRect(526, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_26->sizePolicy().hasHeightForWidth());
+        outPlainByte04_26->setSizePolicy(sizePolicy);
+        outPlainByte04_26->setFont(font1);
+        outPlainByte04_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_26->setAlignment(Qt::AlignCenter);
+        outPlainByte05_12 = new QLabel(groupPlain2s02e01);
+        outPlainByte05_12->setObjectName(QString::fromUtf8("outPlainByte05_12"));
+        outPlainByte05_12->setEnabled(true);
+        outPlainByte05_12->setGeometry(QRect(526, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_12->sizePolicy().hasHeightForWidth());
+        outPlainByte05_12->setSizePolicy(sizePolicy);
+        outPlainByte05_12->setFont(font1);
+        outPlainByte05_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_12->setAlignment(Qt::AlignCenter);
+        outPlainByte14_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte14_26->setObjectName(QString::fromUtf8("outPlainByte14_26"));
+        outPlainByte14_26->setEnabled(true);
+        outPlainByte14_26->setGeometry(QRect(574, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_26->sizePolicy().hasHeightForWidth());
+        outPlainByte14_26->setSizePolicy(sizePolicy);
+        outPlainByte14_26->setFont(font1);
+        outPlainByte14_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_26->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte01 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte01->setObjectName(QString::fromUtf8("plain2s02e01SRByte01"));
+        plain2s02e01SRByte01->setEnabled(true);
+        plain2s02e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte01->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte01->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte01->setFont(font1);
+        plain2s02e01SRByte01->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte01->setAlignment(Qt::AlignCenter);
+        outPlainByte13_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte13_25->setObjectName(QString::fromUtf8("outPlainByte13_25"));
+        outPlainByte13_25->setEnabled(true);
+        outPlainByte13_25->setGeometry(QRect(574, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_25->sizePolicy().hasHeightForWidth());
+        outPlainByte13_25->setSizePolicy(sizePolicy);
+        outPlainByte13_25->setFont(font1);
+        outPlainByte13_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_25->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte02 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte02->setObjectName(QString::fromUtf8("plain2s02e01SRByte02"));
+        plain2s02e01SRByte02->setEnabled(true);
+        plain2s02e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte02->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte02->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte02->setFont(font1);
+        plain2s02e01SRByte02->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte12_26->setObjectName(QString::fromUtf8("outPlainByte12_26"));
+        outPlainByte12_26->setEnabled(true);
+        outPlainByte12_26->setGeometry(QRect(574, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_26->sizePolicy().hasHeightForWidth());
+        outPlainByte12_26->setSizePolicy(sizePolicy);
+        outPlainByte12_26->setFont(font1);
+        outPlainByte12_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_26->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte10 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte10->setObjectName(QString::fromUtf8("plain2s02e01SRByte10"));
+        plain2s02e01SRByte10->setEnabled(true);
+        plain2s02e01SRByte10->setGeometry(QRect(550, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte10->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte10->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte10->setFont(font1);
+        plain2s02e01SRByte10->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte10->setAlignment(Qt::AlignCenter);
+        outPlainByte15_12 = new QLabel(groupPlain2s02e01);
+        outPlainByte15_12->setObjectName(QString::fromUtf8("outPlainByte15_12"));
+        outPlainByte15_12->setEnabled(true);
+        outPlainByte15_12->setGeometry(QRect(574, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_12->sizePolicy().hasHeightForWidth());
+        outPlainByte15_12->setSizePolicy(sizePolicy);
+        outPlainByte15_12->setFont(font1);
+        outPlainByte15_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_12->setAlignment(Qt::AlignCenter);
+        outPlainByte06_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte06_26->setObjectName(QString::fromUtf8("outPlainByte06_26"));
+        outPlainByte06_26->setEnabled(true);
+        outPlainByte06_26->setGeometry(QRect(526, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_26->sizePolicy().hasHeightForWidth());
+        outPlainByte06_26->setSizePolicy(sizePolicy);
+        outPlainByte06_26->setFont(font1);
+        outPlainByte06_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_26->setAlignment(Qt::AlignCenter);
+        outPlainByte07_25 = new QLabel(groupPlain2s02e01);
+        outPlainByte07_25->setObjectName(QString::fromUtf8("outPlainByte07_25"));
+        outPlainByte07_25->setEnabled(true);
+        outPlainByte07_25->setGeometry(QRect(526, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_25->sizePolicy().hasHeightForWidth());
+        outPlainByte07_25->setSizePolicy(sizePolicy);
+        outPlainByte07_25->setFont(font1);
+        outPlainByte07_25->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_25->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_25->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte00 = new QLabel(groupPlain2s02e01);
+        plain2s02e01SRByte00->setObjectName(QString::fromUtf8("plain2s02e01SRByte00"));
+        plain2s02e01SRByte00->setEnabled(true);
+        plain2s02e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01SRByte00->sizePolicy().hasHeightForWidth());
+        plain2s02e01SRByte00->setSizePolicy(sizePolicy);
+        plain2s02e01SRByte00->setFont(font1);
+        plain2s02e01SRByte00->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01SRByte00->setAlignment(Qt::AlignCenter);
+        plain2s02e01SRByte00->setWordWrap(false);
+        outPlainByte13_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte13_26->setObjectName(QString::fromUtf8("outPlainByte13_26"));
+        outPlainByte13_26->setEnabled(true);
+        outPlainByte13_26->setGeometry(QRect(734, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_26->sizePolicy().hasHeightForWidth());
+        outPlainByte13_26->setSizePolicy(sizePolicy);
+        outPlainByte13_26->setFont(font1);
+        outPlainByte13_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_26->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte08 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte08->setObjectName(QString::fromUtf8("plain2s02e01MCByte08"));
+        plain2s02e01MCByte08->setEnabled(true);
+        plain2s02e01MCByte08->setGeometry(QRect(710, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte08->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte08->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte08->setFont(font1);
+        plain2s02e01MCByte08->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte08->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte03 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte03->setObjectName(QString::fromUtf8("plain2s02e01MCByte03"));
+        plain2s02e01MCByte03->setEnabled(true);
+        plain2s02e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte03->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte03->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte03->setFont(font1);
+        plain2s02e01MCByte03->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte03->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte02 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte02->setObjectName(QString::fromUtf8("plain2s02e01MCByte02"));
+        plain2s02e01MCByte02->setEnabled(true);
+        plain2s02e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte02->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte02->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte02->setFont(font1);
+        plain2s02e01MCByte02->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte04_27 = new QLabel(groupPlain2s02e01);
+        outPlainByte04_27->setObjectName(QString::fromUtf8("outPlainByte04_27"));
+        outPlainByte04_27->setEnabled(true);
+        outPlainByte04_27->setGeometry(QRect(686, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_27->sizePolicy().hasHeightForWidth());
+        outPlainByte04_27->setSizePolicy(sizePolicy);
+        outPlainByte04_27->setFont(font1);
+        outPlainByte04_27->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_27->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_27->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte00 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte00->setObjectName(QString::fromUtf8("plain2s02e01MCByte00"));
+        plain2s02e01MCByte00->setEnabled(true);
+        plain2s02e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte00->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte00->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte00->setFont(font1);
+        plain2s02e01MCByte00->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte00->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte00->setWordWrap(false);
+        outPlainByte07_26 = new QLabel(groupPlain2s02e01);
+        outPlainByte07_26->setObjectName(QString::fromUtf8("outPlainByte07_26"));
+        outPlainByte07_26->setEnabled(true);
+        outPlainByte07_26->setGeometry(QRect(686, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_26->sizePolicy().hasHeightForWidth());
+        outPlainByte07_26->setSizePolicy(sizePolicy);
+        outPlainByte07_26->setFont(font1);
+        outPlainByte07_26->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_26->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_26->setAlignment(Qt::AlignCenter);
+        outPlainByte15_13 = new QLabel(groupPlain2s02e01);
+        outPlainByte15_13->setObjectName(QString::fromUtf8("outPlainByte15_13"));
+        outPlainByte15_13->setEnabled(true);
+        outPlainByte15_13->setGeometry(QRect(734, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_13->sizePolicy().hasHeightForWidth());
+        outPlainByte15_13->setSizePolicy(sizePolicy);
+        outPlainByte15_13->setFont(font1);
+        outPlainByte15_13->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_13->setAlignment(Qt::AlignCenter);
+        outPlainByte06_27 = new QLabel(groupPlain2s02e01);
+        outPlainByte06_27->setObjectName(QString::fromUtf8("outPlainByte06_27"));
+        outPlainByte06_27->setEnabled(true);
+        outPlainByte06_27->setGeometry(QRect(686, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_27->sizePolicy().hasHeightForWidth());
+        outPlainByte06_27->setSizePolicy(sizePolicy);
+        outPlainByte06_27->setFont(font1);
+        outPlainByte06_27->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_27->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_27->setAlignment(Qt::AlignCenter);
+        outPlainByte12_27 = new QLabel(groupPlain2s02e01);
+        outPlainByte12_27->setObjectName(QString::fromUtf8("outPlainByte12_27"));
+        outPlainByte12_27->setEnabled(true);
+        outPlainByte12_27->setGeometry(QRect(734, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_27->sizePolicy().hasHeightForWidth());
+        outPlainByte12_27->setSizePolicy(sizePolicy);
+        outPlainByte12_27->setFont(font1);
+        outPlainByte12_27->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_27->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_27->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte11 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte11->setObjectName(QString::fromUtf8("plain2s02e01MCByte11"));
+        plain2s02e01MCByte11->setEnabled(true);
+        plain2s02e01MCByte11->setGeometry(QRect(710, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte11->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte11->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte11->setFont(font1);
+        plain2s02e01MCByte11->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte11->setAlignment(Qt::AlignCenter);
+        outPlainByte14_27 = new QLabel(groupPlain2s02e01);
+        outPlainByte14_27->setObjectName(QString::fromUtf8("outPlainByte14_27"));
+        outPlainByte14_27->setEnabled(true);
+        outPlainByte14_27->setGeometry(QRect(734, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_27->sizePolicy().hasHeightForWidth());
+        outPlainByte14_27->setSizePolicy(sizePolicy);
+        outPlainByte14_27->setFont(font1);
+        outPlainByte14_27->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_27->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_27->setAlignment(Qt::AlignCenter);
+        outPlainByte05_13 = new QLabel(groupPlain2s02e01);
+        outPlainByte05_13->setObjectName(QString::fromUtf8("outPlainByte05_13"));
+        outPlainByte05_13->setEnabled(true);
+        outPlainByte05_13->setGeometry(QRect(686, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_13->sizePolicy().hasHeightForWidth());
+        outPlainByte05_13->setSizePolicy(sizePolicy);
+        outPlainByte05_13->setFont(font1);
+        outPlainByte05_13->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_13->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte01 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte01->setObjectName(QString::fromUtf8("plain2s02e01MCByte01"));
+        plain2s02e01MCByte01->setEnabled(true);
+        plain2s02e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte01->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte01->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte01->setFont(font1);
+        plain2s02e01MCByte01->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte01->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte09 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte09->setObjectName(QString::fromUtf8("plain2s02e01MCByte09"));
+        plain2s02e01MCByte09->setEnabled(true);
+        plain2s02e01MCByte09->setGeometry(QRect(710, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte09->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte09->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte09->setFont(font1);
+        plain2s02e01MCByte09->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte09->setAlignment(Qt::AlignCenter);
+        plain2s02e01MCByte10 = new QLabel(groupPlain2s02e01);
+        plain2s02e01MCByte10->setObjectName(QString::fromUtf8("plain2s02e01MCByte10"));
+        plain2s02e01MCByte10->setEnabled(true);
+        plain2s02e01MCByte10->setGeometry(QRect(710, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain2s02e01MCByte10->sizePolicy().hasHeightForWidth());
+        plain2s02e01MCByte10->setSizePolicy(sizePolicy);
+        plain2s02e01MCByte10->setFont(font1);
+        plain2s02e01MCByte10->setLayoutDirection(Qt::LeftToRight);
+        plain2s02e01MCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain2s02e01MCByte10->setAlignment(Qt::AlignCenter);
+        groupPlain1s02e01 = new QGroupBox(tabS02E01);
+        groupPlain1s02e01->setObjectName(QString::fromUtf8("groupPlain1s02e01"));
+        groupPlain1s02e01->setGeometry(QRect(10, 20, 761, 141));
+        sizePolicy.setHeightForWidth(groupPlain1s02e01->sizePolicy().hasHeightForWidth());
+        groupPlain1s02e01->setSizePolicy(sizePolicy);
+        groupPlain1s02e01->setStyleSheet(QString::fromUtf8(""));
+        groupPlain1s02e01->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        plain1s02e01Byte15 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte15->setObjectName(QString::fromUtf8("plain1s02e01Byte15"));
+        plain1s02e01Byte15->setEnabled(true);
+        plain1s02e01Byte15->setGeometry(QRect(80, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte15->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte15->setSizePolicy(sizePolicy);
+        plain1s02e01Byte15->setFont(font1);
+        plain1s02e01Byte15->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte15->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte13 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte13->setObjectName(QString::fromUtf8("plain1s02e01Byte13"));
+        plain1s02e01Byte13->setEnabled(true);
+        plain1s02e01Byte13->setGeometry(QRect(80, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte13->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte13->setSizePolicy(sizePolicy);
+        plain1s02e01Byte13->setFont(font);
+        plain1s02e01Byte13->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte13->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte14 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte14->setObjectName(QString::fromUtf8("plain1s02e01Byte14"));
+        plain1s02e01Byte14->setEnabled(true);
+        plain1s02e01Byte14->setGeometry(QRect(80, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte14->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte14->setSizePolicy(sizePolicy);
+        plain1s02e01Byte14->setFont(font1);
+        plain1s02e01Byte14->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte14->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte06 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte06->setObjectName(QString::fromUtf8("plain1s02e01Byte06"));
+        plain1s02e01Byte06->setEnabled(true);
+        plain1s02e01Byte06->setGeometry(QRect(32, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte06->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte06->setSizePolicy(sizePolicy);
+        plain1s02e01Byte06->setFont(font1);
+        plain1s02e01Byte06->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte06->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte04 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte04->setObjectName(QString::fromUtf8("plain1s02e01Byte04"));
+        plain1s02e01Byte04->setEnabled(true);
+        plain1s02e01Byte04->setGeometry(QRect(32, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte04->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte04->setSizePolicy(sizePolicy);
+        plain1s02e01Byte04->setFont(font1);
+        plain1s02e01Byte04->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte04->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte02 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte02->setObjectName(QString::fromUtf8("plain1s02e01Byte02"));
+        plain1s02e01Byte02->setEnabled(true);
+        plain1s02e01Byte02->setGeometry(QRect(8, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte02->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte02->setSizePolicy(sizePolicy);
+        plain1s02e01Byte02->setFont(font);
+        plain1s02e01Byte02->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte02->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte10 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte10->setObjectName(QString::fromUtf8("plain1s02e01Byte10"));
+        plain1s02e01Byte10->setEnabled(true);
+        plain1s02e01Byte10->setGeometry(QRect(56, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte10->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte10->setSizePolicy(sizePolicy);
+        plain1s02e01Byte10->setFont(font1);
+        plain1s02e01Byte10->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte10->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte09 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte09->setObjectName(QString::fromUtf8("plain1s02e01Byte09"));
+        plain1s02e01Byte09->setEnabled(true);
+        plain1s02e01Byte09->setGeometry(QRect(56, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte09->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte09->setSizePolicy(sizePolicy);
+        plain1s02e01Byte09->setFont(font1);
+        plain1s02e01Byte09->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte09->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte01 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte01->setObjectName(QString::fromUtf8("plain1s02e01Byte01"));
+        plain1s02e01Byte01->setEnabled(true);
+        plain1s02e01Byte01->setGeometry(QRect(8, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte01->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte01->setSizePolicy(sizePolicy);
+        plain1s02e01Byte01->setFont(font1);
+        plain1s02e01Byte01->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte01->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte08 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte08->setObjectName(QString::fromUtf8("plain1s02e01Byte08"));
+        plain1s02e01Byte08->setEnabled(true);
+        plain1s02e01Byte08->setGeometry(QRect(56, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte08->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte08->setSizePolicy(sizePolicy);
+        plain1s02e01Byte08->setFont(font);
+        plain1s02e01Byte08->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte08->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte00 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte00->setObjectName(QString::fromUtf8("plain1s02e01Byte00"));
+        plain1s02e01Byte00->setEnabled(true);
+        plain1s02e01Byte00->setGeometry(QRect(8, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte00->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte00->setSizePolicy(sizePolicy);
+        plain1s02e01Byte00->setFont(font1);
+        plain1s02e01Byte00->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte00->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte00->setWordWrap(false);
+        plain1s02e01Byte07 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte07->setObjectName(QString::fromUtf8("plain1s02e01Byte07"));
+        plain1s02e01Byte07->setEnabled(true);
+        plain1s02e01Byte07->setGeometry(QRect(32, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte07->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte07->setSizePolicy(sizePolicy);
+        plain1s02e01Byte07->setFont(font);
+        plain1s02e01Byte07->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte07->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte12 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte12->setObjectName(QString::fromUtf8("plain1s02e01Byte12"));
+        plain1s02e01Byte12->setEnabled(true);
+        plain1s02e01Byte12->setGeometry(QRect(80, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte12->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte12->setSizePolicy(sizePolicy);
+        plain1s02e01Byte12->setFont(font1);
+        plain1s02e01Byte12->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte12->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte03 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte03->setObjectName(QString::fromUtf8("plain1s02e01Byte03"));
+        plain1s02e01Byte03->setEnabled(true);
+        plain1s02e01Byte03->setGeometry(QRect(8, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte03->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte03->setSizePolicy(sizePolicy);
+        plain1s02e01Byte03->setFont(font1);
+        plain1s02e01Byte03->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte03->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte11 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte11->setObjectName(QString::fromUtf8("plain1s02e01Byte11"));
+        plain1s02e01Byte11->setEnabled(true);
+        plain1s02e01Byte11->setGeometry(QRect(56, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte11->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte11->setSizePolicy(sizePolicy);
+        plain1s02e01Byte11->setFont(font1);
+        plain1s02e01Byte11->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte11->setAlignment(Qt::AlignCenter);
+        plain1s02e01Byte05 = new QLabel(groupPlain1s02e01);
+        plain1s02e01Byte05->setObjectName(QString::fromUtf8("plain1s02e01Byte05"));
+        plain1s02e01Byte05->setEnabled(true);
+        plain1s02e01Byte05->setGeometry(QRect(32, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01Byte05->sizePolicy().hasHeightForWidth());
+        plain1s02e01Byte05->setSizePolicy(sizePolicy);
+        plain1s02e01Byte05->setFont(font1);
+        plain1s02e01Byte05->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01Byte05->setAlignment(Qt::AlignCenter);
+        outPlainByte03_6 = new QLabel(groupPlain1s02e01);
+        outPlainByte03_6->setObjectName(QString::fromUtf8("outPlainByte03_6"));
+        outPlainByte03_6->setEnabled(true);
+        outPlainByte03_6->setGeometry(QRect(176, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_6->sizePolicy().hasHeightForWidth());
+        outPlainByte03_6->setSizePolicy(sizePolicy);
+        outPlainByte03_6->setFont(font1);
+        outPlainByte03_6->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_6->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte08 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte08->setObjectName(QString::fromUtf8("plain1s02e01ARKByte08"));
+        plain1s02e01ARKByte08->setEnabled(true);
+        plain1s02e01ARKByte08->setGeometry(QRect(224, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte08->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte08->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte08->setFont(font1);
+        plain1s02e01ARKByte08->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte11_12->setObjectName(QString::fromUtf8("outPlainByte11_12"));
+        outPlainByte11_12->setEnabled(true);
+        outPlainByte11_12->setGeometry(QRect(224, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_12->sizePolicy().hasHeightForWidth());
+        outPlainByte11_12->setSizePolicy(sizePolicy);
+        outPlainByte11_12->setFont(font1);
+        outPlainByte11_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_12->setAlignment(Qt::AlignCenter);
+        outPlainByte09_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte09_12->setObjectName(QString::fromUtf8("outPlainByte09_12"));
+        outPlainByte09_12->setEnabled(true);
+        outPlainByte09_12->setGeometry(QRect(224, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_12->sizePolicy().hasHeightForWidth());
+        outPlainByte09_12->setSizePolicy(sizePolicy);
+        outPlainByte09_12->setFont(font1);
+        outPlainByte09_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_12->setAlignment(Qt::AlignCenter);
+        outPlainByte04_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte04_12->setObjectName(QString::fromUtf8("outPlainByte04_12"));
+        outPlainByte04_12->setEnabled(true);
+        outPlainByte04_12->setGeometry(QRect(200, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_12->sizePolicy().hasHeightForWidth());
+        outPlainByte04_12->setSizePolicy(sizePolicy);
+        outPlainByte04_12->setFont(font1);
+        outPlainByte04_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_12->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte05 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte05->setObjectName(QString::fromUtf8("plain1s02e01ARKByte05"));
+        plain1s02e01ARKByte05->setEnabled(true);
+        plain1s02e01ARKByte05->setGeometry(QRect(200, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte05->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte05->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte05->setFont(font1);
+        plain1s02e01ARKByte05->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte14_12->setObjectName(QString::fromUtf8("outPlainByte14_12"));
+        outPlainByte14_12->setEnabled(true);
+        outPlainByte14_12->setGeometry(QRect(248, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_12->sizePolicy().hasHeightForWidth());
+        outPlainByte14_12->setSizePolicy(sizePolicy);
+        outPlainByte14_12->setFont(font1);
+        outPlainByte14_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_12->setAlignment(Qt::AlignCenter);
+        outPlainByte01_6 = new QLabel(groupPlain1s02e01);
+        outPlainByte01_6->setObjectName(QString::fromUtf8("outPlainByte01_6"));
+        outPlainByte01_6->setEnabled(true);
+        outPlainByte01_6->setGeometry(QRect(176, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_6->sizePolicy().hasHeightForWidth());
+        outPlainByte01_6->setSizePolicy(sizePolicy);
+        outPlainByte01_6->setFont(font1);
+        outPlainByte01_6->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_6->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_6->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte13 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte13->setObjectName(QString::fromUtf8("plain1s02e01ARKByte13"));
+        plain1s02e01ARKByte13->setEnabled(true);
+        plain1s02e01ARKByte13->setGeometry(QRect(248, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte13->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte13->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte13->setFont(font1);
+        plain1s02e01ARKByte13->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte13->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte02 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte02->setObjectName(QString::fromUtf8("plain1s02e01ARKByte02"));
+        plain1s02e01ARKByte02->setEnabled(true);
+        plain1s02e01ARKByte02->setGeometry(QRect(176, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte02->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte02->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte02->setFont(font1);
+        plain1s02e01ARKByte02->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte12_12->setObjectName(QString::fromUtf8("outPlainByte12_12"));
+        outPlainByte12_12->setEnabled(true);
+        outPlainByte12_12->setGeometry(QRect(248, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_12->sizePolicy().hasHeightForWidth());
+        outPlainByte12_12->setSizePolicy(sizePolicy);
+        outPlainByte12_12->setFont(font1);
+        outPlainByte12_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_12->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte10 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte10->setObjectName(QString::fromUtf8("plain1s02e01ARKByte10"));
+        plain1s02e01ARKByte10->setEnabled(true);
+        plain1s02e01ARKByte10->setGeometry(QRect(224, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte10->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte10->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte10->setFont(font1);
+        plain1s02e01ARKByte10->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte10->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte15 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte15->setObjectName(QString::fromUtf8("plain1s02e01ARKByte15"));
+        plain1s02e01ARKByte15->setEnabled(true);
+        plain1s02e01ARKByte15->setGeometry(QRect(248, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte15->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte15->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte15->setFont(font1);
+        plain1s02e01ARKByte15->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_12 = new QLabel(groupPlain1s02e01);
+        outPlainByte06_12->setObjectName(QString::fromUtf8("outPlainByte06_12"));
+        outPlainByte06_12->setEnabled(true);
+        outPlainByte06_12->setGeometry(QRect(200, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_12->sizePolicy().hasHeightForWidth());
+        outPlainByte06_12->setSizePolicy(sizePolicy);
+        outPlainByte06_12->setFont(font1);
+        outPlainByte06_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_12->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte07 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte07->setObjectName(QString::fromUtf8("plain1s02e01ARKByte07"));
+        plain1s02e01ARKByte07->setEnabled(true);
+        plain1s02e01ARKByte07->setGeometry(QRect(200, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte07->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte07->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte07->setFont(font1);
+        plain1s02e01ARKByte07->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte07->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte00 = new QLabel(groupPlain1s02e01);
+        plain1s02e01ARKByte00->setObjectName(QString::fromUtf8("plain1s02e01ARKByte00"));
+        plain1s02e01ARKByte00->setEnabled(true);
+        plain1s02e01ARKByte00->setGeometry(QRect(176, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01ARKByte00->sizePolicy().hasHeightForWidth());
+        plain1s02e01ARKByte00->setSizePolicy(sizePolicy);
+        plain1s02e01ARKByte00->setFont(font1);
+        plain1s02e01ARKByte00->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01ARKByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01ARKByte00->setAlignment(Qt::AlignCenter);
+        plain1s02e01ARKByte00->setWordWrap(false);
+        outPlainByte03_7 = new QLabel(groupPlain1s02e01);
+        outPlainByte03_7->setObjectName(QString::fromUtf8("outPlainByte03_7"));
+        outPlainByte03_7->setEnabled(true);
+        outPlainByte03_7->setGeometry(QRect(340, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_7->sizePolicy().hasHeightForWidth());
+        outPlainByte03_7->setSizePolicy(sizePolicy);
+        outPlainByte03_7->setFont(font1);
+        outPlainByte03_7->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_7->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte08 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte08->setObjectName(QString::fromUtf8("plain1s02e01SBByte08"));
+        plain1s02e01SBByte08->setEnabled(true);
+        plain1s02e01SBByte08->setGeometry(QRect(388, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte08->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte08->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte08->setFont(font1);
+        plain1s02e01SBByte08->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte11_21->setObjectName(QString::fromUtf8("outPlainByte11_21"));
+        outPlainByte11_21->setEnabled(true);
+        outPlainByte11_21->setGeometry(QRect(388, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_21->sizePolicy().hasHeightForWidth());
+        outPlainByte11_21->setSizePolicy(sizePolicy);
+        outPlainByte11_21->setFont(font1);
+        outPlainByte11_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_21->setAlignment(Qt::AlignCenter);
+        outPlainByte09_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte09_21->setObjectName(QString::fromUtf8("outPlainByte09_21"));
+        outPlainByte09_21->setEnabled(true);
+        outPlainByte09_21->setGeometry(QRect(388, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_21->sizePolicy().hasHeightForWidth());
+        outPlainByte09_21->setSizePolicy(sizePolicy);
+        outPlainByte09_21->setFont(font1);
+        outPlainByte09_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_21->setAlignment(Qt::AlignCenter);
+        outPlainByte04_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte04_21->setObjectName(QString::fromUtf8("outPlainByte04_21"));
+        outPlainByte04_21->setEnabled(true);
+        outPlainByte04_21->setGeometry(QRect(364, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_21->sizePolicy().hasHeightForWidth());
+        outPlainByte04_21->setSizePolicy(sizePolicy);
+        outPlainByte04_21->setFont(font1);
+        outPlainByte04_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_21->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte05 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte05->setObjectName(QString::fromUtf8("plain1s02e01SBByte05"));
+        plain1s02e01SBByte05->setEnabled(true);
+        plain1s02e01SBByte05->setGeometry(QRect(364, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte05->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte05->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte05->setFont(font1);
+        plain1s02e01SBByte05->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte14_21->setObjectName(QString::fromUtf8("outPlainByte14_21"));
+        outPlainByte14_21->setEnabled(true);
+        outPlainByte14_21->setGeometry(QRect(412, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_21->sizePolicy().hasHeightForWidth());
+        outPlainByte14_21->setSizePolicy(sizePolicy);
+        outPlainByte14_21->setFont(font1);
+        outPlainByte14_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_21->setAlignment(Qt::AlignCenter);
+        outPlainByte01_7 = new QLabel(groupPlain1s02e01);
+        outPlainByte01_7->setObjectName(QString::fromUtf8("outPlainByte01_7"));
+        outPlainByte01_7->setEnabled(true);
+        outPlainByte01_7->setGeometry(QRect(340, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_7->sizePolicy().hasHeightForWidth());
+        outPlainByte01_7->setSizePolicy(sizePolicy);
+        outPlainByte01_7->setFont(font1);
+        outPlainByte01_7->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_7->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte13 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte13->setObjectName(QString::fromUtf8("plain1s02e01SBByte13"));
+        plain1s02e01SBByte13->setEnabled(true);
+        plain1s02e01SBByte13->setGeometry(QRect(412, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte13->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte13->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte13->setFont(font1);
+        plain1s02e01SBByte13->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte13->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte02 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte02->setObjectName(QString::fromUtf8("plain1s02e01SBByte02"));
+        plain1s02e01SBByte02->setEnabled(true);
+        plain1s02e01SBByte02->setGeometry(QRect(340, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte02->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte02->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte02->setFont(font1);
+        plain1s02e01SBByte02->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte12_21->setObjectName(QString::fromUtf8("outPlainByte12_21"));
+        outPlainByte12_21->setEnabled(true);
+        outPlainByte12_21->setGeometry(QRect(412, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_21->sizePolicy().hasHeightForWidth());
+        outPlainByte12_21->setSizePolicy(sizePolicy);
+        outPlainByte12_21->setFont(font1);
+        outPlainByte12_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_21->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte10 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte10->setObjectName(QString::fromUtf8("plain1s02e01SBByte10"));
+        plain1s02e01SBByte10->setEnabled(true);
+        plain1s02e01SBByte10->setGeometry(QRect(388, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte10->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte10->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte10->setFont(font1);
+        plain1s02e01SBByte10->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte10->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte15 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte15->setObjectName(QString::fromUtf8("plain1s02e01SBByte15"));
+        plain1s02e01SBByte15->setEnabled(true);
+        plain1s02e01SBByte15->setGeometry(QRect(412, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte15->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte15->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte15->setFont(font1);
+        plain1s02e01SBByte15->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte15->setAlignment(Qt::AlignCenter);
+        outPlainByte06_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte06_21->setObjectName(QString::fromUtf8("outPlainByte06_21"));
+        outPlainByte06_21->setEnabled(true);
+        outPlainByte06_21->setGeometry(QRect(364, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_21->sizePolicy().hasHeightForWidth());
+        outPlainByte06_21->setSizePolicy(sizePolicy);
+        outPlainByte06_21->setFont(font1);
+        outPlainByte06_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_21->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte07 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte07->setObjectName(QString::fromUtf8("plain1s02e01SBByte07"));
+        plain1s02e01SBByte07->setEnabled(true);
+        plain1s02e01SBByte07->setGeometry(QRect(364, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte07->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte07->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte07->setFont(font1);
+        plain1s02e01SBByte07->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte07->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte00 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SBByte00->setObjectName(QString::fromUtf8("plain1s02e01SBByte00"));
+        plain1s02e01SBByte00->setEnabled(true);
+        plain1s02e01SBByte00->setGeometry(QRect(340, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SBByte00->sizePolicy().hasHeightForWidth());
+        plain1s02e01SBByte00->setSizePolicy(sizePolicy);
+        plain1s02e01SBByte00->setFont(font1);
+        plain1s02e01SBByte00->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SBByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SBByte00->setAlignment(Qt::AlignCenter);
+        plain1s02e01SBByte00->setWordWrap(false);
+        plain1s02e01SRByte03 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte03->setObjectName(QString::fromUtf8("plain1s02e01SRByte03"));
+        plain1s02e01SRByte03->setEnabled(true);
+        plain1s02e01SRByte03->setGeometry(QRect(502, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte03->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte03->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte03->setFont(font1);
+        plain1s02e01SRByte03->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte03->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte08 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte08->setObjectName(QString::fromUtf8("plain1s02e01SRByte08"));
+        plain1s02e01SRByte08->setEnabled(true);
+        plain1s02e01SRByte08->setGeometry(QRect(550, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte08->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte08->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte08->setFont(font1);
+        plain1s02e01SRByte08->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte08->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte11 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte11->setObjectName(QString::fromUtf8("plain1s02e01SRByte11"));
+        plain1s02e01SRByte11->setEnabled(true);
+        plain1s02e01SRByte11->setGeometry(QRect(550, 104, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte11->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte11->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte11->setFont(font1);
+        plain1s02e01SRByte11->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte11->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte09 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte09->setObjectName(QString::fromUtf8("plain1s02e01SRByte09"));
+        plain1s02e01SRByte09->setEnabled(true);
+        plain1s02e01SRByte09->setGeometry(QRect(550, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte09->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte09->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte09->setFont(font1);
+        plain1s02e01SRByte09->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte09->setAlignment(Qt::AlignCenter);
+        outPlainByte04_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte04_22->setObjectName(QString::fromUtf8("outPlainByte04_22"));
+        outPlainByte04_22->setEnabled(true);
+        outPlainByte04_22->setGeometry(QRect(526, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_22->sizePolicy().hasHeightForWidth());
+        outPlainByte04_22->setSizePolicy(sizePolicy);
+        outPlainByte04_22->setFont(font1);
+        outPlainByte04_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_22->setAlignment(Qt::AlignCenter);
+        outPlainByte05_7 = new QLabel(groupPlain1s02e01);
+        outPlainByte05_7->setObjectName(QString::fromUtf8("outPlainByte05_7"));
+        outPlainByte05_7->setEnabled(true);
+        outPlainByte05_7->setGeometry(QRect(526, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_7->sizePolicy().hasHeightForWidth());
+        outPlainByte05_7->setSizePolicy(sizePolicy);
+        outPlainByte05_7->setFont(font1);
+        outPlainByte05_7->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_7->setAlignment(Qt::AlignCenter);
+        outPlainByte14_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte14_22->setObjectName(QString::fromUtf8("outPlainByte14_22"));
+        outPlainByte14_22->setEnabled(true);
+        outPlainByte14_22->setGeometry(QRect(574, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_22->sizePolicy().hasHeightForWidth());
+        outPlainByte14_22->setSizePolicy(sizePolicy);
+        outPlainByte14_22->setFont(font1);
+        outPlainByte14_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_22->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte01 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte01->setObjectName(QString::fromUtf8("plain1s02e01SRByte01"));
+        plain1s02e01SRByte01->setEnabled(true);
+        plain1s02e01SRByte01->setGeometry(QRect(502, 56, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte01->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte01->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte01->setFont(font1);
+        plain1s02e01SRByte01->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte01->setAlignment(Qt::AlignCenter);
+        outPlainByte13_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte13_21->setObjectName(QString::fromUtf8("outPlainByte13_21"));
+        outPlainByte13_21->setEnabled(true);
+        outPlainByte13_21->setGeometry(QRect(574, 56, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_21->sizePolicy().hasHeightForWidth());
+        outPlainByte13_21->setSizePolicy(sizePolicy);
+        outPlainByte13_21->setFont(font1);
+        outPlainByte13_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_21->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte02 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte02->setObjectName(QString::fromUtf8("plain1s02e01SRByte02"));
+        plain1s02e01SRByte02->setEnabled(true);
+        plain1s02e01SRByte02->setGeometry(QRect(502, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte02->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte02->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte02->setFont(font1);
+        plain1s02e01SRByte02->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte12_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte12_22->setObjectName(QString::fromUtf8("outPlainByte12_22"));
+        outPlainByte12_22->setEnabled(true);
+        outPlainByte12_22->setGeometry(QRect(574, 32, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_22->sizePolicy().hasHeightForWidth());
+        outPlainByte12_22->setSizePolicy(sizePolicy);
+        outPlainByte12_22->setFont(font1);
+        outPlainByte12_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_22->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte10 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte10->setObjectName(QString::fromUtf8("plain1s02e01SRByte10"));
+        plain1s02e01SRByte10->setEnabled(true);
+        plain1s02e01SRByte10->setGeometry(QRect(550, 80, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte10->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte10->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte10->setFont(font1);
+        plain1s02e01SRByte10->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte10->setAlignment(Qt::AlignCenter);
+        outPlainByte15_7 = new QLabel(groupPlain1s02e01);
+        outPlainByte15_7->setObjectName(QString::fromUtf8("outPlainByte15_7"));
+        outPlainByte15_7->setEnabled(true);
+        outPlainByte15_7->setGeometry(QRect(574, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_7->sizePolicy().hasHeightForWidth());
+        outPlainByte15_7->setSizePolicy(sizePolicy);
+        outPlainByte15_7->setFont(font1);
+        outPlainByte15_7->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_7->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_7->setAlignment(Qt::AlignCenter);
+        outPlainByte06_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte06_22->setObjectName(QString::fromUtf8("outPlainByte06_22"));
+        outPlainByte06_22->setEnabled(true);
+        outPlainByte06_22->setGeometry(QRect(526, 80, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_22->sizePolicy().hasHeightForWidth());
+        outPlainByte06_22->setSizePolicy(sizePolicy);
+        outPlainByte06_22->setFont(font1);
+        outPlainByte06_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_22->setAlignment(Qt::AlignCenter);
+        outPlainByte07_21 = new QLabel(groupPlain1s02e01);
+        outPlainByte07_21->setObjectName(QString::fromUtf8("outPlainByte07_21"));
+        outPlainByte07_21->setEnabled(true);
+        outPlainByte07_21->setGeometry(QRect(526, 104, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_21->sizePolicy().hasHeightForWidth());
+        outPlainByte07_21->setSizePolicy(sizePolicy);
+        outPlainByte07_21->setFont(font1);
+        outPlainByte07_21->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_21->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_21->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte00 = new QLabel(groupPlain1s02e01);
+        plain1s02e01SRByte00->setObjectName(QString::fromUtf8("plain1s02e01SRByte00"));
+        plain1s02e01SRByte00->setEnabled(true);
+        plain1s02e01SRByte00->setGeometry(QRect(502, 32, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01SRByte00->sizePolicy().hasHeightForWidth());
+        plain1s02e01SRByte00->setSizePolicy(sizePolicy);
+        plain1s02e01SRByte00->setFont(font1);
+        plain1s02e01SRByte00->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01SRByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01SRByte00->setAlignment(Qt::AlignCenter);
+        plain1s02e01SRByte00->setWordWrap(false);
+        outPlainByte13_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte13_22->setObjectName(QString::fromUtf8("outPlainByte13_22"));
+        outPlainByte13_22->setEnabled(true);
+        outPlainByte13_22->setGeometry(QRect(734, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte13_22->sizePolicy().hasHeightForWidth());
+        outPlainByte13_22->setSizePolicy(sizePolicy);
+        outPlainByte13_22->setFont(font1);
+        outPlainByte13_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte13_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte13_22->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte08 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte08->setObjectName(QString::fromUtf8("plain1s02e01MCByte08"));
+        plain1s02e01MCByte08->setEnabled(true);
+        plain1s02e01MCByte08->setGeometry(QRect(710, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte08->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte08->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte08->setFont(font1);
+        plain1s02e01MCByte08->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte08->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte03 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte03->setObjectName(QString::fromUtf8("plain1s02e01MCByte03"));
+        plain1s02e01MCByte03->setEnabled(true);
+        plain1s02e01MCByte03->setGeometry(QRect(662, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte03->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte03->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte03->setFont(font1);
+        plain1s02e01MCByte03->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte03->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte02 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte02->setObjectName(QString::fromUtf8("plain1s02e01MCByte02"));
+        plain1s02e01MCByte02->setEnabled(true);
+        plain1s02e01MCByte02->setGeometry(QRect(662, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte02->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte02->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte02->setFont(font1);
+        plain1s02e01MCByte02->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte02->setAlignment(Qt::AlignCenter);
+        outPlainByte04_23 = new QLabel(groupPlain1s02e01);
+        outPlainByte04_23->setObjectName(QString::fromUtf8("outPlainByte04_23"));
+        outPlainByte04_23->setEnabled(true);
+        outPlainByte04_23->setGeometry(QRect(686, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_23->sizePolicy().hasHeightForWidth());
+        outPlainByte04_23->setSizePolicy(sizePolicy);
+        outPlainByte04_23->setFont(font1);
+        outPlainByte04_23->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_23->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_23->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte00 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte00->setObjectName(QString::fromUtf8("plain1s02e01MCByte00"));
+        plain1s02e01MCByte00->setEnabled(true);
+        plain1s02e01MCByte00->setGeometry(QRect(662, 30, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte00->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte00->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte00->setFont(font1);
+        plain1s02e01MCByte00->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte00->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte00->setWordWrap(false);
+        outPlainByte07_22 = new QLabel(groupPlain1s02e01);
+        outPlainByte07_22->setObjectName(QString::fromUtf8("outPlainByte07_22"));
+        outPlainByte07_22->setEnabled(true);
+        outPlainByte07_22->setGeometry(QRect(686, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte07_22->sizePolicy().hasHeightForWidth());
+        outPlainByte07_22->setSizePolicy(sizePolicy);
+        outPlainByte07_22->setFont(font1);
+        outPlainByte07_22->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte07_22->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte07_22->setAlignment(Qt::AlignCenter);
+        outPlainByte15_8 = new QLabel(groupPlain1s02e01);
+        outPlainByte15_8->setObjectName(QString::fromUtf8("outPlainByte15_8"));
+        outPlainByte15_8->setEnabled(true);
+        outPlainByte15_8->setGeometry(QRect(734, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte15_8->sizePolicy().hasHeightForWidth());
+        outPlainByte15_8->setSizePolicy(sizePolicy);
+        outPlainByte15_8->setFont(font1);
+        outPlainByte15_8->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte15_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte15_8->setAlignment(Qt::AlignCenter);
+        outPlainByte06_23 = new QLabel(groupPlain1s02e01);
+        outPlainByte06_23->setObjectName(QString::fromUtf8("outPlainByte06_23"));
+        outPlainByte06_23->setEnabled(true);
+        outPlainByte06_23->setGeometry(QRect(686, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_23->sizePolicy().hasHeightForWidth());
+        outPlainByte06_23->setSizePolicy(sizePolicy);
+        outPlainByte06_23->setFont(font1);
+        outPlainByte06_23->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_23->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_23->setAlignment(Qt::AlignCenter);
+        outPlainByte12_23 = new QLabel(groupPlain1s02e01);
+        outPlainByte12_23->setObjectName(QString::fromUtf8("outPlainByte12_23"));
+        outPlainByte12_23->setEnabled(true);
+        outPlainByte12_23->setGeometry(QRect(734, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_23->sizePolicy().hasHeightForWidth());
+        outPlainByte12_23->setSizePolicy(sizePolicy);
+        outPlainByte12_23->setFont(font1);
+        outPlainByte12_23->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_23->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_23->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte11 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte11->setObjectName(QString::fromUtf8("plain1s02e01MCByte11"));
+        plain1s02e01MCByte11->setEnabled(true);
+        plain1s02e01MCByte11->setGeometry(QRect(710, 102, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte11->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte11->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte11->setFont(font1);
+        plain1s02e01MCByte11->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte11->setAlignment(Qt::AlignCenter);
+        outPlainByte14_23 = new QLabel(groupPlain1s02e01);
+        outPlainByte14_23->setObjectName(QString::fromUtf8("outPlainByte14_23"));
+        outPlainByte14_23->setEnabled(true);
+        outPlainByte14_23->setGeometry(QRect(734, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_23->sizePolicy().hasHeightForWidth());
+        outPlainByte14_23->setSizePolicy(sizePolicy);
+        outPlainByte14_23->setFont(font1);
+        outPlainByte14_23->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_23->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_23->setAlignment(Qt::AlignCenter);
+        outPlainByte05_8 = new QLabel(groupPlain1s02e01);
+        outPlainByte05_8->setObjectName(QString::fromUtf8("outPlainByte05_8"));
+        outPlainByte05_8->setEnabled(true);
+        outPlainByte05_8->setGeometry(QRect(686, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte05_8->sizePolicy().hasHeightForWidth());
+        outPlainByte05_8->setSizePolicy(sizePolicy);
+        outPlainByte05_8->setFont(font1);
+        outPlainByte05_8->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte05_8->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte05_8->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte01 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte01->setObjectName(QString::fromUtf8("plain1s02e01MCByte01"));
+        plain1s02e01MCByte01->setEnabled(true);
+        plain1s02e01MCByte01->setGeometry(QRect(662, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte01->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte01->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte01->setFont(font1);
+        plain1s02e01MCByte01->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte01->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte09 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte09->setObjectName(QString::fromUtf8("plain1s02e01MCByte09"));
+        plain1s02e01MCByte09->setEnabled(true);
+        plain1s02e01MCByte09->setGeometry(QRect(710, 54, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte09->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte09->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte09->setFont(font1);
+        plain1s02e01MCByte09->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte09->setAlignment(Qt::AlignCenter);
+        plain1s02e01MCByte10 = new QLabel(groupPlain1s02e01);
+        plain1s02e01MCByte10->setObjectName(QString::fromUtf8("plain1s02e01MCByte10"));
+        plain1s02e01MCByte10->setEnabled(true);
+        plain1s02e01MCByte10->setGeometry(QRect(710, 78, 25, 25));
+        sizePolicy.setHeightForWidth(plain1s02e01MCByte10->sizePolicy().hasHeightForWidth());
+        plain1s02e01MCByte10->setSizePolicy(sizePolicy);
+        plain1s02e01MCByte10->setFont(font1);
+        plain1s02e01MCByte10->setLayoutDirection(Qt::LeftToRight);
+        plain1s02e01MCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        plain1s02e01MCByte10->setAlignment(Qt::AlignCenter);
+        buttonS02E01ARK = new QPushButton(groupPlain1s02e01);
+        buttonS02E01ARK->setObjectName(QString::fromUtf8("buttonS02E01ARK"));
+        buttonS02E01ARK->setGeometry(QRect(110, 60, 61, 27));
+        buttonS02E01SB = new QPushButton(groupPlain1s02e01);
+        buttonS02E01SB->setObjectName(QString::fromUtf8("buttonS02E01SB"));
+        buttonS02E01SB->setGeometry(QRect(280, 60, 51, 27));
+        buttonS02E01SR = new QPushButton(groupPlain1s02e01);
+        buttonS02E01SR->setObjectName(QString::fromUtf8("buttonS02E01SR"));
+        buttonS02E01SR->setGeometry(QRect(445, 60, 51, 27));
+        buttonS02E01MC = new QPushButton(groupPlain1s02e01);
+        buttonS02E01MC->setObjectName(QString::fromUtf8("buttonS02E01MC"));
+        buttonS02E01MC->setGeometry(QRect(605, 60, 51, 27));
+        tabWidget->addTab(tabS02E01, QString());
+        tabS02E02 = new QWidget();
+        tabS02E02->setObjectName(QString::fromUtf8("tabS02E02"));
+        label_83 = new QLabel(tabS02E02);
+        label_83->setObjectName(QString::fromUtf8("label_83"));
+        label_83->setGeometry(QRect(470, 388, 31, 17));
+        label_83->setFont(font2);
+        label_84 = new QLabel(tabS02E02);
+        label_84->setObjectName(QString::fromUtf8("label_84"));
+        label_84->setGeometry(QRect(122, 110, 20, 210));
+        label_84->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_84->setScaledContents(true);
+        groupInvCipher12DiffColumns01e03_10 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_10->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_10"));
+        groupInvCipher12DiffColumns01e03_10->setGeometry(QRect(160, 103, 101, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_10->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_10->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_10->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_10->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_10->setFlat(false);
+        s02e02plainAfterR1Diff12Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        s02e02plainAfterR1Diff12Col2Byte10->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff12Col2Byte10"));
+        s02e02plainAfterR1Diff12Col2Byte10->setEnabled(true);
+        s02e02plainAfterR1Diff12Col2Byte10->setGeometry(QRect(40, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff12Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff12Col2Byte10->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff12Col2Byte10->setFont(font1);
+        s02e02plainAfterR1Diff12Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff12Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff12Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff12Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        s02e02plainAfterR1Diff12Col2Byte09->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff12Col2Byte09"));
+        s02e02plainAfterR1Diff12Col2Byte09->setEnabled(true);
+        s02e02plainAfterR1Diff12Col2Byte09->setGeometry(QRect(40, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff12Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff12Col2Byte09->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff12Col2Byte09->setFont(font1);
+        s02e02plainAfterR1Diff12Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff12Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff12Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff12Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        s02e02plainAfterR1Diff12Col2Byte08->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff12Col2Byte08"));
+        s02e02plainAfterR1Diff12Col2Byte08->setEnabled(true);
+        s02e02plainAfterR1Diff12Col2Byte08->setGeometry(QRect(40, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff12Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff12Col2Byte08->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff12Col2Byte08->setFont(font1);
+        s02e02plainAfterR1Diff12Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff12Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff12Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff12Col2Byte08->setWordWrap(false);
+        s02e02plainAfterR1Diff12Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        s02e02plainAfterR1Diff12Col2Byte11->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff12Col2Byte11"));
+        s02e02plainAfterR1Diff12Col2Byte11->setEnabled(true);
+        s02e02plainAfterR1Diff12Col2Byte11->setGeometry(QRect(40, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff12Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff12Col2Byte11->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff12Col2Byte11->setFont(font1);
+        s02e02plainAfterR1Diff12Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff12Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff12Col2Byte11->setAlignment(Qt::AlignCenter);
+        label_85 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        label_85->setObjectName(QString::fromUtf8("label_85"));
+        label_85->setGeometry(QRect(20, 70, 21, 17));
+        label_85->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_85->setScaledContents(true);
+        label_86 = new QLabel(groupInvCipher12DiffColumns01e03_10);
+        label_86->setObjectName(QString::fromUtf8("label_86"));
+        label_86->setGeometry(QRect(5, 68, 21, 20));
+        label_86->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_86->setScaledContents(true);
+        groupInvCipher12DiffColumns01e03_11 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_11->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_11"));
+        groupInvCipher12DiffColumns01e03_11->setGeometry(QRect(10, 33, 201, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_11->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_11->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_11->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_11->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_11->setFlat(false);
+        s02e02plain1AfterR1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        s02e02plain1AfterR1Col2Byte10->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte10"));
+        s02e02plain1AfterR1Col2Byte10->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte10->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte10->setFont(font1);
+        s02e02plain1AfterR1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        s02e02plain1AfterR1Col2Byte09->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte09"));
+        s02e02plain1AfterR1Col2Byte09->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte09->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte09->setFont(font1);
+        s02e02plain1AfterR1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        s02e02plain1AfterR1Col2Byte08->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte08"));
+        s02e02plain1AfterR1Col2Byte08->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte08->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte08->setFont(font1);
+        s02e02plain1AfterR1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte08->setWordWrap(false);
+        s02e02plain1AfterR1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        s02e02plain1AfterR1Col2Byte11->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte11"));
+        s02e02plain1AfterR1Col2Byte11->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte11->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte11->setFont(font1);
+        s02e02plain1AfterR1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte11->setAlignment(Qt::AlignCenter);
+        label_87 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        label_87->setObjectName(QString::fromUtf8("label_87"));
+        label_87->setGeometry(QRect(44, 67, 101, 20));
+        label_87->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_87->setScaledContents(true);
+        label_88 = new QLabel(groupInvCipher12DiffColumns01e03_11);
+        label_88->setObjectName(QString::fromUtf8("label_88"));
+        label_88->setGeometry(QRect(133, 77, 20, 61));
+        label_88->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_88->setScaledContents(true);
+        groupInvCipher13DiffColumns01e03_3 = new QGroupBox(tabS02E02);
+        groupInvCipher13DiffColumns01e03_3->setObjectName(QString::fromUtf8("groupInvCipher13DiffColumns01e03_3"));
+        groupInvCipher13DiffColumns01e03_3->setGeometry(QRect(160, 253, 101, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher13DiffColumns01e03_3->sizePolicy().hasHeightForWidth());
+        groupInvCipher13DiffColumns01e03_3->setSizePolicy(sizePolicy);
+        groupInvCipher13DiffColumns01e03_3->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher13DiffColumns01e03_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher13DiffColumns01e03_3->setFlat(false);
+        s02e02plainAfterR1Diff13Col2Byte10 = new QLabel(groupInvCipher13DiffColumns01e03_3);
+        s02e02plainAfterR1Diff13Col2Byte10->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff13Col2Byte10"));
+        s02e02plainAfterR1Diff13Col2Byte10->setEnabled(true);
+        s02e02plainAfterR1Diff13Col2Byte10->setGeometry(QRect(40, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff13Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff13Col2Byte10->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff13Col2Byte10->setFont(font1);
+        s02e02plainAfterR1Diff13Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff13Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff13Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff13Col2Byte09 = new QLabel(groupInvCipher13DiffColumns01e03_3);
+        s02e02plainAfterR1Diff13Col2Byte09->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff13Col2Byte09"));
+        s02e02plainAfterR1Diff13Col2Byte09->setEnabled(true);
+        s02e02plainAfterR1Diff13Col2Byte09->setGeometry(QRect(40, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff13Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff13Col2Byte09->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff13Col2Byte09->setFont(font1);
+        s02e02plainAfterR1Diff13Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff13Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff13Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff13Col2Byte08 = new QLabel(groupInvCipher13DiffColumns01e03_3);
+        s02e02plainAfterR1Diff13Col2Byte08->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff13Col2Byte08"));
+        s02e02plainAfterR1Diff13Col2Byte08->setEnabled(true);
+        s02e02plainAfterR1Diff13Col2Byte08->setGeometry(QRect(40, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff13Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff13Col2Byte08->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff13Col2Byte08->setFont(font1);
+        s02e02plainAfterR1Diff13Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff13Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff13Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02plainAfterR1Diff13Col2Byte08->setWordWrap(false);
+        s02e02plainAfterR1Diff13Col2Byte11 = new QLabel(groupInvCipher13DiffColumns01e03_3);
+        s02e02plainAfterR1Diff13Col2Byte11->setObjectName(QString::fromUtf8("s02e02plainAfterR1Diff13Col2Byte11"));
+        s02e02plainAfterR1Diff13Col2Byte11->setEnabled(true);
+        s02e02plainAfterR1Diff13Col2Byte11->setGeometry(QRect(40, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plainAfterR1Diff13Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02plainAfterR1Diff13Col2Byte11->setSizePolicy(sizePolicy);
+        s02e02plainAfterR1Diff13Col2Byte11->setFont(font1);
+        s02e02plainAfterR1Diff13Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02plainAfterR1Diff13Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plainAfterR1Diff13Col2Byte11->setAlignment(Qt::AlignCenter);
+        groupInvCipher12DiffColumns01e03_12 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_12->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_12"));
+        groupInvCipher12DiffColumns01e03_12->setGeometry(QRect(610, 103, 181, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_12->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_12->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_12->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_12->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_12->setFlat(false);
+        s02e02InvCipherDiff12Column2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_12);
+        s02e02InvCipherDiff12Column2Byte10->setObjectName(QString::fromUtf8("s02e02InvCipherDiff12Column2Byte10"));
+        s02e02InvCipherDiff12Column2Byte10->setEnabled(true);
+        s02e02InvCipherDiff12Column2Byte10->setGeometry(QRect(90, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff12Column2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff12Column2Byte10->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff12Column2Byte10->setFont(font1);
+        s02e02InvCipherDiff12Column2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff12Column2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff12Column2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff12Column2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_12);
+        s02e02InvCipherDiff12Column2Byte09->setObjectName(QString::fromUtf8("s02e02InvCipherDiff12Column2Byte09"));
+        s02e02InvCipherDiff12Column2Byte09->setEnabled(true);
+        s02e02InvCipherDiff12Column2Byte09->setGeometry(QRect(90, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff12Column2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff12Column2Byte09->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff12Column2Byte09->setFont(font1);
+        s02e02InvCipherDiff12Column2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff12Column2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff12Column2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff12Column2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_12);
+        s02e02InvCipherDiff12Column2Byte08->setObjectName(QString::fromUtf8("s02e02InvCipherDiff12Column2Byte08"));
+        s02e02InvCipherDiff12Column2Byte08->setEnabled(true);
+        s02e02InvCipherDiff12Column2Byte08->setGeometry(QRect(90, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff12Column2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff12Column2Byte08->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff12Column2Byte08->setFont(font1);
+        s02e02InvCipherDiff12Column2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff12Column2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff12Column2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff12Column2Byte08->setWordWrap(false);
+        s02e02InvCipherDiff12Column2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_12);
+        s02e02InvCipherDiff12Column2Byte11->setObjectName(QString::fromUtf8("s02e02InvCipherDiff12Column2Byte11"));
+        s02e02InvCipherDiff12Column2Byte11->setEnabled(true);
+        s02e02InvCipherDiff12Column2Byte11->setGeometry(QRect(90, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff12Column2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff12Column2Byte11->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff12Column2Byte11->setFont(font1);
+        s02e02InvCipherDiff12Column2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff12Column2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff12Column2Byte11->setAlignment(Qt::AlignCenter);
+        groupInvCipher13DiffColumns01e03_4 = new QGroupBox(tabS02E02);
+        groupInvCipher13DiffColumns01e03_4->setObjectName(QString::fromUtf8("groupInvCipher13DiffColumns01e03_4"));
+        groupInvCipher13DiffColumns01e03_4->setGeometry(QRect(610, 253, 181, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher13DiffColumns01e03_4->sizePolicy().hasHeightForWidth());
+        groupInvCipher13DiffColumns01e03_4->setSizePolicy(sizePolicy);
+        groupInvCipher13DiffColumns01e03_4->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher13DiffColumns01e03_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher13DiffColumns01e03_4->setFlat(false);
+        s02e02InvCipherDiff13Column2Byte10 = new QLabel(groupInvCipher13DiffColumns01e03_4);
+        s02e02InvCipherDiff13Column2Byte10->setObjectName(QString::fromUtf8("s02e02InvCipherDiff13Column2Byte10"));
+        s02e02InvCipherDiff13Column2Byte10->setEnabled(true);
+        s02e02InvCipherDiff13Column2Byte10->setGeometry(QRect(90, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff13Column2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff13Column2Byte10->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff13Column2Byte10->setFont(font1);
+        s02e02InvCipherDiff13Column2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff13Column2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff13Column2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff13Column2Byte09 = new QLabel(groupInvCipher13DiffColumns01e03_4);
+        s02e02InvCipherDiff13Column2Byte09->setObjectName(QString::fromUtf8("s02e02InvCipherDiff13Column2Byte09"));
+        s02e02InvCipherDiff13Column2Byte09->setEnabled(true);
+        s02e02InvCipherDiff13Column2Byte09->setGeometry(QRect(90, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff13Column2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff13Column2Byte09->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff13Column2Byte09->setFont(font1);
+        s02e02InvCipherDiff13Column2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff13Column2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff13Column2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff13Column2Byte08 = new QLabel(groupInvCipher13DiffColumns01e03_4);
+        s02e02InvCipherDiff13Column2Byte08->setObjectName(QString::fromUtf8("s02e02InvCipherDiff13Column2Byte08"));
+        s02e02InvCipherDiff13Column2Byte08->setEnabled(true);
+        s02e02InvCipherDiff13Column2Byte08->setGeometry(QRect(90, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff13Column2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff13Column2Byte08->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff13Column2Byte08->setFont(font1);
+        s02e02InvCipherDiff13Column2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff13Column2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff13Column2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02InvCipherDiff13Column2Byte08->setWordWrap(false);
+        s02e02InvCipherDiff13Column2Byte11 = new QLabel(groupInvCipher13DiffColumns01e03_4);
+        s02e02InvCipherDiff13Column2Byte11->setObjectName(QString::fromUtf8("s02e02InvCipherDiff13Column2Byte11"));
+        s02e02InvCipherDiff13Column2Byte11->setEnabled(true);
+        s02e02InvCipherDiff13Column2Byte11->setGeometry(QRect(90, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02InvCipherDiff13Column2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02InvCipherDiff13Column2Byte11->setSizePolicy(sizePolicy);
+        s02e02InvCipherDiff13Column2Byte11->setFont(font1);
+        s02e02InvCipherDiff13Column2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02InvCipherDiff13Column2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02InvCipherDiff13Column2Byte11->setAlignment(Qt::AlignCenter);
+        label_89 = new QLabel(tabS02E02);
+        label_89->setObjectName(QString::fromUtf8("label_89"));
+        label_89->setGeometry(QRect(660, 83, 91, 17));
+        label_90 = new QLabel(tabS02E02);
+        label_90->setObjectName(QString::fromUtf8("label_90"));
+        label_90->setGeometry(QRect(10, 13, 91, 17));
+        groupInvCipher12DiffColumns01e03_13 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_13->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_13"));
+        groupInvCipher12DiffColumns01e03_13->setGeometry(QRect(10, 173, 271, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_13->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_13->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_13->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_13->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_13->setFlat(false);
+        s02e02plain2AfterR1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        s02e02plain2AfterR1Col2Byte10->setObjectName(QString::fromUtf8("s02e02plain2AfterR1Col2Byte10"));
+        s02e02plain2AfterR1Col2Byte10->setEnabled(true);
+        s02e02plain2AfterR1Col2Byte10->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain2AfterR1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02plain2AfterR1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e02plain2AfterR1Col2Byte10->setFont(font1);
+        s02e02plain2AfterR1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain2AfterR1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain2AfterR1Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02plain2AfterR1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        s02e02plain2AfterR1Col2Byte09->setObjectName(QString::fromUtf8("s02e02plain2AfterR1Col2Byte09"));
+        s02e02plain2AfterR1Col2Byte09->setEnabled(true);
+        s02e02plain2AfterR1Col2Byte09->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain2AfterR1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02plain2AfterR1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e02plain2AfterR1Col2Byte09->setFont(font1);
+        s02e02plain2AfterR1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain2AfterR1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain2AfterR1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02plain2AfterR1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        s02e02plain2AfterR1Col2Byte08->setObjectName(QString::fromUtf8("s02e02plain2AfterR1Col2Byte08"));
+        s02e02plain2AfterR1Col2Byte08->setEnabled(true);
+        s02e02plain2AfterR1Col2Byte08->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain2AfterR1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02plain2AfterR1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e02plain2AfterR1Col2Byte08->setFont(font1);
+        s02e02plain2AfterR1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain2AfterR1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain2AfterR1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02plain2AfterR1Col2Byte08->setWordWrap(false);
+        s02e02plain2AfterR1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        s02e02plain2AfterR1Col2Byte11->setObjectName(QString::fromUtf8("s02e02plain2AfterR1Col2Byte11"));
+        s02e02plain2AfterR1Col2Byte11->setEnabled(true);
+        s02e02plain2AfterR1Col2Byte11->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain2AfterR1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02plain2AfterR1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e02plain2AfterR1Col2Byte11->setFont(font1);
+        s02e02plain2AfterR1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain2AfterR1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain2AfterR1Col2Byte11->setAlignment(Qt::AlignCenter);
+        label_91 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        label_91->setObjectName(QString::fromUtf8("label_91"));
+        label_91->setGeometry(QRect(44, 67, 101, 20));
+        label_91->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_91->setScaledContents(true);
+        label_92 = new QLabel(groupInvCipher12DiffColumns01e03_13);
+        label_92->setObjectName(QString::fromUtf8("label_92"));
+        label_92->setGeometry(QRect(133, 20, 20, 59));
+        label_92->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_92->setScaledContents(true);
+        groupInvCipher12DiffColumns01e03_14 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_14->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_14"));
+        groupInvCipher12DiffColumns01e03_14->setGeometry(QRect(10, 313, 271, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_14->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_14->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_14->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_14->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_14->setFlat(false);
+        s02e02plain3AfterR1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        s02e02plain3AfterR1Col2Byte10->setObjectName(QString::fromUtf8("s02e02plain3AfterR1Col2Byte10"));
+        s02e02plain3AfterR1Col2Byte10->setEnabled(true);
+        s02e02plain3AfterR1Col2Byte10->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain3AfterR1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e02plain3AfterR1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e02plain3AfterR1Col2Byte10->setFont(font1);
+        s02e02plain3AfterR1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain3AfterR1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain3AfterR1Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e02plain3AfterR1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        s02e02plain3AfterR1Col2Byte09->setObjectName(QString::fromUtf8("s02e02plain3AfterR1Col2Byte09"));
+        s02e02plain3AfterR1Col2Byte09->setEnabled(true);
+        s02e02plain3AfterR1Col2Byte09->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain3AfterR1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e02plain3AfterR1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e02plain3AfterR1Col2Byte09->setFont(font1);
+        s02e02plain3AfterR1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain3AfterR1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain3AfterR1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e02plain3AfterR1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        s02e02plain3AfterR1Col2Byte08->setObjectName(QString::fromUtf8("s02e02plain3AfterR1Col2Byte08"));
+        s02e02plain3AfterR1Col2Byte08->setEnabled(true);
+        s02e02plain3AfterR1Col2Byte08->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain3AfterR1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e02plain3AfterR1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e02plain3AfterR1Col2Byte08->setFont(font1);
+        s02e02plain3AfterR1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain3AfterR1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain3AfterR1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e02plain3AfterR1Col2Byte08->setWordWrap(false);
+        s02e02plain3AfterR1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        s02e02plain3AfterR1Col2Byte11->setObjectName(QString::fromUtf8("s02e02plain3AfterR1Col2Byte11"));
+        s02e02plain3AfterR1Col2Byte11->setEnabled(true);
+        s02e02plain3AfterR1Col2Byte11->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain3AfterR1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e02plain3AfterR1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e02plain3AfterR1Col2Byte11->setFont(font1);
+        s02e02plain3AfterR1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain3AfterR1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain3AfterR1Col2Byte11->setAlignment(Qt::AlignCenter);
+        label_93 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        label_93->setObjectName(QString::fromUtf8("label_93"));
+        label_93->setGeometry(QRect(133, 8, 51, 20));
+        label_93->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_93->setScaledContents(true);
+        label_94 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        label_94->setObjectName(QString::fromUtf8("label_94"));
+        label_94->setGeometry(QRect(170, 10, 21, 17));
+        label_94->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_94->setScaledContents(true);
+        label_95 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        label_95->setObjectName(QString::fromUtf8("label_95"));
+        label_95->setGeometry(QRect(44, 67, 81, 20));
+        label_95->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_95->setScaledContents(true);
+        label_96 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        label_96->setObjectName(QString::fromUtf8("label_96"));
+        label_96->setGeometry(QRect(113, 30, 20, 47));
+        label_96->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_96->setScaledContents(true);
+        label_108 = new QLabel(groupInvCipher12DiffColumns01e03_14);
+        label_108->setObjectName(QString::fromUtf8("label_108"));
+        label_108->setGeometry(QRect(110, 5, 25, 25));
+        label_108->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_108->setScaledContents(true);
+        groupBox_7 = new QGroupBox(tabS02E02);
+        groupBox_7->setObjectName(QString::fromUtf8("groupBox_7"));
+        groupBox_7->setGeometry(QRect(320, 23, 231, 291));
+        label_97 = new QLabel(groupBox_7);
+        label_97->setObjectName(QString::fromUtf8("label_97"));
+        label_97->setGeometry(QRect(10, 20, 211, 41));
+        label_97->setWordWrap(true);
+        groupBox_8 = new QGroupBox(groupBox_7);
+        groupBox_8->setObjectName(QString::fromUtf8("groupBox_8"));
+        groupBox_8->setGeometry(QRect(10, 60, 201, 111));
+        editByteBeta12_2 = new QLineEdit(groupBox_8);
+        editByteBeta12_2->setObjectName(QString::fromUtf8("editByteBeta12_2"));
+        editByteBeta12_2->setGeometry(QRect(150, 30, 31, 27));
+        editByteBeta12_2->setMaxLength(2);
+        editByteAlpha12_2 = new QLineEdit(groupBox_8);
+        editByteAlpha12_2->setObjectName(QString::fromUtf8("editByteAlpha12_2"));
+        editByteAlpha12_2->setGeometry(QRect(60, 30, 31, 27));
+        editByteAlpha12_2->setMaxLength(2);
+        label_98 = new QLabel(groupBox_8);
+        label_98->setObjectName(QString::fromUtf8("label_98"));
+        label_98->setGeometry(QRect(10, 40, 51, 17));
+        label_99 = new QLabel(groupBox_8);
+        label_99->setObjectName(QString::fromUtf8("label_99"));
+        label_99->setGeometry(QRect(110, 40, 51, 17));
+        buttonSBoxLookup12_2 = new QPushButton(groupBox_8);
+        buttonSBoxLookup12_2->setObjectName(QString::fromUtf8("buttonSBoxLookup12_2"));
+        buttonSBoxLookup12_2->setGeometry(QRect(60, 60, 97, 27));
+        labelResultLookupY12_2 = new QLabel(groupBox_8);
+        labelResultLookupY12_2->setObjectName(QString::fromUtf8("labelResultLookupY12_2"));
+        labelResultLookupY12_2->setGeometry(QRect(140, 90, 41, 17));
+        label_100 = new QLabel(groupBox_8);
+        label_100->setObjectName(QString::fromUtf8("label_100"));
+        label_100->setGeometry(QRect(100, 90, 31, 17));
+        label_101 = new QLabel(groupBox_8);
+        label_101->setObjectName(QString::fromUtf8("label_101"));
+        label_101->setGeometry(QRect(10, 90, 51, 17));
+        labelResultLookupX12_2 = new QLabel(groupBox_8);
+        labelResultLookupX12_2->setObjectName(QString::fromUtf8("labelResultLookupX12_2"));
+        labelResultLookupX12_2->setGeometry(QRect(70, 90, 31, 16));
+        groupBox_9 = new QGroupBox(groupBox_7);
+        groupBox_9->setObjectName(QString::fromUtf8("groupBox_9"));
+        groupBox_9->setGeometry(QRect(10, 180, 201, 111));
+        editByteBeta13_2 = new QLineEdit(groupBox_9);
+        editByteBeta13_2->setObjectName(QString::fromUtf8("editByteBeta13_2"));
+        editByteBeta13_2->setGeometry(QRect(150, 30, 31, 27));
+        editByteBeta13_2->setMaxLength(2);
+        editByteAlpha13_2 = new QLineEdit(groupBox_9);
+        editByteAlpha13_2->setObjectName(QString::fromUtf8("editByteAlpha13_2"));
+        editByteAlpha13_2->setGeometry(QRect(60, 30, 31, 27));
+        editByteAlpha13_2->setMaxLength(2);
+        label_102 = new QLabel(groupBox_9);
+        label_102->setObjectName(QString::fromUtf8("label_102"));
+        label_102->setGeometry(QRect(10, 40, 51, 17));
+        label_103 = new QLabel(groupBox_9);
+        label_103->setObjectName(QString::fromUtf8("label_103"));
+        label_103->setGeometry(QRect(110, 40, 51, 17));
+        buttonSBoxLookup13_2 = new QPushButton(groupBox_9);
+        buttonSBoxLookup13_2->setObjectName(QString::fromUtf8("buttonSBoxLookup13_2"));
+        buttonSBoxLookup13_2->setGeometry(QRect(60, 60, 97, 27));
+        labelResultLookupY13_2 = new QLabel(groupBox_9);
+        labelResultLookupY13_2->setObjectName(QString::fromUtf8("labelResultLookupY13_2"));
+        labelResultLookupY13_2->setGeometry(QRect(140, 90, 41, 17));
+        label_104 = new QLabel(groupBox_9);
+        label_104->setObjectName(QString::fromUtf8("label_104"));
+        label_104->setGeometry(QRect(100, 90, 31, 17));
+        label_105 = new QLabel(groupBox_9);
+        label_105->setObjectName(QString::fromUtf8("label_105"));
+        label_105->setGeometry(QRect(10, 90, 51, 17));
+        labelResultLookupX13_2 = new QLabel(groupBox_9);
+        labelResultLookupX13_2->setObjectName(QString::fromUtf8("labelResultLookupX13_2"));
+        labelResultLookupX13_2->setGeometry(QRect(70, 90, 31, 16));
+        groupInvCipher12DiffColumns01e03_15 = new QGroupBox(tabS02E02);
+        groupInvCipher12DiffColumns01e03_15->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_15"));
+        groupInvCipher12DiffColumns01e03_15->setGeometry(QRect(290, 323, 161, 141));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_15->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_15->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_15->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_15->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_15->setFlat(false);
+        s02e02plain1AfterR1Col2Byte10_2 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02plain1AfterR1Col2Byte10_2->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte10_2"));
+        s02e02plain1AfterR1Col2Byte10_2->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte10_2->setGeometry(QRect(20, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte10_2->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte10_2->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte10_2->setFont(font1);
+        s02e02plain1AfterR1Col2Byte10_2->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte10_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte10_2->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte09_2 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02plain1AfterR1Col2Byte09_2->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte09_2"));
+        s02e02plain1AfterR1Col2Byte09_2->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte09_2->setGeometry(QRect(20, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte09_2->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte09_2->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte09_2->setFont(font1);
+        s02e02plain1AfterR1Col2Byte09_2->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte09_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte09_2->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte08_2 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02plain1AfterR1Col2Byte08_2->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte08_2"));
+        s02e02plain1AfterR1Col2Byte08_2->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte08_2->setGeometry(QRect(20, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte08_2->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte08_2->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte08_2->setFont(font1);
+        s02e02plain1AfterR1Col2Byte08_2->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte08_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte08_2->setAlignment(Qt::AlignCenter);
+        s02e02plain1AfterR1Col2Byte08_2->setWordWrap(false);
+        s02e02plain1AfterR1Col2Byte11_2 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02plain1AfterR1Col2Byte11_2->setObjectName(QString::fromUtf8("s02e02plain1AfterR1Col2Byte11_2"));
+        s02e02plain1AfterR1Col2Byte11_2->setEnabled(true);
+        s02e02plain1AfterR1Col2Byte11_2->setGeometry(QRect(20, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02plain1AfterR1Col2Byte11_2->sizePolicy().hasHeightForWidth());
+        s02e02plain1AfterR1Col2Byte11_2->setSizePolicy(sizePolicy);
+        s02e02plain1AfterR1Col2Byte11_2->setFont(font1);
+        s02e02plain1AfterR1Col2Byte11_2->setLayoutDirection(Qt::LeftToRight);
+        s02e02plain1AfterR1Col2Byte11_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02plain1AfterR1Col2Byte11_2->setAlignment(Qt::AlignCenter);
+        s02e02k1Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02k1Byte09->setObjectName(QString::fromUtf8("s02e02k1Byte09"));
+        s02e02k1Byte09->setEnabled(true);
+        s02e02k1Byte09->setGeometry(QRect(120, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02k1Byte09->sizePolicy().hasHeightForWidth());
+        s02e02k1Byte09->setSizePolicy(sizePolicy);
+        s02e02k1Byte09->setFont(font1);
+        s02e02k1Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e02k1Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02k1Byte09->setAlignment(Qt::AlignCenter);
+        s02e02k1Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02k1Byte08->setObjectName(QString::fromUtf8("s02e02k1Byte08"));
+        s02e02k1Byte08->setEnabled(true);
+        s02e02k1Byte08->setGeometry(QRect(120, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02k1Byte08->sizePolicy().hasHeightForWidth());
+        s02e02k1Byte08->setSizePolicy(sizePolicy);
+        s02e02k1Byte08->setFont(font1);
+        s02e02k1Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e02k1Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02k1Byte08->setAlignment(Qt::AlignCenter);
+        s02e02k1Byte08->setWordWrap(false);
+        s02e02k1Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02k1Byte11->setObjectName(QString::fromUtf8("s02e02k1Byte11"));
+        s02e02k1Byte11->setEnabled(true);
+        s02e02k1Byte11->setGeometry(QRect(120, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02k1Byte11->sizePolicy().hasHeightForWidth());
+        s02e02k1Byte11->setSizePolicy(sizePolicy);
+        s02e02k1Byte11->setFont(font1);
+        s02e02k1Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e02k1Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02k1Byte11->setAlignment(Qt::AlignCenter);
+        s02e02k1Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        s02e02k1Byte10->setObjectName(QString::fromUtf8("s02e02k1Byte10"));
+        s02e02k1Byte10->setEnabled(true);
+        s02e02k1Byte10->setGeometry(QRect(120, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e02k1Byte10->sizePolicy().hasHeightForWidth());
+        s02e02k1Byte10->setSizePolicy(sizePolicy);
+        s02e02k1Byte10->setFont(font1);
+        s02e02k1Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e02k1Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e02k1Byte10->setAlignment(Qt::AlignCenter);
+        label_106 = new QLabel(groupInvCipher12DiffColumns01e03_15);
+        label_106->setObjectName(QString::fromUtf8("label_106"));
+        label_106->setGeometry(QRect(70, 63, 25, 25));
+        label_106->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_106->setScaledContents(true);
+        groupBox_10 = new QGroupBox(tabS02E02);
+        groupBox_10->setObjectName(QString::fromUtf8("groupBox_10"));
+        groupBox_10->setGeometry(QRect(480, 323, 181, 151));
+        groupBox_10->setTitle(QString::fromUtf8("Results For Pair 1"));
+        groupBox_10->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        editByte08ResultSbox = new QLineEdit(groupBox_10);
+        editByte08ResultSbox->setObjectName(QString::fromUtf8("editByte08ResultSbox"));
+        editByte08ResultSbox->setGeometry(QRect(40, 25, 31, 27));
+        editByte08ResultSbox->setMaxLength(2);
+        editByte09ResultSbox = new QLineEdit(groupBox_10);
+        editByte09ResultSbox->setObjectName(QString::fromUtf8("editByte09ResultSbox"));
+        editByte09ResultSbox->setGeometry(QRect(40, 50, 31, 27));
+        editByte09ResultSbox->setMaxLength(2);
+        editByte10ResultSbox = new QLineEdit(groupBox_10);
+        editByte10ResultSbox->setObjectName(QString::fromUtf8("editByte10ResultSbox"));
+        editByte10ResultSbox->setGeometry(QRect(40, 75, 31, 27));
+        editByte10ResultSbox->setMaxLength(2);
+        editByte11ResultSbox = new QLineEdit(groupBox_10);
+        editByte11ResultSbox->setObjectName(QString::fromUtf8("editByte11ResultSbox"));
+        editByte11ResultSbox->setGeometry(QRect(40, 100, 31, 27));
+        editByte11ResultSbox->setMaxLength(2);
+        buttonSBoxSolveLookupByte08 = new QPushButton(groupBox_10);
+        buttonSBoxSolveLookupByte08->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte08"));
+        buttonSBoxSolveLookupByte08->setGeometry(QRect(80, 25, 97, 27));
+        buttonSBoxSolveLookupByte09 = new QPushButton(groupBox_10);
+        buttonSBoxSolveLookupByte09->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte09"));
+        buttonSBoxSolveLookupByte09->setGeometry(QRect(80, 50, 97, 27));
+        buttonSBoxSolveLookupByte10 = new QPushButton(groupBox_10);
+        buttonSBoxSolveLookupByte10->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte10"));
+        buttonSBoxSolveLookupByte10->setGeometry(QRect(80, 75, 97, 27));
+        buttonSBoxSolveLookupByte11 = new QPushButton(groupBox_10);
+        buttonSBoxSolveLookupByte11->setObjectName(QString::fromUtf8("buttonSBoxSolveLookupByte11"));
+        buttonSBoxSolveLookupByte11->setGeometry(QRect(80, 100, 97, 27));
+        label_107 = new QLabel(tabS02E02);
+        label_107->setObjectName(QString::fromUtf8("label_107"));
+        label_107->setGeometry(QRect(140, 170, 25, 25));
+        label_107->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_107->setScaledContents(true);
+        tabWidget->addTab(tabS02E02, QString());
+        tabS02E03 = new QWidget();
+        tabS02E03->setObjectName(QString::fromUtf8("tabS02E03"));
+        groupInvCipher12DiffColumns01e03_16 = new QGroupBox(tabS02E03);
+        groupInvCipher12DiffColumns01e03_16->setObjectName(QString::fromUtf8("groupInvCipher12DiffColumns01e03_16"));
+        groupInvCipher12DiffColumns01e03_16->setGeometry(QRect(0, 30, 811, 131));
+        sizePolicy.setHeightForWidth(groupInvCipher12DiffColumns01e03_16->sizePolicy().hasHeightForWidth());
+        groupInvCipher12DiffColumns01e03_16->setSizePolicy(sizePolicy);
+        groupInvCipher12DiffColumns01e03_16->setContextMenuPolicy(Qt::ActionsContextMenu);
+        groupInvCipher12DiffColumns01e03_16->setStyleSheet(QString::fromUtf8(""));
+        groupInvCipher12DiffColumns01e03_16->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        groupInvCipher12DiffColumns01e03_16->setFlat(false);
+        s02e03plain1AfterR1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterR1Col2Byte10->setObjectName(QString::fromUtf8("s02e03plain1AfterR1Col2Byte10"));
+        s02e03plain1AfterR1Col2Byte10->setEnabled(true);
+        s02e03plain1AfterR1Col2Byte10->setGeometry(QRect(10, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterR1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterR1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e03plain1AfterR1Col2Byte10->setFont(font1);
+        s02e03plain1AfterR1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterR1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterR1Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterR1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterR1Col2Byte09->setObjectName(QString::fromUtf8("s02e03plain1AfterR1Col2Byte09"));
+        s02e03plain1AfterR1Col2Byte09->setEnabled(true);
+        s02e03plain1AfterR1Col2Byte09->setGeometry(QRect(10, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterR1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterR1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e03plain1AfterR1Col2Byte09->setFont(font1);
+        s02e03plain1AfterR1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterR1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterR1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterR1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterR1Col2Byte08->setObjectName(QString::fromUtf8("s02e03plain1AfterR1Col2Byte08"));
+        s02e03plain1AfterR1Col2Byte08->setEnabled(true);
+        s02e03plain1AfterR1Col2Byte08->setGeometry(QRect(10, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterR1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterR1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e03plain1AfterR1Col2Byte08->setFont(font1);
+        s02e03plain1AfterR1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterR1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterR1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterR1Col2Byte08->setWordWrap(false);
+        s02e03plain1AfterR1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterR1Col2Byte11->setObjectName(QString::fromUtf8("s02e03plain1AfterR1Col2Byte11"));
+        s02e03plain1AfterR1Col2Byte11->setEnabled(true);
+        s02e03plain1AfterR1Col2Byte11->setGeometry(QRect(10, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterR1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterR1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e03plain1AfterR1Col2Byte11->setFont(font1);
+        s02e03plain1AfterR1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterR1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterR1Col2Byte11->setAlignment(Qt::AlignCenter);
+        buttonS01E04ArkK1_2 = new QPushButton(groupInvCipher12DiffColumns01e03_16);
+        buttonS01E04ArkK1_2->setObjectName(QString::fromUtf8("buttonS01E04ArkK1_2"));
+        buttonS01E04ArkK1_2->setGeometry(QRect(40, 60, 61, 27));
+        s02e03plain1AfterK1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterK1Col2Byte09->setObjectName(QString::fromUtf8("s02e03plain1AfterK1Col2Byte09"));
+        s02e03plain1AfterK1Col2Byte09->setEnabled(true);
+        s02e03plain1AfterK1Col2Byte09->setGeometry(QRect(110, 52, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterK1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterK1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e03plain1AfterK1Col2Byte09->setFont(font1);
+        s02e03plain1AfterK1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterK1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterK1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterK1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterK1Col2Byte11->setObjectName(QString::fromUtf8("s02e03plain1AfterK1Col2Byte11"));
+        s02e03plain1AfterK1Col2Byte11->setEnabled(true);
+        s02e03plain1AfterK1Col2Byte11->setGeometry(QRect(110, 100, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterK1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterK1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e03plain1AfterK1Col2Byte11->setFont(font1);
+        s02e03plain1AfterK1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterK1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterK1Col2Byte11->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterK1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterK1Col2Byte08->setObjectName(QString::fromUtf8("s02e03plain1AfterK1Col2Byte08"));
+        s02e03plain1AfterK1Col2Byte08->setEnabled(true);
+        s02e03plain1AfterK1Col2Byte08->setGeometry(QRect(110, 28, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterK1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterK1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e03plain1AfterK1Col2Byte08->setFont(font1);
+        s02e03plain1AfterK1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterK1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterK1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterK1Col2Byte08->setWordWrap(false);
+        s02e03plain1AfterK1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterK1Col2Byte10->setObjectName(QString::fromUtf8("s02e03plain1AfterK1Col2Byte10"));
+        s02e03plain1AfterK1Col2Byte10->setEnabled(true);
+        s02e03plain1AfterK1Col2Byte10->setGeometry(QRect(110, 76, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterK1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterK1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e03plain1AfterK1Col2Byte10->setFont(font1);
+        s02e03plain1AfterK1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterK1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterK1Col2Byte10->setAlignment(Qt::AlignCenter);
+        buttonS01E04SB_2 = new QPushButton(groupInvCipher12DiffColumns01e03_16);
+        buttonS01E04SB_2->setObjectName(QString::fromUtf8("buttonS01E04SB_2"));
+        buttonS01E04SB_2->setGeometry(QRect(140, 60, 41, 27));
+        s02e03plain1AfterSBR1Col2Byte11 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSBR1Col2Byte11->setObjectName(QString::fromUtf8("s02e03plain1AfterSBR1Col2Byte11"));
+        s02e03plain1AfterSBR1Col2Byte11->setEnabled(true);
+        s02e03plain1AfterSBR1Col2Byte11->setGeometry(QRect(190, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSBR1Col2Byte11->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSBR1Col2Byte11->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSBR1Col2Byte11->setFont(font1);
+        s02e03plain1AfterSBR1Col2Byte11->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSBR1Col2Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSBR1Col2Byte11->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSBR1Col2Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSBR1Col2Byte10->setObjectName(QString::fromUtf8("s02e03plain1AfterSBR1Col2Byte10"));
+        s02e03plain1AfterSBR1Col2Byte10->setEnabled(true);
+        s02e03plain1AfterSBR1Col2Byte10->setGeometry(QRect(190, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSBR1Col2Byte10->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSBR1Col2Byte10->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSBR1Col2Byte10->setFont(font1);
+        s02e03plain1AfterSBR1Col2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSBR1Col2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSBR1Col2Byte10->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSBR1Col2Byte09 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSBR1Col2Byte09->setObjectName(QString::fromUtf8("s02e03plain1AfterSBR1Col2Byte09"));
+        s02e03plain1AfterSBR1Col2Byte09->setEnabled(true);
+        s02e03plain1AfterSBR1Col2Byte09->setGeometry(QRect(190, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSBR1Col2Byte09->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSBR1Col2Byte09->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSBR1Col2Byte09->setFont(font1);
+        s02e03plain1AfterSBR1Col2Byte09->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSBR1Col2Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSBR1Col2Byte09->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSBR1Col2Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSBR1Col2Byte08->setObjectName(QString::fromUtf8("s02e03plain1AfterSBR1Col2Byte08"));
+        s02e03plain1AfterSBR1Col2Byte08->setEnabled(true);
+        s02e03plain1AfterSBR1Col2Byte08->setGeometry(QRect(190, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSBR1Col2Byte08->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSBR1Col2Byte08->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSBR1Col2Byte08->setFont(font1);
+        s02e03plain1AfterSBR1Col2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSBR1Col2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSBR1Col2Byte08->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSBR1Col2Byte08->setWordWrap(false);
+        buttonS01E04SR_2 = new QPushButton(groupInvCipher12DiffColumns01e03_16);
+        buttonS01E04SR_2->setObjectName(QString::fromUtf8("buttonS01E04SR_2"));
+        buttonS01E04SR_2->setGeometry(QRect(220, 60, 41, 27));
+        s02e03plain1AfterSRR1Byte05 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte05->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte05"));
+        s02e03plain1AfterSRR1Byte05->setEnabled(true);
+        s02e03plain1AfterSRR1Byte05->setGeometry(QRect(290, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte05->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte05->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte05->setFont(font);
+        s02e03plain1AfterSRR1Byte05->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte05->setAlignment(Qt::AlignCenter);
+        outPlainByte14_28 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte14_28->setObjectName(QString::fromUtf8("outPlainByte14_28"));
+        outPlainByte14_28->setEnabled(true);
+        outPlainByte14_28->setGeometry(QRect(338, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte14_28->sizePolicy().hasHeightForWidth());
+        outPlainByte14_28->setSizePolicy(sizePolicy);
+        outPlainByte14_28->setFont(font1);
+        outPlainByte14_28->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte14_28->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte14_28->setAlignment(Qt::AlignCenter);
+        outPlainByte06_28 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte06_28->setObjectName(QString::fromUtf8("outPlainByte06_28"));
+        outPlainByte06_28->setEnabled(true);
+        outPlainByte06_28->setGeometry(QRect(290, 78, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte06_28->sizePolicy().hasHeightForWidth());
+        outPlainByte06_28->setSizePolicy(sizePolicy);
+        outPlainByte06_28->setFont(font1);
+        outPlainByte06_28->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte06_28->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte06_28->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte07 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte07->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte07"));
+        s02e03plain1AfterSRR1Byte07->setEnabled(true);
+        s02e03plain1AfterSRR1Byte07->setGeometry(QRect(290, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte07->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte07->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte07->setFont(font1);
+        s02e03plain1AfterSRR1Byte07->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte07->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte02 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte02->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte02"));
+        s02e03plain1AfterSRR1Byte02->setEnabled(true);
+        s02e03plain1AfterSRR1Byte02->setGeometry(QRect(266, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte02->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte02->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte02->setFont(font);
+        s02e03plain1AfterSRR1Byte02->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte02->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte15 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte15->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte15"));
+        s02e03plain1AfterSRR1Byte15->setEnabled(true);
+        s02e03plain1AfterSRR1Byte15->setGeometry(QRect(338, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte15->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte15->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte15->setFont(font);
+        s02e03plain1AfterSRR1Byte15->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte15->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte10 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte10->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte10"));
+        s02e03plain1AfterSRR1Byte10->setEnabled(true);
+        s02e03plain1AfterSRR1Byte10->setGeometry(QRect(314, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte10->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte10->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte10->setFont(font1);
+        s02e03plain1AfterSRR1Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte10->setAlignment(Qt::AlignCenter);
+        outPlainByte04_28 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte04_28->setObjectName(QString::fromUtf8("outPlainByte04_28"));
+        outPlainByte04_28->setEnabled(true);
+        outPlainByte04_28->setGeometry(QRect(290, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte04_28->sizePolicy().hasHeightForWidth());
+        outPlainByte04_28->setSizePolicy(sizePolicy);
+        outPlainByte04_28->setFont(font1);
+        outPlainByte04_28->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte04_28->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte04_28->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte08 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte08->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte08"));
+        s02e03plain1AfterSRR1Byte08->setEnabled(true);
+        s02e03plain1AfterSRR1Byte08->setGeometry(QRect(314, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte08->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte08->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte08->setFont(font);
+        s02e03plain1AfterSRR1Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte08->setAlignment(Qt::AlignCenter);
+        outPlainByte11_19 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte11_19->setObjectName(QString::fromUtf8("outPlainByte11_19"));
+        outPlainByte11_19->setEnabled(true);
+        outPlainByte11_19->setGeometry(QRect(314, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte11_19->sizePolicy().hasHeightForWidth());
+        outPlainByte11_19->setSizePolicy(sizePolicy);
+        outPlainByte11_19->setFont(font1);
+        outPlainByte11_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte11_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte11_19->setAlignment(Qt::AlignCenter);
+        outPlainByte09_19 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte09_19->setObjectName(QString::fromUtf8("outPlainByte09_19"));
+        outPlainByte09_19->setEnabled(true);
+        outPlainByte09_19->setGeometry(QRect(314, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte09_19->sizePolicy().hasHeightForWidth());
+        outPlainByte09_19->setSizePolicy(sizePolicy);
+        outPlainByte09_19->setFont(font1);
+        outPlainByte09_19->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte09_19->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte09_19->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte13 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte13->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte13"));
+        s02e03plain1AfterSRR1Byte13->setEnabled(true);
+        s02e03plain1AfterSRR1Byte13->setGeometry(QRect(338, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte13->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte13->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte13->setFont(font1);
+        s02e03plain1AfterSRR1Byte13->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte13->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte00 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        s02e03plain1AfterSRR1Byte00->setObjectName(QString::fromUtf8("s02e03plain1AfterSRR1Byte00"));
+        s02e03plain1AfterSRR1Byte00->setEnabled(true);
+        s02e03plain1AfterSRR1Byte00->setGeometry(QRect(266, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03plain1AfterSRR1Byte00->sizePolicy().hasHeightForWidth());
+        s02e03plain1AfterSRR1Byte00->setSizePolicy(sizePolicy);
+        s02e03plain1AfterSRR1Byte00->setFont(font1);
+        s02e03plain1AfterSRR1Byte00->setLayoutDirection(Qt::LeftToRight);
+        s02e03plain1AfterSRR1Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03plain1AfterSRR1Byte00->setAlignment(Qt::AlignCenter);
+        s02e03plain1AfterSRR1Byte00->setWordWrap(false);
+        outPlainByte01_12 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte01_12->setObjectName(QString::fromUtf8("outPlainByte01_12"));
+        outPlainByte01_12->setEnabled(true);
+        outPlainByte01_12->setGeometry(QRect(266, 54, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte01_12->sizePolicy().hasHeightForWidth());
+        outPlainByte01_12->setSizePolicy(sizePolicy);
+        outPlainByte01_12->setFont(font1);
+        outPlainByte01_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte01_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte01_12->setAlignment(Qt::AlignCenter);
+        outPlainByte03_12 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte03_12->setObjectName(QString::fromUtf8("outPlainByte03_12"));
+        outPlainByte03_12->setEnabled(true);
+        outPlainByte03_12->setGeometry(QRect(266, 102, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte03_12->sizePolicy().hasHeightForWidth());
+        outPlainByte03_12->setSizePolicy(sizePolicy);
+        outPlainByte03_12->setFont(font1);
+        outPlainByte03_12->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte03_12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte03_12->setAlignment(Qt::AlignCenter);
+        outPlainByte12_28 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        outPlainByte12_28->setObjectName(QString::fromUtf8("outPlainByte12_28"));
+        outPlainByte12_28->setEnabled(true);
+        outPlainByte12_28->setGeometry(QRect(338, 30, 25, 25));
+        sizePolicy.setHeightForWidth(outPlainByte12_28->sizePolicy().hasHeightForWidth());
+        outPlainByte12_28->setSizePolicy(sizePolicy);
+        outPlainByte12_28->setFont(font1);
+        outPlainByte12_28->setLayoutDirection(Qt::LeftToRight);
+        outPlainByte12_28->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        outPlainByte12_28->setAlignment(Qt::AlignCenter);
+        groupCipher1s01e02_4 = new QGroupBox(groupInvCipher12DiffColumns01e03_16);
+        groupCipher1s01e02_4->setObjectName(QString::fromUtf8("groupCipher1s01e02_4"));
+        groupCipher1s01e02_4->setGeometry(QRect(540, 0, 221, 141));
+        sizePolicy.setHeightForWidth(groupCipher1s01e02_4->sizePolicy().hasHeightForWidth());
+        groupCipher1s01e02_4->setSizePolicy(sizePolicy);
+        groupCipher1s01e02_4->setStyleSheet(QString::fromUtf8(""));
+        groupCipher1s01e02_4->setTitle(QString::fromUtf8("Ciphertext With InvMC - Pair 1"));
+        groupCipher1s01e02_4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        s02e03Cipher1InvMCByte15 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte15->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte15"));
+        s02e03Cipher1InvMCByte15->setEnabled(true);
+        s02e03Cipher1InvMCByte15->setGeometry(QRect(152, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte15->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte15->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte15->setFont(font);
+        s02e03Cipher1InvMCByte15->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte15->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte13 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte13->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte13"));
+        s02e03Cipher1InvMCByte13->setEnabled(true);
+        s02e03Cipher1InvMCByte13->setGeometry(QRect(152, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte13->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte13->setSizePolicy(sizePolicy);
+        QFont font4;
+        font4.setBold(false);
+        font4.setWeight(50);
+        font4.setKerning(true);
+        s02e03Cipher1InvMCByte13->setFont(font4);
+        s02e03Cipher1InvMCByte13->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte13->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte14 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte14->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte14"));
+        s02e03Cipher1InvMCByte14->setEnabled(true);
+        s02e03Cipher1InvMCByte14->setGeometry(QRect(152, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte14->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte14->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte14->setFont(font1);
+        s02e03Cipher1InvMCByte14->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte14->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte06 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte06->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte06"));
+        s02e03Cipher1InvMCByte06->setEnabled(true);
+        s02e03Cipher1InvMCByte06->setGeometry(QRect(104, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte06->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte06->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte06->setFont(font1);
+        s02e03Cipher1InvMCByte06->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte06->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte04 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte04->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte04"));
+        s02e03Cipher1InvMCByte04->setEnabled(true);
+        s02e03Cipher1InvMCByte04->setGeometry(QRect(104, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte04->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte04->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte04->setFont(font1);
+        s02e03Cipher1InvMCByte04->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte04->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte02 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte02->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte02"));
+        s02e03Cipher1InvMCByte02->setEnabled(true);
+        s02e03Cipher1InvMCByte02->setGeometry(QRect(80, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte02->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte02->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte02->setFont(font);
+        s02e03Cipher1InvMCByte02->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte02->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte10 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte10->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte10"));
+        s02e03Cipher1InvMCByte10->setEnabled(true);
+        s02e03Cipher1InvMCByte10->setGeometry(QRect(128, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte10->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte10->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte10->setFont(font4);
+        s02e03Cipher1InvMCByte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte10->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte09 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte09->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte09"));
+        s02e03Cipher1InvMCByte09->setEnabled(true);
+        s02e03Cipher1InvMCByte09->setGeometry(QRect(128, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte09->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte09->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte09->setFont(font1);
+        s02e03Cipher1InvMCByte09->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte09->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte01 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte01->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte01"));
+        s02e03Cipher1InvMCByte01->setEnabled(true);
+        s02e03Cipher1InvMCByte01->setGeometry(QRect(80, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte01->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte01->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte01->setFont(font1);
+        s02e03Cipher1InvMCByte01->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte01->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte08 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte08->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte08"));
+        s02e03Cipher1InvMCByte08->setEnabled(true);
+        s02e03Cipher1InvMCByte08->setGeometry(QRect(128, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte08->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte08->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte08->setFont(font);
+        s02e03Cipher1InvMCByte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte08->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte00 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte00->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte00"));
+        s02e03Cipher1InvMCByte00->setEnabled(true);
+        s02e03Cipher1InvMCByte00->setGeometry(QRect(80, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte00->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte00->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte00->setFont(font4);
+        s02e03Cipher1InvMCByte00->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte00->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte00->setWordWrap(false);
+        s02e03Cipher1InvMCByte07 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte07->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte07"));
+        s02e03Cipher1InvMCByte07->setEnabled(true);
+        s02e03Cipher1InvMCByte07->setGeometry(QRect(104, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte07->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte07->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte07->setFont(font4);
+        s02e03Cipher1InvMCByte07->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte07->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte12 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte12->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte12"));
+        s02e03Cipher1InvMCByte12->setEnabled(true);
+        s02e03Cipher1InvMCByte12->setGeometry(QRect(152, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte12->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte12->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte12->setFont(font1);
+        s02e03Cipher1InvMCByte12->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte12->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte03 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte03->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte03"));
+        s02e03Cipher1InvMCByte03->setEnabled(true);
+        s02e03Cipher1InvMCByte03->setGeometry(QRect(80, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte03->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte03->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte03->setFont(font1);
+        s02e03Cipher1InvMCByte03->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte03->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte11 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte11->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte11"));
+        s02e03Cipher1InvMCByte11->setEnabled(true);
+        s02e03Cipher1InvMCByte11->setGeometry(QRect(128, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte11->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte11->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte11->setFont(font1);
+        s02e03Cipher1InvMCByte11->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte11->setAlignment(Qt::AlignCenter);
+        s02e03Cipher1InvMCByte05 = new QLabel(groupCipher1s01e02_4);
+        s02e03Cipher1InvMCByte05->setObjectName(QString::fromUtf8("s02e03Cipher1InvMCByte05"));
+        s02e03Cipher1InvMCByte05->setEnabled(true);
+        s02e03Cipher1InvMCByte05->setGeometry(QRect(104, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03Cipher1InvMCByte05->sizePolicy().hasHeightForWidth());
+        s02e03Cipher1InvMCByte05->setSizePolicy(sizePolicy);
+        s02e03Cipher1InvMCByte05->setFont(font);
+        s02e03Cipher1InvMCByte05->setLayoutDirection(Qt::LeftToRight);
+        s02e03Cipher1InvMCByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03Cipher1InvMCByte05->setAlignment(Qt::AlignCenter);
+        label_109 = new QLabel(groupCipher1s01e02_4);
+        label_109->setObjectName(QString::fromUtf8("label_109"));
+        label_109->setGeometry(QRect(20, 60, 21, 17));
+        label_109->setFont(font3);
+        groupCipher1s01e02_5 = new QGroupBox(groupInvCipher12DiffColumns01e03_16);
+        groupCipher1s01e02_5->setObjectName(QString::fromUtf8("groupCipher1s01e02_5"));
+        groupCipher1s01e02_5->setGeometry(QRect(410, 0, 121, 141));
+        sizePolicy.setHeightForWidth(groupCipher1s01e02_5->sizePolicy().hasHeightForWidth());
+        groupCipher1s01e02_5->setSizePolicy(sizePolicy);
+        groupCipher1s01e02_5->setStyleSheet(QString::fromUtf8(""));
+        groupCipher1s01e02_5->setTitle(QString::fromUtf8("Round Key U2"));
+        groupCipher1s01e02_5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        s02e03u2Byte15 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte15->setObjectName(QString::fromUtf8("s02e03u2Byte15"));
+        s02e03u2Byte15->setEnabled(true);
+        s02e03u2Byte15->setGeometry(QRect(82, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte15->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte15->setSizePolicy(sizePolicy);
+        s02e03u2Byte15->setFont(font);
+        s02e03u2Byte15->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte15->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte13 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte13->setObjectName(QString::fromUtf8("s02e03u2Byte13"));
+        s02e03u2Byte13->setEnabled(true);
+        s02e03u2Byte13->setGeometry(QRect(82, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte13->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte13->setSizePolicy(sizePolicy);
+        s02e03u2Byte13->setFont(font1);
+        s02e03u2Byte13->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte13->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte14_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte14_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte14_4"));
+        s01e02Cipher1Byte14_4->setEnabled(true);
+        s01e02Cipher1Byte14_4->setGeometry(QRect(82, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte14_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte14_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte14_4->setFont(font1);
+        s01e02Cipher1Byte14_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte14_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte14_4->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte06_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte06_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte06_4"));
+        s01e02Cipher1Byte06_4->setEnabled(true);
+        s01e02Cipher1Byte06_4->setGeometry(QRect(34, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte06_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte06_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte06_4->setFont(font1);
+        s01e02Cipher1Byte06_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte06_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte06_4->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte04_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte04_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte04_4"));
+        s01e02Cipher1Byte04_4->setEnabled(true);
+        s01e02Cipher1Byte04_4->setGeometry(QRect(34, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte04_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte04_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte04_4->setFont(font1);
+        s01e02Cipher1Byte04_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte04_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte04_4->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte02 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte02->setObjectName(QString::fromUtf8("s02e03u2Byte02"));
+        s02e03u2Byte02->setEnabled(true);
+        s02e03u2Byte02->setGeometry(QRect(10, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte02->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte02->setSizePolicy(sizePolicy);
+        s02e03u2Byte02->setFont(font);
+        s02e03u2Byte02->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte02->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte10 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte10->setObjectName(QString::fromUtf8("s02e03u2Byte10"));
+        s02e03u2Byte10->setEnabled(true);
+        s02e03u2Byte10->setGeometry(QRect(58, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte10->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte10->setSizePolicy(sizePolicy);
+        s02e03u2Byte10->setFont(font1);
+        s02e03u2Byte10->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte10->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte09_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte09_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte09_4"));
+        s01e02Cipher1Byte09_4->setEnabled(true);
+        s01e02Cipher1Byte09_4->setGeometry(QRect(58, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte09_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte09_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte09_4->setFont(font1);
+        s01e02Cipher1Byte09_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte09_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte09_4->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte01_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte01_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte01_4"));
+        s01e02Cipher1Byte01_4->setEnabled(true);
+        s01e02Cipher1Byte01_4->setGeometry(QRect(10, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte01_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte01_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte01_4->setFont(font1);
+        s01e02Cipher1Byte01_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte01_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte01_4->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte08 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte08->setObjectName(QString::fromUtf8("s02e03u2Byte08"));
+        s02e03u2Byte08->setEnabled(true);
+        s02e03u2Byte08->setGeometry(QRect(58, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte08->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte08->setSizePolicy(sizePolicy);
+        s02e03u2Byte08->setFont(font);
+        s02e03u2Byte08->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte08->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte00 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte00->setObjectName(QString::fromUtf8("s02e03u2Byte00"));
+        s02e03u2Byte00->setEnabled(true);
+        s02e03u2Byte00->setGeometry(QRect(10, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte00->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte00->setSizePolicy(sizePolicy);
+        s02e03u2Byte00->setFont(font1);
+        s02e03u2Byte00->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte00->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte00->setWordWrap(false);
+        s02e03u2Byte07 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte07->setObjectName(QString::fromUtf8("s02e03u2Byte07"));
+        s02e03u2Byte07->setEnabled(true);
+        s02e03u2Byte07->setGeometry(QRect(34, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte07->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte07->setSizePolicy(sizePolicy);
+        s02e03u2Byte07->setFont(font1);
+        s02e03u2Byte07->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte07->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte12_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte12_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte12_4"));
+        s01e02Cipher1Byte12_4->setEnabled(true);
+        s01e02Cipher1Byte12_4->setGeometry(QRect(82, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte12_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte12_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte12_4->setFont(font1);
+        s01e02Cipher1Byte12_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte12_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte12_4->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte03_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte03_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte03_4"));
+        s01e02Cipher1Byte03_4->setEnabled(true);
+        s01e02Cipher1Byte03_4->setGeometry(QRect(10, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte03_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte03_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte03_4->setFont(font1);
+        s01e02Cipher1Byte03_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte03_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte03_4->setAlignment(Qt::AlignCenter);
+        s01e02Cipher1Byte11_4 = new QLabel(groupCipher1s01e02_5);
+        s01e02Cipher1Byte11_4->setObjectName(QString::fromUtf8("s01e02Cipher1Byte11_4"));
+        s01e02Cipher1Byte11_4->setEnabled(true);
+        s01e02Cipher1Byte11_4->setGeometry(QRect(58, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s01e02Cipher1Byte11_4->sizePolicy().hasHeightForWidth());
+        s01e02Cipher1Byte11_4->setSizePolicy(sizePolicy);
+        s01e02Cipher1Byte11_4->setFont(font1);
+        s01e02Cipher1Byte11_4->setLayoutDirection(Qt::LeftToRight);
+        s01e02Cipher1Byte11_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s01e02Cipher1Byte11_4->setAlignment(Qt::AlignCenter);
+        s02e03u2Byte05 = new QLabel(groupCipher1s01e02_5);
+        s02e03u2Byte05->setObjectName(QString::fromUtf8("s02e03u2Byte05"));
+        s02e03u2Byte05->setEnabled(true);
+        s02e03u2Byte05->setGeometry(QRect(34, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e03u2Byte05->sizePolicy().hasHeightForWidth());
+        s02e03u2Byte05->setSizePolicy(sizePolicy);
+        s02e03u2Byte05->setFont(font);
+        s02e03u2Byte05->setLayoutDirection(Qt::LeftToRight);
+        s02e03u2Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e03u2Byte05->setAlignment(Qt::AlignCenter);
+        label_110 = new QLabel(groupInvCipher12DiffColumns01e03_16);
+        label_110->setObjectName(QString::fromUtf8("label_110"));
+        label_110->setGeometry(QRect(380, 60, 31, 31));
+        label_110->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_110->setScaledContents(true);
+        groupBox_11 = new QGroupBox(tabS02E03);
+        groupBox_11->setObjectName(QString::fromUtf8("groupBox_11"));
+        groupBox_11->setGeometry(QRect(10, 210, 741, 191));
+        groupSubKeyK1_2 = new QGroupBox(groupBox_11);
+        groupSubKeyK1_2->setObjectName(QString::fromUtf8("groupSubKeyK1_2"));
+        groupSubKeyK1_2->setGeometry(QRect(170, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK1_2->sizePolicy().hasHeightForWidth());
+        groupSubKeyK1_2->setSizePolicy(sizePolicy);
+        groupSubKeyK1_2->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK1_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k1byte15_2 = new QLabel(groupSubKeyK1_2);
+        k1byte15_2->setObjectName(QString::fromUtf8("k1byte15_2"));
+        k1byte15_2->setEnabled(true);
+        k1byte15_2->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte15_2->sizePolicy().hasHeightForWidth());
+        k1byte15_2->setSizePolicy(sizePolicy);
+        k1byte15_2->setFont(font);
+        k1byte15_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte15_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte15_2->setAlignment(Qt::AlignCenter);
+        k1byte13_2 = new QLabel(groupSubKeyK1_2);
+        k1byte13_2->setObjectName(QString::fromUtf8("k1byte13_2"));
+        k1byte13_2->setEnabled(true);
+        k1byte13_2->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte13_2->sizePolicy().hasHeightForWidth());
+        k1byte13_2->setSizePolicy(sizePolicy);
+        k1byte13_2->setFont(font);
+        k1byte13_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte13_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte13_2->setAlignment(Qt::AlignCenter);
+        k1byte14_2 = new QLabel(groupSubKeyK1_2);
+        k1byte14_2->setObjectName(QString::fromUtf8("k1byte14_2"));
+        k1byte14_2->setEnabled(true);
+        k1byte14_2->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte14_2->sizePolicy().hasHeightForWidth());
+        k1byte14_2->setSizePolicy(sizePolicy);
+        k1byte14_2->setFont(font1);
+        k1byte14_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte14_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte14_2->setAlignment(Qt::AlignCenter);
+        k1byte06_2 = new QLabel(groupSubKeyK1_2);
+        k1byte06_2->setObjectName(QString::fromUtf8("k1byte06_2"));
+        k1byte06_2->setEnabled(true);
+        k1byte06_2->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte06_2->sizePolicy().hasHeightForWidth());
+        k1byte06_2->setSizePolicy(sizePolicy);
+        k1byte06_2->setFont(font);
+        k1byte06_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte06_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte06_2->setAlignment(Qt::AlignCenter);
+        k1byte04_2 = new QLabel(groupSubKeyK1_2);
+        k1byte04_2->setObjectName(QString::fromUtf8("k1byte04_2"));
+        k1byte04_2->setEnabled(true);
+        k1byte04_2->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte04_2->sizePolicy().hasHeightForWidth());
+        k1byte04_2->setSizePolicy(sizePolicy);
+        k1byte04_2->setFont(font);
+        k1byte04_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte04_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte04_2->setAlignment(Qt::AlignCenter);
+        k1byte02_2 = new QLabel(groupSubKeyK1_2);
+        k1byte02_2->setObjectName(QString::fromUtf8("k1byte02_2"));
+        k1byte02_2->setEnabled(true);
+        k1byte02_2->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte02_2->sizePolicy().hasHeightForWidth());
+        k1byte02_2->setSizePolicy(sizePolicy);
+        k1byte02_2->setFont(font1);
+        k1byte02_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte02_2->setAlignment(Qt::AlignCenter);
+        k1byte10_2 = new QLabel(groupSubKeyK1_2);
+        k1byte10_2->setObjectName(QString::fromUtf8("k1byte10_2"));
+        k1byte10_2->setEnabled(true);
+        k1byte10_2->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte10_2->sizePolicy().hasHeightForWidth());
+        k1byte10_2->setSizePolicy(sizePolicy);
+        k1byte10_2->setFont(font1);
+        k1byte10_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte10_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte10_2->setAlignment(Qt::AlignCenter);
+        k1byte09_2 = new QLabel(groupSubKeyK1_2);
+        k1byte09_2->setObjectName(QString::fromUtf8("k1byte09_2"));
+        k1byte09_2->setEnabled(true);
+        k1byte09_2->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte09_2->sizePolicy().hasHeightForWidth());
+        k1byte09_2->setSizePolicy(sizePolicy);
+        k1byte09_2->setFont(font1);
+        k1byte09_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte09_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte09_2->setAlignment(Qt::AlignCenter);
+        k1byte01_2 = new QLabel(groupSubKeyK1_2);
+        k1byte01_2->setObjectName(QString::fromUtf8("k1byte01_2"));
+        k1byte01_2->setEnabled(true);
+        k1byte01_2->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte01_2->sizePolicy().hasHeightForWidth());
+        k1byte01_2->setSizePolicy(sizePolicy);
+        k1byte01_2->setFont(font1);
+        k1byte01_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte01_2->setAlignment(Qt::AlignCenter);
+        k1byte08_2 = new QLabel(groupSubKeyK1_2);
+        k1byte08_2->setObjectName(QString::fromUtf8("k1byte08_2"));
+        k1byte08_2->setEnabled(true);
+        k1byte08_2->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte08_2->sizePolicy().hasHeightForWidth());
+        k1byte08_2->setSizePolicy(sizePolicy);
+        k1byte08_2->setFont(font1);
+        k1byte08_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte08_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte08_2->setAlignment(Qt::AlignCenter);
+        k1byte00_2 = new QLabel(groupSubKeyK1_2);
+        k1byte00_2->setObjectName(QString::fromUtf8("k1byte00_2"));
+        k1byte00_2->setEnabled(true);
+        k1byte00_2->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte00_2->sizePolicy().hasHeightForWidth());
+        k1byte00_2->setSizePolicy(sizePolicy);
+        k1byte00_2->setFont(font1);
+        k1byte00_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte00_2->setAlignment(Qt::AlignCenter);
+        k1byte00_2->setWordWrap(false);
+        k1byte07_2 = new QLabel(groupSubKeyK1_2);
+        k1byte07_2->setObjectName(QString::fromUtf8("k1byte07_2"));
+        k1byte07_2->setEnabled(true);
+        k1byte07_2->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte07_2->sizePolicy().hasHeightForWidth());
+        k1byte07_2->setSizePolicy(sizePolicy);
+        k1byte07_2->setFont(font);
+        k1byte07_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte07_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte07_2->setAlignment(Qt::AlignCenter);
+        k1byte12_2 = new QLabel(groupSubKeyK1_2);
+        k1byte12_2->setObjectName(QString::fromUtf8("k1byte12_2"));
+        k1byte12_2->setEnabled(true);
+        k1byte12_2->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte12_2->sizePolicy().hasHeightForWidth());
+        k1byte12_2->setSizePolicy(sizePolicy);
+        k1byte12_2->setFont(font1);
+        k1byte12_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte12_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte12_2->setAlignment(Qt::AlignCenter);
+        k1byte03_2 = new QLabel(groupSubKeyK1_2);
+        k1byte03_2->setObjectName(QString::fromUtf8("k1byte03_2"));
+        k1byte03_2->setEnabled(true);
+        k1byte03_2->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte03_2->sizePolicy().hasHeightForWidth());
+        k1byte03_2->setSizePolicy(sizePolicy);
+        k1byte03_2->setFont(font1);
+        k1byte03_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte03_2->setAlignment(Qt::AlignCenter);
+        k1byte11_2 = new QLabel(groupSubKeyK1_2);
+        k1byte11_2->setObjectName(QString::fromUtf8("k1byte11_2"));
+        k1byte11_2->setEnabled(true);
+        k1byte11_2->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte11_2->sizePolicy().hasHeightForWidth());
+        k1byte11_2->setSizePolicy(sizePolicy);
+        k1byte11_2->setFont(font1);
+        k1byte11_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte11_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte11_2->setAlignment(Qt::AlignCenter);
+        k1byte05_2 = new QLabel(groupSubKeyK1_2);
+        k1byte05_2->setObjectName(QString::fromUtf8("k1byte05_2"));
+        k1byte05_2->setEnabled(true);
+        k1byte05_2->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte05_2->sizePolicy().hasHeightForWidth());
+        k1byte05_2->setSizePolicy(sizePolicy);
+        k1byte05_2->setFont(font4);
+        k1byte05_2->setLayoutDirection(Qt::LeftToRight);
+        k1byte05_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte05_2->setAlignment(Qt::AlignCenter);
+        groupSubKeyK0_2 = new QGroupBox(groupBox_11);
+        groupSubKeyK0_2->setObjectName(QString::fromUtf8("groupSubKeyK0_2"));
+        groupSubKeyK0_2->setGeometry(QRect(20, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK0_2->sizePolicy().hasHeightForWidth());
+        groupSubKeyK0_2->setSizePolicy(sizePolicy);
+        groupSubKeyK0_2->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK0_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k0byte15_2 = new QLabel(groupSubKeyK0_2);
+        k0byte15_2->setObjectName(QString::fromUtf8("k0byte15_2"));
+        k0byte15_2->setEnabled(true);
+        k0byte15_2->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte15_2->sizePolicy().hasHeightForWidth());
+        k0byte15_2->setSizePolicy(sizePolicy);
+        k0byte15_2->setFont(font1);
+        k0byte15_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte15_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte15_2->setAlignment(Qt::AlignCenter);
+        k0byte13_2 = new QLabel(groupSubKeyK0_2);
+        k0byte13_2->setObjectName(QString::fromUtf8("k0byte13_2"));
+        k0byte13_2->setEnabled(true);
+        k0byte13_2->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte13_2->sizePolicy().hasHeightForWidth());
+        k0byte13_2->setSizePolicy(sizePolicy);
+        k0byte13_2->setFont(font4);
+        k0byte13_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte13_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte13_2->setAlignment(Qt::AlignCenter);
+        k0byte14_2 = new QLabel(groupSubKeyK0_2);
+        k0byte14_2->setObjectName(QString::fromUtf8("k0byte14_2"));
+        k0byte14_2->setEnabled(true);
+        k0byte14_2->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte14_2->sizePolicy().hasHeightForWidth());
+        k0byte14_2->setSizePolicy(sizePolicy);
+        k0byte14_2->setFont(font1);
+        k0byte14_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte14_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte14_2->setAlignment(Qt::AlignCenter);
+        k0byte06_2 = new QLabel(groupSubKeyK0_2);
+        k0byte06_2->setObjectName(QString::fromUtf8("k0byte06_2"));
+        k0byte06_2->setEnabled(true);
+        k0byte06_2->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte06_2->sizePolicy().hasHeightForWidth());
+        k0byte06_2->setSizePolicy(sizePolicy);
+        k0byte06_2->setFont(font1);
+        k0byte06_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte06_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte06_2->setAlignment(Qt::AlignCenter);
+        k0byte04_2 = new QLabel(groupSubKeyK0_2);
+        k0byte04_2->setObjectName(QString::fromUtf8("k0byte04_2"));
+        k0byte04_2->setEnabled(true);
+        k0byte04_2->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte04_2->sizePolicy().hasHeightForWidth());
+        k0byte04_2->setSizePolicy(sizePolicy);
+        k0byte04_2->setFont(font1);
+        k0byte04_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte04_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte04_2->setAlignment(Qt::AlignCenter);
+        k0byte02_2 = new QLabel(groupSubKeyK0_2);
+        k0byte02_2->setObjectName(QString::fromUtf8("k0byte02_2"));
+        k0byte02_2->setEnabled(true);
+        k0byte02_2->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte02_2->sizePolicy().hasHeightForWidth());
+        k0byte02_2->setSizePolicy(sizePolicy);
+        k0byte02_2->setFont(font4);
+        k0byte02_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte02_2->setAlignment(Qt::AlignCenter);
+        k0byte10_2 = new QLabel(groupSubKeyK0_2);
+        k0byte10_2->setObjectName(QString::fromUtf8("k0byte10_2"));
+        k0byte10_2->setEnabled(true);
+        k0byte10_2->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte10_2->sizePolicy().hasHeightForWidth());
+        k0byte10_2->setSizePolicy(sizePolicy);
+        k0byte10_2->setFont(font1);
+        k0byte10_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte10_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte10_2->setAlignment(Qt::AlignCenter);
+        k0byte09_2 = new QLabel(groupSubKeyK0_2);
+        k0byte09_2->setObjectName(QString::fromUtf8("k0byte09_2"));
+        k0byte09_2->setEnabled(true);
+        k0byte09_2->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte09_2->sizePolicy().hasHeightForWidth());
+        k0byte09_2->setSizePolicy(sizePolicy);
+        k0byte09_2->setFont(font1);
+        k0byte09_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte09_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte09_2->setAlignment(Qt::AlignCenter);
+        k0byte01_2 = new QLabel(groupSubKeyK0_2);
+        k0byte01_2->setObjectName(QString::fromUtf8("k0byte01_2"));
+        k0byte01_2->setEnabled(true);
+        k0byte01_2->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte01_2->sizePolicy().hasHeightForWidth());
+        k0byte01_2->setSizePolicy(sizePolicy);
+        k0byte01_2->setFont(font1);
+        k0byte01_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte01_2->setAlignment(Qt::AlignCenter);
+        k0byte08_2 = new QLabel(groupSubKeyK0_2);
+        k0byte08_2->setObjectName(QString::fromUtf8("k0byte08_2"));
+        k0byte08_2->setEnabled(true);
+        k0byte08_2->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte08_2->sizePolicy().hasHeightForWidth());
+        k0byte08_2->setSizePolicy(sizePolicy);
+        k0byte08_2->setFont(font1);
+        k0byte08_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte08_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte08_2->setAlignment(Qt::AlignCenter);
+        k0byte00_2 = new QLabel(groupSubKeyK0_2);
+        k0byte00_2->setObjectName(QString::fromUtf8("k0byte00_2"));
+        k0byte00_2->setEnabled(true);
+        k0byte00_2->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte00_2->sizePolicy().hasHeightForWidth());
+        k0byte00_2->setSizePolicy(sizePolicy);
+        k0byte00_2->setFont(font1);
+        k0byte00_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte00_2->setAlignment(Qt::AlignCenter);
+        k0byte00_2->setWordWrap(false);
+        k0byte07_2 = new QLabel(groupSubKeyK0_2);
+        k0byte07_2->setObjectName(QString::fromUtf8("k0byte07_2"));
+        k0byte07_2->setEnabled(true);
+        k0byte07_2->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte07_2->sizePolicy().hasHeightForWidth());
+        k0byte07_2->setSizePolicy(sizePolicy);
+        k0byte07_2->setFont(font1);
+        k0byte07_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte07_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte07_2->setAlignment(Qt::AlignCenter);
+        k0byte12_2 = new QLabel(groupSubKeyK0_2);
+        k0byte12_2->setObjectName(QString::fromUtf8("k0byte12_2"));
+        k0byte12_2->setEnabled(true);
+        k0byte12_2->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte12_2->sizePolicy().hasHeightForWidth());
+        k0byte12_2->setSizePolicy(sizePolicy);
+        k0byte12_2->setFont(font1);
+        k0byte12_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte12_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte12_2->setAlignment(Qt::AlignCenter);
+        k0byte03_2 = new QLabel(groupSubKeyK0_2);
+        k0byte03_2->setObjectName(QString::fromUtf8("k0byte03_2"));
+        k0byte03_2->setEnabled(true);
+        k0byte03_2->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte03_2->sizePolicy().hasHeightForWidth());
+        k0byte03_2->setSizePolicy(sizePolicy);
+        k0byte03_2->setFont(font1);
+        k0byte03_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte03_2->setAlignment(Qt::AlignCenter);
+        k0byte11_2 = new QLabel(groupSubKeyK0_2);
+        k0byte11_2->setObjectName(QString::fromUtf8("k0byte11_2"));
+        k0byte11_2->setEnabled(true);
+        k0byte11_2->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte11_2->sizePolicy().hasHeightForWidth());
+        k0byte11_2->setSizePolicy(sizePolicy);
+        k0byte11_2->setFont(font1);
+        k0byte11_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte11_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte11_2->setAlignment(Qt::AlignCenter);
+        k0byte05_2 = new QLabel(groupSubKeyK0_2);
+        k0byte05_2->setObjectName(QString::fromUtf8("k0byte05_2"));
+        k0byte05_2->setEnabled(true);
+        k0byte05_2->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte05_2->sizePolicy().hasHeightForWidth());
+        k0byte05_2->setSizePolicy(sizePolicy);
+        k0byte05_2->setFont(font1);
+        k0byte05_2->setLayoutDirection(Qt::LeftToRight);
+        k0byte05_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte05_2->setAlignment(Qt::AlignCenter);
+        buttonS02E03FindMissingBytes = new QPushButton(groupBox_11);
+        buttonS02E03FindMissingBytes->setObjectName(QString::fromUtf8("buttonS02E03FindMissingBytes"));
+        buttonS02E03FindMissingBytes->setGeometry(QRect(480, 90, 131, 27));
+        groupSubKeyK2 = new QGroupBox(groupBox_11);
+        groupSubKeyK2->setObjectName(QString::fromUtf8("groupSubKeyK2"));
+        groupSubKeyK2->setGeometry(QRect(320, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK2->sizePolicy().hasHeightForWidth());
+        groupSubKeyK2->setSizePolicy(sizePolicy);
+        groupSubKeyK2->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k2byte15 = new QLabel(groupSubKeyK2);
+        k2byte15->setObjectName(QString::fromUtf8("k2byte15"));
+        k2byte15->setEnabled(true);
+        k2byte15->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte15->sizePolicy().hasHeightForWidth());
+        k2byte15->setSizePolicy(sizePolicy);
+        k2byte15->setFont(font1);
+        k2byte15->setLayoutDirection(Qt::LeftToRight);
+        k2byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte15->setAlignment(Qt::AlignCenter);
+        k2byte13 = new QLabel(groupSubKeyK2);
+        k2byte13->setObjectName(QString::fromUtf8("k2byte13"));
+        k2byte13->setEnabled(true);
+        k2byte13->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte13->sizePolicy().hasHeightForWidth());
+        k2byte13->setSizePolicy(sizePolicy);
+        k2byte13->setFont(font1);
+        k2byte13->setLayoutDirection(Qt::LeftToRight);
+        k2byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte13->setAlignment(Qt::AlignCenter);
+        k2byte14 = new QLabel(groupSubKeyK2);
+        k2byte14->setObjectName(QString::fromUtf8("k2byte14"));
+        k2byte14->setEnabled(true);
+        k2byte14->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte14->sizePolicy().hasHeightForWidth());
+        k2byte14->setSizePolicy(sizePolicy);
+        k2byte14->setFont(font1);
+        k2byte14->setLayoutDirection(Qt::LeftToRight);
+        k2byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte14->setAlignment(Qt::AlignCenter);
+        k2byte06 = new QLabel(groupSubKeyK2);
+        k2byte06->setObjectName(QString::fromUtf8("k2byte06"));
+        k2byte06->setEnabled(true);
+        k2byte06->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte06->sizePolicy().hasHeightForWidth());
+        k2byte06->setSizePolicy(sizePolicy);
+        k2byte06->setFont(font1);
+        k2byte06->setLayoutDirection(Qt::LeftToRight);
+        k2byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte06->setAlignment(Qt::AlignCenter);
+        k2byte04 = new QLabel(groupSubKeyK2);
+        k2byte04->setObjectName(QString::fromUtf8("k2byte04"));
+        k2byte04->setEnabled(true);
+        k2byte04->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte04->sizePolicy().hasHeightForWidth());
+        k2byte04->setSizePolicy(sizePolicy);
+        k2byte04->setFont(font1);
+        k2byte04->setLayoutDirection(Qt::LeftToRight);
+        k2byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte04->setAlignment(Qt::AlignCenter);
+        k2byte02 = new QLabel(groupSubKeyK2);
+        k2byte02->setObjectName(QString::fromUtf8("k2byte02"));
+        k2byte02->setEnabled(true);
+        k2byte02->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte02->sizePolicy().hasHeightForWidth());
+        k2byte02->setSizePolicy(sizePolicy);
+        k2byte02->setFont(font);
+        k2byte02->setLayoutDirection(Qt::LeftToRight);
+        k2byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte02->setAlignment(Qt::AlignCenter);
+        k2byte10 = new QLabel(groupSubKeyK2);
+        k2byte10->setObjectName(QString::fromUtf8("k2byte10"));
+        k2byte10->setEnabled(true);
+        k2byte10->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte10->sizePolicy().hasHeightForWidth());
+        k2byte10->setSizePolicy(sizePolicy);
+        k2byte10->setFont(font1);
+        k2byte10->setLayoutDirection(Qt::LeftToRight);
+        k2byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte10->setAlignment(Qt::AlignCenter);
+        k2byte09 = new QLabel(groupSubKeyK2);
+        k2byte09->setObjectName(QString::fromUtf8("k2byte09"));
+        k2byte09->setEnabled(true);
+        k2byte09->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte09->sizePolicy().hasHeightForWidth());
+        k2byte09->setSizePolicy(sizePolicy);
+        k2byte09->setFont(font1);
+        k2byte09->setLayoutDirection(Qt::LeftToRight);
+        k2byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte09->setAlignment(Qt::AlignCenter);
+        k2byte01 = new QLabel(groupSubKeyK2);
+        k2byte01->setObjectName(QString::fromUtf8("k2byte01"));
+        k2byte01->setEnabled(true);
+        k2byte01->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte01->sizePolicy().hasHeightForWidth());
+        k2byte01->setSizePolicy(sizePolicy);
+        k2byte01->setFont(font1);
+        k2byte01->setLayoutDirection(Qt::LeftToRight);
+        k2byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte01->setAlignment(Qt::AlignCenter);
+        k2byte08 = new QLabel(groupSubKeyK2);
+        k2byte08->setObjectName(QString::fromUtf8("k2byte08"));
+        k2byte08->setEnabled(true);
+        k2byte08->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte08->sizePolicy().hasHeightForWidth());
+        k2byte08->setSizePolicy(sizePolicy);
+        k2byte08->setFont(font1);
+        k2byte08->setLayoutDirection(Qt::LeftToRight);
+        k2byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte08->setAlignment(Qt::AlignCenter);
+        k2byte00 = new QLabel(groupSubKeyK2);
+        k2byte00->setObjectName(QString::fromUtf8("k2byte00"));
+        k2byte00->setEnabled(true);
+        k2byte00->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte00->sizePolicy().hasHeightForWidth());
+        k2byte00->setSizePolicy(sizePolicy);
+        k2byte00->setFont(font);
+        k2byte00->setLayoutDirection(Qt::LeftToRight);
+        k2byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte00->setAlignment(Qt::AlignCenter);
+        k2byte00->setWordWrap(false);
+        k2byte07 = new QLabel(groupSubKeyK2);
+        k2byte07->setObjectName(QString::fromUtf8("k2byte07"));
+        k2byte07->setEnabled(true);
+        k2byte07->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte07->sizePolicy().hasHeightForWidth());
+        k2byte07->setSizePolicy(sizePolicy);
+        k2byte07->setFont(font1);
+        k2byte07->setLayoutDirection(Qt::LeftToRight);
+        k2byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte07->setAlignment(Qt::AlignCenter);
+        k2byte12 = new QLabel(groupSubKeyK2);
+        k2byte12->setObjectName(QString::fromUtf8("k2byte12"));
+        k2byte12->setEnabled(true);
+        k2byte12->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte12->sizePolicy().hasHeightForWidth());
+        k2byte12->setSizePolicy(sizePolicy);
+        k2byte12->setFont(font1);
+        k2byte12->setLayoutDirection(Qt::LeftToRight);
+        k2byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte12->setAlignment(Qt::AlignCenter);
+        k2byte03 = new QLabel(groupSubKeyK2);
+        k2byte03->setObjectName(QString::fromUtf8("k2byte03"));
+        k2byte03->setEnabled(true);
+        k2byte03->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte03->sizePolicy().hasHeightForWidth());
+        k2byte03->setSizePolicy(sizePolicy);
+        k2byte03->setFont(font1);
+        k2byte03->setLayoutDirection(Qt::LeftToRight);
+        k2byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte03->setAlignment(Qt::AlignCenter);
+        k2byte11 = new QLabel(groupSubKeyK2);
+        k2byte11->setObjectName(QString::fromUtf8("k2byte11"));
+        k2byte11->setEnabled(true);
+        k2byte11->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte11->sizePolicy().hasHeightForWidth());
+        k2byte11->setSizePolicy(sizePolicy);
+        k2byte11->setFont(font1);
+        k2byte11->setLayoutDirection(Qt::LeftToRight);
+        k2byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte11->setAlignment(Qt::AlignCenter);
+        k2byte05 = new QLabel(groupSubKeyK2);
+        k2byte05->setObjectName(QString::fromUtf8("k2byte05"));
+        k2byte05->setEnabled(true);
+        k2byte05->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte05->sizePolicy().hasHeightForWidth());
+        k2byte05->setSizePolicy(sizePolicy);
+        k2byte05->setFont(font1);
+        k2byte05->setLayoutDirection(Qt::LeftToRight);
+        k2byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte05->setAlignment(Qt::AlignCenter);
+        buttonS02E03FindU2Bytes = new QPushButton(tabS02E03);
+        buttonS02E03FindU2Bytes->setObjectName(QString::fromUtf8("buttonS02E03FindU2Bytes"));
+        buttonS02E03FindU2Bytes->setGeometry(QRect(520, 130, 101, 27));
+        label_111 = new QLabel(tabS02E03);
+        label_111->setObjectName(QString::fromUtf8("label_111"));
+        label_111->setGeometry(QRect(10, 10, 91, 17));
+        label_112 = new QLabel(tabS02E03);
+        label_112->setObjectName(QString::fromUtf8("label_112"));
+        label_112->setGeometry(QRect(610, 10, 91, 17));
+        tabWidget->addTab(tabS02E03, QString());
+        tabS02E04 = new QWidget();
+        tabS02E04->setObjectName(QString::fromUtf8("tabS02E04"));
+        groupBox_12 = new QGroupBox(tabS02E04);
+        groupBox_12->setObjectName(QString::fromUtf8("groupBox_12"));
+        groupBox_12->setGeometry(QRect(250, 20, 521, 181));
+        label_113 = new QLabel(groupBox_12);
+        label_113->setObjectName(QString::fromUtf8("label_113"));
+        label_113->setGeometry(QRect(300, 0, 91, 17));
+        s02e04sysk2byte01 = new QLabel(groupBox_12);
+        s02e04sysk2byte01->setObjectName(QString::fromUtf8("s02e04sysk2byte01"));
+        s02e04sysk2byte01->setEnabled(true);
+        s02e04sysk2byte01->setGeometry(QRect(10, 90, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysk2byte01->sizePolicy().hasHeightForWidth());
+        s02e04sysk2byte01->setSizePolicy(sizePolicy);
+        s02e04sysk2byte01->setFont(font);
+        s02e04sysk2byte01->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysk2byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysk2byte01->setAlignment(Qt::AlignCenter);
+        s02e04sysk2byte02 = new QLabel(groupBox_12);
+        s02e04sysk2byte02->setObjectName(QString::fromUtf8("s02e04sysk2byte02"));
+        s02e04sysk2byte02->setEnabled(true);
+        s02e04sysk2byte02->setGeometry(QRect(10, 120, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysk2byte02->sizePolicy().hasHeightForWidth());
+        s02e04sysk2byte02->setSizePolicy(sizePolicy);
+        s02e04sysk2byte02->setFont(font4);
+        s02e04sysk2byte02->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysk2byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysk2byte02->setAlignment(Qt::AlignCenter);
+        s02e04sysk2byte00 = new QLabel(groupBox_12);
+        s02e04sysk2byte00->setObjectName(QString::fromUtf8("s02e04sysk2byte00"));
+        s02e04sysk2byte00->setEnabled(true);
+        s02e04sysk2byte00->setGeometry(QRect(10, 60, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysk2byte00->sizePolicy().hasHeightForWidth());
+        s02e04sysk2byte00->setSizePolicy(sizePolicy);
+        s02e04sysk2byte00->setFont(font4);
+        s02e04sysk2byte00->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysk2byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysk2byte00->setAlignment(Qt::AlignCenter);
+        s02e04sysk2byte00->setWordWrap(false);
+        s02e04sysk2byte03 = new QLabel(groupBox_12);
+        s02e04sysk2byte03->setObjectName(QString::fromUtf8("s02e04sysk2byte03"));
+        s02e04sysk2byte03->setEnabled(true);
+        s02e04sysk2byte03->setGeometry(QRect(10, 150, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysk2byte03->sizePolicy().hasHeightForWidth());
+        s02e04sysk2byte03->setSizePolicy(sizePolicy);
+        s02e04sysk2byte03->setFont(font);
+        s02e04sysk2byte03->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysk2byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysk2byte03->setAlignment(Qt::AlignCenter);
+        label_114 = new QLabel(groupBox_12);
+        label_114->setObjectName(QString::fromUtf8("label_114"));
+        label_114->setGeometry(QRect(40, 62, 311, 17));
+        label_115 = new QLabel(groupBox_12);
+        label_115->setObjectName(QString::fromUtf8("label_115"));
+        label_115->setGeometry(QRect(40, 92, 311, 17));
+        label_116 = new QLabel(groupBox_12);
+        label_116->setObjectName(QString::fromUtf8("label_116"));
+        label_116->setGeometry(QRect(40, 122, 321, 17));
+        label_117 = new QLabel(groupBox_12);
+        label_117->setObjectName(QString::fromUtf8("label_117"));
+        label_117->setGeometry(QRect(40, 152, 321, 17));
+        s02e04sysu2byte00_3 = new QLabel(groupBox_12);
+        s02e04sysu2byte00_3->setObjectName(QString::fromUtf8("s02e04sysu2byte00_3"));
+        s02e04sysu2byte00_3->setEnabled(true);
+        s02e04sysu2byte00_3->setGeometry(QRect(80, 150, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte00_3->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte00_3->setSizePolicy(sizePolicy);
+        s02e04sysu2byte00_3->setFont(font1);
+        s02e04sysu2byte00_3->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte00_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte00_3->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte00_1 = new QLabel(groupBox_12);
+        s02e04sysu2byte00_1->setObjectName(QString::fromUtf8("s02e04sysu2byte00_1"));
+        s02e04sysu2byte00_1->setEnabled(true);
+        s02e04sysu2byte00_1->setGeometry(QRect(80, 90, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte00_1->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte00_1->setSizePolicy(sizePolicy);
+        s02e04sysu2byte00_1->setFont(font1);
+        s02e04sysu2byte00_1->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte00_1->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte00_1->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte00_0 = new QLabel(groupBox_12);
+        s02e04sysu2byte00_0->setObjectName(QString::fromUtf8("s02e04sysu2byte00_0"));
+        s02e04sysu2byte00_0->setEnabled(true);
+        s02e04sysu2byte00_0->setGeometry(QRect(80, 58, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte00_0->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte00_0->setSizePolicy(sizePolicy);
+        s02e04sysu2byte00_0->setFont(font1);
+        s02e04sysu2byte00_0->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte00_0->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte00_0->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte00_0->setWordWrap(false);
+        s02e04sysu2byte00_2 = new QLabel(groupBox_12);
+        s02e04sysu2byte00_2->setObjectName(QString::fromUtf8("s02e04sysu2byte00_2"));
+        s02e04sysu2byte00_2->setEnabled(true);
+        s02e04sysu2byte00_2->setGeometry(QRect(80, 120, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte00_2->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte00_2->setSizePolicy(sizePolicy);
+        s02e04sysu2byte00_2->setFont(font1);
+        s02e04sysu2byte00_2->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte00_2->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte01_1 = new QLabel(groupBox_12);
+        s02e04sysu2byte01_1->setObjectName(QString::fromUtf8("s02e04sysu2byte01_1"));
+        s02e04sysu2byte01_1->setEnabled(true);
+        s02e04sysu2byte01_1->setGeometry(QRect(160, 90, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte01_1->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte01_1->setSizePolicy(sizePolicy);
+        s02e04sysu2byte01_1->setFont(font);
+        s02e04sysu2byte01_1->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte01_1->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte01_1->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte01_0 = new QLabel(groupBox_12);
+        s02e04sysu2byte01_0->setObjectName(QString::fromUtf8("s02e04sysu2byte01_0"));
+        s02e04sysu2byte01_0->setEnabled(true);
+        s02e04sysu2byte01_0->setGeometry(QRect(160, 58, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte01_0->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte01_0->setSizePolicy(sizePolicy);
+        s02e04sysu2byte01_0->setFont(font);
+        s02e04sysu2byte01_0->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte01_0->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte01_0->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte01_0->setWordWrap(false);
+        s02e04sysu2byte01_2 = new QLabel(groupBox_12);
+        s02e04sysu2byte01_2->setObjectName(QString::fromUtf8("s02e04sysu2byte01_2"));
+        s02e04sysu2byte01_2->setEnabled(true);
+        s02e04sysu2byte01_2->setGeometry(QRect(160, 120, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte01_2->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte01_2->setSizePolicy(sizePolicy);
+        s02e04sysu2byte01_2->setFont(font);
+        s02e04sysu2byte01_2->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte01_2->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte01_3 = new QLabel(groupBox_12);
+        s02e04sysu2byte01_3->setObjectName(QString::fromUtf8("s02e04sysu2byte01_3"));
+        s02e04sysu2byte01_3->setEnabled(true);
+        s02e04sysu2byte01_3->setGeometry(QRect(160, 150, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte01_3->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte01_3->setSizePolicy(sizePolicy);
+        s02e04sysu2byte01_3->setFont(font);
+        s02e04sysu2byte01_3->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte01_3->setAlignment(Qt::AlignCenter);
+        label_118 = new QLabel(groupBox_12);
+        label_118->setObjectName(QString::fromUtf8("label_118"));
+        label_118->setGeometry(QRect(10, 40, 21, 17));
+        label_119 = new QLabel(groupBox_12);
+        label_119->setObjectName(QString::fromUtf8("label_119"));
+        label_119->setGeometry(QRect(80, 40, 31, 17));
+        label_120 = new QLabel(groupBox_12);
+        label_120->setObjectName(QString::fromUtf8("label_120"));
+        label_120->setGeometry(QRect(160, 40, 31, 17));
+        label_121 = new QLabel(groupBox_12);
+        label_121->setObjectName(QString::fromUtf8("label_121"));
+        label_121->setGeometry(QRect(240, 40, 31, 17));
+        label_122 = new QLabel(groupBox_12);
+        label_122->setObjectName(QString::fromUtf8("label_122"));
+        label_122->setGeometry(QRect(320, 40, 31, 17));
+        s02e04sysu2byte02_0 = new QLabel(groupBox_12);
+        s02e04sysu2byte02_0->setObjectName(QString::fromUtf8("s02e04sysu2byte02_0"));
+        s02e04sysu2byte02_0->setEnabled(true);
+        s02e04sysu2byte02_0->setGeometry(QRect(240, 58, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte02_0->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte02_0->setSizePolicy(sizePolicy);
+        s02e04sysu2byte02_0->setFont(font1);
+        s02e04sysu2byte02_0->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte02_0->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte02_0->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte02_0->setWordWrap(false);
+        s02e04sysu2byte02_2 = new QLabel(groupBox_12);
+        s02e04sysu2byte02_2->setObjectName(QString::fromUtf8("s02e04sysu2byte02_2"));
+        s02e04sysu2byte02_2->setEnabled(true);
+        s02e04sysu2byte02_2->setGeometry(QRect(240, 120, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte02_2->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte02_2->setSizePolicy(sizePolicy);
+        s02e04sysu2byte02_2->setFont(font1);
+        s02e04sysu2byte02_2->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte02_2->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte02_1 = new QLabel(groupBox_12);
+        s02e04sysu2byte02_1->setObjectName(QString::fromUtf8("s02e04sysu2byte02_1"));
+        s02e04sysu2byte02_1->setEnabled(true);
+        s02e04sysu2byte02_1->setGeometry(QRect(240, 90, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte02_1->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte02_1->setSizePolicy(sizePolicy);
+        s02e04sysu2byte02_1->setFont(font1);
+        s02e04sysu2byte02_1->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte02_1->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte02_1->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte02_3 = new QLabel(groupBox_12);
+        s02e04sysu2byte02_3->setObjectName(QString::fromUtf8("s02e04sysu2byte02_3"));
+        s02e04sysu2byte02_3->setEnabled(true);
+        s02e04sysu2byte02_3->setGeometry(QRect(240, 150, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte02_3->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte02_3->setSizePolicy(sizePolicy);
+        s02e04sysu2byte02_3->setFont(font1);
+        s02e04sysu2byte02_3->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte02_3->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte03_0 = new QLabel(groupBox_12);
+        s02e04sysu2byte03_0->setObjectName(QString::fromUtf8("s02e04sysu2byte03_0"));
+        s02e04sysu2byte03_0->setEnabled(true);
+        s02e04sysu2byte03_0->setGeometry(QRect(320, 58, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte03_0->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte03_0->setSizePolicy(sizePolicy);
+        s02e04sysu2byte03_0->setFont(font);
+        s02e04sysu2byte03_0->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte03_0->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte03_0->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte03_0->setWordWrap(false);
+        s02e04sysu2byte03_2 = new QLabel(groupBox_12);
+        s02e04sysu2byte03_2->setObjectName(QString::fromUtf8("s02e04sysu2byte03_2"));
+        s02e04sysu2byte03_2->setEnabled(true);
+        s02e04sysu2byte03_2->setGeometry(QRect(320, 120, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte03_2->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte03_2->setSizePolicy(sizePolicy);
+        s02e04sysu2byte03_2->setFont(font);
+        s02e04sysu2byte03_2->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte03_2->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte03_1 = new QLabel(groupBox_12);
+        s02e04sysu2byte03_1->setObjectName(QString::fromUtf8("s02e04sysu2byte03_1"));
+        s02e04sysu2byte03_1->setEnabled(true);
+        s02e04sysu2byte03_1->setGeometry(QRect(320, 90, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte03_1->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte03_1->setSizePolicy(sizePolicy);
+        s02e04sysu2byte03_1->setFont(font);
+        s02e04sysu2byte03_1->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte03_1->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte03_1->setAlignment(Qt::AlignCenter);
+        s02e04sysu2byte03_3 = new QLabel(groupBox_12);
+        s02e04sysu2byte03_3->setObjectName(QString::fromUtf8("s02e04sysu2byte03_3"));
+        s02e04sysu2byte03_3->setEnabled(true);
+        s02e04sysu2byte03_3->setGeometry(QRect(320, 150, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04sysu2byte03_3->sizePolicy().hasHeightForWidth());
+        s02e04sysu2byte03_3->setSizePolicy(sizePolicy);
+        s02e04sysu2byte03_3->setFont(font);
+        s02e04sysu2byte03_3->setLayoutDirection(Qt::LeftToRight);
+        s02e04sysu2byte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04sysu2byte03_3->setAlignment(Qt::AlignCenter);
+        label_123 = new QLabel(groupBox_12);
+        label_123->setObjectName(QString::fromUtf8("label_123"));
+        label_123->setGeometry(QRect(120, 62, 16, 17));
+        label_123->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_123->setScaledContents(true);
+        label_124 = new QLabel(groupBox_12);
+        label_124->setObjectName(QString::fromUtf8("label_124"));
+        label_124->setGeometry(QRect(280, 62, 16, 17));
+        label_124->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_124->setScaledContents(true);
+        label_125 = new QLabel(groupBox_12);
+        label_125->setObjectName(QString::fromUtf8("label_125"));
+        label_125->setGeometry(QRect(280, 152, 16, 17));
+        label_125->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_125->setScaledContents(true);
+        label_126 = new QLabel(groupBox_12);
+        label_126->setObjectName(QString::fromUtf8("label_126"));
+        label_126->setGeometry(QRect(280, 92, 16, 17));
+        label_126->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_126->setScaledContents(true);
+        label_127 = new QLabel(groupBox_12);
+        label_127->setObjectName(QString::fromUtf8("label_127"));
+        label_127->setGeometry(QRect(200, 62, 16, 17));
+        label_127->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_127->setScaledContents(true);
+        label_128 = new QLabel(groupBox_12);
+        label_128->setObjectName(QString::fromUtf8("label_128"));
+        label_128->setGeometry(QRect(120, 92, 16, 17));
+        label_128->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_128->setScaledContents(true);
+        label_129 = new QLabel(groupBox_12);
+        label_129->setObjectName(QString::fromUtf8("label_129"));
+        label_129->setGeometry(QRect(200, 92, 16, 17));
+        label_129->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_129->setScaledContents(true);
+        label_130 = new QLabel(groupBox_12);
+        label_130->setObjectName(QString::fromUtf8("label_130"));
+        label_130->setGeometry(QRect(280, 122, 16, 17));
+        label_130->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_130->setScaledContents(true);
+        label_131 = new QLabel(groupBox_12);
+        label_131->setObjectName(QString::fromUtf8("label_131"));
+        label_131->setGeometry(QRect(120, 122, 16, 17));
+        label_131->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_131->setScaledContents(true);
+        label_132 = new QLabel(groupBox_12);
+        label_132->setObjectName(QString::fromUtf8("label_132"));
+        label_132->setGeometry(QRect(120, 152, 16, 17));
+        label_132->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_132->setScaledContents(true);
+        label_133 = new QLabel(groupBox_12);
+        label_133->setObjectName(QString::fromUtf8("label_133"));
+        label_133->setGeometry(QRect(200, 122, 16, 17));
+        label_133->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_133->setScaledContents(true);
+        label_134 = new QLabel(groupBox_12);
+        label_134->setObjectName(QString::fromUtf8("label_134"));
+        label_134->setGeometry(QRect(200, 152, 16, 17));
+        label_134->setPixmap(QPixmap(QString::fromUtf8("res/xor.png")));
+        label_134->setScaledContents(true);
+        buttonS02E04SolveLinearSystem = new QPushButton(groupBox_12);
+        buttonS02E04SolveLinearSystem->setObjectName(QString::fromUtf8("buttonS02E04SolveLinearSystem"));
+        buttonS02E04SolveLinearSystem->setGeometry(QRect(380, 100, 131, 27));
+        label_135 = new QLabel(tabS02E04);
+        label_135->setObjectName(QString::fromUtf8("label_135"));
+        label_135->setGeometry(QRect(100, 130, 51, 17));
+        groupSubKeyK2_2 = new QGroupBox(tabS02E04);
+        groupSubKeyK2_2->setObjectName(QString::fromUtf8("groupSubKeyK2_2"));
+        groupSubKeyK2_2->setGeometry(QRect(140, 40, 81, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK2_2->sizePolicy().hasHeightForWidth());
+        groupSubKeyK2_2->setSizePolicy(sizePolicy);
+        groupSubKeyK2_2->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK2_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        s02e04k2byte02 = new QLabel(groupSubKeyK2_2);
+        s02e04k2byte02->setObjectName(QString::fromUtf8("s02e04k2byte02"));
+        s02e04k2byte02->setEnabled(true);
+        s02e04k2byte02->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04k2byte02->sizePolicy().hasHeightForWidth());
+        s02e04k2byte02->setSizePolicy(sizePolicy);
+        s02e04k2byte02->setFont(font4);
+        s02e04k2byte02->setLayoutDirection(Qt::LeftToRight);
+        s02e04k2byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04k2byte02->setAlignment(Qt::AlignCenter);
+        s02e04k2byte01 = new QLabel(groupSubKeyK2_2);
+        s02e04k2byte01->setObjectName(QString::fromUtf8("s02e04k2byte01"));
+        s02e04k2byte01->setEnabled(true);
+        s02e04k2byte01->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04k2byte01->sizePolicy().hasHeightForWidth());
+        s02e04k2byte01->setSizePolicy(sizePolicy);
+        s02e04k2byte01->setFont(font);
+        s02e04k2byte01->setLayoutDirection(Qt::LeftToRight);
+        s02e04k2byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04k2byte01->setAlignment(Qt::AlignCenter);
+        s02e04k2byte00 = new QLabel(groupSubKeyK2_2);
+        s02e04k2byte00->setObjectName(QString::fromUtf8("s02e04k2byte00"));
+        s02e04k2byte00->setEnabled(true);
+        s02e04k2byte00->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04k2byte00->sizePolicy().hasHeightForWidth());
+        s02e04k2byte00->setSizePolicy(sizePolicy);
+        s02e04k2byte00->setFont(font4);
+        s02e04k2byte00->setLayoutDirection(Qt::LeftToRight);
+        s02e04k2byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04k2byte00->setAlignment(Qt::AlignCenter);
+        s02e04k2byte00->setWordWrap(false);
+        s02e04k2byte03 = new QLabel(groupSubKeyK2_2);
+        s02e04k2byte03->setObjectName(QString::fromUtf8("s02e04k2byte03"));
+        s02e04k2byte03->setEnabled(true);
+        s02e04k2byte03->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04k2byte03->sizePolicy().hasHeightForWidth());
+        s02e04k2byte03->setSizePolicy(sizePolicy);
+        s02e04k2byte03->setFont(font);
+        s02e04k2byte03->setLayoutDirection(Qt::LeftToRight);
+        s02e04k2byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04k2byte03->setAlignment(Qt::AlignCenter);
+        label_136 = new QLabel(groupSubKeyK2_2);
+        label_136->setObjectName(QString::fromUtf8("label_136"));
+        label_136->setGeometry(QRect(0, 60, 21, 17));
+        label_136->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_136->setScaledContents(true);
+        label_137 = new QLabel(tabS02E04);
+        label_137->setObjectName(QString::fromUtf8("label_137"));
+        label_137->setGeometry(QRect(80, 100, 67, 17));
+        label_137->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_137->setScaledContents(true);
+        groupBox_13 = new QGroupBox(tabS02E04);
+        groupBox_13->setObjectName(QString::fromUtf8("groupBox_13"));
+        groupBox_13->setGeometry(QRect(30, 240, 611, 191));
+        groupSubKeyK1_3 = new QGroupBox(groupBox_13);
+        groupSubKeyK1_3->setObjectName(QString::fromUtf8("groupSubKeyK1_3"));
+        groupSubKeyK1_3->setGeometry(QRect(170, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK1_3->sizePolicy().hasHeightForWidth());
+        groupSubKeyK1_3->setSizePolicy(sizePolicy);
+        groupSubKeyK1_3->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK1_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k1byte15_3 = new QLabel(groupSubKeyK1_3);
+        k1byte15_3->setObjectName(QString::fromUtf8("k1byte15_3"));
+        k1byte15_3->setEnabled(true);
+        k1byte15_3->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte15_3->sizePolicy().hasHeightForWidth());
+        k1byte15_3->setSizePolicy(sizePolicy);
+        k1byte15_3->setFont(font4);
+        k1byte15_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte15_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte15_3->setAlignment(Qt::AlignCenter);
+        k1byte13_3 = new QLabel(groupSubKeyK1_3);
+        k1byte13_3->setObjectName(QString::fromUtf8("k1byte13_3"));
+        k1byte13_3->setEnabled(true);
+        k1byte13_3->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte13_3->sizePolicy().hasHeightForWidth());
+        k1byte13_3->setSizePolicy(sizePolicy);
+        k1byte13_3->setFont(font4);
+        k1byte13_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte13_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte13_3->setAlignment(Qt::AlignCenter);
+        k1byte14_3 = new QLabel(groupSubKeyK1_3);
+        k1byte14_3->setObjectName(QString::fromUtf8("k1byte14_3"));
+        k1byte14_3->setEnabled(true);
+        k1byte14_3->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte14_3->sizePolicy().hasHeightForWidth());
+        k1byte14_3->setSizePolicy(sizePolicy);
+        k1byte14_3->setFont(font);
+        k1byte14_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte14_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte14_3->setAlignment(Qt::AlignCenter);
+        k1byte06_3 = new QLabel(groupSubKeyK1_3);
+        k1byte06_3->setObjectName(QString::fromUtf8("k1byte06_3"));
+        k1byte06_3->setEnabled(true);
+        k1byte06_3->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte06_3->sizePolicy().hasHeightForWidth());
+        k1byte06_3->setSizePolicy(sizePolicy);
+        k1byte06_3->setFont(font4);
+        k1byte06_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte06_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte06_3->setAlignment(Qt::AlignCenter);
+        k1byte04_3 = new QLabel(groupSubKeyK1_3);
+        k1byte04_3->setObjectName(QString::fromUtf8("k1byte04_3"));
+        k1byte04_3->setEnabled(true);
+        k1byte04_3->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte04_3->sizePolicy().hasHeightForWidth());
+        k1byte04_3->setSizePolicy(sizePolicy);
+        k1byte04_3->setFont(font4);
+        k1byte04_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte04_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte04_3->setAlignment(Qt::AlignCenter);
+        k1byte02_3 = new QLabel(groupSubKeyK1_3);
+        k1byte02_3->setObjectName(QString::fromUtf8("k1byte02_3"));
+        k1byte02_3->setEnabled(true);
+        k1byte02_3->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte02_3->sizePolicy().hasHeightForWidth());
+        k1byte02_3->setSizePolicy(sizePolicy);
+        k1byte02_3->setFont(font1);
+        k1byte02_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte02_3->setAlignment(Qt::AlignCenter);
+        k1byte10_3 = new QLabel(groupSubKeyK1_3);
+        k1byte10_3->setObjectName(QString::fromUtf8("k1byte10_3"));
+        k1byte10_3->setEnabled(true);
+        k1byte10_3->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte10_3->sizePolicy().hasHeightForWidth());
+        k1byte10_3->setSizePolicy(sizePolicy);
+        k1byte10_3->setFont(font1);
+        k1byte10_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte10_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte10_3->setAlignment(Qt::AlignCenter);
+        k1byte09_3 = new QLabel(groupSubKeyK1_3);
+        k1byte09_3->setObjectName(QString::fromUtf8("k1byte09_3"));
+        k1byte09_3->setEnabled(true);
+        k1byte09_3->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte09_3->sizePolicy().hasHeightForWidth());
+        k1byte09_3->setSizePolicy(sizePolicy);
+        k1byte09_3->setFont(font1);
+        k1byte09_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte09_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte09_3->setAlignment(Qt::AlignCenter);
+        k1byte01_3 = new QLabel(groupSubKeyK1_3);
+        k1byte01_3->setObjectName(QString::fromUtf8("k1byte01_3"));
+        k1byte01_3->setEnabled(true);
+        k1byte01_3->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte01_3->sizePolicy().hasHeightForWidth());
+        k1byte01_3->setSizePolicy(sizePolicy);
+        k1byte01_3->setFont(font1);
+        k1byte01_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte01_3->setAlignment(Qt::AlignCenter);
+        k1byte08_3 = new QLabel(groupSubKeyK1_3);
+        k1byte08_3->setObjectName(QString::fromUtf8("k1byte08_3"));
+        k1byte08_3->setEnabled(true);
+        k1byte08_3->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte08_3->sizePolicy().hasHeightForWidth());
+        k1byte08_3->setSizePolicy(sizePolicy);
+        k1byte08_3->setFont(font1);
+        k1byte08_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte08_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte08_3->setAlignment(Qt::AlignCenter);
+        k1byte00_3 = new QLabel(groupSubKeyK1_3);
+        k1byte00_3->setObjectName(QString::fromUtf8("k1byte00_3"));
+        k1byte00_3->setEnabled(true);
+        k1byte00_3->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte00_3->sizePolicy().hasHeightForWidth());
+        k1byte00_3->setSizePolicy(sizePolicy);
+        k1byte00_3->setFont(font1);
+        k1byte00_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte00_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte00_3->setAlignment(Qt::AlignCenter);
+        k1byte00_3->setWordWrap(false);
+        k1byte07_3 = new QLabel(groupSubKeyK1_3);
+        k1byte07_3->setObjectName(QString::fromUtf8("k1byte07_3"));
+        k1byte07_3->setEnabled(true);
+        k1byte07_3->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte07_3->sizePolicy().hasHeightForWidth());
+        k1byte07_3->setSizePolicy(sizePolicy);
+        k1byte07_3->setFont(font4);
+        k1byte07_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte07_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte07_3->setAlignment(Qt::AlignCenter);
+        k1byte12_3 = new QLabel(groupSubKeyK1_3);
+        k1byte12_3->setObjectName(QString::fromUtf8("k1byte12_3"));
+        k1byte12_3->setEnabled(true);
+        k1byte12_3->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte12_3->sizePolicy().hasHeightForWidth());
+        k1byte12_3->setSizePolicy(sizePolicy);
+        k1byte12_3->setFont(font);
+        k1byte12_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte12_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte12_3->setAlignment(Qt::AlignCenter);
+        k1byte03_3 = new QLabel(groupSubKeyK1_3);
+        k1byte03_3->setObjectName(QString::fromUtf8("k1byte03_3"));
+        k1byte03_3->setEnabled(true);
+        k1byte03_3->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte03_3->sizePolicy().hasHeightForWidth());
+        k1byte03_3->setSizePolicy(sizePolicy);
+        k1byte03_3->setFont(font1);
+        k1byte03_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte03_3->setAlignment(Qt::AlignCenter);
+        k1byte11_3 = new QLabel(groupSubKeyK1_3);
+        k1byte11_3->setObjectName(QString::fromUtf8("k1byte11_3"));
+        k1byte11_3->setEnabled(true);
+        k1byte11_3->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte11_3->sizePolicy().hasHeightForWidth());
+        k1byte11_3->setSizePolicy(sizePolicy);
+        k1byte11_3->setFont(font1);
+        k1byte11_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte11_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte11_3->setAlignment(Qt::AlignCenter);
+        k1byte05_3 = new QLabel(groupSubKeyK1_3);
+        k1byte05_3->setObjectName(QString::fromUtf8("k1byte05_3"));
+        k1byte05_3->setEnabled(true);
+        k1byte05_3->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k1byte05_3->sizePolicy().hasHeightForWidth());
+        k1byte05_3->setSizePolicy(sizePolicy);
+        k1byte05_3->setFont(font4);
+        k1byte05_3->setLayoutDirection(Qt::LeftToRight);
+        k1byte05_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k1byte05_3->setAlignment(Qt::AlignCenter);
+        groupSubKeyK0_3 = new QGroupBox(groupBox_13);
+        groupSubKeyK0_3->setObjectName(QString::fromUtf8("groupSubKeyK0_3"));
+        groupSubKeyK0_3->setGeometry(QRect(20, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK0_3->sizePolicy().hasHeightForWidth());
+        groupSubKeyK0_3->setSizePolicy(sizePolicy);
+        groupSubKeyK0_3->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK0_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k0byte15_3 = new QLabel(groupSubKeyK0_3);
+        k0byte15_3->setObjectName(QString::fromUtf8("k0byte15_3"));
+        k0byte15_3->setEnabled(true);
+        k0byte15_3->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte15_3->sizePolicy().hasHeightForWidth());
+        k0byte15_3->setSizePolicy(sizePolicy);
+        k0byte15_3->setFont(font1);
+        k0byte15_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte15_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte15_3->setAlignment(Qt::AlignCenter);
+        k0byte13_3 = new QLabel(groupSubKeyK0_3);
+        k0byte13_3->setObjectName(QString::fromUtf8("k0byte13_3"));
+        k0byte13_3->setEnabled(true);
+        k0byte13_3->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte13_3->sizePolicy().hasHeightForWidth());
+        k0byte13_3->setSizePolicy(sizePolicy);
+        k0byte13_3->setFont(font4);
+        k0byte13_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte13_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte13_3->setAlignment(Qt::AlignCenter);
+        k0byte14_3 = new QLabel(groupSubKeyK0_3);
+        k0byte14_3->setObjectName(QString::fromUtf8("k0byte14_3"));
+        k0byte14_3->setEnabled(true);
+        k0byte14_3->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte14_3->sizePolicy().hasHeightForWidth());
+        k0byte14_3->setSizePolicy(sizePolicy);
+        k0byte14_3->setFont(font);
+        k0byte14_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte14_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte14_3->setAlignment(Qt::AlignCenter);
+        k0byte06_3 = new QLabel(groupSubKeyK0_3);
+        k0byte06_3->setObjectName(QString::fromUtf8("k0byte06_3"));
+        k0byte06_3->setEnabled(true);
+        k0byte06_3->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte06_3->sizePolicy().hasHeightForWidth());
+        k0byte06_3->setSizePolicy(sizePolicy);
+        k0byte06_3->setFont(font);
+        k0byte06_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte06_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte06_3->setAlignment(Qt::AlignCenter);
+        k0byte04_3 = new QLabel(groupSubKeyK0_3);
+        k0byte04_3->setObjectName(QString::fromUtf8("k0byte04_3"));
+        k0byte04_3->setEnabled(true);
+        k0byte04_3->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte04_3->sizePolicy().hasHeightForWidth());
+        k0byte04_3->setSizePolicy(sizePolicy);
+        k0byte04_3->setFont(font);
+        k0byte04_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte04_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte04_3->setAlignment(Qt::AlignCenter);
+        k0byte02_3 = new QLabel(groupSubKeyK0_3);
+        k0byte02_3->setObjectName(QString::fromUtf8("k0byte02_3"));
+        k0byte02_3->setEnabled(true);
+        k0byte02_3->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte02_3->sizePolicy().hasHeightForWidth());
+        k0byte02_3->setSizePolicy(sizePolicy);
+        k0byte02_3->setFont(font4);
+        k0byte02_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte02_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte02_3->setAlignment(Qt::AlignCenter);
+        k0byte10_3 = new QLabel(groupSubKeyK0_3);
+        k0byte10_3->setObjectName(QString::fromUtf8("k0byte10_3"));
+        k0byte10_3->setEnabled(true);
+        k0byte10_3->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte10_3->sizePolicy().hasHeightForWidth());
+        k0byte10_3->setSizePolicy(sizePolicy);
+        k0byte10_3->setFont(font1);
+        k0byte10_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte10_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte10_3->setAlignment(Qt::AlignCenter);
+        k0byte09_3 = new QLabel(groupSubKeyK0_3);
+        k0byte09_3->setObjectName(QString::fromUtf8("k0byte09_3"));
+        k0byte09_3->setEnabled(true);
+        k0byte09_3->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte09_3->sizePolicy().hasHeightForWidth());
+        k0byte09_3->setSizePolicy(sizePolicy);
+        k0byte09_3->setFont(font);
+        k0byte09_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte09_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte09_3->setAlignment(Qt::AlignCenter);
+        k0byte01_3 = new QLabel(groupSubKeyK0_3);
+        k0byte01_3->setObjectName(QString::fromUtf8("k0byte01_3"));
+        k0byte01_3->setEnabled(true);
+        k0byte01_3->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte01_3->sizePolicy().hasHeightForWidth());
+        k0byte01_3->setSizePolicy(sizePolicy);
+        k0byte01_3->setFont(font);
+        k0byte01_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte01_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte01_3->setAlignment(Qt::AlignCenter);
+        k0byte08_3 = new QLabel(groupSubKeyK0_3);
+        k0byte08_3->setObjectName(QString::fromUtf8("k0byte08_3"));
+        k0byte08_3->setEnabled(true);
+        k0byte08_3->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte08_3->sizePolicy().hasHeightForWidth());
+        k0byte08_3->setSizePolicy(sizePolicy);
+        k0byte08_3->setFont(font1);
+        k0byte08_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte08_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte08_3->setAlignment(Qt::AlignCenter);
+        k0byte00_3 = new QLabel(groupSubKeyK0_3);
+        k0byte00_3->setObjectName(QString::fromUtf8("k0byte00_3"));
+        k0byte00_3->setEnabled(true);
+        k0byte00_3->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte00_3->sizePolicy().hasHeightForWidth());
+        k0byte00_3->setSizePolicy(sizePolicy);
+        k0byte00_3->setFont(font1);
+        k0byte00_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte00_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte00_3->setAlignment(Qt::AlignCenter);
+        k0byte00_3->setWordWrap(false);
+        k0byte07_3 = new QLabel(groupSubKeyK0_3);
+        k0byte07_3->setObjectName(QString::fromUtf8("k0byte07_3"));
+        k0byte07_3->setEnabled(true);
+        k0byte07_3->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte07_3->sizePolicy().hasHeightForWidth());
+        k0byte07_3->setSizePolicy(sizePolicy);
+        k0byte07_3->setFont(font1);
+        k0byte07_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte07_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte07_3->setAlignment(Qt::AlignCenter);
+        k0byte12_3 = new QLabel(groupSubKeyK0_3);
+        k0byte12_3->setObjectName(QString::fromUtf8("k0byte12_3"));
+        k0byte12_3->setEnabled(true);
+        k0byte12_3->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte12_3->sizePolicy().hasHeightForWidth());
+        k0byte12_3->setSizePolicy(sizePolicy);
+        k0byte12_3->setFont(font);
+        k0byte12_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte12_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte12_3->setAlignment(Qt::AlignCenter);
+        k0byte03_3 = new QLabel(groupSubKeyK0_3);
+        k0byte03_3->setObjectName(QString::fromUtf8("k0byte03_3"));
+        k0byte03_3->setEnabled(true);
+        k0byte03_3->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte03_3->sizePolicy().hasHeightForWidth());
+        k0byte03_3->setSizePolicy(sizePolicy);
+        k0byte03_3->setFont(font);
+        k0byte03_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte03_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte03_3->setAlignment(Qt::AlignCenter);
+        k0byte11_3 = new QLabel(groupSubKeyK0_3);
+        k0byte11_3->setObjectName(QString::fromUtf8("k0byte11_3"));
+        k0byte11_3->setEnabled(true);
+        k0byte11_3->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte11_3->sizePolicy().hasHeightForWidth());
+        k0byte11_3->setSizePolicy(sizePolicy);
+        k0byte11_3->setFont(font);
+        k0byte11_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte11_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte11_3->setAlignment(Qt::AlignCenter);
+        k0byte05_3 = new QLabel(groupSubKeyK0_3);
+        k0byte05_3->setObjectName(QString::fromUtf8("k0byte05_3"));
+        k0byte05_3->setEnabled(true);
+        k0byte05_3->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k0byte05_3->sizePolicy().hasHeightForWidth());
+        k0byte05_3->setSizePolicy(sizePolicy);
+        k0byte05_3->setFont(font1);
+        k0byte05_3->setLayoutDirection(Qt::LeftToRight);
+        k0byte05_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k0byte05_3->setAlignment(Qt::AlignCenter);
+        buttonS02E04FindMissingBytes = new QPushButton(groupBox_13);
+        buttonS02E04FindMissingBytes->setObjectName(QString::fromUtf8("buttonS02E04FindMissingBytes"));
+        buttonS02E04FindMissingBytes->setGeometry(QRect(470, 90, 131, 27));
+        groupSubKeyK2_3 = new QGroupBox(groupBox_13);
+        groupSubKeyK2_3->setObjectName(QString::fromUtf8("groupSubKeyK2_3"));
+        groupSubKeyK2_3->setGeometry(QRect(320, 30, 171, 141));
+        sizePolicy.setHeightForWidth(groupSubKeyK2_3->sizePolicy().hasHeightForWidth());
+        groupSubKeyK2_3->setSizePolicy(sizePolicy);
+        groupSubKeyK2_3->setStyleSheet(QString::fromUtf8(""));
+        groupSubKeyK2_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        k2byte15_2 = new QLabel(groupSubKeyK2_3);
+        k2byte15_2->setObjectName(QString::fromUtf8("k2byte15_2"));
+        k2byte15_2->setEnabled(true);
+        k2byte15_2->setGeometry(QRect(98, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte15_2->sizePolicy().hasHeightForWidth());
+        k2byte15_2->setSizePolicy(sizePolicy);
+        k2byte15_2->setFont(font1);
+        k2byte15_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte15_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte15_2->setAlignment(Qt::AlignCenter);
+        k2byte13_2 = new QLabel(groupSubKeyK2_3);
+        k2byte13_2->setObjectName(QString::fromUtf8("k2byte13_2"));
+        k2byte13_2->setEnabled(true);
+        k2byte13_2->setGeometry(QRect(98, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte13_2->sizePolicy().hasHeightForWidth());
+        k2byte13_2->setSizePolicy(sizePolicy);
+        k2byte13_2->setFont(font1);
+        k2byte13_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte13_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte13_2->setAlignment(Qt::AlignCenter);
+        k2byte14_2 = new QLabel(groupSubKeyK2_3);
+        k2byte14_2->setObjectName(QString::fromUtf8("k2byte14_2"));
+        k2byte14_2->setEnabled(true);
+        k2byte14_2->setGeometry(QRect(98, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte14_2->sizePolicy().hasHeightForWidth());
+        k2byte14_2->setSizePolicy(sizePolicy);
+        k2byte14_2->setFont(font1);
+        k2byte14_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte14_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte14_2->setAlignment(Qt::AlignCenter);
+        k2byte06_2 = new QLabel(groupSubKeyK2_3);
+        k2byte06_2->setObjectName(QString::fromUtf8("k2byte06_2"));
+        k2byte06_2->setEnabled(true);
+        k2byte06_2->setGeometry(QRect(50, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte06_2->sizePolicy().hasHeightForWidth());
+        k2byte06_2->setSizePolicy(sizePolicy);
+        k2byte06_2->setFont(font1);
+        k2byte06_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte06_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte06_2->setAlignment(Qt::AlignCenter);
+        k2byte04_2 = new QLabel(groupSubKeyK2_3);
+        k2byte04_2->setObjectName(QString::fromUtf8("k2byte04_2"));
+        k2byte04_2->setEnabled(true);
+        k2byte04_2->setGeometry(QRect(50, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte04_2->sizePolicy().hasHeightForWidth());
+        k2byte04_2->setSizePolicy(sizePolicy);
+        k2byte04_2->setFont(font1);
+        k2byte04_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte04_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte04_2->setAlignment(Qt::AlignCenter);
+        k2byte02_2 = new QLabel(groupSubKeyK2_3);
+        k2byte02_2->setObjectName(QString::fromUtf8("k2byte02_2"));
+        k2byte02_2->setEnabled(true);
+        k2byte02_2->setGeometry(QRect(26, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte02_2->sizePolicy().hasHeightForWidth());
+        k2byte02_2->setSizePolicy(sizePolicy);
+        k2byte02_2->setFont(font4);
+        k2byte02_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte02_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte02_2->setAlignment(Qt::AlignCenter);
+        k2byte10_2 = new QLabel(groupSubKeyK2_3);
+        k2byte10_2->setObjectName(QString::fromUtf8("k2byte10_2"));
+        k2byte10_2->setEnabled(true);
+        k2byte10_2->setGeometry(QRect(74, 78, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte10_2->sizePolicy().hasHeightForWidth());
+        k2byte10_2->setSizePolicy(sizePolicy);
+        k2byte10_2->setFont(font1);
+        k2byte10_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte10_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte10_2->setAlignment(Qt::AlignCenter);
+        k2byte09_2 = new QLabel(groupSubKeyK2_3);
+        k2byte09_2->setObjectName(QString::fromUtf8("k2byte09_2"));
+        k2byte09_2->setEnabled(true);
+        k2byte09_2->setGeometry(QRect(74, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte09_2->sizePolicy().hasHeightForWidth());
+        k2byte09_2->setSizePolicy(sizePolicy);
+        k2byte09_2->setFont(font1);
+        k2byte09_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte09_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte09_2->setAlignment(Qt::AlignCenter);
+        k2byte01_2 = new QLabel(groupSubKeyK2_3);
+        k2byte01_2->setObjectName(QString::fromUtf8("k2byte01_2"));
+        k2byte01_2->setEnabled(true);
+        k2byte01_2->setGeometry(QRect(26, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte01_2->sizePolicy().hasHeightForWidth());
+        k2byte01_2->setSizePolicy(sizePolicy);
+        k2byte01_2->setFont(font);
+        k2byte01_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte01_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte01_2->setAlignment(Qt::AlignCenter);
+        k2byte08_2 = new QLabel(groupSubKeyK2_3);
+        k2byte08_2->setObjectName(QString::fromUtf8("k2byte08_2"));
+        k2byte08_2->setEnabled(true);
+        k2byte08_2->setGeometry(QRect(74, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte08_2->sizePolicy().hasHeightForWidth());
+        k2byte08_2->setSizePolicy(sizePolicy);
+        k2byte08_2->setFont(font1);
+        k2byte08_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte08_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte08_2->setAlignment(Qt::AlignCenter);
+        k2byte00_2 = new QLabel(groupSubKeyK2_3);
+        k2byte00_2->setObjectName(QString::fromUtf8("k2byte00_2"));
+        k2byte00_2->setEnabled(true);
+        k2byte00_2->setGeometry(QRect(26, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte00_2->sizePolicy().hasHeightForWidth());
+        k2byte00_2->setSizePolicy(sizePolicy);
+        k2byte00_2->setFont(font4);
+        k2byte00_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte00_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte00_2->setAlignment(Qt::AlignCenter);
+        k2byte00_2->setWordWrap(false);
+        k2byte07_2 = new QLabel(groupSubKeyK2_3);
+        k2byte07_2->setObjectName(QString::fromUtf8("k2byte07_2"));
+        k2byte07_2->setEnabled(true);
+        k2byte07_2->setGeometry(QRect(50, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte07_2->sizePolicy().hasHeightForWidth());
+        k2byte07_2->setSizePolicy(sizePolicy);
+        k2byte07_2->setFont(font1);
+        k2byte07_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte07_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte07_2->setAlignment(Qt::AlignCenter);
+        k2byte12_2 = new QLabel(groupSubKeyK2_3);
+        k2byte12_2->setObjectName(QString::fromUtf8("k2byte12_2"));
+        k2byte12_2->setEnabled(true);
+        k2byte12_2->setGeometry(QRect(98, 30, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte12_2->sizePolicy().hasHeightForWidth());
+        k2byte12_2->setSizePolicy(sizePolicy);
+        k2byte12_2->setFont(font1);
+        k2byte12_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte12_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte12_2->setAlignment(Qt::AlignCenter);
+        k2byte03_2 = new QLabel(groupSubKeyK2_3);
+        k2byte03_2->setObjectName(QString::fromUtf8("k2byte03_2"));
+        k2byte03_2->setEnabled(true);
+        k2byte03_2->setGeometry(QRect(26, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte03_2->sizePolicy().hasHeightForWidth());
+        k2byte03_2->setSizePolicy(sizePolicy);
+        k2byte03_2->setFont(font);
+        k2byte03_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte03_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte03_2->setAlignment(Qt::AlignCenter);
+        k2byte11_2 = new QLabel(groupSubKeyK2_3);
+        k2byte11_2->setObjectName(QString::fromUtf8("k2byte11_2"));
+        k2byte11_2->setEnabled(true);
+        k2byte11_2->setGeometry(QRect(74, 102, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte11_2->sizePolicy().hasHeightForWidth());
+        k2byte11_2->setSizePolicy(sizePolicy);
+        k2byte11_2->setFont(font1);
+        k2byte11_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte11_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte11_2->setAlignment(Qt::AlignCenter);
+        k2byte05_2 = new QLabel(groupSubKeyK2_3);
+        k2byte05_2->setObjectName(QString::fromUtf8("k2byte05_2"));
+        k2byte05_2->setEnabled(true);
+        k2byte05_2->setGeometry(QRect(50, 54, 25, 25));
+        sizePolicy.setHeightForWidth(k2byte05_2->sizePolicy().hasHeightForWidth());
+        k2byte05_2->setSizePolicy(sizePolicy);
+        k2byte05_2->setFont(font1);
+        k2byte05_2->setLayoutDirection(Qt::LeftToRight);
+        k2byte05_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        k2byte05_2->setAlignment(Qt::AlignCenter);
+        groupCipher1s01e02_6 = new QGroupBox(tabS02E04);
+        groupCipher1s01e02_6->setObjectName(QString::fromUtf8("groupCipher1s01e02_6"));
+        groupCipher1s01e02_6->setGeometry(QRect(10, 40, 81, 141));
+        sizePolicy.setHeightForWidth(groupCipher1s01e02_6->sizePolicy().hasHeightForWidth());
+        groupCipher1s01e02_6->setSizePolicy(sizePolicy);
+        groupCipher1s01e02_6->setStyleSheet(QString::fromUtf8(""));
+        groupCipher1s01e02_6->setTitle(QString::fromUtf8("Col. 0 - U2"));
+        groupCipher1s01e02_6->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        s02e04u2Byte02 = new QLabel(groupCipher1s01e02_6);
+        s02e04u2Byte02->setObjectName(QString::fromUtf8("s02e04u2Byte02"));
+        s02e04u2Byte02->setEnabled(true);
+        s02e04u2Byte02->setGeometry(QRect(30, 78, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04u2Byte02->sizePolicy().hasHeightForWidth());
+        s02e04u2Byte02->setSizePolicy(sizePolicy);
+        s02e04u2Byte02->setFont(font1);
+        s02e04u2Byte02->setLayoutDirection(Qt::LeftToRight);
+        s02e04u2Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04u2Byte02->setAlignment(Qt::AlignCenter);
+        s02e04u2Byte01 = new QLabel(groupCipher1s01e02_6);
+        s02e04u2Byte01->setObjectName(QString::fromUtf8("s02e04u2Byte01"));
+        s02e04u2Byte01->setEnabled(true);
+        s02e04u2Byte01->setGeometry(QRect(30, 54, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04u2Byte01->sizePolicy().hasHeightForWidth());
+        s02e04u2Byte01->setSizePolicy(sizePolicy);
+        s02e04u2Byte01->setFont(font);
+        s02e04u2Byte01->setLayoutDirection(Qt::LeftToRight);
+        s02e04u2Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04u2Byte01->setAlignment(Qt::AlignCenter);
+        s02e04u2Byte00 = new QLabel(groupCipher1s01e02_6);
+        s02e04u2Byte00->setObjectName(QString::fromUtf8("s02e04u2Byte00"));
+        s02e04u2Byte00->setEnabled(true);
+        s02e04u2Byte00->setGeometry(QRect(30, 30, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04u2Byte00->sizePolicy().hasHeightForWidth());
+        s02e04u2Byte00->setSizePolicy(sizePolicy);
+        s02e04u2Byte00->setFont(font1);
+        s02e04u2Byte00->setLayoutDirection(Qt::LeftToRight);
+        s02e04u2Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04u2Byte00->setAlignment(Qt::AlignCenter);
+        s02e04u2Byte00->setWordWrap(false);
+        s02e04u2Byte03 = new QLabel(groupCipher1s01e02_6);
+        s02e04u2Byte03->setObjectName(QString::fromUtf8("s02e04u2Byte03"));
+        s02e04u2Byte03->setEnabled(true);
+        s02e04u2Byte03->setGeometry(QRect(30, 102, 25, 25));
+        sizePolicy.setHeightForWidth(s02e04u2Byte03->sizePolicy().hasHeightForWidth());
+        s02e04u2Byte03->setSizePolicy(sizePolicy);
+        s02e04u2Byte03->setFont(font);
+        s02e04u2Byte03->setLayoutDirection(Qt::LeftToRight);
+        s02e04u2Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	 border-width: 1px;\n"
+"     border-style: solid;\n"
+"     border-color: black; \n"
+"     background-color: white;\n"
+"}"));
+        s02e04u2Byte03->setAlignment(Qt::AlignCenter);
+        label_138 = new QLabel(groupCipher1s01e02_6);
+        label_138->setObjectName(QString::fromUtf8("label_138"));
+        label_138->setGeometry(QRect(60, 80, 21, 17));
+        label_138->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointupleft.png")));
+        label_138->setScaledContents(true);
+        label_139 = new QLabel(tabS02E04);
+        label_139->setObjectName(QString::fromUtf8("label_139"));
+        label_139->setGeometry(QRect(70, 20, 91, 17));
+        label_140 = new QLabel(tabS02E04);
+        label_140->setObjectName(QString::fromUtf8("label_140"));
+        label_140->setGeometry(QRect(100, 90, 31, 17));
+        label_141 = new QLabel(tabS02E04);
+        label_141->setObjectName(QString::fromUtf8("label_141"));
+        label_141->setGeometry(QRect(80, 120, 67, 17));
+        label_141->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_141->setScaledContents(true);
+        tabWidget->addTab(tabS02E04, QString());
         tabOutput = new QWidget();
         tabOutput->setObjectName(QString::fromUtf8("tabOutput"));
         groupOutK0 = new QGroupBox(tabOutput);
@@ -9010,7 +17780,7 @@ public:
         outK0byte15->setGeometry(QRect(98, 102, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte15->sizePolicy().hasHeightForWidth());
         outK0byte15->setSizePolicy(sizePolicy);
-        outK0byte15->setFont(font);
+        outK0byte15->setFont(font1);
         outK0byte15->setLayoutDirection(Qt::LeftToRight);
         outK0byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9025,7 +17795,7 @@ public:
         outK0byte13->setGeometry(QRect(98, 54, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte13->sizePolicy().hasHeightForWidth());
         outK0byte13->setSizePolicy(sizePolicy);
-        outK0byte13->setFont(font);
+        outK0byte13->setFont(font1);
         outK0byte13->setLayoutDirection(Qt::LeftToRight);
         outK0byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9040,7 +17810,7 @@ public:
         outK0byte14->setGeometry(QRect(98, 78, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte14->sizePolicy().hasHeightForWidth());
         outK0byte14->setSizePolicy(sizePolicy);
-        outK0byte14->setFont(font);
+        outK0byte14->setFont(font1);
         outK0byte14->setLayoutDirection(Qt::LeftToRight);
         outK0byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9055,7 +17825,7 @@ public:
         outK0byte06->setGeometry(QRect(50, 78, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte06->sizePolicy().hasHeightForWidth());
         outK0byte06->setSizePolicy(sizePolicy);
-        outK0byte06->setFont(font);
+        outK0byte06->setFont(font1);
         outK0byte06->setLayoutDirection(Qt::LeftToRight);
         outK0byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9070,7 +17840,7 @@ public:
         outK0byte04->setGeometry(QRect(50, 30, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte04->sizePolicy().hasHeightForWidth());
         outK0byte04->setSizePolicy(sizePolicy);
-        outK0byte04->setFont(font);
+        outK0byte04->setFont(font1);
         outK0byte04->setLayoutDirection(Qt::LeftToRight);
         outK0byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9085,7 +17855,7 @@ public:
         outK0byte02->setGeometry(QRect(26, 78, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte02->sizePolicy().hasHeightForWidth());
         outK0byte02->setSizePolicy(sizePolicy);
-        outK0byte02->setFont(font);
+        outK0byte02->setFont(font1);
         outK0byte02->setLayoutDirection(Qt::LeftToRight);
         outK0byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9100,7 +17870,7 @@ public:
         outK0byte10->setGeometry(QRect(74, 78, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte10->sizePolicy().hasHeightForWidth());
         outK0byte10->setSizePolicy(sizePolicy);
-        outK0byte10->setFont(font);
+        outK0byte10->setFont(font1);
         outK0byte10->setLayoutDirection(Qt::LeftToRight);
         outK0byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9115,7 +17885,7 @@ public:
         outK0byte09->setGeometry(QRect(74, 54, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte09->sizePolicy().hasHeightForWidth());
         outK0byte09->setSizePolicy(sizePolicy);
-        outK0byte09->setFont(font);
+        outK0byte09->setFont(font1);
         outK0byte09->setLayoutDirection(Qt::LeftToRight);
         outK0byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9130,7 +17900,7 @@ public:
         outK0byte01->setGeometry(QRect(26, 54, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte01->sizePolicy().hasHeightForWidth());
         outK0byte01->setSizePolicy(sizePolicy);
-        outK0byte01->setFont(font);
+        outK0byte01->setFont(font1);
         outK0byte01->setLayoutDirection(Qt::LeftToRight);
         outK0byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9145,7 +17915,7 @@ public:
         outK0byte08->setGeometry(QRect(74, 30, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte08->sizePolicy().hasHeightForWidth());
         outK0byte08->setSizePolicy(sizePolicy);
-        outK0byte08->setFont(font);
+        outK0byte08->setFont(font1);
         outK0byte08->setLayoutDirection(Qt::LeftToRight);
         outK0byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9160,7 +17930,7 @@ public:
         outK0byte00->setGeometry(QRect(26, 30, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte00->sizePolicy().hasHeightForWidth());
         outK0byte00->setSizePolicy(sizePolicy);
-        outK0byte00->setFont(font);
+        outK0byte00->setFont(font1);
         outK0byte00->setLayoutDirection(Qt::LeftToRight);
         outK0byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9176,7 +17946,7 @@ public:
         outK0byte07->setGeometry(QRect(50, 102, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte07->sizePolicy().hasHeightForWidth());
         outK0byte07->setSizePolicy(sizePolicy);
-        outK0byte07->setFont(font);
+        outK0byte07->setFont(font1);
         outK0byte07->setLayoutDirection(Qt::LeftToRight);
         outK0byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9191,7 +17961,7 @@ public:
         outK0byte12->setGeometry(QRect(98, 30, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte12->sizePolicy().hasHeightForWidth());
         outK0byte12->setSizePolicy(sizePolicy);
-        outK0byte12->setFont(font);
+        outK0byte12->setFont(font1);
         outK0byte12->setLayoutDirection(Qt::LeftToRight);
         outK0byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9206,7 +17976,7 @@ public:
         outK0byte03->setGeometry(QRect(26, 102, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte03->sizePolicy().hasHeightForWidth());
         outK0byte03->setSizePolicy(sizePolicy);
-        outK0byte03->setFont(font);
+        outK0byte03->setFont(font1);
         outK0byte03->setLayoutDirection(Qt::LeftToRight);
         outK0byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9221,7 +17991,7 @@ public:
         outK0byte11->setGeometry(QRect(74, 102, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte11->sizePolicy().hasHeightForWidth());
         outK0byte11->setSizePolicy(sizePolicy);
-        outK0byte11->setFont(font);
+        outK0byte11->setFont(font1);
         outK0byte11->setLayoutDirection(Qt::LeftToRight);
         outK0byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9236,7 +18006,7 @@ public:
         outK0byte05->setGeometry(QRect(50, 54, 25, 25));
         sizePolicy.setHeightForWidth(outK0byte05->sizePolicy().hasHeightForWidth());
         outK0byte05->setSizePolicy(sizePolicy);
-        outK0byte05->setFont(font);
+        outK0byte05->setFont(font1);
         outK0byte05->setLayoutDirection(Qt::LeftToRight);
         outK0byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9258,7 +18028,7 @@ public:
         outPlainByte15->setGeometry(QRect(98, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte15->sizePolicy().hasHeightForWidth());
         outPlainByte15->setSizePolicy(sizePolicy);
-        outPlainByte15->setFont(font);
+        outPlainByte15->setFont(font1);
         outPlainByte15->setLayoutDirection(Qt::LeftToRight);
         outPlainByte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9273,7 +18043,7 @@ public:
         outPlainByte13->setGeometry(QRect(98, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte13->sizePolicy().hasHeightForWidth());
         outPlainByte13->setSizePolicy(sizePolicy);
-        outPlainByte13->setFont(font);
+        outPlainByte13->setFont(font1);
         outPlainByte13->setLayoutDirection(Qt::LeftToRight);
         outPlainByte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9288,7 +18058,7 @@ public:
         outPlainByte14->setGeometry(QRect(98, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte14->sizePolicy().hasHeightForWidth());
         outPlainByte14->setSizePolicy(sizePolicy);
-        outPlainByte14->setFont(font);
+        outPlainByte14->setFont(font1);
         outPlainByte14->setLayoutDirection(Qt::LeftToRight);
         outPlainByte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9303,7 +18073,7 @@ public:
         outPlainByte06->setGeometry(QRect(50, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte06->sizePolicy().hasHeightForWidth());
         outPlainByte06->setSizePolicy(sizePolicy);
-        outPlainByte06->setFont(font);
+        outPlainByte06->setFont(font1);
         outPlainByte06->setLayoutDirection(Qt::LeftToRight);
         outPlainByte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9318,7 +18088,7 @@ public:
         outPlainByte04->setGeometry(QRect(50, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte04->sizePolicy().hasHeightForWidth());
         outPlainByte04->setSizePolicy(sizePolicy);
-        outPlainByte04->setFont(font);
+        outPlainByte04->setFont(font1);
         outPlainByte04->setLayoutDirection(Qt::LeftToRight);
         outPlainByte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9333,7 +18103,7 @@ public:
         outPlainByte02->setGeometry(QRect(26, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte02->sizePolicy().hasHeightForWidth());
         outPlainByte02->setSizePolicy(sizePolicy);
-        outPlainByte02->setFont(font);
+        outPlainByte02->setFont(font1);
         outPlainByte02->setLayoutDirection(Qt::LeftToRight);
         outPlainByte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9348,7 +18118,7 @@ public:
         outPlainByte10->setGeometry(QRect(74, 78, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte10->sizePolicy().hasHeightForWidth());
         outPlainByte10->setSizePolicy(sizePolicy);
-        outPlainByte10->setFont(font);
+        outPlainByte10->setFont(font1);
         outPlainByte10->setLayoutDirection(Qt::LeftToRight);
         outPlainByte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9363,7 +18133,7 @@ public:
         outPlainByte09->setGeometry(QRect(74, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte09->sizePolicy().hasHeightForWidth());
         outPlainByte09->setSizePolicy(sizePolicy);
-        outPlainByte09->setFont(font);
+        outPlainByte09->setFont(font1);
         outPlainByte09->setLayoutDirection(Qt::LeftToRight);
         outPlainByte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9378,7 +18148,7 @@ public:
         outPlainByte01->setGeometry(QRect(26, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte01->sizePolicy().hasHeightForWidth());
         outPlainByte01->setSizePolicy(sizePolicy);
-        outPlainByte01->setFont(font);
+        outPlainByte01->setFont(font1);
         outPlainByte01->setLayoutDirection(Qt::LeftToRight);
         outPlainByte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9393,7 +18163,7 @@ public:
         outPlainByte08->setGeometry(QRect(74, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte08->sizePolicy().hasHeightForWidth());
         outPlainByte08->setSizePolicy(sizePolicy);
-        outPlainByte08->setFont(font);
+        outPlainByte08->setFont(font1);
         outPlainByte08->setLayoutDirection(Qt::LeftToRight);
         outPlainByte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9408,7 +18178,7 @@ public:
         outPlainByte00->setGeometry(QRect(26, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte00->sizePolicy().hasHeightForWidth());
         outPlainByte00->setSizePolicy(sizePolicy);
-        outPlainByte00->setFont(font);
+        outPlainByte00->setFont(font1);
         outPlainByte00->setLayoutDirection(Qt::LeftToRight);
         outPlainByte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9424,7 +18194,7 @@ public:
         outPlainByte07->setGeometry(QRect(50, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte07->sizePolicy().hasHeightForWidth());
         outPlainByte07->setSizePolicy(sizePolicy);
-        outPlainByte07->setFont(font);
+        outPlainByte07->setFont(font1);
         outPlainByte07->setLayoutDirection(Qt::LeftToRight);
         outPlainByte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9439,7 +18209,7 @@ public:
         outPlainByte12->setGeometry(QRect(98, 30, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte12->sizePolicy().hasHeightForWidth());
         outPlainByte12->setSizePolicy(sizePolicy);
-        outPlainByte12->setFont(font);
+        outPlainByte12->setFont(font1);
         outPlainByte12->setLayoutDirection(Qt::LeftToRight);
         outPlainByte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9454,7 +18224,7 @@ public:
         outPlainByte03->setGeometry(QRect(26, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte03->sizePolicy().hasHeightForWidth());
         outPlainByte03->setSizePolicy(sizePolicy);
-        outPlainByte03->setFont(font);
+        outPlainByte03->setFont(font1);
         outPlainByte03->setLayoutDirection(Qt::LeftToRight);
         outPlainByte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9469,7 +18239,7 @@ public:
         outPlainByte11->setGeometry(QRect(74, 102, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte11->sizePolicy().hasHeightForWidth());
         outPlainByte11->setSizePolicy(sizePolicy);
-        outPlainByte11->setFont(font);
+        outPlainByte11->setFont(font1);
         outPlainByte11->setLayoutDirection(Qt::LeftToRight);
         outPlainByte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9484,7 +18254,7 @@ public:
         outPlainByte05->setGeometry(QRect(50, 54, 25, 25));
         sizePolicy.setHeightForWidth(outPlainByte05->sizePolicy().hasHeightForWidth());
         outPlainByte05->setSizePolicy(sizePolicy);
-        outPlainByte05->setFont(font);
+        outPlainByte05->setFont(font1);
         outPlainByte05->setLayoutDirection(Qt::LeftToRight);
         outPlainByte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9506,7 +18276,7 @@ public:
         outCipherK0Byte15->setGeometry(QRect(120, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte15->sizePolicy().hasHeightForWidth());
         outCipherK0Byte15->setSizePolicy(sizePolicy);
-        outCipherK0Byte15->setFont(font);
+        outCipherK0Byte15->setFont(font1);
         outCipherK0Byte15->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9521,7 +18291,7 @@ public:
         outCipherK0Byte13->setGeometry(QRect(120, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte13->sizePolicy().hasHeightForWidth());
         outCipherK0Byte13->setSizePolicy(sizePolicy);
-        outCipherK0Byte13->setFont(font);
+        outCipherK0Byte13->setFont(font1);
         outCipherK0Byte13->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9536,7 +18306,7 @@ public:
         outCipherK0Byte14->setGeometry(QRect(120, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte14->sizePolicy().hasHeightForWidth());
         outCipherK0Byte14->setSizePolicy(sizePolicy);
-        outCipherK0Byte14->setFont(font);
+        outCipherK0Byte14->setFont(font1);
         outCipherK0Byte14->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9551,7 +18321,7 @@ public:
         outCipherK0Byte06->setGeometry(QRect(72, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte06->sizePolicy().hasHeightForWidth());
         outCipherK0Byte06->setSizePolicy(sizePolicy);
-        outCipherK0Byte06->setFont(font);
+        outCipherK0Byte06->setFont(font1);
         outCipherK0Byte06->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9566,7 +18336,7 @@ public:
         outCipherK0Byte04->setGeometry(QRect(72, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte04->sizePolicy().hasHeightForWidth());
         outCipherK0Byte04->setSizePolicy(sizePolicy);
-        outCipherK0Byte04->setFont(font);
+        outCipherK0Byte04->setFont(font1);
         outCipherK0Byte04->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9581,7 +18351,7 @@ public:
         outCipherK0Byte02->setGeometry(QRect(48, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte02->sizePolicy().hasHeightForWidth());
         outCipherK0Byte02->setSizePolicy(sizePolicy);
-        outCipherK0Byte02->setFont(font);
+        outCipherK0Byte02->setFont(font1);
         outCipherK0Byte02->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9596,7 +18366,7 @@ public:
         outCipherK0Byte10->setGeometry(QRect(96, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte10->sizePolicy().hasHeightForWidth());
         outCipherK0Byte10->setSizePolicy(sizePolicy);
-        outCipherK0Byte10->setFont(font);
+        outCipherK0Byte10->setFont(font1);
         outCipherK0Byte10->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9611,7 +18381,7 @@ public:
         outCipherK0Byte09->setGeometry(QRect(96, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte09->sizePolicy().hasHeightForWidth());
         outCipherK0Byte09->setSizePolicy(sizePolicy);
-        outCipherK0Byte09->setFont(font);
+        outCipherK0Byte09->setFont(font1);
         outCipherK0Byte09->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9626,7 +18396,7 @@ public:
         outCipherK0Byte01->setGeometry(QRect(48, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte01->sizePolicy().hasHeightForWidth());
         outCipherK0Byte01->setSizePolicy(sizePolicy);
-        outCipherK0Byte01->setFont(font);
+        outCipherK0Byte01->setFont(font1);
         outCipherK0Byte01->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9641,7 +18411,7 @@ public:
         outCipherK0Byte08->setGeometry(QRect(96, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte08->sizePolicy().hasHeightForWidth());
         outCipherK0Byte08->setSizePolicy(sizePolicy);
-        outCipherK0Byte08->setFont(font);
+        outCipherK0Byte08->setFont(font1);
         outCipherK0Byte08->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9656,7 +18426,7 @@ public:
         outCipherK0Byte00->setGeometry(QRect(48, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte00->sizePolicy().hasHeightForWidth());
         outCipherK0Byte00->setSizePolicy(sizePolicy);
-        outCipherK0Byte00->setFont(font);
+        outCipherK0Byte00->setFont(font1);
         outCipherK0Byte00->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9672,7 +18442,7 @@ public:
         outCipherK0Byte07->setGeometry(QRect(72, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte07->sizePolicy().hasHeightForWidth());
         outCipherK0Byte07->setSizePolicy(sizePolicy);
-        outCipherK0Byte07->setFont(font);
+        outCipherK0Byte07->setFont(font1);
         outCipherK0Byte07->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9687,7 +18457,7 @@ public:
         outCipherK0Byte12->setGeometry(QRect(120, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte12->sizePolicy().hasHeightForWidth());
         outCipherK0Byte12->setSizePolicy(sizePolicy);
-        outCipherK0Byte12->setFont(font);
+        outCipherK0Byte12->setFont(font1);
         outCipherK0Byte12->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9702,7 +18472,7 @@ public:
         outCipherK0Byte03->setGeometry(QRect(48, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte03->sizePolicy().hasHeightForWidth());
         outCipherK0Byte03->setSizePolicy(sizePolicy);
-        outCipherK0Byte03->setFont(font);
+        outCipherK0Byte03->setFont(font1);
         outCipherK0Byte03->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9717,7 +18487,7 @@ public:
         outCipherK0Byte11->setGeometry(QRect(96, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte11->sizePolicy().hasHeightForWidth());
         outCipherK0Byte11->setSizePolicy(sizePolicy);
-        outCipherK0Byte11->setFont(font);
+        outCipherK0Byte11->setFont(font1);
         outCipherK0Byte11->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9732,7 +18502,7 @@ public:
         outCipherK0Byte05->setGeometry(QRect(72, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherK0Byte05->sizePolicy().hasHeightForWidth());
         outCipherK0Byte05->setSizePolicy(sizePolicy);
-        outCipherK0Byte05->setFont(font);
+        outCipherK0Byte05->setFont(font1);
         outCipherK0Byte05->setLayoutDirection(Qt::LeftToRight);
         outCipherK0Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9754,7 +18524,7 @@ public:
         outCipherPair1Byte15->setGeometry(QRect(98, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte15->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte15->setSizePolicy(sizePolicy);
-        outCipherPair1Byte15->setFont(font);
+        outCipherPair1Byte15->setFont(font1);
         outCipherPair1Byte15->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte15->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9769,7 +18539,7 @@ public:
         outCipherPair1Byte13->setGeometry(QRect(98, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte13->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte13->setSizePolicy(sizePolicy);
-        outCipherPair1Byte13->setFont(font);
+        outCipherPair1Byte13->setFont(font1);
         outCipherPair1Byte13->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte13->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9784,7 +18554,7 @@ public:
         outCipherPair1Byte14->setGeometry(QRect(98, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte14->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte14->setSizePolicy(sizePolicy);
-        outCipherPair1Byte14->setFont(font);
+        outCipherPair1Byte14->setFont(font1);
         outCipherPair1Byte14->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte14->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9799,7 +18569,7 @@ public:
         outCipherPair1Byte06->setGeometry(QRect(50, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte06->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte06->setSizePolicy(sizePolicy);
-        outCipherPair1Byte06->setFont(font);
+        outCipherPair1Byte06->setFont(font1);
         outCipherPair1Byte06->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte06->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9814,7 +18584,7 @@ public:
         outCipherPair1Byte04->setGeometry(QRect(50, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte04->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte04->setSizePolicy(sizePolicy);
-        outCipherPair1Byte04->setFont(font);
+        outCipherPair1Byte04->setFont(font1);
         outCipherPair1Byte04->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte04->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9829,7 +18599,7 @@ public:
         outCipherPair1Byte02->setGeometry(QRect(26, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte02->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte02->setSizePolicy(sizePolicy);
-        outCipherPair1Byte02->setFont(font);
+        outCipherPair1Byte02->setFont(font1);
         outCipherPair1Byte02->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte02->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9844,7 +18614,7 @@ public:
         outCipherPair1Byte10->setGeometry(QRect(74, 78, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte10->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte10->setSizePolicy(sizePolicy);
-        outCipherPair1Byte10->setFont(font);
+        outCipherPair1Byte10->setFont(font1);
         outCipherPair1Byte10->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte10->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9859,7 +18629,7 @@ public:
         outCipherPair1Byte09->setGeometry(QRect(74, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte09->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte09->setSizePolicy(sizePolicy);
-        outCipherPair1Byte09->setFont(font);
+        outCipherPair1Byte09->setFont(font1);
         outCipherPair1Byte09->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte09->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9874,7 +18644,7 @@ public:
         outCipherPair1Byte01->setGeometry(QRect(26, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte01->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte01->setSizePolicy(sizePolicy);
-        outCipherPair1Byte01->setFont(font);
+        outCipherPair1Byte01->setFont(font1);
         outCipherPair1Byte01->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte01->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9889,7 +18659,7 @@ public:
         outCipherPair1Byte08->setGeometry(QRect(74, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte08->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte08->setSizePolicy(sizePolicy);
-        outCipherPair1Byte08->setFont(font);
+        outCipherPair1Byte08->setFont(font1);
         outCipherPair1Byte08->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte08->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9904,7 +18674,7 @@ public:
         outCipherPair1Byte00->setGeometry(QRect(26, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte00->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte00->setSizePolicy(sizePolicy);
-        outCipherPair1Byte00->setFont(font);
+        outCipherPair1Byte00->setFont(font1);
         outCipherPair1Byte00->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte00->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9920,7 +18690,7 @@ public:
         outCipherPair1Byte07->setGeometry(QRect(50, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte07->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte07->setSizePolicy(sizePolicy);
-        outCipherPair1Byte07->setFont(font);
+        outCipherPair1Byte07->setFont(font1);
         outCipherPair1Byte07->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte07->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9935,7 +18705,7 @@ public:
         outCipherPair1Byte12->setGeometry(QRect(98, 30, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte12->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte12->setSizePolicy(sizePolicy);
-        outCipherPair1Byte12->setFont(font);
+        outCipherPair1Byte12->setFont(font1);
         outCipherPair1Byte12->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte12->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9950,7 +18720,7 @@ public:
         outCipherPair1Byte03->setGeometry(QRect(26, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte03->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte03->setSizePolicy(sizePolicy);
-        outCipherPair1Byte03->setFont(font);
+        outCipherPair1Byte03->setFont(font1);
         outCipherPair1Byte03->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte03->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9965,7 +18735,7 @@ public:
         outCipherPair1Byte11->setGeometry(QRect(74, 102, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte11->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte11->setSizePolicy(sizePolicy);
-        outCipherPair1Byte11->setFont(font);
+        outCipherPair1Byte11->setFont(font1);
         outCipherPair1Byte11->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte11->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9980,7 +18750,7 @@ public:
         outCipherPair1Byte05->setGeometry(QRect(50, 54, 25, 25));
         sizePolicy.setHeightForWidth(outCipherPair1Byte05->sizePolicy().hasHeightForWidth());
         outCipherPair1Byte05->setSizePolicy(sizePolicy);
-        outCipherPair1Byte05->setFont(font);
+        outCipherPair1Byte05->setFont(font1);
         outCipherPair1Byte05->setLayoutDirection(Qt::LeftToRight);
         outCipherPair1Byte05->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	 border-width: 1px;\n"
@@ -9991,7 +18761,41 @@ public:
         outCipherPair1Byte05->setAlignment(Qt::AlignCenter);
         pushButtonEncryptOutput = new QPushButton(tabOutput);
         pushButtonEncryptOutput->setObjectName(QString::fromUtf8("pushButtonEncryptOutput"));
-        pushButtonEncryptOutput->setGeometry(QRect(210, 230, 97, 27));
+        pushButtonEncryptOutput->setGeometry(QRect(210, 235, 97, 27));
+        label_76 = new QLabel(tabOutput);
+        label_76->setObjectName(QString::fromUtf8("label_76"));
+        label_76->setGeometry(QRect(245, 137, 20, 91));
+        label_76->setPixmap(QPixmap(QString::fromUtf8("res/hline.png")));
+        label_76->setScaledContents(true);
+        label_77 = new QLabel(tabOutput);
+        label_77->setObjectName(QString::fromUtf8("label_77"));
+        label_77->setGeometry(QRect(245, 220, 21, 17));
+        label_77->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointdown.png")));
+        label_77->setScaledContents(true);
+        label_78 = new QLabel(tabOutput);
+        label_78->setObjectName(QString::fromUtf8("label_78"));
+        label_78->setGeometry(QRect(153, 240, 51, 17));
+        label_78->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_78->setScaledContents(true);
+        label_79 = new QLabel(tabOutput);
+        label_79->setObjectName(QString::fromUtf8("label_79"));
+        label_79->setGeometry(QRect(190, 240, 21, 17));
+        label_79->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_79->setScaledContents(true);
+        label_80 = new QLabel(tabOutput);
+        label_80->setObjectName(QString::fromUtf8("label_80"));
+        label_80->setGeometry(QRect(500, 220, 41, 41));
+        label_80->setFont(font2);
+        label_81 = new QLabel(tabOutput);
+        label_81->setObjectName(QString::fromUtf8("label_81"));
+        label_81->setGeometry(QRect(340, 240, 21, 17));
+        label_81->setPixmap(QPixmap(QString::fromUtf8("res/arrowpointright.png")));
+        label_81->setScaledContents(true);
+        label_82 = new QLabel(tabOutput);
+        label_82->setObjectName(QString::fromUtf8("label_82"));
+        label_82->setGeometry(QRect(305, 240, 51, 17));
+        label_82->setPixmap(QPixmap(QString::fromUtf8("res/vline.png")));
+        label_82->setScaledContents(true);
         tabWidget->addTab(tabOutput, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -10026,7 +18830,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(9);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -10511,6 +19315,18 @@ public:
         buttonS01E02XOR->setText(QApplication::translate("MainWindow", "Diff (XOR)", 0, QApplication::UnicodeUTF8));
         label_45->setText(QString());
         label_46->setText(QString());
+        label_48->setText(QString());
+        label_54->setText(QString());
+        label_55->setText(QString());
+        label_56->setText(QString());
+        label_57->setText(QString());
+        label_58->setText(QString());
+        label_59->setText(QString());
+        label_60->setText(QString());
+        label_61->setText(QString());
+        label_62->setText(QString());
+        label_63->setText(QString());
+        label_64->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tabS01E02), QApplication::translate("MainWindow", "S01E02", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03->setTitle(QApplication::translate("MainWindow", "Col. 0 - Diff (1 and 2)", 0, QApplication::UnicodeUTF8));
         s01e03InvCipherDiff12Column0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
@@ -10527,16 +19343,24 @@ public:
         s01e03plain1AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain1AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain1AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_69->setText(QString());
+        label_72->setText(QString());
         groupInvCipher12DiffColumns01e03_3->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 2", 0, QApplication::UnicodeUTF8));
         s01e03plain2AfterR1Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain2AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain2AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain2AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_70->setText(QString());
+        label_74->setText(QString());
         groupInvCipher12DiffColumns01e03_4->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 3", 0, QApplication::UnicodeUTF8));
         s01e03plain3AfterR1Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain3AfterR1Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain3AfterR1Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain3AfterR1Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_68->setText(QString());
+        label_67->setText(QString());
+        label_71->setText(QString());
+        label_75->setText(QString());
         groupInvCipher13DiffColumns01e03_2->setTitle(QApplication::translate("MainWindow", "Diff (1 and 3)", 0, QApplication::UnicodeUTF8));
         s01e03plainAfterR1Diff13Col0Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plainAfterR1Diff13Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
@@ -10571,6 +19395,10 @@ public:
         editByte01ResultSbox->setText(QString());
         editByte02ResultSbox->setText(QString());
         editByte03ResultSbox->setText(QString());
+        buttonSBoxSolveLookupByte00->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte01->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte02->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte03->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_6->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 1 XOR  K1", 0, QApplication::UnicodeUTF8));
         s01e03plain1AfterR1Col0Byte02_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plain1AfterR1Col0Byte01_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
@@ -10586,9 +19414,12 @@ public:
         s01e03plainAfterR1Diff12Col0Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plainAfterR1Diff12Col0Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         s01e03plainAfterR1Diff12Col0Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_65->setText(QString());
+        label_66->setText(QString());
         label_26->setText(QApplication::translate("MainWindow", "=", 0, QApplication::UnicodeUTF8));
         label_43->setText(QString());
         label_44->setText(QString());
+        label_73->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tabS01E03), QApplication::translate("MainWindow", "S01E03", 0, QApplication::UnicodeUTF8));
         label_27->setText(QApplication::translate("MainWindow", "From S01E01", 0, QApplication::UnicodeUTF8));
         groupInvCipher12DiffColumns01e03_7->setTitle(QApplication::translate("MainWindow", "Col. 0 - Pair 1", 0, QApplication::UnicodeUTF8));
@@ -10680,7 +19511,621 @@ public:
         label_36->setText(QApplication::translate("MainWindow", "SB", 0, QApplication::UnicodeUTF8));
         s01e04plain3AfterU2Col0Byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
         label_38->setText(QApplication::translate("MainWindow", "ARK U2", 0, QApplication::UnicodeUTF8));
+        groupBox_6->setTitle(QApplication::translate("MainWindow", "Key Schedule Exploit", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK1->setTitle(QApplication::translate("MainWindow", "K1", 0, QApplication::UnicodeUTF8));
+        k1byte15->setText(QString());
+        k1byte13->setText(QString());
+        k1byte14->setText(QString());
+        k1byte06->setText(QString());
+        k1byte04->setText(QString());
+        k1byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte10->setText(QString());
+        k1byte09->setText(QString());
+        k1byte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte08->setText(QString());
+        k1byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte07->setText(QString());
+        k1byte12->setText(QString());
+        k1byte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte11->setText(QString());
+        k1byte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK0->setTitle(QApplication::translate("MainWindow", "K0", 0, QApplication::UnicodeUTF8));
+        k0byte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte14->setText(QString());
+        k0byte06->setText(QString());
+        k0byte04->setText(QString());
+        k0byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte09->setText(QString());
+        k0byte01->setText(QString());
+        k0byte08->setText(QString());
+        k0byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte07->setText(QString());
+        k0byte12->setText(QString());
+        k0byte03->setText(QString());
+        k0byte11->setText(QString());
+        k0byte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS01E04FindMissingBytes->setText(QApplication::translate("MainWindow", "Find Missing Bytes", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tabS01E04), QApplication::translate("MainWindow", "S01E04", 0, QApplication::UnicodeUTF8));
+        groupPlain3s02e01->setTitle(QApplication::translate("MainWindow", "Plaintext (Pair 3)", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain3s02e01Byte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_15->setText(QString());
+        plain3s02e01ARKByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_17->setText(QString());
+        outPlainByte09_17->setText(QString());
+        outPlainByte04_17->setText(QString());
+        plain3s02e01ARKByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_17->setText(QString());
+        outPlainByte01_15->setText(QString());
+        plain3s02e01ARKByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01ARKByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_17->setText(QString());
+        plain3s02e01ARKByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01ARKByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_17->setText(QString());
+        plain3s02e01ARKByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01ARKByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_16->setText(QString());
+        plain3s02e01SBByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_18->setText(QString());
+        outPlainByte09_18->setText(QString());
+        outPlainByte04_18->setText(QString());
+        plain3s02e01SBByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_18->setText(QString());
+        outPlainByte01_16->setText(QString());
+        plain3s02e01SBByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SBByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_18->setText(QString());
+        plain3s02e01SBByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SBByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_18->setText(QString());
+        plain3s02e01SBByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SBByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SRByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SRByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SRByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01SRByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_19->setText(QString());
+        outPlainByte05_17->setText(QString());
+        outPlainByte14_19->setText(QString());
+        plain3s02e01SRByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_19->setText(QString());
+        plain3s02e01SRByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_19->setText(QString());
+        plain3s02e01SRByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte15_17->setText(QString());
+        outPlainByte06_19->setText(QString());
+        outPlainByte07_19->setText(QString());
+        plain3s02e01SRByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_20->setText(QString());
+        plain3s02e01MCByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01MCByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01MCByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_20->setText(QString());
+        plain3s02e01MCByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte07_20->setText(QString());
+        outPlainByte15_18->setText(QString());
+        outPlainByte06_20->setText(QString());
+        outPlainByte12_20->setText(QString());
+        plain3s02e01MCByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_20->setText(QString());
+        outPlainByte05_18->setText(QString());
+        plain3s02e01MCByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01MCByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain3s02e01MCByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        groupPlain2s02e01->setTitle(QApplication::translate("MainWindow", "Plaintext (Pair 2)", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain2s02e01Byte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_10->setText(QString());
+        plain2s02e01ARKByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_24->setText(QString());
+        outPlainByte09_24->setText(QString());
+        outPlainByte04_24->setText(QString());
+        plain2s02e01ARKByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_24->setText(QString());
+        outPlainByte01_10->setText(QString());
+        plain2s02e01ARKByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01ARKByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_24->setText(QString());
+        plain2s02e01ARKByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01ARKByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_24->setText(QString());
+        plain2s02e01ARKByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01ARKByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_11->setText(QString());
+        plain2s02e01SBByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_25->setText(QString());
+        outPlainByte09_25->setText(QString());
+        outPlainByte04_25->setText(QString());
+        plain2s02e01SBByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_25->setText(QString());
+        outPlainByte01_11->setText(QString());
+        plain2s02e01SBByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SBByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_25->setText(QString());
+        plain2s02e01SBByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SBByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_25->setText(QString());
+        plain2s02e01SBByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SBByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SRByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SRByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SRByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01SRByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_26->setText(QString());
+        outPlainByte05_12->setText(QString());
+        outPlainByte14_26->setText(QString());
+        plain2s02e01SRByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_25->setText(QString());
+        plain2s02e01SRByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_26->setText(QString());
+        plain2s02e01SRByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte15_12->setText(QString());
+        outPlainByte06_26->setText(QString());
+        outPlainByte07_25->setText(QString());
+        plain2s02e01SRByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_26->setText(QString());
+        plain2s02e01MCByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01MCByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01MCByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_27->setText(QString());
+        plain2s02e01MCByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte07_26->setText(QString());
+        outPlainByte15_13->setText(QString());
+        outPlainByte06_27->setText(QString());
+        outPlainByte12_27->setText(QString());
+        plain2s02e01MCByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_27->setText(QString());
+        outPlainByte05_13->setText(QString());
+        plain2s02e01MCByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01MCByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain2s02e01MCByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        groupPlain1s02e01->setTitle(QApplication::translate("MainWindow", "Plaintext (Pair 1)", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        plain1s02e01Byte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_6->setText(QString());
+        plain1s02e01ARKByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_12->setText(QString());
+        outPlainByte09_12->setText(QString());
+        outPlainByte04_12->setText(QString());
+        plain1s02e01ARKByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_12->setText(QString());
+        outPlainByte01_6->setText(QString());
+        plain1s02e01ARKByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01ARKByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_12->setText(QString());
+        plain1s02e01ARKByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01ARKByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_12->setText(QString());
+        plain1s02e01ARKByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01ARKByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte03_7->setText(QString());
+        plain1s02e01SBByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_21->setText(QString());
+        outPlainByte09_21->setText(QString());
+        outPlainByte04_21->setText(QString());
+        plain1s02e01SBByte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_21->setText(QString());
+        outPlainByte01_7->setText(QString());
+        plain1s02e01SBByte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SBByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_21->setText(QString());
+        plain1s02e01SBByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SBByte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte06_21->setText(QString());
+        plain1s02e01SBByte07->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SBByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SRByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SRByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SRByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01SRByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_22->setText(QString());
+        outPlainByte05_7->setText(QString());
+        outPlainByte14_22->setText(QString());
+        plain1s02e01SRByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_21->setText(QString());
+        plain1s02e01SRByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte12_22->setText(QString());
+        plain1s02e01SRByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte15_7->setText(QString());
+        outPlainByte06_22->setText(QString());
+        outPlainByte07_21->setText(QString());
+        plain1s02e01SRByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte13_22->setText(QString());
+        plain1s02e01MCByte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01MCByte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01MCByte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte04_23->setText(QString());
+        plain1s02e01MCByte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte07_22->setText(QString());
+        outPlainByte15_8->setText(QString());
+        outPlainByte06_23->setText(QString());
+        outPlainByte12_23->setText(QString());
+        plain1s02e01MCByte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_23->setText(QString());
+        outPlainByte05_8->setText(QString());
+        plain1s02e01MCByte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01MCByte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        plain1s02e01MCByte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS02E01ARK->setText(QApplication::translate("MainWindow", "ARK K0", 0, QApplication::UnicodeUTF8));
+        buttonS02E01SB->setText(QApplication::translate("MainWindow", "SB", 0, QApplication::UnicodeUTF8));
+        buttonS02E01SR->setText(QApplication::translate("MainWindow", "SR", 0, QApplication::UnicodeUTF8));
+        buttonS02E01MC->setText(QApplication::translate("MainWindow", "MC", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tabS02E01), QApplication::translate("MainWindow", "S02E01", 0, QApplication::UnicodeUTF8));
+        label_83->setText(QApplication::translate("MainWindow", "=", 0, QApplication::UnicodeUTF8));
+        label_84->setText(QString());
+        groupInvCipher12DiffColumns01e03_10->setTitle(QApplication::translate("MainWindow", "Diff (1 and 2)", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff12Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff12Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff12Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff12Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_85->setText(QString());
+        label_86->setText(QString());
+        groupInvCipher12DiffColumns01e03_11->setTitle(QApplication::translate("MainWindow", "Col. 2 - Pair 1", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_87->setText(QString());
+        label_88->setText(QString());
+        groupInvCipher13DiffColumns01e03_3->setTitle(QApplication::translate("MainWindow", "Diff (1 and 3)", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff13Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff13Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff13Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plainAfterR1Diff13Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        groupInvCipher12DiffColumns01e03_12->setTitle(QApplication::translate("MainWindow", "Col. 2 - Diff (1 and 2)", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff12Column2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff12Column2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff12Column2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff12Column2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        groupInvCipher13DiffColumns01e03_4->setTitle(QApplication::translate("MainWindow", "Col. 2 - Diff (1 and 3)", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff13Column2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff13Column2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff13Column2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02InvCipherDiff13Column2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_89->setText(QApplication::translate("MainWindow", "From S01E02", 0, QApplication::UnicodeUTF8));
+        label_90->setText(QApplication::translate("MainWindow", "From S02E01", 0, QApplication::UnicodeUTF8));
+        groupInvCipher12DiffColumns01e03_13->setTitle(QApplication::translate("MainWindow", "Col. 2 - Pair 2", 0, QApplication::UnicodeUTF8));
+        s02e02plain2AfterR1Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain2AfterR1Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain2AfterR1Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain2AfterR1Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_91->setText(QString());
+        label_92->setText(QString());
+        groupInvCipher12DiffColumns01e03_14->setTitle(QApplication::translate("MainWindow", "Col. 2 - Pair 3", 0, QApplication::UnicodeUTF8));
+        s02e02plain3AfterR1Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain3AfterR1Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain3AfterR1Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain3AfterR1Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_93->setText(QString());
+        label_94->setText(QString());
+        label_95->setText(QString());
+        label_96->setText(QString());
+        label_108->setText(QString());
+        groupBox_7->setTitle(QApplication::translate("MainWindow", "Sbox Difference Table Lookup", 0, QApplication::UnicodeUTF8));
+        label_97->setText(QApplication::translate("MainWindow", "X xor Y = Alpha \n"
+"SBox(X) xor SBox(Y) = Beta", 0, QApplication::UnicodeUTF8));
+        groupBox_8->setTitle(QApplication::translate("MainWindow", "Lookup For 1 And 2", 0, QApplication::UnicodeUTF8));
+        editByteBeta12_2->setText(QString());
+        editByteAlpha12_2->setText(QString());
+        label_98->setText(QApplication::translate("MainWindow", "Alpha: ", 0, QApplication::UnicodeUTF8));
+        label_99->setText(QApplication::translate("MainWindow", "Beta:", 0, QApplication::UnicodeUTF8));
+        buttonSBoxLookup12_2->setText(QApplication::translate("MainWindow", "Lookup", 0, QApplication::UnicodeUTF8));
+        labelResultLookupY12_2->setText(QString());
+        label_100->setText(QApplication::translate("MainWindow", "and", 0, QApplication::UnicodeUTF8));
+        label_101->setText(QApplication::translate("MainWindow", "Found:", 0, QApplication::UnicodeUTF8));
+        labelResultLookupX12_2->setText(QString());
+        groupBox_9->setTitle(QApplication::translate("MainWindow", "Lookup For 1 And 3", 0, QApplication::UnicodeUTF8));
+        editByteBeta13_2->setText(QString());
+        editByteAlpha13_2->setText(QString());
+        label_102->setText(QApplication::translate("MainWindow", "Alpha: ", 0, QApplication::UnicodeUTF8));
+        label_103->setText(QApplication::translate("MainWindow", "Beta:", 0, QApplication::UnicodeUTF8));
+        buttonSBoxLookup13_2->setText(QApplication::translate("MainWindow", "Lookup", 0, QApplication::UnicodeUTF8));
+        labelResultLookupY13_2->setText(QString());
+        label_104->setText(QApplication::translate("MainWindow", "and", 0, QApplication::UnicodeUTF8));
+        label_105->setText(QApplication::translate("MainWindow", "Found:", 0, QApplication::UnicodeUTF8));
+        labelResultLookupX13_2->setText(QString());
+        groupInvCipher12DiffColumns01e03_15->setTitle(QApplication::translate("MainWindow", "Col. 2 - Pair 1 XOR  K1", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte10_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte09_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte08_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02plain1AfterR1Col2Byte11_2->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e02k1Byte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e02k1Byte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e02k1Byte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e02k1Byte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_106->setText(QString());
+        editByte08ResultSbox->setText(QString());
+        editByte09ResultSbox->setText(QString());
+        editByte10ResultSbox->setText(QString());
+        editByte11ResultSbox->setText(QString());
+        buttonSBoxSolveLookupByte08->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte09->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte10->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        buttonSBoxSolveLookupByte11->setText(QApplication::translate("MainWindow", "Resolve", 0, QApplication::UnicodeUTF8));
+        label_107->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tabS02E02), QApplication::translate("MainWindow", "S02E02", 0, QApplication::UnicodeUTF8));
+        groupInvCipher12DiffColumns01e03_16->setTitle(QApplication::translate("MainWindow", "Col. 2 - Pair 1", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterR1Col2Byte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterR1Col2Byte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterR1Col2Byte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterR1Col2Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        buttonS01E04ArkK1_2->setText(QApplication::translate("MainWindow", "ARK K1", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterK1Col2Byte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterK1Col2Byte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterK1Col2Byte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterK1Col2Byte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS01E04SB_2->setText(QApplication::translate("MainWindow", "SB", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSBR1Col2Byte11->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSBR1Col2Byte10->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSBR1Col2Byte09->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSBR1Col2Byte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS01E04SR_2->setText(QApplication::translate("MainWindow", "SR", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSRR1Byte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte14_28->setText(QString());
+        outPlainByte06_28->setText(QString());
+        s02e03plain1AfterSRR1Byte07->setText(QString());
+        s02e03plain1AfterSRR1Byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSRR1Byte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03plain1AfterSRR1Byte10->setText(QString());
+        outPlainByte04_28->setText(QString());
+        s02e03plain1AfterSRR1Byte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        outPlainByte11_19->setText(QString());
+        outPlainByte09_19->setText(QString());
+        s02e03plain1AfterSRR1Byte13->setText(QString());
+        s02e03plain1AfterSRR1Byte00->setText(QString());
+        outPlainByte01_12->setText(QString());
+        outPlainByte03_12->setText(QString());
+        outPlainByte12_28->setText(QString());
+        s02e03Cipher1InvMCByte15->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte13->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte14->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte06->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte04->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte02->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte10->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte09->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte01->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte08->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte00->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte07->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte12->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte03->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        s02e03Cipher1InvMCByte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
+        label_109->setText(QApplication::translate("MainWindow", "=", 0, QApplication::UnicodeUTF8));
+        s02e03u2Byte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03u2Byte13->setText(QString());
+        s01e02Cipher1Byte14_4->setText(QString());
+        s01e02Cipher1Byte06_4->setText(QString());
+        s01e02Cipher1Byte04_4->setText(QString());
+        s02e03u2Byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03u2Byte10->setText(QString());
+        s01e02Cipher1Byte09_4->setText(QString());
+        s01e02Cipher1Byte01_4->setText(QString());
+        s02e03u2Byte08->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e03u2Byte00->setText(QString());
+        s02e03u2Byte07->setText(QString());
+        s01e02Cipher1Byte12_4->setText(QString());
+        s01e02Cipher1Byte03_4->setText(QString());
+        s01e02Cipher1Byte11_4->setText(QString());
+        s02e03u2Byte05->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_110->setText(QString());
+        groupBox_11->setTitle(QApplication::translate("MainWindow", "Key Schedule Exploit", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK1_2->setTitle(QApplication::translate("MainWindow", "K1", 0, QApplication::UnicodeUTF8));
+        k1byte15_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte13_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte14_2->setText(QString());
+        k1byte06_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte04_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte02_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte10_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte09_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte01_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte08_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte00_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte07_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte12_2->setText(QString());
+        k1byte03_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte11_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte05_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK0_2->setTitle(QApplication::translate("MainWindow", "K0", 0, QApplication::UnicodeUTF8));
+        k0byte15_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte13_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte14_2->setText(QString());
+        k0byte06_2->setText(QString());
+        k0byte04_2->setText(QString());
+        k0byte02_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte10_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte09_2->setText(QString());
+        k0byte01_2->setText(QString());
+        k0byte08_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte00_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte07_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte12_2->setText(QString());
+        k0byte03_2->setText(QString());
+        k0byte11_2->setText(QString());
+        k0byte05_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS02E03FindMissingBytes->setText(QApplication::translate("MainWindow", "Find Missing Bytes", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK2->setTitle(QApplication::translate("MainWindow", "K2", 0, QApplication::UnicodeUTF8));
+        k2byte15->setText(QString());
+        k2byte13->setText(QString());
+        k2byte14->setText(QString());
+        k2byte06->setText(QString());
+        k2byte04->setText(QString());
+        k2byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte10->setText(QString());
+        k2byte09->setText(QString());
+        k2byte01->setText(QString());
+        k2byte08->setText(QString());
+        k2byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte07->setText(QString());
+        k2byte12->setText(QString());
+        k2byte03->setText(QString());
+        k2byte11->setText(QString());
+        k2byte05->setText(QString());
+        buttonS02E03FindU2Bytes->setText(QApplication::translate("MainWindow", "Find U2 Bytes", 0, QApplication::UnicodeUTF8));
+        label_111->setText(QApplication::translate("MainWindow", "From S02E01", 0, QApplication::UnicodeUTF8));
+        label_112->setText(QApplication::translate("MainWindow", "From S01E02", 0, QApplication::UnicodeUTF8));
+        tabWidget->setTabText(tabWidget->indexOf(tabS02E03), QApplication::translate("MainWindow", "S02E03", 0, QApplication::UnicodeUTF8));
+        groupBox_12->setTitle(QApplication::translate("MainWindow", "Linear System for MixColumns Exploit", 0, QApplication::UnicodeUTF8));
+        label_113->setText(QApplication::translate("MainWindow", "K2 = MC(U2)", 0, QApplication::UnicodeUTF8));
+        s02e04sysk2byte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysk2byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysk2byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysk2byte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_114->setText(QApplication::translate("MainWindow", "=    (2*         )         (3*         )", 0, QApplication::UnicodeUTF8));
+        label_115->setText(QApplication::translate("MainWindow", "=                              (2*          )         (3*         )", 0, QApplication::UnicodeUTF8));
+        label_116->setText(QApplication::translate("MainWindow", "=                                                         (2*          )        (3*          )", 0, QApplication::UnicodeUTF8));
+        label_117->setText(QApplication::translate("MainWindow", "=    (3*         )                                                              (2*          )", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte00_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte00_1->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte00_0->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte00_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte01_1->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte01_0->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte01_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte01_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_118->setText(QApplication::translate("MainWindow", "K2", 0, QApplication::UnicodeUTF8));
+        label_119->setText(QApplication::translate("MainWindow", "U2,0", 0, QApplication::UnicodeUTF8));
+        label_120->setText(QApplication::translate("MainWindow", "U2,1", 0, QApplication::UnicodeUTF8));
+        label_121->setText(QApplication::translate("MainWindow", "U2,2", 0, QApplication::UnicodeUTF8));
+        label_122->setText(QApplication::translate("MainWindow", "U2,3", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte02_0->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte02_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte02_1->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte02_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte03_0->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte03_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte03_1->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04sysu2byte03_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_123->setText(QString());
+        label_124->setText(QString());
+        label_125->setText(QString());
+        label_126->setText(QString());
+        label_127->setText(QString());
+        label_128->setText(QString());
+        label_129->setText(QString());
+        label_130->setText(QString());
+        label_131->setText(QString());
+        label_132->setText(QString());
+        label_133->setText(QString());
+        label_134->setText(QString());
+        buttonS02E04SolveLinearSystem->setText(QApplication::translate("MainWindow", "Find Solutions", 0, QApplication::UnicodeUTF8));
+        label_135->setText(QApplication::translate("MainWindow", "InvMC", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK2_2->setTitle(QApplication::translate("MainWindow", "Col. 0 - K2", 0, QApplication::UnicodeUTF8));
+        s02e04k2byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04k2byte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04k2byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04k2byte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_136->setText(QString());
+        label_137->setText(QString());
+        groupBox_13->setTitle(QApplication::translate("MainWindow", "Key Schedule Exploit", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK1_3->setTitle(QApplication::translate("MainWindow", "K1", 0, QApplication::UnicodeUTF8));
+        k1byte15_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte13_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte14_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte06_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte04_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte02_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte10_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte09_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte01_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte08_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte00_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte07_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte12_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte03_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte11_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k1byte05_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK0_3->setTitle(QApplication::translate("MainWindow", "K0", 0, QApplication::UnicodeUTF8));
+        k0byte15_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte13_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte14_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte06_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte04_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte02_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte10_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte09_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte01_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte08_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte00_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte07_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte12_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte03_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte11_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k0byte05_3->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        buttonS02E04FindMissingBytes->setText(QApplication::translate("MainWindow", "Find Missing Bytes", 0, QApplication::UnicodeUTF8));
+        groupSubKeyK2_3->setTitle(QApplication::translate("MainWindow", "K2", 0, QApplication::UnicodeUTF8));
+        k2byte15_2->setText(QString());
+        k2byte13_2->setText(QString());
+        k2byte14_2->setText(QString());
+        k2byte06_2->setText(QString());
+        k2byte04_2->setText(QString());
+        k2byte02_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte10_2->setText(QString());
+        k2byte09_2->setText(QString());
+        k2byte01_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte08_2->setText(QString());
+        k2byte00_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte07_2->setText(QString());
+        k2byte12_2->setText(QString());
+        k2byte03_2->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        k2byte11_2->setText(QString());
+        k2byte05_2->setText(QString());
+        s02e04u2Byte02->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04u2Byte01->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04u2Byte00->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        s02e04u2Byte03->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
+        label_138->setText(QString());
+        label_139->setText(QApplication::translate("MainWindow", "From S02E03", 0, QApplication::UnicodeUTF8));
+        label_140->setText(QApplication::translate("MainWindow", "MC", 0, QApplication::UnicodeUTF8));
+        label_141->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tabS02E04), QApplication::translate("MainWindow", "S02E04", 0, QApplication::UnicodeUTF8));
         groupOutK0->setTitle(QApplication::translate("MainWindow", "Key (k0) found", 0, QApplication::UnicodeUTF8));
         outK0byte15->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
         outK0byte13->setText(QApplication::translate("MainWindow", "??", 0, QApplication::UnicodeUTF8));
@@ -10750,6 +20195,13 @@ public:
         outCipherPair1Byte11->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         outCipherPair1Byte05->setText(QApplication::translate("MainWindow", "FF", 0, QApplication::UnicodeUTF8));
         pushButtonEncryptOutput->setText(QApplication::translate("MainWindow", "Encrypt", 0, QApplication::UnicodeUTF8));
+        label_76->setText(QString());
+        label_77->setText(QString());
+        label_78->setText(QString());
+        label_79->setText(QString());
+        label_80->setText(QApplication::translate("MainWindow", "=?", 0, QApplication::UnicodeUTF8));
+        label_81->setText(QString());
+        label_82->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tabOutput), QApplication::translate("MainWindow", "Output", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", 0, QApplication::UnicodeUTF8));
         menuLoad->setTitle(QApplication::translate("MainWindow", "Load...", 0, QApplication::UnicodeUTF8));
