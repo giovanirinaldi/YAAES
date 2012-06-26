@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-#include "rijndael/rijndael.h"
+#include "../Rijndael/rijndael/rijndael.h"
 
 int mul(int x, int y) {
     int r = 0;
@@ -120,7 +120,7 @@ int main (int argc, char *argv[]){
 	for (int i = 0; i < 4; i++){
 		a_plain[i] = new unsigned char[4];
 	}
-	unsigned char a_plain_char[17] = "AoqJQ2d4mSI1JSoc"; 
+	unsigned char a_plain_char[17] = "AosJQ2d4mSI1JSoc"; 
 	for (int i = 0; i < 4; i++){
 		memcpy(a_plain[i], &a_plain_char[i*4], 4);
 	}
@@ -137,7 +137,6 @@ int main (int argc, char *argv[]){
 		memcpy(b_plain[i], &b_plain_char[i*4], 4);
 	}
 	r.encryptOneRound(b_plain);	
-
 
 	//copy the original, so we have plain and cipher texts in hexa
 	unsigned char** a_cipher = a_plain;
@@ -186,6 +185,10 @@ int main (int argc, char *argv[]){
 	printf("--------------\n");
 
 	r.invMixColumns(ab_cipher_diff);
+	printf("--------------\n");
+	printf("AB Cipher diff after invMC\n");
+	printBlock(ab_cipher_diff);	
+	printf("--------------\n");
 	r.invShiftRows(ab_cipher_diff);
 		
 	printf("--------------\n");
@@ -207,10 +210,13 @@ int main (int argc, char *argv[]){
 		for (int j = 0; j < 4; j++){
 			a = ab_plain_diff[i][j];
 			b = ab_cipher_diff[i][j];
+			printf("diff %x %x\n", a, b);
 			for (unsigned char x = 0x00; x <= 0xff; x=x+0x01){
 				for (unsigned char y = 0x00; y <= 0xff; y=y+0x01){
 					if (((x^y) == a) && ((_sbox[x]^_sbox[y]) == b)){
 //						printf("sbox %x (%x) xor sbox %x (%x) == %x (%x) \n", x, _sbox[x], y, _sbox[y], a, b);
+						printf("oi %x %x\n", x, y);
+						
 						pos[i][j][0] = x;
 						pos[i][j][1] = y;						
 						count++;

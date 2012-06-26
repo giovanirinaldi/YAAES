@@ -3,8 +3,6 @@
 #include <cstdio>
 #include <ctime>
 
-//#include <QDebug>
-
 #define DEBUG 0
 #define STDOUT stdout
 
@@ -75,14 +73,6 @@ void Rijndael::generateIV(){
 //	printf("\n");
 }
 
-unsigned char** Rijndael::getExpKey(){
-    /*for (int i = 0; i < 4; i++){
-        memcpy(expKey[i], _exp_key[i], _nk);
-    }*/
-    return _exp_key;
-
-}
-
 void Rijndael::getIV(unsigned char** iv){
 	for (int i = 0; i < 4; i++){
 		memcpy(iv[i], _iv[i], 4);
@@ -114,7 +104,7 @@ void Rijndael::makeKey(unsigned char* key){
 	unsigned char** _temp_key = new unsigned char* [_nk];
 	for (int i = 0; i < _nk; i++){
 		_temp_key[i] = &key[i*4];
-        }
+	}
 	/*for (int i = 0; i < _nk; i++){
 		for (int j = 0; j < 4; j++){
 			printf("%x ", _temp_key[i][j]);
@@ -130,42 +120,6 @@ void Rijndael::makeKey(unsigned char** key){
 //	if (key == NULL){
 //		return;
 //	}
-/*	_exp_key = new unsigned char* [4];
-	for (int i = 0; i < 4; i++){
-		_exp_key[i] = new unsigned char [_nek];
-	}
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			_exp_key[i][j] = key[i][j];
-		}
-	}
-	
-	unsigned char temp;
-	for (int j = _nk; j < _nek; j++){
-		//copy
-		_exp_key[0][j] = _exp_key[0][j-1];
-		_exp_key[1][j] = _exp_key[1][j-1];
-		_exp_key[2][j] = _exp_key[2][j-1];
-		_exp_key[3][j] = _exp_key[3][j-1];
-		if (j % _nk == 0){
-	//		rotWord(_exp_key[i]);
-			temp = _exp_key[0][j];
-			_exp_key[0][j] = _exp_key[1][j];
-			_exp_key[1][j] = _exp_key[2][j];
-			_exp_key[2][j] = _exp_key[3][j];
-			_exp_key[3][j] = temp;
-	//		subWord(_exp_key[i]);
-			for (int i = 0; i < 4; i++){
-				_exp_key[i][j] = _sbox[_exp_key[i][j]];
-			}
-			_exp_key[0][j] ^= _rcon[j/_nk];	//xor Rcon
-		}
-		for (int i = 0; i < 4; i++){
-			_exp_key[i][j] ^= _exp_key[i][j-_nk];
-                }
-	}	
-	_initd = true;*/
-	
 	_exp_key = new unsigned char* [_nek];	
 	for (int i = 0; i < _nek; i++){
 		_exp_key[i] = new unsigned char [4];
@@ -188,7 +142,7 @@ void Rijndael::makeKey(unsigned char** key){
 		for (int j = 0; j < 4; j++){
 			_exp_key[i][j] ^= _exp_key[i-_nk][j];
 		}
-		//printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
+//		printf("%x%x%x%x\n", _exp_key[i][0], _exp_key[i][1], _exp_key[i][2], _exp_key[i][3]);
 	}
 	_initd = true;
 }
@@ -215,12 +169,6 @@ void Rijndael::subBytes(unsigned char** block){
 	}
 }
 
-void Rijndael::subBytesMainDiagonal(unsigned char** block){
-	for (int i = 0; i < 4; i++){
-		block[i][i] = _sbox[block[i][i]];
-	}
-}
-
 void Rijndael::invSubBytes(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
@@ -237,12 +185,6 @@ void Rijndael::shiftRows(unsigned char** block){
 		memcpy(block[i]+(4-i), temp, i);
 	}
 	delete[] temp;
-}
-
-void Rijndael::shiftRowsMainDiagonal(unsigned char** block){
-	block[1][0] = block[1][1];
-	block[2][0] = block[2][2];
-	block[3][0] = block[3][3];
 }
 
 void Rijndael::invShiftRows(unsigned char** block){
@@ -283,33 +225,7 @@ void Rijndael::mixColumns(unsigned char** block){
 	delete[] temp;
 }
 
-void Rijndael::mixOneColumn(unsigned char** block, int column){
-	unsigned char* temp = new unsigned char [4];	//utilizado para guardar coluna atual
-	memcpy(temp, &block[0][column], 1);
-	memcpy(temp+1, &block[1][column], 1);
-	memcpy(temp+2, &block[2][column], 1);
-	memcpy(temp+3, &block[3][column], 1);
-	for (int i = 0; i < 4; i++){
-		block[i][column] = 0x00;
-		for (int m = 0; m < 4; m ++){
-			if (_mix[i][m] >= 2){
-				block[i][column] ^= temp[m] << 1;
-				if (_mix[i][m] == 3){
-					block[i][column] ^= temp[m];
-				}
-				if (temp[m] & 0x80){	// antes, primeiro bit mais signficativo era 1
-					block[i][column] ^= 0x1b;
-				}	
-			}		
-			else{
-				block[i][column] ^= temp[m];
-			}
-		}
-	}
-	delete[] temp;
-}
-
-unsigned char Rijndael::gmul(unsigned char a, unsigned char b) {
+unsigned char gmul(unsigned char a, unsigned char b) {
 	unsigned char p = 0;
 	unsigned char counter;
 	unsigned char hi_bit_set;
@@ -346,46 +262,8 @@ void Rijndael::invMixColumns(unsigned char** block){
 void Rijndael::addRoundKey(unsigned char** block){
 	for (int i = 0; i < 4; i++){
 		for (int j = 0; j < 4; j++){
-			//block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
-			block[i][j] ^= _exp_key[i][j+_round*4];
+			block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
 		}
-	}
-}
-
-void Rijndael::addNRoundKey(unsigned char** block, int round){
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			//block[i][j] ^= _exp_key[j+_round*4][i];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
-			block[i][j] ^= _exp_key[i][j+round*4];
-		}
-	}
-}
-
-
-void Rijndael::addRoundKeySwappedMCRoundTwo(unsigned char** block){
-	unsigned char** temp_exp_key = new unsigned char*[4];
-	for (int i = 0; i < 4; i++){
-		temp_exp_key[i] = new unsigned char[4];
-	}
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			temp_exp_key[i][j] = _exp_key[j+2*4][i];
-		}
-	}
-	invMixColumns(temp_exp_key);
-#if DEBUG
-	printf("k2 with invMixColumns (for swapping, at round 2, of MC with last ARK)\n");
-#endif
-	for (int i = 0; i < 4; i++){
-		for (int j = 0; j < 4; j++){
-			block[i][j] ^= temp_exp_key[i][j];	//this is why the inverse matrix of key actually works with the (not-inversed) block text
-#if DEBUG
-			printf("%.2x ", temp_exp_key[i][j]);
-#endif
-		}
-#if DEBUG
-		printf("\n");
-#endif
 	}
 }
 
@@ -536,27 +414,6 @@ void Rijndael::encrypt(unsigned char** block){
 	subBytes(block);
 	shiftRows(block);
 	addRoundKey(block);		
-}
-
-void Rijndael::encryptNRounds(unsigned char** block, int rounds){
-	if (!_initd){
-		return;
-	}
-	_round = 0;
-	addRoundKey(block);
-	_round++;
-	for (; _round <= rounds; _round++){
-		if (_round == _nr)	break;
-		subBytes(block);
-		shiftRows(block);
-		mixColumns(block);
-		addRoundKey(block);
-	}
-	if (_round == _nr && rounds != _nr-1){
-		subBytes(block);
-		shiftRows(block);
-		addRoundKey(block);
-	}
 }
 
 void Rijndael::removePadding(unsigned char* block, int &length, int blocks){
@@ -752,67 +609,3 @@ void Rijndael::decryptOneRound(unsigned char** block){
 	addRoundKey(block);
 }
 
-void Rijndael::encryptTwoRounds(unsigned char** block){
-	if (!_initd){
-		return;
-	}
-	_round = 0;
-#if DEBUG	
-	fprintf(STDOUT, "Round %i\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	addRoundKey(block);		
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after whitening ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	_round++;
-	subBytes(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	shiftRows(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	mixColumns(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after MC\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	addRoundKey(block);		
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after ARK\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	
-	_round++;
-	subBytes(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after SB\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	shiftRows(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after SR\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	addRoundKeySwappedMCRoundTwo(block);
-#if DEBUG	
-	fprintf(STDOUT, "Round %i after ARK with k swapped\n", _round-1); for (int i = 0; i < 4; i++) { for (int j = 0; j < 4; j++){	fprintf(STDOUT, "%x ", block[i][j]); } 	fprintf(STDOUT, "\n");	}
-#endif
-	mixColumns(block);
-}
-
-
-void Rijndael::decryptTwoRounds(unsigned char** block){
-	if (!_initd){
-		return;
-	}
-	_round = 2;
-	addRoundKey(block);
-	invMixColumns(block);
-	invShiftRows(block);
-	invSubBytes(block);
-	_round--;
-	addRoundKey(block);
-	invMixColumns(block);
-	invShiftRows(block);
-	invSubBytes(block);
-	_round--;
-	addRoundKey(block);
-}

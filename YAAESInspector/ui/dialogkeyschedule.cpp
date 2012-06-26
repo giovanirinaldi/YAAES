@@ -21,6 +21,8 @@ DialogKeySchedule::DialogKeySchedule(QWidget *parent) :
     kbArray[8] = ui->kbByte08;kbArray[9] = ui->kbByte09;kbArray[10] = ui->kbByte10;kbArray[11] = ui->kbByte11;
     kbArray[12] = ui->kbByte12;kbArray[13] = ui->kbByte13;kbArray[14] = ui->kbByte14;kbArray[15] = ui->kbByte15;
 
+
+
     ui->radioButtonCol0->setChecked(true);
     changeVisibility();
 }
@@ -32,6 +34,12 @@ DialogKeySchedule::~DialogKeySchedule()
 
 void DialogKeySchedule::setSubKeyNum(int num){
     n = num;
+    char temp_string[3] = "\0\0";
+    snprintf(temp_string, 3, "%d", n);
+    QString lblRcon = "RCon[";
+    lblRcon.append(temp_string);
+    lblRcon.append("]");
+    ui->labelRcon->setText(lblRcon);
 }
 
 void DialogKeySchedule::setSubKeyA(unsigned char* subKeyA){

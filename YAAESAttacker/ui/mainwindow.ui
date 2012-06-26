@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>560</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,13 +24,13 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
+      <y>20</y>
       <width>781</width>
-      <height>531</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>9</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="tabInput">
      <attribute name="title">
@@ -779,7 +779,7 @@
     </widget>
     <widget class="QWidget" name="tabS01E01">
      <attribute name="title">
-      <string>S01E01</string>
+      <string>Step 1</string>
      </attribute>
      <widget class="QGroupBox" name="groupPlain1s01e01">
       <property name="geometry">
@@ -10820,7 +10820,7 @@
     </widget>
     <widget class="QWidget" name="tabS01E02">
      <attribute name="title">
-      <string>S01E02</string>
+      <string>Step 2</string>
      </attribute>
      <widget class="QGroupBox" name="groupCipher1s01e02">
       <property name="geometry">
@@ -17848,7 +17848,7 @@
     </widget>
     <widget class="QWidget" name="tabS01E03">
      <attribute name="title">
-      <string>S01E03</string>
+      <string>Step 3</string>
      </attribute>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03">
       <property name="geometry">
@@ -19182,7 +19182,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>From S01E01</string>
+       <string>From Step 1</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_19">
@@ -19195,7 +19195,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>From S01E02</string>
+       <string>From Step 2</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupBox">
@@ -19313,11 +19313,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupY12">
         <property name="geometry">
          <rect>
-          <x>140</x>
+          <x>150</x>
           <y>90</y>
-          <width>41</width>
-          <height>17</height>
+          <width>31</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -19326,7 +19334,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="label_24">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>110</x>
           <y>90</y>
           <width>31</width>
           <height>17</height>
@@ -19352,11 +19360,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupX12">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>90</y>
           <width>31</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -19449,11 +19465,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupY13">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>41</width>
-          <height>17</height>
+          <x>150</x>
+          <y>89</y>
+          <width>31</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -19462,7 +19486,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="label_41">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>110</x>
           <y>90</y>
           <width>31</width>
           <height>17</height>
@@ -19488,11 +19512,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupX13">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>90</y>
           <width>31</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -20324,7 +20356,7 @@ SBox(X) xor SBox(Y) = Beta</string>
     </widget>
     <widget class="QWidget" name="tabS01E04">
      <attribute name="title">
-      <string>S01E04</string>
+      <string>Step 4</string>
      </attribute>
      <widget class="QLabel" name="label_27">
       <property name="geometry">
@@ -20336,7 +20368,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </rect>
       </property>
       <property name="text">
-       <string>From S01E01</string>
+       <string>From Step 1</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_7">
@@ -22992,7 +23024,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </rect>
       </property>
       <property name="text">
-       <string>From S01E02</string>
+       <string>From Step 2</string>
       </property>
      </widget>
      <widget class="QPushButton" name="buttonS01E04FindU2Bytes">
@@ -25012,6 +25044,82 @@ SBox(X) xor SBox(Y) = Beta</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QLabel" name="label_161">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>60</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointupleft.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_162">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>60</y>
+          <width>31</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_163">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>80</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_160">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>80</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointright.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
       </widget>
       <widget class="QPushButton" name="buttonS01E04FindMissingBytes">
        <property name="geometry">
@@ -25030,7 +25138,7 @@ SBox(X) xor SBox(Y) = Beta</string>
     </widget>
     <widget class="QWidget" name="tabS02E01">
      <attribute name="title">
-      <string>S02E01</string>
+      <string>Step 1</string>
      </attribute>
      <widget class="QGroupBox" name="groupPlain3s02e01">
       <property name="geometry">
@@ -35071,7 +35179,7 @@ SBox(X) xor SBox(Y) = Beta</string>
     </widget>
     <widget class="QWidget" name="tabS02E02">
      <attribute name="title">
-      <string>S02E02</string>
+      <string>Step 2</string>
      </attribute>
      <widget class="QLabel" name="label_83">
       <property name="geometry">
@@ -36164,14 +36272,14 @@ SBox(X) xor SBox(Y) = Beta</string>
      <widget class="QLabel" name="label_89">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>83</y>
-        <width>91</width>
+        <x>620</x>
+        <y>80</y>
+        <width>161</width>
         <height>17</height>
        </rect>
       </property>
       <property name="text">
-       <string>From S01E02</string>
+       <string>From Step 2 of Phase 1</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_90">
@@ -36184,7 +36292,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </rect>
       </property>
       <property name="text">
-       <string>From S02E01</string>
+       <string>From Step 1</string>
       </property>
      </widget>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_13">
@@ -36787,7 +36895,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
+          <y>35</y>
           <width>51</width>
           <height>17</height>
          </rect>
@@ -36800,7 +36908,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <property name="geometry">
          <rect>
           <x>110</x>
-          <y>40</y>
+          <y>35</y>
           <width>51</width>
           <height>17</height>
          </rect>
@@ -36825,11 +36933,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupY12_2">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>41</width>
-          <height>17</height>
+          <x>150</x>
+          <y>89</y>
+          <width>31</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -36838,7 +36954,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="label_100">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>110</x>
           <y>90</y>
           <width>31</width>
           <height>17</height>
@@ -36864,11 +36980,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupX12_2">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>90</y>
           <width>31</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -36883,6 +37007,9 @@ SBox(X) xor SBox(Y) = Beta</string>
          <width>201</width>
          <height>111</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
        </property>
        <property name="title">
         <string>Lookup For 1 And 3</string>
@@ -36923,7 +37050,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>40</y>
+          <y>35</y>
           <width>51</width>
           <height>17</height>
          </rect>
@@ -36936,7 +37063,7 @@ SBox(X) xor SBox(Y) = Beta</string>
         <property name="geometry">
          <rect>
           <x>110</x>
-          <y>40</y>
+          <y>35</y>
           <width>51</width>
           <height>17</height>
          </rect>
@@ -36961,11 +37088,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupY13_2">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>90</y>
-          <width>41</width>
-          <height>17</height>
+          <x>150</x>
+          <y>89</y>
+          <width>31</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -36974,7 +37109,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="label_104">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>110</x>
           <y>90</y>
           <width>31</width>
           <height>17</height>
@@ -37000,11 +37135,19 @@ SBox(X) xor SBox(Y) = Beta</string>
        <widget class="QLabel" name="labelResultLookupX13_2">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>60</x>
           <y>90</y>
           <width>31</width>
-          <height>16</height>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	 border-width: 1px;
+     border-style: solid;
+     border-color: black; 
+     background-color: white;
+}</string>
         </property>
         <property name="text">
          <string/>
@@ -37547,7 +37690,7 @@ SBox(X) xor SBox(Y) = Beta</string>
     </widget>
     <widget class="QWidget" name="tabS02E03">
      <attribute name="title">
-      <string>S02E03</string>
+      <string>Step 3</string>
      </attribute>
      <widget class="QGroupBox" name="groupInvCipher12DiffColumns01e03_16">
       <property name="geometry">
@@ -40923,6 +41066,44 @@ SBox(X) xor SBox(Y) = Beta</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QLabel" name="label_155">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>70</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointright.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_154">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>68</y>
+          <width>21</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
       </widget>
       <widget class="QGroupBox" name="groupSubKeyK0_2">
        <property name="geometry">
@@ -41609,6 +41790,44 @@ SBox(X) xor SBox(Y) = Beta</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_153">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>70</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointright.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_152">
+        <property name="geometry">
+         <rect>
+          <x>135</x>
+          <y>68</y>
+          <width>21</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -42337,34 +42556,34 @@ SBox(X) xor SBox(Y) = Beta</string>
        </rect>
       </property>
       <property name="text">
-       <string>From S02E01</string>
+       <string>From Step 1</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_112">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>590</x>
         <y>10</y>
-        <width>91</width>
+        <width>161</width>
         <height>17</height>
        </rect>
       </property>
       <property name="text">
-       <string>From S01E02</string>
+       <string>From Step 2 of Phase 1</string>
       </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tabS02E04">
      <attribute name="title">
-      <string>S02E04</string>
+      <string>Step 4</string>
      </attribute>
      <widget class="QGroupBox" name="groupBox_12">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>20</y>
+        <x>260</x>
+        <y>40</y>
         <width>521</width>
-        <height>181</height>
+        <height>221</height>
        </rect>
       </property>
       <property name="title">
@@ -42389,8 +42608,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>90</y>
+         <x>32</x>
+         <y>100</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42432,8 +42651,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>120</y>
+         <x>32</x>
+         <y>140</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42475,7 +42694,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>32</x>
          <y>60</y>
          <width>25</width>
          <height>25</height>
@@ -42521,8 +42740,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>150</y>
+         <x>32</x>
+         <y>178</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42561,53 +42780,53 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_114">
        <property name="geometry">
         <rect>
-         <x>40</x>
+         <x>60</x>
          <y>62</y>
          <width>311</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
-        <string>=    (2*         )         (3*         )</string>
+        <string> =   (2*         )         (3*         )</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_115">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>92</y>
+         <x>60</x>
+         <y>102</y>
          <width>311</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
-        <string>=                              (2*          )         (3*         )</string>
+        <string> =                             (2*          )         (3*         )</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_116">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>122</y>
+         <x>60</x>
+         <y>142</y>
          <width>321</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
-        <string>=                                                         (2*          )        (3*          )</string>
+        <string> =                                                        (2*          )        (3*          )</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_117">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>152</y>
+         <x>60</x>
+         <y>180</y>
          <width>321</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
-        <string>=    (3*         )                                                              (2*          )</string>
+        <string> =   (3*         )                                                              (2*          )</string>
        </property>
       </widget>
       <widget class="QLabel" name="s02e04sysu2byte00_3">
@@ -42616,8 +42835,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>150</y>
+         <x>100</x>
+         <y>178</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42657,8 +42876,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>90</y>
+         <x>100</x>
+         <y>100</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42698,7 +42917,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>100</x>
          <y>58</y>
          <width>25</width>
          <height>25</height>
@@ -42742,8 +42961,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>120</y>
+         <x>100</x>
+         <y>140</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42783,8 +43002,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>90</y>
+         <x>180</x>
+         <y>100</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42826,7 +43045,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>180</x>
          <y>58</y>
          <width>25</width>
          <height>25</height>
@@ -42872,8 +43091,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>120</y>
+         <x>180</x>
+         <y>140</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42915,8 +43134,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>150</y>
+         <x>180</x>
+         <y>178</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -42955,24 +43174,38 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_118">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>21</width>
+         <x>0</x>
+         <y>65</y>
+         <width>31</width>
          <height>17</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
-        <string>K2</string>
+        <string>K2,0</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_119">
        <property name="geometry">
         <rect>
-         <x>80</x>
+         <x>100</x>
          <y>40</y>
          <width>31</width>
          <height>17</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>U2,0</string>
@@ -42981,11 +43214,18 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_120">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>180</x>
          <y>40</y>
          <width>31</width>
          <height>17</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>U2,1</string>
@@ -42994,11 +43234,18 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_121">
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>260</x>
          <y>40</y>
          <width>31</width>
          <height>17</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>U2,2</string>
@@ -43007,11 +43254,18 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_122">
        <property name="geometry">
         <rect>
-         <x>320</x>
+         <x>340</x>
          <y>40</y>
          <width>31</width>
          <height>17</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>U2,3</string>
@@ -43023,7 +43277,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>240</x>
+         <x>260</x>
          <y>58</y>
          <width>25</width>
          <height>25</height>
@@ -43067,8 +43321,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>120</y>
+         <x>260</x>
+         <y>140</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43108,8 +43362,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>90</y>
+         <x>260</x>
+         <y>100</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43149,8 +43403,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>150</y>
+         <x>260</x>
+         <y>178</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43190,7 +43444,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>320</x>
+         <x>340</x>
          <y>58</y>
          <width>25</width>
          <height>25</height>
@@ -43236,8 +43490,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>120</y>
+         <x>340</x>
+         <y>140</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43279,8 +43533,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>90</y>
+         <x>340</x>
+         <y>100</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43322,8 +43576,8 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>150</y>
+         <x>340</x>
+         <y>178</y>
          <width>25</width>
          <height>25</height>
         </rect>
@@ -43362,7 +43616,7 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_123">
        <property name="geometry">
         <rect>
-         <x>120</x>
+         <x>140</x>
          <y>62</y>
          <width>16</width>
          <height>17</height>
@@ -43381,7 +43635,7 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_124">
        <property name="geometry">
         <rect>
-         <x>280</x>
+         <x>300</x>
          <y>62</y>
          <width>16</width>
          <height>17</height>
@@ -43400,8 +43654,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_125">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>152</y>
+         <x>300</x>
+         <y>180</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43419,8 +43673,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_126">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>92</y>
+         <x>300</x>
+         <y>102</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43438,7 +43692,7 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_127">
        <property name="geometry">
         <rect>
-         <x>200</x>
+         <x>220</x>
          <y>62</y>
          <width>16</width>
          <height>17</height>
@@ -43457,8 +43711,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_128">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>92</y>
+         <x>140</x>
+         <y>102</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43476,8 +43730,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_129">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>92</y>
+         <x>220</x>
+         <y>102</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43495,8 +43749,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_130">
        <property name="geometry">
         <rect>
-         <x>280</x>
-         <y>122</y>
+         <x>300</x>
+         <y>142</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43514,8 +43768,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_131">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>122</y>
+         <x>140</x>
+         <y>142</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43533,8 +43787,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_132">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>152</y>
+         <x>140</x>
+         <y>180</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43552,8 +43806,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_133">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>122</y>
+         <x>220</x>
+         <y>142</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43571,8 +43825,8 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QLabel" name="label_134">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>152</y>
+         <x>220</x>
+         <y>180</y>
          <width>16</width>
          <height>17</height>
         </rect>
@@ -43590,14 +43844,74 @@ SBox(X) xor SBox(Y) = Beta</string>
       <widget class="QPushButton" name="buttonS02E04SolveLinearSystem">
        <property name="geometry">
         <rect>
-         <x>380</x>
+         <x>400</x>
          <y>100</y>
-         <width>131</width>
+         <width>111</width>
          <height>27</height>
         </rect>
        </property>
        <property name="text">
         <string>Find Solutions</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_164">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>105</y>
+         <width>31</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>K2,1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_165">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>145</y>
+         <width>31</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>K2,2</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_166">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>185</y>
+         <width>31</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>K2,3</string>
        </property>
       </widget>
      </widget>
@@ -43855,8 +44169,8 @@ SBox(X) xor SBox(Y) = Beta</string>
      <widget class="QGroupBox" name="groupBox_13">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>240</y>
+        <x>10</x>
+        <y>280</y>
         <width>611</width>
         <height>191</height>
        </rect>
@@ -44563,6 +44877,44 @@ SBox(X) xor SBox(Y) = Beta</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QLabel" name="label_156">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointupleft.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_157">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>70</y>
+          <width>31</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
       </widget>
       <widget class="QGroupBox" name="groupSubKeyK0_3">
        <property name="geometry">
@@ -45265,6 +45617,44 @@ SBox(X) xor SBox(Y) = Beta</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_158">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>21</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/arrowpointupleft.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_159">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>70</y>
+          <width>31</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>res/vline.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -46199,7 +46589,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </rect>
       </property>
       <property name="text">
-       <string>From S02E03</string>
+       <string>From Step 3</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_140">
@@ -49122,6 +49512,195 @@ SBox(X) xor SBox(Y) = Beta</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QLabel" name="label_142">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>0</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Second Phase</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_143">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>0</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>First Phase</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_144">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>0</y>
+      <width>41</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/vline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_145">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>0</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/vline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_146">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>0</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/vline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_147">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>0</y>
+      <width>31</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/vline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_148">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/hline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_149">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>10</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/hline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_150">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/hline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_151">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>10</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>res/hline.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label_147</zorder>
+   <zorder>label_150</zorder>
+   <zorder>label_146</zorder>
+   <zorder>label_143</zorder>
+   <zorder>label_145</zorder>
+   <zorder>label_144</zorder>
+   <zorder>label_142</zorder>
+   <zorder>label_151</zorder>
+   <zorder>label_148</zorder>
+   <zorder>label_149</zorder>
+   <zorder>tabWidget</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
