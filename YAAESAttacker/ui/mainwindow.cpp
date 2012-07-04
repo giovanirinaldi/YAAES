@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialogshowsubkeys.h"
+#include "dialogabout.h"
 
 //d
 #include <cstdio>
@@ -22,9 +23,10 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     ui->setupUi(this);
-    ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
 
     on_actionExample_1_triggered();
+
+    installEventFilter(this);
 
     rijn = FastRijndael(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
 
@@ -33,6 +35,9 @@ MainWindow::MainWindow(QWidget *parent) :
         k0found[i] = 0x00;
     }
     keyFound = false;
+
+
+
 
     outK0Array = new QLabel*[16];
     outK0Array[0]=ui->outK0byte00;outK0Array[1]=ui->outK0byte01;outK0Array[2]=ui->outK0byte02;outK0Array[3]=ui->outK0byte03;
@@ -166,11 +171,26 @@ MainWindow::MainWindow(QWidget *parent) :
     s02e03Cipher1InvMC[8]=ui->s02e03Cipher1InvMCByte08;s02e03Cipher1InvMC[9]=ui->s02e03Cipher1InvMCByte09;s02e03Cipher1InvMC[10]=ui->s02e03Cipher1InvMCByte10;s02e03Cipher1InvMC[11]=ui->s02e03Cipher1InvMCByte11;
     s02e03Cipher1InvMC[12]=ui->s02e03Cipher1InvMCByte12;s02e03Cipher1InvMC[13]=ui->s02e03Cipher1InvMCByte13;s02e03Cipher1InvMC[14]=ui->s02e03Cipher1InvMCByte14;s02e03Cipher1InvMC[15]=ui->s02e03Cipher1InvMCByte15;
 
+    ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabOutput));
+    ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+bool MainWindow::eventFilter(QObject* pObject, QEvent* pEvent)
+{
+
+    if (pEvent->type() == 77){
+        if (dialogShowSubKeys->isVisible()){
+             dialogShowSubKeys->setSubKeysMatrix(subkeyk0, subkeyk1, subkeyk2, subkeyu2);
+             dialogShowSubKeys->forceUpdate();
+        }
+    }
+    return QObject::eventFilter(pObject, pEvent);
+
 }
 
 unsigned char hexValue(char hex){
@@ -199,7 +219,6 @@ void MainWindow::on_editByte00From_textChanged(QString text)
             text.remove(i, 1);
     ui->editByte00From->setText(text.toUpper());
     ui->editSugK0Byte00->setText(text.toUpper());
-    //subkeyk0[0] = ui->editSugK0Byte00->text();
 }
 
 void MainWindow::on_editByte00To_textChanged(QString text)
@@ -508,7 +527,10 @@ void MainWindow::on_actionExample_1_triggered()
 void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
 {
     if (tab == ui->tabInput){
-        printf("tabInput\n");fflush(stdout);
+        subkeyk0[0]=ui->editSugK0Byte00->text();
+        subkeyk0[5]=ui->editSugK0Byte05->text();
+        subkeyk0[10]=ui->editSugK0Byte10->text();
+        subkeyk0[15]=ui->editSugK0Byte15->text();
     }
     else if (tab == ui->tabOutput){
         for (int i = 0; i < 16; i++){
@@ -524,11 +546,6 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
             setOutK0(k0found);
             setOutCipherK0(ui->editCiphertext1->text());
         }
-       /* else{
-            QString unknown = "????????????????????????????????";
-            setOutK0(unknown);
-            setOutCipherK0(unknown);
-        }*/
     }
     else if (tab == ui->tabS01E01){
         setPlainS01E01(ui->editPlaintext1->text(), ui->editPlaintext2->text(), ui->editPlaintext3->text());
@@ -542,7 +559,6 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         subkeyk0[5]=ui->editSugK0Byte05->text();
         subkeyk0[10]=ui->editSugK0Byte10->text();
         subkeyk0[15]=ui->editSugK0Byte15->text();
-        printf("tabS01E01\n");fflush(stdout);
     }
     else if (tab == ui->tabS01E02){
         setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
@@ -566,7 +582,6 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         setColumnsS02E04();
     }
     else{
-        printf("tabFringe\n");fflush(stdout);
     }
 }
 
@@ -1430,7 +1445,7 @@ void MainWindow::on_buttonS01E04FindU2Bytes_clicked()
 
 void MainWindow::on_actionSubkeys_triggered()
 {
-    DialogShowSubKeys* dialogShowSubKeys = new DialogShowSubKeys(this);
+    dialogShowSubKeys = new DialogShowSubKeys(this);
     dialogShowSubKeys->setSubKeysMatrix(subkeyk0, subkeyk1, subkeyk2, subkeyu2);
     dialogShowSubKeys->show();
 }
@@ -2477,4 +2492,29 @@ void MainWindow::on_buttonS02E04FindMissingBytes_clicked()
     subkeyk0[3] = ui->k0byte03_3->text();
 
     delete[] temp_string;
+}
+
+void MainWindow::on_actionReset_triggered()
+{
+    ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
+    for (int i = 0; i < 16; i++){
+        subkeyk0[i] = "??";
+        subkeyk1[i] = "??";
+        subkeyk2[i] = "??";
+        subkeyu2[i] = "??";
+    }
+    for (int i = 0; i < 16; i++){
+        k0found[i] = 0x00;
+    }
+    keyFound = false;
+
+
+
+
+}
+
+void MainWindow::on_actionAbout_triggered()
+{
+    DialogAbout* dialogAbout = new DialogAbout(this);
+    dialogAbout->show();
 }

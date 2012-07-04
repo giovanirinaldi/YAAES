@@ -62,7 +62,7 @@ void DialogShiftRows::updateMatrix(){
     delete[] temp_string;
 }
 
-void DialogShiftRows::on_buttonBox_clicked(QAbstractButton* button)
+void DialogShiftRows::on_buttonBox_clicked(QAbstractButton* )
 {
     this->close();
 }

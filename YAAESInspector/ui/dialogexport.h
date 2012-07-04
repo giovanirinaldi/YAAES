@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <cstdio>
+#include <QAbstractButton>
 
 namespace Ui {
     class DialogExport;
@@ -20,6 +21,9 @@ public:
     void setCiphertext(unsigned char* ciphertext);
     void update();
     void hexToUpperCaseText(unsigned char &hex, char* temp_string);
+
+private slots:
+    void on_buttonBox_clicked(QAbstractButton* button);
 
 private:
     Ui::DialogExport *ui;

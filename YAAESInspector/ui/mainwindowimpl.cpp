@@ -9,6 +9,7 @@
 #include "dialogsubbytes.h"
 #include "dialogmixcolumns.h"
 #include "dialogexport.h"
+#include "dialogabout.h"
 
 #ifndef EXTERN
 #undef EXTERN
@@ -181,6 +182,7 @@ void MainWindowImpl::updatePreviousMatrix(){
 	else{		
 		buttonPreviousOp->setEnabled(true);
                 btnShowPreviousOp->setEnabled(true);
+                labelArrowOp->setVisible(true);
 	}
 	char* temp_string = new char [3];
         for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
@@ -200,6 +202,7 @@ void MainWindowImpl::updateNextMatrix(){
 	else{
 		buttonNextOp->setEnabled(true);
                 btnShowNextOp->setEnabled(true);
+                labelArrowNextOp->setVisible(true);
 	}
         char* temp_string = new char [3];
         for (int i = 0; i < rijn->getBlockSizeInBytes(); i++){
@@ -227,6 +230,8 @@ void MainWindowImpl::disablePreviousMatrix(){
 	}
         buttonPreviousOp->setEnabled(false);
         btnShowPreviousOp->setEnabled(false);
+        labelArrowOp->setVisible(false);
+
 }
 
 void MainWindowImpl::disableNextMatrix(){
@@ -237,6 +242,7 @@ void MainWindowImpl::disableNextMatrix(){
 	}
 	buttonNextOp->setEnabled(false);
         btnShowNextOp->setEnabled(false);
+        labelArrowNextOp->setVisible(false);
 }
 
 void copyMatrix(unsigned char* a, unsigned char* b, int size){
@@ -252,17 +258,14 @@ void MainWindowImpl::updateRoundAndOp(){
         delete[] temp;
 	switch (op){
                 case SB:
-                        printf("sb ");
                         labelPrevOperationDesc->setText("AddRoundKey");
 			labelOperationDesc->setText("SubBytes");
 			break;
-		case SR:
-                        printf("sr ");
+                case SR:
                         labelPrevOperationDesc->setText("SubBytes");
 			labelOperationDesc->setText("ShiftRows");
 			break;                        
                 case MC:
-                        printf("mc ");
                         if (round != maxRounds){
                             labelPrevOperationDesc->setText("ShiftRows");
                             labelOperationDesc->setText("MixColumns");
@@ -278,8 +281,7 @@ void MainWindowImpl::updateRoundAndOp(){
                             }
                         }
 			break;
-		case ARK:            
-                        printf("ark ");
+                case ARK:
                         if (round != 0){
                             if (round != maxRounds){
                                  labelPrevOperationDesc->setText("MixColumns");
@@ -301,10 +303,8 @@ void MainWindowImpl::updateRoundAndOp(){
                 case STOP:
                         labelPrevOperationDesc->setText("AddRoundKey");
                         labelOperationDesc->setText("---");
-                        printf("stop ");
                         break;
-	}
-        printf("%d %d %d\n", round, maxRounds, maxRoundByKey);
+        }
         fflush(stdout);
 }
 
@@ -687,6 +687,11 @@ void MainWindowImpl::on_btnShowPreviousOp_clicked()
                 break;
             }
             break;
+        case STOP:
+            {
+                break;
+            }
+
     }
 }
 
@@ -731,6 +736,10 @@ void MainWindowImpl::on_btnShowNextOp_clicked()
                 break;
             }
             break;
+        case STOP:
+            {
+                break;
+            }
     }
 }
 
@@ -757,4 +766,10 @@ void MainWindowImpl::on_actionExport_triggered()
     dialogExport->setCiphertext(outputMatrix);
     dialogExport->update();
     dialogExport->show();
+}
+
+void MainWindowImpl::on_actionAbout_triggered()
+{
+    DialogAbout* dialogAbout = new DialogAbout(this);
+    dialogAbout->show();
 }

@@ -57,6 +57,7 @@ private slots:
         void on_btnShowNextOp_clicked();
         void on_btnShowKey_clicked();
         void on_actionExport_triggered();
+        void on_actionAbout_triggered();
 };
 
 #endif

@@ -18,14 +18,17 @@ SOURCES += src/main.cpp\
         ui/mainwindow.cpp \
     ../Rijndael/attacker/rijndaelattacker.cpp \
     ../Rijndael/fast-rijndael-1d/fast-rijndael-1d.cpp \
-    ui/dialogshowsubkeys.cpp
+    ui/dialogshowsubkeys.cpp \
+    ui/dialogabout.cpp
 
 HEADERS  += ui/mainwindow.h \
     ../Rijndael/attacker/rijndaelattacker.h \
     ../Rijndael/fast-rijndael-1d/fast-rijndael-1d.h \
-    ui/dialogshowsubkeys.h
+    ui/dialogshowsubkeys.h \
+    ui/dialogabout.h
 
 FORMS    += ui/mainwindow.ui \
-    ui/dialogshowsubkeys.ui
+    ui/dialogshowsubkeys.ui \
+    ui/dialogabout.ui
 
 OTHER_FILES +=

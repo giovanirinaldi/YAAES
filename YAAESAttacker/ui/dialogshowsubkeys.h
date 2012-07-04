@@ -19,13 +19,15 @@ public:
     ~DialogShowSubKeys();
 
     void setSubKeysMatrix(QString* k0, QString* k1, QString* k2, QString* u2);
-
+    void forceUpdate();
 
 private slots:
     void on_buttonBox_clicked(QAbstractButton* button);
 
 private:
     Ui::DialogShowSubKeys *ui;
+
+
 
     QLabel** k0Array;
     QLabel** k1Array;

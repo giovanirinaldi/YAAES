@@ -55,7 +55,7 @@ void DialogSubBytes::updateMatrix(){
     delete[] temp_string;
 }
 
-void DialogSubBytes::on_buttonBox_clicked(QAbstractButton* button)
+void DialogSubBytes::on_buttonBox_clicked(QAbstractButton* )
 {
     this->close();
 }

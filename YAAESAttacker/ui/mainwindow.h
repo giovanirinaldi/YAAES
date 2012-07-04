@@ -5,6 +5,7 @@
 #include <QLabel>
 #include "../Rijndael/attacker/rijndaelattacker.h"
 #include "../Rijndael/fast-rijndael-1d/fast-rijndael-1d.h"
+#include "dialogshowsubkeys.h"
 
 namespace Ui {
     class MainWindow;
@@ -103,15 +104,18 @@ private slots:
     void on_buttonS01E04SR_2_clicked();
     void on_buttonS02E03FindU2Bytes_clicked();
     void on_buttonS02E03FindMissingBytes_clicked();
-
     void on_buttonS02E04SolveLinearSystem_clicked();
-
     void on_buttonS02E04FindMissingBytes_clicked();
+    void on_actionReset_triggered();
+
+    void on_actionAbout_triggered();
 
 private:
     Ui::MainWindow *ui;
     RijndaelAttacker rijnAttacker;
     FastRijndael rijn;
+
+    DialogShowSubKeys* dialogShowSubKeys;
 
     unsigned char tryByte00, tryByte05, tryByte07, tryByte08, tryByte10, tryByte15;
 
@@ -128,6 +132,8 @@ private:
 
     unsigned char* k0found;
     bool keyFound;
+
+    bool eventFilter(QObject* pObject, QEvent* pEvent);
 
     void setOutK0(unsigned char* block);
     void setOutK0(QString block);

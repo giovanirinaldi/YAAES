@@ -12,7 +12,8 @@ FORMS = ui/mainwindow.ui ui/setmatrix.ui ui/dialognew.ui \
     ui/dialogshiftrows.ui \
     ui/dialogsubbytes.ui \
     ui/dialogmixcolumns.ui \
-    ui/dialogexport.ui
+    ui/dialogexport.ui \
+    ui/dialogabout.ui
 HEADERS = \
  src/global.h \
     ui/dialogshowexpkey.h \
@@ -25,7 +26,8 @@ HEADERS = \
     ui/dialogshiftrows.h \
     ui/dialogsubbytes.h \
     ui/dialogmixcolumns.h \
-    ui/dialogexport.h
+    ui/dialogexport.h \
+    ui/dialogabout.h
 SOURCES = \
  src/main.cpp \
     ui/dialogshowexpkey.cpp \
@@ -38,7 +40,8 @@ SOURCES = \
     ui/dialogshiftrows.cpp \
     ui/dialogsubbytes.cpp \
     ui/dialogmixcolumns.cpp \
-    ui/dialogexport.cpp
+    ui/dialogexport.cpp \
+    ui/dialogabout.cpp
 
 OTHER_FILES +=
 

@@ -83,7 +83,6 @@ class FastRijndael {
 		enum BlockSize { B128 = 128 };                
 
 		//CONSTRUCTORS
-		//Rijndael();
 		FastRijndael(KeySize ks = K128, BlockSize bs = B128, Mode mode = ECB);
 		
 		//DESTRUCTOR
@@ -92,38 +91,31 @@ class FastRijndael {
 		void cleanUp();
 
 		//KEY
-		// do not use this unless you know what you're doing
-		// input data defined as line by column
-		void makeKey(unsigned char* key);	// 2d array of 4 rows and nk columns (inverse matrix of key)
-		
-		// use this makeKey (FIPS197 standard)
-		// input data defined as column by line
-		//void makeKey(unsigned char* key);	// 1d array of 4 * nk positions
+		void makeKey(unsigned char* key);
 
 		//CIPHER
-		// input data defined as column by line
-		void encrypt(unsigned char* block);	// 2d array of 4 rows and nb columns
-		void encrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
-		void decrypt(unsigned char* block);	// 2d array of 4 rows and nb columns
-		void decrypt(unsigned char* block, int &length);	// 1d array of 4 * nb columns
+		void encrypt(unsigned char* block);	
+		void encrypt(unsigned char* block, int &length);	
+		void decrypt(unsigned char* block);	
+		void decrypt(unsigned char* block, int &length);	
 		
-		void encryptOneRound(unsigned char* block);	// 2d array of 4 rows and nb columns
-		void decryptOneRound(unsigned char* block);	// 2d array of 4 rows and nb columns
+		void encryptOneRound(unsigned char* block);	
+		void decryptOneRound(unsigned char* block);	
 		
-		void encryptTwoRounds(unsigned char* block);	// 2d array of 4 rows and nb columns
-		void decryptTwoRounds(unsigned char* block);	// 2d array of 4 rows and nb columns
+		void encryptTwoRounds(unsigned char* block);	
+		void decryptTwoRounds(unsigned char* block);	
 		
 		void encryptThreeRounds(unsigned char* block);
 		void decryptThreeRounds(unsigned char* block);
+
 		//IV
-//		void getIV(unsigned char** iv);
 		void getIV(unsigned char* iv);
-//		void setIV(unsigned char** iv);
 		void setIV(unsigned char* iv);
 
 		//EXPKEY
 		void getExpKey(unsigned char* expKey);
-//	protected:
+
+        //protected:
 		//KEY
 		void rotWord(unsigned char* column);
 		void subWord(unsigned char* column);

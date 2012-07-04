@@ -44,3 +44,8 @@ void DialogExport::update(){
     ui->lineCiphertext->setText(line);
     delete[] temp_string;
 }
+
+void DialogExport::on_buttonBox_clicked(QAbstractButton* )
+{
+    this->close();
+}

@@ -340,7 +340,7 @@ void DialogKeySchedule::on_radioButtonCol3_clicked()
     update();
 }
 
-void DialogKeySchedule::on_buttonBox_clicked(QAbstractButton* button)
+void DialogKeySchedule::on_buttonBox_clicked(QAbstractButton* )
 {
     this->close();
 }

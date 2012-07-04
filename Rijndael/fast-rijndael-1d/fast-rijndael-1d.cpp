@@ -368,6 +368,8 @@ void FastRijndael::encrypt(unsigned char* block, int &length){
 					memcpy(_temp_block, _iv, 16);
 				}
 				break;	
+                        case CTR:
+                                break;
 		}
 		encrypt(_temp_block);
 		switch (_mode){
@@ -386,6 +388,8 @@ void FastRijndael::encrypt(unsigned char* block, int &length){
 				memcpy(_last_cipher_text, _temp_block, 16);
 				xorBlock(_temp_block, _next_block_text);
 				break;	
+                        case CTR:
+                                break;
 		}
 	}
 	if (_mode != ECB){
@@ -443,6 +447,7 @@ void FastRijndael::encryptNRounds(unsigned char* block, int rounds){
 }
 
 void FastRijndael::removePadding(unsigned char* block, int &length, int blocks){
+        blocks = 0;
 	if (block[length-1] > 0x00 && block[length-1] < 0x10){
 		int i;
 		for (i = length-2; i > length-block[length-1]; i--){
@@ -504,6 +509,8 @@ void FastRijndael::decrypt(unsigned char* block, int &length){
 					memcpy(_temp_block, _iv, 16);
 				}
 				break;
+                        case CTR:
+                                break;
 		}
 		switch (_mode){		// decrypt or encrypt
 			case ECB:
@@ -514,6 +521,8 @@ void FastRijndael::decrypt(unsigned char* block, int &length){
 			case OFB:
 				encrypt(_temp_block);
 				break;
+                        case CTR:
+                                break;
 		}
 		switch (_mode){		// pos block mode
 			case ECB:
@@ -534,6 +543,8 @@ void FastRijndael::decrypt(unsigned char* block, int &length){
 				memcpy(_last_cipher_text, _temp_block, 16);
 				xorBlock(_temp_block, _next_cipher_text);
 				break;
+                        case CTR:
+                                break;
 		}
 	}
 	if (_mode != ECB){

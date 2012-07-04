@@ -1444,6 +1444,9 @@
        <height>16</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>Set Input</string>
+     </property>
      <property name="text">
       <string>...</string>
      </property>
@@ -2692,6 +2695,9 @@
        <height>16</height>
       </rect>
      </property>
+     <property name="toolTip">
+      <string>Set Key</string>
+     </property>
      <property name="text">
       <string>...</string>
      </property>
@@ -2706,7 +2712,7 @@
       </rect>
      </property>
      <property name="toolTip">
-      <string>ola</string>
+      <string>View Expanded Key</string>
      </property>
      <property name="autoFillBackground">
       <bool>false</bool>
@@ -4605,7 +4611,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>ola</string>
+     <string>View Operation</string>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
@@ -4637,7 +4643,7 @@
      </rect>
     </property>
     <property name="toolTip">
-     <string>ola</string>
+     <string>View Operation</string>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
@@ -4659,7 +4665,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelArrowOp">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -4678,7 +4684,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelArrowNextOp">
     <property name="geometry">
      <rect>
       <x>400</x>

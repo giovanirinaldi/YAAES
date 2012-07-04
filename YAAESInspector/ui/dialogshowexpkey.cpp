@@ -108,7 +108,7 @@ void DialogShowExpKey::SetKeySize(FastRijndael::KeySize keySize, int numberColum
         }
 }
 
-void DialogShowExpKey::on_buttonBox_clicked(QAbstractButton* button)
+void DialogShowExpKey::on_buttonBox_clicked(QAbstractButton* )
 {
     delete[] this->expKeyMatrix;
 }

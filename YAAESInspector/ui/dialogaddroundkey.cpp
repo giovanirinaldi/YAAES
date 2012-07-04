@@ -64,7 +64,7 @@ void DialogAddRoundKey::updateMatrix(){
     delete[] temp_string;
 }
 
-void DialogAddRoundKey::on_buttonBox_clicked(QAbstractButton* button)
+void DialogAddRoundKey::on_buttonBox_clicked(QAbstractButton* )
 {
     this->close();
 }

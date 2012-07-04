@@ -54,7 +54,7 @@ void DialogMixColumns::updateMatrix(){
     delete[] temp_string;
 }
 
-void DialogMixColumns::on_buttonBox_clicked(QAbstractButton* button)
+void DialogMixColumns::on_buttonBox_clicked(QAbstractButton* )
 {
     this->close();
 }
