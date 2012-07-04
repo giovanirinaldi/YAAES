@@ -22,22 +22,17 @@ MainWindow::MainWindow(QWidget *parent) :
         subkeyu2[i] = "??";
     }
 
-    ui->setupUi(this);
-
-    on_actionExample_1_triggered();
-
-    installEventFilter(this);
-
-    rijn = FastRijndael(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
-
     k0found = new unsigned char[16];
     for (int i = 0; i < 16; i++){
         k0found[i] = 0x00;
     }
     keyFound = false;
 
+    ui->setupUi(this);  
 
+    installEventFilter(this);
 
+    rijn = FastRijndael(FastRijndael::K128, FastRijndael::B128, FastRijndael::ECB);
 
     outK0Array = new QLabel*[16];
     outK0Array[0]=ui->outK0byte00;outK0Array[1]=ui->outK0byte01;outK0Array[2]=ui->outK0byte02;outK0Array[3]=ui->outK0byte03;
@@ -170,6 +165,8 @@ MainWindow::MainWindow(QWidget *parent) :
     s02e03Cipher1InvMC[4]=ui->s02e03Cipher1InvMCByte04;s02e03Cipher1InvMC[5]=ui->s02e03Cipher1InvMCByte05;s02e03Cipher1InvMC[6]=ui->s02e03Cipher1InvMCByte06;s02e03Cipher1InvMC[7]=ui->s02e03Cipher1InvMCByte07;
     s02e03Cipher1InvMC[8]=ui->s02e03Cipher1InvMCByte08;s02e03Cipher1InvMC[9]=ui->s02e03Cipher1InvMCByte09;s02e03Cipher1InvMC[10]=ui->s02e03Cipher1InvMCByte10;s02e03Cipher1InvMC[11]=ui->s02e03Cipher1InvMCByte11;
     s02e03Cipher1InvMC[12]=ui->s02e03Cipher1InvMCByte12;s02e03Cipher1InvMC[13]=ui->s02e03Cipher1InvMCByte13;s02e03Cipher1InvMC[14]=ui->s02e03Cipher1InvMCByte14;s02e03Cipher1InvMC[15]=ui->s02e03Cipher1InvMCByte15;
+
+    on_actionExample_1_triggered();
 
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabOutput));
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
@@ -1482,6 +1479,7 @@ void MainWindow::on_editSugK0Byte00_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte00->setText(text.toUpper());
     subkeyk0[0] = ui->editSugK0Byte00->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_editSugK0Byte05_textChanged(QString text)
@@ -1492,6 +1490,7 @@ void MainWindow::on_editSugK0Byte05_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte05->setText(text.toUpper());
     subkeyk0[5] = ui->editSugK0Byte05->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_editSugK0Byte07_textChanged(QString text)
@@ -1502,6 +1501,7 @@ void MainWindow::on_editSugK0Byte07_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte07->setText(text.toUpper());
     subkeyk0[7] = ui->editSugK0Byte07->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_editSugK0Byte08_textChanged(QString text)
@@ -1512,6 +1512,7 @@ void MainWindow::on_editSugK0Byte08_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte08->setText(text.toUpper());
     subkeyk0[8] = ui->editSugK0Byte08->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_editSugK0Byte10_textChanged(QString text)
@@ -1522,6 +1523,7 @@ void MainWindow::on_editSugK0Byte10_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte10->setText(text.toUpper());
     subkeyk0[10] = ui->editSugK0Byte10->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_editSugK0Byte15_textChanged(QString text)
@@ -1532,6 +1534,7 @@ void MainWindow::on_editSugK0Byte15_textChanged(QString text)
             text.remove(i, 1);
     ui->editSugK0Byte15->setText(text.toUpper());
     subkeyk0[15] = ui->editSugK0Byte15->text();
+    on_actionReset_triggered();
 }
 
 void MainWindow::on_buttonSBoxSolveLookupByte00_clicked()
@@ -2508,9 +2511,110 @@ void MainWindow::on_actionReset_triggered()
     }
     keyFound = false;
 
+    ui->outPlain1s01e01ARKByte00->setText("??");ui->outPlain1s01e01ARKByte05->setText("??");ui->outPlain1s01e01ARKByte10->setText("??");ui->outPlain1s01e01ARKByte15->setText("??");
+    ui->outPlain2s01e01ARKByte00->setText("??");ui->outPlain2s01e01ARKByte05->setText("??");ui->outPlain2s01e01ARKByte10->setText("??");ui->outPlain2s01e01ARKByte15->setText("??");
+    ui->outPlain3s01e01ARKByte00->setText("??");ui->outPlain3s01e01ARKByte05->setText("??");ui->outPlain3s01e01ARKByte10->setText("??");ui->outPlain3s01e01ARKByte15->setText("??");
 
+    ui->outPlain1s01e01SBByte00->setText("??");ui->outPlain1s01e01SBByte05->setText("??");ui->outPlain1s01e01SBByte10->setText("??");ui->outPlain1s01e01SBByte15->setText("??");
+    ui->outPlain2s01e01SBByte00->setText("??");ui->outPlain2s01e01SBByte05->setText("??");ui->outPlain2s01e01SBByte10->setText("??");ui->outPlain2s01e01SBByte15->setText("??");
+    ui->outPlain3s01e01SBByte00->setText("??");ui->outPlain3s01e01SBByte05->setText("??");ui->outPlain3s01e01SBByte10->setText("??");ui->outPlain3s01e01SBByte15->setText("??");
 
+    ui->outPlain1s01e01SRByte00->setText("??");ui->outPlain1s01e01SRByte01->setText("??");ui->outPlain1s01e01SRByte02->setText("??");ui->outPlain1s01e01SRByte03->setText("??");
+    ui->outPlain2s01e01SRByte00->setText("??");ui->outPlain2s01e01SRByte01->setText("??");ui->outPlain2s01e01SRByte02->setText("??");ui->outPlain2s01e01SRByte03->setText("??");
+    ui->outPlain3s01e01SRByte00->setText("??");ui->outPlain3s01e01SRByte01->setText("??");ui->outPlain3s01e01SRByte02->setText("??");ui->outPlain3s01e01SRByte03->setText("??");
 
+    ui->outPlain1s01e01MCByte00->setText("??");ui->outPlain1s01e01MCByte01->setText("??");ui->outPlain1s01e01MCByte02->setText("??");ui->outPlain1s01e01MCByte03->setText("??");
+    ui->outPlain2s01e01MCByte00->setText("??");ui->outPlain2s01e01MCByte01->setText("??");ui->outPlain2s01e01MCByte02->setText("??");ui->outPlain2s01e01MCByte03->setText("??");
+    ui->outPlain3s01e01MCByte00->setText("??");ui->outPlain3s01e01MCByte01->setText("??");ui->outPlain3s01e01MCByte02->setText("??");ui->outPlain3s01e01MCByte03->setText("??");
+
+    for (int i = 0; i < 16; i++){
+        s01e02Cipher1InvMC[i]->setText("??");
+        s01e02Cipher2InvMC[i]->setText("??");
+        s01e02Cipher3InvMC[i]->setText("??");
+        s01e02InvCipherDiff12[i]->setText("??");
+        s01e02InvCipherDiff13[i]->setText("??");
+        s01e02InvCipherDiff12SR[i]->setText("??");
+        s01e02InvCipherDiff13SR[i]->setText("??");
+        outK0Array[i]->setText("??");
+        outCipherK0Array[i]->setText("??");
+    }
+
+    ui->s01e03k1Byte00->setText("??");ui->s01e03k1Byte01->setText("??");ui->s01e03k1Byte02->setText("??");ui->s01e03k1Byte03->setText("??");
+    ui->editByteAlpha12->setText("??");ui->editByteAlpha13->setText("??");ui->editByteBeta12->setText("??");ui->editByteBeta13->setText("??");
+    ui->labelResultLookupX12->setText("??");ui->labelResultLookupY12->setText("??");ui->labelResultLookupX13->setText("??");ui->labelResultLookupY13->setText("??");
+    ui->editByte00ResultSbox->setText("??");ui->editByte01ResultSbox->setText("??");ui->editByte02ResultSbox->setText("??");ui->editByte03ResultSbox->setText("??");
+
+    ui->s01e04plain1AfterK1Col0Byte00->setText("??");ui->s01e04plain1AfterK1Col0Byte01->setText("??");ui->s01e04plain1AfterK1Col0Byte02->setText("??");ui->s01e04plain1AfterK1Col0Byte03->setText("??");
+    ui->s01e04plain1AfterSBR1Col0Byte00->setText("??");ui->s01e04plain1AfterSBR1Col0Byte01->setText("??");ui->s01e04plain1AfterSBR1Col0Byte02->setText("??");ui->s01e04plain1AfterSBR1Col0Byte03->setText("??");
+    ui->s01e04plain1AfterSRR1Byte00->setText("??");ui->s01e04plain1AfterSRR1Byte07->setText("??");ui->s01e04plain1AfterSRR1Byte10->setText("??");ui->s01e04plain1AfterSRR1Byte13->setText("??");
+    ui->s01e04u2Byte00->setText("??");ui->s01e04u2Byte07->setText("??");ui->s01e04u2Byte10->setText("??");ui->s01e04u2Byte13->setText("??");
+    ui->s01e04plain2AfterK1Col0Byte00->setText("??");ui->s01e04plain2AfterSBR1Col0Byte00->setText("??");ui->s01e04plain2AfterU2Col0Byte00->setText("??");
+    ui->s01e04plain3AfterK1Col0Byte00->setText("??");ui->s01e04plain3AfterSBR1Col0Byte00->setText("??");ui->s01e04plain3AfterU2Col0Byte00->setText("??");
+    ui->k0byte00->setText("??");ui->k0byte02->setText("??");ui->k0byte05->setText("??");ui->k0byte10->setText("??");ui->k0byte13->setText("??");ui->k0byte15->setText("??");
+    ui->k1byte00->setText("??");ui->k1byte01->setText("??");ui->k1byte02->setText("??");ui->k1byte03->setText("??");ui->k1byte05->setText("??");
+
+    ui->plain1s02e01ARKByte00->setText("??");ui->plain1s02e01ARKByte02->setText("??");ui->plain1s02e01ARKByte05->setText("??");ui->plain1s02e01ARKByte07->setText("??");
+    ui->plain1s02e01ARKByte08->setText("??");ui->plain1s02e01ARKByte10->setText("??");ui->plain1s02e01ARKByte13->setText("??");ui->plain1s02e01ARKByte15->setText("??");
+    ui->plain2s02e01ARKByte00->setText("??");ui->plain2s02e01ARKByte02->setText("??");ui->plain2s02e01ARKByte05->setText("??");ui->plain2s02e01ARKByte07->setText("??");
+    ui->plain2s02e01ARKByte08->setText("??");ui->plain2s02e01ARKByte10->setText("??");ui->plain2s02e01ARKByte13->setText("??");ui->plain2s02e01ARKByte15->setText("??");
+    ui->plain3s02e01ARKByte00->setText("??");ui->plain3s02e01ARKByte02->setText("??");ui->plain3s02e01ARKByte05->setText("??");ui->plain3s02e01ARKByte07->setText("??");
+    ui->plain3s02e01ARKByte08->setText("??");ui->plain3s02e01ARKByte10->setText("??");ui->plain3s02e01ARKByte13->setText("??");ui->plain3s02e01ARKByte15->setText("??");
+
+    ui->plain1s02e01SBByte00->setText("??");ui->plain1s02e01SBByte02->setText("??");ui->plain1s02e01SBByte05->setText("??");ui->plain1s02e01SBByte07->setText("??");
+    ui->plain1s02e01SBByte08->setText("??");ui->plain1s02e01SBByte10->setText("??");ui->plain1s02e01SBByte13->setText("??");ui->plain1s02e01SBByte15->setText("??");
+    ui->plain2s02e01SBByte00->setText("??");ui->plain2s02e01SBByte02->setText("??");ui->plain2s02e01SBByte05->setText("??");ui->plain2s02e01SBByte07->setText("??");
+    ui->plain2s02e01SBByte08->setText("??");ui->plain2s02e01SBByte10->setText("??");ui->plain2s02e01SBByte13->setText("??");ui->plain2s02e01SBByte15->setText("??");
+    ui->plain3s02e01SBByte00->setText("??");ui->plain3s02e01SBByte02->setText("??");ui->plain3s02e01SBByte05->setText("??");ui->plain3s02e01SBByte07->setText("??");
+    ui->plain3s02e01SBByte08->setText("??");ui->plain3s02e01SBByte10->setText("??");ui->plain3s02e01SBByte13->setText("??");ui->plain3s02e01SBByte15->setText("??");
+
+    ui->plain1s02e01SRByte00->setText("??");ui->plain1s02e01SRByte01->setText("??");ui->plain1s02e01SRByte02->setText("??");ui->plain1s02e01SRByte03->setText("??");
+    ui->plain1s02e01SRByte08->setText("??");ui->plain1s02e01SRByte09->setText("??");ui->plain1s02e01SRByte10->setText("??");ui->plain1s02e01SRByte11->setText("??");
+    ui->plain2s02e01SRByte00->setText("??");ui->plain2s02e01SRByte01->setText("??");ui->plain2s02e01SRByte02->setText("??");ui->plain2s02e01SRByte03->setText("??");
+    ui->plain2s02e01SRByte08->setText("??");ui->plain2s02e01SRByte09->setText("??");ui->plain2s02e01SRByte10->setText("??");ui->plain2s02e01SRByte11->setText("??");
+    ui->plain3s02e01SRByte00->setText("??");ui->plain3s02e01SRByte01->setText("??");ui->plain3s02e01SRByte02->setText("??");ui->plain3s02e01SRByte03->setText("??");
+    ui->plain3s02e01SRByte08->setText("??");ui->plain3s02e01SRByte09->setText("??");ui->plain3s02e01SRByte10->setText("??");ui->plain3s02e01SRByte11->setText("??");
+
+    ui->plain1s02e01MCByte00->setText("??");ui->plain1s02e01MCByte01->setText("??");ui->plain1s02e01MCByte02->setText("??");ui->plain1s02e01MCByte03->setText("??");
+    ui->plain1s02e01MCByte08->setText("??");ui->plain1s02e01MCByte09->setText("??");ui->plain1s02e01MCByte10->setText("??");ui->plain1s02e01MCByte11->setText("??");
+    ui->plain2s02e01MCByte00->setText("??");ui->plain2s02e01MCByte01->setText("??");ui->plain2s02e01MCByte02->setText("??");ui->plain2s02e01MCByte03->setText("??");
+    ui->plain2s02e01MCByte08->setText("??");ui->plain2s02e01MCByte09->setText("??");ui->plain2s02e01MCByte10->setText("??");ui->plain2s02e01MCByte11->setText("??");
+    ui->plain3s02e01MCByte00->setText("??");ui->plain3s02e01MCByte01->setText("??");ui->plain3s02e01MCByte02->setText("??");ui->plain3s02e01MCByte03->setText("??");
+    ui->plain3s02e01MCByte08->setText("??");ui->plain3s02e01MCByte09->setText("??");ui->plain3s02e01MCByte10->setText("??");ui->plain3s02e01MCByte11->setText("??");
+
+    ui->s02e02k1Byte08->setText("??");ui->s02e02k1Byte09->setText("??");ui->s02e02k1Byte10->setText("??");ui->s02e02k1Byte11->setText("??");
+    ui->editByteAlpha12_2->setText("??");ui->editByteAlpha13_2->setText("??");ui->editByteBeta12_2->setText("??");ui->editByteBeta13_2->setText("??");
+    ui->labelResultLookupX12_2->setText("??");ui->labelResultLookupY12_2->setText("??");ui->labelResultLookupX13_2->setText("??");ui->labelResultLookupY13_2->setText("??");
+    ui->editByte08ResultSbox->setText("??");ui->editByte09ResultSbox->setText("??");ui->editByte10ResultSbox->setText("??");ui->editByte11ResultSbox->setText("??");
+
+    ui->s02e03plain1AfterK1Col2Byte08->setText("??");ui->s02e03plain1AfterK1Col2Byte09->setText("??");ui->s02e03plain1AfterK1Col2Byte10->setText("??");ui->s02e03plain1AfterK1Col2Byte11->setText("??");
+    ui->s02e03plain1AfterSBR1Col2Byte08->setText("??");ui->s02e03plain1AfterSBR1Col2Byte09->setText("??");ui->s02e03plain1AfterSBR1Col2Byte10->setText("??");ui->s02e03plain1AfterSBR1Col2Byte11->setText("??");
+    ui->s02e03plain1AfterSRR1Byte00->setText("??");ui->s02e03plain1AfterSRR1Byte07->setText("??");ui->s02e03plain1AfterSRR1Byte10->setText("??");ui->s02e03plain1AfterSRR1Byte13->setText("??");
+    ui->s02e03plain1AfterSRR1Byte02->setText("??");ui->s02e03plain1AfterSRR1Byte05->setText("??");ui->s02e03plain1AfterSRR1Byte08->setText("??");ui->s02e03plain1AfterSRR1Byte15->setText("??");
+    ui->s02e03u2Byte00->setText("??");ui->s02e03u2Byte07->setText("??");ui->s02e03u2Byte10->setText("??");ui->s02e03u2Byte13->setText("??");
+    ui->s02e03u2Byte02->setText("??");ui->s02e03u2Byte05->setText("??");ui->s02e03u2Byte08->setText("??");ui->s02e03u2Byte15->setText("??");
+    ui->k0byte00_2->setText("??");ui->k0byte02_2->setText("??");ui->k0byte05_2->setText("??");ui->k0byte10_2->setText("??");
+    ui->k0byte13_2->setText("??");ui->k0byte15_2->setText("??");ui->k0byte07_2->setText("??");ui->k0byte08_2->setText("??");
+    ui->k1byte00_2->setText("??");ui->k1byte01_2->setText("??");ui->k1byte02_2->setText("??");ui->k1byte03_2->setText("??");ui->k1byte04_2->setText("??");
+    ui->k1byte05_2->setText("??");ui->k1byte06_2->setText("??");ui->k1byte07_2->setText("??");ui->k1byte08_2->setText("??");ui->k1byte09_2->setText("??");
+    ui->k1byte10_2->setText("??");ui->k1byte11_2->setText("??");ui->k1byte13_2->setText("??");ui->k1byte15_2->setText("??");
+    ui->k2byte00->setText("??");ui->k2byte02->setText("??");
+
+    ui->s02e04u2Byte00->setText("??");ui->s02e04u2Byte01->setText("??");ui->s02e04u2Byte02->setText("??");ui->s02e04u2Byte03->setText("??");
+    ui->s02e04k2byte00->setText("??");ui->s02e04k2byte01->setText("??");ui->s02e04k2byte02->setText("??");ui->s02e04k2byte03->setText("??");
+    ui->s02e04sysk2byte00->setText("??");ui->s02e04sysk2byte01->setText("??");ui->s02e04sysk2byte02->setText("??");ui->s02e04sysk2byte03->setText("??");
+    ui->s02e04sysu2byte00_0->setText("??");ui->s02e04sysu2byte01_0->setText("??");ui->s02e04sysu2byte02_0->setText("??");ui->s02e04sysu2byte03_0->setText("??");
+    ui->s02e04sysu2byte00_1->setText("??");ui->s02e04sysu2byte01_1->setText("??");ui->s02e04sysu2byte02_1->setText("??");ui->s02e04sysu2byte03_1->setText("??");
+    ui->s02e04sysu2byte00_2->setText("??");ui->s02e04sysu2byte01_2->setText("??");ui->s02e04sysu2byte02_2->setText("??");ui->s02e04sysu2byte03_2->setText("??");
+    ui->s02e04sysu2byte00_3->setText("??");ui->s02e04sysu2byte01_3->setText("??");ui->s02e04sysu2byte02_3->setText("??");ui->s02e04sysu2byte03_3->setText("??");
+    ui->k0byte00_3->setText("??");ui->k0byte01_3->setText("??");ui->k0byte02_3->setText("??");ui->k0byte03_3->setText("??");
+    ui->k0byte04_3->setText("??");ui->k0byte05_3->setText("??");ui->k0byte06_3->setText("??");ui->k0byte07_3->setText("??");
+    ui->k0byte08_3->setText("??");ui->k0byte09_3->setText("??");ui->k0byte10_3->setText("??");ui->k0byte11_3->setText("??");
+    ui->k0byte12_3->setText("??");ui->k0byte13_3->setText("??");ui->k0byte14_3->setText("??");ui->k0byte15_3->setText("??");
+    ui->k1byte00_3->setText("??");ui->k1byte01_3->setText("??");ui->k1byte02_3->setText("??");ui->k1byte03_3->setText("??");
+    ui->k1byte04_3->setText("??");ui->k1byte05_3->setText("??");ui->k1byte06_3->setText("??");ui->k1byte07_3->setText("??");
+    ui->k1byte08_3->setText("??");ui->k1byte09_3->setText("??");ui->k1byte10_3->setText("??");ui->k1byte11_3->setText("??");
+    ui->k1byte12_3->setText("??");ui->k1byte13_3->setText("??");ui->k1byte14_3->setText("??");ui->k1byte15_3->setText("??");
+    ui->k2byte00_2->setText("??");ui->k2byte01_2->setText("??");ui->k2byte02_2->setText("??");ui->k2byte03_2->setText("??");
 }
 
 void MainWindow::on_actionAbout_triggered()

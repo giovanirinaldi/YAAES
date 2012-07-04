@@ -109,6 +109,9 @@ void MainWindowImpl::updateKeyMatrix(){
         for (int i = 4; i < 32; i++){
             keyByteArray[i]->setGeometry(keyByteArray[i-4]->x()+24, keyByteArray[i]->y(), keyByteArray[i]->width(), keyByteArray[i]->height());
         }
+        btnShowKey->setVisible(false);
+        btnShowNextOp->setVisible(false);
+        btnShowPreviousOp->setVisible(false);
         switch (rijn->getKeySize()){
                 case FastRijndael::K128:
                         for (int i = 0; i < 16; i++){
@@ -117,6 +120,9 @@ void MainWindowImpl::updateKeyMatrix(){
 			for (int i = 16; i < 32; i++){
 				keyByteArray[i]->setVisible(false);
 			}
+                        btnShowKey->setVisible(true);
+                        btnShowNextOp->setVisible(true);
+                        btnShowPreviousOp->setVisible(true);
 			break;
                 case FastRijndael::K192:
                         for (int i = 0; i < 24; i++){
@@ -132,7 +138,7 @@ void MainWindowImpl::updateKeyMatrix(){
                 case FastRijndael::K256:
                         for (int i = 0; i < 32; i++){
 				keyByteArray[i]->setVisible(true);
-			}
+                        }
 			break;
 		default:
 			break;
