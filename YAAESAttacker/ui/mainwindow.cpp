@@ -166,10 +166,11 @@ MainWindow::MainWindow(QWidget *parent) :
     s02e03Cipher1InvMC[8]=ui->s02e03Cipher1InvMCByte08;s02e03Cipher1InvMC[9]=ui->s02e03Cipher1InvMCByte09;s02e03Cipher1InvMC[10]=ui->s02e03Cipher1InvMCByte10;s02e03Cipher1InvMC[11]=ui->s02e03Cipher1InvMCByte11;
     s02e03Cipher1InvMC[12]=ui->s02e03Cipher1InvMCByte12;s02e03Cipher1InvMC[13]=ui->s02e03Cipher1InvMCByte13;s02e03Cipher1InvMC[14]=ui->s02e03Cipher1InvMCByte14;s02e03Cipher1InvMC[15]=ui->s02e03Cipher1InvMCByte15;
 
-    on_actionExample_1_triggered();
 
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabOutput));
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
+
+    on_actionExample_2_triggered();
 }
 
 MainWindow::~MainWindow()
@@ -513,12 +514,18 @@ void MainWindow::on_actionExample_1_triggered()
     ui->editCiphertext1->setText("4915598f55e5d7a0daca94fa1f0a63f7");
     ui->editCiphertext2->setText("fb6efda82cd1056060fd9680f11849cb");
     ui->editCiphertext3->setText("a6268dd1f63b351c31930b95dd059b8d");
-    ui->editByte00From->setText("00");ui->editByte00To->setText("00");
-    ui->editByte05From->setText("05");ui->editByte05To->setText("05");
-    ui->editByte07From->setText("07");ui->editByte07To->setText("07");
-    ui->editByte08From->setText("08");ui->editByte08To->setText("08");
-    ui->editByte10From->setText("0A");ui->editByte10To->setText("0A");
-    ui->editByte15From->setText("0F");ui->editByte15To->setText("0F");
+    ui->editByte00From->setText("00");ui->editByte00To->setText("FF");
+    ui->editByte05From->setText("00");ui->editByte05To->setText("FF");
+    ui->editByte07From->setText("00");ui->editByte07To->setText("FF");
+    ui->editByte08From->setText("00");ui->editByte08To->setText("FF");
+    ui->editByte10From->setText("00");ui->editByte10To->setText("FF");
+    ui->editByte15From->setText("00");ui->editByte15To->setText("FF");
+    ui->editSugK0Byte00->setText("00");
+    ui->editSugK0Byte05->setText("05");
+    ui->editSugK0Byte07->setText("07");
+    ui->editSugK0Byte08->setText("08");
+    ui->editSugK0Byte10->setText("0A");
+    ui->editSugK0Byte15->setText("0F");
 }
 
 void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
@@ -528,6 +535,8 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         subkeyk0[5]=ui->editSugK0Byte05->text();
         subkeyk0[10]=ui->editSugK0Byte10->text();
         subkeyk0[15]=ui->editSugK0Byte15->text();
+        subkeyk0[7]=ui->editSugK0Byte07->text();
+        subkeyk0[8]=ui->editSugK0Byte08->text();
     }
     else if (tab == ui->tabOutput){
         for (int i = 0; i < 16; i++){
@@ -541,21 +550,29 @@ void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
         }
         if (keyFound){
             setOutK0(k0found);
-            setOutCipherK0(ui->editCiphertext1->text());
+           // setOutCipherK0(ui->editCiphertext1->text());
         }
     }
     else if (tab == ui->tabS01E01){
         setPlainS01E01(ui->editPlaintext1->text(), ui->editPlaintext2->text(), ui->editPlaintext3->text());
-        tryByte00 = hexValue(ui->editByte00From->text().at(0).toAscii())*256 + hexValue(ui->editByte00From->text().at(1).toAscii());
-        tryByte05 = hexValue(ui->editByte05From->text().at(0).toAscii())*256 + hexValue(ui->editByte05From->text().at(1).toAscii());
-        tryByte07 = hexValue(ui->editByte07From->text().at(0).toAscii())*256 + hexValue(ui->editByte07From->text().at(1).toAscii());
-        tryByte08 = hexValue(ui->editByte08From->text().at(0).toAscii())*256 + hexValue(ui->editByte08From->text().at(1).toAscii());
-        tryByte10 = hexValue(ui->editByte10From->text().at(0).toAscii())*256 + hexValue(ui->editByte10From->text().at(1).toAscii());
-        tryByte15 = hexValue(ui->editByte15From->text().at(0).toAscii())*256 + hexValue(ui->editByte15From->text().at(1).toAscii());
+        tryByte00 = hexValue(ui->editSugK0Byte00->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte00->text().at(1).toAscii());
+        tryByte05 = hexValue(ui->editSugK0Byte05->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte05->text().at(1).toAscii());
+        tryByte07 = hexValue(ui->editSugK0Byte07->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte07->text().at(1).toAscii());
+        tryByte08 = hexValue(ui->editSugK0Byte08->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte08->text().at(1).toAscii());
+        tryByte10 = hexValue(ui->editSugK0Byte10->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte10->text().at(1).toAscii());
+        tryByte15 = hexValue(ui->editSugK0Byte15->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte15->text().at(1).toAscii());
+
         subkeyk0[0]=ui->editSugK0Byte00->text();
         subkeyk0[5]=ui->editSugK0Byte05->text();
         subkeyk0[10]=ui->editSugK0Byte10->text();
         subkeyk0[15]=ui->editSugK0Byte15->text();
+        subkeyk0[7]=ui->editSugK0Byte07->text();
+        subkeyk0[8]=ui->editSugK0Byte08->text();
+
+        printf("%s %s\n", ui->editSugK0Byte10->text().toStdString().c_str(), ui->editSugK0Byte15->text().toStdString().c_str());
+        printf("%d %d\n", ui->editSugK0Byte10->text().at(0).toAscii(), ui->editSugK0Byte10->text().at(1).toAscii());
+        printf("%.2x %.2x", tryByte10, tryByte15); fflush(stdout);
+
     }
     else if (tab == ui->tabS01E02){
         setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
@@ -2621,4 +2638,48 @@ void MainWindow::on_actionAbout_triggered()
 {
     DialogAbout* dialogAbout = new DialogAbout(this);
     dialogAbout->show();
+}
+
+void MainWindow::on_actionExample_2_triggered()
+{
+    ui->editPlaintext1->setText("0982761b8761c5af6714e92d76e19c92");
+    ui->editPlaintext2->setText("cbe9a872b27db198a72b817b9c76119d");
+    ui->editPlaintext3->setText("aa789a9276761bc8d8c9814500318301");
+    ui->editCiphertext1->setText("d3b51335e39e6ff5e7dc4c92cc997c58");
+    ui->editCiphertext2->setText("1a9041431d00059f0f8efc47c0a802e1");
+    ui->editCiphertext3->setText("9b1f6286d040a1df4ea34a9f106f764e");
+    ui->editByte00From->setText("00");ui->editByte00To->setText("FF");
+    ui->editByte05From->setText("00");ui->editByte05To->setText("FF");
+    ui->editByte07From->setText("00");ui->editByte07To->setText("FF");
+    ui->editByte08From->setText("00");ui->editByte08To->setText("FF");
+    ui->editByte10From->setText("00");ui->editByte10To->setText("FF");
+    ui->editByte15From->setText("00");ui->editByte15To->setText("FF");
+    ui->editSugK0Byte00->setText("00");
+    ui->editSugK0Byte05->setText("0A");
+    ui->editSugK0Byte07->setText("61");
+    ui->editSugK0Byte08->setText("82");
+    ui->editSugK0Byte10->setText("19");
+    ui->editSugK0Byte15->setText("90");
+}
+
+void MainWindow::on_actionExample_3_triggered()
+{
+    ui->editPlaintext1->setText("66726f6d3a20616c6963654061636d65");
+    ui->editPlaintext2->setText("746f3a20626f624061636d65636f7270");
+    ui->editPlaintext3->setText("486176652075207365656e204576653f");
+    ui->editCiphertext1->setText("cf0beb9741f5f07a34b9d6701c88588a");
+    ui->editCiphertext2->setText("90d41a8e441eb55d4bb86cd64a5570e2");
+    ui->editCiphertext3->setText("af2cd8abea7e4520f5ff45a9820dbf1f");
+    ui->editByte00From->setText("61");ui->editByte00To->setText("7A");
+    ui->editByte05From->setText("61");ui->editByte05To->setText("7A");
+    ui->editByte07From->setText("61");ui->editByte07To->setText("7A");
+    ui->editByte08From->setText("61");ui->editByte08To->setText("7A");
+    ui->editByte10From->setText("61");ui->editByte10To->setText("7A");
+    ui->editByte15From->setText("61");ui->editByte15To->setText("7A");
+    ui->editSugK0Byte00->setText("65");
+    ui->editSugK0Byte05->setText("65");
+    ui->editSugK0Byte07->setText("68");
+    ui->editSugK0Byte08->setText("61");
+    ui->editSugK0Byte10->setText("68");
+    ui->editSugK0Byte15->setText("61");
 }

@@ -110,6 +110,10 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_actionExample_2_triggered();
+
+    void on_actionExample_3_triggered();
+
 private:
     Ui::MainWindow *ui;
     RijndaelAttacker rijnAttacker;

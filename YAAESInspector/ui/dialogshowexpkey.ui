@@ -5503,22 +5503,6 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <zorder>k7byte15</zorder>
-   <zorder>k7byte13</zorder>
-   <zorder>k7byte14</zorder>
-   <zorder>k7byte06</zorder>
-   <zorder>k7byte04</zorder>
-   <zorder>k7byte02</zorder>
-   <zorder>k7byte10</zorder>
-   <zorder>k7byte09</zorder>
-   <zorder>k7byte01</zorder>
-   <zorder>k7byte08</zorder>
-   <zorder>k7byte00</zorder>
-   <zorder>k7byte07</zorder>
-   <zorder>k7byte12</zorder>
-   <zorder>k7byte03</zorder>
-   <zorder>k7byte11</zorder>
-   <zorder>k7byte05</zorder>
   </widget>
   <widget class="QGroupBox" name="groupK8">
    <property name="geometry">
@@ -10318,7 +10302,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10350,7 +10334,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10382,7 +10366,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10414,7 +10398,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10446,7 +10430,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10478,7 +10462,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10510,7 +10494,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10542,7 +10526,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10574,7 +10558,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10606,7 +10590,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10638,7 +10622,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10670,7 +10654,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10702,7 +10686,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -10734,7 +10718,7 @@
     </rect>
    </property>
    <property name="toolTip">
-    <string>ola</string>
+    <string/>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
