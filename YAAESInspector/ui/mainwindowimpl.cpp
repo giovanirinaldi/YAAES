@@ -181,7 +181,7 @@ void MainWindowImpl::updateStateMatrix(){
 void MainWindowImpl::updatePreviousMatrix(){
 	if (previousDisabled){
 		disablePreviousMatrix();		
-		buttonPreviousOp->setEnabled(false);
+                buttonPreviousOp->setEnabled(false);
                 btnShowPreviousOp->setEnabled(false);
 		return;
 	}
@@ -353,7 +353,7 @@ void MainWindowImpl::calculateMatrices(){
 					previousDisabled = false;
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->subBytes(nextMatrix);
-                                        previousOp = op;
+                                        previousOp = ARK;
 					op = SB; round++;
 				}
 				break;
@@ -364,16 +364,15 @@ void MainWindowImpl::calculateMatrices(){
 	else if (round < maxRounds){
 		switch (op){
 			case SB:
-                                previousOp = op;
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
-
+                                        previousOp = SB;
 					op = SR;
 				}
 				else{
-
+                                        previousOp = MC;
                                         op = ARK; round--;
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					if (round == 0) previousDisabled = true;
@@ -381,48 +380,51 @@ void MainWindowImpl::calculateMatrices(){
 					rijn->addNRoundKey(stateMatrix, round);				
 				}
 				break;
-			case SR:
-                                previousOp = op;
+			case SR:                                
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->mixColumns(nextMatrix);
+                                        previousOp = SR;
 					op = MC;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
+                                        previousOp = ARK;
 					op = SB;
 				}
 				break;
-			case MC:
-                                 previousOp = op;
+			case MC:                                 
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->mixColumns(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
+                                        previousOp = MC;
 					op = ARK;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
+                                        previousOp = SB;
 					op = SR;
 				}
 				break;
-			case ARK:
-                                previousOp = op;
+                        case ARK:
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->subBytes(nextMatrix);
 					op = SB; round++;
+                                        previousOp = ARK;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invMixColumns(stateMatrix);
 					rijn->invShiftRows(previousMatrix);
+                                        previousOp = SR;
 					op = MC;
 				}
 				break;
@@ -432,62 +434,64 @@ void MainWindowImpl::calculateMatrices(){
 	}
 	else if (round == maxRounds && maxRounds == maxRoundByKey){
 		switch (op){
-			case SB:
-                                previousOp = op;
+                        case SB:
 				if (forward){
 
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
-					op = SR;
+					op = SR;                                        
+                                        previousOp = SB;
 				}
 				else{
 					round--;
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invMixColumns(previousMatrix);
-					op = ARK;
+					op = ARK;                                        
+                                        previousOp = MC;
 				}
 				break;
 			case SR:
-
-                                previousOp = op;
 				if (forward){					
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
-					op = ARK;
+					op = ARK;                                        
+                                        previousOp = SR;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
-					op = SB;
+					op = SB;                                        
+                                        previousOp = ARK;
 				}
 				break;			
-			case ARK:
-                                previousOp = op;
+                        case ARK:
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					nextDisabled = true;
-					op = MC; //round++;
+					op = MC; //round++;                                        
+                                        previousOp = ARK;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
-					op = SR;
+					op = SR;                                        
+                                        previousOp = SB;
 				}
 				break;
-			case MC:
-                                previousOp = op;
+			case MC:                               
 				if (!forward){
 					nextDisabled = false;
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invShiftRows(previousMatrix);
-					op = ARK;
+                                        op = ARK;
+                                        previousOp = SR;
 				}
 				break;
                         case STOP:
@@ -496,76 +500,80 @@ void MainWindowImpl::calculateMatrices(){
 	}
 	else if (round == maxRounds && maxRounds != maxRoundByKey){
 		switch (op){
-			case SB:
-                                previousOp = op;
+			case SB:                                
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->subBytes(stateMatrix);
 					rijn->shiftRows(nextMatrix);
 					op = SR;
+                                        previousOp = SB;
 				}
 				else{
 					op = ARK; round--;
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					if (round == 0) previousDisabled = true;
 					else rijn->invMixColumns(previousMatrix);
-					rijn->addNRoundKey(stateMatrix, round);				
+                                        rijn->addNRoundKey(stateMatrix, round);
+                                        previousOp = MC;
 				}
 				break;
-			case SR:
-                                previousOp = op;
+                        case SR:
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->shiftRows(stateMatrix);
 					rijn->mixColumns(nextMatrix);
-					op = MC;
+					op = MC;                                        
+                                        previousOp = SR;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invSubBytes(stateMatrix);
 					rijn->addNRoundKey(previousMatrix, round-1);
-					op = SB;
+					op = SB;                                        
+                                        previousOp = ARK;
 				}
 				break;
-			case MC:
-                                previousOp = op;
+                        case MC:
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->mixColumns(stateMatrix);
 					rijn->addNRoundKey(nextMatrix, round);
-					op = ARK;
+					op = ARK;                                        
+                                        previousOp = MC;
 				}
 				else{
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invShiftRows(stateMatrix);
 					rijn->invSubBytes(previousMatrix);
-					op = SR;
+					op = SR;                                        
+                                        previousOp = SB;
 				}
 				break;
-			case ARK:
-                                previousOp = op;
+                        case ARK:
 				if (forward){
                                         copyMatrix(stateMatrix, previousMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					nextDisabled = true;
 					//rijn->subBytes(nextMatrix);
-					op = STOP;
+					op = STOP;                                        
+                                        previousOp = ARK;
 				}
 				else{					
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->invMixColumns(stateMatrix);
 					rijn->invShiftRows(previousMatrix);
-					op = MC;
+					op = MC;                                        
+                                        previousOp = SR;
 				}
 				break;
-			case STOP:
-                                previousOp = op;
+                        case STOP:
 				if (!forward){
 					nextDisabled = false;
                                         copyMatrix(stateMatrix, nextMatrix, rijn->getBlockSizeInBytes());
 					rijn->addNRoundKey(stateMatrix, round);
 					rijn->invMixColumns(previousMatrix);
-					op = ARK;
+					op = ARK;                                        
+                                        previousOp = MC;
 				}
 				break;
 		}
@@ -628,9 +636,11 @@ void MainWindowImpl::on_buttonLastOp_pressed()
 	}
 	if (maxRounds == maxRoundByKey)	{
 		op = MC; round = maxRounds;
+                previousOp = ARK;
 	}
 	else {
 		op = STOP; round = maxRounds;
+                previousOp = MC;
 	}
         rijn->addNRoundKey(previousMatrix, round);
 	previousDisabled = false;
@@ -675,12 +685,21 @@ void MainWindowImpl::on_btnShowPreviousOp_clicked()
     switch (previousOp){
         case ARK:
             {
-            printf("ark\n");fflush(stdout);
                 unsigned char* temp_exp_key = new unsigned char [rijn->getExpKeySizeInBytes()];
                 rijn->getExpKey(temp_exp_key);
                 DialogAddRoundKey* dialogARK = new DialogAddRoundKey(this);
                 dialogARK->setStateMatrix(previousMatrix);
-                dialogARK->setSubKeyMatrix(temp_exp_key+16*round);
+                if (round != maxRounds){
+                    dialogARK->setSubKeyMatrix(temp_exp_key+16*(round-1));
+                }
+                else{
+                    if (nextDisabled){
+                        dialogARK->setSubKeyMatrix(temp_exp_key+16*(round));
+                    }
+                    else{
+                        dialogARK->setSubKeyMatrix(temp_exp_key+16*(round-1));
+                    }
+                }
                 dialogARK->updateMatrix();
                 dialogARK->show();
                 delete[] temp_exp_key;
@@ -688,7 +707,6 @@ void MainWindowImpl::on_btnShowPreviousOp_clicked()
             break;
         case SR:
             {
-        printf("sr\n");fflush(stdout);
                 DialogShiftRows* dialogSR = new DialogShiftRows(this);
                 dialogSR->setStateMatrix(previousMatrix);
                 dialogSR->updateMatrix();
@@ -697,7 +715,6 @@ void MainWindowImpl::on_btnShowPreviousOp_clicked()
             }
         case SB:
             {
-        printf("sb\n");fflush(stdout);
                 DialogSubBytes* dialogSB = new DialogSubBytes(this);
                 dialogSB->setStateMatrix(previousMatrix);
                 dialogSB->updateMatrix();
