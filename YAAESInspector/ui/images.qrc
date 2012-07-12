@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/images">
-        <file>res/xor.png</file>
-    </qresource>
-</RCC>

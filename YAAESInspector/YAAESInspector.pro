@@ -1,6 +1,7 @@
+TARGET = YAAESInspector
 TEMPLATE = app
 QT = gui core
-CONFIG += qt warn_on console debug
+CONFIG += qt release
 DESTDIR = bin
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -46,4 +47,4 @@ SOURCES = \
 OTHER_FILES +=
 
 RESOURCES += \
-    ui/images.qrc
+    res.qrc

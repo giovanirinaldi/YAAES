@@ -8,7 +8,7 @@ QT       += core gui
 
 TARGET = YAAESAttacker
 TEMPLATE = app
-CONFIG += qt warn_on console debug
+CONFIG += qt release
 DESTDIR = bin
 OBJECTS_DIR = build
 MOC_DIR = build

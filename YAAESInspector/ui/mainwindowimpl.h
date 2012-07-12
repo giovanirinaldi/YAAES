@@ -40,17 +40,15 @@ private:
 	QLabel** previousByteArray;
 	QLabel** nextByteArray;
 	
-public slots:	
-	void on_actionSetInputMatrix_activated();
-	void on_actionSetKeyMatrix_activated();
+public slots:
+        void on_actionSetInputMatrix_triggered();
+        void on_actionSetKeyMatrix_triggered();
 	
-private slots:	
-	void on_actionExit_activated();	
+private slots:
 	void on_buttonNextOp_pressed();
 	void on_buttonFirstOp_pressed();
 	void on_buttonPreviousOp_pressed();
-	void on_buttonLastOp_pressed();
-        void on_actionNewRijndael_activated();
+        void on_buttonLastOp_pressed();
         void on_btnEditInput_clicked();
         void on_btnEditKey_clicked();
         void on_btnShowPreviousOp_clicked();
@@ -58,6 +56,8 @@ private slots:
         void on_btnShowKey_clicked();
         void on_actionExport_triggered();
         void on_actionAbout_triggered();
+        void on_actionExit_triggered();
+        void on_actionNewRijndael_triggered();
 };
 
 #endif

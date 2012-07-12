@@ -10308,8 +10308,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10340,8 +10340,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10372,8 +10372,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10404,8 +10404,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10436,8 +10436,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10468,8 +10468,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10500,8 +10500,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10532,8 +10532,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10564,8 +10564,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10596,8 +10596,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10628,8 +10628,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10660,8 +10660,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10692,8 +10692,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10724,8 +10724,8 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>../bin/help.png</normaloff>../bin/help.png</iconset>
+    <iconset resource="../res.qrc">
+     <normaloff>:/ui/mainwindow/ui/res/help.png</normaloff>:/ui/mainwindow/ui/res/help.png</iconset>
    </property>
    <property name="checkable">
     <bool>false</bool>
@@ -10741,7 +10741,9 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../res.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

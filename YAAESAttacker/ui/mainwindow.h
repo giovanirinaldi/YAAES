@@ -45,7 +45,6 @@ private slots:
     void on_editCiphertext2_textChanged(QString );
     void on_editCiphertext3_textChanged(QString );
     void on_actionExample_1_triggered();
-    void on_tabWidget_currentChanged(QWidget* );
     void on_buttonS01E01ARK_clicked();
     void on_buttonS01E01SB_clicked();
     void on_buttonS01E01SR_clicked();
@@ -107,12 +106,11 @@ private slots:
     void on_buttonS02E04SolveLinearSystem_clicked();
     void on_buttonS02E04FindMissingBytes_clicked();
     void on_actionReset_triggered();
-
     void on_actionAbout_triggered();
-
     void on_actionExample_2_triggered();
-
     void on_actionExample_3_triggered();
+
+    void on_tabWidget_currentChanged(int index);
 
 private:
     Ui::MainWindow *ui;

@@ -30,7 +30,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabInput">
      <attribute name="title">
@@ -19238,7 +19238,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="title">
         <string>Lookup For 1 And 2</string>
-       </property>       
+       </property>
        <widget class="QLineEdit" name="editByteAlpha12">
         <property name="geometry">
          <rect>
@@ -19255,7 +19255,7 @@ SBox(X) xor SBox(Y) = Beta</string>
          <number>2</number>
         </property>
        </widget>
-	<widget class="QLineEdit" name="editByteBeta12">
+       <widget class="QLineEdit" name="editByteBeta12">
         <property name="geometry">
          <rect>
           <x>150</x>
@@ -19390,7 +19390,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="title">
         <string>Lookup For 1 And 3</string>
-       </property>       
+       </property>
        <widget class="QLineEdit" name="editByteAlpha13">
         <property name="geometry">
          <rect>
@@ -19407,7 +19407,7 @@ SBox(X) xor SBox(Y) = Beta</string>
          <number>2</number>
         </property>
        </widget>
-	<widget class="QLineEdit" name="editByteBeta13">
+       <widget class="QLineEdit" name="editByteBeta13">
         <property name="geometry">
          <rect>
           <x>150</x>
@@ -36858,7 +36858,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="title">
         <string>Lookup For 1 And 2</string>
-       </property>       
+       </property>
        <widget class="QLineEdit" name="editByteAlpha12_2">
         <property name="geometry">
          <rect>
@@ -36875,7 +36875,7 @@ SBox(X) xor SBox(Y) = Beta</string>
          <number>2</number>
         </property>
        </widget>
-	<widget class="QLineEdit" name="editByteBeta12_2">
+       <widget class="QLineEdit" name="editByteBeta12_2">
         <property name="geometry">
          <rect>
           <x>150</x>
@@ -37013,7 +37013,7 @@ SBox(X) xor SBox(Y) = Beta</string>
        </property>
        <property name="title">
         <string>Lookup For 1 And 3</string>
-       </property>       
+       </property>
        <widget class="QLineEdit" name="editByteAlpha13_2">
         <property name="geometry">
          <rect>
@@ -37030,7 +37030,7 @@ SBox(X) xor SBox(Y) = Beta</string>
          <number>2</number>
         </property>
        </widget>
-	<widget class="QLineEdit" name="editByteBeta13_2">
+       <widget class="QLineEdit" name="editByteBeta13_2">
         <property name="geometry">
          <rect>
           <x>150</x>

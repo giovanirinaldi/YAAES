@@ -3,8 +3,6 @@
 #include "dialogshowsubkeys.h"
 #include "dialogabout.h"
 
-//d
-#include <cstdio>
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -29,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     keyFound = false;
 
     ui->setupUi(this);  
+
+    dialogShowSubKeys = new DialogShowSubKeys(this);
 
     installEventFilter(this);
 
@@ -170,7 +170,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabOutput));
     ui->tabWidget->setCurrentIndex(ui->tabWidget->indexOf(ui->tabInput));
 
-    on_actionExample_2_triggered();
+    on_actionExample_1_triggered();
 }
 
 MainWindow::~MainWindow()
@@ -182,6 +182,7 @@ bool MainWindow::eventFilter(QObject* pObject, QEvent* pEvent)
 {
 
     if (pEvent->type() == 77){
+        if (dialogShowSubKeys != NULL)
         if (dialogShowSubKeys->isVisible()){
              dialogShowSubKeys->setSubKeysMatrix(subkeyk0, subkeyk1, subkeyk2, subkeyu2);
              dialogShowSubKeys->forceUpdate();
@@ -526,77 +527,6 @@ void MainWindow::on_actionExample_1_triggered()
     ui->editSugK0Byte08->setText("08");
     ui->editSugK0Byte10->setText("0A");
     ui->editSugK0Byte15->setText("0F");
-}
-
-void MainWindow::on_tabWidget_currentChanged(QWidget* tab)
-{
-    if (tab == ui->tabInput){
-        subkeyk0[0]=ui->editSugK0Byte00->text();
-        subkeyk0[5]=ui->editSugK0Byte05->text();
-        subkeyk0[10]=ui->editSugK0Byte10->text();
-        subkeyk0[15]=ui->editSugK0Byte15->text();
-        subkeyk0[7]=ui->editSugK0Byte07->text();
-        subkeyk0[8]=ui->editSugK0Byte08->text();
-    }
-    else if (tab == ui->tabOutput){
-        for (int i = 0; i < 16; i++){
-            outK0Array[i]->setText(subkeyk0[i]);
-        }
-        if (ui->editPlaintext1->text().length() == 32){
-            setOutPlain1(ui->editPlaintext1->text());
-        }
-        if (ui->editCiphertext1->text().length() == 32){
-            setOutCipher1(ui->editCiphertext1->text());
-        }
-        if (keyFound){
-            setOutK0(k0found);
-           // setOutCipherK0(ui->editCiphertext1->text());
-        }
-    }
-    else if (tab == ui->tabS01E01){
-        setPlainS01E01(ui->editPlaintext1->text(), ui->editPlaintext2->text(), ui->editPlaintext3->text());
-        tryByte00 = hexValue(ui->editSugK0Byte00->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte00->text().at(1).toAscii());
-        tryByte05 = hexValue(ui->editSugK0Byte05->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte05->text().at(1).toAscii());
-        tryByte07 = hexValue(ui->editSugK0Byte07->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte07->text().at(1).toAscii());
-        tryByte08 = hexValue(ui->editSugK0Byte08->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte08->text().at(1).toAscii());
-        tryByte10 = hexValue(ui->editSugK0Byte10->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte10->text().at(1).toAscii());
-        tryByte15 = hexValue(ui->editSugK0Byte15->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte15->text().at(1).toAscii());
-
-        subkeyk0[0]=ui->editSugK0Byte00->text();
-        subkeyk0[5]=ui->editSugK0Byte05->text();
-        subkeyk0[10]=ui->editSugK0Byte10->text();
-        subkeyk0[15]=ui->editSugK0Byte15->text();
-        subkeyk0[7]=ui->editSugK0Byte07->text();
-        subkeyk0[8]=ui->editSugK0Byte08->text();
-
-        printf("%s %s\n", ui->editSugK0Byte10->text().toStdString().c_str(), ui->editSugK0Byte15->text().toStdString().c_str());
-        printf("%d %d\n", ui->editSugK0Byte10->text().at(0).toAscii(), ui->editSugK0Byte10->text().at(1).toAscii());
-        printf("%.2x %.2x", tryByte10, tryByte15); fflush(stdout);
-
-    }
-    else if (tab == ui->tabS01E02){
-        setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
-    }
-    else if (tab == ui->tabS01E03){
-        setColumnsS01E03();
-    }
-    else if (tab == ui->tabS01E04){
-        setColumnAndBlockS01E04();
-    }
-    else if (tab == ui->tabS02E01){
-        setPlainS02E01();
-    }
-    else if (tab == ui->tabS02E02){
-        setColumnsS02E02();
-    }
-    else if (tab == ui->tabS02E03){
-        setColumnAndBlockS02E03();
-    }
-    else if (tab == ui->tabS02E04){
-        setColumnsS02E04();
-    }
-    else{
-    }
 }
 
 void MainWindow::setPlainS01E01(QString plain1, QString plain2, QString plain3){
@@ -1458,8 +1388,7 @@ void MainWindow::on_buttonS01E04FindU2Bytes_clicked()
 }
 
 void MainWindow::on_actionSubkeys_triggered()
-{
-    dialogShowSubKeys = new DialogShowSubKeys(this);
+{    
     dialogShowSubKeys->setSubKeysMatrix(subkeyk0, subkeyk1, subkeyk2, subkeyu2);
     dialogShowSubKeys->show();
 }
@@ -2682,4 +2611,70 @@ void MainWindow::on_actionExample_3_triggered()
     ui->editSugK0Byte08->setText("61");
     ui->editSugK0Byte10->setText("68");
     ui->editSugK0Byte15->setText("61");
+}
+
+void MainWindow::on_tabWidget_currentChanged(int index)
+{
+    if (index == 0){
+        subkeyk0[0]=ui->editSugK0Byte00->text();
+        subkeyk0[5]=ui->editSugK0Byte05->text();
+        subkeyk0[10]=ui->editSugK0Byte10->text();
+        subkeyk0[15]=ui->editSugK0Byte15->text();
+        subkeyk0[7]=ui->editSugK0Byte07->text();
+        subkeyk0[8]=ui->editSugK0Byte08->text();
+    }
+    else if (index == 9){
+        for (int i = 0; i < 16; i++){
+            outK0Array[i]->setText(subkeyk0[i]);
+        }
+        if (ui->editPlaintext1->text().length() == 32){
+            setOutPlain1(ui->editPlaintext1->text());
+        }
+        if (ui->editCiphertext1->text().length() == 32){
+            setOutCipher1(ui->editCiphertext1->text());
+        }
+        if (keyFound){
+            setOutK0(k0found);
+           // setOutCipherK0(ui->editCiphertext1->text());
+        }
+    }
+    else if (index == 1){
+        setPlainS01E01(ui->editPlaintext1->text(), ui->editPlaintext2->text(), ui->editPlaintext3->text());
+        tryByte00 = hexValue(ui->editSugK0Byte00->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte00->text().at(1).toAscii());
+        tryByte05 = hexValue(ui->editSugK0Byte05->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte05->text().at(1).toAscii());
+        tryByte07 = hexValue(ui->editSugK0Byte07->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte07->text().at(1).toAscii());
+        tryByte08 = hexValue(ui->editSugK0Byte08->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte08->text().at(1).toAscii());
+        tryByte10 = hexValue(ui->editSugK0Byte10->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte10->text().at(1).toAscii());
+        tryByte15 = hexValue(ui->editSugK0Byte15->text().at(0).toAscii())*16 + hexValue(ui->editSugK0Byte15->text().at(1).toAscii());
+
+        subkeyk0[0]=ui->editSugK0Byte00->text();
+        subkeyk0[5]=ui->editSugK0Byte05->text();
+        subkeyk0[10]=ui->editSugK0Byte10->text();
+        subkeyk0[15]=ui->editSugK0Byte15->text();
+        subkeyk0[7]=ui->editSugK0Byte07->text();
+        subkeyk0[8]=ui->editSugK0Byte08->text();
+    }
+    else if (index == 2){
+        setCipherS01E02(ui->editCiphertext1->text(), ui->editCiphertext2->text(), ui->editCiphertext3->text());
+    }
+    else if (index == 3){
+        setColumnsS01E03();
+    }
+    else if (index == 4){
+        setColumnAndBlockS01E04();
+    }
+    else if (index == 5){
+        setPlainS02E01();
+    }
+    else if (index == 6){
+        setColumnsS02E02();
+    }
+    else if (index == 7){
+        setColumnAndBlockS02E03();
+    }
+    else if (index == 8){
+        setColumnsS02E04();
+    }
+    else{
+    }
 }

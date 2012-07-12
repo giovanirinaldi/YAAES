@@ -583,11 +583,6 @@ void MainWindowImpl::calculateMatrices(){
         }
 }
 
-void MainWindowImpl::on_actionNewRijndael_activated()
-{
-	DialogNew* dialogNewRijndael = new DialogNew(this); 
-	dialogNewRijndael->show();	
-}
 
 void MainWindowImpl::on_buttonPreviousOp_pressed()
 {
@@ -652,32 +647,15 @@ void MainWindowImpl::on_buttonLastOp_pressed()
         MainWindowImpl::update();
 }
 
-void MainWindowImpl::on_actionSetInputMatrix_activated()
-{
-	DialogSetMatrixImpl* dialogSetInput = new DialogSetMatrixImpl(this); 
-	dialogSetInput->SetWindowTitle("Set Input Matrix");
-	dialogSetInput->SetMatrixType(DialogSetMatrixImpl::Input);
-        dialogSetInput->SetMatrixPointer(inputMatrix);
-	dialogSetInput->show();
-}
-
-void MainWindowImpl::on_actionSetKeyMatrix_activated()
-{
-	DialogSetMatrixImpl* dialogSetKey = new DialogSetMatrixImpl(this); 
-	dialogSetKey->SetWindowTitle("Set Key Matrix");
-        dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->getKeySize());
-        dialogSetKey->SetMatrixPointer(keyMatrix);
-	dialogSetKey->show();
-}
 
 void MainWindowImpl::on_btnEditInput_clicked()
 {
-    on_actionSetInputMatrix_activated();
+    on_actionSetInputMatrix_triggered();
 }
 
 void MainWindowImpl::on_btnEditKey_clicked()
 {
-    on_actionSetKeyMatrix_activated();
+    on_actionSetKeyMatrix_triggered();
 }
 
 void MainWindowImpl::on_btnShowPreviousOp_clicked()
@@ -788,12 +766,6 @@ void MainWindowImpl::on_btnShowNextOp_clicked()
     }
 }
 
-void MainWindowImpl::on_actionExit_activated()
-{
-        rijn->cleanUp();
-	exit(0);
-}
-
 void MainWindowImpl::on_btnShowKey_clicked()
 {
     unsigned char* tempExpKey = new unsigned char [rijn->getExpKeySizeInBytes()];
@@ -817,4 +789,34 @@ void MainWindowImpl::on_actionAbout_triggered()
 {
     DialogAbout* dialogAbout = new DialogAbout(this);
     dialogAbout->show();
+}
+
+void MainWindowImpl::on_actionSetInputMatrix_triggered()
+{
+    DialogSetMatrixImpl* dialogSetInput = new DialogSetMatrixImpl(this);
+    dialogSetInput->SetWindowTitle("Set Input Matrix");
+    dialogSetInput->SetMatrixType(DialogSetMatrixImpl::Input);
+    dialogSetInput->SetMatrixPointer(inputMatrix);
+    dialogSetInput->show();
+}
+
+void MainWindowImpl::on_actionSetKeyMatrix_triggered()
+{
+    DialogSetMatrixImpl* dialogSetKey = new DialogSetMatrixImpl(this);
+    dialogSetKey->SetWindowTitle("Set Key Matrix");
+    dialogSetKey->SetMatrixType(DialogSetMatrixImpl::Key, rijn->getKeySize());
+    dialogSetKey->SetMatrixPointer(keyMatrix);
+    dialogSetKey->show();
+}
+
+void MainWindowImpl::on_actionExit_triggered()
+{
+    rijn->cleanUp();
+    exit(0);
+}
+
+void MainWindowImpl::on_actionNewRijndael_triggered()
+{
+    DialogNew* dialogNewRijndael = new DialogNew(this);
+    dialogNewRijndael->show();
 }

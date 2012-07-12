@@ -65,11 +65,11 @@ void DialogNew::on_radioKey256_clicked()
 void DialogNew::on_buttonSetInput_clicked()
 {	
 	MainWindowImpl* p = qobject_cast<MainWindowImpl*>(this->parent());
-	p->on_actionSetInputMatrix_activated();
+        p->on_actionSetInputMatrix_triggered();
 }
 
 void DialogNew::on_buttonSetKey_clicked()
 {
 	MainWindowImpl* p = (MainWindowImpl*)(this->parent());
-	p->on_actionSetKeyMatrix_activated();
+        p->on_actionSetKeyMatrix_triggered();
 }
